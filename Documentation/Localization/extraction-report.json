@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "game": {
+    "id": "the-murder-of-sonic-the-hedgehog",
+    "steamAppID": "2324650",
+    "steamBuildID": "20535215",
+    "version": "1.01",
+    "unityVersion": "2021.3.9f1"
+  },
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "sourceManifestSha256": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "counts": {
+    "translatableUnits": 3547,
+    "inkUnits": 4799,
+    "inkVisibleUnits": 3335,
+    "inventoryUnits": 52,
+    "defaultgroupUnits": 73,
+    "level0Units": 95,
+    "imageCandidates": 72,
+    "fontAssets": 17,
+    "managedStringCandidates": 706,
+    "managedConfirmedUnits": 7,
+    "speakerDisplayLabels": 17
+  },
+  "story": {
+    "asset": "sharedassets0.assets",
+    "textAsset": "story",
+    "object": "sharedassets0.assets#127",
+    "utf8Bytes": 467478,
+    "textCharacters": 463004,
+    "sourceSha256": "028d9b6c0115ae8b0865e2c2abd959046e2a121ea2cf818165f6dfa4caddf9e0",
+    "storySha256": "b109bebf35cdae978074b5ccbefa5e7dea4f709893d52dddf2738dc81f5c0ad5",
+    "inkVersion": 20,
+    "listDefinitions": [
+      "Inventory"
+    ],
+    "unitCount": 4799,
+    "visibleUnitCount": 3335,
+    "technicalUnitCount": 1464
+  },
+  "translationSource": {
+    "sourceUnitsSha256": "7c3cbc60eec5570d4b07c2f3b44da2abec3173158df4a4c181c7014aaa8dd2af",
+    "unitCount": 3547,
+    "batchCount": 29
+  },
+  "tool": {
+    "name": "Scripts/extract-localization-assets.py",
+    "python": "3.9.6",
+    "unitypy": "1.25.3",
+    "managedStrings": {
+      "name": "monodis",
+      "status": "passed",
+      "version": "monodis -- Mono Common Intermediate Language Disassembler"
+    }
+  }
+}

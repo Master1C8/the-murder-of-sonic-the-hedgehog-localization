@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "game": "the-murder-of-sonic-the-hedgehog",
+  "sourceLocale": "en",
+  "targetLocale": "ru",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "candidateSetSha256": "0083d052c4058280700c4e3dac67360463bfc90f44228bff7c9b3e3a926c485b",
+  "reviewedImages": 10,
+  "images": [
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/Menu with chilidog.png",
+      "sourceText": "Menu\nChili Dog\nRamen\nChicken\nCordon Bleu",
+      "translation": "Меню\nЧили-дог\nРамен\nКурица\nкордон-блю из курицы",
+      "context": "Prologue / menu close-up",
+      "glossaryIds": ["menu", "chili-dog", "chicken-cordon-bleu"],
+      "status": "translated",
+      "note": "Порядок строк сохранён; название блюда передано в короткой форме, пригодной для росписи меню."
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/TicketProp.png",
+      "sourceText": "MIRAGE\nEXPRESS",
+      "translation": "МИРАЖ-\nЭКСПРЕСС",
+      "context": "Prologue / ticket prop",
+      "glossaryIds": ["the-mirage-express"],
+      "status": "translated",
+      "note": "Название поезда локализовано по каноническому глоссарию; перенос сохранён, изображение не редактировалось."
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/crumpledticket.png",
+      "sourceText": "MIRAGE\nEXPRESS",
+      "translation": "МИРАЖ-\nЭКСПРЕСС",
+      "context": "Prologue / crumpled ticket prop",
+      "glossaryIds": ["the-mirage-express"],
+      "status": "translated",
+      "note": "Сохранены те же имя поезда и двухстрочная компоновка; смятое и зеркально искажённое состояние — свойство исходной графики."
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/1-Saloon/PROP_FixedArcadeWithHighScore_V02.png",
+      "sourceText": "HIGH SCORE\nVECTR 7501\nKNUCK 7500\nTOAST 7331\nAPPLE 7250\nBREAD 7200\nULTIM 7150\nBAGEL 7003\nCANDY 6990",
+      "translation": "РЕКОРДЫ\nVECTR 7501\nKNUCK 7500\nTOAST 7331\nAPPLE 7250\nBREAD 7200\nULTIM 7150\nBAGEL 7003\nCANDY 6990",
+      "context": "Saloon / arcade high-score display",
+      "glossaryIds": ["arcade-machine"],
+      "status": "translated",
+      "note": "Переведён заголовок; алиасы таблицы рекордов и все числовые значения сохранены точно как имена/игровые данные."
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/1-Saloon/PROP_TailsLoreCard.png",
+      "sourceText": "DETECTIVE",
+      "translation": "ДЕТЕКТИВ",
+      "context": "Saloon / Tails lore card",
+      "glossaryIds": ["detective", "lore-card"],
+      "status": "translated",
+      "note": "Остальные строки на карточке являются декоративными нечитаемыми линиями без отдельного английского текста."
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/2-Library/PROP_TheMirageExpressManual.png",
+      "sourceText": "The Mirage Express\nManual",
+      "translation": "Руководство по поезду\n«Мираж-Экспресс»",
+      "context": "Library / Mirage Express manual cover",
+      "glossaryIds": ["mirage-express-manual", "the-mirage-express"],
+      "status": "translated",
+      "note": "Название и назначение предмета согласованы с каноническим глоссарием; перенос адаптирован под обложку."
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/4-Lounge/HotHoneyPrintout.png",
+      "sourceText": "ticket town\nHOT HONEY\nFRI MAY 8\n9:00 PM\nSTAGE\nSEC 53 ROW P\nSEC 53 ROW P\nSEC 53 ROW R\nSEC 54 ROW R",
+      "translation": "ticket town\nХОТ ХАНИ\nПТ, 8 МАЯ\n21:00\nСЦЕНА\nСЕК. 53 РЯД P\nСЕК. 53 РЯД P\nСЕК. 53 РЯД R\nСЕК. 54 РЯД R",
+      "context": "Lounge / Hot Honey ticket printout",
+      "glossaryIds": ["hot-honey", "concert-tickets"],
+      "status": "translated",
+      "note": "Название сайта сохранено как имя бренда, название группы передано по каноническому ru-глоссарию; дата, время, номера секций и буквы рядов сохранены по исходнику, формат даты/времени адаптирован для русского."
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/5-conductorcar/TypedNoteFromTrainToEspio.png",
+      "sourceText": "Use this blowdart on Sonic,\nstationed in the conductor\ncar. It is laced with a\nnonlethal sleeping agent.\nThank you again for\nchoosing the Mirage Express.\n-Staff",
+      "translation": "Используй этот духовой дротик против Соника,\nнаходящегося в вагоне Проводника.\nДротик покрыт несмертельным снотворным средством.\nЕщё раз спасибо за выбор поезда\n«Мираж-Экспресс».\n—Персонал",
+      "context": "Conductor Car / typed note from train staff to Espio",
+      "glossaryIds": ["blowdart", "the-conductor", "conductor-car", "nonlethal-sleeping-agent", "the-mirage-express", "train-note"],
+      "status": "translated",
+      "note": "Сохранены смысл инструкции, адресат и подпись персонала; терминология взята из канонического глоссария."
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/Comics/7-final push/Seq5-epilogue/8-eggmanending1.png",
+      "sourceText": "OFFLINE...\nLET'S GO DAD",
+      "translation": "НЕ В СЕТИ…\nВПЕРЁД, ПАПА",
+      "context": "Final Push / Eggman ending comic panel",
+      "glossaryIds": [],
+      "status": "translated",
+      "note": "Надпись LET'S GO DAD повторяется на двух футболках и переводится одинаково. Мелкие подписи на схемах мониторов намеренно неразборчивы в исходном PNG и не дополнялись выдуманным текстом."
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/Comics/titlecard.png",
+      "sourceText": "THE MURDER OF SONIC THE HEDGEHOG",
+      "translation": "The Murder of Sonic the Hedgehog",
+      "context": "Final Push / title card",
+      "glossaryIds": ["the-murder-of-sonic-the-hedgehog"],
+      "status": "translated",
+      "note": "Официальное название игры сохранено без перевода согласно каноническому глоссарию; логотип и регистр букв остаются задачей отдельной текстурной переработки."
+    }
+  ],
+  "notes": "Текст изображений подготовлен по визуальной проверке 10 PNG. PNG-файлы не изменялись и не рендерились."
+}

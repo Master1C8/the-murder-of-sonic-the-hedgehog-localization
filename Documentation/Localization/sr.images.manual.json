@@ -1,0 +1,102 @@
+{
+  "candidateSetSha256": "0083d052c4058280700c4e3dac67360463bfc90f44228bff7c9b3e3a926c485b",
+  "game": "the-murder-of-sonic-the-hedgehog",
+  "images": [
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/Menu with chilidog.png",
+      "sourceText": "Menu\nChili Dog\nRamen\nChicken\nCordon Bleu",
+      "translation": "Јеловник\nЧили-дог\nРамен\nПилетина\nКордон блу",
+      "context": "Prologue / menu close-up",
+      "glossaryIds": ["menu", "chili-dog", "chicken-cordon-bleu"],
+      "status": "translated",
+      "note": "Преведене су само видљиве ставке; редослед пет линија је сачуван. PNG није мењан нити рендерован."
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/TicketProp.png",
+      "sourceText": "MIRAGE\nEXPRESS",
+      "translation": "THE MIRAGE\nEXPRESS",
+      "context": "Prologue / ticket prop",
+      "glossaryIds": ["the-mirage-express"],
+      "status": "translated",
+      "note": "Званично име воза сачувано је као властито име, уз задржан прелом у две линије."
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/crumpledticket.png",
+      "sourceText": "MIRAGE\nEXPRESS",
+      "translation": "THE MIRAGE\nEXPRESS",
+      "context": "Prologue / crumpled ticket prop",
+      "glossaryIds": ["the-mirage-express"],
+      "status": "translated",
+      "note": "Исто име и прелом као на карти; згужвана и зрцално изобличена графика остаје непромењена."
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/1-Saloon/PROP_FixedArcadeWithHighScore_V02.png",
+      "sourceText": "HIGH SCORE\nVECTR 7501\nKNUCK 7500\nTOAST 7331\nAPPLE 7250\nBREAD 7200\nULTIM 7150\nBAGEL 7003\nCANDY 6990",
+      "translation": "НАЈВИШИ РЕЗУЛТАТ\nVECTR 7501\nKNUCK 7500\nTOAST 7331\nAPPLE 7250\nBREAD 7200\nULTIM 7150\nBAGEL 7003\nCANDY 6990",
+      "context": "Saloon / arcade high-score display",
+      "glossaryIds": ["arcade-machine"],
+      "status": "translated",
+      "note": "Преведен је само наслов; алијаси, бројеви и распоред табеле рекорда сачувани су тачно."
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/1-Saloon/PROP_TailsLoreCard.png",
+      "sourceText": "DETECTIVE",
+      "translation": "ДЕТЕКТИВ",
+      "context": "Saloon / Tails lore card",
+      "glossaryIds": ["detective", "lore-card"],
+      "status": "translated",
+      "note": "Преведена је читљива ознака; остале линије су декоративне и не допуњују се измишљеним текстом."
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/2-Library/PROP_TheMirageExpressManual.png",
+      "sourceText": "The Mirage Express\nManual",
+      "translation": "The Mirage Express\nПриручник",
+      "context": "Library / Mirage Express manual cover",
+      "glossaryIds": ["mirage-express-manual", "the-mirage-express"],
+      "status": "translated",
+      "note": "Власничко име воза сачувано је по глосару, а врста предмета је преведена; прелом је сачуван."
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/4-Lounge/HotHoneyPrintout.png",
+      "sourceText": "ticket town\nHOT HONEY\nFRI MAY 8\n9:00 PM\nSTAGE\nSEC 53 ROW P\nSEC 53 ROW P\nSEC 53 ROW R\nSEC 54 ROW R",
+      "translation": "ticket town\nHOT HONEY\nПЕТ 8. МАЈ\n21:00\nБИНА\nСЕКЦИЈА 53 РЕД P\nСЕКЦИЈА 53 РЕД P\nСЕКЦИЈА 53 РЕД R\nСЕКЦИЈА 54 РЕД R",
+      "context": "Lounge / Hot Honey ticket printout",
+      "glossaryIds": ["hot-honey", "concert-tickets"],
+      "status": "translated",
+      "note": "Имена бренда и бенда остају властита имена; датум, време, бројеви секција и слова редова су сачувани."
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/5-conductorcar/TypedNoteFromTrainToEspio.png",
+      "sourceText": "Use this blowdart on Sonic,\nstationed in the conductor\ncar. It is laced with a\nnonlethal sleeping agent.\nThank you again for\nchoosing the Mirage Express.\n-Staff",
+      "translation": "Употреби ову пикадо-стрелицу на Сонику,\nкоји је у кондуктеровом вагону.\nНапуњена је несмртоносним\nсредством за спавање.\nЈош једном хвала што сте\nизабрали The Mirage Express.\n—Особље",
+      "context": "Conductor Car / typed note from train staff to Espio",
+      "glossaryIds": ["blowdart", "the-conductor", "conductor-car", "nonlethal-sleeping-agent", "the-mirage-express", "train-note"],
+      "status": "translated",
+      "note": "Преведени су упутство, адресат и потпис особља; назив воза остаје по глосару, а графика није мењана."
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/Comics/7-final push/Seq5-epilogue/8-eggmanending1.png",
+      "sourceText": "OFFLINE...\nLET'S GO DAD",
+      "translation": "НЕМА МРЕЖЕ…\nИДЕМО, ТАТА",
+      "context": "Final Push / Eggman ending comic panel",
+      "glossaryIds": [],
+      "status": "translated",
+      "note": "Преведене су две читљиве надписане фразе; ситне, нечитке ознаке на шемама нису допуњаване."
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/Comics/titlecard.png",
+      "sourceText": "THE MURDER OF SONIC THE HEDGEHOG",
+      "translation": "THE MURDER OF SONIC THE HEDGEHOG",
+      "context": "Final Push / title card",
+      "glossaryIds": ["the-murder-of-sonic-the-hedgehog"],
+      "status": "preserved-official-title",
+      "note": "Званични наслов остаје непреведен по каноничком глосару; PNG, логотип и регистар нису мењани."
+    }
+  ],
+  "notes": "Српски план обухвата 10 text-bearing PNG кандидата. Преводи су текстуална упутства за будућу текстурну локализацију; PNG, Texture2D, Sprite, димензије, хешеви и bundle-ови нису мењани или рендеровани.",
+  "reviewedImages": 10,
+  "schemaVersion": 1,
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "sourceLocale": "en",
+  "targetLocale": "sr"
+}

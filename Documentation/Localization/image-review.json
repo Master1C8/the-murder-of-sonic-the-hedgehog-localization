@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "game": "the-murder-of-sonic-the-hedgehog",
+  "sourceLocale": "en",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "candidateSetSha256": "0083d052c4058280700c4e3dac67360463bfc90f44228bff7c9b3e3a926c485b",
+  "reviewStatus": "complete",
+  "reviewedCandidates": 72,
+  "classificationCounts": {
+    "textBearing": 10,
+    "preserveExactSymbols": 15,
+    "noLanguageText": 47
+  },
+  "textBearing": [
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/Menu with chilidog.png",
+      "visibleEnglish": "menu lettering",
+      "action": "redraw-after-translation"
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/TicketProp.png",
+      "visibleEnglish": "MIRAGE EXPRESS ticket lettering",
+      "action": "redraw-after-translation"
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/crumpledticket.png",
+      "visibleEnglish": "mirrored ticket lettering",
+      "action": "redraw-after-translation"
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/1-Saloon/PROP_FixedArcadeWithHighScore_V02.png",
+      "visibleEnglish": "HIGH SCORE and score-table names",
+      "action": "redraw-after-translation"
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/1-Saloon/PROP_TailsLoreCard.png",
+      "visibleEnglish": "DETECTIVE",
+      "action": "redraw-after-translation"
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/2-Library/PROP_TheMirageExpressManual.png",
+      "visibleEnglish": "book title",
+      "action": "redraw-after-translation"
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/4-Lounge/HotHoneyPrintout.png",
+      "visibleEnglish": "ticket and printout lettering",
+      "action": "redraw-after-translation"
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/5-conductorcar/TypedNoteFromTrainToEspio.png",
+      "visibleEnglish": "typed note",
+      "action": "redraw-after-translation"
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/Comics/7-final push/Seq5-epilogue/8-eggmanending1.png",
+      "visibleEnglish": "OFFLINE, LET'S GO DAD, and small diagram labels",
+      "action": "redraw-after-translation"
+    },
+    {
+      "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/Comics/titlecard.png",
+      "visibleEnglish": "game title logo",
+      "action": "redraw-after-translation"
+    }
+  ],
+  "preserveExactSymbols": [
+    "Assets/ChooChooBooBoo/ArtAssets/CloseUps/2-Library/trainmap/librarytrainmap1.png",
+    "Assets/ChooChooBooBoo/ArtAssets/CloseUps/2-Library/trainmap/librarytrainmap10.png",
+    "Assets/ChooChooBooBoo/ArtAssets/CloseUps/2-Library/trainmap/librarytrainmap11.png",
+    "Assets/ChooChooBooBoo/ArtAssets/CloseUps/2-Library/trainmap/librarytrainmap12.png",
+    "Assets/ChooChooBooBoo/ArtAssets/CloseUps/2-Library/trainmap/librarytrainmap13.png",
+    "Assets/ChooChooBooBoo/ArtAssets/CloseUps/2-Library/trainmap/librarytrainmap2.png",
+    "Assets/ChooChooBooBoo/ArtAssets/CloseUps/2-Library/trainmap/librarytrainmap3.png",
+    "Assets/ChooChooBooBoo/ArtAssets/CloseUps/2-Library/trainmap/librarytrainmap4.png",
+    "Assets/ChooChooBooBoo/ArtAssets/CloseUps/2-Library/trainmap/librarytrainmap5.png",
+    "Assets/ChooChooBooBoo/ArtAssets/CloseUps/2-Library/trainmap/librarytrainmap6.png",
+    "Assets/ChooChooBooBoo/ArtAssets/CloseUps/2-Library/trainmap/librarytrainmap7.png",
+    "Assets/ChooChooBooBoo/ArtAssets/CloseUps/2-Library/trainmap/librarytrainmap8.png",
+    "Assets/ChooChooBooBoo/ArtAssets/CloseUps/2-Library/trainmap/librarytrainmap9.png",
+    "Assets/ChooChooBooBoo/ArtAssets/CloseUps/3-casino/Blueprint_safecode.png",
+    "Assets/ChooChooBooBoo/ArtAssets/CloseUps/5-conductorcar/Blueprint_attic_reveal.png"
+  ],
+  "preservationNotes": [
+    "Keep train-map sequence numbers unchanged.",
+    "Keep safe code 230401 unchanged in both blueprint images.",
+    "No image was translated, redrawn, or written back into a Unity bundle during this stage."
+  ]
+}

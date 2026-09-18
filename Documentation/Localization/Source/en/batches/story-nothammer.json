@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "game": "the-murder-of-sonic-the-hedgehog",
+  "sourceLocale": "en",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "sourceUnitsSha256": "7c3cbc60eec5570d4b07c2f3b44da2abec3173158df4a4c181c7014aaa8dd2af",
+  "group": "story/NotHammer",
+  "unitCount": 5,
+  "units": [
+    {
+      "id": "ink:root[2].NotHammer[0][2][0]",
+      "group": "story/NotHammer",
+      "kind": "dialogue",
+      "speaker": "Amy",
+      "context": "root > NotHammer",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].NotHammer[0][2][0]",
+      "sourceText": "...",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].NotHammer[0][2][3]",
+      "group": "story/NotHammer",
+      "kind": "dialogue",
+      "speaker": "Amy",
+      "context": "root > NotHammer",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].NotHammer[0][2][3]",
+      "sourceText": "That's a box with two plates next to it... and a broomstick",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].NotHammer[0][2][5]",
+      "group": "story/NotHammer",
+      "kind": "dialogue",
+      "speaker": "Tails",
+      "context": "root > NotHammer",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].NotHammer[0][2][5]",
+      "sourceText": "Aren't you a photographer?",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].NotHammer[0][2][10]",
+      "group": "story/NotHammer",
+      "kind": "dialogue",
+      "speaker": "Tails",
+      "context": "root > NotHammer",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].NotHammer[0][2][10]",
+      "sourceText": "I figured your eyes would be better...",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].NotHammer[0][2][14]",
+      "group": "story/NotHammer",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > NotHammer",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].NotHammer[0][2][14]",
+      "sourceText": "(Ouch... I should keep looking)",
+      "protectedTokens": [],
+      "note": null,
+      "translation": null
+    }
+  ]
+}

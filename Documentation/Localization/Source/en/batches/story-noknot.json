@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "game": "the-murder-of-sonic-the-hedgehog",
+  "sourceLocale": "en",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "sourceUnitsSha256": "7c3cbc60eec5570d4b07c2f3b44da2abec3173158df4a4c181c7014aaa8dd2af",
+  "group": "story/NoKnot",
+  "unitCount": 1,
+  "units": [
+    {
+      "id": "ink:root[2].NoKnot[0][0][0]",
+      "group": "story/NoKnot",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > NoKnot",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].NoKnot[0][0][0]",
+      "sourceText": "You forgot to put a story knot on this!",
+      "protectedTokens": [],
+      "note": null,
+      "translation": null
+    }
+  ]
+}

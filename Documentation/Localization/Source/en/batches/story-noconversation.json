@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "game": "the-murder-of-sonic-the-hedgehog",
+  "sourceLocale": "en",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "sourceUnitsSha256": "7c3cbc60eec5570d4b07c2f3b44da2abec3173158df4a4c181c7014aaa8dd2af",
+  "group": "story/NoConversation",
+  "unitCount": 2,
+  "units": [
+    {
+      "id": "ink:root[2].NoConversation[0][0][0]",
+      "group": "story/NoConversation",
+      "kind": "choice",
+      "speaker": null,
+      "context": "root > NoConversation",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].NoConversation[0][0][0]",
+      "sourceText": "!!! You shouldn't be able to see this !!!",
+      "protectedTokens": [],
+      "note": null,
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].NoConversation[0][0][2][0]",
+      "group": "story/NoConversation",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > NoConversation",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].NoConversation[0][0][2][0]",
+      "sourceText": "The story will now end",
+      "protectedTokens": [],
+      "note": null,
+      "translation": null
+    }
+  ]
+}

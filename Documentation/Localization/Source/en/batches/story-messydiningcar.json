@@ -1,0 +1,457 @@
+{
+  "schemaVersion": 1,
+  "game": "the-murder-of-sonic-the-hedgehog",
+  "sourceLocale": "en",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "sourceUnitsSha256": "7c3cbc60eec5570d4b07c2f3b44da2abec3173158df4a4c181c7014aaa8dd2af",
+  "group": "story/MessyDiningCar",
+  "unitCount": 32,
+  "units": [
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[27]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Tails",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[27]",
+      "sourceText": "Wait, is that- -",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[35]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Tails",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[35]",
+      "sourceText": "It can't be!!",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[38]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Amy",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[38]",
+      "sourceText": "SONIC!!",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[44]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Amy",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[44]",
+      "sourceText": "Someone murdered my darling Sonic!",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[49]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Amy",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[49]",
+      "sourceText": "Looks like the game’s begun. I’m finding out who did this, at once!",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[54]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Tails",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[54]",
+      "sourceText": "Amy, wait! I wanna figure out who did this too!",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[59]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Tails",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[59]",
+      "sourceText": "Wait for me!",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[61]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Barry",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[61]",
+      "sourceText": "…",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[64]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Barry",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[64]",
+      "sourceText": "…what a whirlwind. I’m exhausted already.",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[66]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Barry",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[66]",
+      "sourceText": "That was really convincing, Sonic!",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[72]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Sonic",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[72]",
+      "sourceText": "…",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[75]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Barry",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[75]",
+      "sourceText": "…Sonic?",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[77]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Sonic",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[77]",
+      "sourceText": "…",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[79]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Sonic",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[79]",
+      "sourceText": "<style=HurtSonic>…eh..</style>",
+      "protectedTokens": [
+        "</style>",
+        "<style=HurtSonic>"
+      ],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[81]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Sonic",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[81]",
+      "sourceText": "<style=HurtSonic>…body numb…..can’t…move…",
+      "protectedTokens": [
+        "<style=HurtSonic>"
+      ],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[83]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Barry",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[83]",
+      "sourceText": "W-what are you saying? I don’t understand–",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[85]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Sonic",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[85]",
+      "sourceText": "<style=HurtSonic>I just need…to…r…..rest…</style>",
+      "protectedTokens": [
+        "</style>",
+        "<style=HurtSonic>"
+      ],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[91]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Barry",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[91]",
+      "sourceText": "Sonic? …Sonic??",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[95]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Barry",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[95]",
+      "sourceText": "<style=Thought>(Is he actually hurt?)</style>",
+      "protectedTokens": [
+        "</style>",
+        "<style=Thought>"
+      ],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[97]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Barry",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[97]",
+      "sourceText": "<style=Thought>(He’s… not moving…are these wounds on him genuine?)</style>",
+      "protectedTokens": [
+        "</style>",
+        "<style=Thought>"
+      ],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[99]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Barry",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[99]",
+      "sourceText": "<style=Thought>(My hand’s on his wrist but I don’t sense a pulse… am I doing this right? What in the world is going on?)</style>",
+      "protectedTokens": [
+        "</style>",
+        "<style=Thought>"
+      ],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[101]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Barry",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[101]",
+      "sourceText": "<style=Thought>(Is this part of the murder mystery, or is this serious?)</style>",
+      "protectedTokens": [
+        "</style>",
+        "<style=Thought>"
+      ],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[103]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Barry",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[103]",
+      "sourceText": "Sonic! SONIC!!",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[105]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Barry",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[105]",
+      "sourceText": "<style=Thought>(Oh no, oh no I feel myself panicking… Calm down",
+      "protectedTokens": [
+        "<style=Thought>"
+      ],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[110]",
+      "group": "story/MessyDiningCar",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[110]",
+      "sourceText": ", what do I do?)</style>",
+      "protectedTokens": [
+        "</style>"
+      ],
+      "note": null,
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[117]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Conductor",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[117]",
+      "sourceText": "I need you to do everything in your power to make sure our paying guests are well taken care of, understood?",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[120]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Conductor",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[120]",
+      "sourceText": "These guests are incredibly renowned, which means they must be remarkably rich.",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[122]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Conductor",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[122]",
+      "sourceText": "So I leave their care to you,",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[127]",
+      "group": "story/MessyDiningCar",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[127]",
+      "sourceText": ", my favorite employee… Surely you won’t let me down on this last ride! Faha! Fahahahahaha!",
+      "protectedTokens": [],
+      "note": null,
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[135]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Barry",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[135]",
+      "sourceText": "…",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[137]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Barry",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[137]",
+      "sourceText": "<style=Thought>(I need to catch up to Amy and Tails and get to the bottom of this. Even if this is part of the game, I just can’t risk it.)</style>",
+      "protectedTokens": [
+        "</style>",
+        "<style=Thought>"
+      ],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[139]",
+      "group": "story/MessyDiningCar",
+      "kind": "dialogue",
+      "speaker": "Barry",
+      "context": "root > MessyDiningCar > Return_To_Prologue",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].MessyDiningCar[1].Return_To_Prologue[139]",
+      "sourceText": "<style=Thought>(I’ll keep everyone safe Conductor, you’ll see.)</style>",
+      "protectedTokens": [
+        "</style>",
+        "<style=Thought>"
+      ],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    }
+  ]
+}

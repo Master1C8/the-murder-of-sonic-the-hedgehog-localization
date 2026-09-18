@@ -1,0 +1,319 @@
+{
+  "schemaVersion": 1,
+  "game": "the-murder-of-sonic-the-hedgehog",
+  "sourceLocale": "en",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "sourceUnitsSha256": "7c3cbc60eec5570d4b07c2f3b44da2abec3173158df4a4c181c7014aaa8dd2af",
+  "group": "story/Name_Entry",
+  "unitCount": 21,
+  "units": [
+    {
+      "id": "ink:root[2].Name_Entry[8]",
+      "group": "story/Name_Entry",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > Name_Entry",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Name_Entry[8]",
+      "sourceText": "...",
+      "protectedTokens": [],
+      "note": null,
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Name_Entry[10]",
+      "group": "story/Name_Entry",
+      "kind": "dialogue",
+      "speaker": "NamelessMC",
+      "context": "root > Name_Entry",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Name_Entry[10]",
+      "sourceText": "<style=Thought>(Phew, made it on the train fifteen minutes ahead of schedule.)</style>",
+      "protectedTokens": [
+        "</style>",
+        "<style=Thought>"
+      ],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Name_Entry[15]",
+      "group": "story/Name_Entry",
+      "kind": "dialogue",
+      "speaker": "NamelessMC",
+      "context": "root > Name_Entry",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Name_Entry[15]",
+      "sourceText": "<style=Thought>(So far so good for my first day on the job!)</style>",
+      "protectedTokens": [
+        "</style>",
+        "<style=Thought>"
+      ],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Name_Entry[17]",
+      "group": "story/Name_Entry",
+      "kind": "dialogue",
+      "speaker": "NamelessMC",
+      "context": "root > Name_Entry",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Name_Entry[17]",
+      "sourceText": "<style=Thought>(Oh… I totally forgot my nametag isn’t ready yet. I should make one…)</style>",
+      "protectedTokens": [
+        "</style>",
+        "<style=Thought>"
+      ],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Name_Entry[20].Enter_Name[0][0]",
+      "group": "story/Name_Entry",
+      "kind": "dialogue",
+      "speaker": "NamelessMC",
+      "context": "root > Name_Entry > Enter_Name",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Name_Entry[20].Enter_Name[0][0]",
+      "sourceText": "<style=Thought>(I’ll just sign my name here…)</style>",
+      "protectedTokens": [
+        "</style>",
+        "<style=Thought>"
+      ],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Name_Entry[20].Enter_Name[0][6]",
+      "group": "story/Name_Entry",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > Name_Entry > Enter_Name",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Name_Entry[20].Enter_Name[0][6]",
+      "sourceText": "Valid Name",
+      "protectedTokens": [],
+      "note": null,
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Name_Entry[20].Enter_Name[0][12]",
+      "group": "story/Name_Entry",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > Name_Entry > Enter_Name",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Name_Entry[20].Enter_Name[0][12]",
+      "sourceText": "Inappropriate Name",
+      "protectedTokens": [],
+      "note": null,
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Name_Entry[20].Enter_Name[0][18]",
+      "group": "story/Name_Entry",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > Name_Entry > Enter_Name",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Name_Entry[20].Enter_Name[0][18]",
+      "sourceText": "Character Name",
+      "protectedTokens": [],
+      "note": null,
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Name_Entry[20].Enter_Name[0][22].c-2[3]",
+      "group": "story/Name_Entry",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > Name_Entry > Enter_Name > c-2",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Name_Entry[20].Enter_Name[0][22].c-2[3]",
+      "sourceText": "If you see this line, something's gone wrong",
+      "protectedTokens": [],
+      "note": null,
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Name_Entry[20].Valid_Name[0][0]",
+      "group": "story/Name_Entry",
+      "kind": "dialogue",
+      "speaker": "NamelessMC",
+      "context": "root > Name_Entry > Valid_Name",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Name_Entry[20].Valid_Name[0][0]",
+      "sourceText": "<style=Thought>(",
+      "protectedTokens": [
+        "<style=Thought>"
+      ],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Name_Entry[20].Valid_Name[0][5]",
+      "group": "story/Name_Entry",
+      "kind": "choice",
+      "speaker": null,
+      "context": "root > Name_Entry > Valid_Name",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Name_Entry[20].Valid_Name[0][5]",
+      "sourceText": "! Did I spell that right?)</style>",
+      "protectedTokens": [
+        "</style>"
+      ],
+      "note": null,
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Name_Entry[20].Valid_Name[0][9]",
+      "group": "story/Name_Entry",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > Name_Entry > Valid_Name",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Name_Entry[20].Valid_Name[0][9]",
+      "sourceText": "Yes",
+      "protectedTokens": [],
+      "note": null,
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Name_Entry[20].Valid_Name[0][15]",
+      "group": "story/Name_Entry",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > Name_Entry > Valid_Name",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Name_Entry[20].Valid_Name[0][15]",
+      "sourceText": "No",
+      "protectedTokens": [],
+      "note": null,
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Name_Entry[20].Inappropriate_Name[0]",
+      "group": "story/Name_Entry",
+      "kind": "dialogue",
+      "speaker": "NamelessMC",
+      "context": "root > Name_Entry > Inappropriate_Name",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Name_Entry[20].Inappropriate_Name[0]",
+      "sourceText": "...",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Name_Entry[20].Inappropriate_Name[2]",
+      "group": "story/Name_Entry",
+      "kind": "dialogue",
+      "speaker": "NamelessMC",
+      "context": "root > Name_Entry > Inappropriate_Name",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Name_Entry[20].Inappropriate_Name[2]",
+      "sourceText": "<style=Thought>(I don't think I could show my face around here again if I wrote that.)</style>",
+      "protectedTokens": [
+        "</style>",
+        "<style=Thought>"
+      ],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Name_Entry[20].Inappropriate_Name[4]",
+      "group": "story/Name_Entry",
+      "kind": "dialogue",
+      "speaker": "NamelessMC",
+      "context": "root > Name_Entry > Inappropriate_Name",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Name_Entry[20].Inappropriate_Name[4]",
+      "sourceText": "<style=Thought>(Let's try again.)</style>",
+      "protectedTokens": [
+        "</style>",
+        "<style=Thought>"
+      ],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Name_Entry[20].Existing_Character_Name[0]",
+      "group": "story/Name_Entry",
+      "kind": "dialogue",
+      "speaker": "NamelessMC",
+      "context": "root > Name_Entry > Existing_Character_Name",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Name_Entry[20].Existing_Character_Name[0]",
+      "sourceText": "<style=Thought>(...Like... THE",
+      "protectedTokens": [
+        "<style=Thought>"
+      ],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Name_Entry[20].Existing_Character_Name[5]",
+      "group": "story/Name_Entry",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > Name_Entry > Existing_Character_Name",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Name_Entry[20].Existing_Character_Name[5]",
+      "sourceText": "?)</style>",
+      "protectedTokens": [
+        "</style>"
+      ],
+      "note": null,
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Name_Entry[20].Existing_Character_Name[7]",
+      "group": "story/Name_Entry",
+      "kind": "dialogue",
+      "speaker": "NamelessMC",
+      "context": "root > Name_Entry > Existing_Character_Name",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Name_Entry[20].Existing_Character_Name[7]",
+      "sourceText": "<style=Thought>(Haha, wouldn't that be cool.)</style>",
+      "protectedTokens": [
+        "</style>",
+        "<style=Thought>"
+      ],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Name_Entry[20].Existing_Character_Name[9]",
+      "group": "story/Name_Entry",
+      "kind": "dialogue",
+      "speaker": "NamelessMC",
+      "context": "root > Name_Entry > Existing_Character_Name",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Name_Entry[20].Existing_Character_Name[9]",
+      "sourceText": "<style=Thought>(But no...)</style>",
+      "protectedTokens": [
+        "</style>",
+        "<style=Thought>"
+      ],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Name_Entry[20].Name_Finalized[0]",
+      "group": "story/Name_Entry",
+      "kind": "dialogue",
+      "speaker": "Barry",
+      "context": "root > Name_Entry > Name_Finalized",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Name_Entry[20].Name_Finalized[0]",
+      "sourceText": "<style=Thought>(Hope passengers can read my scribble…)</style>",
+      "protectedTokens": [
+        "</style>",
+        "<style=Thought>"
+      ],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    }
+  ]
+}

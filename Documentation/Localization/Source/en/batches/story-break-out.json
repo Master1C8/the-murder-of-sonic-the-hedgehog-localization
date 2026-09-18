@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "game": "the-murder-of-sonic-the-hedgehog",
+  "sourceLocale": "en",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "sourceUnitsSha256": "7c3cbc60eec5570d4b07c2f3b44da2abec3173158df4a4c181c7014aaa8dd2af",
+  "group": "story/Break_Out",
+  "unitCount": 7,
+  "units": [
+    {
+      "id": "ink:root[2].Break_Out[0]",
+      "group": "story/Break_Out",
+      "kind": "dialogue",
+      "speaker": "Amy",
+      "context": "root > Break_Out",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Break_Out[0]",
+      "sourceText": "My pride and joy! Thank you for finding it.",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Break_Out[7]",
+      "group": "story/Break_Out",
+      "kind": "dialogue",
+      "speaker": "Amy",
+      "context": "root > Break_Out",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Break_Out[7]",
+      "sourceText": "Watch out, everyone!",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Break_Out[12]",
+      "group": "story/Break_Out",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > Break_Out",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Break_Out[12]",
+      "sourceText": "<Amy breaks down the door>",
+      "protectedTokens": [],
+      "note": null,
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Break_Out[17]",
+      "group": "story/Break_Out",
+      "kind": "dialogue",
+      "speaker": "Tails",
+      "context": "root > Break_Out",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Break_Out[17]",
+      "sourceText": "Perfect, Now we can leave!",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Break_Out[19]",
+      "group": "story/Break_Out",
+      "kind": "dialogue",
+      "speaker": "Amy",
+      "context": "root > Break_Out",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Break_Out[19]",
+      "sourceText": "Let's figure out what's going on!",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Break_Out[22]",
+      "group": "story/Break_Out",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > Break_Out",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Break_Out[22]",
+      "sourceText": "(...I have a bad feeling about what's behind that door...)",
+      "protectedTokens": [],
+      "note": null,
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Break_Out[24]",
+      "group": "story/Break_Out",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > Break_Out",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Break_Out[24]",
+      "sourceText": "(Something's awaiting us... Time to find out what!)",
+      "protectedTokens": [],
+      "note": null,
+      "translation": null
+    }
+  ]
+}

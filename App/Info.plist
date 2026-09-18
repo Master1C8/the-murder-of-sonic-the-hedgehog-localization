@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleDevelopmentRegion</key><string>ru</string>
+  <key>CFBundleDisplayName</key><string>Murder of Sonic — VN Revival</string>
+  <key>CFBundleExecutable</key><string>MurderOfSonicLocalizationInstaller</string>
+  <key>CFBundleIdentifier</key><string>fun.vnrevival.murder-of-sonic.languages-installer</string>
+  <key>CFBundleIconFile</key><string>App.icns</string>
+  <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
+  <key>CFBundleName</key><string>Murder of Sonic — VN Revival</string>
+  <key>CFBundlePackageType</key><string>APPL</string>
+  <key>CFBundleShortVersionString</key><string>0.2.1</string>
+  <key>CFBundleVersion</key><string>201</string>
+  <key>LSMinimumSystemVersion</key><string>14.0</string>
+  <key>NSHighResolutionCapable</key><true/>
+</dict>
+</plist>

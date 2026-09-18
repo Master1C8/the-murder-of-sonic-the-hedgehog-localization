@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "game": "the-murder-of-sonic-the-hedgehog",
+  "sourceLocale": "en",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "sourceUnitsSha256": "7c3cbc60eec5570d4b07c2f3b44da2abec3173158df4a4c181c7014aaa8dd2af",
+  "group": "story/Environment_Amy2",
+  "unitCount": 4,
+  "units": [
+    {
+      "id": "ink:root[2].Environment_Amy2[0][0]",
+      "group": "story/Environment_Amy2",
+      "kind": "dialogue",
+      "speaker": "Amy",
+      "context": "root > Environment_Amy2",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Environment_Amy2[0][0]",
+      "sourceText": "My hammer's around here somewhere. If we find it, I can get us out!",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Environment_Amy2[0][7][1].b[3]",
+      "group": "story/Environment_Amy2",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > Environment_Amy2 > b",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Environment_Amy2[0][7][1].b[3]",
+      "sourceText": "Is this it? >>>>InventoryChoice",
+      "protectedTokens": [],
+      "note": null,
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Environment_Amy2[0][12]",
+      "group": "story/Environment_Amy2",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > Environment_Amy2",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Environment_Amy2[0][12]",
+      "sourceText": "I'm still looking...",
+      "protectedTokens": [],
+      "note": null,
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Environment_Amy2[0][16].c-0[1]",
+      "group": "story/Environment_Amy2",
+      "kind": "dialogue",
+      "speaker": "Amy",
+      "context": "root > Environment_Amy2 > c-0",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Environment_Amy2[0][16].c-0[1]",
+      "sourceText": "Well let me know when you find it, okay?",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "locale": "hu",
+  "status": "editorially-accepted-static-text",
+  "workflow": "Universal editorial audit with this project's owner-approved legacy entry gate: the newer pre-localization character/gender glossary precondition was not applied retroactively. The complete semantic pass, character/reference pass, immutable closure, regression suite, and machine gates were still performed.",
+  "steamBuildID": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "sourceUnitsSha256": "7c3cbc60eec5570d4b07c2f3b44da2abec3173158df4a4c181c7014aaa8dd2af",
+  "candidateSetSha256": "0083d052c4058280700c4e3dac67360463bfc90f44228bff7c9b3e3a926c485b",
+  "inventoryFileSha256": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+  "sourcePackageSha256": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+  "sourceCsvSha256": "10e1e0978c23fd6751fa4e57b8325eb9473dc8c01ed134367d87d6c882cb14f3",
+  "imageReviewSha256": "6328ff5e744949e5a368e54b053b2ad825098af93846005012a063943c7de749",
+  "glossarySourceNormalizedSha256": "6585d55f77a0e23e98e946376318305d91234e7b7b9e212a45b42331ae08673f",
+  "glossaryHungarianNormalizedSha256": "f93f043d36d265003090efafd9f65be25d084b051ce259201e84c7f2603fa17f",
+  "normalization": "Glossary hashes are SHA-256 of UTF-8 JSON.stringify(parsed glossary array / parsed glossary-translations.json.hu object), without trailing newline. ID-list hashes use canonical source order, LF separators, and one trailing LF.",
+  "baselineArtifactHashes": {
+    "manual": "6d27620f48c8c94ee332e18b390d1b5a4b145870bc059c9cd06f1b1fd1aaac6e",
+    "overlay": "8e6c0cb8c3657f58694cc5cf96b3156e174cebeb68c6ab6b9c8a90e38cbf0c88",
+    "images": "75bcb76944246d44a3c5b5d899f602d7ef1376a582f666f247c42bc8be8af8ad"
+  },
+  "artifactHashes": {
+    "manual": "2d0f6eaf8972181a44dfb786f020a0b047f19ff863f581f71c73e7deaf7e8530",
+    "overlay": "455b84e8f3dfb86b25538e0528d0a148c61ed5e86f8a5d1fa1df274111d83e12",
+    "images": "75bcb76944246d44a3c5b5d899f602d7ef1376a582f666f247c42bc8be8af8ad"
+  },
+  "semanticCoverage": {
+    "sourceUnitsRead": 3547,
+    "sourceUnitTotal": 3547,
+    "sourceArrayIndicesInclusive": [
+      0,
+      3546
+    ],
+    "imagePlansRead": 10,
+    "imagePlanTotal": 10,
+    "complete": true,
+    "otherLocalesConsulted": false,
+    "genderAndReferencePass": "complete for the existing project inputs; Hungarian has no grammatical gender in personal pronouns or finite verb/adjective agreement, but Amy, Rouge, Blaze, all named referents, titles, roles, address forms, kinship terms, and runtime-composed references were checked. Barry follows the owner's project-context instruction as male."
+  },
+  "findings": {
+    "confirmedFindingCount": 104,
+    "resolvedTextFindingCount": 104,
+    "resolvedImagePlanFindingCount": 0,
+    "authorPassFindingCount": 84,
+    "independentFindingCount": 20,
+    "changedUnitCount": 100,
+    "uniqueChangedUnitCountFromBaseline": 100,
+    "changedIdsSha256": "2896520a9c9d28be820b2ba83906d4a4d7f922a9ab766c02601d1e00f8374662",
+    "changedIdsSha256Scope": "cycle-1 author pass: 84 IDs",
+    "cycle2ChangedIdsSha256": "0e454d0e3cf0049f4f469c338d80bfd390a8754410e8e084e28a49c2689f9616",
+    "cycle2ChangedUnitCount": 20,
+    "authorAndIndependentChangedIdOverlapCount": 4,
+    "openLocaleFindingCount": 0,
+    "resolutionBasis": [
+      "meaning, subject, polarity, omission, and dialogue-assembly corrections",
+      "Hungarian grammar, case, number, agreement, idiom, and natural syntax",
+      "canonical item, carriage, UI, credit-role, and repeated terminology",
+      "character voice and source humor where the previous target broke the mechanism"
+    ]
+  },
+  "dependencyClosure": {
+    "cycle": 2,
+    "closureCount": 583,
+    "closureIdsSha256": "d6fbf2ed96e580b32b17caf1167b4f0d08e572113db7aaa3b91ebc900c93c7fd",
+    "changedUnitsFromBaseline": 100,
+    "cycle2ChangedUnits": 20,
+    "cycle2ContextUnits": 92,
+    "cycle2ContextIdsSha256": "edba6d169ffab052fce1e5aa8bd841dc22d83ad69bdeccc28ce03adf0ab69102",
+    "addedClosureUnits": 59,
+    "addedClosureIdsSha256": "e05e1914048310e2026d76d6a6e7832a8627a8a86a9a9afb51676dcb6a9055d7",
+    "removedClosureUnits": 0,
+    "evidenceFile": "Documentation/Localization/hu.audit.cycle-2.json",
+    "evidenceFileSha256": "8e03fff9a6830798e15bae8d395a1ccc757041d5e247319c1165a7d3f9e41d59",
+    "priorCycle": {
+      "closureCount": 524,
+      "closureIdsSha256": "e628e2471e52a1899119cae72e867d672332d11e57921f14ecf081fa8cbc4b35",
+      "evidenceFile": "Documentation/Localization/hu.audit.cycle-1.json",
+      "evidenceFileSha256": "b764adfe043e6fcd017feb882bacf5bfbd08cff84159e434f6d6b14af3197635"
+    },
+    "independentDiffAudit": "passed-clean-cycle-2-delta-review"
+  },
+  "independentReview": {
+    "status": "complete-clean",
+    "reviewedCycle1ChangedUnitCount": 84,
+    "reviewedCycle1ClosureUnitCount": 524,
+    "reviewedGlossaryEntryCount": 117,
+    "reviewedFemaleAndKnownReferentUnitCount": 678,
+    "findingCount": 20,
+    "resolvedFindingCount": 20,
+    "cycle2DeltaUnitCount": 69,
+    "cycle2DeltaIdsSha256": "9a8f021990ca8afc37daaad6680d95f2fcfcba44d79b7012744329e621858a5b",
+    "cycle2DeltaReview": "69/69 source-target rows read on final artifact hashes; no open finding",
+    "manualSha256": "2d0f6eaf8972181a44dfb786f020a0b047f19ff863f581f71c73e7deaf7e8530",
+    "overlaySha256": "455b84e8f3dfb86b25538e0528d0a148c61ed5e86f8a5d1fa1df274111d83e12",
+    "imagesSha256": "75bcb76944246d44a3c5b5d899f602d7ef1376a582f666f247c42bc8be8af8ad"
+  },
+  "mandatoryRegression": {
+    "authorPass": "complete on the frozen artifact hashes",
+    "independentPass": "passed clean on final cycle-2 artifact hashes",
+    "femaleCharacterSetCount": 678,
+    "femaleCharacterSetSha256": "59dc468c083bce8ece0e6c6e830ff802106fac65827b2dc15d5613140f783451",
+    "rings": "reviewed: runner HUD and both Assist Mode labels; no hu layout override; static layout validation clean",
+    "saveLoad": "reviewed: managed headings plus save UI heading, player name, timestamp, location, error, empty state, and pause Save/Load labels",
+    "environments": "reviewed: all 13 runtime keys, 11 unique display values, including exact internal Conductor_Car and Final_Push keys",
+    "establishingShotTitles": "reviewed: 6/6",
+    "speakerDisplayLabels": "reviewed: 17/17",
+    "imagePlans": "reviewed: 10/10; required symbols and numbers preserved; no image-plan or PNG change"
+  },
+  "machineGates": {
+    "sourceValidation": "passed: 3547 units, 29 batches, 3547 CSV rows, 72 image candidates, 72 extracted images, 72 reviewed classifications, 10 text-bearing, 15 preserve-exact-symbol",
+    "glossaryWork": "passed: 117/117 source and hu entries, IDs/order match, zero missing/extra/empty",
+    "glossaryCheck": "passed through canonical ./vnrevival glossary check; all repository glossaries valid",
+    "overlayValidationAllowIncomplete": "passed: 3547/3547, zero missing/extra/token/layout errors; 11 inherited source placeholders reported",
+    "strictValidation": "executed: expected exit 1 solely for 11 inherited source-placeholder needs-review IDs; zero missing/extra/token/layout errors",
+    "byteIdenticalRebuild": true,
+    "pythonLocalizationPipelineTests": "passed: 10/10",
+    "swiftInstallerCoreFakeFolderTests": "passed: 10/10; temporary fake game folders only",
+    "jsonParse": "passed",
+    "runtime": "not-run",
+    "visual": "not-run"
+  },
+  "inheritedSourcePlaceholderIds": [
+    "unity:level0:1485:m_text",
+    "unity:level0:1490:m_text",
+    "unity:level0:1511:m_text",
+    "unity:level0:1512:m_text",
+    "unity:level0:1513:m_text",
+    "unity:level0:1524:m_text",
+    "unity:level0:1526:m_text",
+    "unity:level0:1528:m_text",
+    "unity:level0:1530:m_text",
+    "unity:level0:1544:m_text",
+    "unity:level0:1555:m_text"
+  ],
+  "unchangedAuthorizedBoundaries": {
+    "imagePlan": true,
+    "pngFiles": true,
+    "glossary": true,
+    "readyAndPackageConfig": true,
+    "installedGameFiles": true
+  },
+  "runtime": "not-run",
+  "visual": "not-run",
+  "delivery": "Editorially accepted static text. No commit: canonical main has no commits and contains unrelated staged, modified, and untracked owner work, so integration is unsafe. Runtime and visual QA remain not-run."
+}

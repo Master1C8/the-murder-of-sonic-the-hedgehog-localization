@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "game": "the-murder-of-sonic-the-hedgehog",
+  "sourceLocale": "en",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "sourceUnitsSha256": "7c3cbc60eec5570d4b07c2f3b44da2abec3173158df4a4c181c7014aaa8dd2af",
+  "group": "story/ActuallyHammer",
+  "unitCount": 3,
+  "units": [
+    {
+      "id": "ink:root[2].ActuallyHammer[0][2][0]",
+      "group": "story/ActuallyHammer",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > ActuallyHammer",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].ActuallyHammer[0][2][0]",
+      "sourceText": "(Is this... I think this is it!)",
+      "protectedTokens": [],
+      "note": null,
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].ActuallyHammer[0][2][2]",
+      "group": "story/ActuallyHammer",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > ActuallyHammer",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].ActuallyHammer[0][2][2]",
+      "sourceText": "(I should go talk to Amy!)",
+      "protectedTokens": [],
+      "note": null,
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].ActuallyHammer[0][2][10]",
+      "group": "story/ActuallyHammer",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > ActuallyHammer",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].ActuallyHammer[0][2][10]",
+      "sourceText": "<style=InventoryItem>Amy's Hammer</style> is added to your inventory",
+      "protectedTokens": [
+        "</style>",
+        "<style=InventoryItem>"
+      ],
+      "note": null,
+      "translation": null
+    }
+  ]
+}

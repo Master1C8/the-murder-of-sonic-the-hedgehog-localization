@@ -1,0 +1,1119 @@
+{
+  "schemaVersion": 1,
+  "locale": "cs",
+  "game": "the-murder-of-sonic-the-hedgehog",
+  "workflow": "complete-semantic-and-dependency-audit",
+  "status": "editorially-accepted-static-text",
+  "steamBuildID": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "sourceUnitsSha256": "7c3cbc60eec5570d4b07c2f3b44da2abec3173158df4a4c181c7014aaa8dd2af",
+  "inventoryFileSha256": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+  "sourcePackageFileSha256": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+  "imageCandidateSetSha256": "0083d052c4058280700c4e3dac67360463bfc90f44228bff7c9b3e3a926c485b",
+  "glossarySourceNormalizedSha256": "6585d55f77a0e23e98e946376318305d91234e7b7b9e212a45b42331ae08673f",
+  "glossaryCzechNormalizedSha256": "f50d8f26facfb93e715167a0403d078af99fffc9020e42642df9bf39a3249fd7",
+  "normalization": "SHA-256 of UTF-8 JSON.stringify-equivalent compact parsed glossary source array / parsed glossary-translations.json.cs object, without trailing newline",
+  "inputHashes": {
+    "baselineManualSha256": "74a3ea2fee196a98d17a20178d491dc4056e56103064b78f0fa7f89b024933a7",
+    "baselineOverlaySha256": "343048c3c5f1a8339cbfabe35029ce7c88f8f58b1703d50da494f6f4afe10b2d",
+    "baselineImagesSha256": "2a974de4483662c33e14465e324a9ab19ca91ec17a2bd9ea5d075cc86043b51e"
+  },
+  "semanticCoverage": {
+    "sourceTargetPairsReviewed": 3547,
+    "sourceTargetPairsTotal": 3547,
+    "imagePlansReviewed": 10,
+    "imagePlansTotal": 10,
+    "complete": true,
+    "reviewer": "/root/czech_audit",
+    "sourcePolicy": "Canonical Documentation/Localization/Source/en plus inventory.json only; no other locale used as a translation source."
+  },
+  "preflight": {
+    "source": "passed: 3547 units, 29 batches, 3547 CSV rows, 72/72 image candidates, 10 text-bearing plans",
+    "overlay": "passed: 3547/3547, byte-identical rebuild, zero missing/extra/token/layout errors",
+    "images": "passed: 10/10 plans; one Czech image-plan translation was corrected during independent review; PNG assets remain unchanged",
+    "glossary": "passed: 117/117 source/cs, IDs and order match, zero missing/extra/empty; ./vnrevival glossary check passed",
+    "inheritedSourcePlaceholders": 11
+  },
+  "findingPolicy": {
+    "record": "The 225 findings[].id records are the actionable objective text errors found during the author semantic pass. Independent-review findings are preserved by cycle and count in independentAuditHistory because the original 48-ID list and one image-plan finding were reported outside this file. Every applied text correction is represented by the exact final value in cs.manual.json on finalManualSha256; the compiled copy is in cs.overlay.json.",
+    "classes": {
+      "gender-agreement-and-referent": "Known-gender or player-character context required corrected Czech gender/agreement, reference, address, or associated contextual wording; slash alternatives were eliminated after referent verification.",
+      "approved-glossary-terminology": "The prior value conflicted with the approved Czech glossary or a repeated terminology dependency.",
+      "runtime-ui-save-load-location": "The prior UI/runtime-bound value was mistranslated, swapped, incomplete, inconsistent, or contextually wrong while protected bindings remained unchanged.",
+      "semantic-accuracy-grammar-voice": "The prior value contained an objective source-meaning, Czech grammar, scene-context, coherence, rhyme, or character-voice error."
+    }
+  },
+  "findings": [
+    {
+      "id": "ink:root[2].Beginning[1].Start_Test_Story[0][0][0]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Casino[5].Dont_Play_The_Slots[1][6].b[1]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Casino[5].Environment_Blaze[0][21].c-1[38]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Casino[5].Environment_Blaze[0][21].c-1[40]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Casino[5].Exit_Door[0][0]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Casino[5].FirstVisit[0][103]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Casino[5].FirstVisit[0][131]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Casino[5].FirstVisit[0][163].c-0[1]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Casino[5].FirstVisit[0][163].c-0[4]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Casino[5].FirstVisit[0][163].g-0[10]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Casino[5].FirstVisit[0][5]",
+      "class": "runtime-ui-save-load-location"
+    },
+    {
+      "id": "ink:root[2].Casino[5].FirstVisit[0][64]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Casino[5].FirstVisit[0][73]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Casino[5].FirstVisit[0][87]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Casino[5].Give_Blaze_Item[8]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Casino[5].Give_Rouge_Item[7]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Casino[5].Heist_Planning_Pt7[0][26].c-1[1]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Casino[5].Heist_Planning_Pt8[0][23].g-0[17]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Casino[5].Play_The_Slots[0][6].b[6]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Casino[5].Play_The_Slots[1][6].b[12]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Casino[5].Play_The_Slots[2][6].b[14]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Casino[5].Play_The_Slots[2][6].b[24]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Casino[5].Play_The_Slots[3][6].b[15]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Casino[5].Play_The_Slots[4][6].b[17]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Casino[5].Play_The_Slots[5][1].b[6]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Casino[5].Poker_Table[0][14]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Casino[5].Robotic_Arm[11]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Casino[5].Robotic_Arm[9]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Casino[5].Slot_Machine[0]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[13]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[26]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Accusation[39]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Blowdart[0]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Blowdart[39]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Blowdart[4]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Broken_Robot_Arm[38]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Choose_Not_Rouge[2]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Choose_Not_Rouge[5]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Confrontation_Start[192]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Dead_Sonic[162]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Dead_Sonic[201]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Environment_Amy_Start_Confrontation[0][28]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Environment_Shadow[12]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Environment_Shadow[9]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][121]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][137]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][175]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][190].g-0[80]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][49]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][91]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][94]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Interrogation_Part2[0][36]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Interrogation_Part3[0][84].c-1[6]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Interrogation_Part4[50]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Interrogation_Part4[64]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Interrogation_Part4[8]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Interrogation_Part5[131]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Interrogation_Part6[23]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Interrogation_Part6[6]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Interrogation_Part6[79]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Minigame_Midpoint1[1][3]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Minigame_Midpoint2[1][3]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Minigame_Midpoint3[1][3]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Mounted_Screen[8]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Sonic_Explanation1[178]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Sonic_Explanation1[39]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Sonic_Explanation2[0]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Sonic_Explanation2[111]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Sound_System[0][17]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Sound_System[0][21]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Start_Interrogation[27]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Train_Deck[15]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Train_Deck[36]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Vent[20]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Conductor_Car[74].Who_Dunnit_Choice[0][6]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].DiningCloset[0][51].g-0[30]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].DiningCloset[1].Minigame_Midpoint2[2][1].b[8]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].DiningCloset[1].Trash_Bin[9]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].DiningCloset[1].Various_Food[10]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].DiningCloset[1].Various_Food[13]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Final_Push[27]",
+      "class": "runtime-ui-save-load-location"
+    },
+    {
+      "id": "ink:root[2].Final_Push[29]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Final_Push[35].Ending1_For_Non_Completionists[38]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Final_Push[35].Ending1_For_Non_Completionists[41]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Final_Push[35].Ending1_For_Non_Completionists[46]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Final_Push[35].Final_Boss_Interaction3[30]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Final_Push[35].Final_Boss_Interaction5[0]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Final_Push[35].Final_Questions1[0][10]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Final_Push[35].Final_Questions1[0][4]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Final_Push[35].Final_Questions2[0][10]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Final_Push[35].Final_Questions2[0][4]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Final_Push[35].Final_Questions3[0][10]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Final_Push[35].Final_Questions3[0][4]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Final_Push[35].Finale_Start[101]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Final_Push[35].Finale_Start[116]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Final_Push[35].Finale_Start[28]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Final_Push[35].Finale_Start[69]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Final_Push[35].Minigame_Checkpoint2[1][8].b[25]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Final_Push[35].Minigame_Checkpoint3[1][8].b[27]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Library[4].Bookshelf[59]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Library[4].Eggman_Book[12]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Library[4].FirstVisit[0][2]",
+      "class": "runtime-ui-save-load-location"
+    },
+    {
+      "id": "ink:root[2].Library[4].FirstVisit[0][74].g-0[74]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Library[4].FirstVisit[0][74].g-1[28]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Library[4].Give_Espio_Item[10]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Library[4].Give_Vector_Item[19]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Library[4].Give_Vector_Item[27]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Library[4].Give_Vector_Item[3]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Library[4].Give_Vector_Item[45]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Library[4].Globe[11]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Library[4].Globe[13]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Library[4].Globe[6]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Library[4].Interrogation_Part2[0][20].g-2[22].c-10[1]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Library[4].Interrogation_Part2[0][20].g-2[22].c-10[8]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Library[4].Interrogation_Part7_End[12]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Library[4].Interrogation_Part7_End[45]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Library[4].Library_Brochure[21]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Library[4].Minigame_Midpoint1[1][8].b[29]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Library[4].Minigame_Midpoint3[2][1].b[1]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Library[4].Robotic_Arm[6]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Library[4].Table[22]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Library[4].Talk_To_Espio[0][18].c-0[8]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Library[4].Talk_To_Espio[0][18].c-1[8]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Library[4].Trash_Bin[15]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Library[4].Trash_Bin[28]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Library[4].Trash_Bin[8]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Library[4].Vector_Interaction_Prompts[0][24].g-0[0]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].LockdownDiningCar[0][66].c-0[4]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].LockdownDiningCar[0][66].c-0[7]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].LockdownDiningCar[1].Ask_To_Go_To_Final_Push[0][8]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].LockdownDiningCar[1].Eggman_Appears[0][56].g-0[121]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].LockdownDiningCar[1].Eggman_Appears[0][56].g-0[127]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].LockdownDiningCar[1].Eggman_Appears[0][56].g-0[133]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].LockdownDiningCar[1].Eggman_Appears[0][56].g-0[139]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].LockdownDiningCar[1].Eggman_Appears[0][56].g-1[12]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].LockdownDiningCar[1].Eggman_Appears[0][56].g-1[6]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].LockdownDiningCar[1].Eggman_Appears[0][56].g-2[20]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].LockdownDiningCar[1].Eggman_Appears[0][56].g-3[77].c-9[1]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].LockdownDiningCar[1].Environment_Sonic_Interaction_1[20]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].LockdownDiningCar[1].Environment_Sonic_Interaction_1[22]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].LockdownDiningCar[1].Environment_Sonic_Interaction_2[0][13]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].LockdownDiningCar[1].Napkin_Holder[9]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Lounge[108].Amy_Interrogation[9]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Lounge[108].Enter_Interrogation_Mode[71]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Lounge[108].Enter_Interrogation_Mode[85]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Lounge[108].Environment_Amy_Interaction_Final[10]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Lounge[108].Exit_Door[0][4].b[1]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Lounge[108].Interrogation_Part4[0][14].g-0[114]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Lounge[108].Keyring[25]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Lounge[108].Keyring[8]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Lounge[108].Minigame_Midpoint1[10][3]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Lounge[108].Minigame_Midpoint2[9][3]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Lounge[108].Minigame_Midpoint3[9][3]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Lounge[108].Minigame_Midpoint3[9][8].b[24]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Lounge[108].Minigame_Midpoint3[9][8].b[35]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Lounge[108].Robotic_Arm[0][0]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Lounge[108].Robotic_Arm[0][10]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Lounge[108].Robotic_Arm[0][2]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Lounge[108].Talk_To_Amy[0][19]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Lounge[108].Talk_To_Amy[0][25]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Lounge[108].Talk_To_Amy[0][29].g-0[6]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Lounge[108].Trash_Bin[0][42].c-0[46]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Lounge[94]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[103]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[139]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].MessyDiningCar[1].Return_To_Prologue[64]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Name_Entry[10]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Name_Entry[17]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Name_Entry[20].Inappropriate_Name[2]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Name_Entry[20].Valid_Name[0][5]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Prologue[1].Environment_Amy_Interaction_1[21]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Prologue[1].Environment_Blaze_Interaction_1[36]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Prologue[1].Environment_Blaze_Interaction_1[8]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Prologue[1].Environment_Sonic_Interaction_1[18]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Prologue[1].Environment_Sonic_Interaction_1[22]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Prologue[1].Environment_Vector_Interaction_2[0][10][2][0]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Prologue[1].Found_Vector_Ticket[16]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Prologue[1].Found_Vector_Ticket[21]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Prologue[1].Found_Vector_Ticket[34]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Prologue[1].Gang_Gets_Assignments[0][35]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Prologue[1].Give_Shadow_Item[14]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Prologue[1].Murder_Mystery_Rules[0][53].g-0[2]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].SafeRoom[4].Giant_Safe[111]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].SafeRoom[4].Opt10_Stomp_Egg[0]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].SafeRoom[4].Opt13_Chaos_Control[0]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].SafeRoom[4].Opt13_Chaos_Control[3]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].SafeRoom[4].Opt16_Just_Wait[104]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].SafeRoom[4].Opt16_Just_Wait[163]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].SafeRoom[4].Opt16_Just_Wait[178]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].SafeRoom[4].Opt16_Just_Wait[25]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].SafeRoom[4].Opt16_Just_Wait[2]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].SafeRoom[4].Opt16_Just_Wait[33]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].SafeRoom[4].Opt8_Blaze_Fire[0]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].SafeRoom[4].Opt8_Blaze_Fire[5]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].SafeRoom[4].Return_To_Egg_Options[0][81]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].SafeRoom[4].Safe_Room_Pt1[28]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].SafeRoom[4].Safe_Room_Pt1[39]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].SafeRoom[4].Wall_of_Safes[21]",
+      "class": "approved-glossary-terminology"
+    },
+    {
+      "id": "ink:root[2].Saloon[4].Environment_Knuckles[0][3][0]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Saloon[4].FirstVisit[0][22]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].Saloon[4].Interrogation_Part3[11]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Saloon[4].Interrogation_Part4_Have_Correct_Clue[0][8].b[33]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Saloon[4].Interrogation_Part5[0][20]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Saloon[4].Interrogation_Part5[0][26]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Saloon[4].Interrogation_Part5[0][32]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Saloon[4].Interrogation_Part5[0][50]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "ink:root[2].Saloon[4].Robotic_Arm[35]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].TestCar[6].TestFlashback[19]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].TestCar[6].TestFlashback[45]",
+      "class": "runtime-ui-save-load-location"
+    },
+    {
+      "id": "ink:root[2].TestCar[6].TestFullscreenImage[13]",
+      "class": "gender-agreement-and-referent"
+    },
+    {
+      "id": "ink:root[2].TestCar[6].WeBack[0]",
+      "class": "semantic-accuracy-grammar-voice"
+    },
+    {
+      "id": "inventory:camera:Description",
+      "class": "runtime-ui-save-load-location"
+    },
+    {
+      "id": "inventory:usedcups:Description",
+      "class": "runtime-ui-save-load-location"
+    },
+    {
+      "id": "unity:defaultgroup:-5799638202836302919:m_text",
+      "class": "runtime-ui-save-load-location"
+    },
+    {
+      "id": "unity:defaultgroup:-6124504423802715207:m_text",
+      "class": "runtime-ui-save-load-location"
+    },
+    {
+      "id": "unity:defaultgroup:-6939207961616759879:m_text",
+      "class": "runtime-ui-save-load-location"
+    },
+    {
+      "id": "unity:defaultgroup:1132863480269152641:m_text",
+      "class": "runtime-ui-save-load-location"
+    },
+    {
+      "id": "unity:defaultgroup:1611117338191106311:m_text",
+      "class": "runtime-ui-save-load-location"
+    },
+    {
+      "id": "unity:defaultgroup:4329974781901185409:m_text",
+      "class": "runtime-ui-save-load-location"
+    },
+    {
+      "id": "unity:defaultgroup:880224417442701005:m_text",
+      "class": "runtime-ui-save-load-location"
+    },
+    {
+      "id": "unity:level0:1495:m_text",
+      "class": "runtime-ui-save-load-location"
+    },
+    {
+      "id": "unity:level0:1499:m_text",
+      "class": "runtime-ui-save-load-location"
+    },
+    {
+      "id": "unity:level0:1500:m_text",
+      "class": "runtime-ui-save-load-location"
+    },
+    {
+      "id": "unity:level0:1532:m_text",
+      "class": "runtime-ui-save-load-location"
+    },
+    {
+      "id": "unity:level0:1538:m_text",
+      "class": "runtime-ui-save-load-location"
+    }
+  ],
+  "authorFindingCount": 225,
+  "independentFindingCount": 62,
+  "textFindingCount": 286,
+  "imagePlanFindingCount": 1,
+  "findingCount": 287,
+  "changedIdCount": 281,
+  "changedTextIdCount": 281,
+  "changedImagePlanCount": 1,
+  "dependencyClosure": {
+    "count": 3363,
+    "imagePlanCount": 10,
+    "idsSha256": "a5be5ea88e0b551c62a4bd3a6314c95d2a87d44e78104e2826cafc0349bf50fa",
+    "tsvSha256": "099d22d424b7ddb1c3d961887f1dd376f1708c6c56c341bad135ca565278f6ff",
+    "hashEncoding": "sorted stable IDs joined by LF with a final LF",
+    "selection": "Union of changed IDs; containing Ink exchanges by stable path prefix; exact repeated English or old/new Czech wording; edited glossary-topic occurrences; every speaker/name reference for characters touched by changed lines; all non-Ink runtime units; six location-title and 17 speaker-label binding surfaces.",
+    "componentCounts": {
+      "changed": 281,
+      "closureTextIds": 3363,
+      "imagePlans": 10,
+      "locationTitles": 6,
+      "speakerLabels": 17
+    },
+    "changedIdsSha256": "9a2304e8847b794eb4ca152810963070a6dfbd86a3264a38e8d2756728b673c1",
+    "authorSelfReview": "complete by /root/czech_audit; all author-changed IDs were reread source-to-target, closure dependencies were checked, and the final 11 systemic glossary edits were reread after application",
+    "independentReview": "complete and clean by /root/czech_diff_review after all 62 independent findings were resolved; the final exact verification covered the 13 last-corrected IDs and the mandatory regressions on the final freeze",
+    "initialSelfReviewClosureHistory": {
+      "count": 3337,
+      "idsSha256": "a8803b7a4747065e394ca2b8f02312e8bc8c9aaed6824b4e8c34660f17c12a40",
+      "changed": 225,
+      "changedIdsSha256": "80705a5ca2c2fc19e20b0659450e0f315ba976bb54aa53a01eaae21ccbdf676b",
+      "scenePrefixCount": 131,
+      "componentCounts": {
+        "containingExchanges": 1815,
+        "repetitions": 248,
+        "glossaryLinked": 79,
+        "affectedCharacterReferences": 2947,
+        "runtimeUnits": 212,
+        "locationTitles": 6,
+        "speakerLabels": 17
+      }
+    }
+  },
+  "independentAuditHistory": {
+    "reviewer": "/root/czech_diff_review",
+    "initialCycle": {
+      "textFindings": 48,
+      "imagePlanFindings": 1,
+      "totalFindings": 49,
+      "result": "all resolved"
+    },
+    "freshClosureCycle": {
+      "closureTextRowsReviewed": 3363,
+      "textFindings": 13,
+      "imagePlanFindings": 0,
+      "totalFindings": 13,
+      "result": "all resolved"
+    },
+    "totals": {
+      "textFindings": 61,
+      "imagePlanFindings": 1,
+      "totalFindings": 62,
+      "result": "all resolved"
+    },
+    "finalExactVerification": {
+      "correctedTextIdsReviewed": 13,
+      "result": "CLEAN",
+      "manualSha256": "10616ad98201246e50d7005c6faef42d90dcefaa1145f6c224823ee2dc6a3052",
+      "overlaySha256": "c9f8fecd6173cf124323eff2e7b6b764ffd158c85dfd250e7a52327177abc73a",
+      "imagesSha256": "0b65a98157c95c49159156299d04c0fc3155982b5097496ecb7b02b9d6bf2744",
+      "changedTextIdsSha256": "9a2304e8847b794eb4ca152810963070a6dfbd86a3264a38e8d2756728b673c1",
+      "closureIdsSha256": "a5be5ea88e0b551c62a4bd3a6314c95d2a87d44e78104e2826cafc0349bf50fa",
+      "closureTsvSha256": "099d22d424b7ddb1c3d961887f1dd376f1708c6c56c341bad135ca565278f6ff"
+    },
+    "changedUnitAccounting": "The final 281 changed text IDs are fewer than the 286 text findings because later refinements overlap earlier corrections and some findings restored canonical or repeated wording rather than adding a distinct final changed ID."
+  },
+  "diffAudit": {
+    "status": "passed",
+    "independentReviewer": "/root/czech_diff_review",
+    "result": "CLEAN on the final exact hashes after 62 independent findings were resolved",
+    "requiredNextStep": null
+  },
+  "mandatoryRegression": {
+    "status": "passed-author-and-independent-final-verification",
+    "genderAgreement": "Reviewed all known-gender speakers/referents; Barry and NamelessMC are male (owner-confirmed for Barry); Amy, Rouge, and Blaze feminine forms; pronouns, past-tense verbs, adjectives, participles, titles, professions, role nouns, vocatives, and contextual addressees. No slash gender alternatives remain.",
+    "rings": "Reviewed PRSTENY, NEDOSTATEK PRSTENŮ, and Počet prstenů k výhře; structural layout validation passed and no Czech layout override is present.",
+    "saveLoad": "Reviewed ULOŽIT / NAČÍST headings, slot locations, collision constraints, and timestamp 27. února 3003 05:44PM.",
+    "environmentMappings": {
+      "environmentKeys": 13,
+      "uniqueDisplayValues": 11,
+      "exactInternalDisplays": [
+        "Conductor  Car",
+        "Final  Push"
+      ],
+      "result": "passed with no conflicts"
+    },
+    "establishingShotTitles": {
+      "count": 6,
+      "result": "passed"
+    },
+    "speakerDisplayLabels": {
+      "count": 17,
+      "result": "passed"
+    },
+    "imagePlans": {
+      "count": 10,
+      "changedPlans": 1,
+      "result": "passed; one Czech translation plan was corrected during independent review; all PNG assets remain unchanged"
+    }
+  },
+  "finalMachineGate": {
+    "sourceValidation": "passed: sourceUnits SHA-256 matches pinned value; 3547 units, 29 batches, 3547 CSV rows, zero errors",
+    "compileOverlay": "passed: 3547/3547",
+    "allowIncompleteValidation": "passed: zero missing/extra/protected-token/layout errors; only 11 explicitly classified source placeholders",
+    "strictValidation": "executed: expected exit 1 solely for the same 11 inherited source-placeholder needs-review IDs; zero missing/extra/token/layout errors",
+    "byteComparison": "passed: final cs.overlay.json byte-identical to independent rebuild /private/tmp/cs-final-verify-overlay.json",
+    "pythonTests": "passed: 10/10",
+    "swiftTests": "passed: 10/10 in one InstallerCoreTests suite using temporary fake game folders",
+    "slashGenderSearch": "passed: zero word/word alternatives"
+  },
+  "remainingNeedsReview": {
+    "count": 11,
+    "ids": [
+      "unity:level0:1485:m_text",
+      "unity:level0:1490:m_text",
+      "unity:level0:1511:m_text",
+      "unity:level0:1512:m_text",
+      "unity:level0:1513:m_text",
+      "unity:level0:1524:m_text",
+      "unity:level0:1526:m_text",
+      "unity:level0:1528:m_text",
+      "unity:level0:1530:m_text",
+      "unity:level0:1544:m_text",
+      "unity:level0:1555:m_text"
+    ],
+    "classification": "Inherited English source-authoring placeholders (Text goes here / Item description goes here! / New Text), not Czech omissions; retained and translated without hiding validator status."
+  },
+  "runtime": "not-run-by-scope",
+  "visual": "not-run-by-scope",
+  "model": "Codex (GPT-5)",
+  "reasoningLevel": "not exposed by runtime",
+  "measuredUsage": null,
+  "reviewHashes": {
+    "semanticInputManualSha256": "74a3ea2fee196a98d17a20178d491dc4056e56103064b78f0fa7f89b024933a7",
+    "semanticInputImagesSha256": "2a974de4483662c33e14465e324a9ab19ca91ec17a2bd9ea5d075cc86043b51e",
+    "finalManualSha256": "10616ad98201246e50d7005c6faef42d90dcefaa1145f6c224823ee2dc6a3052",
+    "finalOverlaySha256": "c9f8fecd6173cf124323eff2e7b6b764ffd158c85dfd250e7a52327177abc73a",
+    "finalImagesSha256": "0b65a98157c95c49159156299d04c0fc3155982b5097496ecb7b02b9d6bf2744",
+    "finalChangedTextIdsSha256": "9a2304e8847b794eb4ca152810963070a6dfbd86a3264a38e8d2756728b673c1",
+    "finalClosureIdsSha256": "a5be5ea88e0b551c62a4bd3a6314c95d2a87d44e78104e2826cafc0349bf50fa",
+    "finalClosureTsvSha256": "099d22d424b7ddb1c3d961887f1dd376f1708c6c56c341bad135ca565278f6ff"
+  },
+  "tests": {
+    "python": "python3 -m unittest discover -s Tests -p 'test_*.py': 10 passed",
+    "swift": "swift test --disable-sandbox: 10 passed; temporary fake game folders only"
+  },
+  "finalHashes": {
+    "cs.manual.json": "10616ad98201246e50d7005c6faef42d90dcefaa1145f6c224823ee2dc6a3052",
+    "cs.overlay.json": "c9f8fecd6173cf124323eff2e7b6b764ffd158c85dfd250e7a52327177abc73a",
+    "cs.images.manual.json": "0b65a98157c95c49159156299d04c0fc3155982b5097496ecb7b02b9d6bf2744"
+  },
+  "modifiedFiles": [
+    "Documentation/Localization/cs.manual.json",
+    "Documentation/Localization/cs.overlay.json",
+    "Documentation/Localization/cs.images.manual.json",
+    "Documentation/Localization/cs.audit.json"
+  ],
+  "unchangedAuthorizedFile": null,
+  "protectedScope": "No CHECKPOINT, source, inventory, glossary, PNG, other-locale, readiness, package, or installed-game files were edited; no game, installer, runtime, or visual QA was launched.",
+  "gitDelivery": "Static-text editorial acceptance is recorded on the final exact hashes. Canonical commit and integration remain owned by the parent workflow.",
+  "nextAction": "Proceed with parent-owned canonical integration and later runtime/visual QA when separately authorized; static Czech text and image-plan wording require no further editorial action on these hashes."
+}

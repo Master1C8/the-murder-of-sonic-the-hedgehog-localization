@@ -1,0 +1,988 @@
+{
+  "schemaVersion": 1,
+  "locale": "vi",
+  "game": "the-murder-of-sonic-the-hedgehog",
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "workflow": "Documentation/Localization/AUDIT_WORKFLOW.md",
+  "status": "editorially-accepted-static-text",
+  "sourcePolicy": {
+    "semanticDecisionInputs": [
+      "Documentation/Localization/Source/en",
+      "canonical-glossary/source",
+      "canonical-glossary/vi"
+    ],
+    "nonEnglishLocaleComparisonUsed": false,
+    "ownerConfirmedFacts": [
+      "Barry is male"
+    ]
+  },
+  "coverage": {
+    "sourcePairs": {
+      "reviewed": 3547,
+      "total": 3547,
+      "complete": true
+    },
+    "imagePlans": {
+      "reviewed": 10,
+      "total": 10,
+      "complete": true,
+      "modified": 1
+    },
+    "semanticPasses": 1
+  },
+  "corrections": {
+    "changedUnitCount": 276,
+    "findingCount": 92,
+    "changedIds": [
+      "ink:root[2].Break_Out[12]",
+      "ink:root[2].Casino[5].FirstVisit[0][148]",
+      "ink:root[2].Casino[5].FirstVisit[0][79]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt1[0][26].c-2[11]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt2[0][26].c-0[4]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt3[0][13]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt5[0][31].c-0[1]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt5[0][31].c-1[1]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt5[0][5]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt6[0][16]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt7[0][26].c-1[1]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt7[0][26].c-2[4]",
+      "ink:root[2].Casino[5].Poker_Chips[11]",
+      "ink:root[2].Casino[5].Poker_Chips[17]",
+      "ink:root[2].Casino[5].Poker_Table[0][0]",
+      "ink:root[2].Casino[5].Return_To_Casino[120]",
+      "ink:root[2].Casino[5].Return_To_Casino[123]",
+      "ink:root[2].Casino[5].Return_To_Casino[35]",
+      "ink:root[2].Casino[5].Robotic_Arm[0]",
+      "ink:root[2].Casino[5].Trash_Bin[35]",
+      "ink:root[2].Casino[5].Trash_Bin[40]",
+      "ink:root[2].Conductor_Car[74].Blowdart[39]",
+      "ink:root[2].Conductor_Car[74].Broken_Robot_Arm[38]",
+      "ink:root[2].Conductor_Car[74].Confrontation_Start[6]",
+      "ink:root[2].Conductor_Car[74].Dead_Sonic[166]",
+      "ink:root[2].Conductor_Car[74].Dead_Sonic[183]",
+      "ink:root[2].Conductor_Car[74].Environment_Amy_Start_Confrontation[0][23]",
+      "ink:root[2].Conductor_Car[74].Environment_Amy_Start_Confrontation[0][28]",
+      "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][124]",
+      "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][153]",
+      "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][190].g-0[14]",
+      "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][94]",
+      "ink:root[2].Conductor_Car[74].Interrogation_Part2[0][50].g-0[47]",
+      "ink:root[2].Conductor_Car[74].Interrogation_Part2[0][50].g-0[50]",
+      "ink:root[2].Conductor_Car[74].Interrogation_Part3[0][33]",
+      "ink:root[2].Conductor_Car[74].Interrogation_Part3[0][84].c-0[11]",
+      "ink:root[2].Conductor_Car[74].Interrogation_Part3[0][84].g-0[8]",
+      "ink:root[2].Conductor_Car[74].Interrogation_Part4_Choose_Evidence[1][1].b[7]",
+      "ink:root[2].Conductor_Car[74].Interrogation_Part4[120]",
+      "ink:root[2].Conductor_Car[74].Interrogation_Part4[50]",
+      "ink:root[2].Conductor_Car[74].Interrogation_Part5_Choose_Evidence[1][1].b[7]",
+      "ink:root[2].Conductor_Car[74].Interrogation_Part5[122]",
+      "ink:root[2].Conductor_Car[74].Interrogation_Part5[173]",
+      "ink:root[2].Conductor_Car[74].Interrogation_Part5[82]",
+      "ink:root[2].Conductor_Car[74].Interrogation_Part7[66]",
+      "ink:root[2].Conductor_Car[74].Minigame_Midpoint1[2][1].b[3]",
+      "ink:root[2].Conductor_Car[74].Sonic_Explanation1[175]",
+      "ink:root[2].Conductor_Car[74].Sonic_Explanation1[184]",
+      "ink:root[2].Conductor_Car[74].Sonic_Explanation1[85]",
+      "ink:root[2].Conductor_Car[74].Sonic_Explanation2[91]",
+      "ink:root[2].Conductor_Car[74].Start_Interrogation[27]",
+      "ink:root[2].Conductor_Car[74].Test_Camera_Swinging[49]",
+      "ink:root[2].Conductor_Car[74].Test_Camera_Swinging[52]",
+      "ink:root[2].Conductor_Car[74].Train_Speeds_Up[75]",
+      "ink:root[2].DiningCloset[0][51].c-1[1]",
+      "ink:root[2].DiningCloset[0][51].g-0[17]",
+      "ink:root[2].DiningCloset[1].Closet_Conductor_Flashback[5]",
+      "ink:root[2].DiningCloset[1].Crack_On_Shelf[7]",
+      "ink:root[2].DiningCloset[1].Interrogation_Part2[25]",
+      "ink:root[2].DiningCloset[1].Minigame_Midpoint1[2][1].b[15]",
+      "ink:root[2].DiningCloset[1].Minigame_Midpoint2[2][1].b[16]",
+      "ink:root[2].Final_Push[35].Ending1_For_Non_Completionists[55]",
+      "ink:root[2].Final_Push[35].Final_Boss_Interaction4[16]",
+      "ink:root[2].Final_Push[35].Final_Boss_Interaction5[0]",
+      "ink:root[2].Final_Push[35].Minigame_Checkpoint5[1][8].b[30]",
+      "ink:root[2].Final_Push[35].Return_To_Conductor_Car[0][36]",
+      "ink:root[2].Final_Push[35].Return_To_Conductor_Car[0][46].c-0[5]",
+      "ink:root[2].Final_Push[35].Train_Endgame[46]",
+      "ink:root[2].Library[4].Bookshelf[59]",
+      "ink:root[2].Library[4].Conductor_Flashback[10]",
+      "ink:root[2].Library[4].Conductor_Flashback[15]",
+      "ink:root[2].Library[4].Correct_Library_Element[33]",
+      "ink:root[2].Library[4].Eggman_Book[2]",
+      "ink:root[2].Library[4].Eggman_Book[8]",
+      "ink:root[2].Library[4].Enter_Interrogation_Mode[10]",
+      "ink:root[2].Library[4].Enter_Interrogation_Mode[82]",
+      "ink:root[2].Library[4].FirstVisit[0][26]",
+      "ink:root[2].Library[4].FirstVisit[0][74].c-0[1]",
+      "ink:root[2].Library[4].FirstVisit[0][74].g-0[13]",
+      "ink:root[2].Library[4].FirstVisit[0][74].g-0[27]",
+      "ink:root[2].Library[4].FirstVisit[0][74].g-0[41]",
+      "ink:root[2].Library[4].Give_Espio_Item[10]",
+      "ink:root[2].Library[4].Give_Vector_Item[13]",
+      "ink:root[2].Library[4].Give_Vector_Item[27]",
+      "ink:root[2].Library[4].Give_Vector_Item[3]",
+      "ink:root[2].Library[4].Give_Vector_Item[35]",
+      "ink:root[2].Library[4].Give_Vector_Item[45]",
+      "ink:root[2].Library[4].Globe[0]",
+      "ink:root[2].Library[4].Interrogation_Part1[5]",
+      "ink:root[2].Library[4].Interrogation_Part2[0][20].g-0[14]",
+      "ink:root[2].Library[4].Interrogation_Part2[0][20].g-0[22]",
+      "ink:root[2].Library[4].Interrogation_Part2[0][20].g-0[7]",
+      "ink:root[2].Library[4].Interrogation_Part2[0][20].g-1[0]",
+      "ink:root[2].Library[4].Interrogation_Part2[0][20].g-1[12]",
+      "ink:root[2].Library[4].Interrogation_Part2[0][20].g-1[15]",
+      "ink:root[2].Library[4].Interrogation_Part2[0][20].g-1[2]",
+      "ink:root[2].Library[4].Interrogation_Part2[0][20].g-2[22].c-10[8]",
+      "ink:root[2].Library[4].Interrogation_Part3_Have_Correct_Clue[0][8].b[12]",
+      "ink:root[2].Library[4].Interrogation_Part3_Have_Correct_Clue[1][1].b[15]",
+      "ink:root[2].Library[4].Interrogation_Part3[5]",
+      "ink:root[2].Library[4].Interrogation_Part4[0][53]",
+      "ink:root[2].Library[4].Interrogation_Part5_Have_Correct_Clue[1][1].b[12]",
+      "ink:root[2].Library[4].Interrogation_Part6_LibraryMap[0]",
+      "ink:root[2].Library[4].Interrogation_Part7_End[30]",
+      "ink:root[2].Library[4].Interrogation_Part7_End[68]",
+      "ink:root[2].Library[4].Library_Brochure[18]",
+      "ink:root[2].Library[4].Minigame_Midpoint1[1][8].b[29]",
+      "ink:root[2].Library[4].Minigame_Midpoint1[1][8].b[37]",
+      "ink:root[2].Library[4].Minigame_Midpoint1[2][1].b[1]",
+      "ink:root[2].Library[4].Minigame_Midpoint1[2][1].b[14]",
+      "ink:root[2].Library[4].Table[17]",
+      "ink:root[2].Library[4].Trash_Bin[15]",
+      "ink:root[2].LockdownDiningCar[1].Eggman_Appears[0][56].g-0[67]",
+      "ink:root[2].LockdownDiningCar[1].Eggman_Appears[0][56].g-0[78]",
+      "ink:root[2].LockdownDiningCar[1].Robotic_Arm[0]",
+      "ink:root[2].LockdownDiningCar[1].Scattered_Dinnerware[2]",
+      "ink:root[2].Lounge[108].Amy_Interaction_Prompts[0][8]",
+      "ink:root[2].Lounge[108].Big_Band[0][18].c-1[10]",
+      "ink:root[2].Lounge[108].Enter_Interrogation_Mode[15]",
+      "ink:root[2].Lounge[108].Enter_Interrogation_Mode[26]",
+      "ink:root[2].Lounge[108].Environment_Amy_Interaction_Final[10]",
+      "ink:root[2].Lounge[108].First_Time_Printing[0][20].g-0[20]",
+      "ink:root[2].Lounge[108].First_Time_Printing[0][20].g-0[22]",
+      "ink:root[2].Lounge[108].Interrogation_Part2_Have_Correct_Clue[1][1].b[7]",
+      "ink:root[2].Lounge[108].Interrogation_Part2[0][17].g-0[32]",
+      "ink:root[2].Lounge[108].Interrogation_Part3[0][12].c-1[22]",
+      "ink:root[2].Lounge[108].Interrogation_Part3[0][12].c-1[3]",
+      "ink:root[2].Lounge[108].Interrogation_Part4[0][0]",
+      "ink:root[2].Lounge[108].Interrogation_Part4[0][14].c-0[4]",
+      "ink:root[2].Lounge[108].Interrogation_Part4[0][14].g-0[3]",
+      "ink:root[2].Lounge[108].Interrogation_Part4[0][4]",
+      "ink:root[2].Lounge[108].Interrogation_Part5_End[30]",
+      "ink:root[2].Lounge[108].Keyring[25]",
+      "ink:root[2].Lounge[108].Minigame_Midpoint1[10][8].b[23]",
+      "ink:root[2].Lounge[108].Minigame_Midpoint1[10][8].b[54]",
+      "ink:root[2].Lounge[108].Minigame_Midpoint1[11][1].b[1]",
+      "ink:root[2].Lounge[108].Minigame_Midpoint1[11][1].b[3]",
+      "ink:root[2].Lounge[108].Minigame_Midpoint2[10][1].b[3]",
+      "ink:root[2].Lounge[108].Minigame_Midpoint2[9][8].b[47]",
+      "ink:root[2].Lounge[108].Minigame_Midpoint3[9][8].b[53]",
+      "ink:root[2].Lounge[108].Robotic_Arm[0][0]",
+      "ink:root[2].Lounge[108].Robotic_Arm[0][24].c-1[10]",
+      "ink:root[2].Lounge[108].Shadow_Interaction_Prompts[0][11]",
+      "ink:root[2].Lounge[108].String[88]",
+      "ink:root[2].Lounge[108].String[97]",
+      "ink:root[2].Lounge[108].Subsequent_Printing[0][14].g-0[25]",
+      "ink:root[2].Lounge[108].Subsequent_Printing[0][14].g-0[27]",
+      "ink:root[2].Lounge[108].Talk_To_Amy[0][29].g-0[6]",
+      "ink:root[2].Lounge[108].Trash_Bin[0][42].c-0[18]",
+      "ink:root[2].Lounge[108].Trash_Bin[0][42].c-0[23]",
+      "ink:root[2].Lounge[108].Trash_Bin[0][42].c-0[46]",
+      "ink:root[2].Lounge[108].Window[22]",
+      "ink:root[2].Lounge[55]",
+      "ink:root[2].Lounge[96]",
+      "ink:root[2].MessyDiningCar[1].Return_To_Prologue[110]",
+      "ink:root[2].MessyDiningCar[1].Return_To_Prologue[117]",
+      "ink:root[2].MessyDiningCar[1].Return_To_Prologue[122]",
+      "ink:root[2].MessyDiningCar[1].Return_To_Prologue[127]",
+      "ink:root[2].MessyDiningCar[1].Return_To_Prologue[139]",
+      "ink:root[2].MessyDiningCar[1].Return_To_Prologue[79]",
+      "ink:root[2].MessyDiningCar[1].Return_To_Prologue[99]",
+      "ink:root[2].Name_Entry[20].Valid_Name[0][15]",
+      "ink:root[2].Name_Entry[20].Valid_Name[0][9]",
+      "ink:root[2].Prologue[1].Conductor_Info_Dump[0][3]",
+      "ink:root[2].Prologue[1].Environment_Amy_Interaction_1[0]",
+      "ink:root[2].Prologue[1].Environment_Blaze_Interaction_1[38]",
+      "ink:root[2].Prologue[1].Environment_Blaze_Interaction_1[41]",
+      "ink:root[2].Prologue[1].Environment_Blaze_Interaction_1[8]",
+      "ink:root[2].Prologue[1].Environment_Blaze_Interaction_2[0][0]",
+      "ink:root[2].Prologue[1].Environment_Knuckles_Interaction_1[11]",
+      "ink:root[2].Prologue[1].Environment_Knuckles_Interaction_1[9]",
+      "ink:root[2].Prologue[1].FirstVisit[0][28]",
+      "ink:root[2].Prologue[1].FirstVisit[0][33]",
+      "ink:root[2].Prologue[1].FirstVisit[0][48].g-0[7]",
+      "ink:root[2].Prologue[1].Gang_Shows_Up[0][110].g-0[6]",
+      "ink:root[2].Prologue[1].Gang_Shows_Up[0][45]",
+      "ink:root[2].Prologue[1].Gang_Shows_Up[0][70]",
+      "ink:root[2].Prologue[1].Gang_Shows_Up[0][93]",
+      "ink:root[2].Prologue[1].Give_Blaze_Item[0]",
+      "ink:root[2].Prologue[1].Give_Sonic_Item[0]",
+      "ink:root[2].Prologue[1].Murder_Mystery_Rules[0][53].g-0[34]",
+      "ink:root[2].Prologue[1].Murder_Mystery_Rules[0][53].g-0[72]",
+      "ink:root[2].Prologue[1].Murder_Mystery_Rules[0][53].g-0[75]",
+      "ink:root[2].Prologue[1].Robotic_Arm[23]",
+      "ink:root[2].Prologue[1].Robotic_Arm[46]",
+      "ink:root[2].Prologue[1].Story_Continues[32]",
+      "ink:root[2].Prologue[1].Story_Continues[53]",
+      "ink:root[2].SafeRoom[4].Opt16_Just_Wait[101]",
+      "ink:root[2].SafeRoom[4].Opt16_Just_Wait[104]",
+      "ink:root[2].SafeRoom[4].Opt16_Just_Wait[106]",
+      "ink:root[2].SafeRoom[4].Opt16_Just_Wait[25]",
+      "ink:root[2].SafeRoom[4].Opt16_Just_Wait[33]",
+      "ink:root[2].SafeRoom[4].Opt16_Just_Wait[65]",
+      "ink:root[2].SafeRoom[4].Opt16_Just_Wait[68]",
+      "ink:root[2].SafeRoom[4].Opt6_Cut_Wire[10]",
+      "ink:root[2].Saloon[4].Enter_Interrogation_Mode[10]",
+      "ink:root[2].Saloon[4].Environment_Knuckles_Post_Investigation[0][0]",
+      "ink:root[2].Saloon[4].Environment_Knuckles_Post_Investigation[0][11]",
+      "ink:root[2].Saloon[4].FirstVisit[0][36].g-1[10]",
+      "ink:root[2].Saloon[4].FirstVisit[0][36].g-1[13]",
+      "ink:root[2].Saloon[4].FirstVisit[0][36].g-1[68]",
+      "ink:root[2].Saloon[4].Give_Knuckles_Menu[14]",
+      "ink:root[2].Saloon[4].Interrogation_Part1_Have_Correct_Clue[1][1].b[15]",
+      "ink:root[2].Saloon[4].Interrogation_Part1[5]",
+      "ink:root[2].Saloon[4].Interrogation_Part2[0][23].c-1[33]",
+      "ink:root[2].Saloon[4].Interrogation_Part2[0][23].c-2[1]",
+      "ink:root[2].Saloon[4].Interrogation_Part2[0][23].c-2[4]",
+      "ink:root[2].Saloon[4].Interrogation_Part4_Have_Correct_Clue[0][8].b[110]",
+      "ink:root[2].Saloon[4].Interrogation_Part4_Have_Correct_Clue[0][8].b[82]",
+      "ink:root[2].Saloon[4].Interrogation_Part4_Have_Correct_Clue[0][8].b[84]",
+      "ink:root[2].Saloon[4].Interrogation_Part4_Have_Correct_Clue[1][1].b[18]",
+      "ink:root[2].Saloon[4].Interrogation_Part4[5]",
+      "ink:root[2].Saloon[4].Interrogation_Part5[0][20]",
+      "ink:root[2].Saloon[4].Interrogation_Part5[0][26]",
+      "ink:root[2].Saloon[4].Interrogation_Part5[0][32]",
+      "ink:root[2].Saloon[4].Interrogation_Part5[0][44]",
+      "ink:root[2].Saloon[4].Interrogation_Part5[0][50]",
+      "ink:root[2].Saloon[4].Interrogation_Part5[0][54].g-0[16]",
+      "ink:root[2].Saloon[4].Interrogation_Part6_End[32]",
+      "ink:root[2].Saloon[4].Minigame_Midpoint1[2][1].b[18]",
+      "ink:root[2].Saloon[4].Minigame_Midpoint2[2][1].b[13]",
+      "ink:root[2].Saloon[4].Minigame_Midpoint3[2][1].b[13]",
+      "ink:root[2].Saloon[4].Robotic_Arm[0]",
+      "ink:root[2].Saloon[4].Talk_To_Knuckles[0][18].c-1[23]",
+      "ink:root[2].Saloon[4].Used_Cups[0][28]",
+      "ink:root[2].Saloon[4].Used_Cups[0][5]",
+      "ink:root[2].Saloon[4].Wanted_Poster[0][0]",
+      "ink:root[2].TestCar[6].BoolListenerTest[0][4].b[9]",
+      "ink:root[2].TestCar[6].TestFlashback[19]",
+      "ink:root[2].TestCar[6].TestFlashback[30]",
+      "ink:root[2].TestCar[6].TestFlashback[45]",
+      "ink:root[2].TestCar[6].VisitAgain[4]",
+      "ink:root[2].TrailerLines[1].Blaze_Rouge_Trailer_Line[24]",
+      "ink:root[2].TrailerLines[1].Closet_Trailer_Line[0][12]",
+      "ink:root[2].TrailerLines[1].Closet_Trailer_Line[0][18]",
+      "inventory:crumpledpaper:Description",
+      "inventory:menu:Description",
+      "inventory:mirageexpressmanual:Description",
+      "inventory:mirageexpressmanual:Name",
+      "unity:defaultgroup:-2297970105022902009:m_text",
+      "unity:defaultgroup:-5799638202836302919:m_text",
+      "unity:defaultgroup:2020191276367188231:m_text",
+      "unity:defaultgroup:2728330905797759239:m_text",
+      "unity:defaultgroup:6462899961100210439:m_text",
+      "unity:level0:1484:m_text",
+      "unity:level0:1561:m_text",
+      "unity:level0:1540:m_text",
+      "unity:defaultgroup:-4649849237706993401:m_text",
+      "unity:defaultgroup:-3387687448645955321:m_text",
+      "unity:defaultgroup:-1273426916712738553:m_text",
+      "ink:root[2].Prologue[1].Conductor_Info_Dump[0][7]",
+      "ink:root[2].Prologue[1].Environment_Amy_Interaction_1[53]",
+      "ink:root[2].Prologue[1].Story_Continues[122]",
+      "ink:root[2].Casino[5].FirstVisit[0][114]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt1[0][0]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt1[0][26].c-2[17]",
+      "ink:root[2].Casino[5].Environment_Blaze[0][21].c-1[38]",
+      "ink:root[2].DiningCloset[1].Interrogation_Part4_End[30]",
+      "ink:root[2].DiningCloset[1].Suspicious_Stick[0]",
+      "ink:root[2].LockdownDiningCar[1].Fortified_Door[4][1].b[13]",
+      "ink:root[2].SafeRoom[4].Opt2_Throw_In_Safe[14]",
+      "ink:root[2].SafeRoom[4].Opt4_Eat_Egg[0]",
+      "ink:root[2].SafeRoom[4].Opt16_Just_Wait[151]",
+      "ink:root[2].SafeRoom[4].Opt16_Just_Wait[166]",
+      "ink:root[2].SafeRoom[4].Opt16_Just_Wait[178]",
+      "ink:root[2].Library[4].FirstVisit[0][74].g-0[0]",
+      "ink:root[2].Library[4].FirstVisit[0][74].g-0[24]",
+      "ink:root[2].Library[4].FirstVisit[0][74].g-0[78].c-3[4]",
+      "ink:root[2].Library[4].Interrogation_Part3_Have_Correct_Clue[0][8].b[17]",
+      "ink:root[2].Library[4].Motivational_Poster[15]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt4[0][26].c-0[4]",
+      "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][121]",
+      "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][190].c-0[1]",
+      "ink:root[2].Conductor_Car[74].Trash_Bin2[4]",
+      "ink:root[2].Lounge[108].Amy_Interrogation[12]",
+      "ink:root[2].Library[4].FirstVisit[0][74].g-0[78].c-3[1]"
+    ],
+    "changedIdsSha256": "a6d53413db14dafa36fc127cd88d6e2694873413580f4b29d099b6eb6b9e9a2f",
+    "findings": [
+      {
+        "code": "address-register",
+        "changedUnits": 2,
+        "idsSha256": "9c543d6e1093afd720cf06ff3ab11a2ef1d53b41e673e9e41f776c1b83d73808"
+      },
+      {
+        "code": "amy-pronoun",
+        "changedUnits": 1,
+        "idsSha256": "3122af270d161c3ea62419ce48d3cab513e17d1eb257743ae4400cb21db30648"
+      },
+      {
+        "code": "as-if-meaning",
+        "changedUnits": 1,
+        "idsSha256": "3bef3119a2bbab76668e86d44b47b5fd5251f903dcc3eae23946e1c1935ba285"
+      },
+      {
+        "code": "baggage-wordplay",
+        "changedUnits": 1,
+        "idsSha256": "3fb10d88d3e47d427158a0029c132437685e297398f5b4022a650c10b973a8b3"
+      },
+      {
+        "code": "barry-internal-pronoun",
+        "changedUnits": 26,
+        "idsSha256": "e40daf3506b588467b998a917d9abbbe34c71dca2fbbe8c0bcf61ada9a3d9d7b"
+      },
+      {
+        "code": "barry-male-address",
+        "changedUnits": 2,
+        "idsSha256": "d9b3875db05888be4c886cc6dc4b3a63b1786d9a98fa6a12cc626fee6dbda8da"
+      },
+      {
+        "code": "big-fan-idiom",
+        "changedUnits": 1,
+        "idsSha256": "74976d207a99392aa277c699130c2f4869c619d724472ed29912e920d67475f2"
+      },
+      {
+        "code": "birthday-girl-idiom",
+        "changedUnits": 6,
+        "idsSha256": "bde08d8cd5f2321d872bb36848c804624dd5a319b37aa2b0b0325983734cd1b5"
+      },
+      {
+        "code": "birthday-girl-wordplay",
+        "changedUnits": 1,
+        "idsSha256": "a568779be9dbedc5af529bbfe03142633bfa9fd3f78b292d5996d2d35f5a4ee5"
+      },
+      {
+        "code": "bittersweet-wordplay",
+        "changedUnits": 1,
+        "idsSha256": "bdfe846bb21f2f16a52d0694a65419433e39eb7a4626f65b84a33cb419f4f2c4"
+      },
+      {
+        "code": "blaze-voice",
+        "changedUnits": 6,
+        "idsSha256": "bfcda682d591ec5f3ba04896da6ab05a9c3e540442939ca97af89fc66ca3da0e"
+      },
+      {
+        "code": "bounty-recipient-meaning",
+        "changedUnits": 1,
+        "idsSha256": "1e711814c137fb553e11f290e79316ef6aeb691200b945544cfc1d3da8c6e68a"
+      },
+      {
+        "code": "canonical-badnik-capitalization",
+        "changedUnits": 3,
+        "idsSha256": "973a2223c08c86ce62722ecd6747284dd9b21a6a6b3b02238192e1266d312a4f"
+      },
+      {
+        "code": "classifier",
+        "changedUnits": 2,
+        "idsSha256": "18b64594bf0881996f498f237f912d4498ea81849bcb3e89248ab5612d59f6d6"
+      },
+      {
+        "code": "classifier-naturalness",
+        "changedUnits": 1,
+        "idsSha256": "1cd4fca4433ea79e5db3926ecc4c4adcd6ddcb562cf01b1ff381e38c1e1da909"
+      },
+      {
+        "code": "conductor-barry-register",
+        "changedUnits": 6,
+        "idsSha256": "82220dd4072e8fb12625b6c79ae21d12ded21d9c818fe92b631ac104cbcedf2a"
+      },
+      {
+        "code": "conductor-reference-register",
+        "changedUnits": 2,
+        "idsSha256": "ba00b71a16dceb7da4ddad4f7f54b3d1d9fd127bb897c45cdf2921d491b4874e"
+      },
+      {
+        "code": "conductor-voice",
+        "changedUnits": 2,
+        "idsSha256": "90456ad8a12068aaf4978ccfad533d8687aa348f9082f634e284b8b13bdca223"
+      },
+      {
+        "code": "credits-job-title",
+        "changedUnits": 2,
+        "idsSha256": "6c9f160b91cb44fd89952cc107fcc4fcc6b9c7067d69dbbe3bf1a623835a13a2"
+      },
+      {
+        "code": "credits-label-meaning",
+        "changedUnits": 2,
+        "idsSha256": "a09fce1b1db85b91b413e466eff38257e78de2c4f2fefaa9136389fbbda43106"
+      },
+      {
+        "code": "credits-observed-day-meaning",
+        "changedUnits": 1,
+        "idsSha256": "efa4e1991c3c62f84fc0a73fd2cb21ba9150cfe7eac2f5276b26e7f9576345f0"
+      },
+      {
+        "code": "credits-vietnamese-grammar",
+        "changedUnits": 1,
+        "idsSha256": "c78ff60026939785ade5d2319efc4f5b0683401d9797be3205e4ab1bed86505c"
+      },
+      {
+        "code": "detective-partner-address",
+        "changedUnits": 1,
+        "idsSha256": "9f05d52193f329ebac8a924d66a085ea5e641979588363b5090360d084c30e73"
+      },
+      {
+        "code": "dialect-idiom",
+        "changedUnits": 1,
+        "idsSha256": "ce0e7001aaaf0aba3c527b5ecdb57d224a0f653b81ecc78e0c6d79aef446bba9"
+      },
+      {
+        "code": "direct-address",
+        "changedUnits": 1,
+        "idsSha256": "9fa379413e66ab3620d852f9b6804ea9904911b7b22fc6306e520914ea46ae08"
+      },
+      {
+        "code": "discourse-marker",
+        "changedUnits": 1,
+        "idsSha256": "fe959ed79571acf44588a5dff7c1c3eefa3e2366ec0c6103a3bfae7ff973ea22"
+      },
+      {
+        "code": "disengage-meaning",
+        "changedUnits": 1,
+        "idsSha256": "04977c0c81770850636ffa3a2bea6c07b5d6da4e93295b290a97a0b00e1d9aab"
+      },
+      {
+        "code": "drag-name-through-mud-idiom",
+        "changedUnits": 2,
+        "idsSha256": "7cbbdd383cdc5a944857086c661f559ecba9c8a43aed75836c1e9ebb3f5f2424"
+      },
+      {
+        "code": "duplicate-noun",
+        "changedUnits": 1,
+        "idsSha256": "2ba572b5fc1ae9c25ebbb360328967a2a88777e2c3bf287f60dcab666b1a5cbf"
+      },
+      {
+        "code": "exclamation-meaning",
+        "changedUnits": 1,
+        "idsSha256": "3663e6377f8257861ed4180ce65a0f2781e3654b08313394d1cfe1ed07b4f106"
+      },
+      {
+        "code": "exclusive-pronoun",
+        "changedUnits": 2,
+        "idsSha256": "e486adf6095c866aa544de99a994017e9d3f35966f59b88aa723ff82d7a2b5eb"
+      },
+      {
+        "code": "exists-because-naturalness",
+        "changedUnits": 1,
+        "idsSha256": "90de8eb6d1d4b2678fd9e0524e44d2808d48167544fbc7c30822c69934ed2fb5"
+      },
+      {
+        "code": "fur-spines-joke",
+        "changedUnits": 1,
+        "idsSha256": "8ab9e856f83dee362109321431f8828b447dcf90b2f139e46e8e4785f3561ff7"
+      },
+      {
+        "code": "gender-neutral-flicky-reference",
+        "changedUnits": 1,
+        "idsSha256": "25912555174876ae9a63843f274d64b6d4ada4786a970c7e6f84497951a055b3"
+      },
+      {
+        "code": "glossary-dr-eggman",
+        "changedUnits": 6,
+        "idsSha256": "b8dae601f91de7af95a2713abb76295f2d231363a8e1d45e886ce31ac9d97846"
+      },
+      {
+        "code": "glossary-inventory",
+        "changedUnits": 8,
+        "idsSha256": "348368918e20ed8b516e83cbef1adbafce475019639da318b60943b48d833ec2"
+      },
+      {
+        "code": "glossary-mirage-express-manual",
+        "changedUnits": 4,
+        "idsSha256": "748bf50e5009027e3657806e7b337f6f277eb579ab6afb63d059b3b827dce612"
+      },
+      {
+        "code": "glossary-poker-chips",
+        "changedUnits": 2,
+        "idsSha256": "2a9fcd1f7e59db5ec649239be214a311c87fac3d126a1c4473a467646a56c697"
+      },
+      {
+        "code": "glossary-the-mirage-express",
+        "changedUnits": 7,
+        "idsSha256": "4fe54f7f60a68ff57b64774b0bc8f64251572db619898471fbe7c0fa9d0d8e5c"
+      },
+      {
+        "code": "gotcha-meaning",
+        "changedUnits": 2,
+        "idsSha256": "e5c5f7988188373254a84ff711d7f00051ed2e28082b789b46699f1d80d87036"
+      },
+      {
+        "code": "grasping-idiom",
+        "changedUnits": 2,
+        "idsSha256": "d23faf8abb73834325604d6980789f16bb76694b42801611a4a5e1561bd3075d"
+      },
+      {
+        "code": "hair-fur-joke",
+        "changedUnits": 1,
+        "idsSha256": "1c3675d10b4edd1d9e850ed4c2b57ed9490d2a66b4f03c8adfb859f5923f5b18"
+      },
+      {
+        "code": "hold-on-meaning",
+        "changedUnits": 1,
+        "idsSha256": "b9e1e3accbc3149b7c6eba144587eac4c52822fff233a902cd9c45392f94754f"
+      },
+      {
+        "code": "idiom-meaning",
+        "changedUnits": 4,
+        "idsSha256": "d4631872770bb71dc7ece7a6c32923a0946c12feaa2320aa23f3fb7bc5916a95"
+      },
+      {
+        "code": "idiomatic-meaning",
+        "changedUnits": 2,
+        "idsSha256": "e17a5e5722828411d038285040017bd888dbccbfb3c29425fcaeefb53ec036cc"
+      },
+      {
+        "code": "injured-voice",
+        "changedUnits": 1,
+        "idsSha256": "1452ce71fd746bae5792c0f6f5d484dccca0877ee0fa2415dad81e52d3e2a6a9"
+      },
+      {
+        "code": "inventory-object-meaning",
+        "changedUnits": 1,
+        "idsSha256": "7c79da7a064c0e750f080e9d870555f6ecd1b3cef628a97c3ba4ff3d0fb9b02f"
+      },
+      {
+        "code": "iron-chef-idiom",
+        "changedUnits": 1,
+        "idsSha256": "528588ce7fc1abe352d8c3df762ddc4585698ed508b4f5eb3957be11c06d9414"
+      },
+      {
+        "code": "journalist-and-scoop-idiom",
+        "changedUnits": 1,
+        "idsSha256": "d1a4a60299cdd0854294fb495148676ecdf36042135c3639211cf80be7f29425"
+      },
+      {
+        "code": "knuckles-voice",
+        "changedUnits": 5,
+        "idsSha256": "a4035e8b7f65347c667af7dab185da6b2cba784f7838d56ba2b9a0015cb7260d"
+      },
+      {
+        "code": "knuckles-voice-and-meaning",
+        "changedUnits": 1,
+        "idsSha256": "7c2c09b9546b5b459950e9e2a6f3463d312dd457a5ad416efd2713f91e32745c"
+      },
+      {
+        "code": "larger-picture-idiom",
+        "changedUnits": 1,
+        "idsSha256": "4642f601fa7788d5f2b47a5e380ba13606fb97b2f8980be8b5448716aa5542ae"
+      },
+      {
+        "code": "locked-tickets-meaning",
+        "changedUnits": 1,
+        "idsSha256": "83551cfdc980ac0eb538335e06a7f9bdde5f2d1e70822afcfac21b142924cd21"
+      },
+      {
+        "code": "make-believe-meaning",
+        "changedUnits": 1,
+        "idsSha256": "256b2a12c88b881baf02813016035e057874e9e712bed47da9a3c4ab33fa8a14"
+      },
+      {
+        "code": "meaning-listen",
+        "changedUnits": 1,
+        "idsSha256": "601d7bd37db47a0fbd8c8d48e593020f87e06eb235088e74667b8002763ebd8a"
+      },
+      {
+        "code": "missing-possessive",
+        "changedUnits": 1,
+        "idsSha256": "74fe965a97a4355d0d0827dd044a7ec0a84fd7ce05fe9413ca832710e99e7bbb"
+      },
+      {
+        "code": "name-confirmation-choice",
+        "changedUnits": 2,
+        "idsSha256": "540c3767b6d2de6fb55235835ae946fa435af12bbc6c90b8af65ae4b43f01d01"
+      },
+      {
+        "code": "naturalness",
+        "changedUnits": 2,
+        "idsSha256": "bbf4ac962810f5f1877985f904e2b7a8fac401f497eabdaa70d067707ab923a7"
+      },
+      {
+        "code": "no-show-fee-meaning",
+        "changedUnits": 1,
+        "idsSha256": "7aac146673f36274a31be92905428eb9e3790f4d03e6ace4d128d7ebd0f6669b"
+      },
+      {
+        "code": "off-duty-meaning",
+        "changedUnits": 1,
+        "idsSha256": "4a962491536ff4400bc58911cb1c465c0a67f108a670c1478b450dde46cfb301"
+      },
+      {
+        "code": "on-top-of-it-meaning",
+        "changedUnits": 1,
+        "idsSha256": "e1cfd7abe9f3e19cb66f0421e2cd2920193590de41f9d5119b8a4d06f1eaf0b8"
+      },
+      {
+        "code": "opposite-meaning",
+        "changedUnits": 1,
+        "idsSha256": "9f2285594848ba7d97eb6d774e66b28ed3d75d8ef9e447f100bf15b3c56e2287"
+      },
+      {
+        "code": "plural-address",
+        "changedUnits": 1,
+        "idsSha256": "8716c7de0cbbfd10d0fe433179575375741cc515a16b03d697bb81fa7d5af581"
+      },
+      {
+        "code": "plural-referent",
+        "changedUnits": 1,
+        "idsSha256": "99f8709d860246d26d2ef74244c976c39489549d168c6217b1d8761c361cb6f2"
+      },
+      {
+        "code": "poem-rhyme-and-meaning",
+        "changedUnits": 1,
+        "idsSha256": "09d7805bc6159a065b4da3eca0c7458bde73ef1e82cca99ac653e0b84bff6250"
+      },
+      {
+        "code": "pop-open-meaning",
+        "changedUnits": 1,
+        "idsSha256": "8f66cad0d476c8097e3333e42b2c827f5219ba97fc4148643d9f84c8895ab3a3"
+      },
+      {
+        "code": "production-meaning",
+        "changedUnits": 1,
+        "idsSha256": "3c1ebe0195bf447944832b86d4b56b3e18327410434c8fee6e5b2612d567b242"
+      },
+      {
+        "code": "pronoun-naturalness",
+        "changedUnits": 1,
+        "idsSha256": "e97f14b9b538c9afb3e0babdf1beae0942b197e821106aa2eb25c2ea5c06881c"
+      },
+      {
+        "code": "pronoun-register",
+        "changedUnits": 2,
+        "idsSha256": "517178a63dc0980f9492599a52c3401cac6385e5eb1f8e536fbc18e0c3142956"
+      },
+      {
+        "code": "pulse-meaning",
+        "changedUnits": 1,
+        "idsSha256": "b90583ef43fc60e5275e7a60514ff1eaa915f10c2ae3e3fc1ada8566681e7133"
+      },
+      {
+        "code": "punctuation-naturalness",
+        "changedUnits": 1,
+        "idsSha256": "d22e0a606a30df00cea9d0a4d4e4a9d5545c0cd9e543d6d4aac11a588d95a10b"
+      },
+      {
+        "code": "race-ui-meaning",
+        "changedUnits": 1,
+        "idsSha256": "18043145e1c822d1c7e9fda7f6f10a5aaaeecdf3df821f85f1a3d2293efbcd19"
+      },
+      {
+        "code": "runtime-fragment-meaning",
+        "changedUnits": 1,
+        "idsSha256": "112e5d800e8ea00b8de70d8d4aafff905caa24a6e8030c1158ff5ed9f32ef2c5"
+      },
+      {
+        "code": "runtime-fragment-spacing",
+        "changedUnits": 51,
+        "idsSha256": "7d5fa770ccc37594396468f8793fc1ac4c6227891b41fc41122a8990714d42c5"
+      },
+      {
+        "code": "runtime-name-composition",
+        "changedUnits": 1,
+        "idsSha256": "6cf188b930957dbdc6ede89072efb0f3b589009696c2271fe97f5c9ddcb25391"
+      },
+      {
+        "code": "scoreboard-image-binding",
+        "changedUnits": 5,
+        "idsSha256": "63588672a4484cd4e1927b0690b41e7a199ce872d73c95bea11f2785e35ebdfa"
+      },
+      {
+        "code": "speaker-and-register",
+        "changedUnits": 1,
+        "idsSha256": "2e7911cdc904dc5768a07c21355aef1b1b34d0c7fdf84215414354d9ef2a69af"
+      },
+      {
+        "code": "speaker-name-translation",
+        "changedUnits": 2,
+        "idsSha256": "38b6d5626ba92cf35921bf8efb3cbbe95517b384b9295f15ba272500a478d882"
+      },
+      {
+        "code": "spiritual-idiom",
+        "changedUnits": 1,
+        "idsSha256": "6f3fdda80fe6f79e25e10ed49f62a19a63554184bfbcfaef2b99c70cbcfe2ccf"
+      },
+      {
+        "code": "sunny-side-up-meaning",
+        "changedUnits": 1,
+        "idsSha256": "040e8bee17c30d854100ffa7f85168aec190daa71206c940fde2a17c8203b3af"
+      },
+      {
+        "code": "tails-pronoun",
+        "changedUnits": 7,
+        "idsSha256": "91b06ee29d5b7b7cb40a8d28d87e257af02caf03b206d9ea82b4886c25900c2a"
+      },
+      {
+        "code": "translated-insult-humor",
+        "changedUnits": 1,
+        "idsSha256": "ade9aded8c0b75f82fd9e36615d8470ca2fd9661d7f3c40c7bff852d039153a0"
+      },
+      {
+        "code": "unrelated-invented-translation",
+        "changedUnits": 1,
+        "idsSha256": "58995637aa2b873960aa069fd3eba713ba07f6280d6aa75c9eabe05a670da332"
+      },
+      {
+        "code": "untranslated-farewell",
+        "changedUnits": 1,
+        "idsSha256": "07eb35646f38bf8c9727a206c778ec134f89609b24d1a6dc0f7bcf2319d40a88"
+      },
+      {
+        "code": "vietnamese-robot-orthography",
+        "changedUnits": 14,
+        "idsSha256": "49fe1b5d94fbeb7205dce84251a031b1bde3ecfbd5c4537eaf9ea8895810c97d"
+      },
+      {
+        "code": "vietnamese-stutter",
+        "changedUnits": 1,
+        "idsSha256": "72082246276b54e5b7a3af4f418e37b0b7debbe86c80f1f75f06d75982601a1a"
+      },
+      {
+        "code": "visible-action-untranslated",
+        "changedUnits": 1,
+        "idsSha256": "d709fcdf0d4c7ffe8e3f2b19e1f033ed73fed2da1cc49c9ecdb95f0dc0648fcc"
+      },
+      {
+        "code": "website-page-meaning",
+        "changedUnits": 1,
+        "idsSha256": "309c2927c8362730f0f44d726716ad836e2906382850419da4814b9a43b41d12"
+      },
+      {
+        "code": "western-voice",
+        "changedUnits": 1,
+        "idsSha256": "d249bf1d55caaec69e4f200316126c648282b69eefcf40fbe97e94b76fd13adf"
+      },
+      {
+        "code": "wrong-character-name",
+        "changedUnits": 1,
+        "idsSha256": "c343fe9457f8e4cad306f5ff168b79c26bcaf4c41c8f21c3ff70762e4a0088e2"
+      },
+      {
+        "code": "wrong-object",
+        "changedUnits": 1,
+        "idsSha256": "4589b8221fe657a247723bcb04a4ee6e3734a2e0053cab9704ce154f50ef6254"
+      },
+      {
+        "code": "yes-meaning",
+        "changedUnits": 1,
+        "idsSha256": "8d0a20605c7c2c5b0eeff3eb01624ae30a92a7efa75f089bae3d8b8bced6ca0e"
+      }
+    ],
+    "independentCorrectionAudit": {
+      "textUnitsCorrected": 38,
+      "imagePlansCorrected": 1,
+      "preferenceOnlyCandidatesRejected": 1,
+      "finalResult": "passed-clean"
+    }
+  },
+  "dependencyClosure": {
+    "derivation": "union(changed IDs; unchanged exact-source repeats; unchanged exact localized repeats of >=4 chars containing a letter/number; source occurrences of edited glossary concepts; Amy/Rouge/Blaze/Barry/Conductor/Knuckles/Tails/Flicky/Train speaker-or-name references; +/-2 source-order neighbors; all ui/* shared binding surfaces)",
+    "totalUniqueIds": 2947,
+    "idsSha256": "19baeb858f05d304d0be76372d131cadafdc2edddfc78490a52cfe1c4b36a7fe",
+    "categories": {
+      "changed": {
+        "count": 276,
+        "idsSha256": "a6d53413db14dafa36fc127cd88d6e2694873413580f4b29d099b6eb6b9e9a2f"
+      },
+      "repeatedSource": {
+        "count": 23,
+        "idsSha256": "1fdfd9fcf125154f366148eabf166d73909ad98b230a3f28b63de18ff897bdb9"
+      },
+      "repeatedLocalized": {
+        "count": 30,
+        "idsSha256": "4711f789a390d793e99823fda8913599c0e3ba91e6ddd44fd4f3307e7f5049eb"
+      },
+      "glossaryLinked": {
+        "count": 109,
+        "idsSha256": "c8b0c8caf864ec4e3732a055adb0d49b1d7bbadb7727296b0f96d476d97d2695"
+      },
+      "characterReferences": {
+        "count": 2454,
+        "idsSha256": "2ca6b7d4687ed1fed70b4683184e8e6108e47f155a0fcbf99245e60c7aef0169"
+      },
+      "contextNeighbors": {
+        "count": 1102,
+        "idsSha256": "53cae60b105c903374258a2cb0a9b1f2a24d4839448572d1b37e77fe7eca2fa0"
+      },
+      "uiSharedBindings": {
+        "count": 160,
+        "idsSha256": "d2ad03600f185acccbe405450cd0bf84b4da49dd7ae7afc37e6613afc50923c2"
+      }
+    },
+    "independentlyReviewed": true,
+    "independentReviewer": "gpt-5.6-sol independent diff reviewer",
+    "reviewedTsvSha256": "16dea8265e37c5048cd8215b8994b34760218a544472511ce72eb11d38bd3396",
+    "sourceOrderedIdsFileSha256": "861d11f90c54b5d6327316c9d9d412e6defa6af9d21411955d586f17b68ae98e",
+    "result": "passed-clean"
+  },
+  "mandatoryRegression": {
+    "authorReview": "passed",
+    "independentReview": "passed-clean",
+    "genderPronounReferences": {
+      "amyRougeBlazeIds": 678,
+      "idsSha256": "25c9b33b0ee9ad0f39198d682f7413739b20b8520e95bdb2f48de3307ffc2764"
+    },
+    "barryMaleReferences": {
+      "ids": 791,
+      "idsSha256": "abffff5829ba826ca3e649947c014ed53931be82e90858358036da45e920d1bb",
+      "status": "reviewed-as-male"
+    },
+    "ringsLabel": {
+      "ids": [
+        "unity:defaultgroup:-4932669119767755847:m_text"
+      ],
+      "value": [
+        "NHẪN"
+      ],
+      "embeddedNewline": false,
+      "layoutOverrideRequired": false
+    },
+    "saveLoadUi": {
+      "ids": 12,
+      "idsSha256": "0a8ebe78885a5e6ba11a07da019f42e9d8bbac77187e987bd4066060e10844d5"
+    },
+    "locationMappings": {
+      "environmentKeys": 13,
+      "uniqueDisplayValues": 11,
+      "collisions": 0,
+      "exactInternalDisplays": [
+        "Conductor  Car",
+        "Final  Push"
+      ]
+    },
+    "establishingShotTitles": {
+      "reviewed": 6,
+      "total": 6,
+      "idsSha256": "299d3ee9600461c39afeb2f0ab6f6b53dd160c313f6db1ec5b47d42ab8efa541"
+    },
+    "speakerDisplayLabels": {
+      "reviewed": 17,
+      "total": 17,
+      "idsSha256": "da80b091ebd0f898c78e1d3d58407b6f7f65a38bbdd490ec5932a3223e2394c9"
+    },
+    "imagePlans": {
+      "reviewed": 10,
+      "total": 10,
+      "preserveExactSymbolsReviewed": true
+    }
+  },
+  "deterministicGate": {
+    "preflight": {
+      "sourceUnits": 3547,
+      "batches": 29,
+      "csvRows": 3547,
+      "imageCandidates": 72,
+      "extractedImages": 72,
+      "textBearingImages": 10,
+      "preserveExactSymbols": 15,
+      "errors": 0,
+      "passed": true
+    },
+    "compileOverlay": {
+      "inventoryUnits": 3547,
+      "translatedUnits": 3547,
+      "deterministicByteComparison": "passed"
+    },
+    "allowIncompleteValidation": {
+      "missing": 0,
+      "extra": 0,
+      "tokenErrors": 0,
+      "layoutErrors": 0,
+      "needsReview": 11,
+      "passed": true
+    },
+    "strictValidation": {
+      "exitCode": 1,
+      "reason": "11 inherited source placeholders only",
+      "expected": true
+    },
+    "pythonUnitTests": {
+      "command": "python3 -m unittest Tests/test_localization_pipeline.py",
+      "passed": 10,
+      "total": 10
+    },
+    "swiftFakeFolderTests": {
+      "command": "swift test --disable-sandbox",
+      "passed": 10,
+      "total": 10,
+      "fakeGameFolders": true
+    }
+  },
+  "sourceFindings": [
+    {
+      "code": "inherited-source-placeholders",
+      "count": 11,
+      "ids": [
+        "unity:level0:1485:m_text",
+        "unity:level0:1490:m_text",
+        "unity:level0:1511:m_text",
+        "unity:level0:1512:m_text",
+        "unity:level0:1513:m_text",
+        "unity:level0:1524:m_text",
+        "unity:level0:1526:m_text",
+        "unity:level0:1528:m_text",
+        "unity:level0:1530:m_text",
+        "unity:level0:1544:m_text",
+        "unity:level0:1555:m_text"
+      ],
+      "classification": "source-owned; untranslated runtime placeholders; do not edit in locale overlay"
+    },
+    {
+      "code": "character-gender-metadata-debt",
+      "count": 1,
+      "classification": "canonical glossary schema has no structured gender/ambiguity field for character records; Barry male supplied by owner and audited accordingly; any canonical metadata change triggers the workflow re-audit rule"
+    }
+  ],
+  "runtimeVisual": {
+    "gameLaunch": "not-run",
+    "installerLaunch": "not-run",
+    "runtimeQa": "not-run",
+    "visualQa": "not-run",
+    "installedFilesTouched": false
+  },
+  "hashes": {
+    "normalization": "SHA-256; files hashed as bytes; glossary objects hashed as UTF-8 JSON.stringify(parsed value)",
+    "sourceUnitsSha256": "7c3cbc60eec5570d4b07c2f3b44da2abec3173158df4a4c181c7014aaa8dd2af",
+    "sourceInventoryFileSha256": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "sourcePackageFileSha256": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "glossarySourceNormalizedSha256": "6585d55f77a0e23e98e946376318305d91234e7b7b9e212a45b42331ae08673f",
+    "glossaryVietnameseNormalizedSha256": "10f3975678bd32d8b825e781e2bf438d80f9734316185348d2df1924813eb2a4",
+    "manualSha256": "b3af83cfc03de9a59151f5927673a324c40f2a558c7d7181a052bc5cbb54bc0a",
+    "overlaySha256": "fcd74e673f009639cbe9856b63568e6fc5d74169542792ce9b2bacfe5163abeb",
+    "imagePlanSha256": "0afb9c99ba84f47e9ee9fba8e137f40ecc4948c57521eb9b19e1c8cc774c0a8e",
+    "imageReviewSha256": "6328ff5e744949e5a368e54b053b2ad825098af93846005012a063943c7de749"
+  },
+  "protectedScope": {
+    "sourceModified": false,
+    "glossaryModified": false,
+    "pngModified": false,
+    "otherLocalesModified": false,
+    "checkpointModified": false
+  },
+  "delivery": {
+    "canonicalCommit": "blocked-not-attempted",
+    "blocker": "main is unborn and the canonical checkout is dirty/untracked; AGENTS.md requires stopping instead of overwriting or silently committing over owner work",
+    "published": false,
+    "deployed": false,
+    "pushed": false
+  },
+  "openItems": [
+    "Eleven inherited source placeholder units remain classified needsReview.",
+    "Canonical glossary character records need structured gender/ambiguity metadata; a source metadata change triggers re-audit.",
+    "Runtime and visual QA remain not-run by instruction.",
+    "Canonical commit remains blocked by unborn/dirty main."
+  ],
+  "modelUsage": {
+    "model": "gpt-5.6-sol",
+    "reasoning": "high",
+    "independentDiffModel": "gpt-5.6-sol",
+    "measuredUsageAvailable": false
+  }
+}

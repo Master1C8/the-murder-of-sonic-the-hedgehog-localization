@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "game": "the-murder-of-sonic-the-hedgehog",
+  "sourceLocale": "en",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "sourceUnitsSha256": "7c3cbc60eec5570d4b07c2f3b44da2abec3173158df4a4c181c7014aaa8dd2af",
+  "group": "ui/managed",
+  "unitCount": 7,
+  "units": [
+    {
+      "id": "managed:64cb4512ea66639b",
+      "group": "ui/managed",
+      "kind": "managed-ui-text",
+      "speaker": null,
+      "context": "AssistModeActiveToggle::UpdateDisplay",
+      "sourceAsset": "Managed/Assembly-CSharp.dll",
+      "sourcePath": "AssistModeActiveToggle::UpdateDisplay@IL_000f",
+      "sourceText": "<size=70%>ACTIVE</size>",
+      "protectedTokens": [
+        "70",
+        "</size>",
+        "<size=70%>"
+      ],
+      "note": "Confirmed runtime UI string in Assembly-CSharp.dll; reinsertion requires the managed-code patch stage.",
+      "translation": null
+    },
+    {
+      "id": "managed:d0a5c9ba80d393a4",
+      "group": "ui/managed",
+      "kind": "managed-ui-text",
+      "speaker": null,
+      "context": "AssistModeActiveToggle::UpdateDisplay",
+      "sourceAsset": "Managed/Assembly-CSharp.dll",
+      "sourcePath": "AssistModeActiveToggle::UpdateDisplay@IL_001b",
+      "sourceText": "Assist Mode",
+      "protectedTokens": [],
+      "note": "Confirmed runtime UI string in Assembly-CSharp.dll; reinsertion requires the managed-code patch stage.",
+      "translation": null
+    },
+    {
+      "id": "managed:1649d41bf047661f",
+      "group": "ui/managed",
+      "kind": "managed-ui-text",
+      "speaker": null,
+      "context": "SaveFileView::UpdateInfoText",
+      "sourceAsset": "Managed/Assembly-CSharp.dll",
+      "sourcePath": "SaveFileView::UpdateInfoText@IL_0170",
+      "sourceText": "Dining Car",
+      "protectedTokens": [],
+      "note": "Confirmed runtime UI string in Assembly-CSharp.dll; reinsertion requires the managed-code patch stage.",
+      "translation": null
+    },
+    {
+      "id": "managed:1d6e7f8a7320fb09",
+      "group": "ui/managed",
+      "kind": "managed-ui-text",
+      "speaker": null,
+      "context": "SaveDataManager::OnOpenSaveMenu",
+      "sourceAsset": "Managed/Assembly-CSharp.dll",
+      "sourcePath": "SaveDataManager::OnOpenSaveMenu@IL_0013",
+      "sourceText": "SAVE",
+      "protectedTokens": [],
+      "note": "Confirmed runtime UI string in Assembly-CSharp.dll; reinsertion requires the managed-code patch stage.",
+      "translation": null
+    },
+    {
+      "id": "managed:345bceff5742d954",
+      "group": "ui/managed",
+      "kind": "managed-ui-text",
+      "speaker": null,
+      "context": "SaveDataManager::OnOpenSaveMenu",
+      "sourceAsset": "Managed/Assembly-CSharp.dll",
+      "sourcePath": "SaveDataManager::OnOpenSaveMenu@IL_0023",
+      "sourceText": "Select file to overwrite",
+      "protectedTokens": [],
+      "note": "Confirmed runtime UI string in Assembly-CSharp.dll; reinsertion requires the managed-code patch stage.",
+      "translation": null
+    },
+    {
+      "id": "managed:678c392782a6c2db",
+      "group": "ui/managed",
+      "kind": "managed-ui-text",
+      "speaker": null,
+      "context": "SaveDataManager::OnOpenLoadMenu",
+      "sourceAsset": "Managed/Assembly-CSharp.dll",
+      "sourcePath": "SaveDataManager::OnOpenLoadMenu@IL_0013",
+      "sourceText": "LOAD",
+      "protectedTokens": [],
+      "note": "Confirmed runtime UI string in Assembly-CSharp.dll; reinsertion requires the managed-code patch stage.",
+      "translation": null
+    },
+    {
+      "id": "managed:2decfc637449b2f3",
+      "group": "ui/managed",
+      "kind": "managed-ui-text",
+      "speaker": null,
+      "context": "SaveDataManager::OnOpenLoadMenu",
+      "sourceAsset": "Managed/Assembly-CSharp.dll",
+      "sourcePath": "SaveDataManager::OnOpenLoadMenu@IL_0023",
+      "sourceText": "Select file to load",
+      "protectedTokens": [],
+      "note": "Confirmed runtime UI string in Assembly-CSharp.dll; reinsertion requires the managed-code patch stage.",
+      "translation": null
+    }
+  ]
+}

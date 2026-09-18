@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "game": "the-murder-of-sonic-the-hedgehog",
+  "sourceLocale": "en",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "sourceUnitsSha256": "7c3cbc60eec5570d4b07c2f3b44da2abec3173158df4a4c181c7014aaa8dd2af",
+  "group": "story/PlaytestEnd",
+  "unitCount": 2,
+  "units": [
+    {
+      "id": "ink:root[2].PlaytestEnd[7]",
+      "group": "story/PlaytestEnd",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > PlaytestEnd",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].PlaytestEnd[7]",
+      "sourceText": "<color=red>This is the end of the playtest.<br>Thanks so much for your help!!</color>",
+      "protectedTokens": [
+        "</color>",
+        "<br>",
+        "<color=red>"
+      ],
+      "note": null,
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].PlaytestEnd[9]",
+      "group": "story/PlaytestEnd",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > PlaytestEnd",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].PlaytestEnd[9]",
+      "sourceText": "<color=red>Let us know your thoughts, or answer our questionnaire, and we'll let you know when part 2 is ready!</color>",
+      "protectedTokens": [
+        "2",
+        "</color>",
+        "<color=red>"
+      ],
+      "note": null,
+      "translation": null
+    }
+  ]
+}

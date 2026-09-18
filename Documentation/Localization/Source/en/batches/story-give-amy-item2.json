@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "game": "the-murder-of-sonic-the-hedgehog",
+  "sourceLocale": "en",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "sourceUnitsSha256": "7c3cbc60eec5570d4b07c2f3b44da2abec3173158df4a4c181c7014aaa8dd2af",
+  "group": "story/Give_Amy_Item2",
+  "unitCount": 3,
+  "units": [
+    {
+      "id": "ink:root[2].Give_Amy_Item2[0][3]",
+      "group": "story/Give_Amy_Item2",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > Give_Amy_Item2",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Give_Amy_Item2[0][3]",
+      "sourceText": "amyshammer",
+      "protectedTokens": [],
+      "note": null,
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Give_Amy_Item2[1][1].b[1]",
+      "group": "story/Give_Amy_Item2",
+      "kind": "dialogue",
+      "speaker": "Amy",
+      "context": "root > Give_Amy_Item2 > b",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Give_Amy_Item2[1][1].b[1]",
+      "sourceText": "What... is this?",
+      "protectedTokens": [],
+      "note": "Translate dialogue body only; the speaker key is runtime control data.",
+      "translation": null
+    },
+    {
+      "id": "ink:root[2].Give_Amy_Item2[1][1].b[3]",
+      "group": "story/Give_Amy_Item2",
+      "kind": "narration",
+      "speaker": null,
+      "context": "root > Give_Amy_Item2 > b",
+      "sourceAsset": "sharedassets0.assets::story",
+      "sourcePath": "root[2].Give_Amy_Item2[1][1].b[3]",
+      "sourceText": "(Ouch... I guess that wasn't it)",
+      "protectedTokens": [],
+      "note": null,
+      "translation": null
+    }
+  ]
+}
