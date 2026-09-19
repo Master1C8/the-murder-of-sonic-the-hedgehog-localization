@@ -14,6 +14,46 @@ SPEC.loader.exec_module(localization_assets)
 
 
 class RuntimeIdentifierSafetyTests(unittest.TestCase):
+    def test_checked_in_runtime_exact_manifest_matches_compiled_ink(self) -> None:
+        localization_root = PROJECT_ROOT / "Documentation" / "Localization"
+        inventory = json.loads((localization_root / "inventory.json").read_text(encoding="utf-8"))
+        story = json.loads((localization_root / "story.en.json").read_text(encoding="utf-8"))
+        manifest = json.loads(
+            (localization_root / "runtime-exact-values.json").read_text(encoding="utf-8")
+        )
+        self.assertEqual(
+            manifest,
+            localization_assets.build_runtime_exact_manifest(inventory, story),
+        )
+        self.assertEqual(len(manifest["controls"]), 49)
+        self.assertEqual(
+            sum(1 for row in manifest["controls"] if row["overlayRequired"]),
+            45,
+        )
+        self.assertEqual(len(manifest["inlinePrefixes"]), 5)
+
+    def test_runtime_exact_validation_rejects_translated_control_and_prefix(self) -> None:
+        inventory = {
+            "source": {"fingerprint": "source"},
+            "story": {"storySha256": "story"},
+        }
+        manifest = {
+            "sourceFingerprint": "source",
+            "sourceStorySha256": "story",
+            "controls": [
+                {"id": "control", "value": "True", "overlayRequired": True}
+            ],
+            "inlinePrefixes": [
+                {"id": "wife", "prefix": "Conductor’s Wife:: "}
+            ],
+        }
+        artifact = {"units": {"control": "Vrai", "wife": "Épouse:: Bonjour"}}
+        errors = localization_assets.runtime_exact_errors(inventory, artifact, manifest)
+        self.assertEqual(
+            [row["error"] for row in errors],
+            ["runtime control value changed", "runtime inline prefix changed"],
+        )
+
     def test_russian_fit_fixes_use_locale_layout_overrides(self) -> None:
         localization_root = PROJECT_ROOT / "Documentation" / "Localization"
         inventory = json.loads((localization_root / "inventory.json").read_text(encoding="utf-8"))

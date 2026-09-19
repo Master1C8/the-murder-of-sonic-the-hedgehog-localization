@@ -184,6 +184,153 @@ def walk_json(
         yield path, ancestors, value
 
 
+def runtime_string_controls(
+    value: Any,
+    path: tuple[object, ...] = (),
+) -> Iterator[tuple[tuple[object, ...], str, str]]:
+    """Find compiled Ink string operands whose bytes affect runtime control flow."""
+    if isinstance(value, dict):
+        for key, child in value.items():
+            yield from runtime_string_controls(child, path + (key,))
+    elif isinstance(value, list):
+        for index, child in enumerate(value):
+            if (
+                child == "str"
+                and index + 3 < len(value)
+                and isinstance(value[index + 1], str)
+                and value[index + 1].startswith("^")
+                and value[index + 2] == "/str"
+            ):
+                operand = value[index + 1][1:]
+                next_value = value[index + 3]
+                operation: str | None = None
+                if next_value == "==":
+                    operation = "comparison"
+                elif isinstance(next_value, dict) and ({"VAR=", "temp="} & next_value.keys()):
+                    operation = "assignment"
+                elif (
+                    next_value == "/ev"
+                    and index + 4 < len(value)
+                    and isinstance(value[index + 4], dict)
+                    and ({"VAR=", "temp="} & value[index + 4].keys())
+                ):
+                    operation = "assignment"
+                if operation is not None and operand:
+                    yield path + (index + 1,), operand, operation
+            yield from runtime_string_controls(child, path + (index,))
+
+
+def build_runtime_exact_manifest(
+    inventory: dict[str, Any],
+    story: dict[str, Any],
+) -> dict[str, Any]:
+    by_id = {row["id"]: row for row in inventory["units"]}
+    controls: list[dict[str, Any]] = []
+    for path, operand, operation in runtime_string_controls(story):
+        source_path = json_path(path)
+        identifier = f"ink:{source_path}"
+        row = by_id.get(identifier)
+        if row is None or row.get("body") != operand:
+            raise ValueError(f"Runtime operand does not match inventory: {identifier}")
+        controls.append(
+            {
+                "id": identifier,
+                "sourcePath": source_path,
+                "value": operand,
+                "operation": operation,
+                "overlayRequired": bool(row.get("translatable")),
+            }
+        )
+
+    prefixes: list[dict[str, str]] = []
+    for row in inventory["units"]:
+        if row.get("sourceAsset") != "sharedassets0.assets::story":
+            continue
+        original = row.get("original")
+        body = row.get("body")
+        if (
+            not isinstance(original, str)
+            or not isinstance(body, str)
+            or original != "^" + body
+            or "::" not in body
+        ):
+            continue
+        prefix = body.split("::", 1)[0] + "::"
+        following = body[len(prefix) :]
+        if following.startswith(" "):
+            prefix += " "
+        prefixes.append(
+            {
+                "id": row["id"],
+                "sourcePath": row["sourcePath"],
+                "prefix": prefix,
+            }
+        )
+
+    return {
+        "schemaVersion": 1,
+        "kind": "runtime-preserve-exactly",
+        "game": GAME_ID,
+        "sourceFingerprint": inventory["source"]["fingerprint"],
+        "sourceStorySha256": inventory["story"]["storySha256"],
+        "controls": controls,
+        "inlinePrefixes": prefixes,
+        "notes": (
+            "Compatibility manifest for runtime-sensitive strings that remain in the "
+            "stable translation corpus. Values and prefixes are byte-exact requirements."
+        ),
+    }
+
+
+def runtime_exact_errors(
+    inventory: dict[str, Any],
+    artifact: dict[str, Any],
+    manifest: dict[str, Any],
+) -> list[dict[str, str]]:
+    errors: list[dict[str, str]] = []
+    if manifest.get("sourceFingerprint") != inventory["source"]["fingerprint"]:
+        errors.append({"id": "manifest", "error": "source fingerprint mismatch"})
+    if manifest.get("sourceStorySha256") != inventory["story"]["storySha256"]:
+        errors.append({"id": "manifest", "error": "source story hash mismatch"})
+    units = artifact.get("units", {})
+    if not isinstance(units, dict):
+        return errors + [{"id": "artifact", "error": "units must be an object"}]
+    for row in manifest.get("controls", []):
+        if not row.get("overlayRequired"):
+            continue
+        identifier = row["id"]
+        actual = units.get(identifier)
+        if actual != row["value"]:
+            errors.append(
+                {
+                    "id": identifier,
+                    "error": "runtime control value changed",
+                    "expected": row["value"],
+                    "actual": actual if isinstance(actual, str) else repr(actual),
+                }
+            )
+    for row in manifest.get("inlinePrefixes", []):
+        identifier = row["id"]
+        actual = units.get(identifier)
+        if not isinstance(actual, str) or not actual.startswith(row["prefix"]):
+            errors.append(
+                {
+                    "id": identifier,
+                    "error": "runtime inline prefix changed",
+                    "expected": row["prefix"],
+                    "actual": actual if isinstance(actual, str) else repr(actual),
+                }
+            )
+    return errors
+
+
+def load_runtime_exact_manifest(inventory_path: Path) -> dict[str, Any]:
+    path = inventory_path.with_name("runtime-exact-values.json")
+    if not path.is_file():
+        raise SystemExit(f"Runtime exact manifest is missing: {path}")
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
 def parse_unity_text_asset(raw: bytes) -> tuple[str, bytes] | None:
     """Read the byte layout used by Unity TextAsset without a type tree."""
     if len(raw) < 8:
@@ -1020,6 +1167,10 @@ def extract(args: argparse.Namespace) -> int:
     }
     write_json(output / "inventory.json", inventory)
     write_json(output / "story.en.json", story_inventory["story"])
+    write_json(
+        output / "runtime-exact-values.json",
+        build_runtime_exact_manifest(inventory, story_inventory["story"]),
+    )
     translation_source = write_translation_source(output, inventory)
     write_json(
         output / "extraction-report.json",
@@ -1092,6 +1243,7 @@ def validate_layout_overrides(
 def validate(args: argparse.Namespace) -> int:
     inventory = json.loads(args.inventory.read_text(encoding="utf-8"))
     overlay = json.loads(args.overlay.read_text(encoding="utf-8"))
+    runtime_exact = load_runtime_exact_manifest(args.inventory)
     inventory_units = {row["id"]: row for row in inventory["units"] if row.get("translatable")}
     translations = overlay.get("units", {})
     missing = sorted(identifier for identifier in inventory_units if not isinstance(translations.get(identifier), str) or not translations[identifier].strip())
@@ -1106,6 +1258,7 @@ def validate(args: argparse.Namespace) -> int:
         if expected != actual:
             token_errors.append({"id": identifier, "expected": expected, "actual": actual})
     layout_errors = validate_layout_overrides(inventory, overlay)
+    runtime_exact_failures = runtime_exact_errors(inventory, overlay, runtime_exact)
     needs_review = [
         row["id"]
         for row in inventory["units"]
@@ -1118,12 +1271,14 @@ def validate(args: argparse.Namespace) -> int:
         "extra": extra,
         "tokenErrors": token_errors,
         "layoutErrors": layout_errors,
+        "runtimeExactErrors": runtime_exact_failures,
         "needsReview": needs_review,
         "ok": (
             (not missing or args.allow_incomplete)
             and not extra
             and not token_errors
             and not layout_errors
+            and not runtime_exact_failures
             and (not needs_review or args.allow_incomplete)
         ),
     }
@@ -1165,6 +1320,16 @@ def localized_story_value(row: dict[str, Any], translation: str) -> str:
 def apply_story(args: argparse.Namespace) -> int:
     inventory = json.loads(args.inventory.read_text(encoding="utf-8"))
     overlay = json.loads(args.overlay.read_text(encoding="utf-8"))
+    runtime_exact_failures = runtime_exact_errors(
+        inventory,
+        overlay,
+        load_runtime_exact_manifest(args.inventory),
+    )
+    if runtime_exact_failures:
+        raise SystemExit(
+            "Runtime exact validation failed: "
+            + "; ".join(f"{row['id']}: {row['error']}" for row in runtime_exact_failures[:10])
+        )
     story = json.loads(args.story.read_text(encoding="utf-8"))
     source_units = {
         row["id"]: row
@@ -1232,6 +1397,16 @@ def compile_overlay(args: argparse.Namespace) -> int:
     layout_errors = validate_layout_overrides(inventory, manual)
     if layout_errors:
         raise SystemExit("Invalid layout overrides: " + "; ".join(layout_errors[:10]))
+    runtime_exact_failures = runtime_exact_errors(
+        inventory,
+        manual,
+        load_runtime_exact_manifest(args.inventory),
+    )
+    if runtime_exact_failures:
+        raise SystemExit(
+            "Runtime exact validation failed: "
+            + "; ".join(f"{row['id']}: {row['error']}" for row in runtime_exact_failures[:10])
+        )
     values = {row["id"]: authored.get(row["id"]) for row in source_units}
     overlay = {
         "schemaVersion": manual.get("schemaVersion", SCHEMA_VERSION),
@@ -1266,6 +1441,16 @@ def build_sharedassets(args: argparse.Namespace) -> int:
     overlay = json.loads(args.overlay.read_text(encoding="utf-8"))
     if overlay.get("sourceFingerprint") != inventory["source"]["fingerprint"]:
         raise SystemExit("Overlay and inventory fingerprints do not match")
+    runtime_exact_failures = runtime_exact_errors(
+        inventory,
+        overlay,
+        load_runtime_exact_manifest(args.inventory),
+    )
+    if runtime_exact_failures:
+        raise SystemExit(
+            "Runtime exact validation failed: "
+            + "; ".join(f"{row['id']}: {row['error']}" for row in runtime_exact_failures[:10])
+        )
     source_path = args.source.resolve()
     environment = UnityPy.load(str(source_path))
     source_units = {
@@ -1766,6 +1951,16 @@ def build_development_patch(args: argparse.Namespace) -> int:
     overlay = json.loads(args.overlay.read_text(encoding="utf-8"))
     if overlay.get("sourceFingerprint") != inventory["source"]["fingerprint"]:
         raise SystemExit("Overlay and inventory fingerprints do not match")
+    runtime_exact_failures = runtime_exact_errors(
+        inventory,
+        overlay,
+        load_runtime_exact_manifest(args.inventory),
+    )
+    if runtime_exact_failures:
+        raise SystemExit(
+            "Runtime exact validation failed: "
+            + "; ".join(f"{row['id']}: {row['error']}" for row in runtime_exact_failures[:10])
+        )
     if overlay.get("targetLocale") != "ru":
         raise SystemExit("This development patch command is restricted to the reviewed Russian overlay")
     output_root = args.output.resolve()
@@ -1889,12 +2084,20 @@ def build_development_patch(args: argparse.Namespace) -> int:
 
 def validate_source(args: argparse.Namespace) -> int:
     inventory = json.loads(args.inventory.read_text(encoding="utf-8"))
+    runtime_exact = load_runtime_exact_manifest(args.inventory)
+    story_path = args.inventory.with_name("story.en.json")
     source_root = args.source_root.resolve()
     source = json.loads((source_root / "source.en.json").read_text(encoding="utf-8"))
     expected_rows = [translation_source_row(row) for row in inventory["units"] if row.get("translatable")]
     expected_ids = [row["id"] for row in expected_rows]
     expected_sha256 = sha256_bytes(compact_json(expected_rows).encode("utf-8"))
     errors: list[str] = []
+    if not story_path.is_file():
+        errors.append(f"source story is missing: {story_path}")
+    else:
+        story = json.loads(story_path.read_text(encoding="utf-8"))
+        if runtime_exact != build_runtime_exact_manifest(inventory, story):
+            errors.append("runtime exact manifest does not match source story and inventory")
     if source.get("sourceFingerprint") != inventory["source"]["fingerprint"]:
         errors.append("source fingerprint does not match inventory")
     if source.get("sourceUnitsSha256") != expected_sha256:
@@ -1989,6 +2192,28 @@ def validate_source(args: argparse.Namespace) -> int:
     return 0 if result["ok"] else 1
 
 
+def write_runtime_exact_manifest(args: argparse.Namespace) -> int:
+    inventory = json.loads(args.inventory.read_text(encoding="utf-8"))
+    story = json.loads(args.story.read_text(encoding="utf-8"))
+    manifest = build_runtime_exact_manifest(inventory, story)
+    write_json(args.output, manifest)
+    print(
+        json.dumps(
+            {
+                "output": str(args.output),
+                "controls": len(manifest["controls"]),
+                "overlayRequiredControls": sum(
+                    1 for row in manifest["controls"] if row["overlayRequired"]
+                ),
+                "inlinePrefixes": len(manifest["inlinePrefixes"]),
+            },
+            ensure_ascii=False,
+            indent=2,
+        )
+    )
+    return 0
+
+
 def parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -2040,6 +2265,14 @@ def parser() -> argparse.ArgumentParser:
         help="validate a completed human image review against the extracted candidate set",
     )
     source_parser.set_defaults(handler=validate_source)
+    exact_parser = subparsers.add_parser(
+        "build-runtime-exact-manifest",
+        help="derive byte-exact Ink runtime operands and inline prefixes",
+    )
+    exact_parser.add_argument("--inventory", type=Path, required=True)
+    exact_parser.add_argument("--story", type=Path, required=True)
+    exact_parser.add_argument("--output", type=Path, required=True)
+    exact_parser.set_defaults(handler=write_runtime_exact_manifest)
     return parser
 
 

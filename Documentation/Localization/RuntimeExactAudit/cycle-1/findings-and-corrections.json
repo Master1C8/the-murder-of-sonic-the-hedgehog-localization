@@ -1,0 +1,587 @@
+{
+  "schemaVersion": 1,
+  "kind": "runtime-exact-correction-baseline",
+  "date": "2026-09-19",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "runtimeExactManifestSha256": "24156bbba7f68339dac59071050469510df1ebf971abe764ee1000287fdeb98d",
+  "locales": {
+    "bg": {
+      "beforeSha256": "65b62d060d3c4d5cce3c82830192a417a88ccea05f1ee0fcd56b2350d2f5a0d2",
+      "changes": [
+        {
+          "id": "ink:root[2].Final_Push[35].Finale_Start[54]",
+          "kind": "inline-prefix",
+          "before": "Съпругата на Кондуктора:: Скъпи! Закъсня! Чакам те тук от часове!",
+          "after": "Conductor’s Wife:: Скъпи! Закъсня! Чакам те тук от часове!"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Finale_Start[61]",
+          "kind": "inline-prefix",
+          "before": "Съпругата на Кондуктора:: Радвам се само, че си тук. Хайде, сутринта тръгваме за Спейгония и трябва да си стегнеш багажа!",
+          "after": "Conductor’s Wife:: Радвам се само, че си тук. Хайде, сутринта тръгваме за Спейгония и трябва да си стегнеш багажа!"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Finale_Start[65]",
+          "kind": "inline-prefix",
+          "before": "Съпругата на Кондуктора:: А аз имам нужда да си у дома! Честит първи ден от пенсионирането, скъпи.",
+          "after": "Conductor’s Wife:: А аз имам нужда да си у дома! Честит първи ден от пенсионирането, скъпи."
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Finale_Start[73]",
+          "kind": "inline-prefix",
+          "before": "Съпругата на Кондуктора:: О! Кой е този?",
+          "after": "Conductor’s Wife:: О! Кой е този?"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Finale_Start[77]",
+          "kind": "inline-prefix",
+          "before": "Съпругата на Кондуктора:: Е, той е сладур, това е сигурно!",
+          "after": "Conductor’s Wife:: Е, той е сладур, това е сигурно!"
+        }
+      ],
+      "changedCount": 5,
+      "afterSha256": "f988f4cf7faa957e20562e90ea4b30d98d38ef5af6839b8bb1d71ddd238fadc8"
+    },
+    "el": {
+      "beforeSha256": "20bf9e49aaf638ef0b2b27f3ea664306ea83ba0986713fc3d1043478577f65cc",
+      "changes": [
+        {
+          "id": "ink:root[2].Saloon[4].Minigame_Midpoint1[1][3]",
+          "kind": "control",
+          "before": "Αληθές",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Saloon[4].Minigame_Midpoint2[1][3]",
+          "kind": "control",
+          "before": "Αληθές",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Saloon[4].Minigame_Midpoint3[1][3]",
+          "kind": "control",
+          "before": "Αληθές",
+          "after": "True"
+        }
+      ],
+      "changedCount": 3,
+      "afterSha256": "bd6b39539605fae70cf87741adc297ea71d7416983de57fa4ba9ee54bfd39b4c"
+    },
+    "fil": {
+      "beforeSha256": "155503089beb2f9a5e145f0b699ab44c8b3b7b8ddb625382144d47f92ffef3b1",
+      "changes": [
+        {
+          "id": "ink:root[2].Saloon[4].Minigame_Midpoint1[1][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Saloon[4].Minigame_Midpoint2[1][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Saloon[4].Minigame_Midpoint3[1][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Library[4].Minigame_Midpoint1[1][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Library[4].Minigame_Midpoint2[1][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Library[4].Minigame_Midpoint3[1][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Lounge[108].Minigame_Midpoint1[10][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Lounge[108].Minigame_Midpoint2[9][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Lounge[108].Minigame_Midpoint3[9][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Conductor_Car[74].Minigame_Midpoint1[1][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Conductor_Car[74].Minigame_Midpoint2[1][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Conductor_Car[74].Minigame_Midpoint3[1][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Minigame_Checkpoint1[1][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Minigame_Checkpoint2[1][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Minigame_Checkpoint3[1][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Minigame_Checkpoint4[1][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Minigame_Checkpoint5[1][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Final_Boss_Checkpoint1[1][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Final_Boss_Checkpoint2[1][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Final_Boss_Checkpoint3[1][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Final_Boss_Checkpoint4[1][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Final_Boss_Checkpoint5[1][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Final_Boss_Checkpoint6[1][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].DiningCloset[1].Minigame_Midpoint1[1][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].DiningCloset[1].Minigame_Midpoint2[1][3]",
+          "kind": "control",
+          "before": "Totoo",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Finale_Start[54]",
+          "kind": "inline-prefix",
+          "before": "Asawa ng Konduktor:: Sinta! Huli ka! Ilang oras na akong naghihintay rito!",
+          "after": "Conductor’s Wife:: Sinta! Huli ka! Ilang oras na akong naghihintay rito!"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Finale_Start[61]",
+          "kind": "inline-prefix",
+          "before": "Asawa ng Konduktor:: Masaya lang akong narito ka; bilis, aalis tayo papuntang Spagonia sa umaga at kailangan mong mag-impake!",
+          "after": "Conductor’s Wife:: Masaya lang akong narito ka; bilis, aalis tayo papuntang Spagonia sa umaga at kailangan mong mag-impake!"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Finale_Start[65]",
+          "kind": "inline-prefix",
+          "before": "Asawa ng Konduktor:: At kailangan kita sa bahay! Maligayang unang araw ng pagreretiro, mahal.",
+          "after": "Conductor’s Wife:: At kailangan kita sa bahay! Maligayang unang araw ng pagreretiro, mahal."
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Finale_Start[73]",
+          "kind": "inline-prefix",
+          "before": "Asawa ng Konduktor:: Oh! Sino ito?",
+          "after": "Conductor’s Wife:: Oh! Sino ito?"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Finale_Start[77]",
+          "kind": "inline-prefix",
+          "before": "Asawa ng Konduktor:: Ay, cute siya, sigurado iyan!",
+          "after": "Conductor’s Wife:: Ay, cute siya, sigurado iyan!"
+        }
+      ],
+      "changedCount": 30,
+      "afterSha256": "5d788442444f79688c8e088c7cf957fe6dea7274a63e903c5c4a0701763bbcc1"
+    },
+    "fr": {
+      "beforeSha256": "5d22e69e250cc4f0c5a284ed7beee154ff8131e6a7c1651f882ab55e934a8dde",
+      "changes": [
+        {
+          "id": "ink:root[2].Saloon[4].Minigame_Midpoint1[1][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Saloon[4].Minigame_Midpoint2[1][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Saloon[4].Minigame_Midpoint3[1][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Library[4].Minigame_Midpoint1[1][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Library[4].Minigame_Midpoint2[1][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Library[4].Minigame_Midpoint3[1][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Lounge[108].Minigame_Midpoint1[10][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Lounge[108].Minigame_Midpoint2[9][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Lounge[108].Minigame_Midpoint3[9][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Conductor_Car[74].Minigame_Midpoint1[1][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Conductor_Car[74].Minigame_Midpoint2[1][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Conductor_Car[74].Minigame_Midpoint3[1][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Minigame_Checkpoint1[1][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Minigame_Checkpoint2[1][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Minigame_Checkpoint3[1][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Minigame_Checkpoint4[1][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Minigame_Checkpoint5[1][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Final_Boss_Checkpoint1[1][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Final_Boss_Checkpoint2[1][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Final_Boss_Checkpoint3[1][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Final_Boss_Checkpoint4[1][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Final_Boss_Checkpoint5[1][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Final_Boss_Checkpoint6[1][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].DiningCloset[1].Minigame_Midpoint1[1][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].DiningCloset[1].Minigame_Midpoint2[1][3]",
+          "kind": "control",
+          "before": "Vrai",
+          "after": "True"
+        }
+      ],
+      "changedCount": 25,
+      "afterSha256": "3f759d2a55c7578ca325e0476150d9da58e5292384afda9d9804a6bff059f062"
+    },
+    "he": {
+      "beforeSha256": "5f219ee3b53c0a618331173b63932752f4bc07f7a44c993e18640cd30d43167f",
+      "changes": [],
+      "changedCount": 0,
+      "afterSha256": "5f219ee3b53c0a618331173b63932752f4bc07f7a44c993e18640cd30d43167f"
+    },
+    "hi": {
+      "beforeSha256": "19ed1b860b42bb6ce68fbd8d3d62a61153bf3b3a1b7ce9ed90ba30aa1e44a7d3",
+      "changes": [
+        {
+          "id": "ink:root[2].Saloon[4].Minigame_Midpoint1[1][3]",
+          "kind": "control",
+          "before": "सही",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Saloon[4].Minigame_Midpoint2[1][3]",
+          "kind": "control",
+          "before": "सही",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Saloon[4].Minigame_Midpoint3[1][3]",
+          "kind": "control",
+          "before": "सही",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Conductor_Car[74].Interrogation_Part3_Choose_Evidence[0][3]",
+          "kind": "control",
+          "before": "ब्लोडार्ट",
+          "after": "blowdart"
+        },
+        {
+          "id": "ink:root[2].Conductor_Car[74].Interrogation_Part4_Choose_Evidence[0][3]",
+          "kind": "control",
+          "before": "ब्लूप्रिंट",
+          "after": "blueprints"
+        }
+      ],
+      "changedCount": 5,
+      "afterSha256": "42fe367cddc9a2554ed8a5007c4d70b79a115a277a52f56fd7003428326f0b3b"
+    },
+    "ko": {
+      "beforeSha256": "a332d11049e93b138d62b5095646e403c591c81df7aa870e7bc304bbbf82e586",
+      "changes": [],
+      "changedCount": 0,
+      "afterSha256": "a332d11049e93b138d62b5095646e403c591c81df7aa870e7bc304bbbf82e586"
+    },
+    "pl": {
+      "beforeSha256": "16d112aab8f45181f35ec780c07f330064d856ef361b23afd25faf1f52834c1d",
+      "changes": [],
+      "changedCount": 0,
+      "afterSha256": "16d112aab8f45181f35ec780c07f330064d856ef361b23afd25faf1f52834c1d"
+    },
+    "ro": {
+      "beforeSha256": "4bf38de0d6545b82f459122221c5794acd752d4a5c73488e33a372449ce6ccdd",
+      "changes": [],
+      "changedCount": 0,
+      "afterSha256": "4bf38de0d6545b82f459122221c5794acd752d4a5c73488e33a372449ce6ccdd"
+    },
+    "ru": {
+      "beforeSha256": "51794da7932811828c32dbad808b1ed991de128f3b57d830b90b40ebb131bbbe",
+      "changes": [
+        {
+          "id": "ink:root[2].Final_Push[35].Finale_Start[54]",
+          "kind": "inline-prefix",
+          "before": "Жена Проводника:: Милый! Ты опоздал! Я жду тебя уже несколько часов!",
+          "after": "Conductor’s Wife:: Милый! Ты опоздал! Я жду тебя уже несколько часов!"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Finale_Start[61]",
+          "kind": "inline-prefix",
+          "before": "Жена Проводника:: Я так рада, что ты здесь. Скорее, утром мы уезжаем в Спагонию, тебе нужно собираться!",
+          "after": "Conductor’s Wife:: Я так рада, что ты здесь. Скорее, утром мы уезжаем в Спагонию, тебе нужно собираться!"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Finale_Start[65]",
+          "kind": "inline-prefix",
+          "before": "Жена Проводника:: А мне нужно, чтобы ты был дома! С первым днём на пенсии, дорогой.",
+          "after": "Conductor’s Wife:: А мне нужно, чтобы ты был дома! С первым днём на пенсии, дорогой."
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Finale_Start[73]",
+          "kind": "inline-prefix",
+          "before": "О! А это кто?",
+          "after": "Conductor’s Wife:: О! А это кто?"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Finale_Start[77]",
+          "kind": "inline-prefix",
+          "before": "Что ж, милашка, это точно!",
+          "after": "Conductor’s Wife:: Что ж, милашка, это точно!"
+        }
+      ],
+      "changedCount": 5,
+      "afterSha256": "69aeb2d598292b2b5af3305f75e8e14560b83f651a58a5a23b0e77479e51f18a"
+    },
+    "sr": {
+      "beforeSha256": "c7f2efe60358df13e3adb62af41850de1c7861b936cdb113ad91c41cc29ab477",
+      "changes": [],
+      "changedCount": 0,
+      "afterSha256": "c7f2efe60358df13e3adb62af41850de1c7861b936cdb113ad91c41cc29ab477"
+    },
+    "sw": {
+      "beforeSha256": "6a9451270bc12179facb8d2f811f0a50fe6eb0febd05d941334dcb0db53bf8ab",
+      "changes": [
+        {
+          "id": "ink:root[2].Final_Push[35].Finale_Start[54]",
+          "kind": "inline-prefix",
+          "before": "Mke wa Kondakta:: Mpenzi! Umechelewa! Nimekuwa nikikusubiri hapa kwa saa nyingi!",
+          "after": "Conductor’s Wife:: Mpenzi! Umechelewa! Nimekuwa nikikusubiri hapa kwa saa nyingi!"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Finale_Start[61]",
+          "kind": "inline-prefix",
+          "before": "Mke wa Kondakta:: Ninafurahi tu uko hapa, haraka, tunaondoka kwenda Spagonia asubuhi na unahitaji kufunga mizigo!",
+          "after": "Conductor’s Wife:: Ninafurahi tu uko hapa, haraka, tunaondoka kwenda Spagonia asubuhi na unahitaji kufunga mizigo!"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Finale_Start[65]",
+          "kind": "inline-prefix",
+          "before": "Mke wa Kondakta:: Na mimi nakuhitaji nyumbani! Heri ya siku yako ya kwanza ya kustaafu, mpenzi.",
+          "after": "Conductor’s Wife:: Na mimi nakuhitaji nyumbani! Heri ya siku yako ya kwanza ya kustaafu, mpenzi."
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Finale_Start[73]",
+          "kind": "inline-prefix",
+          "before": "Mke wa Kondakta:: Lo! Huyu ni nani?",
+          "after": "Conductor’s Wife:: Lo! Huyu ni nani?"
+        },
+        {
+          "id": "ink:root[2].Final_Push[35].Finale_Start[77]",
+          "kind": "inline-prefix",
+          "before": "Mke wa Kondakta:: Basi, ni mrembo, hilo ni hakika!",
+          "after": "Conductor’s Wife:: Basi, ni mrembo, hilo ni hakika!"
+        }
+      ],
+      "changedCount": 5,
+      "afterSha256": "9de5825a983700122eb227b9eae1940a0883ce5d99a085b047cc87c154015f45"
+    },
+    "tr": {
+      "beforeSha256": "2d6dbc68b0bdd9587922871591eb97b730fe679eae7ccb323879d522f264e00f",
+      "changes": [],
+      "changedCount": 0,
+      "afterSha256": "2d6dbc68b0bdd9587922871591eb97b730fe679eae7ccb323879d522f264e00f"
+    },
+    "zh": {
+      "beforeSha256": "8c267986f0f59a7710b524e19089f801e8b0376bca795d1235bdecb51382b9c4",
+      "changes": [
+        {
+          "id": "ink:root[2].Saloon[4].Minigame_Midpoint1[1][3]",
+          "kind": "control",
+          "before": "真",
+          "after": "True"
+        },
+        {
+          "id": "ink:root[2].Saloon[4].Minigame_Midpoint2[1][3]",
+          "kind": "control",
+          "before": "真",
+          "after": "True"
+        }
+      ],
+      "changedCount": 2,
+      "afterSha256": "83e971f4debbcbb206097e765237f6cb953259847b742e492de6866f530751a2"
+    },
+    "zh-TW": {
+      "beforeSha256": "d556035970f3d7b0c3e52583c1e8cafc47b7b38bda164336d20c45c1d2e159d0",
+      "changes": [],
+      "changedCount": 0,
+      "afterSha256": "d556035970f3d7b0c3e52583c1e8cafc47b7b38bda164336d20c45c1d2e159d0"
+    }
+  }
+}

@@ -9,6 +9,9 @@ only the display value associated with an identifier.
 - Ink speaker keys before `::`, including `Barry`, `Conductor`, and `Train`.
 - Ink command names and syntax, including `>>>>`, command names, parentheses,
   separators, variable names, and branch/control tokens.
+- Compiled Ink string operands used by `==`, `VAR=`, or `temp=` operations.
+  These values remain byte-exact even where historical corpus compatibility
+  keeps their stable IDs in locale files.
 - Managed-code literals used by comparisons, lookups, portrait selection,
   font selection, Addressables, events, or save-state logic.
 - Asset keys, IDs, paths, hashes, field names, and locale-independent markup.
@@ -48,6 +51,10 @@ is control data.
    value before that locale can be ready.
 3. Story reinsertion must prove that speaker prefixes and command shells are
    unchanged.
+   `runtime-exact-values.json` is the machine-readable source of truth for
+   compiled Ink operands and historically exposed inline speaker prefixes;
+   source validation, overlay compilation, overlay validation, story
+   reinsertion, and development-patch construction must reject violations.
 4. Managed-patch verification must prove that the original `Barry` and `Train`
    comparisons remain and that only the name-tag display path calls the locale
    mapping.
