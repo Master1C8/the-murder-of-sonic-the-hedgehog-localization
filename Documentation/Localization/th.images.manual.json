@@ -10,29 +10,29 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/Menu with chilidog.png",
       "sourceText": "Menu\nChili Dog\nRamen\nChicken\nCordon Bleu",
-      "translation": "เมนู\nชิลลีด็อก\nราเม็ง\nไก่\nกอร์ดงเบลอ",
+      "translation": "เมนู\nชิลลีด็อก\nราเม็ง\nChicken\nCordon Bleu",
       "context": "Prologue / menu close-up",
       "glossaryIds": ["menu", "chili-dog", "chicken-cordon-bleu"],
       "status": "translated",
-      "note": "แปลเฉพาะข้อความบนเมนู ใช้สองบรรทัดร่วมกันเป็นชื่อเมนูไก่กอร์ดงเบลอ และคงลำดับบรรทัดไว้สำหรับการวาดทับภายหลัง PNG ไม่ได้ถูกแก้ไข"
+      "note": "แปลเฉพาะข้อความบนเมนู ใช้สองบรรทัดร่วมกันเป็นชื่อเมนู Chicken Cordon Bleu ตามอภิธานศัพท์ และคงลำดับบรรทัดไว้สำหรับการวาดทับภายหลัง PNG ไม่ได้ถูกแก้ไข"
     },
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/TicketProp.png",
       "sourceText": "MIRAGE\nEXPRESS",
-      "translation": "มิราจ\nเอ็กซ์เพรส",
+      "translation": "The Mirage\nExpress",
       "context": "Prologue / ticket prop",
       "glossaryIds": ["the-mirage-express"],
       "status": "translated",
-      "note": "แปลชื่อรถไฟและคงการแบ่งเป็นสองบรรทัดไว้ PNG ไม่ได้ถูกแก้ไข"
+      "note": "คงชื่อรถไฟ The Mirage Express ตามอภิธานศัพท์และแบ่งเป็นสองบรรทัดไว้ PNG ไม่ได้ถูกแก้ไข"
     },
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/crumpledticket.png",
       "sourceText": "MIRAGE\nEXPRESS",
-      "translation": "มิราจ\nเอ็กซ์เพรส",
+      "translation": "The Mirage\nExpress",
       "context": "Prologue / crumpled ticket prop",
       "glossaryIds": ["the-mirage-express"],
       "status": "translated",
-      "note": "ใช้คำแปลเดียวกับตั๋วต้นฉบับและคงการแบ่งบรรทัดไว้ สภาพยับและภาพกลับด้านเป็นคุณสมบัติของภาพเดิม"
+      "note": "คงชื่อรถไฟ The Mirage Express ตามอภิธานศัพท์และแบ่งบรรทัดเหมือนตั๋วต้นฉบับ สภาพยับและภาพกลับด้านเป็นคุณสมบัติของภาพเดิม"
     },
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/1-Saloon/PROP_FixedArcadeWithHighScore_V02.png",
@@ -55,7 +55,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/2-Library/PROP_TheMirageExpressManual.png",
       "sourceText": "The Mirage Express\nManual",
-      "translation": "คู่มือ\nมิราจเอ็กซ์เพรส",
+      "translation": "คู่มือ\nThe Mirage Express",
       "context": "Library / Mirage Express manual cover",
       "glossaryIds": ["mirage-express-manual", "the-mirage-express"],
       "status": "translated",
@@ -64,16 +64,16 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/4-Lounge/HotHoneyPrintout.png",
       "sourceText": "ticket town\nHOT HONEY\nFRI MAY 8\n9:00 PM\nSTAGE\nSEC 53 ROW P\nSEC 53 ROW P\nSEC 53 ROW R\nSEC 54 ROW R",
-      "translation": "ticket town\nฮอต ฮันนี\nศ. 8 พ.ค.\n21:00\nเวที\nโซน 53 แถว P\nโซน 53 แถว P\nโซน 53 แถว R\nโซน 54 แถว R",
+      "translation": "ticket town\nHot Honey\nศ. 8 พ.ค.\n21:00\nเวที\nโซน 53 แถว P\nโซน 53 แถว P\nโซน 53 แถว R\nโซน 54 แถว R",
       "context": "Lounge / Hot Honey ticket printout",
       "glossaryIds": ["hot-honey", "concert-tickets"],
       "status": "translated",
-      "note": "แปลป้ายตั๋ว วันที่ เวลา เวที และข้อมูลที่นั่ง โดยคงชื่อเว็บไซต์ ticket town และตัวอักษรแถว P/R ไว้"
+      "note": "แปลป้ายตั๋ว วันที่ เวลา เวที และข้อมูลที่นั่ง โดยคงชื่อวง Hot Honey ชื่อเว็บไซต์ ticket town และตัวอักษรแถว P/R ตามต้นฉบับ"
     },
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/5-conductorcar/TypedNoteFromTrainToEspio.png",
       "sourceText": "Use this blowdart on Sonic,\nstationed in the conductor\ncar. It is laced with a\nnonlethal sleeping agent.\nThank you again for\nchoosing the Mirage Express.\n-Staff",
-      "translation": "ใช้ลูกดอกเป่านี้กับโซนิค\nซึ่งประจำการอยู่ในตู้ควบคุมรถไฟ\nลูกดอกเคลือบสารช่วยให้นอนหลับ\nที่ไม่ทำให้ถึงตาย\nขอบคุณอีกครั้งที่เลือกมิราจเอ็กซ์เพรส\n-พนักงาน",
+      "translation": "ใช้ลูกดอกเป่านี้กับโซนิค\nซึ่งประจำการอยู่ในตู้ควบคุมรถไฟ\nลูกดอกเคลือบสารช่วยให้นอนหลับ\nที่ไม่ทำให้ถึงตาย\nขอบคุณอีกครั้งที่เลือก The Mirage Express\n-พนักงาน",
       "context": "Conductor Car / typed note from train staff to Espio",
       "glossaryIds": ["blowdart", "the-conductor", "conductor-car", "nonlethal-sleeping-agent", "the-mirage-express", "train-note"],
       "status": "translated",
@@ -91,11 +91,11 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/Comics/titlecard.png",
       "sourceText": "THE MURDER OF SONIC THE HEDGEHOG",
-      "translation": "คดีฆาตกรรมของโซนิค เดอะ เฮดจ์ฮ็อก",
+      "translation": "The Murder of Sonic The Hedgehog",
       "context": "Final Push / title card",
       "glossaryIds": ["the-murder-of-sonic-the-hedgehog"],
       "status": "translated",
-      "note": "เตรียมคำแปลชื่อเกมสำหรับการวาดโลโก้ทับในภายหลัง ยังไม่ได้แก้ไขหรือเรนเดอร์ titlecard.png"
+      "note": "คงชื่อเกม The Murder of Sonic The Hedgehog ตามอภิธานศัพท์สำหรับการวาดโลโก้ทับในภายหลัง ยังไม่ได้แก้ไขหรือเรนเดอร์ titlecard.png"
     }
   ],
   "notes": "แผนข้อความภาพจัดทำจากการตรวจรายการ text-bearing ทั้ง 10 รายการของ image-review.json; PNG, Texture2D, Sprite, ขนาด, hash และ bundle ไม่ได้ถูกแก้ไข"
