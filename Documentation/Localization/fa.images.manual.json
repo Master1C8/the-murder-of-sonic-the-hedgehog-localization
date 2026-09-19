@@ -19,7 +19,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/TicketProp.png",
       "sourceText": "MIRAGE\nEXPRESS",
-      "translation": "The Mirage\nExpress",
+      "translation": "MIRAGE\nEXPRESS",
       "context": "Prologue / ticket prop",
       "glossaryIds": ["the-mirage-express"],
       "status": "translated",
@@ -28,7 +28,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/crumpledticket.png",
       "sourceText": "MIRAGE\nEXPRESS",
-      "translation": "The Mirage\nExpress",
+      "translation": "MIRAGE\nEXPRESS",
       "context": "Prologue / crumpled ticket prop",
       "glossaryIds": ["the-mirage-express"],
       "status": "translated",
