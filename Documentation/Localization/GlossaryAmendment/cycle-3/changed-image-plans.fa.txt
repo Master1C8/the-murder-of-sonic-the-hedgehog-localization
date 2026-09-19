@@ -1,0 +1,2 @@
+Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/TicketProp.png
+Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/crumpledticket.png

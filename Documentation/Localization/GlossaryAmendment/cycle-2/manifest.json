@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "exceptionId": "SONIC-CHARACTER-GLOSSARY-MIGRATION-2026-09",
+  "cycle": 2,
+  "status": "primary-review-in-progress",
+  "date": "2026-09-19",
+  "changeFromCycle1": "Owner explicitly set the Train translation-facing grammatical category to male. Exact source citations were added for all speaking characters, including official SEGA evidence for Cubot. Canonical glossary content and all locale artifacts remain byte-identical to cycle 1.",
+  "ownerDecisions": {
+    "barry": "male",
+    "the-train": "male"
+  },
+  "oldGlossarySha256": "6585d55f77a0e23e98e946376318305d91234e7b7b9e212a45b42331ae08673f",
+  "newGlossarySha256": "7c7921e245e6833398acb129797248785298dfbec935370752fff8c742448145",
+  "repositoryGlossaryArtifacts": {
+    "sourceByteSha256": "ebc62d89dfad0d50c3d2f37177ece2560d2e8524454c2471ef465fe4d4c9b8da",
+    "sourceIdOrderSha256": "a9792344171e033dc3d5d0aab0b532323128d5d2591bfb39399f15161720ff76",
+    "sourceIdOrderNewline": "LF after every ID including the final ID",
+    "translationsByteSha256": "683bb0075114b601f1e2b4029a232d3bf66d93a0764639106d88a562d002155c",
+    "sourcesNotesByteSha256": "2fa97b58d158a4b2793d0439d800cce24e4c86e8f428fde61b2cd52530631104",
+    "localizedLayerCount": 30,
+    "entriesPerLayer": 117,
+    "controlledMetadataEntryCountPerLayer": 16,
+    "termChanges": 0,
+    "unexpectedMeaningChanges": 0
+  },
+  "sourceUnitsSha256": "7c3cbc60eec5570d4b07c2f3b44da2abec3173158df4a4c181c7014aaa8dd2af",
+  "sourceJsonByteSha256": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+  "inventoryByteSha256": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+  "planByteSha256": "507b483cd4708861c9a0a732cdbc96ee00233024f76ffee87ff5c457526f4705",
+  "acceptedLocales": [
+    "ar", "cs", "de", "es", "es-419", "fa", "hu", "id", "it", "ja", "nl", "pt-BR", "th", "uk", "vi"
+  ],
+  "closure": {
+    "construction": "Full ordered source corpus retained from cycle 1 because every primary semantic speaker is affected.",
+    "textUnitCount": 3547,
+    "idsFile": "closure-ids.txt",
+    "idsFileSha256": "45286e54a5e8cc1339191d82af7eeee3b58456dccd0654049a238217ea41b77e",
+    "idsNewline": "LF after every ID including the final ID",
+    "imagePlanCount": 10,
+    "imagePlansFile": "image-plans.txt",
+    "imagePlansSha256": "217e39c87ae32c6b2cf7ed3657e142e366a4b6f4f76f1a0f4e46f9f7661ed01c",
+    "imagePlansNewline": "LF after every path including the final path"
+  },
+  "primaryReviewAssignments": {
+    "ar,cs,de": "01a0b99e-0eb0-7fa3-a468-f74eb8679e34",
+    "es,es-419,fa": "01a0b99e-1134-71a3-839b-f023c71b8fcc",
+    "hu,id,it": "01a0b99e-0f41-7c70-9874-191665b94f63",
+    "ja,nl,pt-BR": "01a0b99e-12a5-7373-8cc2-0611bbdeaa62",
+    "th,uk,vi": "01a0b99e-161d-7181-b8b3-8ada6f184fbe"
+  },
+  "validation": {
+    "canonicalGlossaryCheck": "passed: 117 source entries, 30 translation locales, canonical source SHA-256 7c7921e245e6833398acb129797248785298dfbec935370752fff8c742448145",
+    "focusedGlossaryTests": "39/39 passed",
+    "completeSiteForModsTests": "passed",
+    "gameTextArtifactsChanged": false,
+    "publicationOrDeployment": false
+  }
+}

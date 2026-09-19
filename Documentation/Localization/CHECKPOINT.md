@@ -220,13 +220,52 @@
   `SONIC-CHARACTER-GLOSSARY-MIGRATION-2026-09`; its authoritative scope and
   acceptance procedure are recorded in
   `GLOSSARY_AMENDMENT_EXCEPTION.md`.
-- Status is `authorized-unconsumed`. No canonical glossary, localized glossary
-  layer, game-text locale, readiness flag, installed game file, or production
-  record was changed as part of recording the authorization.
+- Status is `consumed`; the migration completed cleanly on 2026-09-19.
+  `barry` is first with stable ID unchanged and owner-confirmed translation
+  grammar `male`. The other fifteen speaking-character entries carry their
+  controlled metadata; the Train uses translation grammar `male` while
+  retaining canonical gender `none` and English `it/its` semantics. All 30
+  localized glossary layers have exact 117-ID/order parity and the same
+  sixteen controlled metadata suffixes.
 - The exception is pinned to canonical glossary source SHA-256
   `6585d55f77a0e23e98e946376318305d91234e7b7b9e212a45b42331ae08673f`
   and source-units SHA-256
   `7c3cbc60eec5570d4b07c2f3b44da2abec3173158df4a4c181c7014aaa8dd2af`.
-- It preserves existing semantic coverage only for the bounded character
-  metadata/context migration and only after per-locale immutable impact and
-  independent delta audits. Publication remains separately authorized.
+- The protected SiteForMods source change is committed locally on `main` as
+  `d55e0e0`; it was not published or deployed. Publication remains separately
+  authorized and was not requested.
+- Pre-migration evidence is frozen in `glossary-amendment-freeze.json`; the
+  immutable cycle-1 review set is under `GlossaryAmendment/cycle-1`. The new
+  local canonical fingerprint is
+  `7c7921e245e6833398acb129797248785298dfbec935370752fff8c742448145`.
+  Structural checks report 117 source entries and 30 complete 117-entry locale
+  layers with exact ID/order parity. The source ID-order SHA-256 is
+  `a9792344171e033dc3d5d0aab0b532323128d5d2591bfb39399f15161720ff76`.
+- The accepted locale set is exactly fifteen: `ar`, `cs`, `de`, `es`,
+  `es-419`, `fa`, `hu`, `id`, `it`, `ja`, `nl`, `pt-BR`, `th`, `uk`, and
+  `vi`. The complete amendment closure contains 3,547 text units (SHA-256
+  `45286e54a5e8cc1339191d82af7eeee3b58456dccd0654049a238217ea41b77e`)
+  and ten image plans (SHA-256
+  `217e39c87ae32c6b2cf7ed3657e142e366a4b6f4f76f1a0f4e46f9f7661ed01c`).
+- Immutable primary, independent, correction, and final-clean evidence is
+  preserved in `GlossaryAmendment/cycle-1` through `cycle-9`. Cycle 9 is clean
+  on the final hashes. Existing audits for `ar`, `cs`, `fa`, `hu`, `id`, `it`,
+  `nl`, `th`, `uk`, and `vi` contain appended amendment records; this section
+  is the amendment record for `de`, `es`, `es-419`, `ja`, and `pt-BR`, which
+  had checkpoint-only historical acceptance evidence. Exact final
+  manual/overlay/image-plan hashes for all fifteen locales are recorded in
+  `GlossaryAmendment/cycle-9/artifact-hashes.json` (SHA-256
+  `202460b1c5313843455bc97076a817d9f7eb902f892e489f2aead8678bff6d99`).
+- Final validation is clean for all fifteen locales: 3,547/3,547 units, zero
+  missing/extra/protected-token/layout errors, byte-identical rebuilt overlays,
+  10/10 image plans, 49/49 raw Ink controls, 16/16 additional comparison
+  literals, 25/25 exact ASCII `True` operands, and 5/5 exact
+  `Conductor’s Wife:: ` prefixes. The same eleven inherited English source
+  placeholders remain explicitly classified `needsReview`.
+- Source validation passed; Python localization tests passed 10/10; Swift
+  fake-folder installer tests passed 10/10. Runtime and visual QA were not run.
+  No installed game files were edited and neither the game nor installer was
+  launched.
+- Locale `ready` values and `payloadReady` remain unchanged. The completed
+  static editorial migration does not establish font, texture, runtime,
+  visual, packaging, unified-payload, or release readiness.

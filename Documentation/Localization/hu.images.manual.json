@@ -73,7 +73,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/5-conductorcar/TypedNoteFromTrainToEspio.png",
       "sourceText": "Use this blowdart on Sonic,\nstationed in the conductor\ncar. It is laced with a\nnonlethal sleeping agent.\nThank you again for\nchoosing the Mirage Express.\n-Staff",
-      "translation": "Használd ezt a fúvónyilat a vezetőkocsiban\nállomásozó Sonic ellen. Nem halálos\naltatószerrel van átitatva.\nMég egyszer köszönjük, hogy a The Mirage\nExpresst választottad.\n–Személyzet",
+      "translation": "Használd ezt a fúvónyilat a vezetőkocsiban\nállomásozó Sonic ellen. Nem halálos\naltatószerrel van átitatva.\nMég egyszer köszönjük, hogy a The Mirage\nExpresst választottad.\n– A személyzet",
       "context": "Conductor Car / a vonat személyzetének gépelt feljegyzése Espiónak",
       "glossaryIds": ["blowdart", "the-conductor", "conductor-car", "nonlethal-sleeping-agent", "the-mirage-express", "train-note"],
       "status": "translated",
@@ -82,7 +82,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/Comics/7-final push/Seq5-epilogue/8-eggmanending1.png",
       "sourceText": "OFFLINE...\nLET'S GO DAD",
-      "translation": "OFFLINE…\nGYERÜNK, APA!",
+      "translation": "NINCS KAPCSOLAT…\nGYERÜNK, APA!",
       "context": "Final Push / Eggman-befejezés képregénypanelje",
       "glossaryIds": [],
       "status": "translated",

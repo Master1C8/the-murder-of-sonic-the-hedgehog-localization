@@ -55,7 +55,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/2-Library/PROP_TheMirageExpressManual.png",
       "sourceText": "The Mirage Express\nManual",
-      "translation": "راهنمای The Mirage\nExpress",
+      "translation": "راهنمای\nThe Mirage Express",
       "context": "Library / Mirage Express manual cover",
       "glossaryIds": ["mirage-express-manual", "the-mirage-express"],
       "status": "translated",
@@ -73,7 +73,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/5-conductorcar/TypedNoteFromTrainToEspio.png",
       "sourceText": "Use this blowdart on Sonic,\nstationed in the conductor\ncar. It is laced with a\nnonlethal sleeping agent.\nThank you again for\nchoosing the Mirage Express.\n-Staff",
-      "translation": "این دارتِ دمیدنی را روی سونیک استفاده کن،\nکه در واگن\nمدیر قطار مستقر است. به مادهٔ خواب‌آور\nغیرکشنده آغشته شده است.\nبار دیگر از اینکه The Mirage Express را\nانتخاب کردی سپاسگزاریم.\n—پرسنل",
+      "translation": "این دارتِ دمیدنی را روی سونیک،\nمستقر در واگن مدیر قطار،\nبه کار ببر. به مادهٔ خواب‌آور\nغیرکشنده آغشته شده است.\nباز هم از انتخاب\nThe Mirage Express سپاسگزاریم.\n—پرسنل",
       "context": "Conductor Car / typed note from train staff to Espio",
       "glossaryIds": ["blowdart", "the-conductor", "conductor-car", "nonlethal-sleeping-agent", "the-mirage-express", "train-note"],
       "status": "translated",

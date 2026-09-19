@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "exceptionId": "SONIC-CHARACTER-GLOSSARY-MIGRATION-2026-09",
+  "cycle": 9,
+  "date": "2026-09-19",
+  "locales": {
+    "ar": {
+      "manual": "678bb55f473b8fc661728665b0460c06e09c1de1b7e927360f13525efad096f0",
+      "overlay": "5fde568e0740fa1a5f5ddb70270a25e9789cfc27750eb1fd9daba3db53b9ca1c",
+      "images": "b546cd1e9c27152dc7a3f1f4331667dc2a459e3c98412ecee85e94497cba9339"
+    },
+    "cs": {
+      "manual": "8e382b0e2694a99f2e680690f1d4d24350b5f22f6ef2899aa5c716633ea2fc3a",
+      "overlay": "cd85295dca362adf926d222f205b73b8f81ac80ee64dfc9fe73c1a24f384da50",
+      "images": "0b65a98157c95c49159156299d04c0fc3155982b5097496ecb7b02b9d6bf2744"
+    },
+    "de": {
+      "manual": "56c5a0cef17e91bda07f58cfe36a2e6fbc47fa7fbe75b02183690289e4aec5c4",
+      "overlay": "3f2ab001b7c4f3a45f1d2c0ebd267bcfabb111c06e6c6a31cbbe9c2eff361d50",
+      "images": "793840f10e890d84c6bc02e6bd056902f9afdd22c6c30883191cc0ab7e8c05a5"
+    },
+    "es": {
+      "manual": "d756f76dbee7f10d155031b6a2a914eca7356da37df8bbdb33bf1a9018b383f0",
+      "overlay": "aba41c6e965f3482f2621685ee6862de0d9a35c76e3e81f2ea59c8659650daa0",
+      "images": "5432ca390b4de5be500684e888b598ccf24329741edfaba071a24f4664a55bc9"
+    },
+    "es-419": {
+      "manual": "a035b8b77ac63a16427bba832079ad4680a63ccf87236f5ebbed62acf313e6ac",
+      "overlay": "3f193d6b4db3968c4ce28e2496d44f3940cbadc001b33a6ca88f25f30813f2e4",
+      "images": "c511fd9abb5e65dd8e0939ed3615cb67eaaf74461abf8ade3fefd26f9bcf25ac"
+    },
+    "fa": {
+      "manual": "9bfc3a8f9d05d648099d1f16fcbce28eef6c0ccd728c2d4b1202ffbfe1154666",
+      "overlay": "8fdbf77e9e9cedd886fa026f06343d6d346072ce3ec690dcfa351086d38b545f",
+      "images": "673b8f274ba158733ab6503a46352e733b94451a4f0c846be461d7f25a42dbdc"
+    },
+    "hu": {
+      "manual": "11114cd434a8f97c57c3f6ff628f8119f7b4aefb49382c1525e170d6adaddd15",
+      "overlay": "2fd399d73d6c145907a878be267b9e86d4d3a5f52e125a469108394c6507e7d2",
+      "images": "d3e324e6214e2fa54f1b9d4a63d3d8ae2e3c14157e346018385a65bf112d87ef"
+    },
+    "id": {
+      "manual": "bcf5daad002f3cf1efd2d2c30e935962afbd4083e76038f47f49135a9b827567",
+      "overlay": "7406e91b1c09cf20f169f5ed6a31ca2b0ac32c3554a6242908ede9e95b306a57",
+      "images": "01c5cf13274f601cc4fa9bea8f3de9c8d6f80fcf19cc1ab8bd5d86c710f01d6a"
+    },
+    "it": {
+      "manual": "9906be6eef2daae8ebab84d7385900fb946641ffeebc89886eb8900f91b163bb",
+      "overlay": "3d76651a2b8a77a50e336aed17503ca26fb12ae3760bad0eb952f4e092b030e6",
+      "images": "b81975eea57b033a69a37bea34fb8edfa590d762491904d9b7af8b0fc9444163"
+    },
+    "ja": {
+      "manual": "e2f5c272a9d7718bf2c79149afd725e0bc668d31c0baffb28d36f7d6a89dd373",
+      "overlay": "6c7f4aa28d036f52c0c43449a85dbecfed4e1cbbe585e8c16311f8bceb1553d2",
+      "images": "923ca6da98fdc0b887d3cfb9bd2b8f08ad971ad7e4ffda7930b9c63a986a052b"
+    },
+    "nl": {
+      "manual": "ccee6c5010f50fe0a6e6fdab052d4e8d6a6b27bdfad770d0c0ff055d0fa99477",
+      "overlay": "7e291e7a734af572c7cbf7dc26d80cce83f6661d0122dffa3f6f9127c671c554",
+      "images": "77e32dc2361359a4ccbafe69a78e78c410a37bac6002966f45daab38b12ddd1f"
+    },
+    "pt-BR": {
+      "manual": "9aa13746b89f2ee8fb5cbd2821b3604eb2e29e661b62fc7278e0dc845e981e55",
+      "overlay": "549997b7bdbf0150fffd8acc5b95c5f22b018d26a527a01be2ea5b078cc380fc",
+      "images": "b2c892f7631b8c5b88e4874b0704c6a93744ce2031e41c4c2079a0742b555d77"
+    },
+    "th": {
+      "manual": "6ff1961bdef5b6782cf0ea5ca36e7da10b44e547393c1fca3b1a88eaee32f78a",
+      "overlay": "8b3844a39cb390680e1d5bdd621bf0a77c5591748d8ccf91a1ab1d0ab5aa1122",
+      "images": "d2ea0303ca3a60163f862b76903e2d4596184a5857b4bf020ab36b4eda4a6d8e"
+    },
+    "uk": {
+      "manual": "e214d3c43782c465935462d4ceaeb77e66a5c3cd7f3c5993a8b676cf6dea51d4",
+      "overlay": "66b548f5d1c7b1eb7445fce9327b789329909abd1c547b30a92175f834f9d949",
+      "images": "d08c136e8a1154fce57a588a3b609ca1996493aba58795a579fcada96a669225"
+    },
+    "vi": {
+      "manual": "c1b2923f5dca2057f5bdcc9070c0badd8ebab86b655288a1d81c373a87f26e39",
+      "overlay": "3227ec781c4de27a80be87c3afd3faea18be06618b8d08860ed1ae2f13553d94",
+      "images": "17fa6f0262f50ef007574d41a3a3ef1549b3379412376f67d7af77cec63551ec"
+    }
+  }
+}

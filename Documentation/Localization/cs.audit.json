@@ -1115,5 +1115,74 @@
   "unchangedAuthorizedFile": null,
   "protectedScope": "No CHECKPOINT, source, inventory, glossary, PNG, other-locale, readiness, package, or installed-game files were edited; no game, installer, runtime, or visual QA was launched.",
   "gitDelivery": "Static-text editorial acceptance is recorded on the final exact hashes. Canonical commit and integration remain owned by the parent workflow.",
-  "nextAction": "Proceed with parent-owned canonical integration and later runtime/visual QA when separately authorized; static Czech text and image-plan wording require no further editorial action on these hashes."
+  "nextAction": "Proceed with parent-owned canonical integration and later runtime/visual QA when separately authorized; static Czech text and image-plan wording require no further editorial action on these hashes.",
+  "glossaryAmendments": [
+    {
+      "exceptionId": "SONIC-CHARACTER-GLOSSARY-MIGRATION-2026-09",
+      "status": "complete-clean",
+      "completionDate": "2026-09-19",
+      "oldGlossarySourceNormalizedSha256": "6585d55f77a0e23e98e946376318305d91234e7b7b9e212a45b42331ae08673f",
+      "newGlossarySourceNormalizedSha256": "7c7921e245e6833398acb129797248785298dfbec935370752fff8c742448145",
+      "affectedCharacterIds": [
+        "barry",
+        "sonic-the-hedgehog",
+        "tails",
+        "knuckles",
+        "shadow",
+        "vector",
+        "espio",
+        "the-conductor",
+        "dr-eggman",
+        "amy-rose",
+        "rouge",
+        "blaze",
+        "conductors-wife",
+        "orbot",
+        "cubot",
+        "the-train"
+      ],
+      "ownerDecisions": {
+        "barry": "translation-grammar male",
+        "the-train": "translation-grammar male; canonical gender none; English pronouns it/its"
+      },
+      "reviewSets": {
+        "textClosureCount": 3547,
+        "textClosureSha256": "45286e54a5e8cc1339191d82af7eeee3b58456dccd0654049a238217ea41b77e",
+        "imagePlanCount": 10,
+        "imagePlansSha256": "217e39c87ae32c6b2cf7ed3657e142e366a4b6f4f76f1a0f4e46f9f7661ed01c",
+        "cycleEvidence": "Documentation/Localization/GlossaryAmendment/cycle-1 through cycle-9",
+        "listNewlineConvention": "LF after every row including the final row; zero-row lists are empty files"
+      },
+      "finalArtifactHashes": {
+        "manual": "8e382b0e2694a99f2e680690f1d4d24350b5f22f6ef2899aa5c716633ea2fc3a",
+        "overlay": "cd85295dca362adf926d222f205b73b8f81ac80ee64dfc9fe73c1a24f384da50",
+        "images": "0b65a98157c95c49159156299d04c0fc3155982b5097496ecb7b02b9d6bf2744"
+      },
+      "finalReview": {
+        "result": "complete-clean",
+        "sourceUnits": 3547,
+        "translatedUnits": 3547,
+        "missing": 0,
+        "extra": 0,
+        "protectedTokenErrors": 0,
+        "layoutErrors": 0,
+        "byteIdenticalOverlayRebuild": true,
+        "rawInkControlOperands": "49/49 exact",
+        "additionalComparisonLiterals": "16/16 exact",
+        "trueOperands": "25/25 exact ASCII True",
+        "conductorWifePrefixes": "5/5 exact",
+        "inheritedSourcePlaceholders": 11
+      },
+      "validation": {
+        "sourceValidation": "passed",
+        "pythonLocalizationTests": "10/10 passed",
+        "swiftFakeFolderTests": "10/10 passed",
+        "runtimeQaRun": false,
+        "visualQaRun": false
+      },
+      "readinessChanged": false,
+      "payloadReadyChanged": false,
+      "publicationOrDeployment": false
+    }
+  ]
 }

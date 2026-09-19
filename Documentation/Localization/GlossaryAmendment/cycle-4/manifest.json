@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 1,
+  "exceptionId": "SONIC-CHARACTER-GLOSSARY-MIGRATION-2026-09",
+  "cycle": 4,
+  "status": "independent-review-corrections-required",
+  "date": "2026-09-19",
+  "glossarySha256": "7c7921e245e6833398acb129797248785298dfbec935370752fff8c742448145",
+  "sourceUnitsSha256": "7c3cbc60eec5570d4b07c2f3b44da2abec3173158df4a4c181c7014aaa8dd2af",
+  "report": {
+    "file": "INDEPENDENT_GAME_TEXT_REVIEW.md",
+    "sha256": "4a6e8beb8093f0413c5dfb8110c7e7bc78cb7df52edabc0665bbb4e45522604a"
+  },
+  "lists": [
+    {
+      "file": "changed-ids.ar.txt",
+      "count": 31,
+      "sha256": "0b06408c0563c757d08f3c06142e349bc38739bc8d7274271ff9c586b881c1c7",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-ids.cs.txt",
+      "count": 87,
+      "sha256": "baf54c9632aeec0e637d3b080b719a4217f07b2c37444f0f41f31868d1e4c04d",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-ids.de.txt",
+      "count": 51,
+      "sha256": "32ca3bf6a37d33548cac0ed23e35d63400bf4bfbff634f464ce9fd6e419219b1",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-ids.es-419.txt",
+      "count": 155,
+      "sha256": "e39758d067dcfa9f430eb523d37ef1bcc7df789020054b65d6dbdaaa46ed05c9",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-ids.es.txt",
+      "count": 59,
+      "sha256": "801bb38a2d6f34338e9315fc270bfb435c71840dda9aa206e6c36737a560b1ab",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-ids.fa.txt",
+      "count": 99,
+      "sha256": "f60e3f99cc5738ed5fda6a05bbd539a14358c02e75e2b5c85e4262a311ef73c9",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-ids.hu.txt",
+      "count": 204,
+      "sha256": "2b3e13270ba7075ec0861025e72401e49dd5652fed3263370da5a38017900754",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-ids.id.txt",
+      "count": 32,
+      "sha256": "ba514f2af0521abf4c52b91d38368027c03aed5ee5de3971a275b38789612ad2",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-ids.it.txt",
+      "count": 76,
+      "sha256": "2744ed9a87ad1f58a70e617a93a17a6c206ddb1444c7ad68ae734ed357bcd7eb",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-ids.ja.txt",
+      "count": 74,
+      "sha256": "7677ca0b66a44c8b2aa7451b03dad77aecd8b20116cded66f011cce4aba448d9",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-ids.nl.txt",
+      "count": 52,
+      "sha256": "8c578580e2ee14639ebfc17aaf8c511159190df38b003f75006b6571b8afbab7",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-ids.pt-BR.txt",
+      "count": 86,
+      "sha256": "aa800207e35e1da0117876393b7c049afeebbc99cfd32fe31bd6d869d2ad9fb5",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-ids.th.txt",
+      "count": 48,
+      "sha256": "53db6aa3f2c8679a578ce1168002a1866a17930ee4fd1e47d6767060af20e3bc",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-ids.uk.txt",
+      "count": 51,
+      "sha256": "917f0367dae2862ee10922f9df62ffc37454bde99b64143f7b20e785fedfa991",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-ids.vi.txt",
+      "count": 34,
+      "sha256": "2c41372e29a59a31e791d310fdd39c3ef3ff4566c35229894965839ea09fe68b",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-image-plans.ar.txt",
+      "count": 4,
+      "sha256": "9dbae267a8bc794a06c1bc3901392ca7bb69dc6045e0767eaed394d5c290fcdd",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-image-plans.cs.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "newline": "empty file"
+    },
+    {
+      "file": "changed-image-plans.de.txt",
+      "count": 1,
+      "sha256": "a9e8451b465fcbecd16ed9a362d3e0d7f2e61b258f01d713fe79267fa925019c",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-image-plans.es-419.txt",
+      "count": 5,
+      "sha256": "bfcbc57848170356107c52b8eca592067573b787bd0c03314b38504e0f40a5c3",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-image-plans.es.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "newline": "empty file"
+    },
+    {
+      "file": "changed-image-plans.fa.txt",
+      "count": 2,
+      "sha256": "a1fbba2b498ffeb7bd517cc18382c55aafefec833552a8d3a1150bd2717a7a09",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-image-plans.hu.txt",
+      "count": 2,
+      "sha256": "49fbd9e9bd1e29484429059e1e43c8181d9a5081547d17f092b839b78afb7a31",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-image-plans.id.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "newline": "empty file"
+    },
+    {
+      "file": "changed-image-plans.it.txt",
+      "count": 1,
+      "sha256": "b1f0947e34eb3ef95b964a2fb54a29be4dfa42bde80c0578d64e045ac8df2661",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-image-plans.ja.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "newline": "empty file"
+    },
+    {
+      "file": "changed-image-plans.nl.txt",
+      "count": 2,
+      "sha256": "96e6e60cde54467e8c0e1179ada6a024a6b62966a2fca7e200f0867f0113cfc5",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-image-plans.pt-BR.txt",
+      "count": 2,
+      "sha256": "a86fafa75e8b34c548fff97583508c622e305c5a7b1a151eadbe81d1b0e5cd19",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-image-plans.th.txt",
+      "count": 2,
+      "sha256": "9033e03bdcca997164c53f19118ca1bce98c066c76f13e5b93ef335fc0154a17",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-image-plans.uk.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "newline": "empty file"
+    },
+    {
+      "file": "changed-image-plans.vi.txt",
+      "count": 1,
+      "sha256": "690888f0f811b82a26eed40cb051353090ef6c210a55c38cf2ed7b7b13f54722",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "closure-ids.txt",
+      "count": 3547,
+      "sha256": "45286e54a5e8cc1339191d82af7eeee3b58456dccd0654049a238217ea41b77e",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "image-plans.txt",
+      "count": 10,
+      "sha256": "217e39c87ae32c6b2cf7ed3657e142e366a4b6f4f76f1a0f4e46f9f7661ed01c",
+      "newline": "LF after final row"
+    }
+  ],
+  "closure": {
+    "textUnitCount": 3547,
+    "idsSha256": "45286e54a5e8cc1339191d82af7eeee3b58456dccd0654049a238217ea41b77e",
+    "imagePlanCount": 10,
+    "imagePlansSha256": "217e39c87ae32c6b2cf7ed3657e142e366a4b6f4f76f1a0f4e46f9f7661ed01c"
+  },
+  "publicationOrDeployment": false
+}

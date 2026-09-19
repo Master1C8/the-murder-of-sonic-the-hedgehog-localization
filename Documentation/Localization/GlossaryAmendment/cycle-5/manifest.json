@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "exceptionId": "SONIC-CHARACTER-GLOSSARY-MIGRATION-2026-09",
+  "cycle": 5,
+  "status": "independent-delta-corrections-required",
+  "date": "2026-09-19",
+  "glossarySha256": "7c7921e245e6833398acb129797248785298dfbec935370752fff8c742448145",
+  "sourceUnitsSha256": "7c3cbc60eec5570d4b07c2f3b44da2abec3173158df4a4c181c7014aaa8dd2af",
+  "report": {
+    "file": "INDEPENDENT_DELTA_REVIEW.md",
+    "sha256": "53951a12fa67b2116ff497913955df0581f4decb0dfebbcc9f71a9b0eb03da9a"
+  },
+  "lists": [
+    {
+      "file": "changed-ids.cs.txt",
+      "count": 3,
+      "sha256": "5ae9a088b5db85c344a340ff4a2fe50870a41914b0916866c61fb95ac4009962",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-ids.de.txt",
+      "count": 1,
+      "sha256": "97f33e6f7f7484f760a0e0d8727dbe0158f680a47b8f5dc12f75ee4316ab6d0f",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-ids.es-419.txt",
+      "count": 3,
+      "sha256": "a464c5d609acf94b3e213ac220e2df38f036cf325911e684b9e35f4bdb85c635",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-ids.es.txt",
+      "count": 1,
+      "sha256": "97f33e6f7f7484f760a0e0d8727dbe0158f680a47b8f5dc12f75ee4316ab6d0f",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-ids.fa.txt",
+      "count": 1,
+      "sha256": "aec6bf3e06e44268e9a11378c68cf3763b286d74e2161c98b47bf765574ce311",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-ids.hu.txt",
+      "count": 8,
+      "sha256": "c8e51e769d7b011105293687c987e05f66f0b53253e25505c9f54d08b278fd83",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-ids.it.txt",
+      "count": 5,
+      "sha256": "c089a11ebfb8a6de2bce5ed0aabb3ab93b8bf4b1a7b1b81a5749bbefb74da037",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-image-plans.cs.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "newline": "empty file"
+    },
+    {
+      "file": "changed-image-plans.de.txt",
+      "count": 1,
+      "sha256": "a9e8451b465fcbecd16ed9a362d3e0d7f2e61b258f01d713fe79267fa925019c",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-image-plans.es-419.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "newline": "empty file"
+    },
+    {
+      "file": "changed-image-plans.es.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "newline": "empty file"
+    },
+    {
+      "file": "changed-image-plans.fa.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "newline": "empty file"
+    },
+    {
+      "file": "changed-image-plans.hu.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "newline": "empty file"
+    },
+    {
+      "file": "changed-image-plans.it.txt",
+      "count": 1,
+      "sha256": "b1f0947e34eb3ef95b964a2fb54a29be4dfa42bde80c0578d64e045ac8df2661",
+      "newline": "LF after final row"
+    }
+  ],
+  "closure": {
+    "textUnitCount": 3547,
+    "idsSha256": "45286e54a5e8cc1339191d82af7eeee3b58456dccd0654049a238217ea41b77e",
+    "imagePlanCount": 10,
+    "imagePlansSha256": "217e39c87ae32c6b2cf7ed3657e142e366a4b6f4f76f1a0f4e46f9f7661ed01c"
+  },
+  "publicationOrDeployment": false
+}

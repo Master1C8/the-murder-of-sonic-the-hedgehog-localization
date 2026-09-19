@@ -73,7 +73,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/5-conductorcar/TypedNoteFromTrainToEspio.png",
       "sourceText": "Use this blowdart on Sonic,\nstationed in the conductor\ncar. It is laced with a\nnonlethal sleeping agent.\nThank you again for\nchoosing the Mirage Express.\n-Staff",
-      "translation": "Gebruik deze blaaspijl op Sonic,\ndie in de conducteurswagon staat.\nEr zit een niet-dodelijk slaapmiddel op.\nNogmaals bedankt voor\nhet kiezen van de Mirage Express.\n—Personeel",
+      "translation": "Gebruik deze blaaspijl op\nSonic in de conducteurswagon.\nHij bevat een niet-dodelijk\nslaapmiddel.\nNogmaals bedankt dat je koos\nvoor The Mirage Express.\n—Personeel",
       "context": "Conducteurswagon / getypte notitie van de trein",
       "glossaryIds": ["blowdart", "the-conductor", "conductor-car", "nonlethal-sleeping-agent", "the-mirage-express", "train-note"],
       "status": "translated",
@@ -91,7 +91,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/Comics/titlecard.png",
       "sourceText": "THE MURDER OF SONIC THE HEDGEHOG",
-      "translation": "The Murder of Sonic the Hedgehog",
+      "translation": "The Murder of Sonic The Hedgehog",
       "context": "Final Push / titelkaart",
       "glossaryIds": ["the-murder-of-sonic-the-hedgehog"],
       "status": "translated",

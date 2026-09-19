@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "exceptionId": "SONIC-CHARACTER-GLOSSARY-MIGRATION-2026-09",
+  "cycle": 8,
+  "status": "independent-review-corrections-required",
+  "date": "2026-09-19",
+  "glossarySha256": "7c7921e245e6833398acb129797248785298dfbec935370752fff8c742448145",
+  "sourceUnitsSha256": "7c3cbc60eec5570d4b07c2f3b44da2abec3173158df4a4c181c7014aaa8dd2af",
+  "report": {
+    "file": "INDEPENDENT_FINAL_REVIEW.md",
+    "sha256": "d6e9db67ace5522ee138f9d6edda0c481f1ef06f26c898017bfc564e77a0062f"
+  },
+  "lists": [
+    {
+      "file": "changed-ids.fa.txt",
+      "count": 3,
+      "sha256": "afaf98c2c372ceb6dddc358553272adc5cb3f2cdfda860eb8f8b58b1c065f699",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-ids.hu.txt",
+      "count": 5,
+      "sha256": "86c73233451926991dc0e02ac9be37150731bd79ccc5825ff0186f3dd52d2ea0",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-ids.it.txt",
+      "count": 2,
+      "sha256": "f475f24cb357e0f4cfc7a132ded11788cc92bdbbf49ae9eef2fbae69cc6f6dfd",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-ids.ja.txt",
+      "count": 2,
+      "sha256": "9388244b847838b83ec9aaa85367308345f83d7c6c14d71c611a1bd8682b22e4",
+      "newline": "LF after final row"
+    },
+    {
+      "file": "changed-image-plans.fa.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "newline": "empty file"
+    },
+    {
+      "file": "changed-image-plans.hu.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "newline": "empty file"
+    },
+    {
+      "file": "changed-image-plans.it.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "newline": "empty file"
+    },
+    {
+      "file": "changed-image-plans.ja.txt",
+      "count": 1,
+      "sha256": "b1f0947e34eb3ef95b964a2fb54a29be4dfa42bde80c0578d64e045ac8df2661",
+      "newline": "LF after final row"
+    }
+  ],
+  "closure": {
+    "textUnitCount": 3547,
+    "idsSha256": "45286e54a5e8cc1339191d82af7eeee3b58456dccd0654049a238217ea41b77e",
+    "imagePlanCount": 10,
+    "imagePlansSha256": "217e39c87ae32c6b2cf7ed3657e142e366a4b6f4f76f1a0f4e46f9f7661ed01c"
+  },
+  "publicationOrDeployment": false
+}

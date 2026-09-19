@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "exceptionId": "SONIC-CHARACTER-GLOSSARY-MIGRATION-2026-09",
+  "cycle": 1,
+  "status": "independent-review-corrections-required",
+  "oldGlossarySha256": "6585d55f77a0e23e98e946376318305d91234e7b7b9e212a45b42331ae08673f",
+  "newGlossarySha256": "7c7921e245e6833398acb129797248785298dfbec935370752fff8c742448145",
+  "repositoryGlossaryArtifacts": {
+    "sourceByteSha256": "ebc62d89dfad0d50c3d2f37177ece2560d2e8524454c2471ef465fe4d4c9b8da",
+    "sourceIdOrderSha256": "a9792344171e033dc3d5d0aab0b532323128d5d2591bfb39399f15161720ff76",
+    "sourceIdOrderNewline": "LF after every ID including the final ID",
+    "translationsByteSha256": "683bb0075114b601f1e2b4029a232d3bf66d93a0764639106d88a562d002155c",
+    "sourcesNotesByteSha256": "27426d7b299f02e8bf7c17f68ee1951154c27b5e3cc610074094f1e4d0ddc092",
+    "localizedLayerCount": 30,
+    "entriesPerLayer": 117,
+    "controlledMetadataEntryCountPerLayer": 16,
+    "termChanges": 0,
+    "unexpectedMeaningChanges": 0
+  },
+  "sourceUnitsSha256": "7c3cbc60eec5570d4b07c2f3b44da2abec3173158df4a4c181c7014aaa8dd2af",
+  "sourceJsonByteSha256": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+  "inventoryByteSha256": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+  "affectedCharacterIds": [
+    "barry",
+    "sonic-the-hedgehog",
+    "amy-rose",
+    "tails",
+    "knuckles",
+    "rouge",
+    "blaze",
+    "shadow",
+    "vector",
+    "espio",
+    "the-conductor",
+    "the-train",
+    "dr-eggman",
+    "orbot",
+    "cubot",
+    "conductors-wife"
+  ],
+  "acceptedLocales": [
+    "ar",
+    "cs",
+    "de",
+    "es",
+    "es-419",
+    "fa",
+    "hu",
+    "id",
+    "it",
+    "ja",
+    "nl",
+    "pt-BR",
+    "th",
+    "uk",
+    "vi"
+  ],
+  "closure": {
+    "construction": "Full ordered source corpus. The amendment affects the player and every primary semantic speaker, so a smaller pronoun/reference closure could not be bounded without ambiguity. This exhaustive set contains every spoken line, explicit reference, neighboring context, repetition, callback and runtime-bound text unit.",
+    "textUnitCount": 3547,
+    "idsFile": "closure-ids.txt",
+    "idsFileSha256": "45286e54a5e8cc1339191d82af7eeee3b58456dccd0654049a238217ea41b77e",
+    "idsNewline": "LF after every ID including the final ID",
+    "imagePlanCount": 10,
+    "imagePlansFile": "image-plans.txt",
+    "imagePlansSha256": "217e39c87ae32c6b2cf7ed3657e142e366a4b6f4f76f1a0f4e46f9f7661ed01c",
+    "imagePlansNewline": "LF after every path including the final path"
+  },
+  "requiredReview": {
+    "primary": "Review every source/target text unit and all image plans against the amended glossary.",
+    "independent": "A separate reviewer must review the same immutable cycle-1 set.",
+    "deltaAfterCorrections": "corrected IDs plus new closure IDs plus previously reviewed IDs with explicitly invalidated evidence",
+    "currentState": "The independent glossary review found unsupported Train metadata and is recorded in INDEPENDENT_REVIEW.md. The attempted game-text parallel review did not complete the immutable closure and is not credited. Historical accepted audits remain compatibility evidence only. A corrected immutable cycle, complete game-text amendment review and separate independent review are pending."
+  },
+  "primaryGlossaryReview": {
+    "status": "clean",
+    "file": "PRIMARY_REVIEW.md",
+    "sha256": "f3ef48b028a102f7ba02d682a69031f4b3ca76101854a1c4b937911093bfa0a8",
+    "canonicalChangedEntriesReviewed": 16,
+    "localizedLayersReviewed": 30,
+    "controlledMetadataSuffixesReviewed": 480,
+    "findings": 0,
+    "gameTextClosureCredited": 0,
+    "independent": false
+  },
+  "independentGlossaryReview": {
+    "status": "corrections-required",
+    "file": "INDEPENDENT_REVIEW.md",
+    "sha256": "aa8b4994293fbbca2bcecab1e6f0f24d88a948fd4f910e19b0f7ec2de97061fc",
+    "blockingFindingCount": 2,
+    "correctedAncillaryFindingCount": 2,
+    "gameTextClosureCredited": 0,
+    "independent": true
+  },
+  "preservationCheck": {
+    "checkedAt": "2026-09-19",
+    "acceptedLocaleCount": 15,
+    "manualArtifactsUnchanged": 15,
+    "overlayArtifactsUnchanged": 15,
+    "imagePlanArtifactsUnchanged": 15,
+    "gameTextEdits": 0,
+    "readinessFlagsChanged": false,
+    "runtimeOrInstalledGameChanged": false
+  },
+  "historicalCompatibilityEvidence": {
+    "file": "HISTORICAL_COMPATIBILITY.md",
+    "sha256": "d5cabf837d85e393105d0faf1541ffdd2a789c2ddb83a222d4ad6e7afc0988c4",
+    "acceptedLocalesAccountedFor": 15,
+    "purpose": "Explains why no accepted game-text artifact was rewritten; does not replace the required amendment reviews."
+  },
+  "validation": {
+    "canonicalGlossaryCheck": "passed: 117 source entries, 30 translation locales, canonical source SHA-256 7c7921e245e6833398acb129797248785298dfbec935370752fff8c742448145",
+    "glossaryDiffContract": "passed: 0 stable-ID changes, 0 term changes, 0 unexpected source-meaning changes, 0 unexpected localized-meaning changes, 480 controlled metadata suffixes, 0 order mismatches",
+    "focusedGlossaryTests": "39/39 passed after synchronizing the stale heading assertion and contradictory onboarding paragraph with the canonical grammatical-category contract",
+    "sourcePackage": "passed: 3547 source units, 29 batches, 3547 CSV rows, 72 image candidates and extracted images, 72 reviewed, 10 text-bearing, 15 preserve-exact-symbol, zero errors",
+    "acceptedLocaleOverlays": "passed with allow-incomplete for all 15 accepted locales: 3547/3547 each; independent temporary recompilation was byte-identical for 15/15 overlays",
+    "localizationPipelineTests": "10/10 passed",
+    "runtimeAndVisual": "not-run; not authorized and not required for this local glossary-only migration stage"
+  }
+}

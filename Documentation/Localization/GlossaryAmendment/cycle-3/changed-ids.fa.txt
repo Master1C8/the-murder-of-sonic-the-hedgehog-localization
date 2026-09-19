@@ -1,0 +1,6 @@
+ink:root[2].Saloon[4].Environment_Knuckles_Post_Investigation[0][0]
+ink:root[2].Saloon[4].Give_Knuckles_Menu[16]
+ink:root[2].Saloon[4].Interrogation_Part4_Have_Correct_Clue[0][8].b[66]
+ink:root[2].Prologue[1].Story_Continues[48]
+ink:root[2].Final_Push[35].Ending1_For_Non_Completionists[38]
+ink:root[2].Final_Push[35].Ending1_For_Non_Completionists[41]

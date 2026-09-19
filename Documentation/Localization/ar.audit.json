@@ -328,5 +328,74 @@
     "outputTokens": null,
     "reasoningTokens": null
   },
-  "nextAction": "Static Arabic editorial acceptance is complete on the recorded artifact hashes. Runtime and visual QA remain separate and were not run; do not mark the locale ready or payloadReady solely from this static audit."
+  "nextAction": "Static Arabic editorial acceptance is complete on the recorded artifact hashes. Runtime and visual QA remain separate and were not run; do not mark the locale ready or payloadReady solely from this static audit.",
+  "glossaryAmendments": [
+    {
+      "exceptionId": "SONIC-CHARACTER-GLOSSARY-MIGRATION-2026-09",
+      "status": "complete-clean",
+      "completionDate": "2026-09-19",
+      "oldGlossarySourceNormalizedSha256": "6585d55f77a0e23e98e946376318305d91234e7b7b9e212a45b42331ae08673f",
+      "newGlossarySourceNormalizedSha256": "7c7921e245e6833398acb129797248785298dfbec935370752fff8c742448145",
+      "affectedCharacterIds": [
+        "barry",
+        "sonic-the-hedgehog",
+        "tails",
+        "knuckles",
+        "shadow",
+        "vector",
+        "espio",
+        "the-conductor",
+        "dr-eggman",
+        "amy-rose",
+        "rouge",
+        "blaze",
+        "conductors-wife",
+        "orbot",
+        "cubot",
+        "the-train"
+      ],
+      "ownerDecisions": {
+        "barry": "translation-grammar male",
+        "the-train": "translation-grammar male; canonical gender none; English pronouns it/its"
+      },
+      "reviewSets": {
+        "textClosureCount": 3547,
+        "textClosureSha256": "45286e54a5e8cc1339191d82af7eeee3b58456dccd0654049a238217ea41b77e",
+        "imagePlanCount": 10,
+        "imagePlansSha256": "217e39c87ae32c6b2cf7ed3657e142e366a4b6f4f76f1a0f4e46f9f7661ed01c",
+        "cycleEvidence": "Documentation/Localization/GlossaryAmendment/cycle-1 through cycle-9",
+        "listNewlineConvention": "LF after every row including the final row; zero-row lists are empty files"
+      },
+      "finalArtifactHashes": {
+        "manual": "678bb55f473b8fc661728665b0460c06e09c1de1b7e927360f13525efad096f0",
+        "overlay": "5fde568e0740fa1a5f5ddb70270a25e9789cfc27750eb1fd9daba3db53b9ca1c",
+        "images": "b546cd1e9c27152dc7a3f1f4331667dc2a459e3c98412ecee85e94497cba9339"
+      },
+      "finalReview": {
+        "result": "complete-clean",
+        "sourceUnits": 3547,
+        "translatedUnits": 3547,
+        "missing": 0,
+        "extra": 0,
+        "protectedTokenErrors": 0,
+        "layoutErrors": 0,
+        "byteIdenticalOverlayRebuild": true,
+        "rawInkControlOperands": "49/49 exact",
+        "additionalComparisonLiterals": "16/16 exact",
+        "trueOperands": "25/25 exact ASCII True",
+        "conductorWifePrefixes": "5/5 exact",
+        "inheritedSourcePlaceholders": 11
+      },
+      "validation": {
+        "sourceValidation": "passed",
+        "pythonLocalizationTests": "10/10 passed",
+        "swiftFakeFolderTests": "10/10 passed",
+        "runtimeQaRun": false,
+        "visualQaRun": false
+      },
+      "readinessChanged": false,
+      "payloadReadyChanged": false,
+      "publicationOrDeployment": false
+    }
+  ]
 }

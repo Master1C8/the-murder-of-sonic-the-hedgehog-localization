@@ -3,7 +3,9 @@
 ## Authorization and identity
 
 - Exception ID: `SONIC-CHARACTER-GLOSSARY-MIGRATION-2026-09`.
-- Status: `authorized-unconsumed`.
+- Status: `consumed`; completed on 2026-09-19. The pre-migration state is
+  frozen in `glossary-amendment-freeze.json` and the immutable review evidence
+  is under `GlossaryAmendment/cycle-1` through `cycle-9`.
 - Authorized by the owner as a one-time exception for *The Murder of Sonic the
   Hedgehog* only.
 - Steam build: `20535215`; game version: `1.01`.
@@ -132,3 +134,17 @@ for another glossary change.
 Canonical-source publication remains a separate, explicitly authorized
 operation through the protected VN Revival CLI and its dry-run, reviewed plan,
 backup and apply safeguards.
+
+### Consumption record
+
+- Completion date: 2026-09-19.
+- New canonical glossary SHA-256:
+  `7c7921e245e6833398acb129797248785298dfbec935370752fff8c742448145`.
+- Protected SiteForMods source commit: `d55e0e0` (`main`, local only).
+- Final clean game-text/image-plan cycle: `GlossaryAmendment/cycle-9`.
+- Accepted locales: `ar`, `cs`, `de`, `es`, `es-419`, `fa`, `hu`, `id`,
+  `it`, `ja`, `nl`, `pt-BR`, `th`, `uk`, and `vi`.
+- No glossary publication, site deployment, installed-game edit, game or
+  installer launch, readiness change, or payload-readiness change occurred.
+- Runtime and visual QA were not run and are not implied by this static
+  editorial completion.

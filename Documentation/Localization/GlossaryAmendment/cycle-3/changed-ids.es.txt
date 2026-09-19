@@ -1,0 +1,5 @@
+ink:root[2].Saloon[4].Give_Knuckles_Menu[6]
+ink:root[2].Saloon[4].Give_Knuckles_Menu[14]
+ink:root[2].Saloon[4].Give_Knuckles_Menu[16]
+ink:root[2].Saloon[4].Give_Knuckles_Menu[18]
+ink:root[2].Saloon[4].Interrogation_Part6_End[22]

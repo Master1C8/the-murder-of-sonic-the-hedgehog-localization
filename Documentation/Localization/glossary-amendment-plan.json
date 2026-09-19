@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "exceptionId": "SONIC-CHARACTER-GLOSSARY-MIGRATION-2026-09",
+  "oldCanonicalGlossarySha256": "6585d55f77a0e23e98e946376318305d91234e7b7b9e212a45b42331ae08673f",
+  "acceptedLocales": [
+    "ar",
+    "cs",
+    "de",
+    "es",
+    "es-419",
+    "fa",
+    "hu",
+    "id",
+    "it",
+    "ja",
+    "nl",
+    "pt-BR",
+    "th",
+    "uk",
+    "vi"
+  ],
+  "sourceChanges": [
+    {
+      "id": "barry",
+      "types": ["move-player-entry-first", "add-translation-grammar"],
+      "metadata": "[translation-grammar: male]",
+      "authority": "Owner decision, 2026-09-19"
+    },
+    {
+      "ids": [
+        "sonic-the-hedgehog",
+        "tails",
+        "knuckles",
+        "shadow",
+        "vector",
+        "espio",
+        "the-conductor",
+        "dr-eggman"
+      ],
+      "types": ["add-translation-grammar", "record-source-pronouns"],
+      "metadata": "[translation-grammar: male; English-pronouns: he/him]"
+    },
+    {
+      "ids": ["amy-rose", "rouge", "blaze", "conductors-wife"],
+      "types": ["add-translation-grammar", "record-source-pronouns"],
+      "metadata": "[translation-grammar: female; English-pronouns: she/her]"
+    },
+    {
+      "ids": ["orbot", "cubot"],
+      "types": ["add-translation-grammar"],
+      "metadata": "[translation-grammar: male]"
+    },
+    {
+      "id": "the-train",
+      "types": ["add-translation-grammar", "record-source-pronouns", "record-canonical-gender"],
+      "metadata": "[translation-grammar: male; canonical-gender: none; English-pronouns: it/its]",
+      "categoryAuthority": "Direct owner decision on 2026-09-19; the category governs personified-speaker references and does not replace target-language noun agreement or the canonical non-human identity."
+    }
+  ],
+  "unchangedByContract": [
+    "all stable IDs",
+    "all terms",
+    "all non-character meanings",
+    "all pre-existing localized meaning text",
+    "game source and stable unit IDs",
+    "inventory, extraction and runtime bindings"
+  ],
+  "localizedLayerOperation": "Reorder every layer to canonical source order and append the exact controlled metadata token for each changed character ID.",
+  "gameTextImpactRule": "For each accepted locale, enumerate every line spoken by or explicitly referring to an affected character, add neighboring context, repetitions, runtime bindings and the complete mandatory regression catalog, then run the bounded amendment review."
+}

@@ -1,0 +1,5 @@
+ink:root[2].Conductor_Car[74].Interrogation_Part3_Choose_Evidence[0][3]
+ink:root[2].Conductor_Car[74].Interrogation_Part4_Choose_Evidence[0][3]
+ink:root[2].Conductor_Car[74].Interrogation_Part5_Choose_Evidence[0][3]
+ink:root[2].DiningCloset[1].Interrogation_Part2_Have_Correct_Clue[0][3]
+ink:root[2].DiningCloset[1].Interrogation_Part3_Have_Correct_Clue[0][3]

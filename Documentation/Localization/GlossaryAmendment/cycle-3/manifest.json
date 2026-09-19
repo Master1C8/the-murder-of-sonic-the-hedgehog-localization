@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "exceptionId": "SONIC-CHARACTER-GLOSSARY-MIGRATION-2026-09",
+  "cycle": 3,
+  "status": "independent-review-corrections-required",
+  "date": "2026-09-19",
+  "purpose": "Immutable corrected artifacts after the complete cycle-2 primary game-text review; independent review checks the complete first closure on these hashes.",
+  "glossarySha256": "7c7921e245e6833398acb129797248785298dfbec935370752fff8c742448145",
+  "sourceUnitsSha256": "7c3cbc60eec5570d4b07c2f3b44da2abec3173158df4a4c181c7014aaa8dd2af",
+  "ownerDecisions": {
+    "barry": "male",
+    "the-train": "male"
+  },
+  "primaryReview": {
+    "file": "../cycle-2/PRIMARY_GAME_TEXT_REVIEW.md",
+    "sha256": "de531a1ec3f6572c5aa2b2dc13dafba2559ba7c4b247fb3859df58b4f64ff6ad",
+    "locales": 15,
+    "textRowsPerLocale": 3547,
+    "imagePlansPerLocale": 10,
+    "uniqueCorrectedTextIds": 173
+  },
+  "correctedArtifacts": {
+    "file": "artifact-hashes.json",
+    "sha256": "9d5ccdc20007118ba15ed41bb1945b0804753b75db353bf0fbd18f32d7605999"
+  },
+  "changedIds": {
+    "file": "changed-ids.txt",
+    "count": 173,
+    "sha256": "be030dfaa528c40de6113138bb7572247ab2eba7db8d87952ac50d615830f9a8",
+    "newline": "LF after every ID including the final ID",
+    "perLocaleFiles": "changed-ids.<locale>.txt"
+  },
+  "changedImagePlans": {
+    "perLocaleFiles": "changed-image-plans.<locale>.txt",
+    "newline": "LF after every path including the final path"
+  },
+  "closure": {
+    "file": "closure-ids.txt",
+    "count": 3547,
+    "sha256": "45286e54a5e8cc1339191d82af7eeee3b58456dccd0654049a238217ea41b77e",
+    "newline": "LF after every ID including the final ID",
+    "imagePlansFile": "image-plans.txt",
+    "imagePlanCount": 10,
+    "imagePlansSha256": "217e39c87ae32c6b2cf7ed3657e142e366a4b6f4f76f1a0f4e46f9f7661ed01c",
+    "imagePlansNewline": "LF after every path including the final path"
+  },
+  "independentReviewAssignments": {
+    "ar,cs,de": "01a0b9b9-ca71-7020-8a0e-14a599753571",
+    "es,es-419,fa": "01a0b9b9-c7a6-77a3-b8b4-5f5695624ed4",
+    "hu,id,it": "01a0b9b9-c844-7653-8c46-a47a729c1b8b",
+    "ja,nl,pt-BR": "01a0b9b9-cebd-72f2-9171-a65ca5689a66",
+    "th,uk,vi": "01a0b9b9-cbe0-7210-84af-a47835d2df40"
+  },
+  "independentReview": {
+    "file": "INDEPENDENT_GAME_TEXT_REVIEW.md",
+    "sha256": "81c862a52c8e2b1b69b4c630c1dd17fe6bc68de2cdfbd77b619553cc42a23c5f",
+    "result": "corrections-required",
+    "completeLocales": ["es", "es-419", "fa", "hu", "id", "it", "ja", "nl", "pt-BR"],
+    "incompleteLocalesRequiringFullReplacementReview": ["ar", "cs", "de", "th", "uk", "vi"],
+    "publicationOrDeployment": false
+  },
+  "validation": {
+    "source": "passed: 3547 source units, 29 batches, 3547 CSV rows, 72/72 image candidates reviewed, 10 text-bearing, zero errors",
+    "localizationPipelineTests": "10/10 passed",
+    "allCorrectedOverlays": "3547/3547; zero missing, extra, protected-token or layout errors",
+    "publicationOrDeployment": false
+  }
+}

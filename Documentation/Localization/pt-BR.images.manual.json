@@ -10,7 +10,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/Menu with chilidog.png",
       "sourceText": "Menu\nChili Dog\nRamen\nChicken\nCordon Bleu",
-      "translation": "Menu\nChili Dog\nRamen\nFrango\nCordon Bleu",
+      "translation": "Menu\nCachorro-quente com chili\nRamen\nFrango à\nCordon Bleu",
       "context": "Prologue / menu close-up",
       "glossaryIds": ["menu", "chili-dog", "chicken-cordon-bleu"],
       "status": "translated",
@@ -73,7 +73,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/5-conductorcar/TypedNoteFromTrainToEspio.png",
       "sourceText": "Use this blowdart on Sonic,\nstationed in the conductor\ncar. It is laced with a\nnonlethal sleeping agent.\nThank you again for\nchoosing the Mirage Express.\n-Staff",
-      "translation": "Use este dardo de zarabatana no Sonic,\nque está no vagão do condutor.\nEle contém um agente sonífero não letal.\nAgradecemos novamente por\nescolher o Mirage Express.\n—Equipe",
+      "translation": "Use este dardo de zarabatana no Sonic,\nque está no vagão do condutor.\nEle contém um agente sonífero não letal.\nAgradecemos novamente por\nescolher o The Mirage Express.\n—Equipe",
       "context": "Conductor Car / typed note from train staff to Espio",
       "glossaryIds": ["blowdart", "the-conductor", "conductor-car", "nonlethal-sleeping-agent", "the-mirage-express", "train-note"],
       "status": "translated",

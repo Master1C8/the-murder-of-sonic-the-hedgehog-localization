@@ -18,25 +18,33 @@
       "sourceText": "Menu\nChili Dog\nRamen\nChicken\nCordon Bleu",
       "translation": "قائمة الطعام\nهوت دوغ بالفلفل الحار\nرامن\nدجاج\nكوردون بلو",
       "context": "المقدمة / لقطة مقرّبة لقائمة الطعام",
-      "glossaryIds": ["menu", "chili-dog", "chicken-cordon-bleu"],
+      "glossaryIds": [
+        "menu",
+        "chili-dog",
+        "chicken-cordon-bleu"
+      ],
       "status": "translated",
       "note": "تُترجم التسميات فقط؛ ترتيب الأسطر وملف PNG لا يتغيران."
     },
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/TicketProp.png",
       "sourceText": "MIRAGE\nEXPRESS",
-      "translation": "ميراج\nإكسبريس",
+      "translation": "قطار ميراج\nإكسبريس",
       "context": "المقدمة / تذكرة القطار",
-      "glossaryIds": ["the-mirage-express"],
+      "glossaryIds": [
+        "the-mirage-express"
+      ],
       "status": "translated",
       "note": "الاسم الرسمي مترجم وفق glossary؛ الحفاظ على التخطيط ذي السطرين مؤجل لإعادة الرسم."
     },
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/crumpledticket.png",
       "sourceText": "MIRAGE\nEXPRESS",
-      "translation": "ميراج\nإكسبريس",
+      "translation": "قطار ميراج\nإكسبريس",
       "context": "المقدمة / التذكرة المجعّدة",
-      "glossaryIds": ["the-mirage-express"],
+      "glossaryIds": [
+        "the-mirage-express"
+      ],
       "status": "translated",
       "note": "الاسم الرسمي والتخطيط ذي السطرين محفوظان؛ لم يُعدّل PNG."
     },
@@ -45,7 +53,9 @@
       "sourceText": "HIGH SCORE\nVECTR 7501\nKNUCK 7500\nTOAST 7331\nAPPLE 7250\nBREAD 7200\nULTIM 7150\nBAGEL 7003\nCANDY 6990",
       "translation": "أعلى النتائج\nVECTR 7501\nKNUCK 7500\nTOAST 7331\nAPPLE 7250\nBREAD 7200\nULTIM 7150\nBAGEL 7003\nCANDY 6990",
       "context": "عربة الصالون / سجل نتائج آلة الأركيد",
-      "glossaryIds": ["arcade-machine"],
+      "glossaryIds": [
+        "arcade-machine"
+      ],
       "status": "translated",
       "note": "تُترجم العناوين فقط؛ الأسماء والأرقام تبقى كما هي."
     },
@@ -54,16 +64,22 @@
       "sourceText": "DETECTIVE",
       "translation": "محقق",
       "context": "عربة الصالون / بطاقة معلومات تايلز",
-      "glossaryIds": ["detective", "lore-card"],
+      "glossaryIds": [
+        "detective",
+        "lore-card"
+      ],
       "status": "translated",
       "note": "تُترجم تسمية الدور المقروءة فقط؛ لم يُعدّل PNG."
     },
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/2-Library/PROP_TheMirageExpressManual.png",
       "sourceText": "The Mirage Express\nManual",
-      "translation": "دليل قطار\nميراج إكسبريس",
+      "translation": "دليل ميراج\nإكسبريس",
       "context": "المكتبة / غلاف دليل ميراج إكسبريس",
-      "glossaryIds": ["mirage-express-manual", "the-mirage-express"],
+      "glossaryIds": [
+        "mirage-express-manual",
+        "the-mirage-express"
+      ],
       "status": "translated",
       "note": "العنوان مترجم مع الحفاظ على السطرين، دون تعديل PNG."
     },
@@ -72,16 +88,26 @@
       "sourceText": "ticket town\nHOT HONEY\nFRI MAY 8\n9:00 PM\nSTAGE\nSEC 53 ROW P\nSEC 53 ROW P\nSEC 53 ROW R\nSEC 54 ROW R",
       "translation": "ticket town\nهوت هاني\nالجمعة 8 مايو\n9:00 مساءً\nالمسرح\nالقسم 53 الصف P\nالقسم 53 الصف P\nالقسم 53 الصف R\nالقسم 54 الصف R",
       "context": "عربة الاستراحة / تذكرة هوت هاني",
-      "glossaryIds": ["hot-honey", "concert-tickets"],
+      "glossaryIds": [
+        "hot-honey",
+        "concert-tickets"
+      ],
       "status": "translated",
       "note": "يبقى ticket town اسماً تجارياً، وتحافظ الأرقام والحروف على قيمها الأصلية."
     },
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/5-conductorcar/TypedNoteFromTrainToEspio.png",
       "sourceText": "Use this blowdart on Sonic,\nstationed in the conductor\ncar. It is laced with a\nnonlethal sleeping agent.\nThank you again for\nchoosing the Mirage Express.\n-Staff",
-      "translation": "استخدم سهم النفخ هذا ضد سونيك\nفي عربة القيادة.\nإنه مشبع بمادة منوّمة غير قاتلة.\nشكراً لك مجدداً على\nاختيار ميراج إكسبريس.\n—طاقم العمل",
+      "translation": "استخدم سهم النفخ هذا ضد سونيك\nفي عربة القيادة.\nإنه مشبع بمادة منوّمة غير قاتلة.\nشكراً لك مجدداً على\nاختيار قطار ميراج إكسبريس.\n—طاقم العمل",
       "context": "عربة القيادة / ملاحظة مطبوعة من طاقم القطار إلى إسبايو",
-      "glossaryIds": ["blowdart", "the-conductor", "conductor-car", "nonlethal-sleeping-agent", "the-mirage-express", "train-note"],
+      "glossaryIds": [
+        "blowdart",
+        "the-conductor",
+        "conductor-car",
+        "nonlethal-sleeping-agent",
+        "the-mirage-express",
+        "train-note"
+      ],
       "status": "translated",
       "note": "تُترجم التعليمات والمرسل والتوقيع فقط؛ لم يُعدّل PNG."
     },
@@ -99,7 +125,9 @@
       "sourceText": "THE MURDER OF SONIC THE HEDGEHOG",
       "translation": "جريمة قتل سونيك القنفذ",
       "context": "الدفع النهائي / بطاقة العنوان",
-      "glossaryIds": ["the-murder-of-sonic-the-hedgehog"],
+      "glossaryIds": [
+        "the-murder-of-sonic-the-hedgehog"
+      ],
       "status": "translated",
       "note": "العنوان مترجم وفق canonical glossary؛ إعادة رسم الشعار ليست ضمن هذه المرحلة النصية."
     }

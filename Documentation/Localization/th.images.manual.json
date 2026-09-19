@@ -19,20 +19,20 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/TicketProp.png",
       "sourceText": "MIRAGE\nEXPRESS",
-      "translation": "The Mirage\nExpress",
+      "translation": "MIRAGE\nEXPRESS",
       "context": "Prologue / ticket prop",
       "glossaryIds": ["the-mirage-express"],
       "status": "translated",
-      "note": "คงชื่อรถไฟ The Mirage Express ตามอภิธานศัพท์และแบ่งเป็นสองบรรทัดไว้ PNG ไม่ได้ถูกแก้ไข"
+      "note": "คงข้อความและการแบ่งบรรทัดของโลโก้ MIRAGE EXPRESS ตามภาพต้นฉบับ PNG ไม่ได้ถูกแก้ไข"
     },
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/crumpledticket.png",
       "sourceText": "MIRAGE\nEXPRESS",
-      "translation": "The Mirage\nExpress",
+      "translation": "MIRAGE\nEXPRESS",
       "context": "Prologue / crumpled ticket prop",
       "glossaryIds": ["the-mirage-express"],
       "status": "translated",
-      "note": "คงชื่อรถไฟ The Mirage Express ตามอภิธานศัพท์และแบ่งบรรทัดเหมือนตั๋วต้นฉบับ สภาพยับและภาพกลับด้านเป็นคุณสมบัติของภาพเดิม"
+      "note": "คงข้อความและการแบ่งบรรทัดของโลโก้ MIRAGE EXPRESS ตามภาพต้นฉบับ สภาพยับและภาพกลับด้านเป็นคุณสมบัติของภาพเดิม"
     },
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/1-Saloon/PROP_FixedArcadeWithHighScore_V02.png",

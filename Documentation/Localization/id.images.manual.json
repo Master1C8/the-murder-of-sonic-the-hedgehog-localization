@@ -91,7 +91,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/Comics/titlecard.png",
       "sourceText": "THE MURDER OF SONIC THE HEDGEHOG",
-      "translation": "The Murder of Sonic the Hedgehog",
+      "translation": "The Murder of Sonic The Hedgehog",
       "context": "Final Push / title card",
       "glossaryIds": ["the-murder-of-sonic-the-hedgehog"],
       "status": "translated",
