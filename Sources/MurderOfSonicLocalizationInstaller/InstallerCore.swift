@@ -41,6 +41,20 @@ struct TransactionState: Codable, Equatable, Sendable {
     let files: [ReceiptFile]
 }
 
+private struct LegacyDevelopmentReceipt: Decodable {
+    let kind: String
+    let steamAppId: String
+    let steamBuildId: String
+    let targetLocale: String
+    let files: [LegacyDevelopmentReceiptFile]
+}
+
+private struct LegacyDevelopmentReceiptFile: Decodable {
+    let path: String
+    let originalSha256: String
+    let patchedSha256: String
+}
+
 enum InstallerError: LocalizedError {
     case invalidGameFolder
     case steamManifestMissing
@@ -269,6 +283,12 @@ struct InstallerCore {
             .appendingPathComponent(config.packageID, isDirectory: true)
         try fileManager.createDirectory(at: stateRoot, withIntermediateDirectories: true)
         try recoverInterruptedInstall(stateRoot: stateRoot, dataRoot: installation.dataDirectory)
+        try migrateLegacyDevelopmentInstallIfPresent(
+            installation: installation,
+            stateRoot: stateRoot,
+            config: config,
+            selectedFiles: selectedFiles
+        )
 
         let receiptURL = stateRoot.appendingPathComponent("receipt.json")
         let previousReceipt = try loadReceiptIfPresent(receiptURL, packageID: config.packageID)
@@ -482,6 +502,85 @@ struct InstallerCore {
             hasher.update(data: data)
         }
         return hasher.finalize().map { String(format: "%02x", $0) }.joined()
+    }
+
+    private func migrateLegacyDevelopmentInstallIfPresent(
+        installation: GameInstallation,
+        stateRoot: URL,
+        config: PackageConfig,
+        selectedFiles: [PayloadFile]
+    ) throws {
+        let receiptURL = stateRoot.appendingPathComponent("receipt.json")
+        guard !fileManager.fileExists(atPath: receiptURL.path) else { return }
+
+        let legacyRoot = installation.root.appendingPathComponent(
+            ".vn-revival/dev-russian-runtime",
+            isDirectory: true
+        )
+        let legacyReceiptURL = legacyRoot.appendingPathComponent("receipt.json")
+        guard fileManager.fileExists(atPath: legacyReceiptURL.path) else { return }
+
+        let legacy = try JSONDecoder().decode(
+            LegacyDevelopmentReceipt.self,
+            from: Data(contentsOf: legacyReceiptURL)
+        )
+        let expected = selectedFiles.filter { $0.originalSHA256 != nil }
+        guard legacy.kind == "russian-development-runtime-patch",
+              legacy.steamAppId == config.steamAppID,
+              legacy.steamBuildId == config.steamBuildID,
+              legacy.targetLocale == "ru",
+              legacy.files.count == expected.count,
+              Set(legacy.files.map(\.path)) == Set(expected.map(\.path)) else {
+            throw InstallerError.malformedReceipt
+        }
+
+        let backupRoot = stateRoot.appendingPathComponent("original-backup", isDirectory: true)
+        let legacyBackupRoot = legacyRoot.appendingPathComponent("original-backup", isDirectory: true)
+        var migratedFiles: [ReceiptFile] = []
+        for item in expected {
+            guard let originalSHA256 = item.originalSHA256,
+                  let legacyFile = legacy.files.first(where: { $0.path == item.path }),
+                  legacyFile.originalSha256 == originalSHA256,
+                  PayloadFile.isSHA256(legacyFile.patchedSha256) else {
+                throw InstallerError.malformedReceipt
+            }
+            let destination = try safeURL(root: installation.dataDirectory, relativePath: item.path)
+            let legacyBackup = try safeURL(root: legacyBackupRoot, relativePath: item.path)
+            guard fileManager.fileExists(atPath: destination.path),
+                  fileManager.fileExists(atPath: legacyBackup.path),
+                  try Self.sha256(of: destination) == legacyFile.patchedSha256,
+                  try Self.sha256(of: legacyBackup) == originalSHA256 else {
+                throw InstallerError.foreignModification(item.path)
+            }
+            let backup = try safeURL(root: backupRoot, relativePath: item.path)
+            try fileManager.createDirectory(
+                at: backup.deletingLastPathComponent(),
+                withIntermediateDirectories: true
+            )
+            if fileManager.fileExists(atPath: backup.path) {
+                guard try Self.sha256(of: backup) == originalSHA256 else {
+                    throw InstallerError.damagedBackup(item.path)
+                }
+            } else {
+                try fileManager.copyItem(at: legacyBackup, to: backup)
+            }
+            migratedFiles.append(ReceiptFile(
+                path: item.path,
+                originalExisted: true,
+                originalSHA256: originalSHA256,
+                installedSHA256: legacyFile.patchedSha256
+            ))
+        }
+
+        let migratedReceipt = InstallationReceipt(
+            schemaVersion: 1,
+            packageID: config.packageID,
+            steamBuildID: config.steamBuildID,
+            installedAt: Date(),
+            activeLanguage: ActiveLanguageSelection(siteLocale: "ru", runtimeCode: "ru"),
+            files: migratedFiles
+        )
+        try writeJSON(migratedReceipt, to: receiptURL)
     }
 
     private func validatePayload(_ payload: URL, files: [PayloadFile]) throws {

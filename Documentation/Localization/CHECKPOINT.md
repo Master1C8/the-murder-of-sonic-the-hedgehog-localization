@@ -320,3 +320,17 @@
   records `imagesModified=false`.
 - This establishes static text/font packaging readiness. It does not claim
   multilingual in-game visual QA, which remains a separate future stage.
+
+## Verified legacy-development migration — 2026-09-20
+
+- The release installer now recognizes the repository's earlier
+  `.vn-revival/dev-russian-runtime` Russian development installation.
+- Migration is deliberately narrow: the legacy receipt must contain exactly
+  the final package's original-backed files, its original hashes must match the
+  release manifest, the installed files must match every recorded patched
+  hash, and all legacy backups must match the pristine original hashes.
+- On an exact match, the verified pristine backups and ownership state are
+  adopted before the normal transactional locale update. Any mismatch aborts
+  without editing the installed game.
+- Fake-folder coverage includes both successful migration and refusal of a
+  tampered legacy installation.

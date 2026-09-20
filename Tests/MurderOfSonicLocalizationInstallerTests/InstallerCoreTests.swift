@@ -279,6 +279,109 @@ struct InstallerCoreTests {
         }
     }
 
+    @Test func migratesVerifiedLegacyDevelopmentInstall() throws {
+        try withTemporaryDirectory { root in
+            let setup = try makeFakeInstallation(root: root, original: "legacy-russian")
+            let relative = "Managed/Assembly-CSharp.dll"
+            let legacyRoot = setup.installation.root.appendingPathComponent(
+                ".vn-revival/dev-russian-runtime",
+                isDirectory: true
+            )
+            let legacyBackup = legacyRoot.appendingPathComponent("original-backup/\(relative)")
+            try write(Data("original".utf8), to: legacyBackup)
+            let legacyReceipt: [String: Any] = [
+                "kind": "russian-development-runtime-patch",
+                "steamAppId": "2324650",
+                "steamBuildId": "20535215",
+                "targetLocale": "ru",
+                "files": [[
+                    "path": relative,
+                    "originalSha256": sha256("original"),
+                    "patchedSha256": sha256("legacy-russian"),
+                    "patchedBytes": 14,
+                ]],
+            ]
+            try write(
+                try JSONSerialization.data(withJSONObject: legacyReceipt),
+                to: legacyRoot.appendingPathComponent("receipt.json")
+            )
+
+            let payload = root.appendingPathComponent("payload", isDirectory: true)
+            let payloadFile = payload.appendingPathComponent(relative)
+            try write(Data("final-localization".utf8), to: payloadFile)
+            let config = makeConfig(files: [PayloadFile(
+                path: relative,
+                originalSHA256: sha256("original"),
+                payloadSHA256: try InstallerCore.sha256(of: payloadFile)
+            )])
+
+            try InstallerCore().install(
+                payload: payload,
+                config: config,
+                selectedRuntimeCode: "de",
+                into: setup.installation
+            )
+            #expect(try String(contentsOf: setup.file, encoding: .utf8) == "final-localization")
+            let migratedBackup = setup.installation.root.appendingPathComponent(
+                ".vn-revival/\(config.packageID)/original-backup/\(relative)"
+            )
+            #expect(try String(contentsOf: migratedBackup, encoding: .utf8) == "original")
+        }
+    }
+
+    @Test func refusesTamperedLegacyDevelopmentInstall() throws {
+        try withTemporaryDirectory { root in
+            let setup = try makeFakeInstallation(root: root, original: "tampered")
+            let relative = "Managed/Assembly-CSharp.dll"
+            let legacyRoot = setup.installation.root.appendingPathComponent(
+                ".vn-revival/dev-russian-runtime",
+                isDirectory: true
+            )
+            try write(
+                Data("original".utf8),
+                to: legacyRoot.appendingPathComponent("original-backup/\(relative)")
+            )
+            let legacyReceipt: [String: Any] = [
+                "kind": "russian-development-runtime-patch",
+                "steamAppId": "2324650",
+                "steamBuildId": "20535215",
+                "targetLocale": "ru",
+                "files": [[
+                    "path": relative,
+                    "originalSha256": sha256("original"),
+                    "patchedSha256": sha256("legacy-russian"),
+                ]],
+            ]
+            try write(
+                try JSONSerialization.data(withJSONObject: legacyReceipt),
+                to: legacyRoot.appendingPathComponent("receipt.json")
+            )
+
+            let payload = root.appendingPathComponent("payload", isDirectory: true)
+            let payloadFile = payload.appendingPathComponent(relative)
+            try write(Data("final-localization".utf8), to: payloadFile)
+            let config = makeConfig(files: [PayloadFile(
+                path: relative,
+                originalSHA256: sha256("original"),
+                payloadSHA256: try InstallerCore.sha256(of: payloadFile)
+            )])
+
+            #expect(throws: InstallerError.self) {
+                try InstallerCore().install(
+                    payload: payload,
+                    config: config,
+                    selectedRuntimeCode: "de",
+                    into: setup.installation
+                )
+            }
+            #expect(try String(contentsOf: setup.file, encoding: .utf8) == "tampered")
+            let migratedReceipt = setup.installation.root.appendingPathComponent(
+                ".vn-revival/\(config.packageID)/receipt.json"
+            )
+            #expect(!fileManager.fileExists(atPath: migratedReceipt.path))
+        }
+    }
+
     @Test func interruptedInstallRestoresFilesAndPreviousLanguageReceipt() throws {
         try withTemporaryDirectory { root in
             let dataRoot = root.appendingPathComponent("Data", isDirectory: true)
