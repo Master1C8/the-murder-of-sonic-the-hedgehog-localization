@@ -98,3 +98,12 @@ The commands are locale-agnostic; Russian is only the current example.
 it and separately pass font coverage, layout, reinsertion, runtime, and visual
 QA. The `build-sharedassets` command writes only to a caller-selected output
 directory and is intended for isolated temporary tests.
+
+## Fonts
+
+The reproducible nine-font Noto set, exact 30-locale corpus audit, source
+hashes, licenses, and remaining complex-script gates are documented in
+[`Fonts/README.md`](Fonts/README.md). Static glyph coverage passes for all 30
+final overlays and image plans. This does not yet establish Arabic/Persian/
+Hebrew bidi behavior, Arabic/Persian/Devanagari/Thai shaping, runtime
+readability, or release readiness.

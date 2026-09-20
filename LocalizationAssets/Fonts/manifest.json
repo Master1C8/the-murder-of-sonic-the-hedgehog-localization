@@ -1,0 +1,144 @@
+{
+  "license": {
+    "file": "OFL-1.1.txt",
+    "identifier": "OFL-1.1",
+    "sha256": "0dab92d0544f7b233403f14b84a663bdbfa746982eda629e7f4f9ffe1b036feb"
+  },
+  "outputs": {
+    "NotoSans-Regular.ttf": {
+      "bytes": 569208,
+      "recipe": {
+        "input": "NotoSans-Regular.ttf",
+        "kind": "verified-copy"
+      },
+      "sha256": "b85c38ecea8a7cfb39c24e395a4007474fa5a4fc864f6ee33309eb4948d232d5"
+    },
+    "NotoSansArabicLatin-Regular.ttf": {
+      "bytes": 735892,
+      "recipe": {
+        "inputs": [
+          "NotoSans-Regular.ttf",
+          "NotoSansArabic-Regular.ttf"
+        ],
+        "kind": "merge"
+      },
+      "sha256": "f93d0f17bcbc02ec3c73aad54d8291aba84924069545c99a31f9bf2edc95d2ba"
+    },
+    "NotoSansCJKjp-Regular.otf": {
+      "bytes": 16467736,
+      "recipe": {
+        "input": "NotoSansCJKjp-Regular.otf",
+        "kind": "verified-copy"
+      },
+      "sha256": "68a3fc98800b2a27b371f2fb79991daf3633bd89309d4ffaa6946fd587f375b5"
+    },
+    "NotoSansCJKkr-Regular.otf": {
+      "bytes": 16433112,
+      "recipe": {
+        "input": "NotoSansCJKkr-Regular.otf",
+        "kind": "verified-copy"
+      },
+      "sha256": "6bcb2a0703aa137e874fc2dffa85f6c21ba9a67fa329e81b8c801663af7e992a"
+    },
+    "NotoSansCJKsc-Regular.otf": {
+      "bytes": 16437364,
+      "recipe": {
+        "input": "NotoSansCJKsc-Regular.otf",
+        "kind": "verified-copy"
+      },
+      "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+    },
+    "NotoSansCJKtc-Regular.otf": {
+      "bytes": 16554668,
+      "recipe": {
+        "input": "NotoSansCJKtc-Regular.otf",
+        "kind": "verified-copy"
+      },
+      "sha256": "661161a320cfecc88b013bcda4868f462c92e19dbecc77438ca5ae13846a8533"
+    },
+    "NotoSansDevanagariLatin-Regular.ttf": {
+      "bytes": 721268,
+      "recipe": {
+        "inputs": [
+          "NotoSans-Regular.ttf",
+          "NotoSansDevanagari-Regular.ttf"
+        ],
+        "kind": "merge"
+      },
+      "sha256": "0170c95346aa3984f3b9d96260333e7f58d8b15608c17810aa527b898fbec794"
+    },
+    "NotoSansHebrewLatin-Regular.ttf": {
+      "bytes": 579712,
+      "recipe": {
+        "inputs": [
+          "NotoSans-Regular.ttf",
+          "NotoSansHebrew-Regular.ttf"
+        ],
+        "kind": "merge"
+      },
+      "sha256": "5d47c2310ef31393df8029d9a85db065133ab7132505248710482cf2d243e694"
+    },
+    "NotoSansThaiLatin-Regular.ttf": {
+      "bytes": 583604,
+      "recipe": {
+        "inputs": [
+          "NotoSans-Regular.ttf",
+          "NotoSansThai-Regular.ttf"
+        ],
+        "kind": "merge"
+      },
+      "sha256": "587d24571c0509bf756c9062ad58556fdfbd00163660167557ce1515ebbbb631"
+    }
+  },
+  "schemaVersion": 1,
+  "sources": {
+    "NotoSans-Regular.ttf": {
+      "bytes": 569208,
+      "sha256": "b85c38ecea8a7cfb39c24e395a4007474fa5a4fc864f6ee33309eb4948d232d5",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-fonts/main/hinted/ttf/NotoSans/NotoSans-Regular.ttf"
+    },
+    "NotoSansArabic-Regular.ttf": {
+      "bytes": 240456,
+      "sha256": "ceea25b464a656dc3b26849bab9356740401af62aedf1bfa8b7f0d9b75925b1b",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-fonts/main/hinted/ttf/NotoSansArabic/NotoSansArabic-Regular.ttf"
+    },
+    "NotoSansCJKjp-Regular.otf": {
+      "bytes": 16467736,
+      "sha256": "68a3fc98800b2a27b371f2fb79991daf3633bd89309d4ffaa6946fd587f375b5",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/Japanese/NotoSansCJKjp-Regular.otf"
+    },
+    "NotoSansCJKkr-Regular.otf": {
+      "bytes": 16433112,
+      "sha256": "6bcb2a0703aa137e874fc2dffa85f6c21ba9a67fa329e81b8c801663af7e992a",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/Korean/NotoSansCJKkr-Regular.otf"
+    },
+    "NotoSansCJKsc-Regular.otf": {
+      "bytes": 16437364,
+      "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf"
+    },
+    "NotoSansCJKtc-Regular.otf": {
+      "bytes": 16554668,
+      "sha256": "661161a320cfecc88b013bcda4868f462c92e19dbecc77438ca5ae13846a8533",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/TraditionalChinese/NotoSansCJKtc-Regular.otf"
+    },
+    "NotoSansDevanagari-Regular.ttf": {
+      "bytes": 219212,
+      "sha256": "385e78e6359a9d88a0f243d53b1209d7548361ba2194e2b9ec779bcaa7e8949d",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-fonts/main/hinted/ttf/NotoSansDevanagari/NotoSansDevanagari-Regular.ttf"
+    },
+    "NotoSansHebrew-Regular.ttf": {
+      "bytes": 26900,
+      "sha256": "a7fa16fffb27bedb060a0866267c29e9859aeb9c21cc33f5b3aaf6eb062eca85",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-fonts/main/hinted/ttf/NotoSansHebrew/NotoSansHebrew-Regular.ttf"
+    },
+    "NotoSansThai-Regular.ttf": {
+      "bytes": 37752,
+      "sha256": "404ddfb5ed0aaa6b6ec8a85700d682978992062d67da93903967b56cbd9a4acc",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-fonts/main/hinted/ttf/NotoSansThai/NotoSansThai-Regular.ttf"
+    }
+  },
+  "toolchain": {
+    "fontTools": "4.60.2"
+  }
+}

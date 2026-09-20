@@ -1,4 +1,31 @@
-# Russian localization checkpoint
+# Localization checkpoint
+
+## Current 30-locale state — 2026-09-20
+
+- Editorial acceptance is complete for all 30 supported non-English locales.
+  Each final overlay contains the same 3,547 stable IDs and each locale has a
+  completed 10-row text-bearing image plan. The glossary amendment is consumed
+  and its final 30-locale state is included in the accepted artifacts.
+- Static font preparation now passes 30/30 exact-corpus coverage. Nine pinned
+  Noto outputs cover every rendered codepoint across the 3,547 overlay values
+  and 10 image translations per locale; all have U+0020 with a positive
+  advance. Sources, licenses, hashes, metrics, OpenType tables, and recipes are
+  recorded under `Fonts/` and `LocalizationAssets/Fonts/`.
+- A generic isolated `build-locale-patch` path now embeds the selected font in
+  both stable Unity source Font objects and retains the existing dynamic TMP
+  fallback graph. A complete Bulgarian patch built from verified originals,
+  and both embedded font binaries read back with the expected SHA-256. Separate
+  merged Arabic/Latin TTF and Simplified Chinese CJK OTF probes also read back
+  byte-for-byte. No installed game file was modified and the game was not
+  launched.
+- Font-stage gates still open: complex shaping for `ar`, `fa`, `hi`, and `th`;
+  bidirectional layout for `ar`, `fa`, and `he`; then runtime readability and
+  visual layout for all locales. Static cmap coverage and GSUB/GPOS presence do
+  not satisfy these gates.
+- Release state is intentionally unchanged: all locale declarations remain
+  `ready=false` and `payloadReady=false`. Texture production, unified payload
+  assembly, fake-folder installer verification, runtime/visual QA, and final
+  release audit remain later stages.
 
 - Game baseline: The Murder of Sonic the Hedgehog, Steam App ID `2324650`,
   build `20535215`, version `1.01`, Unity `2021.3.9f1`.

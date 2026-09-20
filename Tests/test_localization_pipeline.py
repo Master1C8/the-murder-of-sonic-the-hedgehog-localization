@@ -1,3 +1,4 @@
+import hashlib
 import importlib.util
 import json
 import re
@@ -236,6 +237,37 @@ class RuntimeIdentifierSafetyTests(unittest.TestCase):
             localized = localization_assets.localized_story_value(row, overlay["units"][row["id"]])
             self.assertTrue(localized.startswith("^>>>>EstablishingShot("))
             self.assertTrue(localized.endswith(")"))
+
+
+class LocalizationFontTests(unittest.TestCase):
+    def test_prepared_fonts_and_exact_corpus_audit_are_pinned(self) -> None:
+        font_root = PROJECT_ROOT / "LocalizationAssets" / "Fonts"
+        localization_root = PROJECT_ROOT / "Documentation" / "Localization"
+        manifest = json.loads((font_root / "manifest.json").read_text(encoding="utf-8"))
+        report = json.loads(
+            (localization_root / "Fonts" / "font-audit.json").read_text(encoding="utf-8")
+        )
+
+        self.assertEqual(len(manifest["outputs"]), 9)
+        for filename, metadata in manifest["outputs"].items():
+            digest = hashlib.sha256((font_root / filename).read_bytes()).hexdigest()
+            self.assertEqual(digest, metadata["sha256"], filename)
+
+        self.assertTrue(report["ok"])
+        self.assertEqual(report["localesExpected"], 30)
+        self.assertEqual(report["localesAudited"], 30)
+        self.assertEqual(set(report["locales"]), set(localization_assets.LOCALE_FALLBACK_FONTS))
+        for locale, row in report["locales"].items():
+            self.assertEqual(row["font"], localization_assets.LOCALE_FALLBACK_FONTS[locale])
+            self.assertEqual(row["textUnits"], 3547)
+            self.assertEqual(row["imageRows"], 10)
+            self.assertEqual(row["staticCoverage"], "pass")
+            self.assertEqual(row["missingCodepoints"], [])
+
+        self.assertEqual(report["gates"]["staticGlyphCoverage"], "pass")
+        self.assertEqual(report["gates"]["complexScriptShaping"], "not-run")
+        self.assertEqual(report["gates"]["bidirectionalLayout"], "not-run")
+        self.assertEqual(report["gates"]["runtimeReadability"], "not-run")
 
 
 if __name__ == "__main__":

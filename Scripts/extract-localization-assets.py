@@ -128,6 +128,27 @@ SHARED_FALLBACK_FONT_ASSET = 573
 SHARED_FALLBACK_SOURCE_FONT = 161
 SHARED_SCENE_FONT_ASSETS = (561, 569, 570, 571, 574)
 
+LOCALE_FALLBACK_FONTS = {
+    locale: "NotoSans-Regular.ttf"
+    for locale in (
+        "bg", "cs", "de", "el", "es", "es-419", "fil", "fr", "hu", "id",
+        "it", "nl", "pl", "pt-BR", "ro", "ru", "sr", "sw", "tr", "uk", "vi",
+    )
+}
+LOCALE_FALLBACK_FONTS.update(
+    {
+        "ar": "NotoSansArabicLatin-Regular.ttf",
+        "fa": "NotoSansArabicLatin-Regular.ttf",
+        "he": "NotoSansHebrewLatin-Regular.ttf",
+        "hi": "NotoSansDevanagariLatin-Regular.ttf",
+        "th": "NotoSansThaiLatin-Regular.ttf",
+        "ja": "NotoSansCJKjp-Regular.otf",
+        "ko": "NotoSansCJKkr-Regular.otf",
+        "zh": "NotoSansCJKsc-Regular.otf",
+        "zh-TW": "NotoSansCJKtc-Regular.otf",
+    }
+)
+
 LAYOUT_OVERRIDE_FIELDS = {
     "m_fontSize",
     "m_fontSizeBase",
@@ -1532,6 +1553,33 @@ def translated_rows(
     return rows
 
 
+def replace_embedded_source_font(
+    objects: dict[int, Any],
+    path_id: int,
+    font_file: Path | None,
+    font_name: str | None,
+) -> int:
+    """Replace a Unity Font payload while preserving its stable object ID."""
+    if font_file is None:
+        return 0
+    font_object = objects.get(path_id)
+    if font_object is None:
+        raise SystemExit(f"Embedded source Font was not found: {path_id}")
+    if object_type_name(font_object) != "Font":
+        raise SystemExit(f"Embedded source Font has an unexpected type: {path_id}")
+    font_bytes = font_file.read_bytes()
+    if not font_bytes:
+        raise SystemExit(f"Embedded source Font is empty: {font_file}")
+    tree = font_object.read_typetree()
+    tree["m_FontData"] = list(font_bytes)
+    if font_name:
+        tree["m_Name"] = font_name
+        if isinstance(tree.get("m_FontNames"), list):
+            tree["m_FontNames"] = [font_name]
+    font_object.save_typetree(tree)
+    return 1
+
+
 def save_location_display_labels(
     inventory: dict[str, Any],
     overlay: dict[str, Any],
@@ -1565,7 +1613,9 @@ def patch_story_asset(
     output: Path,
     rows: list[tuple[dict[str, Any], str]],
     font_template_source: Path,
-) -> tuple[int, int]:
+    font_file: Path | None = None,
+    font_name: str | None = None,
+) -> tuple[int, int, int]:
     environment = UnityPy.load(str(source))
     template_environment = UnityPy.load(str(font_template_source))
     template_object = next(
@@ -1576,6 +1626,12 @@ def patch_story_asset(
         raise SystemExit("TMP font type template was not found in the default group bundle")
     font_nodes = template_object.serialized_type.node
     shared_objects = {getattr(obj, "path_id", 0): obj for obj in environment.objects}
+    embedded_fonts = replace_embedded_source_font(
+        shared_objects,
+        SHARED_FALLBACK_SOURCE_FONT,
+        font_file,
+        font_name,
+    )
     fallback_pointer = {"m_FileID": 0, "m_PathID": SHARED_FALLBACK_FONT_ASSET}
     patched_fonts = 0
     for path_id in (SHARED_FALLBACK_FONT_ASSET, *SHARED_SCENE_FONT_ASSETS):
@@ -1620,7 +1676,7 @@ def patch_story_asset(
         localized = json.dumps(story, ensure_ascii=False, separators=(",", ":")).encode("utf-8-sig")
         obj.set_raw_data(encode_unity_text_asset("story", localized))
         save_unity_environment(environment, output)
-        return changed, patched_fonts
+        return changed, patched_fonts, embedded_fonts
     raise SystemExit("TextAsset 'story' was not found")
 
 
@@ -1704,9 +1760,17 @@ def patch_defaultgroup_bundle(
     output: Path,
     rows: list[tuple[dict[str, Any], str]],
     layout_overrides: dict[str, dict[str, float]],
-) -> tuple[int, int]:
+    font_file: Path | None = None,
+    font_name: str | None = None,
+) -> tuple[int, int, int]:
     environment = UnityPy.load(str(source))
     objects = {getattr(obj, "path_id", 0): obj for obj in environment.objects}
+    embedded_fonts = replace_embedded_source_font(
+        objects,
+        DYNAMIC_FALLBACK_SOURCE_FONT,
+        font_file,
+        font_name,
+    )
     translated_by_id = {row["id"]: (row, translation) for row, translation in rows}
     identifiers = list(translated_by_id)
     identifiers.extend(identifier for identifier in layout_overrides if identifier not in translated_by_id)
@@ -1756,7 +1820,7 @@ def patch_defaultgroup_bundle(
     if font_assets == 0:
         raise SystemExit("No TMP font assets were found in the default group bundle")
     save_unity_environment(environment, output, pack="lz4")
-    return len(rows), font_assets
+    return len(rows), font_assets, embedded_fonts
 
 
 def patch_inventory_bundle(
@@ -1945,7 +2009,11 @@ def patch_addressables_catalog(source: Path, output: Path, bundle_sizes: dict[st
     return changed
 
 
-def build_development_patch(args: argparse.Namespace) -> int:
+def build_runtime_patch(
+    args: argparse.Namespace,
+    required_locale: str | None,
+    manifest_kind: str,
+) -> int:
     UnityPy = load_unitypy()
     inventory = json.loads(args.inventory.read_text(encoding="utf-8"))
     overlay = json.loads(args.overlay.read_text(encoding="utf-8"))
@@ -1961,8 +2029,39 @@ def build_development_patch(args: argparse.Namespace) -> int:
             "Runtime exact validation failed: "
             + "; ".join(f"{row['id']}: {row['error']}" for row in runtime_exact_failures[:10])
         )
-    if overlay.get("targetLocale") != "ru":
-        raise SystemExit("This development patch command is restricted to the reviewed Russian overlay")
+    target_locale = overlay.get("targetLocale")
+    if not isinstance(target_locale, str) or not target_locale:
+        raise SystemExit("Overlay target locale is missing")
+    if required_locale is not None and target_locale != required_locale:
+        raise SystemExit(
+            f"This development patch command is restricted to the reviewed {required_locale} overlay"
+        )
+    font_argument = getattr(args, "font", None)
+    font_file = font_argument.resolve() if font_argument is not None else None
+    if font_file is not None and not font_file.is_file():
+        raise SystemExit(f"Prepared font is missing: {font_file}")
+    if required_locale is None and font_file is None:
+        raise SystemExit("A prepared locale font is required for a generic locale patch")
+    if required_locale is None and font_file is not None:
+        expected_font_name = LOCALE_FALLBACK_FONTS.get(target_locale)
+        if expected_font_name is None:
+            raise SystemExit(f"Unsupported target locale: {target_locale}")
+        if font_file.name != expected_font_name:
+            raise SystemExit(
+                f"Wrong prepared font for {target_locale}: {font_file.name} != {expected_font_name}"
+            )
+        font_manifest_path = font_file.with_name("manifest.json")
+        if not font_manifest_path.is_file():
+            raise SystemExit(f"Prepared-font manifest is missing: {font_manifest_path}")
+        font_manifest = json.loads(font_manifest_path.read_text(encoding="utf-8"))
+        expected_font_sha256 = (
+            font_manifest.get("outputs", {}).get(expected_font_name, {}).get("sha256")
+        )
+        if sha256_file(font_file) != expected_font_sha256:
+            raise SystemExit(f"Prepared font hash does not match its manifest: {font_file}")
+    font_name = getattr(args, "font_name", None)
+    if font_file is not None and not font_name:
+        font_name = font_file.stem
     output_root = args.output.resolve()
     if output_root.exists() and any(output_root.iterdir()):
         raise SystemExit(f"Development patch output must be empty: {output_root}")
@@ -1981,12 +2080,18 @@ def build_development_patch(args: argparse.Namespace) -> int:
     outputs = {key: output_root / PurePosixPath(value) for key, value in relative_paths.items()}
 
     counts: dict[str, int] = {}
-    counts["story"], counts["sharedFontAssets"] = patch_story_asset(
+    (
+        counts["story"],
+        counts["sharedFontAssets"],
+        counts["sharedEmbeddedSourceFonts"],
+    ) = patch_story_asset(
         UnityPy,
         sources["story"],
         outputs["story"],
         translated_rows(inventory, overlay, "sharedassets0.assets::story"),
         sources["defaultgroup"],
+        font_file,
+        font_name,
     )
     counts["level0"] = patch_level0(
         UnityPy,
@@ -1999,7 +2104,11 @@ def build_development_patch(args: argparse.Namespace) -> int:
             if identifier.startswith("unity:level0:")
         },
     )
-    counts["defaultgroup"], counts["fontAssets"] = patch_defaultgroup_bundle(
+    (
+        counts["defaultgroup"],
+        counts["fontAssets"],
+        counts["addressablesEmbeddedSourceFonts"],
+    ) = patch_defaultgroup_bundle(
         UnityPy,
         sources["defaultgroup"],
         outputs["defaultgroup"],
@@ -2009,6 +2118,8 @@ def build_development_patch(args: argparse.Namespace) -> int:
             for identifier, fields in overlay.get("layoutOverrides", {}).items()
             if identifier.startswith("unity:defaultgroup:")
         },
+        font_file,
+        font_name,
     )
     counts["layoutOverrides"] = len(overlay.get("layoutOverrides", {}))
     counts["inventory"] = patch_inventory_bundle(
@@ -2056,13 +2167,13 @@ def build_development_patch(args: argparse.Namespace) -> int:
         )
     manifest = {
         "schemaVersion": 1,
-        "kind": "russian-development-runtime-patch",
+        "kind": manifest_kind,
         "game": GAME_ID,
         "steamAppId": STEAM_APP_ID,
         "steamBuildId": STEAM_BUILD_ID,
         "gameVersion": GAME_VERSION,
         "sourceFingerprint": inventory["source"]["fingerprint"],
-        "targetLocale": "ru",
+        "targetLocale": target_locale,
         "developmentOnly": True,
         "imagesModified": False,
         "counts": counts,
@@ -2070,7 +2181,9 @@ def build_development_patch(args: argparse.Namespace) -> int:
         "files": files,
         "fontStrategy": {
             "kind": "dynamic-tmp-fallback",
-            "font": "Liberation Sans",
+            "font": font_name or "Liberation Sans",
+            "fontSha256": sha256_file(font_file) if font_file is not None else None,
+            "fontBytes": font_file.stat().st_size if font_file is not None else None,
             "sceneSourceFontPathId": SHARED_FALLBACK_SOURCE_FONT,
             "sceneFallbackFontAssetPathId": SHARED_FALLBACK_FONT_ASSET,
             "addressablesSourceFontPathId": DYNAMIC_FALLBACK_SOURCE_FONT,
@@ -2080,6 +2193,14 @@ def build_development_patch(args: argparse.Namespace) -> int:
     write_json(output_root / "development-patch-manifest.json", manifest)
     print(json.dumps(manifest, ensure_ascii=False, indent=2))
     return 0
+
+
+def build_development_patch(args: argparse.Namespace) -> int:
+    return build_runtime_patch(args, "ru", "russian-development-runtime-patch")
+
+
+def build_locale_patch(args: argparse.Namespace) -> int:
+    return build_runtime_patch(args, None, "locale-development-runtime-patch")
 
 
 def validate_source(args: argparse.Namespace) -> int:
@@ -2255,7 +2376,24 @@ def parser() -> argparse.ArgumentParser:
     development_parser.add_argument("--inventory", type=Path, required=True)
     development_parser.add_argument("--overlay", type=Path, required=True)
     development_parser.add_argument("--output", type=Path, required=True)
+    development_parser.add_argument(
+        "--font",
+        type=Path,
+        help="optionally replace both embedded dynamic fallback source fonts",
+    )
+    development_parser.add_argument("--font-name")
     development_parser.set_defaults(handler=build_development_patch)
+    locale_patch_parser = subparsers.add_parser(
+        "build-locale-patch",
+        help="build one reviewed locale patch with its prepared dynamic fallback font",
+    )
+    locale_patch_parser.add_argument("--data-root", type=Path, required=True)
+    locale_patch_parser.add_argument("--inventory", type=Path, required=True)
+    locale_patch_parser.add_argument("--overlay", type=Path, required=True)
+    locale_patch_parser.add_argument("--font", type=Path, required=True)
+    locale_patch_parser.add_argument("--font-name")
+    locale_patch_parser.add_argument("--output", type=Path, required=True)
+    locale_patch_parser.set_defaults(handler=build_locale_patch)
     source_parser = subparsers.add_parser("validate-source", help="validate the prepared English source package")
     source_parser.add_argument("--inventory", type=Path, required=True)
     source_parser.add_argument("--source-root", type=Path, required=True)
