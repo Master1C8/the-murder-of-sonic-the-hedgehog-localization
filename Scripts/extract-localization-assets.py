@@ -179,6 +179,48 @@ SAVE_SLOT_LAYOUT_OVERRIDES = {
     },
 }
 
+RUNNER_HUD_LABEL_ID = "unity:defaultgroup:-4932669119767755847:m_text"
+
+# RunnerGame/Canvas/RingsLabel is a 200-unit-wide field at 56 pt. These maxima
+# keep each pinned translation within 190 units, leaving a 5% horizontal
+# margin. Widths were calculated from the bundled Share Tech Mono TMP advances
+# for covered glyphs and the prepared locale fallback font advances for all
+# remaining glyphs, after applying the exact complex-script shaping map.
+# Keeping the expected text beside the maximum makes a later wording change
+# fail closed until the fit profile is recalculated.
+RUNNER_HUD_LAYOUT_PROFILES = {
+    "ar": {"text": "الحلقات", "maximum": 56.0},
+    "bg": {"text": "ПРЪСТЕНИ", "maximum": 35.0},
+    "cs": {"text": "PRSTENY", "maximum": 50.0},
+    "de": {"text": "RINGE", "maximum": 56.0},
+    "el": {"text": "ΔΑΧΤΥΛΙΔΙΑ", "maximum": 34.0},
+    "es": {"text": "ANILLOS", "maximum": 50.0},
+    "es-419": {"text": "ANILLOS", "maximum": 50.0},
+    "fa": {"text": "حلقه‌ها", "maximum": 56.0},
+    "fil": {"text": "MGA SINGSING", "maximum": 29.0},
+    "fr": {"text": "ANNEAUX", "maximum": 50.0},
+    "he": {"text": "טבעות", "maximum": 56.0},
+    "hi": {"text": "रिंग", "maximum": 56.0},
+    "hu": {"text": "GYŰRŰK", "maximum": 52.0},
+    "id": {"text": "CINCIN", "maximum": 56.0},
+    "it": {"text": "ANELLI", "maximum": 56.0},
+    "ja": {"text": "リング", "maximum": 56.0},
+    "ko": {"text": "링", "maximum": 56.0},
+    "nl": {"text": "RINGEN", "maximum": 56.0},
+    "pl": {"text": "PIERŚCIENIE", "maximum": 31.0},
+    "pt-BR": {"text": "ANÉIS", "maximum": 56.0},
+    "ro": {"text": "INELE", "maximum": 56.0},
+    "ru": {"text": "КОЛЬЦА", "maximum": 46.0},
+    "sr": {"text": "ПРСТЕНОВИ", "maximum": 31.0},
+    "sw": {"text": "PETE", "maximum": 56.0},
+    "th": {"text": "แหวน", "maximum": 56.0},
+    "tr": {"text": "RİNGLER", "maximum": 53.0},
+    "uk": {"text": "КІЛЬЦЯ", "maximum": 51.0},
+    "vi": {"text": "NHẪN", "maximum": 56.0},
+    "zh": {"text": "戒指", "maximum": 56.0},
+    "zh-TW": {"text": "金環", "maximum": 56.0},
+}
+
 COMPLEX_SCRIPT_MODES = {
     "ar": 1,
     "fa": 1,
@@ -1305,6 +1347,41 @@ def effective_level0_layout_overrides(overlay: dict[str, Any]) -> dict[str, dict
     return overrides
 
 
+def effective_defaultgroup_layout_overrides(
+    overlay: dict[str, Any],
+) -> dict[str, dict[str, float]]:
+    locale = overlay.get("targetLocale")
+    profile = RUNNER_HUD_LAYOUT_PROFILES.get(locale)
+    if profile is None:
+        raise SystemExit(f"Runner HUD layout profile is missing for locale {locale!r}")
+    actual_text = overlay.get("units", {}).get(RUNNER_HUD_LABEL_ID)
+    if actual_text != profile["text"]:
+        raise SystemExit(
+            f"Runner HUD layout profile is stale for {locale}: "
+            f"{actual_text!r} != {profile['text']!r}"
+        )
+    maximum = float(profile["maximum"])
+    overrides = {
+        RUNNER_HUD_LABEL_ID: {
+            "m_fontSize": maximum,
+            "m_fontSizeBase": maximum,
+        }
+    }
+    for identifier, fields in overlay.get("layoutOverrides", {}).items():
+        if not identifier.startswith("unity:defaultgroup:"):
+            continue
+        target = overrides.setdefault(identifier, {})
+        target.update({field: float(value) for field, value in fields.items()})
+    for field in ("m_fontSize", "m_fontSizeBase"):
+        value = overrides[RUNNER_HUD_LABEL_ID].get(field, maximum)
+        if value > maximum:
+            raise SystemExit(
+                f"Runner HUD collision guard exceeded for {locale} {field}: "
+                f"{value} > {maximum}"
+            )
+    return overrides
+
+
 def validate(args: argparse.Namespace) -> int:
     inventory = json.loads(args.inventory.read_text(encoding="utf-8"))
     overlay = json.loads(args.overlay.read_text(encoding="utf-8"))
@@ -2033,7 +2110,30 @@ def patch_defaultgroup_bundle(
     if font_assets == 0:
         raise SystemExit("No TMP font assets were found in the default group bundle")
     save_unity_environment(environment, output, pack="lz4")
+    verify_defaultgroup_layout(UnityPy, output, layout_overrides)
     return len(rows), font_assets, embedded_fonts
+
+
+def verify_defaultgroup_layout(
+    UnityPy: Any,
+    path: Path,
+    expected: dict[str, dict[str, float]],
+) -> None:
+    environment = UnityPy.load(str(path))
+    objects = {getattr(obj, "path_id", 0): obj for obj in environment.objects}
+    for identifier, fields in expected.items():
+        path_id = int(identifier.split(":", 3)[2])
+        obj = objects.get(path_id)
+        if obj is None:
+            raise SystemExit(f"Built Addressables object was not found for {identifier}")
+        tree = obj.read_typetree()
+        actual = {field: float(tree[field]) for field in fields}
+        normalized = {field: float(value) for field, value in fields.items()}
+        if actual != normalized:
+            raise SystemExit(
+                f"Built Addressables layout verification failed for {identifier}: "
+                f"{actual!r} != {normalized!r}"
+            )
 
 
 def patch_inventory_bundle(
@@ -2432,6 +2532,7 @@ def build_runtime_patch(
         level0_layout_overrides,
         right_to_left=bool(shaping and shaping["rightToLeft"]),
     )
+    defaultgroup_layout_overrides = effective_defaultgroup_layout_overrides(overlay)
     (
         counts["defaultgroup"],
         counts["fontAssets"],
@@ -2441,18 +2542,13 @@ def build_runtime_patch(
         sources["defaultgroup"],
         outputs["defaultgroup"],
         defaultgroup_rows,
-        {
-            identifier: fields
-            for identifier, fields in overlay.get("layoutOverrides", {}).items()
-            if identifier.startswith("unity:defaultgroup:")
-        },
+        defaultgroup_layout_overrides,
         font_file,
         font_name,
         right_to_left=bool(shaping and shaping["rightToLeft"]),
     )
-    counts["layoutOverrides"] = len(level0_layout_overrides) + sum(
-        identifier.startswith("unity:defaultgroup:")
-        for identifier in overlay.get("layoutOverrides", {})
+    counts["layoutOverrides"] = (
+        len(level0_layout_overrides) + len(defaultgroup_layout_overrides)
     )
     counts["inventory"] = patch_inventory_bundle(
         UnityPy,

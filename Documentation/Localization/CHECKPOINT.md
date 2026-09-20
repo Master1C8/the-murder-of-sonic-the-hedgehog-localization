@@ -358,3 +358,32 @@
 - The payload builder now refuses a non-universal `xdelta3` input and preserves
   its payload README, preventing an arm64-only helper from entering a release
   rebuild.
+
+## All-locale runner HUD fit guard — 2026-09-20
+
+- The supplied Russian runtime screenshot shows the original 56 pt
+  `RunnerGame/Canvas/RingsLabel` clipping `КОЛЬЦА` to `КОЛЬЦ`. The current
+  Russian authored override already reduces it to 46 pt; its calculated width
+  is 189.9 units in the 200-unit field.
+- All 30 pinned labels were measured against the bundled Share Tech Mono TMP
+  advances plus their prepared fallback-font advances after exact shaping.
+  Eleven additional locales exceeded or touched the 190-unit safety budget at
+  their prior size: `bg`, `cs`, `el`, `es-419`, `fil`, `fr`, `hu`, `pl`, `sr`,
+  `tr`, and `uk`.
+- The builder now applies per-locale maxima to every `RingsLabel`, preserves
+  smaller authored values, rejects stale wording or larger overrides, and
+  reopens every built Addressables bundle to verify both serialized size
+  fields. The bounded dependency closure is the one stable HUD unit across all
+  30 overlays; no translation wording, glossary, font, or image plan changed.
+- The Russian screenshot is failure evidence from the old package. Static
+  geometry/font verification covers all 30 corrected assets; new live runtime
+  screenshots remain not run and are not claimed by this correction.
+- All 30 locale builds passed post-serialization verification. The rebuilt
+  payload's 180 delta chains were decoded and hash-checked, then the final
+  packaged `defaultgroup` chain for every locale was independently decoded:
+  30/30 had the expected shaped text, output SHA-256, `m_fontSize`, and
+  `m_fontSizeBase`.
+- Final release audit passed 18 Python tests, 13 Swift fake-folder installer
+  tests, and static integrity checks for 30 locales and 185 payload artifacts.
+  The signed arm64/x86_64 application was rebuilt; installed game files were
+  not changed.

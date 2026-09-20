@@ -312,7 +312,7 @@
         {
           "path": "StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle",
           "originalSHA256": "34e388f7502b72d6a3ac00445c6c8ffcf4a42edb1c137c31eefbb03b427cfdfb",
-          "payloadSHA256": "8f718b03eca956d346ac793f7ee92719d2b28416299d896d1a7e2a615ae51d26",
+          "payloadSHA256": "217fa461438d79aaf5908b723cc85a5d58b52269230a13f0ff10b1656df2e6a0",
           "artifacts": [
             {
               "path": "Base/ru/StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle.xdelta",
@@ -320,7 +320,7 @@
             },
             {
               "path": "Locales/es-419/StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle.xdelta",
-              "sha256": "3825f83d2b0d47055eefbf821c0d30ed2004ebf25e0beb5c454c2038b0b9e12e"
+              "sha256": "4396f0cac0665358c7bb38e4d3e8557529bae6a475840e412b89deca05b1cc55"
             }
           ]
         },
@@ -802,7 +802,7 @@
         {
           "path": "StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle",
           "originalSHA256": "34e388f7502b72d6a3ac00445c6c8ffcf4a42edb1c137c31eefbb03b427cfdfb",
-          "payloadSHA256": "daa9a392afefefdc359ee00b5fd573f2ffbdc6bd62599707584756cc0c245577",
+          "payloadSHA256": "3015b69d522961331d1c1080ac741fb9cfc14bbf4505b3e4c6aaf60154895b29",
           "artifacts": [
             {
               "path": "Base/ru/StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle.xdelta",
@@ -810,7 +810,7 @@
             },
             {
               "path": "Locales/fr/StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle.xdelta",
-              "sha256": "71ffd185096af60fddb1534f50266c27ebb2c35adddf2540994ffdf91332274c"
+              "sha256": "53868414cedc661c62af9ecc1a1062e7887af9928f171cb6a2e01de05df60889"
             }
           ]
         },
@@ -900,7 +900,7 @@
         {
           "path": "StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle",
           "originalSHA256": "34e388f7502b72d6a3ac00445c6c8ffcf4a42edb1c137c31eefbb03b427cfdfb",
-          "payloadSHA256": "b14db94311cc85d12492d70cac8308c423e702f20f48438f68d326a07e3b154d",
+          "payloadSHA256": "fed54728d8c845c201fd0bbd5c9fc6f595fe3d6928617ca497f00039e158b9c1",
           "artifacts": [
             {
               "path": "Base/ru/StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle.xdelta",
@@ -908,7 +908,7 @@
             },
             {
               "path": "Locales/tr/StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle.xdelta",
-              "sha256": "54dba4b533f47d8116a0def1de0a9589c473308807800507716a49eede29d40c"
+              "sha256": "e1132502136fce71f113e45c154a5eef4f6c94cbae4c2f191806f7df3e4ec952"
             }
           ]
         },
@@ -998,7 +998,7 @@
         {
           "path": "StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle",
           "originalSHA256": "34e388f7502b72d6a3ac00445c6c8ffcf4a42edb1c137c31eefbb03b427cfdfb",
-          "payloadSHA256": "e2274ea1074c4d1b20fb27c56baa8cb633ad58172f9e71285ae2ae8ef5e5bf21",
+          "payloadSHA256": "818578244a35a910f552b8bb9d4def5c0f8da99862a518053de6eb8dcfcbba6b",
           "artifacts": [
             {
               "path": "Base/ru/StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle.xdelta",
@@ -1006,7 +1006,7 @@
             },
             {
               "path": "Locales/pl/StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle.xdelta",
-              "sha256": "cbf50d11daffe5df3447c8ea8c5751930c4ce99d831b22acffc99f426547808d"
+              "sha256": "25a5beab3056228f330692b8058ff589a507cb64e28909fcc2272c058cb355c8"
             }
           ]
         },
@@ -1593,7 +1593,7 @@
         {
           "path": "StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle",
           "originalSHA256": "34e388f7502b72d6a3ac00445c6c8ffcf4a42edb1c137c31eefbb03b427cfdfb",
-          "payloadSHA256": "b4ef73c0a170077b79d49bd564bab87602fe80f3e1131618060e5c853fe817a2",
+          "payloadSHA256": "30b2c5efcd13f527f15ad9a07349d57854d7d4e76ca1ed4ea4507035f70d0f02",
           "artifacts": [
             {
               "path": "Base/ru/StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle.xdelta",
@@ -1601,7 +1601,7 @@
             },
             {
               "path": "Locales/uk/StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle.xdelta",
-              "sha256": "cf9bc49bae4f724f586a096b72ffa0ad92cc6e5d3b18ea8a20e7aaabc594bff9"
+              "sha256": "b056f3866730384fe33e899d1a8576a19852df3a7d00f426378aa2a349b383af"
             }
           ]
         },
@@ -1796,7 +1796,7 @@
         {
           "path": "StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle",
           "originalSHA256": "34e388f7502b72d6a3ac00445c6c8ffcf4a42edb1c137c31eefbb03b427cfdfb",
-          "payloadSHA256": "b9f629e596bd94dc0d997786499ba02caf88de35e6cb485ed1c8fa33a9be58ad",
+          "payloadSHA256": "c30d01f2fd9a95029d27bdd197d6b7e92fa2ea376842f57807f18300e5da2d57",
           "artifacts": [
             {
               "path": "Base/ru/StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle.xdelta",
@@ -1804,7 +1804,7 @@
             },
             {
               "path": "Locales/cs/StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle.xdelta",
-              "sha256": "99855b87c6359f1fdfa517935572c2faf2a4cb4f3f7c2499abae539e663c364f"
+              "sha256": "c1e6d058b72c9a845de67b8756efe275b9e28155d935418849af65b28c11ee6d"
             }
           ]
         },
@@ -1894,7 +1894,7 @@
         {
           "path": "StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle",
           "originalSHA256": "34e388f7502b72d6a3ac00445c6c8ffcf4a42edb1c137c31eefbb03b427cfdfb",
-          "payloadSHA256": "44abfb5e241e25bb6a9fd4f6eb14190ac5781ea9de8e2b867bae4c526e3c9dd5",
+          "payloadSHA256": "9854f52da66b2df0d7ffb9ff384a5f3fae3df387c7577b381d030d7f1e9d9799",
           "artifacts": [
             {
               "path": "Base/ru/StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle.xdelta",
@@ -1902,7 +1902,7 @@
             },
             {
               "path": "Locales/hu/StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle.xdelta",
-              "sha256": "8dcce9ae61118a251c43c07a09673783eb24aa74f5444b122a0a60fe5dbfdd7e"
+              "sha256": "5b2356cf11288f6d0e869d48a2b11f9725773332f358b9b80bae8ca927a4d799"
             }
           ]
         },
@@ -2398,7 +2398,7 @@
         {
           "path": "StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle",
           "originalSHA256": "34e388f7502b72d6a3ac00445c6c8ffcf4a42edb1c137c31eefbb03b427cfdfb",
-          "payloadSHA256": "6b666f22bcebf277c610b7f625b4f54656758c112a2b05d5aec689146167e150",
+          "payloadSHA256": "6bf45549226d22775ac8e23d22d92989ba07c2c0f41380314795db4a2276750d",
           "artifacts": [
             {
               "path": "Base/ru/StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle.xdelta",
@@ -2406,7 +2406,7 @@
             },
             {
               "path": "Locales/fil/StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle.xdelta",
-              "sha256": "a86c10ae390e3de9062deead9d63579de7efe9e8eb2a058fdae07c3edfe50477"
+              "sha256": "9132267eae6b2bb4e6e8c6a2fd8fafc3c1c193bfa561c19787299cb8ae9ff7d0"
             }
           ]
         },
@@ -2496,7 +2496,7 @@
         {
           "path": "StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle",
           "originalSHA256": "34e388f7502b72d6a3ac00445c6c8ffcf4a42edb1c137c31eefbb03b427cfdfb",
-          "payloadSHA256": "f0f6db85116d17a9696c003d66132254f5ef7d822c5464bb0019c16ab1392b48",
+          "payloadSHA256": "ae21d4e309bb8a8589f9fa465ec4ddd4af6adcf8efa5f527dd90317d1986afa0",
           "artifacts": [
             {
               "path": "Base/ru/StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle.xdelta",
@@ -2504,7 +2504,7 @@
             },
             {
               "path": "Locales/el/StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle.xdelta",
-              "sha256": "4fe6bea945c0fdce9d21c817528b0359c4947c04742c510b0bcc7cf114d7821c"
+              "sha256": "8a393162c3234dc8062d2ea3d888154075d99b6d140e0b9bcc1ae7d7a94d2387"
             }
           ]
         },
@@ -2594,7 +2594,7 @@
         {
           "path": "StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle",
           "originalSHA256": "34e388f7502b72d6a3ac00445c6c8ffcf4a42edb1c137c31eefbb03b427cfdfb",
-          "payloadSHA256": "dc4f7df7906f3d65bc9e70248051c4e57acd1b22ed289f60fd0708665aff2384",
+          "payloadSHA256": "6c8a7cbd7702da6d309daea904b3b94011adcb09f263d5ee881a2588aa175096",
           "artifacts": [
             {
               "path": "Base/ru/StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle.xdelta",
@@ -2602,7 +2602,7 @@
             },
             {
               "path": "Locales/bg/StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle.xdelta",
-              "sha256": "335d1bab69dc3e925dfed351f18affe23ee65727baa81ff946db8c5fb4d32419"
+              "sha256": "d523b6c04a69dda285fb069ace58f45a36507032fa5dba86823fcad95c2b03c9"
             }
           ]
         },
@@ -2692,7 +2692,7 @@
         {
           "path": "StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle",
           "originalSHA256": "34e388f7502b72d6a3ac00445c6c8ffcf4a42edb1c137c31eefbb03b427cfdfb",
-          "payloadSHA256": "084583d37cd00facdeb3469451c9956fa86383fa9bbbf4f01e85624c1b1e4ac3",
+          "payloadSHA256": "a5f25be0c91613966236feb2f62bc51e522e061361d1b4b9dfcc6426d308b5ed",
           "artifacts": [
             {
               "path": "Base/ru/StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle.xdelta",
@@ -2700,7 +2700,7 @@
             },
             {
               "path": "Locales/sr/StreamingAssets/aa/StandaloneOSX/defaultgroup_assets_all_4d829fc9da7ab64c374ae5aebaeeafd8.bundle.xdelta",
-              "sha256": "c9717e25254e56d7992a615367e8b034594064e67492d1c226edc285a00041f2"
+              "sha256": "317d85d7e5f1ccd8343672a45ffac7bc250fa340d5caaa6a5f7ad7690ba4da2f"
             }
           ]
         },

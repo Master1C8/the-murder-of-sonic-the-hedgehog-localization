@@ -47,6 +47,10 @@ is control data.
   size `18`, location size no greater than `28`. Locale-authored overrides may
   reduce either value but may not raise it. This prevents the runtime English
   timestamp from wrapping into the location line.
+- `RunnerGame/Canvas/RingsLabel` uses a pinned per-locale maximum font size for
+  all 30 translations. The 200-unit field has a 190-unit advance budget; any
+  wording change invalidates the matching profile and blocks the build until
+  its prepared-font metrics are recalculated.
 
 ## Required gates for every locale
 
@@ -69,6 +73,8 @@ is control data.
    calls the locale mapping.
 7. Every locale build must contain the shared save-slot timestamp and location
    collision guards; testing only the Russian or current locale is insufficient.
+8. Every locale build must serialize and verify its `RingsLabel` fit profile;
+   a Russian-only override is insufficient.
 
 These rules are enforced by `Tests/test_localization_pipeline.py` and are part
 of `Scripts/release-audit.sh`.

@@ -100,6 +100,63 @@ class RuntimeIdentifierSafetyTests(unittest.TestCase):
         with self.assertRaises(SystemExit):
             localization_assets.effective_level0_layout_overrides(overlay)
 
+    def test_runner_hud_collision_guards_cover_every_locale(self) -> None:
+        localization_root = PROJECT_ROOT / "Documentation" / "Localization"
+        locales = sorted(localization_assets.LOCALE_FALLBACK_FONTS)
+        self.assertEqual(
+            set(locales), set(localization_assets.RUNNER_HUD_LAYOUT_PROFILES)
+        )
+        expected_sizes = {
+            "bg": 35.0,
+            "cs": 50.0,
+            "el": 34.0,
+            "es": 44.0,
+            "es-419": 50.0,
+            "fil": 29.0,
+            "fr": 50.0,
+            "hu": 52.0,
+            "pl": 31.0,
+            "ru": 46.0,
+            "sr": 31.0,
+            "tr": 53.0,
+            "uk": 51.0,
+        }
+        for locale in locales:
+            with self.subTest(locale=locale):
+                overlay = json.loads(
+                    (localization_root / f"{locale}.overlay.json").read_text(encoding="utf-8")
+                )
+                effective = localization_assets.effective_defaultgroup_layout_overrides(
+                    overlay
+                )
+                maximum = localization_assets.RUNNER_HUD_LAYOUT_PROFILES[locale][
+                    "maximum"
+                ]
+                expected = expected_sizes.get(locale, 56.0)
+                self.assertLessEqual(expected, maximum)
+                self.assertEqual(
+                    effective[localization_assets.RUNNER_HUD_LABEL_ID],
+                    {"m_fontSize": expected, "m_fontSizeBase": expected},
+                )
+
+    def test_runner_hud_collision_guard_rejects_stale_text_or_larger_override(self) -> None:
+        overlay = {
+            "targetLocale": "ru",
+            "units": {localization_assets.RUNNER_HUD_LABEL_ID: "КОЛЬЦА!"},
+            "layoutOverrides": {},
+        }
+        with self.assertRaises(SystemExit):
+            localization_assets.effective_defaultgroup_layout_overrides(overlay)
+        overlay["units"][localization_assets.RUNNER_HUD_LABEL_ID] = "КОЛЬЦА"
+        overlay["layoutOverrides"] = {
+            localization_assets.RUNNER_HUD_LABEL_ID: {
+                "m_fontSize": 56.0,
+                "m_fontSizeBase": 56.0,
+            }
+        }
+        with self.assertRaises(SystemExit):
+            localization_assets.effective_defaultgroup_layout_overrides(overlay)
+
     def test_layout_overrides_reject_runtime_or_unknown_fields(self) -> None:
         inventory = {
             "units": [

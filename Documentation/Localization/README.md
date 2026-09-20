@@ -50,10 +50,14 @@ for Addressables and `level0` TMP labels. The runtime builder applies a shared
 save-slot baseline to all 30 locales: the timestamp is 18 pt and the location
 is at most 28 pt, with smaller authored overrides preserved. This keeps the
 longest runtime English timestamp on one line instead of colliding with the
-localized location. The Russian runner HUD separately uses the same mechanism
-to keep `КОЛЬЦА` on one line without abbreviating the translation. Scene
-overrides use verified offsets relative to the padded end of `m_text` and
-reject unexpected serialized values before patching.
+localized location. The runner HUD uses a separate all-locale fit profile:
+its 200-unit `RingsLabel` field has a 190-unit advance budget, and each of the
+30 pinned translations has a locale-specific maximum font size. The builder
+rejects changed label wording until its profile is recalculated, preserves
+smaller authored overrides, and reopens the built Addressables bundle to
+verify the serialized sizes. Scene overrides use verified offsets relative to
+the padded end of `m_text` and reject unexpected serialized values before
+patching.
 
 ## Re-extract
 
