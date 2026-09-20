@@ -33,6 +33,25 @@ struct PayloadFile: Codable, Equatable, Sendable {
     let path: String
     let originalSHA256: String?
     let payloadSHA256: String?
+    let payloadPath: String?
+    let artifactSHA256: String?
+    let artifacts: [PayloadArtifact]?
+
+    init(
+        path: String,
+        originalSHA256: String?,
+        payloadSHA256: String?,
+        payloadPath: String? = nil,
+        artifactSHA256: String? = nil,
+        artifacts: [PayloadArtifact]? = nil
+    ) {
+        self.path = path
+        self.originalSHA256 = originalSHA256
+        self.payloadSHA256 = payloadSHA256
+        self.payloadPath = payloadPath
+        self.artifactSHA256 = artifactSHA256
+        self.artifacts = artifacts
+    }
 
     func validate(ready: Bool) throws {
         guard Self.isSafeRelativePath(path) else {
@@ -50,6 +69,22 @@ struct PayloadFile: Codable, Equatable, Sendable {
         } else if let payloadSHA256, !Self.isSHA256(payloadSHA256) {
             throw PackageConfigError.invalidHash(path)
         }
+        if let artifacts {
+            guard !artifacts.isEmpty else { throw PackageConfigError.emptyArtifactChain(path) }
+            guard originalSHA256 != nil else { throw PackageConfigError.deltaWithoutOriginal(path) }
+            guard payloadPath == nil, artifactSHA256 == nil else {
+                throw PackageConfigError.ambiguousArtifact(path)
+            }
+            try artifacts.forEach { try $0.validate(owner: path) }
+        } else {
+            let artifactPath = payloadPath ?? path
+            guard Self.isSafeRelativePath(artifactPath) else {
+                throw PackageConfigError.unsafePath(artifactPath)
+            }
+            if let artifactSHA256, !Self.isSHA256(artifactSHA256) {
+                throw PackageConfigError.invalidArtifactHash(path)
+            }
+        }
     }
 
     static func isSafeRelativePath(_ value: String) -> Bool {
@@ -63,11 +98,40 @@ struct PayloadFile: Codable, Equatable, Sendable {
     }
 }
 
+struct PayloadArtifact: Codable, Equatable, Sendable {
+    let path: String
+    let sha256: String
+
+    func validate(owner: String) throws {
+        guard PayloadFile.isSafeRelativePath(path) else {
+            throw PackageConfigError.unsafePath(path)
+        }
+        guard PayloadFile.isSHA256(sha256) else {
+            throw PackageConfigError.invalidArtifactHash(owner)
+        }
+    }
+}
+
 struct LanguagePackage: Codable, Equatable, Sendable {
     let siteLocale: String
     let runtimeCode: String
     let nativeLanguageName: String
     let ready: Bool
+    let files: [PayloadFile]?
+
+    init(
+        siteLocale: String,
+        runtimeCode: String,
+        nativeLanguageName: String,
+        ready: Bool,
+        files: [PayloadFile]? = nil
+    ) {
+        self.siteLocale = siteLocale
+        self.runtimeCode = runtimeCode
+        self.nativeLanguageName = nativeLanguageName
+        self.ready = ready
+        self.files = files
+    }
 }
 
 struct ActiveLanguageSelection: Codable, Equatable, Sendable {
@@ -127,8 +191,21 @@ struct PackageConfig: Codable, Equatable, Sendable {
         if payloadReady && !languages.allSatisfy(\.ready) {
             throw PackageConfigError.incompleteLanguages
         }
-        if payloadReady && files.isEmpty { throw PackageConfigError.emptyReadyPayload }
+        if payloadReady && languages.contains(where: { payloadFiles(for: $0).isEmpty }) {
+            throw PackageConfigError.emptyReadyPayload
+        }
         try files.forEach { try $0.validate(ready: payloadReady) }
+        for language in languages {
+            let selectedFiles = payloadFiles(for: language)
+            guard Set(selectedFiles.map(\.path)).count == selectedFiles.count else {
+                throw PackageConfigError.duplicatePath
+            }
+            try selectedFiles.forEach { try $0.validate(ready: payloadReady) }
+        }
+    }
+
+    func payloadFiles(for language: LanguagePackage) -> [PayloadFile] {
+        language.files ?? files
     }
 }
 
@@ -144,6 +221,10 @@ enum PackageConfigError: LocalizedError {
     case emptyReadyPayload
     case unsafePath(String)
     case invalidHash(String)
+    case invalidArtifactHash(String)
+    case emptyArtifactChain(String)
+    case deltaWithoutOriginal(String)
+    case ambiguousArtifact(String)
 
     var errorDescription: String? {
         switch self {
@@ -158,6 +239,10 @@ enum PackageConfigError: LocalizedError {
         case .emptyReadyPayload: "Готовый пакет не может быть пустым."
         case .unsafePath(let path): "Небезопасный путь в пакете: \(path)."
         case .invalidHash(let path): "Некорректная контрольная сумма файла: \(path)."
+        case .invalidArtifactHash(let path): "Некорректная контрольная сумма дельты для файла: \(path)."
+        case .emptyArtifactChain(let path): "Пустая цепочка дельт для файла: \(path)."
+        case .deltaWithoutOriginal(let path): "Дельта требует проверенный оригинал файла: \(path)."
+        case .ambiguousArtifact(let path): "Для файла одновременно заданы полная копия и цепочка дельт: \(path)."
         }
     }
 }

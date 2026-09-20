@@ -56,6 +56,8 @@ enum InstallerError: LocalizedError {
     case damagedBackup(String)
     case unsafePath(String)
     case malformedReceipt
+    case deltaToolMissing
+    case deltaApplicationFailed(String)
 
     var errorDescription: String? {
         switch self {
@@ -87,6 +89,10 @@ enum InstallerError: LocalizedError {
             "Небезопасный путь в пакете: \(path)."
         case .malformedReceipt:
             "Не удалось проверить данные предыдущей установки VN Revival."
+        case .deltaToolMissing:
+            "В приложении отсутствует инструмент применения языковых дельт."
+        case .deltaApplicationFailed(let path):
+            "Не удалось восстановить локализованный файл из проверенной дельты: \(path)."
         }
     }
 }
@@ -245,6 +251,7 @@ struct InstallerCore {
         }) else {
             throw InstallerError.invalidLanguageSelection(selectedRuntimeCode)
         }
+        let selectedFiles = config.payloadFiles(for: selectedLanguage)
         guard installation.steamAppID == config.steamAppID else {
             throw InstallerError.wrongSteamApp(installation.steamAppID)
         }
@@ -265,13 +272,13 @@ struct InstallerCore {
 
         let receiptURL = stateRoot.appendingPathComponent("receipt.json")
         let previousReceipt = try loadReceiptIfPresent(receiptURL, packageID: config.packageID)
-        try validatePayload(payload, config: config)
+        try validatePayload(payload, files: selectedFiles)
 
         let backupRoot = stateRoot.appendingPathComponent("original-backup", isDirectory: true)
         try fileManager.createDirectory(at: backupRoot, withIntermediateDirectories: true)
         var receiptFiles: [ReceiptFile] = []
 
-        for item in config.files {
+        for item in selectedFiles {
             let destination = try safeURL(root: installation.dataDirectory, relativePath: item.path)
             let backup = try safeURL(root: backupRoot, relativePath: item.path)
             let currentExists = fileManager.fileExists(atPath: destination.path)
@@ -314,7 +321,7 @@ struct InstallerCore {
             ))
         }
 
-        let activePaths = Set(config.files.map(\.path))
+        let activePaths = Set(selectedFiles.map(\.path))
         let retiredFiles = previousReceipt?.files.filter { !activePaths.contains($0.path) } ?? []
         for prior in retiredFiles {
             let destination = try safeURL(root: installation.dataDirectory, relativePath: prior.path)
@@ -361,11 +368,16 @@ struct InstallerCore {
                 to: transaction.appendingPathComponent("previous-receipt.json")
             )
         }
-        for item in config.files {
-            let source = try safeURL(root: payload, relativePath: item.path)
+        for item in selectedFiles {
             let stagedFile = try safeURL(root: staged, relativePath: item.path)
             try fileManager.createDirectory(at: stagedFile.deletingLastPathComponent(), withIntermediateDirectories: true)
-            try fileManager.copyItem(at: source, to: stagedFile)
+            try stagePayloadFile(
+                item,
+                payload: payload,
+                originalRoot: backupRoot,
+                output: stagedFile,
+                transaction: transaction
+            )
             guard try Self.sha256(of: stagedFile) == item.payloadSHA256 else {
                 throw InstallerError.payloadChecksumMismatch(item.path)
             }
@@ -382,7 +394,7 @@ struct InstallerCore {
         try writeJSON(transactionState, to: transactionURL)
 
         do {
-            for item in config.files {
+            for item in selectedFiles {
                 let destination = try safeURL(root: installation.dataDirectory, relativePath: item.path)
                 let stagedFile = try safeURL(root: staged, relativePath: item.path)
                 try fileManager.createDirectory(at: destination.deletingLastPathComponent(), withIntermediateDirectories: true)
@@ -472,18 +484,79 @@ struct InstallerCore {
         return hasher.finalize().map { String(format: "%02x", $0) }.joined()
     }
 
-    private func validatePayload(_ payload: URL, config: PackageConfig) throws {
-        for item in config.files {
-            let source = try safeURL(root: payload, relativePath: item.path)
-            var isDirectory: ObjCBool = false
-            guard fileManager.fileExists(atPath: source.path, isDirectory: &isDirectory), !isDirectory.boolValue else {
-                throw InstallerError.missingPayloadFile(item.path)
+    private func validatePayload(_ payload: URL, files: [PayloadFile]) throws {
+        for item in files {
+            if let artifacts = item.artifacts {
+                for artifact in artifacts {
+                    try validateArtifact(
+                        at: safeURL(root: payload, relativePath: artifact.path),
+                        expectedSHA256: artifact.sha256,
+                        owner: item.path
+                    )
+                }
+            } else {
+                let artifactPath = item.payloadPath ?? item.path
+                try validateArtifact(
+                    at: safeURL(root: payload, relativePath: artifactPath),
+                    expectedSHA256: item.artifactSHA256 ?? item.payloadSHA256!,
+                    owner: item.path
+                )
             }
-            let values = try source.resourceValues(forKeys: [.isSymbolicLinkKey])
-            guard values.isSymbolicLink != true else { throw InstallerError.unsafePath(item.path) }
-            guard try Self.sha256(of: source) == item.payloadSHA256 else {
-                throw InstallerError.payloadChecksumMismatch(item.path)
+        }
+    }
+
+    private func validateArtifact(at url: URL, expectedSHA256: String, owner: String) throws {
+        var isDirectory: ObjCBool = false
+        guard fileManager.fileExists(atPath: url.path, isDirectory: &isDirectory), !isDirectory.boolValue else {
+            throw InstallerError.missingPayloadFile(owner)
+        }
+        let values = try url.resourceValues(forKeys: [.isSymbolicLinkKey])
+        guard values.isSymbolicLink != true else { throw InstallerError.unsafePath(owner) }
+        guard try Self.sha256(of: url) == expectedSHA256 else {
+            throw InstallerError.payloadChecksumMismatch(owner)
+        }
+    }
+
+    private func stagePayloadFile(
+        _ item: PayloadFile,
+        payload: URL,
+        originalRoot: URL,
+        output: URL,
+        transaction: URL
+    ) throws {
+        guard let artifacts = item.artifacts else {
+            let source = try safeURL(root: payload, relativePath: item.payloadPath ?? item.path)
+            try fileManager.copyItem(at: source, to: output)
+            return
+        }
+        let tool = payload.appendingPathComponent("Tools/xdelta3")
+        guard fileManager.isExecutableFile(atPath: tool.path) else {
+            throw InstallerError.deltaToolMissing
+        }
+        var source = try safeURL(root: originalRoot, relativePath: item.path)
+        var intermediates: [URL] = []
+        defer { intermediates.forEach { try? fileManager.removeItem(at: $0) } }
+        for (index, artifact) in artifacts.enumerated() {
+            let patch = try safeURL(root: payload, relativePath: artifact.path)
+            let target: URL
+            if index == artifacts.count - 1 {
+                target = output
+            } else {
+                target = transaction.appendingPathComponent("delta-\(UUID().uuidString)")
+                intermediates.append(target)
             }
+            let process = Process()
+            process.executableURL = tool
+            process.arguments = ["-d", "-f", "-s", source.path, patch.path, target.path]
+            let diagnostics = Pipe()
+            process.standardOutput = diagnostics
+            process.standardError = diagnostics
+            try process.run()
+            process.waitUntilExit()
+            guard process.terminationReason == .exit, process.terminationStatus == 0 else {
+                throw InstallerError.deltaApplicationFailed(item.path)
+            }
+            source = target
         }
     }
 

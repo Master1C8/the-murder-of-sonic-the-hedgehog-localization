@@ -17,10 +17,12 @@ export SWIFTPM_MODULECACHE_OVERRIDE="${SWIFTPM_MODULECACHE_OVERRIDE:-$CLANG_MODU
 swift test --disable-sandbox
 
 if [[ "${ALLOW_INCOMPLETE_PAYLOAD:-0}" != "1" ]]; then
-  jq -e '.payloadReady == true and (.files | length > 0) and all(.languages[]; .ready == true)' "$config" >/dev/null || {
+  jq -e '.payloadReady == true and all(.languages[]; .ready == true and ((.files // []) | length > 0))' "$config" >/dev/null || {
     echo 'Release blocked: the unified 30-language payload is intentionally not ready.' >&2
     exit 1
   }
+  PYTHONPYCACHEPREFIX="${PYTHONPYCACHEPREFIX:-/private/tmp/murder-sonic-localization-pycache}" \
+    python3 "$project_dir/Scripts/audit-installer-payload.py"
 fi
 
 "$project_dir/Scripts/build-app.sh"

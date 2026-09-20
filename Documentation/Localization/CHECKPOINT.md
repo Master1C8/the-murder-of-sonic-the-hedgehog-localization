@@ -301,3 +301,22 @@
 - Locale `ready` values and `payloadReady` remain unchanged. The completed
   static editorial migration does not establish font, texture, runtime,
   visual, packaging, unified-payload, or release readiness.
+
+## Unified text-and-font installer payload — 2026-09-20
+
+- All 30 locale runtime variants were rebuilt from the verified pristine Steam
+  build `20535215`. Every manifest reports 3,547/3,547 text units, no missing
+  translation IDs, and the pinned locale font strategy.
+- The compact payload uses one `ru` base xdelta chain from original files and
+  per-locale deltas from that deterministic base. Every delta was decoded to a
+  temporary file and byte-verified against the expected target SHA-256 before
+  readiness changed.
+- The installer now applies the selected locale transactionally, verifies all
+  original/artifact/output hashes, and supports language switching by rerun.
+  The universal bundled xdelta3 helper contains arm64 and x86_64 slices.
+- All 30 language declarations are `ready=true`; `payloadReady=true`.
+- Owner scope for this build explicitly defers texture translation. All ten
+  image plans remain available, no PNG is modified, and the payload manifest
+  records `imagesModified=false`.
+- This establishes static text/font packaging readiness. It does not claim
+  multilingual in-game visual QA, which remains a separate future stage.

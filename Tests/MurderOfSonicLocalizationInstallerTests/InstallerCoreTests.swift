@@ -7,7 +7,7 @@ import Testing
 struct InstallerCoreTests {
     private let fileManager = FileManager.default
 
-    @Test func packageConfigLoadsAllThirtyLocalesAsExplicitPlaceholder() throws {
+    @Test func packageConfigLoadsReadyThirtyLocalePayload() throws {
         let url = projectRoot().appendingPathComponent(
             "Sources/MurderOfSonicLocalizationInstaller/Resources/PackageConfig.json"
         )
@@ -20,8 +20,9 @@ struct InstallerCoreTests {
         #expect(config.languages.count == 30)
         #expect(Set(config.languages.map(\.siteLocale)) == PackageConfig.requiredSiteLocales)
         #expect(Set(config.languages.map(\.runtimeCode)) == PackageConfig.requiredSiteLocales)
-        #expect(config.languages.allSatisfy { !$0.ready })
-        #expect(config.payloadReady == false)
+        #expect(config.languages.allSatisfy { $0.ready })
+        #expect(config.languages.allSatisfy { !(config.payloadFiles(for: $0)).isEmpty })
+        #expect(config.payloadReady == true)
         #expect(config.files.isEmpty)
     }
 
@@ -237,6 +238,47 @@ struct InstallerCoreTests {
         }
     }
 
+    @Test func reconstructsAndInstallsVerifiedDeltaPayload() throws {
+        try withTemporaryDirectory { root in
+            let setup = try makeFakeInstallation(root: root, original: "original")
+            let payload = root.appendingPathComponent("payload", isDirectory: true)
+            let tool = payload.appendingPathComponent("Tools/xdelta3")
+            let bundledTool = projectRoot().appendingPathComponent(
+                "Sources/MurderOfSonicLocalizationInstaller/Resources/LocalizationPayload/Tools/xdelta3"
+            )
+            try fileManager.createDirectory(at: tool.deletingLastPathComponent(), withIntermediateDirectories: true)
+            try fileManager.copyItem(at: bundledTool, to: tool)
+            try fileManager.setAttributes([.posixPermissions: 0o755], ofItemAtPath: tool.path)
+
+            let translated = root.appendingPathComponent("translated")
+            try write(Data("localized".utf8), to: translated)
+            let delta = payload.appendingPathComponent("ru/managed.xdelta")
+            try fileManager.createDirectory(at: delta.deletingLastPathComponent(), withIntermediateDirectories: true)
+            try runProcess(tool, [
+                "-a", "-S", "djw", "-1", "-e", "-f",
+                "-s", setup.file.path, translated.path, delta.path,
+            ])
+            let relative = "Managed/Assembly-CSharp.dll"
+            let config = makeConfig(files: [PayloadFile(
+                path: relative,
+                originalSHA256: try InstallerCore.sha256(of: setup.file),
+                payloadSHA256: try InstallerCore.sha256(of: translated),
+                artifacts: [PayloadArtifact(
+                    path: "ru/managed.xdelta",
+                    sha256: try InstallerCore.sha256(of: delta)
+                )]
+            )])
+
+            try InstallerCore().install(
+                payload: payload,
+                config: config,
+                selectedRuntimeCode: "ru",
+                into: setup.installation
+            )
+            #expect(try String(contentsOf: setup.file, encoding: .utf8) == "localized")
+        }
+    }
+
     @Test func interruptedInstallRestoresFilesAndPreviousLanguageReceipt() throws {
         try withTemporaryDirectory { root in
             let dataRoot = root.appendingPathComponent("Data", isDirectory: true)
@@ -419,6 +461,16 @@ struct InstallerCoreTests {
     private func write(_ data: Data, to url: URL) throws {
         try fileManager.createDirectory(at: url.deletingLastPathComponent(), withIntermediateDirectories: true)
         try data.write(to: url)
+    }
+
+    private func runProcess(_ executable: URL, _ arguments: [String]) throws {
+        let process = Process()
+        process.executableURL = executable
+        process.arguments = arguments
+        try process.run()
+        process.waitUntilExit()
+        #expect(process.terminationReason == .exit)
+        #expect(process.terminationStatus == 0)
     }
 
     private func withTemporaryDirectory(_ body: (URL) throws -> Void) throws {

@@ -1,8 +1,14 @@
-# Unified 30-language payload placeholder
+# Localization payload
 
-The 30 VN Revival localizations are intentionally absent. One payload must
-contain every non-English locale declared in `PackageConfig.json`; the
-installer lets the player choose the initially active locale but still installs
-the complete unified payload. Do not put French fan-patch files
-here. Do not set any language `ready` or set `payloadReady` to `true` until the
-complete reviewed package and every SHA-256 are final.
+This directory contains the verified text-and-font runtime payload for all 30
+VN Revival locales. `Base/ru` stores deltas from the pristine Steam build;
+`Locales/<code>` stores the second-stage deltas and complex-script helper DLLs.
+`Tools/xdelta3` is the universal arm64/x86_64 decoder used transactionally by
+the installer.
+
+Localized image textures are intentionally deferred. `BuildManifest.json`
+records `imagesModified: false`, and the original English PNGs remain intact.
+
+Regenerate this directory only with `Scripts/build-unified-payload.py`; the
+script verifies every delta by reconstructing the target file and checking its
+SHA-256 before replacing this directory and marking the package ready.
