@@ -7,10 +7,12 @@
   completed 10-row text-bearing image plan. The glossary amendment is consumed
   and its final 30-locale state is included in the accepted artifacts.
 - Static font preparation now passes 30/30 exact-corpus coverage. Nine pinned
-  Noto outputs cover every rendered codepoint across the 3,547 overlay values
-  and 10 image translations per locale; all have U+0020 with a positive
-  advance. Sources, licenses, hashes, metrics, OpenType tables, and recipes are
-  recorded under `Fonts/` and `LocalizationAssets/Fonts/`.
+  base Noto outputs cover every rendered codepoint across the 3,547 overlay
+  values and 10 image translations per locale. Five deterministic
+  HarfBuzz/PUA outputs additionally prepare Arabic, Persian, Hebrew, Hindi,
+  and Thai shaping without changing the authored overlays. Sources, licenses,
+  hashes, metrics, shaping maps, and recipes are recorded under `Fonts/` and
+  `LocalizationAssets/Fonts/`.
 - A generic isolated `build-locale-patch` path now embeds the selected font in
   both stable Unity source Font objects and retains the existing dynamic TMP
   fallback graph. A complete Bulgarian patch built from verified originals,
@@ -18,10 +20,13 @@
   merged Arabic/Latin TTF and Simplified Chinese CJK OTF probes also read back
   byte-for-byte. No installed game file was modified and the game was not
   launched.
-- Font-stage gates still open: complex shaping for `ar`, `fa`, `hi`, and `th`;
-  bidirectional layout for `ar`, `fa`, and `he`; then runtime readability and
-  visual layout for all locales. Static cmap coverage and GSUB/GPOS presence do
-  not satisfy these gates.
+- The complex-script payload path is implemented. Serialized UI is pre-shaped,
+  Arabic/Persian/Hebrew serialized UI receives RTL state, and a per-locale
+  `VNRevival.TextShaper.dll` redirects all 28 dynamic `TMP_Text.set_text`
+  assignments while leaving four input-field assignments untouched. Isolated
+  Arabic and Hindi builds passed font, text, direction, embedded-resource, and
+  IL read-back checks. Runtime readability and visual layout remain `not-run`:
+  neither the game nor the built installer was launched.
 - Release state is intentionally unchanged: all locale declarations remain
   `ready=false` and `payloadReady=false`. Texture production, unified payload
   assembly, fake-folder installer verification, runtime/visual QA, and final

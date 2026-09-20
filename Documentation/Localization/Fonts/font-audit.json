@@ -1,4 +1,8 @@
 {
+  "complexScriptManifest": {
+    "path": "LocalizationAssets/Fonts/Complex/manifest.json",
+    "sha256": "166276ada14020ef32c06c6b175e30e2a8be79acb43199869d13ee16e02668eb"
+  },
   "errors": [],
   "fonts": {
     "NotoSans-Regular.ttf": {
@@ -72,11 +76,11 @@
       "style": "Regular",
       "version": "Version 2.008; ttfautohint (v1.8) -l 8 -r 50 -G 200 -x 14 -D latn -f none -a qsq -X \"\""
     },
-    "NotoSansArabicLatin-Regular.ttf": {
-      "bytes": 735892,
+    "NotoSansArabicLatin-ar-Shaped.ttf": {
+      "bytes": 748844,
       "family": "Noto Sans",
-      "file": "NotoSansArabicLatin-Regular.ttf",
-      "glyphCodepoints": 3969,
+      "file": "NotoSansArabicLatin-ar-Shaped.ttf",
+      "glyphCodepoints": 4233,
       "license": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.",
       "licenseUrl": "http://scripts.sil.org/OFL",
       "metrics": {
@@ -142,7 +146,85 @@
         ]
       },
       "postScriptName": "NotoSans-Regular",
-      "sha256": "f93d0f17bcbc02ec3c73aad54d8291aba84924069545c99a31f9bf2edc95d2ba",
+      "sha256": "ae7585dcbcab7397d927976c26906841209d0a5cbfc20cd08b7f299be6c36dfc",
+      "space": {
+        "advance": 260,
+        "present": true
+      },
+      "style": "Regular",
+      "version": "Version 2.008; ttfautohint (v1.8) -l 8 -r 50 -G 200 -x 14 -D latn -f none -a qsq -X \"\""
+    },
+    "NotoSansArabicLatin-fa-Shaped.ttf": {
+      "bytes": 739660,
+      "family": "Noto Sans",
+      "file": "NotoSansArabicLatin-fa-Shaped.ttf",
+      "glyphCodepoints": 4144,
+      "license": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.",
+      "licenseUrl": "http://scripts.sil.org/OFL",
+      "metrics": {
+        "hheaAscent": 1374,
+        "hheaDescent": -738,
+        "hheaLineGap": 0,
+        "typoAscent": 1374,
+        "typoDescent": -738,
+        "typoLineGap": 0,
+        "unitsPerEm": 1000
+      },
+      "openType": {
+        "gposFeatures": [
+          "kern",
+          "mark",
+          "mkmk"
+        ],
+        "gposScripts": [
+          "DFLT",
+          "arab",
+          "cyrl",
+          "grek",
+          "latn"
+        ],
+        "gsubFeatures": [
+          "aalt",
+          "c2sc",
+          "case",
+          "ccmp",
+          "dnom",
+          "fina",
+          "frac",
+          "init",
+          "isol",
+          "liga",
+          "lnum",
+          "locl",
+          "medi",
+          "numr",
+          "onum",
+          "ordn",
+          "pnum",
+          "rlig",
+          "rtlm",
+          "salt",
+          "sinf",
+          "smcp",
+          "ss03",
+          "ss04",
+          "ss06",
+          "ss07",
+          "subs",
+          "sups",
+          "tnum",
+          "zero"
+        ],
+        "gsubScripts": [
+          "DFLT",
+          "arab",
+          "cyrl",
+          "grek",
+          "latn"
+        ]
+      },
+      "postScriptName": "NotoSans-Regular",
+      "sha256": "a0b85d33b0fbd8ad6c4c68c74d5ddc57bb53eccbe2a803ab9f595067a5fe82a5",
       "space": {
         "advance": 260,
         "present": true
@@ -446,11 +528,11 @@
       "style": "Regular",
       "version": "Version 2.004;hotconv 1.0.118;makeotfexe 2.5.65603"
     },
-    "NotoSansDevanagariLatin-Regular.ttf": {
-      "bytes": 721268,
+    "NotoSansDevanagariLatin-hi-Shaped.ttf": {
+      "bytes": 733632,
       "family": "Noto Sans",
-      "file": "NotoSansDevanagariLatin-Regular.ttf",
-      "glyphCodepoints": 3052,
+      "file": "NotoSansDevanagariLatin-hi-Shaped.ttf",
+      "glyphCodepoints": 3330,
       "license": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.",
       "licenseUrl": "http://scripts.sil.org/OFL",
       "metrics": {
@@ -526,7 +608,7 @@
         ]
       },
       "postScriptName": "NotoSans-Regular",
-      "sha256": "0170c95346aa3984f3b9d96260333e7f58d8b15608c17810aa527b898fbec794",
+      "sha256": "4ce4a89fabec2c8edc4a05afa8af53535ee810c63f724fd36a36c758fd762abf",
       "space": {
         "advance": 260,
         "present": true
@@ -534,11 +616,11 @@
       "style": "Regular",
       "version": "Version 2.008; ttfautohint (v1.8) -l 8 -r 50 -G 200 -x 14 -D latn -f none -a qsq -X \"\""
     },
-    "NotoSansHebrewLatin-Regular.ttf": {
-      "bytes": 579712,
+    "NotoSansHebrewLatin-he-Shaped.ttf": {
+      "bytes": 588420,
       "family": "Noto Sans",
-      "file": "NotoSansHebrewLatin-Regular.ttf",
-      "glyphCodepoints": 2973,
+      "file": "NotoSansHebrewLatin-he-Shaped.ttf",
+      "glyphCodepoints": 3102,
       "license": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.",
       "licenseUrl": "http://scripts.sil.org/OFL",
       "metrics": {
@@ -600,7 +682,7 @@
         ]
       },
       "postScriptName": "NotoSans-Regular",
-      "sha256": "5d47c2310ef31393df8029d9a85db065133ab7132505248710482cf2d243e694",
+      "sha256": "7a0f9fe1bf0b63dab54452d9d3d7afafd45bc67a725ae219c91c780190e315ea",
       "space": {
         "advance": 260,
         "present": true
@@ -608,11 +690,11 @@
       "style": "Regular",
       "version": "Version 2.008; ttfautohint (v1.8) -l 8 -r 50 -G 200 -x 14 -D latn -f none -a qsq -X \"\""
     },
-    "NotoSansThaiLatin-Regular.ttf": {
-      "bytes": 583604,
+    "NotoSansThaiLatin-th-Shaped.ttf": {
+      "bytes": 611160,
       "family": "Noto Sans",
-      "file": "NotoSansThaiLatin-Regular.ttf",
-      "glyphCodepoints": 2927,
+      "file": "NotoSansThaiLatin-th-Shaped.ttf",
+      "glyphCodepoints": 3333,
       "license": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.",
       "licenseUrl": "http://scripts.sil.org/OFL",
       "metrics": {
@@ -673,7 +755,7 @@
         ]
       },
       "postScriptName": "NotoSans-Regular",
-      "sha256": "587d24571c0509bf756c9062ad58556fdfbd00163660167557ce1515ebbbb631",
+      "sha256": "b38121daf53fb4e4ed9f7b4bf6423e2237712ed565312ec59212b6817685a887",
       "space": {
         "advance": 260,
         "present": true
@@ -683,8 +765,8 @@
     }
   },
   "gates": {
-    "bidirectionalLayout": "not-run",
-    "complexScriptShaping": "not-run",
+    "bidirectionalLayout": "static-pass-runtime-not-run",
+    "complexScriptShaping": "pass",
     "fontBinaryIntegrity": "pass",
     "runtimeReadability": "not-run",
     "staticGlyphCoverage": "pass"
@@ -693,7 +775,18 @@
   "locales": {
     "ar": {
       "bidirectionalLayoutRequired": true,
-      "font": "NotoSansArabicLatin-Regular.ttf",
+      "complexScript": {
+        "exactEntries": 3059,
+        "generatedPuaCodepoints": 264,
+        "malformedEntries": 0,
+        "map": "ar.shaping.json",
+        "mapSha256": "b5cf6dc2c2a337d23dfa4d323cd15bd2bc3a4f94f17900bc03ec9a7073334269",
+        "missingPuaCodepoints": [],
+        "spanEntries": 6319,
+        "staticPreparation": "pass",
+        "unmappedScriptValues": 0
+      },
+      "font": "NotoSansArabicLatin-ar-Shaped.ttf",
       "formattingControls": [],
       "imagePlan": {
         "path": "ar.images.manual.json",
@@ -705,7 +798,7 @@
         "path": "ar.overlay.json",
         "sha256": "5fde568e0740fa1a5f5ddb70270a25e9789cfc27750eb1fd9daba3db53b9ca1c"
       },
-      "renderedCodepointCount": 127,
+      "renderedCodepointCount": 128,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -727,6 +820,7 @@
         "U+0038",
         "U+0039",
         "U+003A",
+        "U+003C",
         "U+003E",
         "U+0041",
         "U+0042",
@@ -842,6 +936,7 @@
     },
     "bg": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSans-Regular.ttf",
       "formattingControls": [],
       "imagePlan": {
@@ -854,7 +949,7 @@
         "path": "bg.overlay.json",
         "sha256": "f2dca0d9c98cc58a8bcd3a4c4363f6b37e8b469ca6eda4b3047a80625d9fd081"
       },
-      "renderedCodepointCount": 142,
+      "renderedCodepointCount": 143,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -877,6 +972,7 @@
         "U+0038",
         "U+0039",
         "U+003A",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -1006,6 +1102,7 @@
     },
     "cs": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSans-Regular.ttf",
       "formattingControls": [],
       "imagePlan": {
@@ -1018,7 +1115,7 @@
         "path": "cs.overlay.json",
         "sha256": "cd85295dca362adf926d222f205b73b8f81ac80ee64dfc9fe73c1a24f384da50"
       },
-      "renderedCodepointCount": 113,
+      "renderedCodepointCount": 114,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -1041,6 +1138,7 @@
         "U+0038",
         "U+0039",
         "U+003A",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -1141,6 +1239,7 @@
     },
     "de": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSans-Regular.ttf",
       "formattingControls": [],
       "imagePlan": {
@@ -1153,7 +1252,7 @@
         "path": "de.overlay.json",
         "sha256": "783050a36e58ef7f58e52a8a7d59170c9a61d6193f164acad0d29f858dfa0f91"
       },
-      "renderedCodepointCount": 93,
+      "renderedCodepointCount": 94,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -1178,6 +1277,7 @@
         "U+0039",
         "U+003A",
         "U+003B",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -1256,6 +1356,7 @@
     },
     "el": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSans-Regular.ttf",
       "formattingControls": [],
       "imagePlan": {
@@ -1268,7 +1369,7 @@
         "path": "el.overlay.json",
         "sha256": "96a97ca94cd8b00fe6869466b28d2473b3c9f926356fe9f162a88aadecea483a"
       },
-      "renderedCodepointCount": 151,
+      "renderedCodepointCount": 152,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -1292,6 +1393,7 @@
         "U+0039",
         "U+003A",
         "U+003B",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -1429,6 +1531,7 @@
     },
     "es": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSans-Regular.ttf",
       "formattingControls": [],
       "imagePlan": {
@@ -1441,7 +1544,7 @@
         "path": "es.overlay.json",
         "sha256": "198e34bdcab787e538b9e2f787c9ffe6d006034585dcd3104cb298917fcca004"
       },
-      "renderedCodepointCount": 99,
+      "renderedCodepointCount": 100,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -1465,6 +1568,7 @@
         "U+0039",
         "U+003A",
         "U+003B",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -1550,6 +1654,7 @@
     },
     "es-419": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSans-Regular.ttf",
       "formattingControls": [],
       "imagePlan": {
@@ -1562,7 +1667,7 @@
         "path": "es-419.overlay.json",
         "sha256": "2bdec59dd5e9012877d579e7be64b1e5c0300d1b00353556f23397c6fd1b3247"
       },
-      "renderedCodepointCount": 98,
+      "renderedCodepointCount": 99,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -1585,6 +1690,7 @@
         "U+0039",
         "U+003A",
         "U+003B",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -1670,7 +1776,18 @@
     },
     "fa": {
       "bidirectionalLayoutRequired": true,
-      "font": "NotoSansArabicLatin-Regular.ttf",
+      "complexScript": {
+        "exactEntries": 3063,
+        "generatedPuaCodepoints": 175,
+        "malformedEntries": 0,
+        "map": "fa.shaping.json",
+        "mapSha256": "931784bbffb9442412ab149e5de51a94799d084b02cf7d8888696a87e39a5df9",
+        "missingPuaCodepoints": [],
+        "spanEntries": 4671,
+        "staticPreparation": "pass",
+        "unmappedScriptValues": 0
+      },
+      "font": "NotoSansArabicLatin-fa-Shaped.ttf",
       "formattingControls": [
         {
           "bidiClass": "BN",
@@ -1690,7 +1807,7 @@
         "path": "fa.overlay.json",
         "sha256": "8fdbf77e9e9cedd886fa026f06343d6d346072ce3ec690dcfa351086d38b545f"
       },
-      "renderedCodepointCount": 125,
+      "renderedCodepointCount": 126,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -1711,6 +1828,7 @@
         "U+0038",
         "U+0039",
         "U+003A",
+        "U+003C",
         "U+003E",
         "U+0041",
         "U+0042",
@@ -1825,6 +1943,7 @@
     },
     "fil": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSans-Regular.ttf",
       "formattingControls": [],
       "imagePlan": {
@@ -1837,7 +1956,7 @@
         "path": "fil.overlay.json",
         "sha256": "8350641441ccb3713584fdb1fa614611f32babf26ca31dfdab33c8e285957249"
       },
-      "renderedCodepointCount": 89,
+      "renderedCodepointCount": 90,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -1862,6 +1981,7 @@
         "U+0039",
         "U+003A",
         "U+003B",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -1936,6 +2056,7 @@
     },
     "fr": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSans-Regular.ttf",
       "formattingControls": [],
       "imagePlan": {
@@ -1948,7 +2069,7 @@
         "path": "fr.overlay.json",
         "sha256": "9fa8397fdc47659c1f1f8d7ecf7ae3f84600cc972bc250cc275ac06cfc66adc7"
       },
-      "renderedCodepointCount": 102,
+      "renderedCodepointCount": 103,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -1971,6 +2092,7 @@
         "U+0039",
         "U+003A",
         "U+003B",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -2060,7 +2182,18 @@
     },
     "he": {
       "bidirectionalLayoutRequired": true,
-      "font": "NotoSansHebrewLatin-Regular.ttf",
+      "complexScript": {
+        "exactEntries": 3018,
+        "generatedPuaCodepoints": 129,
+        "malformedEntries": 0,
+        "map": "he.shaping.json",
+        "mapSha256": "e387c0d76633957da61a85bd4232e9f3fd57b9a6c1d2dc3fab63df986becb11a",
+        "missingPuaCodepoints": [],
+        "spanEntries": 5040,
+        "staticPreparation": "pass",
+        "unmappedScriptValues": 0
+      },
+      "font": "NotoSansHebrewLatin-he-Shaped.ttf",
       "formattingControls": [],
       "imagePlan": {
         "path": "he.images.manual.json",
@@ -2072,7 +2205,7 @@
         "path": "he.overlay.json",
         "sha256": "34e567e21d90203147628a1fc3a16a88f40506da33ce4c88f1b57e32d22844c0"
       },
-      "renderedCodepointCount": 124,
+      "renderedCodepointCount": 125,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -2097,6 +2230,7 @@
         "U+0039",
         "U+003A",
         "U+003B",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -2206,7 +2340,18 @@
     },
     "hi": {
       "bidirectionalLayoutRequired": false,
-      "font": "NotoSansDevanagariLatin-Regular.ttf",
+      "complexScript": {
+        "exactEntries": 3067,
+        "generatedPuaCodepoints": 278,
+        "malformedEntries": 0,
+        "map": "hi.shaping.json",
+        "mapSha256": "7ac881e824dfe12fa58e3d9cba216c322c0d0c9bb3040c2717e65dd20ef2b190",
+        "missingPuaCodepoints": [],
+        "spanEntries": 3288,
+        "staticPreparation": "pass",
+        "unmappedScriptValues": 0
+      },
+      "font": "NotoSansDevanagariLatin-hi-Shaped.ttf",
       "formattingControls": [],
       "imagePlan": {
         "path": "hi.images.manual.json",
@@ -2218,7 +2363,7 @@
         "path": "hi.overlay.json",
         "sha256": "ce92529448e92f93e0ccf50dc3d030ea11b8b036274f8479a81ee282e3de166d"
       },
-      "renderedCodepointCount": 146,
+      "renderedCodepointCount": 147,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -2243,6 +2388,7 @@
         "U+0039",
         "U+003A",
         "U+003B",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -2374,6 +2520,7 @@
     },
     "hu": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSans-Regular.ttf",
       "formattingControls": [],
       "imagePlan": {
@@ -2386,7 +2533,7 @@
         "path": "hu.overlay.json",
         "sha256": "2fd399d73d6c145907a878be267b9e86d4d3a5f52e125a469108394c6507e7d2"
       },
-      "renderedCodepointCount": 101,
+      "renderedCodepointCount": 102,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -2410,6 +2557,7 @@
         "U+0039",
         "U+003A",
         "U+003B",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -2497,6 +2645,7 @@
     },
     "id": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSans-Regular.ttf",
       "formattingControls": [],
       "imagePlan": {
@@ -2509,7 +2658,7 @@
         "path": "id.overlay.json",
         "sha256": "7406e91b1c09cf20f169f5ed6a31ca2b0ac32c3554a6242908ede9e95b306a57"
       },
-      "renderedCodepointCount": 88,
+      "renderedCodepointCount": 89,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -2535,6 +2684,7 @@
         "U+0039",
         "U+003A",
         "U+003B",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -2607,6 +2757,7 @@
     },
     "it": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSans-Regular.ttf",
       "formattingControls": [],
       "imagePlan": {
@@ -2619,7 +2770,7 @@
         "path": "it.overlay.json",
         "sha256": "3d76651a2b8a77a50e336aed17503ca26fb12ae3760bad0eb952f4e092b030e6"
       },
-      "renderedCodepointCount": 95,
+      "renderedCodepointCount": 96,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -2644,6 +2795,7 @@
         "U+0039",
         "U+003A",
         "U+003B",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -2724,6 +2876,7 @@
     },
     "ja": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSansCJKjp-Regular.otf",
       "formattingControls": [],
       "imagePlan": {
@@ -4046,6 +4199,7 @@
     },
     "ko": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSansCJKkr-Regular.otf",
       "formattingControls": [],
       "imagePlan": {
@@ -4058,7 +4212,7 @@
         "path": "ko.overlay.json",
         "sha256": "f337eff7f5ccaaaf521cd27db93b44d09c48f98b6ea7083afd284b6ce0ec6535"
       },
-      "renderedCodepointCount": 1002,
+      "renderedCodepointCount": 1003,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -4081,6 +4235,7 @@
         "U+0038",
         "U+0039",
         "U+003A",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -5070,6 +5225,7 @@
     },
     "nl": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSans-Regular.ttf",
       "formattingControls": [],
       "imagePlan": {
@@ -5082,7 +5238,7 @@
         "path": "nl.overlay.json",
         "sha256": "7e291e7a734af572c7cbf7dc26d80cce83f6661d0122dffa3f6f9127c671c554"
       },
-      "renderedCodepointCount": 99,
+      "renderedCodepointCount": 100,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -5108,6 +5264,7 @@
         "U+0039",
         "U+003A",
         "U+003B",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -5191,6 +5348,7 @@
     },
     "pl": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSans-Regular.ttf",
       "formattingControls": [],
       "imagePlan": {
@@ -5203,7 +5361,7 @@
         "path": "pl.overlay.json",
         "sha256": "2da3b07353a849881056ade54ccf6a00d958f4e5e7b1bd7cccb7b123cab54090"
       },
-      "renderedCodepointCount": 103,
+      "renderedCodepointCount": 104,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -5228,6 +5386,7 @@
         "U+0039",
         "U+003A",
         "U+003B",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -5316,6 +5475,7 @@
     },
     "pt-BR": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSans-Regular.ttf",
       "formattingControls": [],
       "imagePlan": {
@@ -5328,7 +5488,7 @@
         "path": "pt-BR.overlay.json",
         "sha256": "aeea53ce174de1b0e88bcd8084bb23e904cc128f200ec1a70d337213c5d3cd49"
       },
-      "renderedCodepointCount": 109,
+      "renderedCodepointCount": 110,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -5353,6 +5513,7 @@
         "U+0039",
         "U+003A",
         "U+003B",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -5447,6 +5608,7 @@
     },
     "ro": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSans-Regular.ttf",
       "formattingControls": [],
       "imagePlan": {
@@ -5459,7 +5621,7 @@
         "path": "ro.overlay.json",
         "sha256": "529513feb83d251c52a50ae33ce2ece4720fd66cb65d443a4d07afacce8f40bd"
       },
-      "renderedCodepointCount": 97,
+      "renderedCodepointCount": 98,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -5483,6 +5645,7 @@
         "U+0039",
         "U+003A",
         "U+003B",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -5566,6 +5729,7 @@
     },
     "ru": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSans-Regular.ttf",
       "formattingControls": [],
       "imagePlan": {
@@ -5578,7 +5742,7 @@
         "path": "ru.overlay.json",
         "sha256": "2a10120b5412fd627045a5bf137774287dba4048c5a2b713fe102f70df038be2"
       },
-      "renderedCodepointCount": 148,
+      "renderedCodepointCount": 149,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -5601,6 +5765,7 @@
         "U+0039",
         "U+003A",
         "U+003B",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -5736,6 +5901,7 @@
     },
     "sr": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSans-Regular.ttf",
       "formattingControls": [],
       "imagePlan": {
@@ -5748,7 +5914,7 @@
         "path": "sr.overlay.json",
         "sha256": "c9908e822e99d65dd52c2ed83748b4f5653144161b3200e20440b77b8bce78be"
       },
-      "renderedCodepointCount": 143,
+      "renderedCodepointCount": 144,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -5771,6 +5937,7 @@
         "U+0039",
         "U+003A",
         "U+003B",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -5901,6 +6068,7 @@
     },
     "sw": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSans-Regular.ttf",
       "formattingControls": [],
       "imagePlan": {
@@ -5913,7 +6081,7 @@
         "path": "sw.overlay.json",
         "sha256": "b0ffa4cd62d68dba1e657c4dccbc7bfccdfdfd7a172aee0db3e6d69a828cb473"
       },
-      "renderedCodepointCount": 86,
+      "renderedCodepointCount": 87,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -5938,6 +6106,7 @@
         "U+0039",
         "U+003A",
         "U+003B",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -6009,7 +6178,18 @@
     },
     "th": {
       "bidirectionalLayoutRequired": false,
-      "font": "NotoSansThaiLatin-Regular.ttf",
+      "complexScript": {
+        "exactEntries": 3054,
+        "generatedPuaCodepoints": 406,
+        "malformedEntries": 0,
+        "map": "th.shaping.json",
+        "mapSha256": "fdb1e14574ae03853e5fc0cb71d8e530373ff31e74be02823927f9f1f9cf3649",
+        "missingPuaCodepoints": [],
+        "spanEntries": 4654,
+        "staticPreparation": "pass",
+        "unmappedScriptValues": 0
+      },
+      "font": "NotoSansThaiLatin-th-Shaped.ttf",
       "formattingControls": [],
       "imagePlan": {
         "path": "th.images.manual.json",
@@ -6021,7 +6201,7 @@
         "path": "th.overlay.json",
         "sha256": "8b3844a39cb390680e1d5bdd621bf0a77c5591748d8ccf91a1ab1d0ab5aa1122"
       },
-      "renderedCodepointCount": 148,
+      "renderedCodepointCount": 149,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -6044,6 +6224,7 @@
         "U+0038",
         "U+0039",
         "U+003A",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -6179,6 +6360,7 @@
     },
     "tr": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSans-Regular.ttf",
       "formattingControls": [],
       "imagePlan": {
@@ -6191,7 +6373,7 @@
         "path": "tr.overlay.json",
         "sha256": "72e792b98f7b8d2584899f8f36d0864d40922fc0ba31c31326ba15a5c42c996a"
       },
-      "renderedCodepointCount": 101,
+      "renderedCodepointCount": 102,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -6217,6 +6399,7 @@
         "U+0039",
         "U+003A",
         "U+003B",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -6302,6 +6485,7 @@
     },
     "uk": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSans-Regular.ttf",
       "formattingControls": [],
       "imagePlan": {
@@ -6314,7 +6498,7 @@
         "path": "uk.overlay.json",
         "sha256": "66b548f5d1c7b1eb7445fce9327b789329909abd1c547b30a92175f834f9d949"
       },
-      "renderedCodepointCount": 149,
+      "renderedCodepointCount": 150,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -6339,6 +6523,7 @@
         "U+0039",
         "U+003A",
         "U+003B",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -6473,6 +6658,7 @@
     },
     "vi": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSans-Regular.ttf",
       "formattingControls": [],
       "imagePlan": {
@@ -6485,7 +6671,7 @@
         "path": "vi.overlay.json",
         "sha256": "3227ec781c4de27a80be87c3afd3faea18be06618b8d08860ed1ae2f13553d94"
       },
-      "renderedCodepointCount": 210,
+      "renderedCodepointCount": 211,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -6509,6 +6695,7 @@
         "U+0038",
         "U+0039",
         "U+003A",
+        "U+003C",
         "U+003E",
         "U+003F",
         "U+0041",
@@ -6705,6 +6892,7 @@
     },
     "zh": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSansCJKsc-Regular.otf",
       "formattingControls": [],
       "imagePlan": {
@@ -6717,7 +6905,7 @@
         "path": "zh.overlay.json",
         "sha256": "96f39c68c6b2ac1025ede9716e88fb1ce3f03dc644ab9ade672beda92a474017"
       },
-      "renderedCodepointCount": 1730,
+      "renderedCodepointCount": 1731,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -6739,6 +6927,7 @@
         "U+0038",
         "U+0039",
         "U+003A",
+        "U+003C",
         "U+003E",
         "U+0041",
         "U+0042",
@@ -8457,6 +8646,7 @@
     },
     "zh-TW": {
       "bidirectionalLayoutRequired": false,
+      "complexScript": null,
       "font": "NotoSansCJKtc-Regular.otf",
       "formattingControls": [],
       "imagePlan": {
@@ -8469,7 +8659,7 @@
         "path": "zh-TW.overlay.json",
         "sha256": "384e16283b692f917e3a2c5935ce5701b28f1631d972524a410e75ca311adc72"
       },
-      "renderedCodepointCount": 1759,
+      "renderedCodepointCount": 1760,
       "renderedCodepoints": [
         "U+0020",
         "U+0021",
@@ -8489,6 +8679,7 @@
         "U+0038",
         "U+0039",
         "U+003A",
+        "U+003C",
         "U+003E",
         "U+0041",
         "U+0042",

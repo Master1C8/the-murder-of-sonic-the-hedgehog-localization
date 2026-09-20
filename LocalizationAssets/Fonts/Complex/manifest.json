@@ -1,0 +1,98 @@
+{
+  "kind": "vn-revival-complex-script-fonts",
+  "locales": [
+    {
+      "font": "NotoSansArabicLatin-ar-Shaped.ttf",
+      "fontBytes": 748844,
+      "fontSha256": "ae7585dcbcab7397d927976c26906841209d0a5cbfc20cd08b7f299be6c36dfc",
+      "glyphInstances": 264,
+      "imageEntries": 9,
+      "locale": "ar",
+      "logicalCorpusSha256": "cd5387b0c3e05677bdb93de03a96eae847a1831c50462fb17a8b7ca181bdef63",
+      "map": "ar.shaping.json",
+      "mapSha256": "b5cf6dc2c2a337d23dfa4d323cd15bd2bc3a4f94f17900bc03ec9a7073334269",
+      "runtimeEntries": 3050
+    },
+    {
+      "font": "NotoSansArabicLatin-fa-Shaped.ttf",
+      "fontBytes": 739660,
+      "fontSha256": "a0b85d33b0fbd8ad6c4c68c74d5ddc57bb53eccbe2a803ab9f595067a5fe82a5",
+      "glyphInstances": 175,
+      "imageEntries": 7,
+      "locale": "fa",
+      "logicalCorpusSha256": "85f2bef9ecdae1aa344d27ba1bde51ccde6346ef9dcbafeb664a2e96f09daecf",
+      "map": "fa.shaping.json",
+      "mapSha256": "931784bbffb9442412ab149e5de51a94799d084b02cf7d8888696a87e39a5df9",
+      "runtimeEntries": 3056
+    },
+    {
+      "font": "NotoSansHebrewLatin-he-Shaped.ttf",
+      "fontBytes": 588420,
+      "fontSha256": "7a0f9fe1bf0b63dab54452d9d3d7afafd45bc67a725ae219c91c780190e315ea",
+      "glyphInstances": 129,
+      "imageEntries": 7,
+      "locale": "he",
+      "logicalCorpusSha256": "389fb5391b7798cd78be4d3e3c05309c2cc307e0c9623ac1b3e7fd6941384181",
+      "map": "he.shaping.json",
+      "mapSha256": "e387c0d76633957da61a85bd4232e9f3fd57b9a6c1d2dc3fab63df986becb11a",
+      "runtimeEntries": 3011
+    },
+    {
+      "font": "NotoSansDevanagariLatin-hi-Shaped.ttf",
+      "fontBytes": 733632,
+      "fontSha256": "4ce4a89fabec2c8edc4a05afa8af53535ee810c63f724fd36a36c758fd762abf",
+      "glyphInstances": 278,
+      "imageEntries": 8,
+      "locale": "hi",
+      "logicalCorpusSha256": "c0f0278872caf63b8d6dfc1eccb43c59aa7d0bcc64bdab7a92fa019bd4d8944a",
+      "map": "hi.shaping.json",
+      "mapSha256": "7ac881e824dfe12fa58e3d9cba216c322c0d0c9bb3040c2717e65dd20ef2b190",
+      "runtimeEntries": 3059
+    },
+    {
+      "font": "NotoSansThaiLatin-th-Shaped.ttf",
+      "fontBytes": 611160,
+      "fontSha256": "b38121daf53fb4e4ed9f7b4bf6423e2237712ed565312ec59212b6817685a887",
+      "glyphInstances": 406,
+      "imageEntries": 7,
+      "locale": "th",
+      "logicalCorpusSha256": "8b4446a214efc9de666a6fd8980a59730c02b3c9c869b5bc83a955d1ecfc7d0a",
+      "map": "th.shaping.json",
+      "mapSha256": "fdb1e14574ae03853e5fc0cb71d8e530373ff31e74be02823927f9f1f9cf3649",
+      "runtimeEntries": 3047
+    }
+  ],
+  "outputs": {
+    "NotoSansArabicLatin-ar-Shaped.ttf": {
+      "bytes": 748844,
+      "locale": "ar",
+      "sha256": "ae7585dcbcab7397d927976c26906841209d0a5cbfc20cd08b7f299be6c36dfc",
+      "shapingMap": "ar.shaping.json"
+    },
+    "NotoSansArabicLatin-fa-Shaped.ttf": {
+      "bytes": 739660,
+      "locale": "fa",
+      "sha256": "a0b85d33b0fbd8ad6c4c68c74d5ddc57bb53eccbe2a803ab9f595067a5fe82a5",
+      "shapingMap": "fa.shaping.json"
+    },
+    "NotoSansDevanagariLatin-hi-Shaped.ttf": {
+      "bytes": 733632,
+      "locale": "hi",
+      "sha256": "4ce4a89fabec2c8edc4a05afa8af53535ee810c63f724fd36a36c758fd762abf",
+      "shapingMap": "hi.shaping.json"
+    },
+    "NotoSansHebrewLatin-he-Shaped.ttf": {
+      "bytes": 588420,
+      "locale": "he",
+      "sha256": "7a0f9fe1bf0b63dab54452d9d3d7afafd45bc67a725ae219c91c780190e315ea",
+      "shapingMap": "he.shaping.json"
+    },
+    "NotoSansThaiLatin-th-Shaped.ttf": {
+      "bytes": 611160,
+      "locale": "th",
+      "sha256": "b38121daf53fb4e4ed9f7b4bf6423e2237712ed565312ec59212b6817685a887",
+      "shapingMap": "th.shaping.json"
+    }
+  },
+  "schemaVersion": 1
+}

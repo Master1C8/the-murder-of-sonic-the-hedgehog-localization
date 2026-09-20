@@ -137,11 +137,11 @@ LOCALE_FALLBACK_FONTS = {
 }
 LOCALE_FALLBACK_FONTS.update(
     {
-        "ar": "NotoSansArabicLatin-Regular.ttf",
-        "fa": "NotoSansArabicLatin-Regular.ttf",
-        "he": "NotoSansHebrewLatin-Regular.ttf",
-        "hi": "NotoSansDevanagariLatin-Regular.ttf",
-        "th": "NotoSansThaiLatin-Regular.ttf",
+        "ar": "NotoSansArabicLatin-ar-Shaped.ttf",
+        "fa": "NotoSansArabicLatin-fa-Shaped.ttf",
+        "he": "NotoSansHebrewLatin-he-Shaped.ttf",
+        "hi": "NotoSansDevanagariLatin-hi-Shaped.ttf",
+        "th": "NotoSansThaiLatin-th-Shaped.ttf",
         "ja": "NotoSansCJKjp-Regular.otf",
         "ko": "NotoSansCJKkr-Regular.otf",
         "zh": "NotoSansCJKsc-Regular.otf",
@@ -161,6 +161,14 @@ LAYOUT_OVERRIDE_FIELDS = {
 LEVEL0_LAYOUT_FIELD_OFFSETS = {
     "m_fontSize": 192,
     "m_fontSizeBase": 196,
+}
+
+COMPLEX_SCRIPT_MODES = {
+    "ar": 1,
+    "fa": 1,
+    "he": 2,
+    "hi": 3,
+    "th": 4,
 }
 
 
@@ -1325,6 +1333,108 @@ def preserve_edge_whitespace(source: str, replacement: str) -> str:
     return leading + replacement.strip() + trailing
 
 
+def contains_complex_script(value: str, mode: int) -> bool:
+    for character in value:
+        codepoint = ord(character)
+        if mode == 1 and (
+            0x0600 <= codepoint <= 0x06FF
+            or 0x0750 <= codepoint <= 0x077F
+            or 0x08A0 <= codepoint <= 0x08FF
+        ):
+            return True
+        if mode == 2 and 0x0590 <= codepoint <= 0x05FF:
+            return True
+        if mode == 3 and (
+            0x0900 <= codepoint <= 0x097F or 0xA8E0 <= codepoint <= 0xA8FF
+        ):
+            return True
+        if mode == 4 and 0x0E00 <= codepoint <= 0x0E7F:
+            return True
+    return False
+
+
+def shape_text(value: str, shaping: dict[str, Any] | None) -> str:
+    """Apply an exact build-time shaping entry while preserving edge whitespace."""
+    if shaping is None:
+        return value
+    exact = shaping["exact"]
+    shaped = exact.get(value)
+    if shaped is not None:
+        return shaped
+    stripped = value.strip()
+    shaped = exact.get(stripped)
+    if shaped is None:
+        if not contains_complex_script(value, shaping["mode"]):
+            return value
+        raise SystemExit(f"Complex-script shaping map has no exact entry for {value!r}")
+    leading = value[: len(value) - len(value.lstrip())]
+    trailing = value[len(value.rstrip()) :]
+    return leading + shaped + trailing
+
+
+def shape_rows(
+    rows: list[tuple[dict[str, Any], str]],
+    shaping: dict[str, Any] | None,
+) -> list[tuple[dict[str, Any], str]]:
+    if shaping is None:
+        return rows
+    return [(row, shape_text(translation, shaping)) for row, translation in rows]
+
+
+def load_shaping_map(
+    path: Path,
+    target_locale: str,
+    overlay_path: Path,
+    font_file: Path,
+) -> dict[str, Any]:
+    document = json.loads(path.read_text(encoding="utf-8"))
+    if document.get("kind") != "vn-revival-complex-script-map":
+        raise SystemExit(f"Unexpected shaping-map kind: {path}")
+    if document.get("locale") != target_locale:
+        raise SystemExit(f"Shaping-map locale mismatch: {path}")
+    if document.get("overlay", {}).get("sha256") != sha256_file(overlay_path):
+        raise SystemExit(f"Shaping-map overlay hash mismatch: {path}")
+    image_path = overlay_path.with_name(f"{target_locale}.images.manual.json")
+    if not image_path.is_file() or document.get("imagePlan", {}).get("sha256") != sha256_file(image_path):
+        raise SystemExit(f"Shaping-map image-plan hash mismatch: {path}")
+    if document.get("preparedFont") != font_file.name:
+        raise SystemExit(f"Shaping-map prepared-font name mismatch: {path}")
+    if document.get("preparedFontSha256") != sha256_file(font_file):
+        raise SystemExit(f"Shaping-map prepared-font hash mismatch: {path}")
+    expected_rtl = target_locale in {"ar", "fa", "he"}
+    if document.get("rightToLeft") is not expected_rtl:
+        raise SystemExit(f"Shaping-map direction mismatch: {path}")
+
+    exact: dict[str, str] = {}
+    for key in ("runtimeEntries", "imageEntries"):
+        for row in document.get(key, []):
+            logical = row.get("logical")
+            shaped = row.get("shaped")
+            if not isinstance(logical, str) or not isinstance(shaped, str) or logical == shaped:
+                raise SystemExit(f"Malformed {key} row in {path}")
+            previous = exact.get(logical)
+            if previous is not None and previous != shaped:
+                raise SystemExit(f"Conflicting exact shaping entry for {logical!r}")
+            exact[logical] = shaped
+    spans: list[tuple[str, str]] = []
+    for row in document.get("spanEntries", []):
+        logical = row.get("logical")
+        shaped = row.get("shaped")
+        if not isinstance(logical, str) or not logical or not isinstance(shaped, str):
+            raise SystemExit(f"Malformed span entry in {path}")
+        spans.append((logical, shaped))
+    if not exact or not spans:
+        raise SystemExit(f"Shaping map is empty: {path}")
+    return {
+        "path": path,
+        "document": document,
+        "exact": exact,
+        "spans": spans,
+        "rightToLeft": expected_rtl,
+        "mode": COMPLEX_SCRIPT_MODES[target_locale],
+    }
+
+
 def localized_story_value(row: dict[str, Any], translation: str) -> str:
     body_source = row.get("body", row["original"])
     body = preserve_edge_whitespace(body_source, translation)
@@ -1728,12 +1838,30 @@ def replace_level0_layout(
     return bytes(patched)
 
 
+def replace_level0_rtl(raw: bytes, enabled: bool, identifier: str) -> bytes:
+    if not enabled:
+        return raw
+    if len(raw) < 92:
+        raise SystemExit(f"Serialized component is too short for {identifier}")
+    text_length = struct.unpack_from("<I", raw, 88)[0]
+    text_padded_end = (92 + text_length + 3) & ~3
+    if text_padded_end >= len(raw):
+        raise SystemExit(f"Serialized RTL field is truncated for {identifier}")
+    current = raw[text_padded_end]
+    if current not in {0, 1}:
+        raise SystemExit(f"Unexpected serialized RTL flag for {identifier}: {current}")
+    patched = bytearray(raw)
+    patched[text_padded_end] = 1
+    return bytes(patched)
+
+
 def patch_level0(
     UnityPy: Any,
     source: Path,
     output: Path,
     rows: list[tuple[dict[str, Any], str]],
     layout_overrides: dict[str, dict[str, float]],
+    right_to_left: bool = False,
 ) -> int:
     environment = UnityPy.load(str(source))
     objects = {getattr(obj, "path_id", 0): obj for obj in environment.objects}
@@ -1744,6 +1872,7 @@ def patch_level0(
             raise SystemExit(f"Object was not found for {row['id']}")
         localized = preserve_edge_whitespace(row["original"], translation)
         raw = replace_level0_text(obj.get_raw_data(), row["original"], localized, row["id"])
+        raw = replace_level0_rtl(raw, right_to_left, row["id"])
         raw = replace_level0_layout(raw, layout_overrides.get(row["id"], {}), row["id"])
         obj.set_raw_data(raw)
     translated_ids = {row["id"] for row, _ in rows}
@@ -1762,6 +1891,7 @@ def patch_defaultgroup_bundle(
     layout_overrides: dict[str, dict[str, float]],
     font_file: Path | None = None,
     font_name: str | None = None,
+    right_to_left: bool = False,
 ) -> tuple[int, int, int]:
     environment = UnityPy.load(str(source))
     objects = {getattr(obj, "path_id", 0): obj for obj in environment.objects}
@@ -1786,6 +1916,10 @@ def patch_defaultgroup_bundle(
             if tree.get("m_text") != row["original"]:
                 raise SystemExit(f"Source mismatch for {row['id']}")
             tree["m_text"] = preserve_edge_whitespace(row["original"], translation)
+            if right_to_left:
+                if "m_isRightToLeft" not in tree:
+                    raise SystemExit(f"RTL field was not found for {row['id']}")
+                tree["m_isRightToLeft"] = 1
         for field, value in layout_overrides.get(identifier, {}).items():
             if field not in tree:
                 raise SystemExit(f"Layout field {field} was not found for {identifier}")
@@ -1863,7 +1997,9 @@ def patch_managed_assembly(
     rows: list[tuple[dict[str, Any], str]],
     speaker_labels: list[tuple[dict[str, Any], str]],
     save_location_labels: list[tuple[str, str]],
-) -> tuple[int, int, int]:
+    shaping: dict[str, Any] | None = None,
+    managed_reference_root: Path | None = None,
+) -> tuple[int, int, int, int]:
     compiler = shutil.which("mcs")
     runtime = shutil.which("mono")
     if compiler is None or runtime is None:
@@ -1874,6 +2010,8 @@ def patch_managed_assembly(
     patch_file = output.parent / "managed-string-patches.tsv"
     labels_file = output.parent / "speaker-display-labels.tsv"
     save_locations_file = output.parent / "save-location-display-labels.tsv"
+    text_shaper_file = output.parent / "VNRevival.TextShaper.dll"
+    shaping_resource = output.parent / "VNRevival.ShapingMap.tsv"
     lines = []
     source_pattern = re.compile(r"^(?P<type>.+)::(?P<method>.+)@IL_(?P<offset>[0-9A-Fa-f]+)$")
     for row, translation in rows:
@@ -1921,6 +2059,64 @@ def patch_managed_assembly(
     )
     if compile_result.returncode != 0:
         raise SystemExit("Managed patch helper compilation failed: " + compile_result.stderr.strip())
+    if shaping is not None:
+        if managed_reference_root is None:
+            raise SystemExit("Managed reference root is required for complex-script shaping")
+        text_mesh_pro = managed_reference_root / "Unity.TextMeshPro.dll"
+        core_module = managed_reference_root / "UnityEngine.CoreModule.dll"
+        unity_ui = managed_reference_root / "UnityEngine.UI.dll"
+        for dependency in (text_mesh_pro, core_module, unity_ui):
+            if not dependency.is_file():
+                raise SystemExit(f"Managed shaping dependency is missing: {dependency}")
+        resource_lines = [
+            "\t".join(
+                (
+                    "VNREVIVAL1",
+                    str(shaping["mode"]),
+                    "1" if shaping["rightToLeft"] else "0",
+                )
+            )
+        ]
+        for logical, shaped in sorted(shaping["exact"].items()):
+            resource_lines.append(
+                "\t".join(
+                    (
+                        "E",
+                        base64.b64encode(logical.encode("utf-8")).decode("ascii"),
+                        base64.b64encode(shaped.encode("utf-8")).decode("ascii"),
+                    )
+                )
+            )
+        for logical, shaped in sorted(shaping["spans"]):
+            resource_lines.append(
+                "\t".join(
+                    (
+                        "S",
+                        base64.b64encode(logical.encode("utf-8")).decode("ascii"),
+                        base64.b64encode(shaped.encode("utf-8")).decode("ascii"),
+                    )
+                )
+            )
+        shaping_resource.write_text("\n".join(resource_lines) + "\n", encoding="utf-8")
+        shaper_compile = subprocess.run(
+            [
+                compiler,
+                "-nologo",
+                "-target:library",
+                f"-out:{text_shaper_file}",
+                f"-lib:{managed_reference_root}",
+                "-r:Unity.TextMeshPro.dll",
+                "-r:UnityEngine.CoreModule.dll",
+                "-r:UnityEngine.UI.dll",
+                f"-resource:{shaping_resource},VNRevival.ShapingMap",
+                str(Path(__file__).with_name("VNRevivalTextShaper.cs")),
+            ],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        if shaper_compile.returncode != 0:
+            raise SystemExit("Text-shaper compilation failed: " + shaper_compile.stderr.strip())
     patch_result = subprocess.run(
         [
             runtime,
@@ -1930,18 +2126,23 @@ def patch_managed_assembly(
             str(patch_file),
             str(labels_file),
             str(save_locations_file),
-        ],
+        ] + ([str(text_shaper_file)] if shaping is not None else []),
         check=False,
         capture_output=True,
         text=True,
     )
     if patch_result.returncode != 0:
         raise SystemExit("Managed string patch failed: " + patch_result.stderr.strip())
+    redirect_match = re.search(r"(\d+) text-shaper redirects", patch_result.stdout)
+    text_shaper_redirects = int(redirect_match.group(1)) if redirect_match else 0
+    if shaping is not None and text_shaper_redirects == 0:
+        raise SystemExit("Managed string patch reported no text-shaper redirects")
     helper.unlink(missing_ok=True)
     patch_file.unlink(missing_ok=True)
     labels_file.unlink(missing_ok=True)
     save_locations_file.unlink(missing_ok=True)
-    return len(rows), len(speaker_labels), len(save_location_labels)
+    shaping_resource.unlink(missing_ok=True)
+    return len(rows), len(speaker_labels), len(save_location_labels), text_shaper_redirects
 
 
 def decode_7bit_integer(data: bytes, position: int) -> tuple[int, int]:
@@ -2059,6 +2260,37 @@ def build_runtime_patch(
         )
         if sha256_file(font_file) != expected_font_sha256:
             raise SystemExit(f"Prepared font hash does not match its manifest: {font_file}")
+    shaping_argument = getattr(args, "shaping_map", None)
+    shaping_path = shaping_argument.resolve() if shaping_argument is not None else None
+    shaping: dict[str, Any] | None = None
+    if target_locale in COMPLEX_SCRIPT_MODES:
+        if required_locale is None and shaping_path is None:
+            raise SystemExit(f"A complex-script shaping map is required for {target_locale}")
+        if shaping_path is not None:
+            if not shaping_path.is_file():
+                raise SystemExit(f"Complex-script shaping map is missing: {shaping_path}")
+            if font_file is None:
+                raise SystemExit("A prepared font is required with a shaping map")
+            output_manifest_row = font_manifest.get("outputs", {}).get(font_file.name, {})
+            if output_manifest_row.get("shapingMap") != shaping_path.name:
+                raise SystemExit(f"Prepared-font manifest does not select {shaping_path.name}")
+            locale_manifest_row = next(
+                (
+                    row
+                    for row in font_manifest.get("locales", [])
+                    if row.get("locale") == target_locale
+                ),
+                None,
+            )
+            if (
+                locale_manifest_row is None
+                or locale_manifest_row.get("map") != shaping_path.name
+                or locale_manifest_row.get("mapSha256") != sha256_file(shaping_path)
+            ):
+                raise SystemExit(f"Shaping-map hash does not match its manifest: {shaping_path}")
+            shaping = load_shaping_map(shaping_path, target_locale, args.overlay, font_file)
+    elif shaping_path is not None:
+        raise SystemExit(f"Locale {target_locale} does not use a complex-script shaping map")
     font_name = getattr(args, "font_name", None)
     if font_file is not None and not font_name:
         font_name = font_file.stem
@@ -2079,6 +2311,25 @@ def build_runtime_patch(
     sources = {key: verify_original_file(data_root, value, hashes) for key, value in relative_paths.items()}
     outputs = {key: output_root / PurePosixPath(value) for key, value in relative_paths.items()}
 
+    story_rows = translated_rows(inventory, overlay, "sharedassets0.assets::story")
+    level0_rows = shape_rows(translated_rows(inventory, overlay, "level0"), shaping)
+    defaultgroup_rows = shape_rows(
+        translated_rows(inventory, overlay, DEFAULTGROUP_BUNDLE), shaping
+    )
+    inventory_rows = shape_rows(
+        translated_rows(inventory, overlay, INVENTORY_BUNDLE), shaping
+    )
+    managed_rows = shape_rows(
+        translated_rows(inventory, overlay, "Managed/Assembly-CSharp.dll"), shaping
+    )
+    speaker_rows = shape_rows(
+        translated_rows(inventory, overlay, RUNTIME_SPEAKER_LABELS_ASSET), shaping
+    )
+    save_location_rows = [
+        (runtime_display, shape_text(translation, shaping))
+        for runtime_display, translation in save_location_display_labels(inventory, overlay)
+    ]
+
     counts: dict[str, int] = {}
     (
         counts["story"],
@@ -2088,7 +2339,7 @@ def build_runtime_patch(
         UnityPy,
         sources["story"],
         outputs["story"],
-        translated_rows(inventory, overlay, "sharedassets0.assets::story"),
+        story_rows,
         sources["defaultgroup"],
         font_file,
         font_name,
@@ -2097,12 +2348,13 @@ def build_runtime_patch(
         UnityPy,
         sources["level0"],
         outputs["level0"],
-        translated_rows(inventory, overlay, "level0"),
+        level0_rows,
         {
             identifier: fields
             for identifier, fields in overlay.get("layoutOverrides", {}).items()
             if identifier.startswith("unity:level0:")
         },
+        right_to_left=bool(shaping and shaping["rightToLeft"]),
     )
     (
         counts["defaultgroup"],
@@ -2112,7 +2364,7 @@ def build_runtime_patch(
         UnityPy,
         sources["defaultgroup"],
         outputs["defaultgroup"],
-        translated_rows(inventory, overlay, DEFAULTGROUP_BUNDLE),
+        defaultgroup_rows,
         {
             identifier: fields
             for identifier, fields in overlay.get("layoutOverrides", {}).items()
@@ -2120,24 +2372,28 @@ def build_runtime_patch(
         },
         font_file,
         font_name,
+        right_to_left=bool(shaping and shaping["rightToLeft"]),
     )
     counts["layoutOverrides"] = len(overlay.get("layoutOverrides", {}))
     counts["inventory"] = patch_inventory_bundle(
         UnityPy,
         sources["inventory"],
         outputs["inventory"],
-        translated_rows(inventory, overlay, INVENTORY_BUNDLE),
+        inventory_rows,
     )
     (
         counts["managed"],
         counts["speakerDisplayLabels"],
         counts["saveLocationDisplayLabels"],
+        counts["textShaperRedirects"],
     ) = patch_managed_assembly(
         sources["managed"],
         outputs["managed"],
-        translated_rows(inventory, overlay, "Managed/Assembly-CSharp.dll"),
-        translated_rows(inventory, overlay, RUNTIME_SPEAKER_LABELS_ASSET),
-        save_location_display_labels(inventory, overlay),
+        managed_rows,
+        speaker_rows,
+        save_location_rows,
+        shaping,
+        Path(inventory["source"]["dataRoot"]) / "Managed",
     )
     counts["catalogRecords"] = patch_addressables_catalog(
         sources["catalog"],
@@ -2165,6 +2421,17 @@ def build_runtime_patch(
                 "patchedBytes": outputs[key].stat().st_size,
             }
         )
+    if shaping is not None:
+        helper_output = output_root / "Managed/VNRevival.TextShaper.dll"
+        files.append(
+            {
+                "path": "Managed/VNRevival.TextShaper.dll",
+                "originalSha256": None,
+                "patchedSha256": sha256_file(helper_output),
+                "patchedBytes": helper_output.stat().st_size,
+                "newFile": True,
+            }
+        )
     manifest = {
         "schemaVersion": 1,
         "kind": manifest_kind,
@@ -2189,6 +2456,21 @@ def build_runtime_patch(
             "addressablesSourceFontPathId": DYNAMIC_FALLBACK_SOURCE_FONT,
             "addressablesFallbackFontAssetPathId": DYNAMIC_FALLBACK_FONT_ASSET,
         },
+        "shapingStrategy": (
+            {
+                "kind": "harfbuzz-pua-runtime-map",
+                "map": shaping_path.name if shaping_path is not None else None,
+                "mapSha256": sha256_file(shaping_path) if shaping_path is not None else None,
+                "preparedFontSha256": shaping["document"]["preparedFontSha256"],
+                "rightToLeft": shaping["rightToLeft"],
+                "staticPreparation": "pass",
+                "managedInterception": "pass",
+                "runtimeReadability": "not-run",
+                "visualQa": "not-run",
+            }
+            if shaping is not None
+            else None
+        ),
     }
     write_json(output_root / "development-patch-manifest.json", manifest)
     print(json.dumps(manifest, ensure_ascii=False, indent=2))
@@ -2391,6 +2673,11 @@ def parser() -> argparse.ArgumentParser:
     locale_patch_parser.add_argument("--inventory", type=Path, required=True)
     locale_patch_parser.add_argument("--overlay", type=Path, required=True)
     locale_patch_parser.add_argument("--font", type=Path, required=True)
+    locale_patch_parser.add_argument(
+        "--shaping-map",
+        type=Path,
+        help="required for Arabic, Persian, Hebrew, Hindi, and Thai",
+    )
     locale_patch_parser.add_argument("--font-name")
     locale_patch_parser.add_argument("--output", type=Path, required=True)
     locale_patch_parser.set_defaults(handler=build_locale_patch)

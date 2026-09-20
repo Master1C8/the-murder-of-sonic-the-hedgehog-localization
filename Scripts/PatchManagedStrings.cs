@@ -178,12 +178,55 @@ internal static class PatchManagedStrings
         return labels;
     }
 
+    private static int RedirectAllTextAssignments(
+        AssemblyDefinition assembly,
+        string shaperAssemblyPath
+    )
+    {
+        AssemblyDefinition shaperAssembly = AssemblyDefinition.ReadAssembly(
+            shaperAssemblyPath,
+            new ReaderParameters { ReadSymbols = false, InMemory = true }
+        );
+        MethodDefinition shaper = shaperAssembly.MainModule.Types
+            .Single(item => item.FullName == "VNRevival.TextShaper")
+            .Methods.Single(item => item.Name == "SetText" && item.Parameters.Count == 2);
+        MethodReference importedShaper = assembly.MainModule.ImportReference(shaper);
+        int changed = 0;
+        foreach (TypeDefinition type in WalkTypes(assembly.MainModule.Types))
+        {
+            foreach (MethodDefinition method in type.Methods.Where(item => item.HasBody))
+            {
+                foreach (Instruction instruction in method.Body.Instructions)
+                {
+                    MethodReference called = instruction.Operand as MethodReference;
+                    if (instruction.OpCode != OpCodes.Callvirt
+                        || called == null
+                        || called.Name != "set_text"
+                        || called.DeclaringType.FullName != "TMPro.TMP_Text")
+                        continue;
+                    instruction.OpCode = OpCodes.Call;
+                    instruction.Operand = importedShaper;
+                    changed++;
+                }
+            }
+        }
+        if (changed != 28)
+            throw new InvalidDataException(
+                String.Format(
+                    CultureInfo.InvariantCulture,
+                    "Expected 28 TMP_Text.set_text assignments for the pinned build; found {0}",
+                    changed
+                )
+            );
+        return changed;
+    }
+
     public static int Main(string[] args)
     {
-        if (args.Length != 5)
+        if (args.Length != 5 && args.Length != 6)
         {
             Console.Error.WriteLine(
-                "usage: PatchManagedStrings INPUT.dll OUTPUT.dll PATCHES.tsv SPEAKER_LABELS.tsv SAVE_LOCATION_LABELS.tsv"
+                "usage: PatchManagedStrings INPUT.dll OUTPUT.dll PATCHES.tsv SPEAKER_LABELS.tsv SAVE_LOCATION_LABELS.tsv [TEXT_SHAPER.dll]"
             );
             return 2;
         }
@@ -276,6 +319,10 @@ internal static class PatchManagedStrings
             );
             return 1;
         }
+
+        int textShaperRedirects = args.Length == 6
+            ? RedirectAllTextAssignments(assembly, args[5])
+            : 0;
 
         assembly.Write(args[1]);
         AssemblyDefinition verification = AssemblyDefinition.ReadAssembly(
@@ -370,13 +417,43 @@ internal static class PatchManagedStrings
             if (saveLocationRedirects != 2)
                 throw new InvalidDataException("Save-location display redirect verification failed");
         }
+        if (args.Length == 6)
+        {
+            int verifiedShaperRedirects = WalkTypes(verification.MainModule.Types)
+                .SelectMany(item => item.Methods)
+                .Where(item => item.HasBody)
+                .SelectMany(item => item.Body.Instructions)
+                .Count(item => {
+                    MethodReference called = item.Operand as MethodReference;
+                    return item.OpCode == OpCodes.Call
+                        && called != null
+                        && called.DeclaringType.FullName == "VNRevival.TextShaper"
+                        && called.Name == "SetText";
+                });
+            if (verifiedShaperRedirects != textShaperRedirects)
+                throw new InvalidDataException("Text-shaper redirect verification failed");
+            int remainingDirectAssignments = WalkTypes(verification.MainModule.Types)
+                .SelectMany(item => item.Methods)
+                .Where(item => item.HasBody)
+                .SelectMany(item => item.Body.Instructions)
+                .Count(item => {
+                    MethodReference called = item.Operand as MethodReference;
+                    return item.OpCode == OpCodes.Callvirt
+                        && called != null
+                        && called.DeclaringType.FullName == "TMPro.TMP_Text"
+                        && called.Name == "set_text";
+                });
+            if (remainingDirectAssignments != 0)
+                throw new InvalidDataException("Direct TMP_Text.set_text assignments remain after shaping redirect");
+        }
         Console.WriteLine(
             String.Format(
                 CultureInfo.InvariantCulture,
-                "{0} strings; {1} speaker labels; {2} save-location labels",
+                "{0} strings; {1} speaker labels; {2} save-location labels; {3} text-shaper redirects",
                 patches.Count,
                 labels.Count,
-                saveLocationLabels.Count
+                saveLocationLabels.Count,
+                textShaperRedirects
             )
         );
         return 0;

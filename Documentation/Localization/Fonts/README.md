@@ -16,12 +16,40 @@ missing rendered codepoints.
   so punctuation, digits, protected ASCII operands, and mixed-script content
   remain covered by the same dynamic source font.
 
-All nine prepared fonts contain U+0020 with a positive advance. Their exact
+All nine base prepared fonts contain U+0020 with a positive advance. Their exact
 source URLs, source and output SHA-256 values, byte sizes, merge recipes, and
 the pinned FontTools version are in
 `LocalizationAssets/Fonts/manifest.json`. The files are distributed under
 SIL Open Font License 1.1; the bundled license is
 `LocalizationAssets/Fonts/OFL-1.1.txt`.
+
+## Complex-script preparation
+
+Arabic, Persian, Hebrew, Hindi, and Thai additionally use deterministic
+locale-specific fonts under `LocalizationAssets/Fonts/Complex`. The build tool
+shapes the exact accepted corpus with HarfBuzz 12.1.0 through uharfbuzz 0.51.7,
+maps positioned glyph instances into the BMP private-use area, and preserves
+recognized TMP rich-text tags byte-for-byte. Angle-bracketed visible actions
+are deliberately treated as text, not as generic markup.
+
+The corresponding `*.shaping.json` files pin the logical-to-shaped strings,
+script-span fallback map, glyph metrics, source hashes, prepared-font hashes,
+and RTL mode. Authored overlays remain logical and unchanged. At payload build
+time, serialized UI text is pre-shaped; a locale-specific
+`Managed/VNRevival.TextShaper.dll` shapes dynamic TMP text and sets RTL for
+Arabic, Persian, and Hebrew. All 28 `TMP_Text.set_text` calls in the pinned
+assembly are redirected, while the four `TMP_InputField.set_text` calls remain
+untouched.
+
+Rebuild the complex outputs with:
+
+```sh
+PYTHONPATH=/private/tmp/sonic-shaping-tools:/private/tmp/sonic-font-tools \
+  python3 Scripts/prepare-complex-script-fonts.py \
+  --localization-root Documentation/Localization \
+  --font-root LocalizationAssets/Fonts \
+  --output LocalizationAssets/Fonts/Complex
+```
 
 Rebuild the prepared set from the verified upstream files with:
 
@@ -54,6 +82,13 @@ Separate read-back probes also preserved a merged Arabic/Latin TTF and the
 16 MiB Simplified Chinese CJK OTF byte-for-byte. These are static reinsertion
 proofs only; no installed game file was changed and the game was not launched.
 
+Full isolated Arabic and Hindi payloads were also built from the verified
+original backup. Read-back verified both embedded shaped fonts, all 82 scene
+texts, all 54 Addressables texts, Arabic RTL flags, Hindi LTR flags, the
+embedded shaping resource, and 28/28 managed redirects with zero remaining
+direct `TMP_Text.set_text` calls. The generated complex-font directory was
+rebuilt independently and compared byte-for-byte.
+
 Example isolated build:
 
 ```sh
@@ -67,16 +102,18 @@ PYTHONPATH=/private/tmp/sonic-font-tools \
   --output /path/to/empty/output
 ```
 
+Complex locales additionally require, for example:
+
+```sh
+  --font LocalizationAssets/Fonts/Complex/NotoSansArabicLatin-ar-Shaped.ttf \
+  --shaping-map LocalizationAssets/Fonts/Complex/ar.shaping.json
+```
+
 ## Gates still open
 
-Font cmap coverage and the presence of OpenType GSUB/GPOS tables do not prove
-that TextMesh Pro applies complex shaping or the Unicode bidirectional
-algorithm. Runtime shaping remains mandatory for `ar`, `fa`, `hi`, and `th`;
-bidirectional layout remains mandatory for `ar`, `fa`, and `he`. TextMesh Pro
-3.x exposes `ITextPreprocessor` specifically for preprocessing and shaping,
-and the game contains no existing Arabic, Persian, Hebrew, bidi, or RTL helper.
-
-Accordingly, `complexScriptShaping`, `bidirectionalLayout`, and
-`runtimeReadability` remain `not-run`. No locale is marked `ready`, and
-`payloadReady` remains `false` until those mechanisms and the later visual,
-texture, packaging, and unified-payload gates pass.
+Static complex-script preparation now passes for all five affected locales,
+and static RTL state is prepared for all three RTL locales. This proves the
+derived payload structure, not on-screen behavior. `runtimeReadability` and
+visual QA remain `not-run`; no locale is marked `ready`, and `payloadReady`
+remains `false` until in-game validation and the later texture, packaging, and
+unified-payload gates pass.

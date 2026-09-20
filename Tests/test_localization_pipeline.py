@@ -140,6 +140,21 @@ class RuntimeIdentifierSafetyTests(unittest.TestCase):
             localization_assets.validate_layout_overrides(inventory, overlay), []
         )
 
+    def test_level0_rtl_flag_tracks_the_padded_localized_text_end(self) -> None:
+        text = "واجهة"
+        encoded = text.encode("utf-8")
+        padding = b"\0" * ((4 - len(encoded) % 4) % 4)
+        text_end = 92 + len(encoded) + len(padding)
+        raw = bytearray(text_end + 8)
+        raw[88:92] = len(encoded).to_bytes(4, "little")
+        raw[92 : 92 + len(encoded)] = encoded
+        patched = localization_assets.replace_level0_rtl(
+            bytes(raw), True, "unity:level0:1:m_text"
+        )
+        self.assertEqual(patched[text_end], 1)
+        self.assertEqual(patched[:text_end], bytes(raw[:text_end]))
+        self.assertEqual(patched[text_end + 1 :], bytes(raw[text_end + 1 :]))
+
     def test_managed_control_strings_are_never_confirmed_ui(self) -> None:
         self.assertTrue(localization_assets.PROTECTED_MANAGED_CONTROL_STRINGS)
         self.assertTrue(
@@ -244,6 +259,9 @@ class LocalizationFontTests(unittest.TestCase):
         font_root = PROJECT_ROOT / "LocalizationAssets" / "Fonts"
         localization_root = PROJECT_ROOT / "Documentation" / "Localization"
         manifest = json.loads((font_root / "manifest.json").read_text(encoding="utf-8"))
+        complex_manifest = json.loads(
+            (font_root / "Complex" / "manifest.json").read_text(encoding="utf-8")
+        )
         report = json.loads(
             (localization_root / "Fonts" / "font-audit.json").read_text(encoding="utf-8")
         )
@@ -252,6 +270,12 @@ class LocalizationFontTests(unittest.TestCase):
         for filename, metadata in manifest["outputs"].items():
             digest = hashlib.sha256((font_root / filename).read_bytes()).hexdigest()
             self.assertEqual(digest, metadata["sha256"], filename)
+        self.assertEqual(len(complex_manifest["outputs"]), 5)
+        for filename, metadata in complex_manifest["outputs"].items():
+            digest = hashlib.sha256((font_root / "Complex" / filename).read_bytes()).hexdigest()
+            self.assertEqual(digest, metadata["sha256"], filename)
+            map_path = font_root / "Complex" / metadata["shapingMap"]
+            self.assertTrue(map_path.is_file())
 
         self.assertTrue(report["ok"])
         self.assertEqual(report["localesExpected"], 30)
@@ -265,9 +289,31 @@ class LocalizationFontTests(unittest.TestCase):
             self.assertEqual(row["missingCodepoints"], [])
 
         self.assertEqual(report["gates"]["staticGlyphCoverage"], "pass")
-        self.assertEqual(report["gates"]["complexScriptShaping"], "not-run")
-        self.assertEqual(report["gates"]["bidirectionalLayout"], "not-run")
+        self.assertEqual(report["gates"]["complexScriptShaping"], "pass")
+        self.assertEqual(
+            report["gates"]["bidirectionalLayout"], "static-pass-runtime-not-run"
+        )
         self.assertEqual(report["gates"]["runtimeReadability"], "not-run")
+
+    def test_complex_shaping_preserves_known_tmp_tags_but_shapes_visible_actions(self) -> None:
+        font_root = PROJECT_ROOT / "LocalizationAssets" / "Fonts" / "Complex"
+        shaping = localization_assets.load_shaping_map(
+            font_root / "ar.shaping.json",
+            "ar",
+            PROJECT_ROOT / "Documentation" / "Localization" / "ar.overlay.json",
+            font_root / "NotoSansArabicLatin-ar-Shaped.ttf",
+        )
+        logical = next(
+            value
+            for value in shaping["exact"]
+            if value.startswith("<")
+            and ">" in value
+            and not value.lower().startswith(("<style", "<size", "<color", "<i>", "<br>"))
+            and localization_assets.contains_complex_script(value, shaping["mode"])
+        )
+        shaped = localization_assets.shape_text(logical, shaping)
+        self.assertNotEqual(shaped, logical)
+        self.assertTrue(any(0xE000 <= ord(character) <= 0xF8FF for character in shaped))
 
 
 if __name__ == "__main__":
