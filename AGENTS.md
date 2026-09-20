@@ -10,8 +10,12 @@ the workstation localization instructions and the `vn-game-app` workflow.
   that manifest and App ID `2324650`.
 - Never use the French fan translation as source text for any locale or ship
   any of its files. It is technical research only.
-- One build installs all 30 non-English VN Revival locales. Never add a
-  language picker to the installer; language selection belongs inside the game.
+- One build installs all 30 non-English VN Revival locales. For this game,
+  choose the initially active locale in the installer, install the complete
+  30-language payload, and persist its stable siteLocale/runtimeCode for the
+  shared runtime patch. Do not require a new in-game language menu unless a
+  later game build supplies a mature native localization mechanism that is
+  explicitly adopted for this project.
 - Do not mark a language `ready` until its complete package is reviewed. Do not
   mark `payloadReady` true until all 30 languages, every payload file, and every
   SHA-256 are final.
