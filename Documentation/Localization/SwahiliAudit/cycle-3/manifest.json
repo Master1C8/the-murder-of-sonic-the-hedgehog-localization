@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "locale": "sw",
+  "cycle": 3,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "ecef723715470d4061f5cfaf64d2919fce166357ed42726009580c474e607b0f",
+    "overlay": "80c04d4c7c5b81d4f4123ef2f349fe8a9499c47e0bd0f59e9bda86c3309100d6",
+    "images": "5fcc2988836512df2a4b8a3ac1dc9e3c8b700a4ab50f01501217efd5e33483a6"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "91aadcdc136b5e6f8f9ad84a5f0527673a7f84c0d60514095ecfa4447fee47da"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 3,
+      "sha256": "7841e49642d4c6cb945a8d02c19d2035818a1f85eb84cbcb3086588080b5e20f"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 6,
+      "sha256": "71c0549df0c9c7baf05d29f191dc2061e0153907d36764692c11ccc3b1eafb18"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 55,
+      "sha256": "1914058fca274d3bb9c8788b539397369b0cecd827a3aab3bf3740e84da80a9e"
+    },
+    "invalidated-dependency-ids": {
+      "file": "invalidated-dependency-ids.txt",
+      "count": 8,
+      "sha256": "8a9a1641ded2b56992eeb0908c5ac174e4ca84e6614acaa1cdd380a0401c20d5"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1067,
+      "sha256": "40dda066aeb6b3edc1c867c3e684ab7878a4b6bea06d66718592cffe5658c9f1"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 19,
+      "sha256": "07d0bf96c45221f4c0e6d13a86f798fedad389a22edaf1e69f7631b58fdd14f1"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 44,
+      "sha256": "521a2fa8e5901306633e4819545e7c75eaed4c105d64b1894f1a6c2a499544cb"
+    },
+    "non-translatable-dynamic-dependencies": {
+      "file": "non-translatable-dynamic-dependencies.txt",
+      "count": 8,
+      "sha256": "89524e88b000241fccf2e83de7c5bf484a65a2c433fa482b1af2305577177526"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1067,
+    "sha256": "3b2d3da53287792c380f8c0428b7aac1b3f6e48f1af856e299deb689f9129173"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "e65f8b3568673c6223cec3ed569385db122281f468532d7fafd1c4cddb8f80fa"
+  },
+  "correctedIds": [
+    "ink:root[2].Casino[5].Heist_Planning_Pt7[0][16]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt7[0][26].c-0[8]",
+    "ink:root[2].Casino[5].Robotic_Arm[13]"
+  ],
+  "findingCount": 3,
+  "notes": [
+    "Cycle 3 applies the complete three-ID residual package for Swahili noun-class agreement in the casino robotic-arm sequence.",
+    "Eight unchanged direct dependencies from the same sequence are explicitly invalidated into closure; the eight empty non-translatable Ink dependencies remain separately recorded.",
+    "Image plans and glossary are unchanged from Cycle 2.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral.",
+    "Runtime and visual QA were not run."
+  ]
+}

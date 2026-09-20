@@ -1,0 +1,47 @@
+{
+  "locale": "ro",
+  "cycle": 3,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 11,
+  "changedIds": [
+    "ink:root[2].Prologue[1].Environment_Shadow_Interaction_1[34]",
+    "ink:root[2].Library[4].Vector_Espio_Train_Map_Explanation[71]",
+    "ink:root[2].Library[4].Vector_Espio_Train_Map_Explanation[79]",
+    "ink:root[2].Library[4].Vector_Espio_Train_Map_Explanation[115]",
+    "ink:root[2].Library[4].Enter_Interrogation_Mode[41]",
+    "ink:root[2].Library[4].Interrogation_Part4[0][41]",
+    "ink:root[2].Library[4].Interrogation_Part4[0][46]",
+    "ink:root[2].Library[4].Correct_Library_Element[18]",
+    "ink:root[2].Library[4].Trash_Bin[35]",
+    "ink:root[2].Library[4].Shadow_Lock[0]",
+    "ink:root[2].Lounge[108].Interrogation_Part2[0][17].g-0[17]"
+  ],
+  "correctedIds": [
+    "ink:root[2].Prologue[1].Environment_Shadow_Interaction_1[34]",
+    "ink:root[2].Library[4].Vector_Espio_Train_Map_Explanation[71]",
+    "ink:root[2].Library[4].Vector_Espio_Train_Map_Explanation[79]",
+    "ink:root[2].Library[4].Vector_Espio_Train_Map_Explanation[115]",
+    "ink:root[2].Library[4].Enter_Interrogation_Mode[41]",
+    "ink:root[2].Library[4].Interrogation_Part4[0][41]",
+    "ink:root[2].Library[4].Interrogation_Part4[0][46]",
+    "ink:root[2].Library[4].Correct_Library_Element[18]",
+    "ink:root[2].Library[4].Trash_Bin[35]",
+    "ink:root[2].Library[4].Shadow_Lock[0]",
+    "ink:root[2].Lounge[108].Interrogation_Part2[0][17].g-0[17]"
+  ],
+  "invalidatedIds": [
+    "ink:root[2].Prologue[1].Environment_Shadow_Interaction_1[34]",
+    "ink:root[2].Library[4].Trash_Bin[35]"
+  ],
+  "previousClosure": "Documentation/Localization/RomanianAudit/cycle-2/closure-ids.txt",
+  "referentSearchTerms": ["Barry", "Chao", "Flicky", "Omochao", "saloon car", "lounge car", "dynamic name"],
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 3 fixes the complete 11-ID Cycle 2 residual package: nine saloon-car dependencies and two second-person dynamic-name joins.",
+    "The two dynamic fragments are explicitly invalidated into closure and delta review.",
+    "Runtime and visual QA were not run."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "locale": "sw",
+  "cycle": 1,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 359,
+  "changedIdsFromGitHead": true,
+  "referentSearchTerms": [
+    "Barry", "Chao", "Flicky", "Omochao", "guard", "boarding ticket",
+    "reporter", "robot arms", "Conductor's Wife", "dynamic name"
+  ],
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 1 applies one exhaustive Swahili correction package: 349 manual IDs, five image-plan translations, and five Swahili glossary fields.",
+    "Noun classes, agreement, known-gender references, neutral Chao/Flicky/Omochao, dynamic joins, UI, poems, and terminology were reviewed across the complete corpus.",
+    "Eleven source placeholders and five runtime-exact Conductor's Wife prefixes remain unchanged after preflight; four context-wrong Knuckles drafts were excluded.",
+    "Runtime and visual QA were not run."
+  ]
+}

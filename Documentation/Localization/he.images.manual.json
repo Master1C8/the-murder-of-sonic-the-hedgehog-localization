@@ -112,12 +112,12 @@
       "context": "הדחיפה האחרונה / סיום Eggman",
       "glossaryIds": [],
       "status": "translated",
-      "note": "רק הכיתובים הקריאים הוכנו; ה־PNG לא נערך."
+      "note": "הכיתובים הקריאים הוכנו לתרגום בנפרד: OFFLINE... במסך העליון, OFFLINE במסך הימני, LET'S GO DAD בחולצה של Sage ו־LET'S GO DAD בחולצה של Metal Sonic. כיתובי הפסאודו הקטנים בשלושת אזורי התרשים — המסך השמאלי, מסך הצללית במרכז־שמאל ומסך התרשים במרכז־ימין — יישמרו בדיוק כמו במקור. ה־PNG לא נערך."
     },
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/Comics/titlecard.png",
       "sourceText": "THE MURDER OF SONIC THE HEDGEHOG",
-      "translation": "The Murder of Sonic the Hedgehog",
+      "translation": "The Murder of Sonic The Hedgehog",
       "context": "הדחיפה האחרונה / כרטיס הכותרת",
       "glossaryIds": [
         "the-murder-of-sonic-the-hedgehog"

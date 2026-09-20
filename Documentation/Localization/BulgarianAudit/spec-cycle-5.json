@@ -1,0 +1,23 @@
+{
+  "locale": "bg",
+  "cycle": 5,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 1,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Casino[5].Return_To_Casino[97]"
+  ],
+  "referentSearchTerms": [
+    "Rouge"
+  ],
+  "previousClosure": "Documentation/Localization/BulgarianAudit/cycle-4/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 5 fixes the remaining mixed second-person register in Rouge's casino dialogue.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

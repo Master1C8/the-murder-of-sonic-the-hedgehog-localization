@@ -1,0 +1,39 @@
+{
+  "locale": "es-419",
+  "cycle": 6,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 10,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "unity:level0:1508:m_text",
+    "ink:root[2].Prologue[1].Environment_Sonic_Interaction_1[25]",
+    "ink:root[2].LockdownDiningCar[0][52]",
+    "ink:root[2].LockdownDiningCar[1].Eggman_Appears[0][56].g-0[41]",
+    "ink:root[2].Final_Push[35].Finale_Start[38]",
+    "ink:root[2].Casino[5].Return_To_Casino[17]",
+    "ink:root[2].Casino[5].Play_The_Slots[2][6].b[12]",
+    "ink:root[2].SafeRoom[4].Giant_Safe[50]",
+    "ink:root[2].SafeRoom[4].Opt12_Kiss_Egg[10]",
+    "ink:root[2].SafeRoom[4].Opt16_Just_Wait[31]"
+  ],
+  "referentSearchTerms": [
+    "Barry",
+    "Blaze",
+    "Rouge",
+    "Sonic the Hedgehog",
+    "kiddo",
+    "Assist Mode",
+    "sunk cost",
+    "coaster"
+  ],
+  "previousClosure": "Documentation/Localization/LatinAmericanSpanishAudit/cycle-5/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 6 applies ten terminology, register, referent, gender-agreement and UI clarity corrections from Cycle 5.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

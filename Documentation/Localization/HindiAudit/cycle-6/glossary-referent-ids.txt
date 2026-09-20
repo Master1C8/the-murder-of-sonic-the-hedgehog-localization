@@ -1,0 +1,13 @@
+ink:root[2].TestCar[6].TestFullscreenImage[6]
+ink:root[2].Saloon[4].Knuckles_Interaction_Prompts[0][24].c-2[19]
+ink:root[2].Prologue[1].Environment_Vector_Interaction_1[36]
+ink:root[2].Library[4].Espio_Interaction_Prompts[0][24].c-2[23]
+ink:root[2].Library[4].Vector_Interaction_Prompts[0][24].c-2[22]
+ink:root[2].Library[4].Library_Door[0][4].b[9]
+ink:root[2].Lounge[108].Shadow_Interaction_Prompts[0][27].c-2[23]
+ink:root[2].Final_Push[35].Final_Boss_Interaction1[26]
+ink:root[2].DiningCloset[1].Amy_Interaction_Prompts[0][18].c-1[19]
+ink:root[2].DiningCloset[1].Interrogation_Part2_Have_Correct_Clue[0][8].b[31]
+ink:root[2].LockdownDiningCar[0][66].g-0[0]
+unity:defaultgroup:4951272156339544449:m_text
+unity:level0:1550:m_text

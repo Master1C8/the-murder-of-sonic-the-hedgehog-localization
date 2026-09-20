@@ -1,0 +1,44 @@
+{
+  "locale": "pl",
+  "cycle": 6,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 8,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Saloon[4].Interrogation_Part5[0][54].g-0[5]",
+    "ink:root[2].Prologue[1].Environment_Amy_Interaction_1[43]",
+    "ink:root[2].Prologue[1].Environment_Vector_Interaction_1[42]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt5[0][0]",
+    "ink:root[2].Casino[5].Return_To_Casino[17]",
+    "ink:root[2].Conductor_Car[74].Confrontation_Start[102]",
+    "ink:root[2].Conductor_Car[74].Who_Dunnit_Choice[0][6]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part4[50]"
+  ],
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "Flicky",
+    "Omochao",
+    "blowdart",
+    "blow dart",
+    "birthday girl",
+    "ULTIM",
+    "Ultimate Life Form",
+    "Conductor’s Wife",
+    "library map",
+    "keyring",
+    "concert tickets"
+  ],
+  "previousClosure": "Documentation/Localization/PolishAudit/cycle-5/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 6 corrects all eight text findings from independent cycle 5.",
+    "The Chao guard and the unknown drink-coaster offender remain gender-neutral in Polish.",
+    "The Eggman-ending image plan explicitly covers both OFFLINE labels, both shirts, and all three pseudo-text regions.",
+    "Five Conductor’s Wife prefixes and the timestamp remain runtime-exact.",
+    "Runtime and visual QA were not run."
+  ]
+}

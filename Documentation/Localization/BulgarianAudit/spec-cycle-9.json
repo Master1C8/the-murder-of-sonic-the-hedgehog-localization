@@ -1,0 +1,26 @@
+{
+  "locale": "bg",
+  "cycle": 9,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 2,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Saloon[4].Wanted_Poster[0][0]",
+    "ink:root[2].Conductor_Car[74].Choose_Not_Rouge[7]"
+  ],
+  "referentSearchTerms": [
+    "Omochao",
+    "Rouge",
+    "wanted poster"
+  ],
+  "previousClosure": "Documentation/Localization/BulgarianAudit/cycle-8/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 9 neutralizes the remaining Omochao reference and fixes the singular hidden referent in the accusation sequence.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

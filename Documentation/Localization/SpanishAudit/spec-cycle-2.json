@@ -1,0 +1,44 @@
+{
+  "locale": "es",
+  "cycle": 2,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 14,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Prologue[1].Environment_Amy_Interaction_1[12]",
+    "ink:root[2].Prologue[1].Found_Vector_Ticket[13]",
+    "ink:root[2].Prologue[1].Murder_Mystery_Rules[0][53].g-0[2]",
+    "ink:root[2].Library[4].Vector_Espio_Train_Map_Explanation[18]",
+    "ink:root[2].Conductor_Car[74].Choose_Detectives[5]",
+    "ink:root[2].Conductor_Car[74].Enter_Lockdown_Mode[67]",
+    "ink:root[2].Conductor_Car[74].Enter_Lockdown_Mode[115]",
+    "ink:root[2].SafeRoom[4].Opt13_Chaos_Control[0]",
+    "ink:root[2].SafeRoom[4].Return_To_Egg_Options[0][81]",
+    "ink:root[2].DiningCloset[1].Interrogation_Part1[0][20].c-2[4]",
+    "ink:root[2].DiningCloset[1].Closet_Conductor_Flashback[21]"
+  ],
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "Flicky",
+    "Omochao",
+    "murderer",
+    "Chaos Control",
+    "Conductor’s Wife",
+    "retirement",
+    "Spagonia"
+  ],
+  "previousClosure": "Documentation/Localization/SpanishAudit/cycle-1/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 2 applies all 11 text findings, the conductors-wife glossary correction, and both image-plan reflows from the independent cycle 1 audit.",
+    "The single murderer role and canonical Control del Caos spelling are restored; Flicky remains neutral.",
+    "Hot Honey seat rows and the typed note were reflowed to the source image line-length constraints.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "The rebuilt Spanish overlay has 3547/3547 units and zero missing, extra, protected-token, layout or runtime-exact errors.",
+    "Runtime and visual QA were not run."
+  ]
+}

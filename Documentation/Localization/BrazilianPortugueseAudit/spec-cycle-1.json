@@ -1,0 +1,28 @@
+{
+  "locale": "pt-BR",
+  "cycle": 1,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 75,
+  "changedIdsFromGitHead": true,
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "Flicky",
+    "Omochao",
+    "guard",
+    "Conductor's Wife",
+    "outfit guide",
+    "power source",
+    "dynamic name"
+  ],
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 1 applies one exhaustive Brazilian Portuguese correction package: 67 manual IDs and eight pt-BR glossary entries; all 10 image plans were reviewed and unchanged.",
+    "Five Conductor's Wife runtime prefixes, the train's authorized grammatical gender, one already-neutral Omochao line, an ambiguous Blaze style proposal, and 11 source placeholders were intentionally left unchanged after preflight.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

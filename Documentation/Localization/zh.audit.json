@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "locale": "zh",
+  "game": "the-murder-of-sonic-the-hedgehog",
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "workflow": "Documentation/Localization/AUDIT_WORKFLOW.md",
+  "status": "editorially-accepted-cycle-3-clean",
+  "sourcePolicy": {
+    "semanticDecisionInputs": [
+      "English source corpus",
+      "canonical English/Chinese glossary",
+      "scene and adjacent-line context",
+      "10 source PNGs"
+    ],
+    "nonEnglishLocaleComparisonUsed": false,
+    "ownerConfirmedFacts": ["Barry is male"],
+    "canonicalMetadataDecision": "Chao, Flicky and Omochao remain grammatically neutral where canonical gender is unknown."
+  },
+  "fingerprints": {
+    "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+    "sourceUnitsSha256": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventoryFileSha256": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalizedSha256": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryChineseNormalizedSha256": "c31ed075d0758b0adcee7f2a6592243568d32e6dff69f44f6e0c336b6c043230"
+  },
+  "artifactHashes": {
+    "manual": "1c4737e4dd3749c416dffc96d38a91755bf296701364c054c118a29259659588",
+    "overlay": "96f39c68c6b2ac1025ede9716e88fb1ce3f03dc644ab9ade672beda92a474017",
+    "images": "8bfe450d00bc786a28c8a184dc29efbeddeb94883a660d5333c13633c681eafe"
+  },
+  "semanticCoverage": {
+    "sourceUnitsRead": 3547,
+    "sourceUnitTotal": 3547,
+    "glossaryEntriesRead": 117,
+    "glossaryEntryTotal": 117,
+    "imagePlansRead": 10,
+    "imagePlanTotal": 10,
+    "complete": true
+  },
+  "independentDiffAudit": {
+    "status": "cycle-3-clean",
+    "primaryFindingCount": 155,
+    "cycle1FindingCount": 27,
+    "cycle2FindingCount": 1,
+    "cycle3FindingCount": 0,
+    "finalClosureCount": 1336,
+    "finalDeltaReviewCount": 2
+  },
+  "evidenceCycles": [
+    {"cycle": 1, "manifest": "Documentation/Localization/ChineseAudit/cycle-1/manifest.json", "result": "not-clean"},
+    {"cycle": 2, "manifest": "Documentation/Localization/ChineseAudit/cycle-2/manifest.json", "result": "not-clean"},
+    {"cycle": 3, "manifest": "Documentation/Localization/ChineseAudit/cycle-3/manifest.json", "closureCount": 1336, "deltaReviewCount": 2, "result": "clean"}
+  ],
+  "mandatoryRegression": {
+    "genderAndAgreement": "complete; Barry male and all known-gender references reviewed",
+    "unknownAndAmbiguous": "complete; Chao, Flicky and Omochao remain neutral where canonical gender is unknown",
+    "saveLoadAndEnvironment": "reviewed; timestamp retained in token-safe form",
+    "speakerLabels": "reviewed; runtime-exact controls preserved",
+    "dynamicJoins": "reviewed; all invalidated dependencies are present in closure and review rows",
+    "imagePlans": "10/10 reviewed"
+  },
+  "sourcePlaceholders": {
+    "classification": "reviewed source-authored Unity placeholders; not missing localization",
+    "count": 11,
+    "ids": [
+      "unity:level0:1485:m_text", "unity:level0:1490:m_text", "unity:level0:1511:m_text",
+      "unity:level0:1512:m_text", "unity:level0:1513:m_text", "unity:level0:1524:m_text",
+      "unity:level0:1526:m_text", "unity:level0:1528:m_text", "unity:level0:1530:m_text",
+      "unity:level0:1544:m_text", "unity:level0:1555:m_text"
+    ]
+  },
+  "validation": {
+    "overlay": "passed: 3547/3547, zero missing/extra/token/layout/runtimeExact errors",
+    "byteIdenticalOverlayRebuild": "passed",
+    "byteIdenticalEvidenceRebuild": "passed",
+    "localizationTests": "12/12 passed",
+    "glossaryTests": "39/39 passed"
+  },
+  "notRun": {
+    "gameLaunch": true,
+    "installerLaunch": true,
+    "installedGameMutation": true,
+    "runtimeQa": true,
+    "visualQa": true
+  },
+  "nextAction": "Editorial audit is complete. Runtime and visual QA remain separate and were not run; do not mark payloadReady until all 30 locales and payload files are final."
+}

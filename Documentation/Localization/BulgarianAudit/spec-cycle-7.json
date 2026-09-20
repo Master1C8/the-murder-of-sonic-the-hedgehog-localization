@@ -1,0 +1,24 @@
+{
+  "locale": "bg",
+  "cycle": 7,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 1,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "unity:level0:1508:m_text"
+  ],
+  "referentSearchTerms": [
+    "THINK difficulty",
+    "Assist Mode"
+  ],
+  "previousClosure": "Documentation/Localization/BulgarianAudit/cycle-6/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 7 removes the remaining literal repetition in the Assist Mode explanatory UI.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

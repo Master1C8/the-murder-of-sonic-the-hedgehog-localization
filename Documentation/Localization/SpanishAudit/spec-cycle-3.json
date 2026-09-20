@@ -1,0 +1,31 @@
+{
+  "locale": "es",
+  "cycle": 3,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 6,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Prologue[1].Environment_Amy_Interaction_1[31]",
+    "ink:root[2].Casino[5].FirstVisit[0][41]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt5[0][31].c-2[1]",
+    "ink:root[2].Casino[5].Return_To_Casino[17]",
+    "ink:root[2].SafeRoom[4].Opt13_Chaos_Control[3]"
+  ],
+  "referentSearchTerms": [
+    "Barry",
+    "Amy",
+    "Chaos Emerald",
+    "royal family",
+    "coaster"
+  ],
+  "previousClosure": "Documentation/Localization/SpanishAudit/cycle-2/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 3 applies five text corrections and one Hot Honey image-plan correction from the independent cycle 2 audit.",
+    "Barry remains male; Amy's formal address and the canonical Esmeralda del Caos spelling are preserved.",
+    "Runtime and visual QA were not run."
+  ]
+}

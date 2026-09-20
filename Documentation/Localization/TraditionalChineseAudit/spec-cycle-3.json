@@ -1,0 +1,32 @@
+{
+  "locale": "zh-TW",
+  "cycle": 3,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 1,
+  "changedIds": [
+    "ink:root[2].Conductor_Car[74].Choose_Not_Rouge[7]"
+  ],
+  "correctedIds": [
+    "ink:root[2].Conductor_Car[74].Choose_Not_Rouge[7]"
+  ],
+  "invalidatedIds": [
+    "ink:root[2].Conductor_Car[74].Choose_Not_Rouge[5]",
+    "ink:root[2].Conductor_Car[74].Choose_Not_Rouge[10]",
+    "ink:root[2].Conductor_Car[74].Who_Dunnit_Choice2[0][38]"
+  ],
+  "previousClosure": "Documentation/Localization/TraditionalChineseAudit/cycle-2/closure-ids.txt",
+  "referentSearchTerms": [
+    "Barry", "Chao", "Flicky", "Omochao", "Rouge", "dynamic name"
+  ],
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 3 applies the single objective residual correction in Choose_Not_Rouge: the hint no longer names Rouge before the following question asks who gave the clue.",
+    "The two adjacent hint lines and the Rouge choice transition are explicitly invalidated into closure for re-review.",
+    "Image plans and glossary are unchanged from Cycle 2; all 125 PLAYER_NAME bindings remain protected.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral.",
+    "Runtime and visual QA were not run."
+  ]
+}

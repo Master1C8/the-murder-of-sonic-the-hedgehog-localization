@@ -1,0 +1,34 @@
+{
+  "locale": "pl",
+  "cycle": 8,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 2,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Prologue[1].Murder_Mystery_Rules[0][53].g-0[34]",
+    "ink:root[2].Library[4].Interrogation_Part4[0][53]"
+  ],
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "Flicky",
+    "Omochao",
+    "Espio",
+    "blowdart",
+    "Conductor’s Wife",
+    "ULTIM",
+    "keyring"
+  ],
+  "previousClosure": "Documentation/Localization/PolishAudit/cycle-7/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 8 corrects both text findings from independent cycle 7.",
+    "Flicky remains grammatically neutral and is the explicit subject of the decision to join Eggman.",
+    "Espio line now preserves the speaker's desire rather than changing it into permission.",
+    "Cycle 7 confirmed image plans, runtime-exact prefixes, timestamp, glossary, and mandatory regressions clean.",
+    "Runtime and visual QA were not run."
+  ]
+}

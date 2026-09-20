@@ -1,0 +1,23 @@
+{
+  "locale": "es-419",
+  "cycle": 7,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 1,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [],
+  "referentSearchTerms": [
+    "sunk-cost",
+    "sunk cost"
+  ],
+  "previousClosure": "Documentation/Localization/LatinAmericanSpanishAudit/cycle-6/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 7 expands the immutable evidence closure to include the hyphenated sunk-cost dependency omitted from Cycle 6.",
+    "The existing Spanish translation of that dependency is correct; no authored localization text changed.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

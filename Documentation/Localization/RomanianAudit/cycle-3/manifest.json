@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "locale": "ro",
+  "cycle": 3,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "d8b9fed331f2f2bfa248d5b52a376691114c88df7d865fca98d7f9c018836574",
+    "overlay": "529513feb83d251c52a50ae33ce2ece4720fd66cb65d443a4d07afacce8f40bd",
+    "images": "5e7a15e2003fd528eb6fc82067c50db723ad1bb01b7545a0b1bd5ef5cf22b178"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "7913c0f1636a8b36a3908e46e1543418b707fab00960593eb708abee08b0f264"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 11,
+      "sha256": "c9cf46fb1a768e543b5eeca8784f6c6be3d835d08c187600eb2e1ab2c6b89129"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 20,
+      "sha256": "25887aca61d2c5b5c5567178f5a637c360082d0898955e48025ccd0cfed5af04"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 71,
+      "sha256": "09b19d86cf8fba26e58c1fe1ba63ee9923d3da05fab874331b4c4ac90568e61a"
+    },
+    "invalidated-dependency-ids": {
+      "file": "invalidated-dependency-ids.txt",
+      "count": 2,
+      "sha256": "49cd332459376825265843ec383985bad31f0d8b6b7396fc50d010792df75672"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1087,
+      "sha256": "3e3b736d27cf63fd7e3aaa66a20d6de247a0b490a58f1473cc210dc809101683"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 21,
+      "sha256": "da65f0de04d3d3281c383fe9d6a24f4b2a2b7f3dfe25a086cdeacd5b51b2a272"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 48,
+      "sha256": "8cc96dee55c8d87a4edb5025bdb89d10d6df9515ce8e3467a6b97b4504a2e2b9"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1087,
+    "sha256": "06e5f846a81baab35469b5734276942eebcaef23752c908773ee71ad0b2a20fe"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "2007cfd531cb61c565f67d1620ee60600b5200b53399fd8237f1f1beaf8d5846"
+  },
+  "correctedIds": [
+    "ink:root[2].Prologue[1].Environment_Shadow_Interaction_1[34]",
+    "ink:root[2].Library[4].Vector_Espio_Train_Map_Explanation[71]",
+    "ink:root[2].Library[4].Vector_Espio_Train_Map_Explanation[79]",
+    "ink:root[2].Library[4].Vector_Espio_Train_Map_Explanation[115]",
+    "ink:root[2].Library[4].Enter_Interrogation_Mode[41]",
+    "ink:root[2].Library[4].Interrogation_Part4[0][41]",
+    "ink:root[2].Library[4].Interrogation_Part4[0][46]",
+    "ink:root[2].Library[4].Correct_Library_Element[18]",
+    "ink:root[2].Library[4].Trash_Bin[35]",
+    "ink:root[2].Library[4].Shadow_Lock[0]",
+    "ink:root[2].Lounge[108].Interrogation_Part2[0][17].g-0[17]"
+  ],
+  "findingCount": 11,
+  "notes": [
+    "Cycle 3 fixes the complete 11-ID Cycle 2 residual package: nine saloon-car dependencies and two second-person dynamic-name joins.",
+    "The two dynamic fragments are explicitly invalidated into closure and delta review.",
+    "Runtime and visual QA were not run."
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "locale": "pt-BR",
+  "cycle": 1,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "cf52d5a88fc54170f7e78b46ac2746967c951404d03cf9aca311dc4dfabce09a",
+    "overlay": "22761363dfb5c35e61aa52ed5245a86f4395f52223702318e7558f5000947f29",
+    "images": "b2c892f7631b8c5b88e4874b0704c6a93744ce2031e41c4c2079a0742b555d77"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "765e8269bd16fac40e67ad0a6512999b9a1fd6a03b5693493f368e9508f1f905"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 67,
+      "sha256": "bb1097ffa17e436a9083103a5f7116c5b7d9ab8e630410cb5d7ec10decd68382"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 92,
+      "sha256": "bc8e739481dbaba0c673961b6c89ce33ec590a43cbf8993564c58eca78fdf750"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 64,
+      "sha256": "7aa6c14b093ef55df638907d231739ed885099a020c088762a7859b3d2aa8d24"
+    },
+    "invalidated-dependency-ids": {
+      "file": "invalidated-dependency-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1150,
+      "sha256": "a26e1024080bf8f126ad148d83731597980829c2f7433efc673b9c70b8eb39fe"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1150,
+    "sha256": "55164b6fb94c1b8c62d814f15f48048bff915aaf5849dd6495e4fd72ea319362"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "fdc3e9afa7a8922548005399cd380ad8b0e144ec928326c3dd4d504fe949694e"
+  },
+  "correctedIds": [],
+  "findingCount": 75,
+  "notes": [
+    "Cycle 1 applies one exhaustive Brazilian Portuguese correction package: 67 manual IDs and eight pt-BR glossary entries; all 10 image plans were reviewed and unchanged.",
+    "Five Conductor's Wife runtime prefixes, the train's authorized grammatical gender, one already-neutral Omochao line, an ambiguous Blaze style proposal, and 11 source placeholders were intentionally left unchanged after preflight.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

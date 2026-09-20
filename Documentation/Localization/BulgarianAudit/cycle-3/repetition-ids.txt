@@ -1,0 +1,1 @@
+ink:root[2].DiningCloset[1].Minigame_Midpoint1[2][1].b[15]

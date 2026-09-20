@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "locale": "fil",
+  "game": "the-murder-of-sonic-the-hedgehog",
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "workflow": "Documentation/Localization/AUDIT_WORKFLOW.md",
+  "status": "editorially-accepted-cycle-2-clean",
+  "sourcePolicy": {
+    "semanticDecisionInputs": [
+      "English source corpus",
+      "canonical English/Filipino glossary",
+      "scene and adjacent-line context",
+      "10 source PNGs"
+    ],
+    "nonEnglishLocaleComparisonUsed": false,
+    "ownerConfirmedFacts": [
+      "Barry is male"
+    ]
+  },
+  "fingerprints": {
+    "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+    "sourceUnitsSha256": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventoryFileSha256": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalizedSha256": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryFilipinoNormalizedSha256": "560121f2f4e7a3e5d1b43905f006f80aab03c5d282a0916935bb45bbb49f0816"
+  },
+  "artifactHashes": {
+    "manual": "91098992b405c17aa576bc7b0918e3ec641aef1bf87940953f111292140e2b47",
+    "overlay": "8350641441ccb3713584fdb1fa614611f32babf26ca31dfdab33c8e285957249",
+    "images": "3fee417e9507bb15630f157af91dceb9fedd1fdeb3f7edef39449c0193dd6234"
+  },
+  "semanticCoverage": {
+    "sourceUnitsRead": 3547,
+    "sourceUnitTotal": 3547,
+    "glossaryEntriesRead": 117,
+    "glossaryEntryTotal": 117,
+    "imagePlansRead": 10,
+    "imagePlanTotal": 10,
+    "complete": true
+  },
+  "findings": {
+    "primaryTextFindingCount": 565,
+    "primaryGlossaryFieldFindingCount": 12,
+    "primaryImagePlanFindingCount": 3,
+    "currentChangedUnitCount": 564,
+    "classes": [
+      "meaning and agency",
+      "character gender and agreement",
+      "unknown or ambiguous referent gender",
+      "grammar and naturalness",
+      "terminology and glossary consistency",
+      "rich-text placement",
+      "cross-media puzzle continuity"
+    ]
+  },
+  "independentDiffAudit": {
+    "status": "cycle-2-clean",
+    "cycle1FindingCount": 5,
+    "cycle2FindingCount": 0,
+    "resolvedIndependentFindingCount": 5,
+    "finalClosureCount": 1952,
+    "finalDeltaReviewCount": 8
+  },
+  "evidenceCycles": [
+    {
+      "cycle": 1,
+      "manifest": "Documentation/Localization/FilipinoAudit/cycle-1/manifest.json",
+      "findings": "Documentation/Localization/FilipinoAudit/findings-cycle-1.json",
+      "result": "not-clean"
+    },
+    {
+      "cycle": 2,
+      "manifest": "Documentation/Localization/FilipinoAudit/cycle-2/manifest.json",
+      "closureCount": 1952,
+      "deltaReviewCount": 8,
+      "result": "clean"
+    }
+  ],
+  "mandatoryRegression": {
+    "genderAndAgreement": "complete; Barry male and all known-gender references reviewed",
+    "unknownAndAmbiguous": "complete; Chao, Flicky and Omochao remain neutral where source and glossary do not establish gender",
+    "saveLoadAndEnvironment": "reviewed",
+    "speakerLabels": "reviewed; runtime-exact controls and inline prefixes preserved",
+    "imagePlans": "10/10 reviewed"
+  },
+  "sourcePlaceholders": {
+    "classification": "reviewed source-authored Unity placeholders; not missing localization",
+    "count": 11,
+    "ids": [
+      "unity:level0:1485:m_text",
+      "unity:level0:1490:m_text",
+      "unity:level0:1511:m_text",
+      "unity:level0:1512:m_text",
+      "unity:level0:1513:m_text",
+      "unity:level0:1524:m_text",
+      "unity:level0:1526:m_text",
+      "unity:level0:1528:m_text",
+      "unity:level0:1530:m_text",
+      "unity:level0:1544:m_text",
+      "unity:level0:1555:m_text"
+    ]
+  },
+  "validation": {
+    "overlay": "passed: 3547/3547, zero missing/extra/token/layout/runtimeExact errors",
+    "byteIdenticalOverlayRebuild": "passed",
+    "byteIdenticalEvidenceRebuild": "passed"
+  },
+  "notRun": {
+    "gameLaunch": true,
+    "installerLaunch": true,
+    "installedGameMutation": true,
+    "runtimeQa": true,
+    "visualQa": true
+  },
+  "nextAction": "Editorial audit is complete. Runtime and visual QA remain separate and were not run; do not mark payloadReady until all 30 locales and payload files are final."
+}

@@ -1,0 +1,25 @@
+{
+  "locale": "bg",
+  "cycle": 8,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 1,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].SafeRoom[4].Wall_of_Safes[15]"
+  ],
+  "referentSearchTerms": [
+    "casino car",
+    "rings",
+    "safes"
+  ],
+  "previousClosure": "Documentation/Localization/BulgarianAudit/cycle-7/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 8 restores the canonical Bulgarian casino-car term in the safe-room dialogue.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

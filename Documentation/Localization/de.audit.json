@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "locale": "de",
+  "game": "the-murder-of-sonic-the-hedgehog",
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "workflow": "Documentation/Localization/AUDIT_WORKFLOW.md",
+  "status": "editorially-accepted-cycle-2-clean",
+  "sourcePolicy": {
+    "semanticDecisionInputs": [
+      "English source corpus",
+      "canonical English/German glossary",
+      "scene and adjacent-line context",
+      "10 source PNGs"
+    ],
+    "nonEnglishLocaleComparisonUsed": false,
+    "ownerConfirmedFacts": [
+      "Barry is male"
+    ],
+    "canonicalMetadataDecision": "Chao, Flicky and Omochao are non-speaking entities in this game; their game-text uses remain grammatically neutral where canonical gender is unknown."
+  },
+  "fingerprints": {
+    "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+    "sourceUnitsSha256": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventoryFileSha256": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalizedSha256": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryGermanNormalizedSha256": "dbddd899f876bbfa99faf77b7c3c3742c3d5e771c34d7233dc28a9dc10d3db00"
+  },
+  "artifactHashes": {
+    "manual": "0b49ba4b50cd500b6505ad298e88edc4afb992d23797a5ff086abc602cb1ec06",
+    "overlay": "783050a36e58ef7f58e52a8a7d59170c9a61d6193f164acad0d29f858dfa0f91",
+    "images": "a9f338eb8e661a9684f7019502bbb52ec2c5b3280c61b70a21d1dda97fc0d788"
+  },
+  "semanticCoverage": {
+    "sourceUnitsRead": 3547,
+    "sourceUnitTotal": 3547,
+    "glossaryEntriesRead": 117,
+    "glossaryEntryTotal": 117,
+    "imagePlansRead": 10,
+    "imagePlanTotal": 10,
+    "complete": true
+  },
+  "independentDiffAudit": {
+    "status": "cycle-2-clean",
+    "primaryFindingCount": 32,
+    "cycle1FindingCount": 1,
+    "cycle2FindingCount": 0,
+    "finalClosureCount": 1110,
+    "finalDeltaReviewCount": 1
+  },
+  "evidenceCycles": [
+    {
+      "cycle": 1,
+      "manifest": "Documentation/Localization/GermanAudit/cycle-1/manifest.json",
+      "result": "not-clean"
+    },
+    {
+      "cycle": 2,
+      "manifest": "Documentation/Localization/GermanAudit/cycle-2/manifest.json",
+      "closureCount": 1110,
+      "deltaReviewCount": 1,
+      "result": "clean"
+    }
+  ],
+  "mandatoryRegression": {
+    "genderAndAgreement": "complete; Barry male and all known-gender references reviewed",
+    "unknownAndAmbiguous": "complete; Chao, Flicky and Omochao remain neutral where canonical gender is unknown",
+    "saveLoadAndEnvironment": "reviewed; timestamp remains token-safe",
+    "speakerLabels": "reviewed; five Conductor’s Wife prefixes and all runtime-exact controls preserved",
+    "imagePlans": "10/10 reviewed"
+  },
+  "sourcePlaceholders": {
+    "classification": "reviewed source-authored Unity placeholders; not missing localization",
+    "count": 11,
+    "ids": [
+      "unity:level0:1485:m_text",
+      "unity:level0:1490:m_text",
+      "unity:level0:1511:m_text",
+      "unity:level0:1512:m_text",
+      "unity:level0:1513:m_text",
+      "unity:level0:1524:m_text",
+      "unity:level0:1526:m_text",
+      "unity:level0:1528:m_text",
+      "unity:level0:1530:m_text",
+      "unity:level0:1544:m_text",
+      "unity:level0:1555:m_text"
+    ]
+  },
+  "validation": {
+    "overlay": "passed: 3547/3547, zero missing/extra/token/layout/runtimeExact errors",
+    "byteIdenticalOverlayRebuild": "passed",
+    "byteIdenticalEvidenceRebuild": "passed",
+    "localizationTests": "12/12 passed",
+    "glossaryTests": "39/39 passed"
+  },
+  "notRun": {
+    "gameLaunch": true,
+    "installerLaunch": true,
+    "installedGameMutation": true,
+    "runtimeQa": true,
+    "visualQa": true
+  },
+  "nextAction": "Editorial audit is complete. Runtime and visual QA remain separate and were not run; do not mark payloadReady until all 30 locales and payload files are final."
+}

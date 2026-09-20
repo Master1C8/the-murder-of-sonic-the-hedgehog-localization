@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "locale": "bg",
+  "cycle": 2,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "0fd1d04f7c4a8df2429e68b24344ed6b802f2efd6dac74e1eb5ef763256b7063",
+    "overlay": "05652258ac21452b56e084b5dec6cdd2f17275c625954b2585860fa63c61048a",
+    "images": "1ee9f121636263d54093e409e00cb9525abe1ff6014e129ac5aef988c383c5b0"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "531ccb5117572317387e294868947c4f85469918d1f0f63c110850d03b285eba"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 290,
+      "sha256": "eaf3fa0e14f554f44e1d93c923c151279dc513f584e0773746cc7eb2c92fea8e"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 438,
+      "sha256": "2b69d035111782a231a4299aa9f32ca905fb4c1bb10eca6ce48a5446a17d6b05"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 1,
+      "sha256": "6efa41cb060f5bd67781e571ff02798c0a340a62336b0ab587ee686053f2654c"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 90,
+      "sha256": "397eff498f9d2740f462678427b0e114b804bda8a75cd7c1da7b2d1f2050ad68"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1546,
+      "sha256": "a28b4cd3bc74c7ca597949a3e57b44637973843c1f45d2537abd96455b9473a7"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 68,
+      "sha256": "7e9bfbbd2afe095d4b8ca866249a8100311b22f4178a9818e8b23919b295d504"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 10,
+      "sha256": "56f6e33275785143900a66b5cd6ec2f8c7e395805a5500c6cc6e4762fc50908a"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1546,
+    "sha256": "9579ef1668bdb846f780e9a2155c70b939fba0f5fe7706dfc6bb83de5a682880"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "75fd9af39a780cbe408a2485151e19b37dee0bc0cc8a79a2c07dde773c2061d8"
+  },
+  "correctedIds": [
+    "ink:root[2].Prologue[1].Environment_Amy_Interaction_1[21]",
+    "ink:root[2].Prologue[1].Environment_Rouge_Interaction_2[0][4]",
+    "ink:root[2].Prologue[1].Story_Continues[48]",
+    "ink:root[2].Prologue[1].Gang_Gets_Assignments[0][116].c-0[3]",
+    "ink:root[2].Casino[5].FirstVisit[0][163].g-0[0]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt2[0][26].c-0[1]",
+    "ink:root[2].Lounge[108].Enter_Interrogation_Mode[107]",
+    "ink:root[2].Lounge[108].Enter_Interrogation_Mode[112]",
+    "ink:root[2].Lounge[108].Minigame_Midpoint1[10][8].b[8]",
+    "ink:root[2].Lounge[108].Interrogation_Part2[0][17].g-0[49]",
+    "ink:root[2].Lounge[108].Minigame_Midpoint2[9][8].b[56]",
+    "ink:root[2].Lounge[108].Wardrobe[0][32].c-1[1]",
+    "ink:root[2].Lounge[108].Big_Band[0][18].c-0[10]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part2[0][23]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part2[0][28]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part2[0][50].g-0[111]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part3[0][84].g-0[16]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part3[0][84].g-0[24]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part4[64]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part4[144]",
+    "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][137]",
+    "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][140]",
+    "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][190].g-0[28]",
+    "ink:root[2].Final_Push[35].Minigame_Checkpoint5[1][8].b[33]",
+    "ink:root[2].Final_Push[35].Return_To_Conductor_Car[0][32]",
+    "ink:root[2].Final_Push[35].Final_Boss_Interaction4[16]",
+    "ink:root[2].Final_Push[35].Finale_Start[75]",
+    "ink:root[2].Final_Push[35].Finale_Start[87]",
+    "ink:root[2].SafeRoom[4].Safe_Room_Pt1[28]",
+    "ink:root[2].SafeRoom[4].Opt13_Chaos_Control[0]",
+    "ink:root[2].SafeRoom[4].Return_To_Egg_Options[0][81]",
+    "ink:root[2].DiningCloset[0][51].g-0[30]",
+    "ink:root[2].DiningCloset[1].Minigame_Midpoint2[1][8].b[21]",
+    "ink:root[2].DiningCloset[1].Wet_Floor_Sign[0]",
+    "ink:root[2].DiningCloset[1].Wet_Floor_Sign[6]",
+    "ink:root[2].MessyDiningCar[1].Return_To_Prologue[101]",
+    "ink:root[2].LockdownDiningCar[1].Eggman_Appears[0][56].g-0[7]",
+    "ink:root[2].Name_Entry[20].Existing_Character_Name[0]"
+  ],
+  "findingCount": 39,
+  "notes": [
+    "Cycle 2 applies all valid findings from the independent cycle 1 closure audit: 38 text corrections, 8 glossary-field corrections, and 3 image-plan corrections.",
+    "The proposed 24-hour timestamp rewrite was rejected because it changes protected numeric source tokens; the validator-safe 05:44 form remains unchanged.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "The rebuilt Bulgarian overlay has 3547/3547 units and zero missing, extra, protected-token, layout or runtime-exact errors.",
+    "Runtime and visual QA were not run."
+  ]
+}

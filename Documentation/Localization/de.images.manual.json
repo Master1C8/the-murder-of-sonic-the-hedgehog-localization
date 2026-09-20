@@ -80,7 +80,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/4-Lounge/HotHoneyPrintout.png",
       "sourceText": "ticket town\nHOT HONEY\nFRI MAY 8\n9:00 PM\nSTAGE\nSEC 53 ROW P\nSEC 53 ROW P\nSEC 53 ROW R\nSEC 54 ROW R",
-      "translation": "ticket town\nHOT HONEY\nFR, 8. MAI\n21:00\nBÜHNE\nBER. 53 REIHE P\nBER. 53 REIHE P\nBER. 53 REIHE R\nBER. 54 REIHE R",
+      "translation": "ticket town\nHOT HONEY\nFR, 8. MAI\n21:00\nBÜHNE\nBL. 53 R. P\nBL. 53 R. P\nBL. 53 R. R\nBL. 54 R. R",
       "context": "Lounge / Hot-Honey-Ticketausdruck",
       "glossaryIds": [
         "hot-honey",
@@ -92,7 +92,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/5-conductorcar/TypedNoteFromTrainToEspio.png",
       "sourceText": "Use this blowdart on Sonic,\nstationed in the conductor\ncar. It is laced with a\nnonlethal sleeping agent.\nThank you again for\nchoosing the Mirage Express.\n-Staff",
-      "translation": "Verwende diesen Blasrohrpfeil gegen Sonic,\nder sich im Schaffnerwagen befindet.\nEr ist mit einem nicht tödlichen\nSchlafmittel präpariert.\nNoch einmal vielen Dank, dass du\nden Mirage Express gewählt hast.\n—Personal",
+      "translation": "Nutze den Blasrohrpfeil\ngegen Sonic im\nSchaffnerwagen. Er enthält\nein nicht tödliches\nSchlafmittel. Vielen Dank,\ndass du den Mirage Express\ngewählt hast.\n— Personal",
       "context": "Schaffnerwagen / getippte Notiz des Zugpersonals",
       "glossaryIds": [
         "blowdart",

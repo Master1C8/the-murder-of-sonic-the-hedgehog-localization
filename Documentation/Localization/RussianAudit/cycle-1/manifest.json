@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "locale": "ru",
+  "cycle": 1,
+  "status": "independent-review-complete-not-clean",
+  "result": "not-clean",
+  "reviewer": "independent Codex reviewer Plato",
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "41ad71038eed8ae7b438bdd8785f4516173a11df5bea6cc245476380d7c6b7b1",
+    "overlay": "cbb022b503395b45216d1461db781dc8f0c5fc3a09466b7ce91a6d1ca2cd3a15",
+    "images": "c2309b2f5eea167f216f53559f85a2a8dc4b4d7a7807cd76f66038434fa98c6c"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "0d2f4839c27d6e12e3c1dae50bf661d599e339f374c85929cbba76575fe1dcae"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 82,
+      "sha256": "252163e5f09bab30ac83260c541554c455d7f69769d2de5095249f5a38dfcf17"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 128,
+      "sha256": "ea92999ae285cf6205770de659154e402975c2886d8c413bcc9c7d359bd3bc2c"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 90,
+      "sha256": "8a024fffe2349b17073ad4ccf311c80f9529ebd87076876a765384cd4effeca2"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1023,
+      "sha256": "1db6300c57d59e38953a477d5b5eda3a3b59e9124843423f5f1823b122107f32"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1209,
+      "sha256": "b0cc04c01c0eb8cd2416b700206bdf724a31d83d27b1d05cf9474f3ebea4a0cd"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1209,
+    "sha256": "dce8269ee26bdcdf0e32cbdee5becea68dc152872487207a86e40b7d525d9947"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "0b6696f35185c3a1c0329ccda524935038ccbe7e913302ade07f39b8a3f81b24"
+  },
+  "correctedIds": [],
+  "findingCount": 15,
+  "notes": [
+    "Complete primary semantic coverage was 3547/3547 text units and 10/10 image plans.",
+    "The independent cycle-1 review found 15 objective text findings; images were clean.",
+    "Runtime and visual QA were not run."
+  ]
+}

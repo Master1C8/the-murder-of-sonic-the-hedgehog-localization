@@ -68,7 +68,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/5-conductorcar/TypedNoteFromTrainToEspio.png",
       "sourceText": "Use this blowdart on Sonic,\nstationed in the conductor\ncar. It is laced with a\nnonlethal sleeping agent.\nThank you again for\nchoosing the Mirage Express.\n-Staff",
-      "translation": "Употреби ову пикадо-стрелицу на Сонику,\nкоји је у кондуктеровом вагону.\nНапуњена је несмртоносним\nсредством за спавање.\nЈош једном хвала што сте\nизабрали The Mirage Express.\n—Особље",
+      "translation": "Употреби ову стрелицу из дуваљке на Сонику,\nкоји је у кондуктеровом вагону.\nПремазана је несмртоносним\nсредством за успављивање.\nЈош једном хвала што сте\nизабрали The Mirage Express.\n—Особље",
       "context": "Conductor Car / typed note from train staff to Espio",
       "glossaryIds": ["blowdart", "the-conductor", "conductor-car", "nonlethal-sleeping-agent", "the-mirage-express", "train-note"],
       "status": "translated",

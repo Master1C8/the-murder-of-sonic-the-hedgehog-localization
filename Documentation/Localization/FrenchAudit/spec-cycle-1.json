@@ -1,0 +1,41 @@
+{
+  "locale": "fr",
+  "cycle": 1,
+  "status": "pending-independent-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": null,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [],
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "Flicky",
+    "Omochao",
+    "murder mystery game",
+    "Sonic the Hedgehog",
+    "security guard",
+    "Fabergé Chao egg",
+    "gem-covered Chao",
+    "robot arms",
+    "birthday girl",
+    "journalist reporter",
+    "used cups",
+    "lost ticket",
+    "wet floor sign",
+    "bookcase",
+    "Conductor’s Wife",
+    "personacity",
+    "save timestamp"
+  ],
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Primary audit read all 3547 source/target units, all 117 current French glossary entries, and all 10 image plans.",
+    "The full pass included every known-gender reference and neutralized Chao, Flicky and Omochao where canonical gender is unknown.",
+    "All accepted findings were applied to authored inputs and the French overlay was rebuilt successfully.",
+    "The proposed 24-hour timestamp rewrite was rejected because it violated the source numeric-token invariant; the previous validator-safe French timestamp was retained.",
+    "Cycle 1 freezes the corrected French artifacts for independent closure review.",
+    "Runtime and visual QA were not run."
+  ]
+}

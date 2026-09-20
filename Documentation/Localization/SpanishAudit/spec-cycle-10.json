@@ -1,0 +1,29 @@
+{
+  "locale": "es",
+  "cycle": 10,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 2,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Final_Push[35].Final_Boss_Interaction4[16]",
+    "ink:root[2].Final_Push[35].Final_Boss_Interaction4[38]"
+  ],
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "Flicky",
+    "Omochao",
+    "best friend",
+    "save"
+  ],
+  "previousClosure": "Documentation/Localization/SpanishAudit/cycle-9/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 10 fixes the two remaining gendered Flicky references.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

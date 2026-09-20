@@ -73,7 +73,7 @@
     "Assets/ChooChooBooBoo/ArtAssets/CloseUps/5-conductorcar/TypedNoteFromTrainToEspio.png": {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/5-conductorcar/TypedNoteFromTrainToEspio.png",
       "sourceText": "Use this blowdart on Sonic,\nstationed in the conductor\ncar. It is laced with a\nnonlethal sleeping agent.\nThank you again for\nchoosing the Mirage Express.\n-Staff",
-      "translation": "이 바람총 다트를 소닉에게 사용해.\n차장 칸에 있는 소닉에게\n사용해. 비살상 수면제가\n발라져 있어.\n다시 한번 미라주 익스프레스를\n선택해 줘서 고마워.\n-직원",
+      "translation": "차장 칸에 있는 소닉에게\n이 바람총 다트를 사용해.\n비살상 수면제가\n발라져 있어.\n미라주 익스프레스를\n선택해 줘서 다시 고마워.\n-직원",
       "context": "Conductor Car / typed note from train staff to Espio",
       "glossaryIds": ["blowdart", "the-conductor", "conductor-car", "nonlethal-sleeping-agent", "the-mirage-express", "train-note"],
       "status": "translated",
@@ -82,7 +82,7 @@
     "Assets/ChooChooBooBoo/ArtAssets/Comics/7-final push/Seq5-epilogue/8-eggmanending1.png": {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/Comics/7-final push/Seq5-epilogue/8-eggmanending1.png",
       "sourceText": "OFFLINE...\nLET'S GO DAD",
-      "translation": "오프라인…\n가자, 아빠",
+      "translation": "오프라인...\n가자, 아빠",
       "context": "Final Push / Eggman ending comic panel",
       "glossaryIds": [],
       "status": "translated",

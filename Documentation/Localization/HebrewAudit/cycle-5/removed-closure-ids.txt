@@ -1,0 +1,13 @@
+ink:root[2].Prologue[1].Found_Vector_Ticket[32]
+ink:root[2].Lounge[108].Interrogation_Part2_Have_Correct_Clue[0][3]
+ink:root[2].Lounge[108].Minigame_Midpoint2[9][8].b[3]
+ink:root[2].Lounge[108].Keyring[25]
+ink:root[2].Conductor_Car[74].Interrogation_Part3_Choose_Evidence[0][3]
+ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][137]
+ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][175]
+ink:root[2].Conductor_Car[74].Blowdart[4]
+ink:root[2].Conductor_Car[74].Blowdart[39]
+inventory:blowdart:Name
+inventory:blowdart:Description
+inventory:keyring:Name
+inventory:keyring:Description

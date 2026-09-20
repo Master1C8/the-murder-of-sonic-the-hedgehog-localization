@@ -11,7 +11,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/Menu with chilidog.png",
       "sourceText": "Menu\nChili Dog\nRamen\nChicken\nCordon Bleu",
-      "translation": "Меню\nЧили дог\nРамен\nПиле\nПиле кордон бльо",
+      "translation": "Меню\nЧили дог\nРамен\nПиле\nкордон блю",
       "context": "Prologue / menu close-up",
       "glossaryIds": ["menu", "chili-dog", "chicken-cordon-bleu"],
       "status": "translated",
@@ -20,7 +20,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/TicketProp.png",
       "sourceText": "MIRAGE\nEXPRESS",
-      "translation": "МИРАЖ-\nЕКСПРЕС",
+      "translation": "ЕКСПРЕС\n„МИРАЖ“",
       "context": "Prologue / ticket prop",
       "glossaryIds": ["the-mirage-express"],
       "status": "translated",
@@ -29,7 +29,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/crumpledticket.png",
       "sourceText": "MIRAGE\nEXPRESS",
-      "translation": "МИРАЖ-\nЕКСПРЕС",
+      "translation": "ЕКСПРЕС\n„МИРАЖ“",
       "context": "Prologue / crumpled ticket prop",
       "glossaryIds": ["the-mirage-express"],
       "status": "translated",
@@ -74,7 +74,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/5-conductorcar/TypedNoteFromTrainToEspio.png",
       "sourceText": "Use this blowdart on Sonic,\nstationed in the conductor\ncar. It is laced with a\nnonlethal sleeping agent.\nThank you again for\nchoosing the Mirage Express.\n-Staff",
-      "translation": "Използвай тази стрела за духалка срещу Соник,\nкойто се намира във вагона на Кондуктора.\nТя е напоена с несмъртоносно приспивателно.\nОще веднъж благодарим, че избра\nЕкспрес „Мираж“.\n—Персонал",
+      "translation": "Уцелете Соник със стрелата\nза духалка във вагона на\nКондуктора. Тя съдържа\nнесмъртоносно приспивателно.\nБлагодарим, че избрахте\nЕкспрес „Мираж“.\n— Персонал",
       "context": "Conductor Car / typed note from train staff to Espio",
       "glossaryIds": ["blowdart", "the-conductor", "conductor-car", "nonlethal-sleeping-agent", "the-mirage-express", "train-note"],
       "status": "translated",

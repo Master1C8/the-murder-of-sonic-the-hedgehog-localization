@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "locale": "bg",
+  "cycle": 4,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "82151310f8c299656919c03bb09ce65352dbde4f9ff1fcc493d05a69385963df",
+    "overlay": "9929e2d19f4f5212e5f56106c6e03b39b0b1a2e1bae0f62e64d5885cf6b49388",
+    "images": "64fe9ae780e5d8fbfcebba96de0dcbb5c23e99b2fef564b557380b9cf0ca0a5d"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "531ccb5117572317387e294868947c4f85469918d1f0f63c110850d03b285eba"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 294,
+      "sha256": "b5311d99ca08c5e5dd1f57f95e23e3a127f837ce67a975e8efcd5e759bb17ddb"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 441,
+      "sha256": "4d9d663a71827039a1f38789a422db53ee5ff7a5990a8e5aaff43cffc3d864cb"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 1,
+      "sha256": "6efa41cb060f5bd67781e571ff02798c0a340a62336b0ab587ee686053f2654c"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 3,
+      "sha256": "17e73751c9b04a35d22ce97b9993b6c029f4373ba1d5b55e36f37d8048561ea4"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1535,
+      "sha256": "e9af79c9e37ffb248a2ba2be9b96a12e55dfff1d0f99b070896f35deef3d2ac5"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 3,
+      "sha256": "d1f66472d7f938d44a7ccd69e61cd192d6093529e97610f77192be9839105213"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 12,
+      "sha256": "970513720d59f4540487b74a596354ff02bfedc230cca9e95e5aeac20053f2e5"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1535,
+    "sha256": "17209407bb819de114d1c3d8258d0c0be2f0f3c410eb5342e48d1b5353112356"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "c36d60c5bc2dbfc6b6d74b3d937d608b0e4cbfa6504459d3db41dec6386ed267"
+  },
+  "correctedIds": [
+    "ink:root[2].SafeRoom[4].Opt8_Blaze_Fire[5]"
+  ],
+  "findingCount": 1,
+  "notes": [
+    "Cycle 4 applies the one remaining dynamic-join punctuation correction from the independent cycle 3 audit.",
+    "Barry remains male.",
+    "Runtime and visual QA were not run."
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "locale": "sr",
+  "game": "the-murder-of-sonic-the-hedgehog",
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "workflow": "Documentation/Localization/AUDIT_WORKFLOW.md",
+  "status": "editorially-accepted-cycle-3-clean",
+  "sourcePolicy": {
+    "semanticDecisionInputs": ["English source corpus", "canonical English/Serbian glossary", "scene and adjacent-line context", "10 source PNGs"],
+    "nonEnglishLocaleComparisonUsed": false,
+    "ownerConfirmedFacts": ["Barry is male"],
+    "canonicalMetadataDecision": "Chao, Flicky and Omochao remain grammatically neutral where canonical gender is unknown."
+  },
+  "fingerprints": {
+    "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+    "sourceUnitsSha256": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventoryFileSha256": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalizedSha256": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossarySerbianNormalizedSha256": "bafdbf06a13c8681081cfb5220044a50a40b52e2cf87714cefbf0279f14e4d4d"
+  },
+  "artifactHashes": {
+    "manual": "4070adc688b6d025eafa96d944f7520678fb8ceb6c15050e87f962fda5559696",
+    "overlay": "c9908e822e99d65dd52c2ed83748b4f5653144161b3200e20440b77b8bce78be",
+    "images": "428757eac179ba8dc0a3f6ad1be94c1c5c73956b9d241c8c31b2721423886709"
+  },
+  "semanticCoverage": {
+    "sourceUnitsRead": 3547, "sourceUnitTotal": 3547,
+    "glossaryEntriesRead": 117, "glossaryEntryTotal": 117,
+    "imagePlansRead": 10, "imagePlanTotal": 10, "complete": true
+  },
+  "independentDiffAudit": {
+    "status": "cycle-3-clean",
+    "cycleFindingCounts": [145, 48, 5],
+    "finalClosureCount": 1109,
+    "finalDeltaReviewCount": 40
+  },
+  "evidenceCycles": [
+    {"cycle": 1, "manifest": "Documentation/Localization/SerbianAudit/cycle-1/manifest.json", "result": "not-clean"},
+    {"cycle": 2, "manifest": "Documentation/Localization/SerbianAudit/cycle-2/manifest.json", "result": "not-clean"},
+    {"cycle": 3, "manifest": "Documentation/Localization/SerbianAudit/cycle-3/manifest.json", "closureCount": 1109, "deltaReviewCount": 40, "result": "clean"}
+  ],
+  "mandatoryRegression": {
+    "genderAndAgreement": "complete; Barry male and all known-gender references reviewed",
+    "unknownAndAmbiguous": "complete; Chao, Flicky and Omochao remain neutral where canonical gender is unknown",
+    "saveLoadAndEnvironment": "reviewed; protected tokens preserved",
+    "speakerLabels": "reviewed; runtime-exact controls preserved",
+    "dynamicJoins": "reviewed; paired fragments and player-name joins are clean",
+    "blowdartTerminology": "18/18 source rows reviewed; 17 visible uses consistent and one protected runtime key preserved exactly",
+    "imagePlans": "10/10 reviewed"
+  },
+  "sourcePlaceholders": {
+    "classification": "reviewed source-authored Unity placeholders; not missing localization",
+    "count": 11,
+    "ids": [
+      "unity:level0:1485:m_text", "unity:level0:1490:m_text", "unity:level0:1511:m_text",
+      "unity:level0:1512:m_text", "unity:level0:1513:m_text", "unity:level0:1524:m_text",
+      "unity:level0:1526:m_text", "unity:level0:1528:m_text", "unity:level0:1530:m_text",
+      "unity:level0:1544:m_text", "unity:level0:1555:m_text"
+    ]
+  },
+  "validation": {
+    "overlay": "passed: 3547/3547, zero missing/extra/token/layout/runtimeExact errors",
+    "byteIdenticalOverlayRebuild": "passed",
+    "byteIdenticalEvidenceRebuild": "passed",
+    "localizationTests": "12/12 passed",
+    "swiftTests": "10/10 passed",
+    "glossaryTests": "39/39 passed"
+  },
+  "notRun": {
+    "gameLaunch": true, "installerLaunch": true, "installedGameMutation": true,
+    "runtimeQa": true, "visualQa": true
+  },
+  "nextAction": "Editorial audit is complete. Runtime and visual QA remain separate and were not run; do not mark payloadReady until all 30 locales and payload files are final."
+}

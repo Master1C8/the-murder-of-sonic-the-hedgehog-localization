@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "locale": "he",
+  "cycle": 5,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "18109b7c507222054084168fdffe3c81381525b9c3077698cc29de06e8e69b66",
+    "overlay": "34e567e21d90203147628a1fc3a16a88f40506da33ce4c88f1b57e32d22844c0",
+    "images": "e9a1ab3f32a4aaeb23d283e3d565ca82ecdcd2b1b59a09b4b51ddd39885f3a25"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "79067ab79c5d78f6b5b2d8d139d6090094e1464f1031bf15c45a1788cdb89b32"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 286,
+      "sha256": "81267d6efb3d6e42e629fa46bb125cc3778c461b4436c46d85cb3c91eb3a8f2d"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 428,
+      "sha256": "a7352df8ce42720cb4bc6304ce77acad02ade67d44588a07aba7143f37a830ab"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 149,
+      "sha256": "40df7784a22775efa98abd1fe65e4307e666ae9e025a493c43ad13f472045b2d"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1574,
+      "sha256": "d63c05d747c2ac4f9406b28d09eb655ddf853a334c222f0ca66fc431422a72d9"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 5,
+      "sha256": "a6eb1f59e185e4cc9e294daf8eb39c6f3e88d7c59c08556990357e533447812a"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 13,
+      "sha256": "7b25697806b0c7177942e33758a1cb2120b9e3940d0cfee7bb1d596da19b9d56"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1574,
+    "sha256": "956cd72579b2f42ef6ae4bc20120469881083712ac55f4ff3ba0713708120d94"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "023c0bae937cf61e6cdb70371c2e6045406dc1323e2b762e817fbfdd1f67201f"
+  },
+  "correctedIds": [
+    "ink:root[2].Final_Push[35].Finale_Start[65]",
+    "ink:root[2].Final_Push[35].Finale_Start[67]",
+    "ink:root[2].LockdownDiningCar[1].Eggman_Appears[0][56].g-0[121]"
+  ],
+  "findingCount": 3,
+  "notes": [
+    "Cycle 5 corrects all three actionable text findings from independent cycle 4.",
+    "The proposed canonical metadata change was not applied: Flicky, Chao, and Omochao are non-speaking entities in this game, their game-text usage is already neutral, the speaking-character male/female rule does not apply, and the one-use source-glossary amendment exception is consumed.",
+    "Personified Train remains masculine; ordinary lexical agreement for the physical train remains grammatical Hebrew.",
+    "Runtime and visual QA were not run."
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "locale": "tr",
+  "cycle": 3,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "9edd0837a08588d411f56668c492bdff6fbd2ef21178dcdc8e7af2c19be1c9ba",
+    "overlay": "3a22f53b5680989b13361c6f2999f9fcd7a044893da55963466f061e6fb41e3f",
+    "images": "8d198568cec4acb67681151996c2791fcd9d07a2a40a7397d56b599039b3f8ce"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "fec11b74fd376de4e33e406eb99b0ecacdc76c824f6ac576cf6d33332f662e92"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 5,
+      "sha256": "f7804453865cda1bef33afe6bacde5ef8d8d09c3ddebd3e768b18e4c9f772b8c"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 10,
+      "sha256": "db31afb4cba78dbf02ab98325d2fdba82628ff06bce331842ba8c0c131d22174"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 97,
+      "sha256": "9a6a9bff29a2a85c829a40a33702ec06ccfcd197aa91549d51381da402b166e9"
+    },
+    "invalidated-dependency-ids": {
+      "file": "invalidated-dependency-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1099,
+      "sha256": "891f19ff862fc3357a1b80bccdf158705e2e0734e27ec46676cfa2cebacd567a"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 7,
+      "sha256": "7983a1dfe0a436bfe9c61f231de958016dee2201e25525760d00d93f6b622973"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 45,
+      "sha256": "d70a767519ea961def9040cf4f00d9977a6f3626248d59e390f20315c380b5d9"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1099,
+    "sha256": "e3b45a55df9028c2af2d94da2a4d0890629e2cc2e72b10b79f2ab29b56e71b4b"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "274165f207316e8b82a58e613f8d528e9bf5ba7f7d1377e3d9e9ae3a25db56e9"
+  },
+  "correctedIds": [
+    "ink:root[2].Saloon[4].FirstVisit[0][36].g-1[10]",
+    "ink:root[2].Prologue[1].Environment_Sonic_Interaction_1[18]",
+    "ink:root[2].Library[4].Minigame_Midpoint2[2][1].b[10]",
+    "ink:root[2].Lounge[108].Interrogation_Part5_End[20]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part2[0][11]"
+  ],
+  "findingCount": 6,
+  "notes": [
+    "Cycle 3 fixes the complete six-item Cycle 2 audit package: five manual IDs and one TypedNoteFromTrainToEspio image-plan translation.",
+    "The final review is restricted to this exact correction delta, the changed image plan, and mandatory regression.",
+    "The source-authored timestamp remains unchanged because its proposed rewrite failed protected-token preflight.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

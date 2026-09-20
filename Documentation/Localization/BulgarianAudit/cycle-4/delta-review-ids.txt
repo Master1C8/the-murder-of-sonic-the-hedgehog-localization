@@ -1,0 +1,3 @@
+ink:root[2].SafeRoom[4].Opt8_Blaze_Fire[3]
+ink:root[2].SafeRoom[4].Opt8_Blaze_Fire[5]
+ink:root[2].SafeRoom[4].Opt8_Blaze_Fire[10]

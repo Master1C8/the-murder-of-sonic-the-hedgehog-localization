@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "locale": "bg",
+  "cycle": 3,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "0a3a17aceae74c521522c31c6eae51d253226de13cc4f239ca48edaeadcb2d64",
+    "overlay": "bb56c494ce74b6fe610755ba6cfb9402e8dc04b33d14769ae2fa39e68016bf98",
+    "images": "64fe9ae780e5d8fbfcebba96de0dcbb5c23e99b2fef564b557380b9cf0ca0a5d"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "531ccb5117572317387e294868947c4f85469918d1f0f63c110850d03b285eba"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 293,
+      "sha256": "fa7acd1873f282f91b20f45da76e77ad84d645eed50451690b160daa3e02e178"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 439,
+      "sha256": "a942a70b2ccaadf6772292e335596b9bd9300b6b4962a388762eb621471f0809"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 1,
+      "sha256": "6efa41cb060f5bd67781e571ff02798c0a340a62336b0ab587ee686053f2654c"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 82,
+      "sha256": "8e19ff2df6994a8ecba0777e92c2ee4327fca3fea1dacdc13b925df04400ea26"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1545,
+      "sha256": "7dc60a6cac70d157331c1655f5e789daaca41191daa5840d6de8fd2766e9b4a5"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 16,
+      "sha256": "f4a25b2caef9a5487331ffd75caa6a773342439ba02a51fc23b9f2b66214f45e"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 8,
+      "sha256": "4a9fa0001bf912400c9f4ff8ddedc68d17ac2f7741a0db1f0e75549a92f96acf"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1545,
+    "sha256": "26b09b09fb59e545eb534475bbf9056e811b8a647d501339f31d0166799d43b2"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "c36d60c5bc2dbfc6b6d74b3d937d608b0e4cbfa6504459d3db41dec6386ed267"
+  },
+  "correctedIds": [
+    "ink:root[2].Prologue[1].Murder_Mystery_Rules[0][53].g-0[2]",
+    "ink:root[2].Casino[5].FirstVisit[0][41]",
+    "ink:root[2].Casino[5].FirstVisit[0][44]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt5[0][31].c-2[1]",
+    "ink:root[2].Lounge[108].Talk_To_Amy[0][12]",
+    "ink:root[2].Lounge[108].Interrogation_Part4[0][14].g-0[114]",
+    "ink:root[2].Lounge[108].Interrogation_Part5_End[0]",
+    "ink:root[2].SafeRoom[4].Opt12_Kiss_Egg[10]",
+    "ink:root[2].DiningCloset[1].Interrogation_Part1[0][20].c-2[4]"
+  ],
+  "findingCount": 11,
+  "notes": [
+    "Cycle 3 applies nine valid text corrections and one image-plan correction from the independent cycle 2 audit.",
+    "The proposed timestamp punctuation change was tested and rejected because separating 44 from the hour marker creates an extra protected numeric token.",
+    "The typed note was reflowed to the source image line-length constraints.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "The rebuilt Bulgarian overlay has 3547/3547 units and zero missing, extra, protected-token, layout or runtime-exact errors.",
+    "Runtime and visual QA were not run."
+  ]
+}

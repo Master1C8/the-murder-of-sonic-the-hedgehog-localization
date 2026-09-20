@@ -1,0 +1,52 @@
+{
+  "locale": "ru",
+  "cycle": 1,
+  "status": "independent-review-complete-not-clean",
+  "result": "not-clean",
+  "reviewer": "independent Codex reviewer Plato",
+  "findingCount": 15,
+  "changedIdsFromAudit": "Documentation/Localization/ru.audit.json",
+  "artifactHashes": {
+    "manual": "41ad71038eed8ae7b438bdd8785f4516173a11df5bea6cc245476380d7c6b7b1",
+    "overlay": "cbb022b503395b45216d1461db781dc8f0c5fc3a09466b7ce91a6d1ca2cd3a15",
+    "images": "c2309b2f5eea167f216f53559f85a2a8dc4b4d7a7807cd76f66038434fa98c6c"
+  },
+  "targetOverrides": {
+    "unity:level0:1538:m_text": "27 февр. 3003 05:44PM",
+    "ink:root[2].Name_Entry[20].Existing_Character_Name[0]": "<style=Thought>(…Например… НЕУЖЕЛИ ЭТО ",
+    "ink:root[2].DiningCloset[1].Closet_Conductor_Flashback[21]": "Я не стану злым, как твой бывший товарищ-флики.",
+    "ink:root[2].Saloon[4].Enter_Interrogation_Mode[15]": "мне нужно выяснить, чем ты занимался в течение часа, когда произошло убийство.",
+    "ink:root[2].Saloon[4].Interrogation_Part5[0][54].g-0[76]": "<style=Thought>(Точно! Проводник дал ей особый ключ в честь дня рождения.)</style>",
+    "ink:root[2].Prologue[1].Murder_Mystery_Rules[0][53].g-0[34]": "По моей предыстории моим лучшим другом был флики, который решил присоединиться к злому доктору Эггману. Так во мне пробудилось стремление бороться за справедливость.",
+    "ink:root[2].Casino[5].Heist_Planning_Pt4[0][22]": "Обокрасть охранника",
+    "ink:root[2].Casino[5].Heist_Planning_Pt5[0][31].c-1[10]": "<style=Thought>(...почему охранником стал тот, кто так легко плачет??)</style>",
+    "ink:root[2].Casino[5].Return_To_Casino[15]": "<style=Thought>(Никто, похоже, ни о чём не подозревает, а охранник вернулся на свой пост.)</style>",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part4[144]": "и я знаю ещё один способ, как это могло произойти.",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part6[79]": "Соник не так просто падает… но если он потерял сознание от духового дротика, руки могли его схватить.",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation2[111]": "…меня успели изрядно побить, прежде чем яд окончательно подействовал…",
+    "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][91]": "Стреляешь в кого-то <style=InventoryItem>духовым дротиком</style> — и человек умирает!",
+    "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][121]": "Тут написано… «Используйте этот <style=InventoryItem>духовой дротик</style> на Сонике, который находится в вагоне Проводника. Дротик пропитан несмертельным снотворным средством».",
+    "ink:root[2].Final_Push[35].Finale_Start[75]": "Фа-ха-ха, кажется, старый друг!"
+  },
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "flicky",
+    "blowdart",
+    "blow dart",
+    "birthday key",
+    "ULTIM",
+    "Ultimate Life Form",
+    "Conductor’s Wife",
+    "library map",
+    "keyring",
+    "concert tickets"
+  ],
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Complete primary semantic coverage was 3547/3547 text units and 10/10 image plans.",
+    "The independent cycle-1 review found 15 objective text findings; images were clean.",
+    "Runtime and visual QA were not run."
+  ]
+}

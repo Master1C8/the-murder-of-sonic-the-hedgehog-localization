@@ -1,0 +1,11 @@
+ink:root[2].TestCar[6].TestFullscreenImage[6]
+ink:root[2].Casino[5].FirstVisit[0][131]
+ink:root[2].Casino[5].FirstVisit[0][163].g-0[10]
+ink:root[2].Lounge[108].Robotic_Arm[0][20]
+ink:root[2].Lounge[108].Robotic_Arm[0][24].c-1[5]
+ink:root[2].Lounge[108].Big_Band[0][0]
+ink:root[2].SafeRoom[4].Wall_of_Safes[21]
+ink:root[2].SafeRoom[4].Opt13_Chaos_Control[0]
+ink:root[2].SafeRoom[4].Opt16_Just_Wait[104]
+ink:root[2].SafeRoom[4].Return_To_Egg_Options[0][81]
+unity:defaultgroup:4951272156339544449:m_text

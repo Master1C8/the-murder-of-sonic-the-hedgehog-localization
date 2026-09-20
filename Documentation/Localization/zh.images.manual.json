@@ -10,7 +10,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/Menu with chilidog.png",
       "sourceText": "Menu\nChili Dog\nRamen\nChicken\nCordon Bleu",
-      "translation": "菜单\n辣椒热狗\n拉面\n鸡肉\n蓝带鸡排",
+      "translation": "菜单\n辣椒热狗\n拉面\n蓝带\n鸡排",
       "context": "Prologue / menu close-up",
       "glossaryIds": [
         "menu",

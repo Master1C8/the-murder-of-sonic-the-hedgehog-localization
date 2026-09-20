@@ -1,0 +1,36 @@
+{
+  "locale": "fr",
+  "cycle": 2,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 5,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Prologue[1].Murder_Mystery_Rules[0][53].g-0[2]",
+    "ink:root[2].Casino[5].Return_To_Casino[17]",
+    "ink:root[2].Casino[5].Environment_Rouge[0][0]",
+    "ink:root[2].Final_Push[35].Finale_Start[38]",
+    "ink:root[2].DiningCloset[1].Interrogation_Part1[0][20].c-2[4]"
+  ],
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "Flicky",
+    "Omochao",
+    "murderer",
+    "murder mystery",
+    "security guard",
+    "Rouge"
+  ],
+  "previousClosure": "Documentation/Localization/FrenchAudit/cycle-1/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 2 corrects all five actionable findings from the independent cycle 1 closure audit.",
+    "The corrections restore the single murderer role, neutral Chao-guard reference, plural addressee agreement, and the distinction between the real attack and the role-play game.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "The rebuilt French overlay has 3547/3547 units and zero missing, extra, protected-token, layout or runtime-exact errors.",
+    "Runtime and visual QA were not run."
+  ]
+}

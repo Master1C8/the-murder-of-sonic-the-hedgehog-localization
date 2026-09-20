@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "locale": "es-419",
+  "cycle": 5,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "3c2900c76825207a1000e7a29ddd1577fb7254f41b652bb973cfe0d7342f81e9",
+    "overlay": "a90d3c348325f9b2276d82293f4e9bbf43b5b1fc73d9fcc503b05de61756224c",
+    "images": "68b92691e4fbb91507923789b454c1c9108e577fc04a71bbd5e926c5e7de761d"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "3f089206e9fb27bd609fc80f7fc425ebc7b962048188bb4001c6761b3ae3d097"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 96,
+      "sha256": "e3f7bca123501e20b8b7f114d02945aee4de2aa50e4d25b5e06c454a890b9fbd"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 169,
+      "sha256": "a3fcb18b905b029d0ba2881a3e5bdc8a9b4a6b52e591e2924294f6573b60f053"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 2,
+      "sha256": "d43c938f7de298bf7ba3d5fd48d2e8b1a1c894193ee3d24ec76791accc52f6d5"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 213,
+      "sha256": "601fdc848b447b4ef27698050353cb48f2e3046e5a29ed30559d3708053f2b3a"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1347,
+      "sha256": "c1876edb27e3029c6309d76a369f82a028f7051d509f73057fdc8ef287978be7"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 135,
+      "sha256": "f70e489a2f8bfa1beb58773e313d362246b22bd8b97979ae8fddc3ae2bed1deb"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 4,
+      "sha256": "f4aaf205cd476292b4a19c010f42299e88cd5c3e5dd45dcb66057acfc90c3612"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1347,
+    "sha256": "f755aa7de8c34c35bcaceb7f9d3cc8808a85d0eb3cd754efbd42f0ae20c928cc"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "9a53b9dd182266686b7e7eee938fc262e4fa0d704f43a1774658aa0f5bf8b4ce"
+  },
+  "correctedIds": [
+    "ink:root[2].Casino[5].Heist_Planning_Pt6[0][0]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part5[146]"
+  ],
+  "findingCount": 2,
+  "notes": [
+    "Cycle 5 removes one literal elevator-stage-direction calque and fixes sentence capitalization in the vent explanation.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

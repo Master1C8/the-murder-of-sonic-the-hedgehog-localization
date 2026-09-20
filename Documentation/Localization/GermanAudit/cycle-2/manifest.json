@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "locale": "de",
+  "cycle": 2,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "0b49ba4b50cd500b6505ad298e88edc4afb992d23797a5ff086abc602cb1ec06",
+    "overlay": "783050a36e58ef7f58e52a8a7d59170c9a61d6193f164acad0d29f858dfa0f91",
+    "images": "a9f338eb8e661a9684f7019502bbb52ec2c5b3280c61b70a21d1dda97fc0d788"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "dbddd899f876bbfa99faf77b7c3c3742c3d5e771c34d7233dc28a9dc10d3db00"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 28,
+      "sha256": "0653a06ff0e0584d2017da7f7d5e9f9b26d1ef9976ea277f8c241e5072d2f60e"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 50,
+      "sha256": "26e6670f515a91632d89d2d10ca6ab65780b8e8a5bf58e588f2a290ee6a55690"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 1,
+      "sha256": "de28e8b3f51f255ec6dabc0a8ef6e94fb7bd1a4c6183f3011e41c69d75aba40a"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 56,
+      "sha256": "8e1200c7c4f8039bf10056be83020fcea298774f687e63ceb8186571f6bb8718"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1110,
+      "sha256": "ce58ef4bb2284252fda86b236bc8e173eb195934cda29d1a16460818601d6325"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 1,
+      "sha256": "b02b6869349f982530b2769319eb34b4ee9a9ecae9e4cd0fd7609696a7a6a873"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 45,
+      "sha256": "a8407317d48bfe57897c616243196e18615edcceeb494f9b0e26328ae2031c9a"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1110,
+    "sha256": "a1cf6e097b89feea01aadcb1e2594625526c46e3c89516a6ac266c1456d1e766"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "af10d916e5078ffaa1d70d3ebf4f48d5d6d3dade387eee2ba9fab1c17964f7d3"
+  },
+  "correctedIds": [],
+  "findingCount": 1,
+  "notes": [
+    "Cycle 2 corrects the sole glossary finding from the independent cycle 1 audit.",
+    "The conductor's wife now meets him after the train adventure on his first retirement day, before the planned Spagonia trip.",
+    "Game text and image plans were clean in the cycle 1 independent audit and their artifact hashes remain unchanged.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

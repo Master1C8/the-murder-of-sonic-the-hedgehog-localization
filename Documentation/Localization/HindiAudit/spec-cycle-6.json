@@ -1,0 +1,28 @@
+{
+  "locale": "hi",
+  "cycle": 6,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 1,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].LockdownDiningCar[1].Fortified_Door[4][1].b[13]"
+  ],
+  "referentSearchTerms": [
+    "Barry",
+    "fortified door",
+    "force",
+    "look around"
+  ],
+  "previousClosure": "Documentation/Localization/HindiAudit/cycle-5/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 6 corrects the sole actionable finding from the independent cycle 5 audit.",
+    "The corrected line restores the source meaning: stop trying to force the fortified door for now and search for another way.",
+    "Barry remains male; the mandatory character-gender and neutral-referent regression surfaces remain in the closure.",
+    "The rebuilt Hindi overlay has 3547/3547 units and zero missing, extra, protected-token, layout or runtime-exact errors.",
+    "Runtime and visual QA were not run."
+  ]
+}

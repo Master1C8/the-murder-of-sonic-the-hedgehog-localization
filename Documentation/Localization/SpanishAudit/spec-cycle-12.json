@@ -1,0 +1,19 @@
+{
+  "locale": "es",
+  "cycle": 12,
+  "status": "pending-independent-full-semantic-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 1,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [],
+  "referentSearchTerms": ["Barry", "Chao", "Flicky", "Omochao", "outfit guide"],
+  "previousClosure": "Documentation/Localization/SpanishAudit/cycle-11/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 12 fixes the Spanish outfit-guide meaning so Amy prepares it for the guests rather than dressing herself.",
+    "This glossary hash change requires one final full semantic pass.",
+    "Runtime and visual QA were not run."
+  ]
+}

@@ -37,11 +37,11 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/1-Saloon/PROP_FixedArcadeWithHighScore_V02.png",
       "sourceText": "HIGH SCORE\nVECTR 7501\nKNUCK 7500\nTOAST 7331\nAPPLE 7250\nBREAD 7200\nULTIM 7150\nBAGEL 7003\nCANDY 6990",
-      "translation": "ΥΨΗΛΗ ΒΑΘΜΟΛΟΓΙΑ\nVECTR 7501\nKNUCK 7500\nTOAST 7331\nAPPLE 7250\nBREAD 7200\nULTIM 7150\nBAGEL 7003\nCANDY 6990",
+      "translation": "ΥΨΗΛΗ ΒΑΘΜΟΛΟΓΙΑ\nVECTR 7501\nKNUCK 7500\nTOAST 7331\nAPPLE 7250\nBREAD 7200\nΑΠΟΛ 7150\nBAGEL 7003\nCANDY 6990",
       "context": "Σαλούν / οθόνη υψηλών βαθμολογιών arcade",
       "glossaryIds": ["arcade-machine"],
       "status": "translated",
-      "note": "Μεταφράζεται μόνο ο τίτλος· τα ψευδώνυμα και όλες οι βαθμολογίες διατηρούνται ακριβώς."
+      "note": "Μεταφράζεται ο τίτλος και το ULTIM αποδίδεται ως ΑΠΟΛ ώστε να διατηρηθεί το στοιχείο «Απόλυτη Μορφή Ζωής»· οι υπόλοιπες καταχωρίσεις και όλες οι βαθμολογίες διατηρούνται."
     },
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/1-Saloon/PROP_TailsLoreCard.png",
@@ -73,7 +73,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/5-conductorcar/TypedNoteFromTrainToEspio.png",
       "sourceText": "Use this blowdart on Sonic,\nstationed in the conductor\ncar. It is laced with a\nnonlethal sleeping agent.\nThank you again for\nchoosing the Mirage Express.\n-Staff",
-      "translation": "Χρησιμοποίησε αυτό το Φυσοκάλαμο στον Sonic,\nπου βρίσκεται στο βαγόνι του Ελεγκτή. Είναι εμποτισμένο\nμε μη θανατηφόρο υπνωτικό παράγοντα.\nΕυχαριστούμε και πάλι που\nεπέλεξες το Mirage Express.\n-Το προσωπικό",
+      "translation": "Χρησιμοποίησε αυτό το βέλος φυσοκάλαμου στον Sonic,\nπου βρίσκεται στο βαγόνι του Ελεγκτή. Είναι εμποτισμένο\nμε μη θανατηφόρο υπνωτικό παράγοντα.\nΕυχαριστούμε και πάλι που\nεπέλεξες το Mirage Express.\n-Το προσωπικό",
       "context": "Βαγόνι του Ελεγκτή / δακτυλογραφημένο σημείωμα του τρένου προς τον Espio",
       "glossaryIds": ["blowdart", "the-conductor", "conductor-car", "nonlethal-sleeping-agent", "the-mirage-express", "train-note"],
       "status": "translated",
@@ -86,7 +86,7 @@
       "context": "Τελικό σπρώξιμο / comic ending του Eggman",
       "glossaryIds": [],
       "status": "translated",
-      "note": "Μεταφράζονται οι ορατές λεζάντες· τα μικρά δυσανάγνωστα διαγράμματα του PNG δεν συμπληρώνονται."
+      "note": "Η μετάφραση του OFFLINE εφαρμόζεται και στις δύο εμφανίσεις: στην επάνω κεντρική οθόνη και στη δεξιά οθόνη. Η μετάφραση του LET'S GO DAD εφαρμόζεται και στις δύο μπλούζες: της Sage και του Metal Sonic. Οι μικρές ψευδοκειμενικές επισημάνσεις στις τρεις περιοχές διαγραμμάτων — αριστερή οθόνη, κεντροαριστερή οθόνη σιλουέτας και κεντροδεξιά οθόνη διαγράμματος — διατηρούνται ακριβώς όπως στην πηγή. Το PNG δεν έχει τροποποιηθεί."
     },
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/Comics/titlecard.png",

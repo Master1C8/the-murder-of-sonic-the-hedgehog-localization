@@ -1,0 +1,36 @@
+{
+  "locale": "fr",
+  "cycle": 3,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 7,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Library[4].Talk_To_Vector[12]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt4[0][10]",
+    "ink:root[2].Casino[5].Return_To_Casino[17]",
+    "ink:root[2].SafeRoom[4].Opt5_Take_4_Team[17]",
+    "ink:root[2].SafeRoom[4].Opt8_Blaze_Fire[5]"
+  ],
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "Flicky",
+    "Omochao",
+    "security guard",
+    "knife",
+    "coaster fiend",
+    "say things"
+  ],
+  "previousClosure": "Documentation/Localization/FrenchAudit/cycle-2/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 3 corrects all five text findings and both image-plan findings from the independent cycle 2 audit.",
+    "The Chao security guard remains neutral, Barry remains male, and the dynamic name join now has correct punctuation.",
+    "Hot Honey seat rows and the typed note were reflowed to the source image line-length constraints.",
+    "The rebuilt French overlay has 3547/3547 units and zero missing, extra, protected-token, layout or runtime-exact errors.",
+    "Runtime and visual QA were not run."
+  ]
+}

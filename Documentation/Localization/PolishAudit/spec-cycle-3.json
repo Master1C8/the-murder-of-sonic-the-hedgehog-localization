@@ -1,0 +1,40 @@
+{
+  "locale": "pl",
+  "cycle": 3,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": null,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Prologue[1].Story_Continues[103]",
+    "ink:root[2].Prologue[1].Story_Continues[114]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt3[0][19]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt7[0][26].c-0[11]",
+    "ink:root[2].Final_Push[35].Finale_Start[61]",
+    "unity:level0:1538:m_text"
+  ],
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "flicky",
+    "Omochao",
+    "blowdart",
+    "blow dart",
+    "birthday girl",
+    "ULTIM",
+    "Ultimate Life Form",
+    "Conductor’s Wife",
+    "library map",
+    "keyring",
+    "concert tickets"
+  ],
+  "previousClosure": "Documentation/Localization/PolishAudit/cycle-2/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 3 corrects five text findings from independent cycle 2.",
+    "The proposed space after 05:44 was tested and rejected because it exposes 44 as an extra protected numeric token; the prior token-safe timestamp is retained for review.",
+    "Runtime and visual QA were not run."
+  ]
+}

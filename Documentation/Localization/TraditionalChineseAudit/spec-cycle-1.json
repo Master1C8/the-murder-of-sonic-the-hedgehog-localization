@@ -1,0 +1,22 @@
+{
+  "locale": "zh-TW",
+  "cycle": 1,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 125,
+  "changedIdsFromGitHead": true,
+  "referentSearchTerms": [
+    "Barry", "Chao", "Flicky", "Omochao", "rings", "interrogation",
+    "Big Chao Band", "Conductor's Wife", "dynamic name"
+  ],
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 1 applies one exhaustive Traditional Chinese correction package: 123 manual IDs and two zh-TW glossary fields; all 10 image plans were reviewed and unchanged.",
+    "Fifteen dynamic-join groups spanning 25 fragments were corrected while preserving all 125 PLAYER_NAME bindings.",
+    "Traditional characters and Taiwan terminology were reviewed; official Taiwan usage 金環 is used for Rings.",
+    "Five risky proposals were rejected: unconfirmed Sage/Professor Pickle variants, Omochao renaming against glossary, a protected malformed source tag, and image line-wrap changes without visual QA.",
+    "Runtime and visual QA were not run."
+  ]
+}

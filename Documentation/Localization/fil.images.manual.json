@@ -10,9 +10,13 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/Menu with chilidog.png",
       "sourceText": "Menu\nChili Dog\nRamen\nChicken\nCordon Bleu",
-      "translation": "Menu\nChili Dog\nRamen\nManok\nCordon Bleu",
+      "translation": "Talaan ng pagkain\nChili Dog\nRamen\nChicken\nCordon Bleu",
       "context": "Prologue / menu close-up",
-      "glossaryIds": ["menu", "chili-dog", "chicken-cordon-bleu"],
+      "glossaryIds": [
+        "menu",
+        "chili-dog",
+        "chicken-cordon-bleu"
+      ],
       "status": "translated",
       "note": "Isinalin ang mga generic na label; pinanatili ang mga pangalan ng pagkain na karaniwang ginagamit bilang hiram na termino at ang limang linyang ayos."
     },
@@ -21,7 +25,9 @@
       "sourceText": "MIRAGE\nEXPRESS",
       "translation": "MIRAGE\nEXPRESS",
       "context": "Prologue / ticket prop",
-      "glossaryIds": ["the-mirage-express"],
+      "glossaryIds": [
+        "the-mirage-express"
+      ],
       "status": "translated",
       "note": "Opisyal na pangalan ng tren; hindi isinalin ang pangalan at pinanatili ang dalawang linyang ayos."
     },
@@ -30,7 +36,9 @@
       "sourceText": "MIRAGE\nEXPRESS",
       "translation": "MIRAGE\nEXPRESS",
       "context": "Prologue / crumpled ticket prop",
-      "glossaryIds": ["the-mirage-express"],
+      "glossaryIds": [
+        "the-mirage-express"
+      ],
       "status": "translated",
       "note": "Pareho sa tiket na hindi gusot; hindi binago ang PNG at pinanatili ang dalawang linyang ayos."
     },
@@ -39,7 +47,9 @@
       "sourceText": "HIGH SCORE\nVECTR 7501\nKNUCK 7500\nTOAST 7331\nAPPLE 7250\nBREAD 7200\nULTIM 7150\nBAGEL 7003\nCANDY 6990",
       "translation": "MATAAS NA SCORE\nVECTR 7501\nKNUCK 7500\nTOAST 7331\nAPPLE 7250\nBREAD 7200\nULTIM 7150\nBAGEL 7003\nCANDY 6990",
       "context": "Saloon / arcade high-score display",
-      "glossaryIds": ["arcade-machine"],
+      "glossaryIds": [
+        "arcade-machine"
+      ],
       "status": "translated",
       "note": "Header lang ang isinalin; pinanatili nang eksakto ang mga alias at numerong nasa scoreboard."
     },
@@ -48,7 +58,10 @@
       "sourceText": "DETECTIVE",
       "translation": "DETEKTIB",
       "context": "Saloon / Tails lore card",
-      "glossaryIds": ["detective", "lore-card"],
+      "glossaryIds": [
+        "detective",
+        "lore-card"
+      ],
       "status": "translated",
       "note": "Ang ibang guhit sa card ay dekoratibong hindi mabasang linya sa source PNG at hindi dinagdagan."
     },
@@ -57,7 +70,10 @@
       "sourceText": "The Mirage Express\nManual",
       "translation": "Manwal ng\nThe Mirage Express",
       "context": "Library / Mirage Express manual cover",
-      "glossaryIds": ["mirage-express-manual", "the-mirage-express"],
+      "glossaryIds": [
+        "mirage-express-manual",
+        "the-mirage-express"
+      ],
       "status": "translated",
       "note": "Ginamit ang kanonikong Filipino glossary term at pinanatili ang dalawang linyang ayos."
     },
@@ -66,16 +82,26 @@
       "sourceText": "ticket town\nHOT HONEY\nFRI MAY 8\n9:00 PM\nSTAGE\nSEC 53 ROW P\nSEC 53 ROW P\nSEC 53 ROW R\nSEC 54 ROW R",
       "translation": "ticket town\nHOT HONEY\nBIY MAY 8\n9:00 GABI\nENTABLADO\nSEC 53 HANAY P\nSEC 53 HANAY P\nSEC 53 HANAY R\nSEC 54 HANAY R",
       "context": "Lounge / Hot Honey ticket printout",
-      "glossaryIds": ["hot-honey", "concert-tickets"],
+      "glossaryIds": [
+        "hot-honey",
+        "concert-tickets"
+      ],
       "status": "translated",
       "note": "Pinanatili ang brand at pangalan ng banda, isinalin ang generic na label, at eksaktong pinanatili ang petsa, oras, section, row at siyam na linya."
     },
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/5-conductorcar/TypedNoteFromTrainToEspio.png",
       "sourceText": "Use this blowdart on Sonic,\nstationed in the conductor\ncar. It is laced with a\nnonlethal sleeping agent.\nThank you again for\nchoosing the Mirage Express.\n-Staff",
-      "translation": "Gamitin ang pana na hinihipan kay Sonic,\nna nakatalaga sa bagon ng\nkonduktor. May laman itong\nhindi nakamamatay na pampatulog.\nMuli, salamat sa pagpili sa\nThe Mirage Express.\n-Staff",
+      "translation": "Gamitin itong palaso ng sumpit kay Sonic,\nna nakatalaga sa bagon ng\nkonduktor. Nilagyan ito ng\nhindi nakamamatay na pampatulog.\nMuli, salamat sa pagpili sa\nThe Mirage Express.\n-Staff",
       "context": "Conductor Car / typed note from train staff to Espio",
-      "glossaryIds": ["blowdart", "the-conductor", "conductor-car", "nonlethal-sleeping-agent", "the-mirage-express", "train-note"],
+      "glossaryIds": [
+        "blowdart",
+        "the-conductor",
+        "conductor-car",
+        "nonlethal-sleeping-agent",
+        "the-mirage-express",
+        "train-note"
+      ],
       "status": "translated",
       "note": "Ginamit ang mga target term ng glossary, pinanatili ang pitong linyang ayos at ang literal na signature."
     },
@@ -92,8 +118,10 @@
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/Comics/titlecard.png",
       "sourceText": "THE MURDER OF SONIC THE HEDGEHOG",
       "translation": "The Murder of Sonic The Hedgehog",
-      "context": "Final Push / title card",
-      "glossaryIds": ["the-murder-of-sonic-the-hedgehog"],
+      "context": "Messy Dining Car / Return to Prologue title card",
+      "glossaryIds": [
+        "the-murder-of-sonic-the-hedgehog"
+      ],
       "status": "translated",
       "note": "Opisyal na pamagat ng laro ayon sa glossary; hindi nirender o binago ang logo texture."
     }

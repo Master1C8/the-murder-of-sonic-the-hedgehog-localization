@@ -1,0 +1,37 @@
+{
+  "locale": "tr",
+  "cycle": 5,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 3,
+  "changedIds": [
+    "ink:root[2].Conductor_Car[74].Interrogation_Part3[0][84].g-0[16]",
+    "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][190].g-0[3]"
+  ],
+  "correctedIds": [
+    "ink:root[2].Conductor_Car[74].Interrogation_Part3[0][84].g-0[16]",
+    "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][190].g-0[3]"
+  ],
+  "previousClosure": "Documentation/Localization/TurkishAudit/cycle-4/closure-ids.txt",
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "Flicky",
+    "Omochao",
+    "Sonic",
+    "guard",
+    "lore card",
+    "hot tip",
+    "Conductor's Wife",
+    "Eggman"
+  ],
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 5 fixes two accumulated Sonic-referent semantic defects and harmonizes the formal imperative in the TypedNoteFromTrainToEspio image plan.",
+    "The final review must exhaust the complete accumulated Turkish closure and return all remaining findings in one response.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

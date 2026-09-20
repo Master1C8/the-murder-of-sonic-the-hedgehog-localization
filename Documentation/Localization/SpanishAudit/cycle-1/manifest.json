@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "locale": "es",
+  "cycle": 1,
+  "status": "pending-independent-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "ae3ddd0811af321cc424cb814099423456f4e033d0b5e8322202b5516a227c69",
+    "overlay": "bb149a14d76df9c464b2d213bdbdf5eac3e4000f3cd487ab7c6dfb4d4c58bb4a",
+    "images": "5432ca390b4de5be500684e888b598ccf24329741edfaba071a24f4664a55bc9"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "d677bffdf78d5beda81f203d2244d7f421cf60ed4f69ee4b525fb00111c6e77f"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 29,
+      "sha256": "d44cd00b8e13a46a2073cdc2c3e0161232ece85aa5c70dde6b05afe8d3f5a84f"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 36,
+      "sha256": "d2abbc3546fee8dee625ca0e4f7b7764405dbaccb92d991c78f187779846af91"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 60,
+      "sha256": "519c91a6e09d4350494a3d3859bf28832ee0ab48674bffac4f5791ef24185593"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1087,
+      "sha256": "0137251351c51f1f333b781285c7a81c79184210b4bd968b80eb918a15f78910"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1087,
+    "sha256": "8a652e46aa518fc02b557190ed354eeb927ccbb9695bd86070578f483a0a48ed"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "be08efe109659687d6ca261c9c28231e635b0178f25af94abf9e388a5e2c2aca"
+  },
+  "correctedIds": [
+    "ink:root[2].Saloon[4].Wanted_Poster[0][2]",
+    "ink:root[2].Prologue[1].Story_Continues[48]",
+    "ink:root[2].Casino[5].FirstVisit[0][123]",
+    "ink:root[2].Casino[5].FirstVisit[0][126]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt1[0][0]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt1[0][10]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt1[0][16]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt1[0][22]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt1[0][26].c-0[1]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt1[0][26].c-2[1]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt2[0][0]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt2[0][26].c-0[1]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt2[0][26].c-0[4]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt2[0][26].c-2[1]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt3[0][19]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt3[0][23].c-1[6]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt3[0][23].c-2[3]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt4[0][0]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt4[0][10]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt4[0][26].c-0[4]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt4[0][26].c-1[9]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt4[0][26].c-2[3]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt5[0][21]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt5[0][31].c-0[7]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt5[0][31].c-0[9]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt5[0][31].c-1[4]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt5[0][31].c-1[10]",
+    "ink:root[2].Casino[5].Return_To_Casino[15]",
+    "ink:root[2].SafeRoom[4].Opt8_Blaze_Fire[5]"
+  ],
+  "findingCount": 30,
+  "notes": [
+    "The complete European Spanish audit read all 3547 source/target units, all 117 glossary entries, and all 10 image plans.",
+    "Cycle 1 applies 29 valid text corrections, including the complete bounded Chao security-guard neutrality surface.",
+    "The proposed timestamp spacing change was rejected because separating 44 from the PM marker would violate the protected numeric-token invariant.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "The rebuilt Spanish overlay has 3547/3547 units and zero missing, extra, protected-token, layout or runtime-exact errors.",
+    "Runtime and visual QA were not run."
+  ]
+}

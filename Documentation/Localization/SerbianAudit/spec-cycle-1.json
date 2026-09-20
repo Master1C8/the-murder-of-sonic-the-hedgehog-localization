@@ -1,0 +1,21 @@
+{
+  "locale": "sr",
+  "cycle": 1,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 145,
+  "changedIdsFromGitHead": true,
+  "referentSearchTerms": [
+    "Barry", "Chao", "Flicky", "Omochao", "guard", "boarding ticket",
+    "reporter", "robot arms", "Conductor's Wife", "dynamic name"
+  ],
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 1 applies one exhaustive Serbian correction package: 141 manual IDs, one image-plan translation, and three Serbian glossary meanings.",
+    "Seven poem blocks were corrected while preserving markup; Serbian narrative remains Cyrillic and protected Latin tokens/names remain unchanged.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

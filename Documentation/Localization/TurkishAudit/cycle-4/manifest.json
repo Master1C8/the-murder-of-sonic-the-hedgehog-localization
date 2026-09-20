@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "locale": "tr",
+  "cycle": 4,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "fe4fda61c566b0546ebc18773d4397cc4b11ee4ac99ec871dd9a4e5630032398",
+    "overlay": "87c49dc0e283dc40c8d765c3101a2c737d4ee574ee14096f04a17d36a75c60a3",
+    "images": "8d198568cec4acb67681151996c2791fcd9d07a2a40a7397d56b599039b3f8ce"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "fec11b74fd376de4e33e406eb99b0ecacdc76c824f6ac576cf6d33332f662e92"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 1,
+      "sha256": "6e1e5966a15baa095363f346d2d3672b7a9d845a48e9f27b9a0184e3e859aa56"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 2,
+      "sha256": "5fb366115035dd212102c8fbb2fa68e5f586a35c2399999da6cb7b34ed3e03ce"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 232,
+      "sha256": "d5c6891de89d1b9a8c7b2c1cf60dc3fb3049292874191f4281b8374d42f2d4c1"
+    },
+    "invalidated-dependency-ids": {
+      "file": "invalidated-dependency-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1175,
+      "sha256": "86a3e16c42fa632a2ee92699462648fb7662faa65c9a430262ebb432f0806d24"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 84,
+      "sha256": "5f298067ff022e1cb80250651ce422a5d860a292abe5e0121ad800bb1984e097"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 7,
+      "sha256": "acd3012b85ddd3c1cd328a41a26532245a05808aa1cca39f224de8eb43f78f08"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1175,
+    "sha256": "f8fd4128e5f2c6e793401d119a298da630c16f8c0dafadde6e793898125379f3"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "274165f207316e8b82a58e613f8d528e9bf5ba7f7d1377e3d9e9ae3a25db56e9"
+  },
+  "correctedIds": [
+    "ink:root[2].Prologue[1].Environment_Sonic_Interaction_1[18]"
+  ],
+  "findingCount": 1,
+  "notes": [
+    "Cycle 4 restores Sonic as the intended rescuer in the one remaining Turkish semantic defect from Cycle 3.",
+    "The final review is restricted to this exact correction, Sonic referent dependencies, and mandatory regression.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

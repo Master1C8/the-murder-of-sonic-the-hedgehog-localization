@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "locale": "es",
+  "cycle": 7,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "0564e7d1a204aa43ffc4083314794c24c935c8d6a101e453cf21f2a7e9a383b6",
+    "overlay": "4ccce8b7cf8508bc8c775eb20db406867451e67f4a4f81d9ea0c7a7b77060cd3",
+    "images": "f2bed582ca9166d9c17272577017921c86b0cf40e6a45e295c62c2be1595c7e4"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "b4cd44a21223dc3df42c0c0c4f81552b02222913e0a383fe878970aaeb8c5dff"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 70,
+      "sha256": "91a87b0b82f6e6bd77c09833138158d915cf3f9ce5bd1988e7fc80f3c569d750"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 98,
+      "sha256": "81c504f14a17d47d0764b3f109a0ebbdccef43f6b4df9a016996c12d7025360b"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 35,
+      "sha256": "85669335a4856e2a6b6f4e49b3c4070423cebd446b58036cf34f2191f7dec613"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1130,
+      "sha256": "8fa2f53b9402bb3653ac74d8fc9de70530cb128004590516a0903ee968e6d1bf"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 6,
+      "sha256": "454bca488edcde9d06ecba0732ba0c4fddb2d66a616fd4fb987967c0a58f9bf5"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 1,
+      "sha256": "eba1e478f94c710df41b9a92711123ca143d36ab9bfcd319fefb060d19fb3124"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1130,
+    "sha256": "e2ad98a184fafacd3d8c5a193047962e94644c74cf4a2a436ae07ccf11384f67"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "d69a2cc87434b5b95fb54ced4eba1b34e71e33be06805fdab0c3d74d33aefc6b"
+  },
+  "correctedIds": [
+    "ink:root[2].Library[4].FirstVisit[0][74].g-0[0]"
+  ],
+  "findingCount": 1,
+  "notes": [
+    "Cycle 7 separates the remaining journalistic tip usage from clue terminology.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

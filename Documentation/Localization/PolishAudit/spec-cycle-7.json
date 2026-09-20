@@ -1,0 +1,31 @@
+{
+  "locale": "pl",
+  "cycle": 7,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 4,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Final_Push[35].Final_Boss_Interaction4[16]"
+  ],
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "Flicky",
+    "Omochao",
+    "blowdart",
+    "Conductor’s Wife",
+    "ULTIM",
+    "keyring"
+  ],
+  "previousClosure": "Documentation/Localization/PolishAudit/cycle-6/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 7 corrects one text finding and three glossary-entry findings from independent cycle 6.",
+    "Flicky and Chao remain grammatically neutral where canonical gender is unknown.",
+    "Image plans, runtime-exact prefixes, and timestamp were clean in cycle 6.",
+    "Runtime and visual QA were not run."
+  ]
+}

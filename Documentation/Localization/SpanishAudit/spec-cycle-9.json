@@ -1,0 +1,34 @@
+{
+  "locale": "es",
+  "cycle": 9,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 6,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].SafeRoom[4].Opt2_Throw_In_Safe[3]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt1[0][26].c-0[1]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt2[0][26].c-0[4]",
+    "ink:root[2].Casino[5].Play_The_Slots[2][6].b[12]",
+    "ink:root[2].Final_Push[35].Finale_Start[87]",
+    "ink:root[2].Lounge[108].Enter_Interrogation_Mode[74]"
+  ],
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "Flicky",
+    "Omochao",
+    "sunk-cost",
+    "guard",
+    "friendship"
+  ],
+  "previousClosure": "Documentation/Localization/SpanishAudit/cycle-8/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 9 fixes six remaining semantic, interrogative, and neutral-referent findings.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

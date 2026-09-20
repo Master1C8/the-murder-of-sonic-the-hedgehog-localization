@@ -10,7 +10,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/Menu with chilidog.png",
       "sourceText": "Menu\nChili Dog\nRamen\nChicken\nCordon Bleu",
-      "translation": "Menyu\nHot dogi yenye pilipili\nRamen\nKuku\nChicken Cordon Bleu",
+      "translation": "Menyu\nHot dogi yenye pilipili\nRameni\nChicken\nCordon Bleu",
       "context": "Prologue / menu close-up",
       "glossaryIds": ["menu", "chili-dog", "chicken-cordon-bleu"],
       "status": "translated",
@@ -64,7 +64,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/4-Lounge/HotHoneyPrintout.png",
       "sourceText": "ticket town\nHOT HONEY\nFRI MAY 8\n9:00 PM\nSTAGE\nSEC 53 ROW P\nSEC 53 ROW P\nSEC 53 ROW R\nSEC 54 ROW R",
-      "translation": "ticket town\nHOT HONEY\nIJM MAY 8\n9:00 PM\nJUKWAA\nSEK 53 MSTARI P\nSEK 53 MSTARI P\nSEK 53 MSTARI R\nSEK 54 MSTARI R",
+      "translation": "ticket town\nHOT HONEY\nIJUMAA MEI 8\n9:00 PM\nJUKWAA\nSEK 53 SAFU P\nSEK 53 SAFU P\nSEK 53 SAFU R\nSEK 54 SAFU R",
       "context": "Lounge / Hot Honey ticket printout",
       "glossaryIds": ["hot-honey", "concert-tickets"],
       "status": "translated",
@@ -73,7 +73,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/5-conductorcar/TypedNoteFromTrainToEspio.png",
       "sourceText": "Use this blowdart on Sonic,\nstationed in the conductor\ncar. It is laced with a\nnonlethal sleeping agent.\nThank you again for\nchoosing the Mirage Express.\n-Staff",
-      "translation": "Tumia mshale huu wa kupuliza dhidi ya Sonic,\naliyeko kwenye gari la Kondakta. Umewekewa\ndawa ya kulaza isiyosababisha kifo.\nAsante tena kwa kuchagua The Mirage Express.\n—Wafanyakazi",
+      "translation": "Tumia mshale huu wa kupuliza dhidi ya Sonic,\naliyeko kwenye gari la kondakta. Umewekewa\ndawa ya kulaza isiyosababisha kifo.\nAsante tena kwa kuchagua The Mirage Express.\n—Wafanyakazi",
       "context": "Conductor Car / typed note from train staff to Espio",
       "glossaryIds": ["blowdart", "the-conductor", "conductor-car", "nonlethal-sleeping-agent", "the-mirage-express", "train-note"],
       "status": "translated",
@@ -82,7 +82,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/Comics/7-final push/Seq5-epilogue/8-eggmanending1.png",
       "sourceText": "OFFLINE...\nLET'S GO DAD",
-      "translation": "HAIKO MTANDAONI…\nTWENI, BABA",
+      "translation": "HAIKO MTANDAONI...\nTWENI, BABA",
       "context": "Final Push / Eggman ending comic panel",
       "glossaryIds": [],
       "status": "translated",
@@ -91,7 +91,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/Comics/titlecard.png",
       "sourceText": "THE MURDER OF SONIC THE HEDGEHOG",
-      "translation": "The Murder of Sonic the Hedgehog",
+      "translation": "The Murder of Sonic The Hedgehog",
       "context": "Final Push / title card",
       "glossaryIds": ["the-murder-of-sonic-the-hedgehog"],
       "status": "translated",

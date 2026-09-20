@@ -55,7 +55,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/2-Library/PROP_TheMirageExpressManual.png",
       "sourceText": "The Mirage Express\nManual",
-      "translation": "मिराज एक्सप्रेस\nमैनुअल",
+      "translation": "द मिराज एक्सप्रेस की\nपुस्तिका",
       "context": "लाइब्रेरी / मिराज एक्सप्रेस मैनुअल का कवर",
       "glossaryIds": ["mirage-express-manual", "the-mirage-express"],
       "status": "translated",
@@ -73,7 +73,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/5-conductorcar/TypedNoteFromTrainToEspio.png",
       "sourceText": "Use this blowdart on Sonic,\nstationed in the conductor\ncar. It is laced with a\nnonlethal sleeping agent.\nThank you again for\nchoosing the Mirage Express.\n-Staff",
-      "translation": "सोनिक पर इस बेहोशी वाले डार्ट का इस्तेमाल करो,\nजो कंडक्टर कार में तैनात है। इस पर एक\nगैर-घातक नींद की दवा लगी है।\nमिराज एक्सप्रेस चुनने के लिए\nफिर से धन्यवाद।\n—स्टाफ",
+      "translation": "कंडक्टर कार में तैनात सोनिक पर इस ब्लोडार्ट का\nइस्तेमाल करो। इस पर गैर-घातक नींद लाने वाला\nपदार्थ लगा है।\nद मिराज एक्सप्रेस चुनने के लिए\nफिर से धन्यवाद।\n—स्टाफ़",
       "context": "कंडक्टर कार / ट्रेन के स्टाफ की टाइप की हुई चिट्ठी",
       "glossaryIds": ["blowdart", "the-conductor", "conductor-car", "nonlethal-sleeping-agent", "the-mirage-express", "train-note"],
       "status": "translated",
@@ -91,11 +91,11 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/Comics/titlecard.png",
       "sourceText": "THE MURDER OF SONIC THE HEDGEHOG",
-      "translation": "सोनिक द हेजहॉग की हत्या",
+      "translation": "THE MURDER OF SONIC THE HEDGEHOG",
       "context": "फ़ाइनल पुश / शीर्षक कार्ड",
       "glossaryIds": ["the-murder-of-sonic-the-hedgehog"],
       "status": "translated",
-      "note": "शीर्षक का हिंदी पाठ तैयार किया गया है; लोगो का वास्तविक पुनर्निर्माण टेक्सचर चरण के लिए है और PNG में कोई बदलाव नहीं किया गया।"
+      "note": "आधिकारिक शीर्षक को व्यक्तिनाम के रूप में जस का तस रखा गया है; लोगो का वास्तविक पुनर्निर्माण टेक्सचर चरण के लिए है और PNG में कोई बदलाव नहीं किया गया।"
     }
   ],
   "notes": "10 text-bearing PNG के लिए पूरा टेक्स्ट प्लान। PNG, Texture2D, Sprite, आकार, hashes और bundles में कोई बदलाव नहीं किया गया; localized textures बनाना इस चरण के दायरे से बाहर है।",

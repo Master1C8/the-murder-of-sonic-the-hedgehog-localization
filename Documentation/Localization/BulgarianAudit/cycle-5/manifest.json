@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "locale": "bg",
+  "cycle": 5,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "3543ad791d3338282eb5a06fba4742c691d3c01587b4728266cad52d0f394a3e",
+    "overlay": "133b81023473603ec4b84c98df89beb6816148d740939801433a982646279152",
+    "images": "64fe9ae780e5d8fbfcebba96de0dcbb5c23e99b2fef564b557380b9cf0ca0a5d"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "531ccb5117572317387e294868947c4f85469918d1f0f63c110850d03b285eba"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 295,
+      "sha256": "88c964403cd2628eec5fd900b856df3508808ddaf9cf5ac5ad613118cb1e16b0"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 443,
+      "sha256": "2e0d8961e94d9762462f752063036eecdbe93e7d02def127e70b4129fa189aa9"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 1,
+      "sha256": "6efa41cb060f5bd67781e571ff02798c0a340a62336b0ab587ee686053f2654c"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 45,
+      "sha256": "ac60226e5e4b65a04cba7ca77c22a7f3b1c358815e4a32c9cb96b11fb29beabf"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1534,
+      "sha256": "b7964bfd9e84e4ffa191cd7c39c056070fae20196c7020feda120f38c65b8501"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 2,
+      "sha256": "064a7aa56395be09eb1a74db215fc7074d746fb0c051375f6a45a23db2048377"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 2,
+      "sha256": "cd7eab47cc6641a98c354cdbbdad80be6e79cf207e563aaa2f091c2141659c8f"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1534,
+    "sha256": "eb5d3b582acd817653c7811a086889357f86729a40e5c42293c58c045d56fb77"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "c36d60c5bc2dbfc6b6d74b3d937d608b0e4cbfa6504459d3db41dec6386ed267"
+  },
+  "correctedIds": [
+    "ink:root[2].Casino[5].Return_To_Casino[97]"
+  ],
+  "findingCount": 1,
+  "notes": [
+    "Cycle 5 fixes the remaining mixed second-person register in Rouge's casino dialogue.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

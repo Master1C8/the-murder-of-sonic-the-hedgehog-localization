@@ -1,0 +1,29 @@
+{
+  "locale": "ko",
+  "cycle": 1,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 145,
+  "changedIdsFromGitHead": true,
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "Flicky",
+    "Omochao",
+    "boarding ticket",
+    "guard",
+    "reporter",
+    "Nevermind",
+    "hot tip",
+    "Conductor's Wife"
+  ],
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 1 applies one exhaustive Korean correction package: 141 manual IDs, two image-plan fields, and two Korean glossary meanings.",
+    "The source-authored timestamp normalization and the PlaytestEnd[9] wording proposal were rejected in advance because each failed protected-token preflight.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

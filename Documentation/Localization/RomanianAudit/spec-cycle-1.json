@@ -1,0 +1,28 @@
+{
+  "locale": "ro",
+  "cycle": 1,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 119,
+  "changedIdsFromGitHead": true,
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "Flicky",
+    "Omochao",
+    "reporter",
+    "lounge car",
+    "robot arms",
+    "Conductor's Wife",
+    "dynamic name"
+  ],
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 1 applies one exhaustive Romanian correction package: 117 manual IDs and two Romanian glossary entries; all 10 image plans were reviewed and unchanged.",
+    "Five Conductor's Wife runtime prefixes, internal control tokens, an unconfirmed image-time conversion, unknown-gender metadata, and the Train Note naming proposal were intentionally left unchanged after preflight.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

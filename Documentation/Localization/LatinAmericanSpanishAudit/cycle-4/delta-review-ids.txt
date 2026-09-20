@@ -1,0 +1,5 @@
+ink:root[2].Prologue[1].Environment_Rouge_Interaction_1[24]
+ink:root[2].Lounge[108].Computer[10]
+ink:root[2].LockdownDiningCar[1].Environment_Sonic_Interaction_1[17]
+inventory:crackonshelf:Description
+unity:defaultgroup:6462899961100210439:m_text

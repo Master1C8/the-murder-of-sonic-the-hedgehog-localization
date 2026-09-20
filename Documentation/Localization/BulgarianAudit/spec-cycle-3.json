@@ -1,0 +1,42 @@
+{
+  "locale": "bg",
+  "cycle": 3,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 11,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Prologue[1].Murder_Mystery_Rules[0][53].g-0[2]",
+    "ink:root[2].Casino[5].FirstVisit[0][41]",
+    "ink:root[2].Casino[5].FirstVisit[0][44]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt5[0][31].c-2[1]",
+    "ink:root[2].Lounge[108].Talk_To_Amy[0][12]",
+    "ink:root[2].Lounge[108].Interrogation_Part4[0][14].g-0[114]",
+    "ink:root[2].Lounge[108].Interrogation_Part5_End[0]",
+    "ink:root[2].DiningCloset[1].Interrogation_Part1[0][20].c-2[4]",
+    "ink:root[2].SafeRoom[4].Opt12_Kiss_Egg[10]"
+  ],
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "Flicky",
+    "Omochao",
+    "murderer",
+    "hot tip",
+    "scoop",
+    "security guard",
+    "marry into royalty"
+  ],
+  "previousClosure": "Documentation/Localization/BulgarianAudit/cycle-2/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 3 applies nine valid text corrections and one image-plan correction from the independent cycle 2 audit.",
+    "The proposed timestamp punctuation change was tested and rejected because separating 44 from the hour marker creates an extra protected numeric token.",
+    "The typed note was reflowed to the source image line-length constraints.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "The rebuilt Bulgarian overlay has 3547/3547 units and zero missing, extra, protected-token, layout or runtime-exact errors.",
+    "Runtime and visual QA were not run."
+  ]
+}

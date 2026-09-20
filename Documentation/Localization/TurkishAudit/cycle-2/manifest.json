@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "locale": "tr",
+  "cycle": 2,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "282e3c3d0f1cb4389f25608ce33f059d68cf9988a8775befe198644875f95ff7",
+    "overlay": "5bc36ee06154c9d8da8c8fb14831ea552310277982770b06bf76aed441aea0c7",
+    "images": "0266c9f7c46fccf19b8447f8d5f653feb41203aea5391333990fb53c841a2fe1"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "fec11b74fd376de4e33e406eb99b0ecacdc76c824f6ac576cf6d33332f662e92"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 36,
+      "sha256": "10b0e96d072a63b9336063f1b42328f920f44c02247b82c83995eaf8b8a5f8c7"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 62,
+      "sha256": "2966660d94730cf1cbd799000678d631b303bcf24c33f48ba0456f689291bb6c"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 97,
+      "sha256": "9a6a9bff29a2a85c829a40a33702ec06ccfcd197aa91549d51381da402b166e9"
+    },
+    "invalidated-dependency-ids": {
+      "file": "invalidated-dependency-ids.txt",
+      "count": 2,
+      "sha256": "f513728ae7ee480913659a9ebb3de452a81ab08ef78249665a6f17e6b210814a"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1142,
+      "sha256": "1d897e0f03f4b3893bb13e2898eee4ac6418d3a6f5b6c6ba60d2da1a8893a40b"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 52,
+      "sha256": "0762914fae6599877f9f4ae76b3bd80b7a5c98649c7e0f4e61adac79c59d6f5e"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 402,
+      "sha256": "1b2bea0e8fd2d1120e522a4c7d852b4769423d0043842d1484d69fb14821c34a"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1142,
+    "sha256": "35272edcd3400d7cadde20bdc144f8a3156b3337fdfdce093a98cc498fd08079"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "96ab99ab3b8581ba115f40eef42c6bf4fb0d9b5d28e33ce68ab860d864f5edaf"
+  },
+  "correctedIds": [
+    "ink:root[2].Saloon[4].FirstVisit[0][36].g-1[10]",
+    "ink:root[2].Prologue[1].Story_Continues[43]",
+    "ink:root[2].Prologue[1].Story_Continues[48]",
+    "ink:root[2].Prologue[1].Murder_Mystery_Rules[0][53].g-0[34]",
+    "ink:root[2].Library[4].FirstVisit[0][74].g-1[28]",
+    "ink:root[2].Library[4].Talk_To_Espio[0][18].c-0[8]",
+    "ink:root[2].Library[4].Give_Espio_Item[10]",
+    "ink:root[2].Library[4].Minigame_Midpoint2[2][1].b[10]",
+    "ink:root[2].Library[4].Eggman_Book[8]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt4[0][26].c-1[9]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt5[0][31].c-0[7]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt5[0][31].c-0[9]",
+    "ink:root[2].Casino[5].Poker_Chips[11]",
+    "ink:root[2].Casino[5].Poker_Chips[17]",
+    "ink:root[2].Casino[5].Give_Blaze_Item[10]",
+    "ink:root[2].Lounge[33]",
+    "ink:root[2].Lounge[108].Talk_To_Amy[0][12]",
+    "ink:root[2].Lounge[108].Enter_Interrogation_Mode[50]",
+    "ink:root[2].Lounge[108].Interrogation_Part5_End[20]",
+    "ink:root[2].Lounge[108].String[59]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part2[0][11]",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation1[151]",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation1[161]",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation1[163]",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation2[0]",
+    "ink:root[2].Conductor_Car[74].Enter_Lockdown_Mode[105]",
+    "ink:root[2].Final_Push[35].Final_Boss_Interaction4[10]",
+    "ink:root[2].Final_Push[35].Finale_Start[87]",
+    "ink:root[2].Final_Push[35].Finale_Start[93]",
+    "ink:root[2].Final_Push[35].Ending1_For_Non_Completionists[38]",
+    "ink:root[2].Final_Push[35].Ending1_For_Non_Completionists[99]",
+    "ink:root[2].Final_Push[35].Ending1_For_Non_Completionists[119]",
+    "ink:root[2].DiningCloset[1].Interrogation_Part2_Have_Correct_Clue[0][8].b[12]",
+    "ink:root[2].LockdownDiningCar[1].Eggman_Appears[0][56].g-2[20]",
+    "ink:root[2].LockdownDiningCar[1].Eggman_Appears[0][56].g-3[10]",
+    "inventory:amyshammer:Description"
+  ],
+  "findingCount": 46,
+  "notes": [
+    "Cycle 2 applies 36 manual-ID corrections and ten Turkish glossary suffix corrections in one batch; Cycle 1 actually changed 261 manual IDs, correcting the earlier note that said 265.",
+    "The split Conductor request at Story_Continues[43]/[48] is explicitly invalidated and included in the delta review.",
+    "The source-authored timestamp remains unchanged because its proposed rewrite failed the protected-token preflight.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

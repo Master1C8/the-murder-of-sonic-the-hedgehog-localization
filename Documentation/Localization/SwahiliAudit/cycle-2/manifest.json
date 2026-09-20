@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "locale": "sw",
+  "cycle": 2,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "c8047ca08382efc9946f4185221b05a263ecf7922e7b141ee1b2fb60794458a2",
+    "overlay": "8f004f55bbf9ae3caff3bf7f894be4e092f6ec9b53dc3fc8cb8f1531142df461",
+    "images": "5fcc2988836512df2a4b8a3ac1dc9e3c8b700a4ab50f01501217efd5e33483a6"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "91aadcdc136b5e6f8f9ad84a5f0527673a7f84c0d60514095ecfa4447fee47da"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 19,
+      "sha256": "f42f071db4838a3940f0d2a93e11dcceac25d0af981bbe2f994d50754205b736"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 35,
+      "sha256": "3bfc042b54e59826a134403e9f59f654da97ad3c0286cd303c7f946d8d0956ed"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 54,
+      "sha256": "ed2a23d5886d97cb9c9f5ff26962b088c45f01fc29120ebc2d1c480da1699db9"
+    },
+    "invalidated-dependency-ids": {
+      "file": "invalidated-dependency-ids.txt",
+      "count": 2,
+      "sha256": "6a0509133d509ff2ab786412f785409271db2d0d8ed02d39bf5bc392cacfefc4"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1103,
+      "sha256": "6e010dfc9b917b2528a91f0b5b54dd984a248db5767443a21b1fd30bddc26f58"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 32,
+      "sha256": "b87431a5b1542f0230e5c4fa8627c2d63e2ca42ccfe30348ca7b570bc7e8d42f"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 570,
+      "sha256": "762e0bd58fb1c9a23d645229bc2eb12f5eed3768ec096995de1138fa3770d5df"
+    },
+    "non-translatable-dynamic-dependencies": {
+      "file": "non-translatable-dynamic-dependencies.txt",
+      "count": 8,
+      "sha256": "89524e88b000241fccf2e83de7c5bf484a65a2c433fa482b1af2305577177526"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1103,
+    "sha256": "78ecc0ed28d6e27c2f1c2792f97ed7a7c8a686e0be3c22b6c6999d6f5bf5976f"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "e65f8b3568673c6223cec3ed569385db122281f468532d7fafd1c4cddb8f80fa"
+  },
+  "correctedIds": [
+    "ink:root[2].Saloon[4].Robotic_Arm[30]",
+    "ink:root[2].Prologue[1].FirstVisit[0][15]",
+    "ink:root[2].Prologue[1].FirstVisit[0][28]",
+    "ink:root[2].Library[4].Interrogation_Part7_End[25]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt1[0][26].c-2[1]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt2[0][26].c-0[1]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt4[0][26].c-0[4]",
+    "ink:root[2].Lounge[108].Interrogation_Part4[0][14].g-0[62]",
+    "ink:root[2].Lounge[108].First_Time_Printing[0][20].g-0[5]",
+    "ink:root[2].Conductor_Car[74].Train_Speeds_Up[50]",
+    "ink:root[2].Final_Push[35].Final_Boss_Interaction3[18]",
+    "ink:root[2].Final_Push[35].Final_Boss_Interaction3[24]",
+    "ink:root[2].SafeRoom[4].Opt9_Tails_Cool[11]",
+    "ink:root[2].DiningCloset[1].Start_Interrogation[24]",
+    "ink:root[2].DiningCloset[1].Interrogation_Part2_Have_Correct_Clue[0][8].b[31]",
+    "ink:root[2].LockdownDiningCar[1].Eggman_Appears[0][56].g-0[3]",
+    "ink:root[2].LockdownDiningCar[1].Eggman_Appears[0][56].g-0[17]",
+    "ink:root[2].LockdownDiningCar[1].Closed_Window[10]",
+    "ink:root[2].LockdownDiningCar[1].Scattered_Dinnerware[12]"
+  ],
+  "findingCount": 17,
+  "notes": [
+    "Cycle 2 applies the complete 17-group residual package across 19 manual IDs; two translated join fragments are invalidated into closure and eight empty non-translatable Ink dependencies are recorded in a separate immutable evidence component.",
+    "Image plans and glossary are unchanged from Cycle 1.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral, with singular animate agreement for Chao.",
+    "Runtime and visual QA were not run."
+  ]
+}

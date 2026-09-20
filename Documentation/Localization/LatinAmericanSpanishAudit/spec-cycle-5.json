@@ -1,0 +1,26 @@
+{
+  "locale": "es-419",
+  "cycle": 5,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 2,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Casino[5].Heist_Planning_Pt6[0][0]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part5[146]"
+  ],
+  "referentSearchTerms": [
+    "elevator",
+    "vent",
+    "Sonic"
+  ],
+  "previousClosure": "Documentation/Localization/LatinAmericanSpanishAudit/cycle-4/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 5 removes one literal elevator-stage-direction calque and fixes sentence capitalization in the vent explanation.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

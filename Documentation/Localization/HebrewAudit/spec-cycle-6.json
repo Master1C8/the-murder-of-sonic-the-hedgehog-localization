@@ -1,0 +1,32 @@
+{
+  "locale": "he",
+  "cycle": 6,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 1,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [],
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "Flicky",
+    "Omochao",
+    "Conductor’s Wife",
+    "The Train",
+    "retir"
+  ],
+  "previousClosure": "Documentation/Localization/HebrewAudit/cycle-5/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "invalidatedIds": [
+    "ink:root[2].Prologue[1].FirstVisit[0][48].g-0[0]"
+  ],
+  "notes": [
+    "Cycle 6 adds the omitted retiring occurrence to the immutable dependency closure; no locale text changed after cycle 5.",
+    "Cycle 5 independently confirmed its three corrected lines, all 1574 presented rows, mandatory regressions, glossary, and image plans clean.",
+    "The referent search now uses the bounded source stem retir to cover retirement and retiring.",
+    "The canonical source glossary remains unchanged because the one-use amendment exception is consumed and the non-speaking unknown-gender entities are already neutral in game text.",
+    "Runtime and visual QA were not run."
+  ]
+}

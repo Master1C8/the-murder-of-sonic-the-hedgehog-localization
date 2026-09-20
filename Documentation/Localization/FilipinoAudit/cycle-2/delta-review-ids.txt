@@ -1,0 +1,8 @@
+ink:root[2].Lounge[108].Minigame_Midpoint1[10][8].b[8]
+ink:root[2].Lounge[108].Minigame_Midpoint1[10][8].b[59]
+ink:root[2].Lounge[108].String[97]
+ink:root[2].Conductor_Car[74].Start_Interrogation[14]
+ink:root[2].Conductor_Car[74].Interrogation_Part3[0][84].c-0[13]
+ink:root[2].Conductor_Car[74].Interrogation_Part4[128]
+ink:root[2].Final_Push[35].Finale_Start[104]
+inventory:stick:Description

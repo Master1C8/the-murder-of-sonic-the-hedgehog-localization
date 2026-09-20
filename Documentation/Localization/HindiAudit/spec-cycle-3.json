@@ -1,0 +1,46 @@
+{
+  "locale": "hi",
+  "cycle": 3,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 5,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Prologue[1].Environment_Blaze_Interaction_1[8]",
+    "ink:root[2].Library[4].FirstVisit[0][74].g-0[57]",
+    "ink:root[2].Casino[5].Start_Whiteboarding[0]",
+    "ink:root[2].Lounge[108].Minigame_Midpoint2[9][8].b[3]",
+    "ink:root[2].Final_Push[35].Final_Boss_Interaction3[12]"
+  ],
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "Flicky",
+    "Omochao",
+    "The Train",
+    "keyring",
+    "blowdart",
+    "blow dart",
+    "birthday girl",
+    "ULTIM",
+    "Ultimate Life Form",
+    "Conductor’s Wife",
+    "library map",
+    "concert tickets",
+    "security guard",
+    "wet floor sign",
+    "hot tip",
+    "stick"
+  ],
+  "previousClosure": "Documentation/Localization/HindiAudit/cycle-2/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 3 corrects all five text findings from independent cycle 2.",
+    "Cycle 2 confirmed the prior 40 text corrections and all dynamic joins clean.",
+    "Train uses masculine or neutralized agreement according to the Hindi glossary; Barry remains male.",
+    "The malformed source token <style=\"Italics> remains byte-exact.",
+    "Runtime and visual QA were not run."
+  ]
+}

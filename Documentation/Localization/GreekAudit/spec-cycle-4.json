@@ -1,0 +1,37 @@
+{
+  "locale": "el",
+  "cycle": 4,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": null,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Library[4].Vector_Espio_Train_Map_Explanation[75]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt7[0][26].c-0[11]"
+  ],
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "flicky",
+    "Omochao",
+    "blowdart",
+    "blow dart",
+    "birthday girl",
+    "ULTIM",
+    "Ultimate Life Form",
+    "Conductor’s Wife",
+    "library map",
+    "keyring",
+    "concert tickets"
+  ],
+  "previousClosure": "Documentation/Localization/GreekAudit/cycle-3/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 4 corrects the two remaining text findings from independent cycle 3.",
+    "The Eggman-ending image plan now explicitly assigns both OFFLINE labels and both LET'S GO DAD shirts, while preserving all three pseudo-text regions exactly as source.",
+    "Five Conductor’s Wife prefixes remain English because they are runtime-exact.",
+    "Runtime and visual QA were not run."
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "locale": "es-419",
+  "cycle": 2,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "e67ca889f97134a501ea905f3f3a1af774510d3c39eb75f7996c80cf749997c0",
+    "overlay": "839bafc54386689b4cde3cdcd7cdc0d62307fa425c2528262915e11ac874edcb",
+    "images": "68b92691e4fbb91507923789b454c1c9108e577fc04a71bbd5e926c5e7de761d"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "3f089206e9fb27bd609fc80f7fc425ebc7b962048188bb4001c6761b3ae3d097"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 88,
+      "sha256": "652652fb600059992b3bb2f229114d8c16e9a7b7f00d5d23c2dd19d7422134d2"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 159,
+      "sha256": "68605f74f9597f86163a9413d965943ee159c3d9b08393005a475eba65698f09"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 2,
+      "sha256": "d43c938f7de298bf7ba3d5fd48d2e8b1a1c894193ee3d24ec76791accc52f6d5"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 178,
+      "sha256": "fa168fd5113d21b5d694ce41bd8fcab653cdf32e6287df1ea948c5a434b83752"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1238,
+      "sha256": "d53d5081ac92544f6e10200ee1cff0381753073c0b9e28d762eaf60fa50bf0d8"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 26,
+      "sha256": "60b2d50e70857f575a7027e5c5143c0a08aae8d9464be4cac8b67313b0264cb7"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 19,
+      "sha256": "61fd9ce72005183d24cabd8b22cefec4762b7e56cf721f3e087013a708bc557e"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1238,
+    "sha256": "f90f0f2482ce09352d3e1a56a61e9803e8010f0e8accf72c648d08e0869d23ac"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "9a53b9dd182266686b7e7eee938fc262e4fa0d704f43a1774658aa0f5bf8b4ce"
+  },
+  "correctedIds": [
+    "ink:root[2].Prologue[1].Environment_Amy_Interaction_1[31]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt1[0][26].c-2[14]",
+    "ink:root[2].Casino[5].Environment_Rouge[0][18].c-1[15]",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation1[151]",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation1[161]",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation1[163]",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation2[0]",
+    "ink:root[2].DiningCloset[1].Closet_Conductor_Flashback[21]"
+  ],
+  "findingCount": 8,
+  "notes": [
+    "Cycle 2 applies the eight remaining text and proper-name consistency fixes from the independent Cycle 1 audit.",
+    "All six es-419 glossary corrections are present in the canonical SiteForMods layer.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

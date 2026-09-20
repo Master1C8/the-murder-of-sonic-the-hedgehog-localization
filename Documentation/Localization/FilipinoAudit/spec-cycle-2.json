@@ -1,0 +1,35 @@
+{
+  "locale": "fil",
+  "cycle": 2,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 5,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Conductor_Car[74].Start_Interrogation[14]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part3[0][84].c-0[13]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part4[128]",
+    "ink:root[2].Final_Push[35].Finale_Start[104]",
+    "inventory:stick:Description"
+  ],
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "Flicky",
+    "Omochao",
+    "blowdart",
+    "Conductor’s Wife",
+    "lore card",
+    "hidden passage"
+  ],
+  "previousClosure": "Documentation/Localization/FilipinoAudit/cycle-1/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 2 corrects all five text findings from independent cycle 1.",
+    "Three corrections restore semantic placement of existing rich-text tags; protected tag multisets remain unchanged.",
+    "The canonical blowdart and stick-handle clue wording is now consistent.",
+    "Runtime and visual QA were not run."
+  ]
+}

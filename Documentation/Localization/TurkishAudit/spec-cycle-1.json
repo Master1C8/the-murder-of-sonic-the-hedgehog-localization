@@ -1,0 +1,27 @@
+{
+  "locale": "tr",
+  "cycle": 1,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 271,
+  "changedIdsFromGitHead": true,
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "Flicky",
+    "Omochao",
+    "guard",
+    "lore card",
+    "hot tip",
+    "Conductor's Wife"
+  ],
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 1 applies 265 manual IDs, two image-plan fields, and two Turkish glossary fields; overlapping hot-tip findings map to one physical ID.",
+    "The timestamp proposal was rejected in advance; five runtime-exact speaker prefixes and one protected-token credit line were corrected before evidence generation.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

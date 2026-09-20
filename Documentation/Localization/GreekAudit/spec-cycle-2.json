@@ -1,0 +1,47 @@
+{
+  "locale": "el",
+  "cycle": 2,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": null,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Prologue[1].Gang_Shows_Up[0][110].g-0[23]",
+    "ink:root[2].Prologue[1].Story_Continues[15]",
+    "ink:root[2].Library[4].Interrogation_Part2[0][20].g-0[7]",
+    "ink:root[2].Casino[5].FirstVisit[0][41]",
+    "ink:root[2].Lounge[108].Minigame_Midpoint3[9][8].b[24]",
+    "ink:root[2].Lounge[108].String[59]",
+    "ink:root[2].Final_Push[35].Minigame_Checkpoint3[1][8].b[33]",
+    "ink:root[2].Final_Push[35].Final_Boss_Interaction3[12]",
+    "ink:root[2].Final_Push[35].Finale_Start[114]",
+    "ink:root[2].SafeRoom[4].Opt12_Kiss_Egg[10]",
+    "ink:root[2].SafeRoom[4].Opt16_Just_Wait[65]",
+    "ink:root[2].DiningCloset[1].Interrogation_Part1[0][20].c-2[4]",
+    "unity:defaultgroup:-2297970105022902009:m_text"
+  ],
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "flicky",
+    "Omochao",
+    "blowdart",
+    "blow dart",
+    "birthday girl",
+    "ULTIM",
+    "Ultimate Life Form",
+    "Conductor’s Wife",
+    "library map",
+    "keyring",
+    "concert tickets"
+  ],
+  "previousClosure": "Documentation/Localization/GreekAudit/cycle-1/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 2 corrects all actionable findings from independent cycle 1.",
+    "Five proposed Conductor’s Wife label translations were deliberately not applied because those prefixes are runtime-exact and validation rejects changes.",
+    "Runtime and visual QA were not run."
+  ]
+}

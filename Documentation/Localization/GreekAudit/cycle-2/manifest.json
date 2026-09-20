@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "locale": "el",
+  "cycle": 2,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "fc11c777b0b90095ddccf5397e682e38efd081885962c1b9a2848c41d46bbd48",
+    "overlay": "45ff25ada3c5cec29877305a04107a971b951ac76505b2e9f5a7e0daba8c7030",
+    "images": "6ffdf6f9b70eedcd2cc6b4d9c4d47dbbbc9144759ba66275c6823fbb1595c4cf"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "73fb9a86d2a2309af48be196fec937468a02362e1793e921bcfad94d1f91ebf9"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 164,
+      "sha256": "4142f40f50bab90fb43e36655cc4ece4ad99870bb2b2c4e7ceb36a28cf0a5444"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 252,
+      "sha256": "4ecd9126d720a23e8f322c4fbe9cfa0e113073e0e8530771671455a506d63639"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 45,
+      "sha256": "185a812c14415ec76f5cf54ea5497f35dd1e813d3f9d37d0dcd94243da62fa0a"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 96,
+      "sha256": "6aa9fb8e80b8ec37b67dc6d681e4a347c87f4d4cadbfe454f44ec147e8998ab9"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1362,
+      "sha256": "5b40f2ac7a9a6e99727b1ba80f0bedc6d723588ccfa451c3276078c7033afd43"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 25,
+      "sha256": "32a6d8f7883be38c88b659146d7040a1e3d2bcecc6daa97fe5cf55f24505471f"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1362,
+    "sha256": "1f77227703e91d37d72f2a77117465bb6d6a30f11c2e03810e0382543d5e5fcc"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "68d676b221c74069b721fecfd555b9458cb3f9cc69d375a063bf8c5437d954c0"
+  },
+  "correctedIds": [
+    "ink:root[2].Prologue[1].Gang_Shows_Up[0][110].g-0[23]",
+    "ink:root[2].Prologue[1].Story_Continues[15]",
+    "ink:root[2].Library[4].Interrogation_Part2[0][20].g-0[7]",
+    "ink:root[2].Casino[5].FirstVisit[0][41]",
+    "ink:root[2].Lounge[108].Minigame_Midpoint3[9][8].b[24]",
+    "ink:root[2].Lounge[108].String[59]",
+    "ink:root[2].Final_Push[35].Minigame_Checkpoint3[1][8].b[33]",
+    "ink:root[2].Final_Push[35].Final_Boss_Interaction3[12]",
+    "ink:root[2].Final_Push[35].Finale_Start[114]",
+    "ink:root[2].SafeRoom[4].Opt12_Kiss_Egg[10]",
+    "ink:root[2].SafeRoom[4].Opt16_Just_Wait[65]",
+    "ink:root[2].DiningCloset[1].Interrogation_Part1[0][20].c-2[4]",
+    "unity:defaultgroup:-2297970105022902009:m_text"
+  ],
+  "findingCount": null,
+  "notes": [
+    "Cycle 2 corrects all actionable findings from independent cycle 1.",
+    "Five proposed Conductor’s Wife label translations were deliberately not applied because those prefixes are runtime-exact and validation rejects changes.",
+    "Runtime and visual QA were not run."
+  ]
+}

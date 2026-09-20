@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "locale": "bg",
+  "cycle": 1,
+  "status": "pending-independent-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "1e63d57ba6a6afa753ca1c64ef89f01bcfb2e34ea6316b02d82168a365df83b4",
+    "overlay": "8e8cfc0fd47d9a98d09eb2c0317b4e7c9bda3c4036bf3b2f6c3a518269b51fb1",
+    "images": "dfb22c8758cd5adef6a16bc7c660e5368e13689d601ff70dc601e2b27acb13db"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "4d4fb10ccc58abd43482c276b0484037489e4fa7cd63e377ab9f78fa1e85fff9"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 259,
+      "sha256": "7bf8f5d999472caecf0f7092adc3d4583a24aec818727d4bf814cbbebec56980"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 402,
+      "sha256": "7713710d4e836fd744efd560f621e270a17fde02b02cfdd4e594c8bcfdc2d3fe"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 1,
+      "sha256": "6efa41cb060f5bd67781e571ff02798c0a340a62336b0ab587ee686053f2654c"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 104,
+      "sha256": "5ac6c5c846ac9e3aed777c91f21e067a77da5b362bf373142b7990a13db37bcb"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1513,
+      "sha256": "49c165b0f6dc2f257c232d0a4319577056cda2cf94d42f63c9063e634a93448c"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1513,
+    "sha256": "72e0254cd1fc5727eb844011373b38fa3dea0207528ed58c24a0ab5298ba9f4b"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "84223d997129e7aa3c2ed8c512b598789790502c061d6832d63632bfef6a7ac9"
+  },
+  "correctedIds": [],
+  "findingCount": null,
+  "notes": [
+    "Primary audit read all 3547 source/target units, all 117 current Bulgarian glossary entries, and all 10 image plans.",
+    "The full pass included every known-gender reference and neutralized Chao, Flicky and Omochao where canonical gender is unknown.",
+    "Espio's rhymed poems, dynamic joins, runtime-exact controls, save/load surfaces, environment labels and image continuity were reviewed explicitly.",
+    "Cycle 1 freezes the corrected Bulgarian artifacts for independent closure review.",
+    "Runtime and visual QA were not run."
+  ]
+}

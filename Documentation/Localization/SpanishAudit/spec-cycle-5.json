@@ -1,0 +1,36 @@
+{
+  "locale": "es",
+  "cycle": 5,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 10,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Prologue[1].Murder_Mystery_Rules[0][53].g-0[34]",
+    "ink:root[2].DiningCloset[1].Closet_Conductor_Flashback[21]",
+    "ink:root[2].Final_Push[35].Final_Boss_Interaction4[10]",
+    "ink:root[2].Final_Push[35].Train_Endgame[13]",
+    "ink:root[2].Final_Push[35].Finale_Start[87]",
+    "ink:root[2].Final_Push[35].Finale_Start[90]",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation1[151]",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation1[161]",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation1[163]",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation2[0]"
+  ],
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "Flicky",
+    "Omochao",
+    "Conductor’s Wife"
+  ],
+  "previousClosure": "Documentation/Localization/SpanishAudit/cycle-4/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 5 applies nine Flicky proper-name capitalization corrections plus the neutral/female referent corrections from Cycle 4.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

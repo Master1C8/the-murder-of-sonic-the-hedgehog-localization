@@ -1,0 +1,33 @@
+{
+  "locale": "he",
+  "cycle": 1,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": null,
+  "changedIdsFromGitHead": true,
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "flicky",
+    "Omochao",
+    "blowdart",
+    "blow dart",
+    "birthday girl",
+    "ULTIM",
+    "Ultimate Life Form",
+    "Conductor’s Wife",
+    "library map",
+    "keyring",
+    "concert tickets"
+  ],
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Complete primary semantic coverage was 3547/3547 text units, 10/10 image plans, and 117/117 Hebrew glossary entries.",
+    "All primary findings were corrected; one complete clean author glossary audit was then performed on the final 117-entry layer.",
+    "Barry is male; known-gender agreement and neutral handling of Flicky, Chao, Omochao, and dynamic names were explicitly reviewed.",
+    "Five Conductor’s Wife prefixes remain English because they are runtime-exact.",
+    "Runtime and visual QA were not run."
+  ]
+}

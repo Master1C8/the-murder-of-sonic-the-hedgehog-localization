@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "locale": "tr",
+  "game": "the-murder-of-sonic-the-hedgehog",
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "workflow": "Documentation/Localization/AUDIT_WORKFLOW.md",
+  "status": "editorially-accepted-cycle-6-clean",
+  "sourcePolicy": {
+    "semanticDecisionInputs": [
+      "English source corpus",
+      "canonical English/Turkish glossary",
+      "scene and adjacent-line context",
+      "10 source PNGs"
+    ],
+    "nonEnglishLocaleComparisonUsed": false,
+    "ownerConfirmedFacts": ["Barry is male"],
+    "canonicalMetadataDecision": "Chao, Flicky and Omochao remain grammatically neutral where canonical gender is unknown."
+  },
+  "fingerprints": {
+    "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+    "sourceUnitsSha256": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventoryFileSha256": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalizedSha256": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryTurkishNormalizedSha256": "fec11b74fd376de4e33e406eb99b0ecacdc76c824f6ac576cf6d33332f662e92"
+  },
+  "artifactHashes": {
+    "manual": "3ee3e142f77b17855769e96abefc4bf9cc2661949ccec5e33adec7d66b69b2fd",
+    "overlay": "72e792b98f7b8d2584899f8f36d0864d40922fc0ba31c31326ba15a5c42c996a",
+    "images": "3255bf78b9a64f237fef9fc900cc9446a115bc0c82c8f562dd699f839e3ad0c1"
+  },
+  "semanticCoverage": {
+    "sourceUnitsRead": 3547,
+    "sourceUnitTotal": 3547,
+    "glossaryEntriesRead": 117,
+    "glossaryEntryTotal": 117,
+    "imagePlansRead": 10,
+    "imagePlanTotal": 10,
+    "complete": true
+  },
+  "independentDiffAudit": {
+    "status": "cycle-6-clean",
+    "cycleFindingCounts": [271, 46, 6, 1, 3, 16],
+    "finalClosureCount": 1207,
+    "finalDeltaReviewCount": 55
+  },
+  "evidenceCycles": [
+    {"cycle": 1, "manifest": "Documentation/Localization/TurkishAudit/cycle-1/manifest.json", "result": "not-clean"},
+    {"cycle": 2, "manifest": "Documentation/Localization/TurkishAudit/cycle-2/manifest.json", "result": "not-clean"},
+    {"cycle": 3, "manifest": "Documentation/Localization/TurkishAudit/cycle-3/manifest.json", "result": "not-clean"},
+    {"cycle": 4, "manifest": "Documentation/Localization/TurkishAudit/cycle-4/manifest.json", "result": "not-clean"},
+    {"cycle": 5, "manifest": "Documentation/Localization/TurkishAudit/cycle-5/manifest.json", "result": "not-clean"},
+    {"cycle": 6, "manifest": "Documentation/Localization/TurkishAudit/cycle-6/manifest.json", "closureCount": 1207, "deltaReviewCount": 55, "result": "clean"}
+  ],
+  "mandatoryRegression": {
+    "genderAndAgreement": "complete; Barry male and all known-gender references reviewed",
+    "unknownAndAmbiguous": "complete; Chao, Flicky and Omochao remain neutral where canonical gender is unknown",
+    "saveLoadAndEnvironment": "reviewed; token-unsafe timestamp rewrite rejected",
+    "speakerLabels": "reviewed; runtime-exact controls preserved",
+    "dynamicJoins": "reviewed; corrected joins and direct dependencies included in closure and delta review",
+    "imagePlans": "10/10 reviewed"
+  },
+  "sourcePlaceholders": {
+    "classification": "reviewed source-authored Unity placeholders; not missing localization",
+    "count": 11,
+    "ids": [
+      "unity:level0:1485:m_text", "unity:level0:1490:m_text", "unity:level0:1511:m_text",
+      "unity:level0:1512:m_text", "unity:level0:1513:m_text", "unity:level0:1524:m_text",
+      "unity:level0:1526:m_text", "unity:level0:1528:m_text", "unity:level0:1530:m_text",
+      "unity:level0:1544:m_text", "unity:level0:1555:m_text"
+    ]
+  },
+  "validation": {
+    "overlay": "passed: 3547/3547, zero missing/extra/token/layout/runtimeExact errors",
+    "byteIdenticalOverlayRebuild": "passed",
+    "byteIdenticalEvidenceRebuild": "passed",
+    "localizationTests": "12/12 passed",
+    "glossaryTests": "39/39 passed"
+  },
+  "notRun": {
+    "gameLaunch": true,
+    "installerLaunch": true,
+    "installedGameMutation": true,
+    "runtimeQa": true,
+    "visualQa": true
+  },
+  "nextAction": "Editorial audit is complete. Runtime and visual QA remain separate and were not run; do not mark payloadReady until all 30 locales and payload files are final."
+}

@@ -1,0 +1,36 @@
+{
+  "locale": "pl",
+  "cycle": 5,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": null,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Casino[5].Return_To_Casino[17]"
+  ],
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "flicky",
+    "Omochao",
+    "blowdart",
+    "blow dart",
+    "birthday girl",
+    "ULTIM",
+    "Ultimate Life Form",
+    "Conductor’s Wife",
+    "library map",
+    "keyring",
+    "concert tickets"
+  ],
+  "previousClosure": "Documentation/Localization/PolishAudit/cycle-4/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 5 corrects the single remaining unknown-gender Chao-guard finding from independent cycle 4.",
+    "All image-plan corrections from cycle 4 remain frozen.",
+    "The timestamp remains token-safe because separating 44 from the suffix creates a protected numeric-token error.",
+    "Runtime and visual QA were not run."
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "locale": "zh",
+  "cycle": 1,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "3407b7785f5a33c67454d61ef58b4e609b94c56c98423260b76e236c77436929",
+    "overlay": "cc7fae12f93e921a9d0c774ccbee8e06beeee35e3a7a69f66a0fc74ab96103ba",
+    "images": "8bfe450d00bc786a28c8a184dc29efbeddeb94883a660d5333c13633c681eafe"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "0d50ee211bbaf4cb01865ecd7e8c7e03593251d825c5dd5b3a92f2ba9a2b53e5"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 153,
+      "sha256": "291e63d0523effb1455f571433d9917e2b625dde33380c2f358210ce4743ece7"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 258,
+      "sha256": "dc38db3f4a3e5e86be3ad88c5f37bcf234a37b936eaf2f7a5bfb493a1db6cdd4"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 76,
+      "sha256": "1bf9ee68d5fb1291bf11de781bf546265103052357fe9cef82c4d61aff598b08"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1324,
+      "sha256": "0a5aed3e32aa67b8c7024210fb0cf9c11f7cde0a81a6395560fcaa4130b1b84b"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1324,
+    "sha256": "295ee597f7c2ed6f95e93d25fc270a822d655eb492a40d2cd242707d7d51bbf0"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "a2756f6730ce060aea6282d3a70835774c1b21b79622cad04f576fbd66b9b659"
+  },
+  "correctedIds": [],
+  "findingCount": 155,
+  "notes": [
+    "Cycle 1 applies the exhaustive full-audit correction package: 154 manual IDs plus one image-plan field.",
+    "The proposed timestamp rewrite was rejected by the protected-token gate and the token-safe wording was retained.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

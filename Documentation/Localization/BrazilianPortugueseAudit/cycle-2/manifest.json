@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "locale": "pt-BR",
+  "cycle": 2,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "eb57fc4a80323810f5f792fd428bd9250d623af036ba5daf322a94daab829d24",
+    "overlay": "aeea53ce174de1b0e88bcd8084bb23e904cc128f200ec1a70d337213c5d3cd49",
+    "images": "b2c892f7631b8c5b88e4874b0704c6a93744ce2031e41c4c2079a0742b555d77"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "765e8269bd16fac40e67ad0a6512999b9a1fd6a03b5693493f368e9508f1f905"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 1,
+      "sha256": "98b505753078edff0562832d344da4d867bfe590bde1812cac045bf41bdaea93"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 2,
+      "sha256": "534adadabdd055b1140613c4e610598d2d775341e398cddb7fa75f32bc63ad41"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 62,
+      "sha256": "99d9bb20973a887c66d663fbd0d03dc964d908867a148e905521bb8fbd8bd4fd"
+    },
+    "invalidated-dependency-ids": {
+      "file": "invalidated-dependency-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1070,
+      "sha256": "1d9646afcad5d5207cb2aaf435020bd46a60f410f93ef186b58c48fa29ba5218"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 1,
+      "sha256": "98b505753078edff0562832d344da4d867bfe590bde1812cac045bf41bdaea93"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 80,
+      "sha256": "082eb7f1ab7771e92f07c0164e93e5a999d7c0892348afcd509391d5d22784ba"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1070,
+    "sha256": "eccdeaa9eefaf2f19f33d3cd8a517b4208d98ffb32b05c48353829d8c28d6f88"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "fdc3e9afa7a8922548005399cd380ad8b0e144ec928326c3dd4d504fe949694e"
+  },
+  "correctedIds": [
+    "ink:root[2].LockdownDiningCar[1].Eggman_Appears[0][56].g-3[10]"
+  ],
+  "findingCount": 1,
+  "notes": [
+    "Cycle 2 fixes the single remaining scene-context calque found by the Cycle 1 independent delta audit.",
+    "The final review is restricted to this exact correction and mandatory regression.",
+    "Runtime and visual QA were not run."
+  ]
+}

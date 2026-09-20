@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "locale": "fr",
+  "cycle": 2,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "53c7b65b60e7cbe5f2059fa948dda11fac963369d3c597d5b1ef2b2bf4afe921",
+    "overlay": "52e0d3f28f612f57bb01215d7062007e8779a3d8990328fb69e6c54bf90cdd0d",
+    "images": "4c046614b77e2f00f20207b067812d21b938bf94548d6d9bdb718c5ffac06f1f"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "33e9c88afc6796998de4ceb953b7a59c06c01eefdff3d651a8903657710d6758"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 247,
+      "sha256": "9a6609dc12f726bfa5a3f26b6813b47ad7411edf60b1f352e5be62fe569d6d52"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 381,
+      "sha256": "4fdd3da29763b31af7f03048aaffc022dd3e8920cd1ffc4a4c65d5fa4d47d24d"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 6,
+      "sha256": "5da75560f2c0a8309028b16fdfec90b08bd6cd9d0520da2d866bf8b8c62827e1"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 127,
+      "sha256": "04a1eb6cefe9c687ff092809b2341e4f3240e3796a4a8c37bd7847c64c7bc4d7"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1492,
+      "sha256": "21beca1230b534b4832ebeb386929d530ddc308c8e014b31157776ef5ec71c18"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 15,
+      "sha256": "0cf004cbdab345a017f892265ad5f06a701284650a9bc51b1f6d49ca3662bbc5"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 19,
+      "sha256": "fdeb44f1e261e48c28e989beb3af4c31fe4bb994fcf3de69b0cb35aec57b285d"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1492,
+    "sha256": "896b13507d4b6c68119120bb8ce1769c54864399ef503328f36945c3e90f50c3"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "cf040d8419ec2823ee44a06c45ffdb9074a2bacb9f077d38be9ff298192b8b6b"
+  },
+  "correctedIds": [
+    "ink:root[2].Prologue[1].Murder_Mystery_Rules[0][53].g-0[2]",
+    "ink:root[2].Casino[5].Return_To_Casino[17]",
+    "ink:root[2].Casino[5].Environment_Rouge[0][0]",
+    "ink:root[2].Final_Push[35].Finale_Start[38]",
+    "ink:root[2].DiningCloset[1].Interrogation_Part1[0][20].c-2[4]"
+  ],
+  "findingCount": 5,
+  "notes": [
+    "Cycle 2 corrects all five actionable findings from the independent cycle 1 closure audit.",
+    "The corrections restore the single murderer role, neutral Chao-guard reference, plural addressee agreement, and the distinction between the real attack and the role-play game.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "The rebuilt French overlay has 3547/3547 units and zero missing, extra, protected-token, layout or runtime-exact errors.",
+    "Runtime and visual QA were not run."
+  ]
+}

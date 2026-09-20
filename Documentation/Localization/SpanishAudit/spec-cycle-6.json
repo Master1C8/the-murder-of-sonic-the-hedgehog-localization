@@ -1,0 +1,29 @@
+{
+  "locale": "es",
+  "cycle": 6,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 4,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Saloon[4].Wanted_Poster[0][0]",
+    "ink:root[2].Lounge[108].Talk_To_Amy[0][12]",
+    "ink:root[2].Lounge[108].Enter_Interrogation_Mode[50]",
+    "ink:root[2].Lounge[108].Interrogation_Part5_End[0]"
+  ],
+  "referentSearchTerms": [
+    "Omochao",
+    "hot tip",
+    "clue",
+    "Amy"
+  ],
+  "previousClosure": "Documentation/Localization/SpanishAudit/cycle-5/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 6 neutralizes the remaining Omochao reference and restores the journalistic hot-tip terminology across all three occurrences.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

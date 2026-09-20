@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "locale": "es",
+  "cycle": 4,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "73b0b2dc160f68624b03edc3d376b6b86e244a4813801da1415038ba1b00af76",
+    "overlay": "6d91247824195b1d9e4d1c27712225c11d77166bbf84f5bd267dec2a113efb96",
+    "images": "f2bed582ca9166d9c17272577017921c86b0cf40e6a45e295c62c2be1595c7e4"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "b4cd44a21223dc3df42c0c0c4f81552b02222913e0a383fe878970aaeb8c5dff"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 64,
+      "sha256": "7bc585cc71f3db85525e1dd26103d6fd0fbc978acd817b7e396b1d2afc313999"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 90,
+      "sha256": "c53118c834ba73f1bb6a54a1d87893b482557ddde4e82953d763cd13585bc2f9"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 52,
+      "sha256": "05fb4439d97d4cd19e024e6f1900757d5d6d183ff3c99c8791b74773a2b3e7b3"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1120,
+      "sha256": "5f321e1d838e5edee5b42f50a02d753522d8bcff4b48df286b54650efc293750"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 46,
+      "sha256": "17891a6b8da3dad034258fe957813586035b73fde64cf2ec14331f63d20bd3fb"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 3,
+      "sha256": "ba298496937618f698bf94948e27606f4de844ccba7f829f8c1f0d0be422e138"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1120,
+    "sha256": "9adfebbd11f36f8f4ec9e6b71e8b247b04fca21f821c2e6ce4593e22844e9dda"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "d69a2cc87434b5b95fb54ced4eba1b34e71e33be06805fdab0c3d74d33aefc6b"
+  },
+  "correctedIds": [
+    "ink:root[2].Saloon[4].FirstVisit[0][26]",
+    "ink:root[2].Prologue[1].Murder_Mystery_Rules[0][53].g-0[34]",
+    "ink:root[2].Library[4].Motivational_Poster[0]",
+    "ink:root[2].Library[4].Motivational_Poster[10]",
+    "ink:root[2].Library[4].Motivational_Poster[13]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt4[0][26].c-1[11]",
+    "ink:root[2].Casino[5].Return_To_Casino[48]",
+    "ink:root[2].Casino[5].Environment_Rouge[0][18].c-1[15]",
+    "ink:root[2].Lounge[108].Big_Band[0][18].c-0[13]",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation1[151]",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation1[161]",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation1[163]",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation2[0]",
+    "ink:root[2].Final_Push[35].Final_Boss_Interaction4[10]",
+    "ink:root[2].Final_Push[35].Train_Endgame[13]",
+    "ink:root[2].Final_Push[35].Finale_Start[87]",
+    "ink:root[2].SafeRoom[4].Opt16_Just_Wait[163]",
+    "ink:root[2].SafeRoom[4].Opt16_Just_Wait[166]",
+    "unity:defaultgroup:-2297970105022902009:m_text"
+  ],
+  "findingCount": 24,
+  "notes": [
+    "Cycle 4 applies 19 text corrections and five glossary-layer corrections from the independent Cycle 3 audit.",
+    "The closure explicitly covers every Chao, Flicky and Omochao occurrence, including the 16 dependencies missed by Cycle 3.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

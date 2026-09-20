@@ -1,0 +1,35 @@
+{
+  "locale": "tr",
+  "cycle": 4,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 1,
+  "changedIds": [
+    "ink:root[2].Prologue[1].Environment_Sonic_Interaction_1[18]"
+  ],
+  "correctedIds": [
+    "ink:root[2].Prologue[1].Environment_Sonic_Interaction_1[18]"
+  ],
+  "previousClosure": "Documentation/Localization/TurkishAudit/cycle-3/closure-ids.txt",
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "Flicky",
+    "Omochao",
+    "Sonic",
+    "guard",
+    "lore card",
+    "hot tip",
+    "Conductor's Wife",
+    "Eggman"
+  ],
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 4 restores Sonic as the intended rescuer in the one remaining Turkish semantic defect from Cycle 3.",
+    "The final review is restricted to this exact correction, Sonic referent dependencies, and mandatory regression.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

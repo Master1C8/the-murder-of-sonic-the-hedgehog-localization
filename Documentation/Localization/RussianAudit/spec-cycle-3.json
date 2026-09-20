@@ -1,0 +1,35 @@
+{
+  "locale": "ru",
+  "cycle": 3,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": null,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Casino[5].Heist_Planning_Pt8[0][23].g-0[17]",
+    "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][124]"
+  ],
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "flicky",
+    "blowdart",
+    "blow dart",
+    "birthday key",
+    "ULTIM",
+    "Ultimate Life Form",
+    "Conductor’s Wife",
+    "library map",
+    "keyring",
+    "concert tickets"
+  ],
+  "previousClosure": "Documentation/Localization/RussianAudit/cycle-2/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 3 corrects the two text findings and one image-plan finding from independent cycle 2.",
+    "Mandatory regression now includes save/load and environment display surfaces.",
+    "Runtime and visual QA were not run."
+  ]
+}

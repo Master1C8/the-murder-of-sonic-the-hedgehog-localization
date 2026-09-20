@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "locale": "he",
+  "cycle": 1,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "78e57ecf66f81f1208f8cb3684e63026e4adb6f26d1c42c1244aff50fe562da7",
+    "overlay": "3ba22827ebf7c5727ea4edd0ae660d9822311a424a5c34a385f0dbef01c36ad9",
+    "images": "ed5b42c36e896e03bfc3bc661a6a165288fffe80ac282eb4534588faa6559610"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "e43499cb85c134f610d2ed661ea8e1388f20cea0dfc322806ebd8fd56e0a6139"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 245,
+      "sha256": "61c204bb2c8d9322eb1cd94fd2bef0ea37baf51879b6e915a350d7934bb63e2b"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 378,
+      "sha256": "856d2f35c2bbd619c45d2450a23cc35909362a70e40aa121847366fafc8b75fd"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 96,
+      "sha256": "6aa9fb8e80b8ec37b67dc6d681e4a347c87f4d4cadbfe454f44ec147e8998ab9"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1499,
+      "sha256": "ba30e27d699ba93ecff4095d3c63aeb55ffc7622e77bf597babed9be3229182c"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1499,
+    "sha256": "2acf20ee090a729025e9c0b39dd5878e95926258fe9a2b208f976e276e75bc6e"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "996c637a0d88487d4aaa6062632b545c741500f4842c10f2e32ab9f5f275a207"
+  },
+  "correctedIds": [],
+  "findingCount": null,
+  "notes": [
+    "Complete primary semantic coverage was 3547/3547 text units, 10/10 image plans, and 117/117 Hebrew glossary entries.",
+    "All primary findings were corrected; one complete clean author glossary audit was then performed on the final 117-entry layer.",
+    "Barry is male; known-gender agreement and neutral handling of Flicky, Chao, Omochao, and dynamic names were explicitly reviewed.",
+    "Five Conductor’s Wife prefixes remain English because they are runtime-exact.",
+    "Runtime and visual QA were not run."
+  ]
+}

@@ -10,7 +10,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/Menu with chilidog.png",
       "sourceText": "Menu\nChili Dog\nRamen\nChicken\nCordon Bleu",
-      "translation": "Меню\nЧили-дог\nРамен\nКурица\nкордон-блю из курицы",
+      "translation": "Меню\nЧили-дог\nРамен\nкордон-блю\nиз курицы",
       "context": "Prologue / menu close-up",
       "glossaryIds": ["menu", "chili-dog", "chicken-cordon-bleu"],
       "status": "translated",
@@ -37,11 +37,11 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/1-Saloon/PROP_FixedArcadeWithHighScore_V02.png",
       "sourceText": "HIGH SCORE\nVECTR 7501\nKNUCK 7500\nTOAST 7331\nAPPLE 7250\nBREAD 7200\nULTIM 7150\nBAGEL 7003\nCANDY 6990",
-      "translation": "РЕКОРДЫ\nVECTR 7501\nKNUCK 7500\nTOAST 7331\nAPPLE 7250\nBREAD 7200\nULTIM 7150\nBAGEL 7003\nCANDY 6990",
+      "translation": "РЕКОРДЫ\nVECTR 7501\nKNUCK 7500\nTOAST 7331\nAPPLE 7250\nBREAD 7200\nАБСОЛ 7150\nBAGEL 7003\nCANDY 6990",
       "context": "Saloon / arcade high-score display",
       "glossaryIds": ["arcade-machine"],
       "status": "translated",
-      "note": "Переведён заголовок; алиасы таблицы рекордов и все числовые значения сохранены точно как имена/игровые данные."
+      "note": "Переведён заголовок; псевдоним ULTIM локализован как АБСОЛ, чтобы сохранить сюжетную связь с «Абсолютной формой жизни»; остальные алиасы и все числовые значения сохранены."
     },
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/1-Saloon/PROP_TailsLoreCard.png",
@@ -73,7 +73,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/5-conductorcar/TypedNoteFromTrainToEspio.png",
       "sourceText": "Use this blowdart on Sonic,\nstationed in the conductor\ncar. It is laced with a\nnonlethal sleeping agent.\nThank you again for\nchoosing the Mirage Express.\n-Staff",
-      "translation": "Используй этот духовой дротик против Соника,\nнаходящегося в вагоне Проводника.\nДротик покрыт несмертельным снотворным средством.\nЕщё раз спасибо за выбор поезда\n«Мираж-Экспресс».\n—Персонал",
+      "translation": "Используйте этот духовой дротик против Соника,\nнаходящегося в вагоне Проводника.\nДротик пропитан несмертельным снотворным средством.\nЕщё раз спасибо, что выбрали поезд\n«Мираж-Экспресс».\n— Персонал",
       "context": "Conductor Car / typed note from train staff to Espio",
       "glossaryIds": ["blowdart", "the-conductor", "conductor-car", "nonlethal-sleeping-agent", "the-mirage-express", "train-note"],
       "status": "translated",

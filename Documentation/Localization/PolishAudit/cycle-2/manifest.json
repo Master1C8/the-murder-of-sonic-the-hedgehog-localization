@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "locale": "pl",
+  "cycle": 2,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "a0418968858374775aa798a2502cc7641337fd1dc87e1e1801438b42c09eb33c",
+    "overlay": "e5e517957372a64b8cb09616f354f226523881f2a783971017e77ee0b5c35df6",
+    "images": "10d67f3796e3bb8aa4e96208ed555ffae09a8e4c94a43d74d057010ca37c027f"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "a413c1227c1c7c9b8a89479e99ce4efa6c5ddac97b31484b6d5c50093815f12c"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 197,
+      "sha256": "f0419c3f6fa6c34243e5c0dd0552f277bf90e076f01715c27873db52f6e6cab6"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 286,
+      "sha256": "48e9a0add8080682e2ae4af5312edd034d168a8f53f371b16fca4d7140ccee89"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 1,
+      "sha256": "c1f45088f81542b739bfcfea2cc3896ab7566921de045e6981364a8981f10960"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 96,
+      "sha256": "6aa9fb8e80b8ec37b67dc6d681e4a347c87f4d4cadbfe454f44ec147e8998ab9"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1387,
+      "sha256": "6f4d722173897d94c45e1214e4eb33d601ce4fe11644265101d1319bb280a106"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 92,
+      "sha256": "0a87f3af52cd7671c2a5a952abd0d0ce735f622f6e05ed6a5e4720ea6194a4e4"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1387,
+    "sha256": "1c6d75fe97534c6586538f7452cc4a617bb82eb94374c5b6ce8a193473bf0565"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "823a761c5e44745e6c6839ef11c886c6216cc99f62b681d638c6e9b3bdccba13"
+  },
+  "correctedIds": [
+    "ink:root[2].Saloon[4].Interrogation_Part5[0][20]",
+    "ink:root[2].Saloon[4].Interrogation_Part5[0][26]",
+    "ink:root[2].Saloon[4].Interrogation_Part5[0][32]",
+    "ink:root[2].Saloon[4].Interrogation_Part5[0][44]",
+    "ink:root[2].Saloon[4].Interrogation_Part5[0][50]",
+    "ink:root[2].Saloon[4].Wanted_Poster[0][2]",
+    "ink:root[2].Prologue[1].Give_Sonic_Item[10]",
+    "ink:root[2].Prologue[1].Story_Continues[76]",
+    "ink:root[2].Library[4].Talk_To_Espio[0][18].c-0[8]",
+    "ink:root[2].Library[4].Give_Espio_Item[10]",
+    "ink:root[2].Library[4].Interrogation_Part2[0][20].g-2[22].c-10[11]",
+    "ink:root[2].Library[4].Interrogation_Part7_End[45]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt2[0][26].c-0[1]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt7[0][26].c-0[11]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt8[0][23].g-0[17]",
+    "ink:root[2].Casino[5].Exit_Door[0][0]",
+    "ink:root[2].Lounge[108].Talk_To_Amy[0][12]",
+    "ink:root[2].Lounge[108].Talk_To_Amy[0][15]",
+    "ink:root[2].Lounge[108].Enter_Interrogation_Mode[50]",
+    "ink:root[2].Lounge[108].Enter_Interrogation_Mode[107]",
+    "ink:root[2].Lounge[108].Minigame_Midpoint1[10][8].b[52]",
+    "ink:root[2].Lounge[108].Minigame_Midpoint2[9][8].b[51]",
+    "ink:root[2].Lounge[108].Interrogation_Part5_End[0]",
+    "ink:root[2].Lounge[108].String[36]",
+    "ink:root[2].Conductor_Car[74].Who_Dunnit_Choice[0][6]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part2[0][23]",
+    "ink:root[2].Conductor_Car[74].Choose_Not_Amy[3]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part7[14]",
+    "ink:root[2].Conductor_Car[74].Accusation[39]",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation2[91]",
+    "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][49]",
+    "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][91]",
+    "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][124]",
+    "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][153]",
+    "ink:root[2].Final_Push[35].Minigame_Checkpoint3[1][8].b[33]",
+    "ink:root[2].Final_Push[35].Return_To_Conductor_Car[0][32]",
+    "ink:root[2].Final_Push[35].Final_Boss_Interaction5[12]",
+    "ink:root[2].Final_Push[35].Train_Endgame[245]",
+    "ink:root[2].Final_Push[35].Finale_Start[36]",
+    "ink:root[2].Final_Push[35].Finale_Start[38]",
+    "ink:root[2].Final_Push[35].Finale_Start[90]",
+    "ink:root[2].Final_Push[35].Finale_Start[101]",
+    "ink:root[2].SafeRoom[4].Opt14_Flip_Egg[21]",
+    "ink:root[2].SafeRoom[4].Opt16_Just_Wait[160]",
+    "ink:root[2].SafeRoom[4].Opt16_Just_Wait[163]",
+    "ink:root[2].SafeRoom[4].Opt16_Just_Wait[166]",
+    "ink:root[2].DiningCloset[1].Closet_Conductor_Flashback[21]",
+    "ink:root[2].DiningCloset[1].Start_Interrogation[10]",
+    "ink:root[2].DiningCloset[1].Interrogation_Part1[0][20].c-2[1]",
+    "ink:root[2].DiningCloset[1].Interrogation_Part1[0][20].c-2[4]",
+    "ink:root[2].DiningCloset[1].Minigame_Midpoint1[1][8].b[3]",
+    "ink:root[2].DiningCloset[1].Minigame_Midpoint1[1][8].b[21]",
+    "ink:root[2].LockdownDiningCar[1].Eggman_Appears[0][56].g-0[7]",
+    "ink:root[2].LockdownDiningCar[1].Eggman_Appears[0][56].g-0[41]",
+    "ink:root[2].Name_Entry[20].Existing_Character_Name[0]",
+    "unity:defaultgroup:6462899961100210439:m_text",
+    "unity:level0:1538:m_text"
+  ],
+  "findingCount": null,
+  "notes": [
+    "Cycle 2 corrects all actionable text and image-plan findings from independent cycle 1.",
+    "Five proposed Conductor’s Wife label translations were deliberately not applied because those prefixes are runtime-exact and validation rejects changes.",
+    "Runtime and visual QA were not run."
+  ]
+}

@@ -64,7 +64,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/4-Lounge/HotHoneyPrintout.png",
       "sourceText": "ticket town\nHOT HONEY\nFRI MAY 8\n9:00 PM\nSTAGE\nSEC 53 ROW P\nSEC 53 ROW P\nSEC 53 ROW R\nSEC 54 ROW R",
-      "translation": "ticket town\nHOT HONEY\nVIE 8 MAY\n9:00 P. M.\nESC.\nSEC. 53 FILA P\nSEC. 53 FILA P\nSEC. 53 FILA R\nSEC. 54 FILA R",
+      "translation": "ticket town\nHOT HONEY\nVIE 8 MAY\n9:00 P. M.\nESC.\nSEC. 53 F. P\nSEC. 53 F. P\nSEC. 53 F. R\nSEC. 54 F. R",
       "context": "Lounge / Hot Honey ticket printout",
       "glossaryIds": ["hot-honey", "concert-tickets"],
       "status": "translated",
@@ -73,7 +73,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/5-conductorcar/TypedNoteFromTrainToEspio.png",
       "sourceText": "Use this blowdart on Sonic,\nstationed in the conductor\ncar. It is laced with a\nnonlethal sleeping agent.\nThank you again for\nchoosing the Mirage Express.\n-Staff",
-      "translation": "Usa este dardo de cerbatana\ncontra Sonic, apostado en el\nvagón del conductor. Contiene\nun somnífero no letal.\nGracias de nuevo por elegir\nThe Mirage Express.\n—Personal",
+      "translation": "Usa este dardo de cerbatana\ncontra Sonic, apostado en el\nvagón del conductor. Lleva\nun somnífero no letal.\nGracias de nuevo por elegir\nThe Mirage Express.\n—Personal",
       "context": "Conductor Car / typed note from train staff to Espio",
       "glossaryIds": ["blowdart", "the-conductor", "conductor-car", "nonlethal-sleeping-agent", "the-mirage-express", "train-note"],
       "status": "translated",

@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "locale": "zh",
+  "cycle": 2,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "1c4737e4dd3749c416dffc96d38a91755bf296701364c054c118a29259659588",
+    "overlay": "96f39c68c6b2ac1025ede9716e88fb1ce3f03dc644ab9ade672beda92a474017",
+    "images": "8bfe450d00bc786a28c8a184dc29efbeddeb94883a660d5333c13633c681eafe"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "c31ed075d0758b0adcee7f2a6592243568d32e6dff69f44f6e0c336b6c043230"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 170,
+      "sha256": "b8f21ae8c367aacd73917d8423f3c56a9821f99e6f5924e88b2c8ce73fe71bff"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 284,
+      "sha256": "82b28a31b054d312ae0eb3fdad2d3eb7875784f2842da0883b63e0b9481befe1"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 46,
+      "sha256": "363c190f23c392aeed9c975f576a35f183e55ff416e3dee4c1d45c232bbc870a"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1335,
+      "sha256": "4c9e85887b6923699ea62631e2f42b60389a3dcf73746b1b64eaa0d9a01fe07a"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 37,
+      "sha256": "9355d91e9173dcca25923b9ce3a5db17a8aeac5123826180845c3fffabddecaa"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 8,
+      "sha256": "5fbbb7af634d991bda3e86fc44618b6ab8ac74ebd5c0634859b2cd5a409b1676"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1335,
+    "sha256": "bbcc45e8f7f94fe9cc5859bc8ce7a4f434b4a1168fb4142172a291f31ff8006b"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "a2756f6730ce060aea6282d3a70835774c1b21b79622cad04f576fbd66b9b659"
+  },
+  "correctedIds": [
+    "ink:root[2].Break_Out[12]",
+    "ink:root[2].Prologue[1].Robotic_Arm[23]",
+    "ink:root[2].Prologue[1].Robotic_Arm[28]",
+    "ink:root[2].Prologue[1].Story_Continues[43]",
+    "ink:root[2].Prologue[1].Story_Continues[48]",
+    "ink:root[2].Library[4].Interrogation_Part4[0][0]",
+    "ink:root[2].Casino[5].FirstVisit[0][41]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt4[0][26].c-1[6]",
+    "ink:root[2].Casino[5].Return_To_Casino[29]",
+    "ink:root[2].Casino[5].Environment_Blaze[0][21].c-1[38]",
+    "ink:root[2].Casino[5].Environment_Rouge[0][0]",
+    "ink:root[2].Lounge[84]",
+    "ink:root[2].Conductor_Car[74].Confrontation_Start[118]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part3[0][84].c-1[6]",
+    "ink:root[2].Conductor_Car[74].Sound_System[0][14]",
+    "ink:root[2].SafeRoom[4].Opt5_Take_4_Team[17]",
+    "ink:root[2].SafeRoom[4].Opt9_Tails_Cool[11]",
+    "ink:root[2].DiningCloset[1].Interrogation_Part2[15]"
+  ],
+  "findingCount": 27,
+  "notes": [
+    "Cycle 2 fixes 18 valid text findings and two Chinese glossary meanings, and explicitly invalidates all dynamic-join dependencies.",
+    "Five proposed localized Conductor’s Wife prefixes were rejected because they are runtime-exact; their English binding prefixes remain intact.",
+    "Cycle 1 actually changed 153 manual IDs plus one image-plan field; the rejected timestamp remained identical to HEAD.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

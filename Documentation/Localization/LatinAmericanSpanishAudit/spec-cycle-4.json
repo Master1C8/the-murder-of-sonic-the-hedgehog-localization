@@ -1,0 +1,24 @@
+{
+  "locale": "es-419",
+  "cycle": 4,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 1,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Prologue[1].Environment_Rouge_Interaction_1[24]"
+  ],
+  "referentSearchTerms": [
+    "Rouge",
+    "miss"
+  ],
+  "previousClosure": "Documentation/Localization/LatinAmericanSpanishAudit/cycle-3/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 4 fixes the remaining formal-address inconsistency in the Conductor's dialogue with Rouge.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

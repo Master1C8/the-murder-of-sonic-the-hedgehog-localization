@@ -1,0 +1,49 @@
+{
+  "locale": "es",
+  "cycle": 4,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 24,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "unity:defaultgroup:-2297970105022902009:m_text",
+    "ink:root[2].Prologue[1].Murder_Mystery_Rules[0][53].g-0[34]",
+    "ink:root[2].Saloon[4].FirstVisit[0][26]",
+    "ink:root[2].SafeRoom[4].Opt16_Just_Wait[163]",
+    "ink:root[2].SafeRoom[4].Opt16_Just_Wait[166]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt4[0][26].c-1[11]",
+    "ink:root[2].Casino[5].Return_To_Casino[48]",
+    "ink:root[2].Casino[5].Environment_Rouge[0][18].c-1[15]",
+    "ink:root[2].Final_Push[35].Final_Boss_Interaction4[10]",
+    "ink:root[2].Final_Push[35].Train_Endgame[13]",
+    "ink:root[2].Final_Push[35].Finale_Start[87]",
+    "ink:root[2].Library[4].Motivational_Poster[0]",
+    "ink:root[2].Library[4].Motivational_Poster[10]",
+    "ink:root[2].Library[4].Motivational_Poster[13]",
+    "ink:root[2].Lounge[108].Big_Band[0][18].c-0[13]",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation1[151]",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation1[161]",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation1[163]",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation2[0]"
+  ],
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "Flicky",
+    "Omochao",
+    "security guard",
+    "Fabergé Chao egg",
+    "gem-covered Chao",
+    "power source"
+  ],
+  "previousClosure": "Documentation/Localization/SpanishAudit/cycle-3/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 4 applies 19 text corrections and five glossary-layer corrections from the independent Cycle 3 audit.",
+    "The closure explicitly covers every Chao, Flicky and Omochao occurrence, including the 16 dependencies missed by Cycle 3.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

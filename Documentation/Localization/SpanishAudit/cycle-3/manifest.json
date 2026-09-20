@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "locale": "es",
+  "cycle": 3,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "37cc5c205a532dfbace400d3707f757f682ef004d33e26d394f2ccafb253c90f",
+    "overlay": "eacb1d4520dbb60ac411f395a8a88f68870ce2f9e696f3b05bc3cb96f923d20a",
+    "images": "f2bed582ca9166d9c17272577017921c86b0cf40e6a45e295c62c2be1595c7e4"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "8a290ab7e3a8d27ddff7bd150eb3f16f67e9cc3b53f0881e3c5ddb10a5b36253"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 45,
+      "sha256": "c8a09fd8ebe2716fb1148da62b9526e25049c889e911e6c1e7c57109e35b3c19"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 63,
+      "sha256": "956acc558071607e9381b6bc9ee85a6392feb13efced20f6bf69f6a75c8fba5b"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 110,
+      "sha256": "cf2bb72978738da6e4d88bdf338b0838686ef45ea5456218cb198e7ccf1a20fc"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1085,
+      "sha256": "d3610ec8206c5e980bef42e8fc1a203c780a3327711731c7651bb079d9c4f0b5"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 10,
+      "sha256": "711457ad5eb530108ab4533493948b01a119d172d3acd0593151402d886742d0"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 27,
+      "sha256": "824bafb0fc4addf185638151a9dfed5bfd1532bf593b3a60824ebe1b05fe470d"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1085,
+    "sha256": "f97f699024873f576f8f47a4241234c4ae6db8380cd79976a4a3f7bc3579cede"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "d69a2cc87434b5b95fb54ced4eba1b34e71e33be06805fdab0c3d74d33aefc6b"
+  },
+  "correctedIds": [
+    "ink:root[2].Prologue[1].Environment_Amy_Interaction_1[31]",
+    "ink:root[2].Casino[5].FirstVisit[0][41]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt5[0][31].c-2[1]",
+    "ink:root[2].Casino[5].Return_To_Casino[17]",
+    "ink:root[2].SafeRoom[4].Opt13_Chaos_Control[3]"
+  ],
+  "findingCount": 6,
+  "notes": [
+    "Cycle 3 applies five text corrections and one Hot Honey image-plan correction from the independent cycle 2 audit.",
+    "Barry remains male; Amy's formal address and the canonical Esmeralda del Caos spelling are preserved.",
+    "Runtime and visual QA were not run."
+  ]
+}

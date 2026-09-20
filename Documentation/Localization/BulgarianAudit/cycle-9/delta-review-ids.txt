@@ -1,0 +1,5 @@
+ink:root[2].Saloon[4].Trash_Bin[0][16]
+ink:root[2].Saloon[4].Wanted_Poster[0][0]
+ink:root[2].Conductor_Car[74].Choose_Not_Rouge[5]
+ink:root[2].Conductor_Car[74].Choose_Not_Rouge[7]
+ink:root[2].Conductor_Car[74].Choose_Not_Rouge[10]

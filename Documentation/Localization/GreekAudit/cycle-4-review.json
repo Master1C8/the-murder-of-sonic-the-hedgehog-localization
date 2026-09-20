@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "locale": "el",
+  "cycle": 4,
+  "reviewType": "independent-delta-and-closure-audit",
+  "status": "clean",
+  "reviewedCorrectedIds": 2,
+  "reviewedDeltaIds": 4,
+  "reviewedClosureIds": 1379,
+  "reviewedMandatoryRegressionIds": 1034,
+  "reviewedImagePlans": 10,
+  "findingCount": 0,
+  "artifactHashes": {
+    "manual": "999ad93c1c3756954210e10a2d1c3b6e7e1c9164bc808a127c4e95b6826596be",
+    "overlay": "96a97ca94cd8b00fe6869466b28d2473b3c9f926356fe9f162a88aadecea483a",
+    "images": "53b9ce113cc5b733b152c93bef339dddeecf64eaaec5b400e08032cdc87a565d"
+  },
+  "evidenceHashes": {
+    "closure": "18af172ff167a02df9c91fa0351d30c63c1021771a52067d8138e2bc872f531e",
+    "delta": "998b1a350de2fff7d5bf355c2c14e7daf5dd51f4f39479acc283970a1f634a96"
+  },
+  "machineGates": {
+    "sourceUnits": "3547/3547",
+    "missing": 0,
+    "extra": 0,
+    "tokenErrors": 0,
+    "layoutErrors": 0,
+    "runtimeExactErrors": 0,
+    "byteIdenticalOverlayRebuild": true,
+    "byteIdenticalEvidenceRebuild": true,
+    "remainingNeedsReview": "11 classified source/development placeholders"
+  },
+  "notRun": [
+    "runtime QA",
+    "visual QA",
+    "game launch",
+    "installer launch"
+  ]
+}

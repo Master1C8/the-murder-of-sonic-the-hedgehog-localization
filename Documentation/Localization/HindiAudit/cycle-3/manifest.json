@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "locale": "hi",
+  "cycle": 3,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "40c1826719e6d2ef30127c7898a29dd283eef83d23cc93c4ab0c520efeae697e",
+    "overlay": "7afd8190e04275acbd76d6c2f98a0d31bf1cab3a59c2988c58ec7c5248ccd402",
+    "images": "b866cfff85a77dc179ee013de86af29c109306649c1c495c793c6837a77eebc4"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "554def96983190cd0ebf6fc8bf8cb0cd5e979fea11f5480ab5da08ac16f711ec"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 222,
+      "sha256": "c833315ec1cf50e72edd245aad1a5b22d84e13e9422c1615264e840a32ca6887"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 362,
+      "sha256": "c931ae7485db57db427f32af5dbdf22a708e20bd8c88ef504e22cc969ed50ddb"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 15,
+      "sha256": "b086786ab5a5315c00886707f6a9bf7dc8ffd254975cc65c7013324baff69a20"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 221,
+      "sha256": "0b7dd40bca3b68a3dabfe5c88cd8307139da4f09077d19facdaac2b0e2286f7c"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1528,
+      "sha256": "9fe9af0756fcc4bc30051def3f12ced500b66b64e400c095f9d9e08c66baa482"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 9,
+      "sha256": "6a79a3cd7091d9675347d75b81b561daa06ad494939118800d62ec2157667f43"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1528,
+    "sha256": "77eaaa17d2c7a61b2c6249ec135e1f8bcea88d197305a62b347120962d99b801"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "8f47e1688b466c39e159eef526e101331f55f7ffa2644d101c5acf8d0373c129"
+  },
+  "correctedIds": [
+    "ink:root[2].Prologue[1].Environment_Blaze_Interaction_1[8]",
+    "ink:root[2].Library[4].FirstVisit[0][74].g-0[57]",
+    "ink:root[2].Casino[5].Start_Whiteboarding[0]",
+    "ink:root[2].Lounge[108].Minigame_Midpoint2[9][8].b[3]",
+    "ink:root[2].Final_Push[35].Final_Boss_Interaction3[12]"
+  ],
+  "findingCount": 5,
+  "notes": [
+    "Cycle 3 corrects all five text findings from independent cycle 2.",
+    "Cycle 2 confirmed the prior 40 text corrections and all dynamic joins clean.",
+    "Train uses masculine or neutralized agreement according to the Hindi glossary; Barry remains male.",
+    "The malformed source token <style=\"Italics> remains byte-exact.",
+    "Runtime and visual QA were not run."
+  ]
+}

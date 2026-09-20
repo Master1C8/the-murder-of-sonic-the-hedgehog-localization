@@ -1,0 +1,35 @@
+{
+  "locale": "es-419",
+  "cycle": 3,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 6,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Prologue[1].Environment_Rouge_Interaction_1[21]",
+    "ink:root[2].Lounge[108].Enter_Interrogation_Mode[50]",
+    "ink:root[2].Final_Push[35].Finale_Start[87]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt5[0][31].c-2[1]",
+    "ink:root[2].SafeRoom[4].Opt16_Just_Wait[166]",
+    "ink:root[2].Saloon[4].Wanted_Poster[0][0]"
+  ],
+  "referentSearchTerms": [
+    "Barry",
+    "Rouge",
+    "Chao",
+    "Flicky",
+    "Omochao",
+    "hot tip",
+    "royal family",
+    "Conductor’s Wife"
+  ],
+  "previousClosure": "Documentation/Localization/LatinAmericanSpanishAudit/cycle-2/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 3 applies the six remaining register, referent, terminology and gender-neutrality corrections from Cycle 2.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

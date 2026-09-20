@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "locale": "es",
+  "cycle": 10,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "392fe899e85a5900c4780ad7cb460bba7353a1a344a5b45be6ff0dc5610c3bd2",
+    "overlay": "ddb198ee058e012efe2875d5564b041f561d888509c3b93df1cc9f047706a708",
+    "images": "f2bed582ca9166d9c17272577017921c86b0cf40e6a45e295c62c2be1595c7e4"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "b4cd44a21223dc3df42c0c0c4f81552b02222913e0a383fe878970aaeb8c5dff"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 78,
+      "sha256": "8d00342cc7dfe9f1ff90bb22bb41ff55fd2ea51ae98c668e75537f7b53fa7a77"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 112,
+      "sha256": "1011991bd29865f638d31f60578e144bd513b59725d8c7d2b931ea080eac9c29"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 57,
+      "sha256": "ed0aa3ab69a6cbab70f2e9e619041714f62a62516ef6748928ef71f7fd28ee15"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1137,
+      "sha256": "3fe40aad7856d3bd55d4f0a5673cd732977e06c3e907a3add4de70c1a30ce83c"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 8,
+      "sha256": "99350924d8d27a3455b32ba2402084341842f14b50ccbc3e6e46f5c06a8f67bd"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 3,
+      "sha256": "cecf88f8eeed44f01fc6a4dd9696fcacd06fce9b54f6af7a49603a3170f64b5f"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1137,
+    "sha256": "b5da7a4a9a8d114a70ac61055ba01fbad6f859cc9c2c87f3bd7036392986db75"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "d69a2cc87434b5b95fb54ced4eba1b34e71e33be06805fdab0c3d74d33aefc6b"
+  },
+  "correctedIds": [
+    "ink:root[2].Final_Push[35].Final_Boss_Interaction4[16]",
+    "ink:root[2].Final_Push[35].Final_Boss_Interaction4[38]"
+  ],
+  "findingCount": 2,
+  "notes": [
+    "Cycle 10 fixes the two remaining gendered Flicky references.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

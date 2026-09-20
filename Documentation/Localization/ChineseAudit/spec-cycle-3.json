@@ -1,0 +1,23 @@
+{
+  "locale": "zh",
+  "cycle": 3,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 1,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [],
+  "invalidatedIds": [
+    "ink:root[2].Conductor_Car[74].Confrontation_Start[61]",
+    "ink:root[2].Conductor_Car[74].Confrontation_Start[66]"
+  ],
+  "referentSearchTerms": ["Barry", "Chao", "Flicky", "Omochao", "Conductor's Wife"],
+  "previousClosure": "Documentation/Localization/ChineseAudit/cycle-2/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 3 corrects evidence generation so invalidated dynamic dependencies are included in closure and review rows.",
+    "No translation text changed after Cycle 2; the dynamic join itself was already semantically correct.",
+    "Runtime and visual QA were not run."
+  ]
+}

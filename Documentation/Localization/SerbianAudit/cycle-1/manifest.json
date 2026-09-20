@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "locale": "sr",
+  "cycle": 1,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "0c34677d95eb81afaf3f183f2fcde390818d77676f9b0b802977a19f8052d1a9",
+    "overlay": "ba2b831c6a063cb766b8c93dd1b3fbe5be07c6cd80f7eaeafbddd4d929e1c77b",
+    "images": "428757eac179ba8dc0a3f6ad1be94c1c5c73956b9d241c8c31b2721423886709"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "365655ad26816a62f9f493c4f3d1cdd52d7104d08d3de21e99e9698140744c40"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 141,
+      "sha256": "922438ecf7a1b0a1f72698e8f2230e92294ffe6b7212c37421f62de84d61707e"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 221,
+      "sha256": "69a3cf363d7365d3d66e92199aa574cadc8425e91e1106c7ef110fa3f584d033"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 1,
+      "sha256": "3a76a8d2dd4128313b06f948e9db215b447de4011288e046cc17929c6c4e6ec8"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 76,
+      "sha256": "b3a95eed273efd6edc810b08f29bd4fb76a4fe8c88756bdd3f9cd7730596d1bf"
+    },
+    "invalidated-dependency-ids": {
+      "file": "invalidated-dependency-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1278,
+      "sha256": "7dd04890d9d017eceb5fb4ffe477a7528a5f018c5b31771da8c77e76f3981c9d"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1278,
+    "sha256": "b6c8b938100b4efbab9166b826c4dc8b2354b81735b9ff8c0425050aec441a57"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "506dfa1be5fa7b187c7e64fa789bb2c76d1ccbbcb95315d6da1823169c115503"
+  },
+  "correctedIds": [],
+  "findingCount": 145,
+  "notes": [
+    "Cycle 1 applies one exhaustive Serbian correction package: 141 manual IDs, one image-plan translation, and three Serbian glossary meanings.",
+    "Seven poem blocks were corrected while preserving markup; Serbian narrative remains Cyrillic and protected Latin tokens/names remain unchanged.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "locale": "ru",
+  "cycle": 2,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": null,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "unity:level0:1538:m_text",
+    "ink:root[2].Name_Entry[20].Existing_Character_Name[0]",
+    "ink:root[2].DiningCloset[1].Closet_Conductor_Flashback[21]",
+    "ink:root[2].Saloon[4].Enter_Interrogation_Mode[15]",
+    "ink:root[2].Saloon[4].Interrogation_Part5[0][54].g-0[76]",
+    "ink:root[2].Prologue[1].Murder_Mystery_Rules[0][53].g-0[34]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt4[0][22]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt5[0][31].c-1[10]",
+    "ink:root[2].Casino[5].Return_To_Casino[15]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part4[144]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part6[79]",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation2[111]",
+    "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][91]",
+    "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][121]",
+    "ink:root[2].Final_Push[35].Finale_Start[75]"
+  ],
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "flicky",
+    "blowdart",
+    "blow dart",
+    "birthday key",
+    "ULTIM",
+    "Ultimate Life Form",
+    "Conductor’s Wife",
+    "library map",
+    "keyring",
+    "concert tickets"
+  ],
+  "previousClosure": "Documentation/Localization/RussianAudit/cycle-1/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 2 contains the exact corrections caused by independent cycle-1 findings plus newly added closure dependencies.",
+    "The save timestamp retains protected numeric tokens and replaces English PM with Cyrillic ПП.",
+    "Runtime and visual QA were not run."
+  ]
+}

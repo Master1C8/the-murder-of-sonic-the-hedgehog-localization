@@ -1,0 +1,41 @@
+{
+  "locale": "sr",
+  "cycle": 3,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 5,
+  "changedIds": [
+    "ink:root[2].SafeRoom[4].Return_To_Egg_Options[0][69]",
+    "ink:root[2].SafeRoom[4].Return_To_Egg_Options[0][93]",
+    "ink:root[2].Conductor_Car[74].Blowdart[39]",
+    "inventory:blowdart:Name",
+    "inventory:blowdart:Description"
+  ],
+  "correctedIds": [
+    "ink:root[2].SafeRoom[4].Return_To_Egg_Options[0][69]",
+    "ink:root[2].SafeRoom[4].Return_To_Egg_Options[0][93]",
+    "ink:root[2].Conductor_Car[74].Blowdart[39]",
+    "inventory:blowdart:Name",
+    "inventory:blowdart:Description"
+  ],
+  "invalidatedIds": [
+    "ink:root[2].SafeRoom[4].Return_To_Egg_Options[0][69]",
+    "ink:root[2].SafeRoom[4].Return_To_Egg_Options[0][93]",
+    "ink:root[2].Conductor_Car[74].Blowdart[39]",
+    "inventory:blowdart:Name",
+    "inventory:blowdart:Description"
+  ],
+  "previousClosure": "Documentation/Localization/SerbianAudit/cycle-2/closure-ids.txt",
+  "referentSearchTerms": [
+    "Barry", "Chao", "Flicky", "Omochao", "blowdart", "egg", "dynamic name"
+  ],
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 3 applies the complete five-dependency residual package from the Cycle 2 independent audit: two SafeRoom choices and three blowdart references.",
+    "All corrected IDs are explicitly invalidated into closure and exact delta; image plans and glossary are unchanged.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral.",
+    "Runtime and visual QA were not run."
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "locale": "ru",
+  "game": "the-murder-of-sonic-the-hedgehog",
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "workflow": "Documentation/Localization/AUDIT_WORKFLOW.md",
+  "status": "editorially-accepted-cycle-3-clean",
+  "sourcePolicy": {
+    "semanticDecisionInputs": [
+      "English source corpus",
+      "canonical English/Russian glossary",
+      "scene and adjacent-line context",
+      "10 source PNGs"
+    ],
+    "nonEnglishLocaleComparisonUsed": false,
+    "ownerConfirmedFacts": [
+      "Barry is male",
+      "Train uses masculine grammatical agreement in Russian"
+    ]
+  },
+  "fingerprints": {
+    "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+    "sourceUnitsSha256": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "sourceCsvSha256": "10e1e0978c23fd6751fa4e57b8325eb9473dc8c01ed134367d87d6c882cb14f3",
+    "inventoryFileSha256": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "imageReviewSha256": "6328ff5e744949e5a368e54b053b2ad825098af93846005012a063943c7de749",
+    "candidateSetSha256": "0083d052c4058280700c4e3dac67360463bfc90f44228bff7c9b3e3a926c485b",
+    "glossarySourceNormalizedSha256": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryRussianNormalizedSha256": "0d2f4839c27d6e12e3c1dae50bf661d599e339f374c85929cbba76575fe1dcae",
+    "glossaryNormalization": "SHA-256 of UTF-8 JSON serialized with sorted keys, no insignificant whitespace, and Unicode preserved."
+  },
+  "baselineArtifactHashes": {
+    "manual": "69aeb2d598292b2b5af3305f75e8e14560b83f651a58a5a23b0e77479e51f18a",
+    "overlay": "0baf85f3e4a975fb4e68e5c95cd6b78d12e7d4783e48c683069d883920512313",
+    "images": "5b47d240dd37d4d4f2f561353bf0a911e6cc4c16a46ad7e1ae0c92b9025c3d98"
+  },
+  "artifactHashes": {
+    "manual": "81ad91349914d75d988f24598e1cb204cf6d02edc9bda23eb922999f14771935",
+    "overlay": "2a10120b5412fd627045a5bf137774287dba4048c5a2b713fe102f70df038be2",
+    "images": "efdd119e60caf530a1235dc86ea94278fa6b042b819bcdd8068b3292427c855e"
+  },
+  "semanticCoverage": {
+    "sourceUnitsRead": 3547,
+    "sourceUnitTotal": 3547,
+    "sourceArrayIndicesInclusive": "0-3546 across all 29 pinned batches",
+    "imagePlansRead": 10,
+    "imagePlanTotal": 10,
+    "semanticPasses": 1,
+    "complete": true
+  },
+  "findings": {
+    "scope": "primary semantic pass before independent review cycles",
+    "confirmedFindingCount": 84,
+    "resolvedTextFindingCount": 82,
+    "resolvedImagePlanFindingCount": 2,
+    "changedUnitCount": 82,
+    "changedImagePlanCount": 2,
+    "classes": [
+      "meaning and agency",
+      "character gender and agreement",
+      "unknown or ambiguous referent gender",
+      "grammar and naturalness",
+      "humor and wordplay",
+      "terminology and glossary consistency",
+      "UI and source placeholders",
+      "cross-media puzzle continuity"
+    ],
+    "changedUnitIds": [
+      "ink:root[2].Break_Out[0]",
+      "unity:defaultgroup:-8175671475903951018:m_text",
+      "unity:level0:1482:m_text",
+      "unity:level0:1488:m_text",
+      "ink:root[2].Prologue[1].Gang_Shows_Up[0][40]",
+      "ink:root[2].Prologue[1].Gang_Shows_Up[0][110].g-0[23]",
+      "unity:level0:1511:m_text",
+      "unity:level0:1512:m_text",
+      "unity:level0:1513:m_text",
+      "unity:level0:1524:m_text",
+      "unity:level0:1526:m_text",
+      "unity:level0:1528:m_text",
+      "unity:level0:1530:m_text",
+      "unity:level0:1544:m_text",
+      "unity:level0:1555:m_text",
+      "unity:defaultgroup:-3387687448645955321:m_text",
+      "unity:defaultgroup:2020191276367188231:m_text",
+      "ink:root[2].Name_Entry[20].Existing_Character_Name[0]",
+      "ink:root[2].NoKnot[0][0][0]",
+      "ink:root[2].Saloon[4].Talk_To_Knuckles[0][14]",
+      "ink:root[2].Saloon[4].Arcade_Incorrect_Choice[3]",
+      "ink:root[2].Saloon[4].Interrogation_Part5[0][38]",
+      "ink:root[2].Saloon[4].Interrogation_Part5[0][54].g-0[7]",
+      "ink:root[2].Library[4].FirstVisit[0][74].g-0[27]",
+      "ink:root[2].Library[4].FirstVisit[0][74].g-0[78].c-3[1]",
+      "ink:root[2].Library[4].FirstVisit[0][74].g-0[78].c-3[4]",
+      "ink:root[2].Library[4].Vector_Espio_Train_Map_Explanation[49]",
+      "ink:root[2].Library[4].Environment_Vector_Post_Investigation[0]",
+      "ink:root[2].Library[4].Interrogation_Part6_LibraryMap[0]",
+      "ink:root[2].Library[4].Correct_Library_Element[43]",
+      "ink:root[2].Casino[5].FirstVisit[0][41]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt1[0][26].c-2[1]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt1[0][26].c-2[11]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt1[0][26].c-2[14]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt2[0][26].c-0[1]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt3[0][19]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt4[0][10]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt4[0][22]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt4[0][26].c-0[4]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt4[0][26].c-1[3]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt4[0][26].c-1[6]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt4[0][26].c-2[9]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt5[0][31].c-1[4]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt5[0][31].c-1[7]",
+      "ink:root[2].Casino[5].Heist_Planning_Pt7[0][26].c-1[1]",
+      "ink:root[2].Casino[5].Return_To_Casino[50]",
+      "ink:root[2].Conductor_Car[74].Environment_Amy_Start_Confrontation[0][28]",
+      "ink:root[2].Conductor_Car[74].Dead_Sonic[203]",
+      "ink:root[2].Conductor_Car[74].Interrogation_Part2[0][23]",
+      "ink:root[2].Conductor_Car[74].Interrogation_Part2[0][28]",
+      "ink:root[2].Conductor_Car[74].Interrogation_Part2[0][50].g-0[111]",
+      "ink:root[2].Conductor_Car[74].Interrogation_Part3[0][84].g-0[16]",
+      "ink:root[2].Conductor_Car[74].Interrogation_Part3[0][84].g-0[24]",
+      "ink:root[2].Conductor_Car[74].Interrogation_Part4[50]",
+      "ink:root[2].Conductor_Car[74].Sonic_Explanation1[180]",
+      "ink:root[2].Conductor_Car[74].Sonic_Explanation2[84]",
+      "ink:root[2].Conductor_Car[74].Sonic_Explanation2[111]",
+      "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][84]",
+      "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][91]",
+      "ink:root[2].Conductor_Car[74].Enter_Lockdown_Mode[67]",
+      "ink:root[2].Conductor_Car[74].Trash_Bin2[60]",
+      "ink:root[2].Final_Push[35].Final_Boss_Interaction5[0]",
+      "ink:root[2].Final_Push[35].Train_Endgame[245]",
+      "ink:root[2].Final_Push[35].Finale_Start[69]",
+      "ink:root[2].Final_Push[35].Finale_Start[77]",
+      "ink:root[2].Final_Push[35].Finale_Start[87]",
+      "ink:root[2].Final_Push[35].Finale_Start[90]",
+      "ink:root[2].Final_Push[35].Finale_Start[101]",
+      "ink:root[2].Final_Push[35].Finale_Start[116]",
+      "ink:root[2].Final_Push[35].Ending1_For_Non_Completionists[38]",
+      "ink:root[2].Final_Push[35].Ending1_For_Non_Completionists[41]",
+      "ink:root[2].Lounge[108].Interrogation_Part2[0][17].g-0[49]",
+      "ink:root[2].Lounge[108].Minigame_Midpoint2[9][8].b[56]",
+      "ink:root[2].Lounge[108].Interrogation_Part4[0][14].c-0[6]",
+      "ink:root[2].Lounge[108].Interrogation_Part5_End[64]",
+      "ink:root[2].Lounge[108].Keyring[8]",
+      "ink:root[2].SafeRoom[4].Giant_Safe[21]",
+      "ink:root[2].Lounge[108].Enter_Interrogation_Mode[81]",
+      "ink:root[2].Lounge[108].Enter_Interrogation_Mode[85]",
+      "ink:root[2].Lounge[108].Enter_Interrogation_Mode[107]",
+      "ink:root[2].Lounge[108].Enter_Interrogation_Mode[112]",
+      "ink:root[2].Lounge[108].Minigame_Midpoint1[10][8].b[8]"
+    ],
+    "changedImagePaths": [
+      "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/Menu with chilidog.png",
+      "Assets/ChooChooBooBoo/ArtAssets/CloseUps/1-Saloon/PROP_FixedArcadeWithHighScore_V02.png"
+    ]
+  },
+  "dependencyClosure": {
+    "construction": "Every changed unit; directly paired dynamic-name fragments; all same-scene context needed to resolve speaker, referent, or joke; all repeated Barry, Flicky, Chao guard, blowdart, birthday-key, and ULTIM/Absolute Life Form usages; both changed image plans; mandatory regression surfaces. The complete 3,547-unit semantic pass remains the outer evidence.",
+    "textUnitCount": 82,
+    "imagePlanCount": 2,
+    "selfReview": "complete-clean",
+    "independentReview": "cycle 1 not clean; cycle 2 not clean; all findings corrected; cycle 3 clean on frozen hashes"
+  },
+  "independentDiffAudit": {
+    "status": "cycle-3-clean",
+    "cycle1FindingCount": 15,
+    "cycle2FindingCount": 4,
+    "cycle3FindingCount": 0,
+    "resolvedFindingCount": 19,
+    "reviewedChangedUnitCount": 95,
+    "manualSha256": "81ad91349914d75d988f24598e1cb204cf6d02edc9bda23eb922999f14771935",
+    "overlaySha256": "2a10120b5412fd627045a5bf137774287dba4048c5a2b713fe102f70df038be2",
+    "imagesSha256": "efdd119e60caf530a1235dc86ea94278fa6b042b819bcdd8068b3292427c855e"
+  },
+  "evidenceCycles": [
+    {
+      "cycle": 1,
+      "manifest": "Documentation/Localization/RussianAudit/cycle-1/manifest.json",
+      "closureCount": 1209,
+      "result": "not-clean"
+    },
+    {
+      "cycle": 2,
+      "manifest": "Documentation/Localization/RussianAudit/cycle-2/manifest.json",
+      "deltaReviewCount": 26,
+      "result": "not-clean"
+    },
+    {
+      "cycle": 3,
+      "manifest": "Documentation/Localization/RussianAudit/cycle-3/manifest.json",
+      "review": "Documentation/Localization/RussianAudit/cycle-3-review.json",
+      "closureCount": 1232,
+      "deltaReviewCount": 12,
+      "result": "clean"
+    }
+  ],
+  "mandatoryRegression": {
+    "genderAndAgreement": "complete; Barry male; all known-gender speakers and references reviewed; Train masculine grammar retained",
+    "unknownAndAmbiguous": "complete; avoidable gender markers removed for the Chao guard, Amy's anonymous source, dynamic entered names, and Flicky",
+    "rings": "reviewed",
+    "saveLoad": "reviewed",
+    "environments": "reviewed",
+    "establishingShotTitles": "reviewed",
+    "speakerLabels": "reviewed; five Conductor’s Wife:: prefixes remain byte-exact",
+    "imagePlans": "10/10 reviewed; menu wording and arcade clue plan corrected"
+  },
+  "sourcePlaceholders": {
+    "classification": "reviewed source-authored Unity placeholders; not missing localization",
+    "count": 11,
+    "ids": [
+      "unity:level0:1485:m_text",
+      "unity:level0:1490:m_text",
+      "unity:level0:1511:m_text",
+      "unity:level0:1512:m_text",
+      "unity:level0:1513:m_text",
+      "unity:level0:1524:m_text",
+      "unity:level0:1526:m_text",
+      "unity:level0:1528:m_text",
+      "unity:level0:1530:m_text",
+      "unity:level0:1544:m_text",
+      "unity:level0:1555:m_text"
+    ]
+  },
+  "validation": {
+    "sourceValidation": "passed: 3,547 units, 29 batches, 3,547 CSV rows, 72 images, 10 text-bearing candidates",
+    "overlayAllowIncomplete": "passed: 3,547/3,547, zero missing/extra/token/layout/runtimeExact errors",
+    "overlayStrict": "expected non-accepting result solely because 11 reviewed source placeholders remain in needsReview",
+    "byteIdenticalOverlayRebuild": "passed",
+    "pythonTests": "12 passed",
+    "swiftFakeFolderTests": "10 passed using temporary fake game folders"
+  },
+  "notRun": {
+    "gameLaunch": true,
+    "installerLaunch": true,
+    "installedGameMutation": true,
+    "runtimeQa": true,
+    "visualQa": true
+  },
+  "modelUsage": {
+    "model": "Codex (GPT-5)",
+    "reasoningLevel": "high",
+    "measuredUsageAvailable": false
+  },
+  "nextAction": "Editorial audit is complete. Runtime and visual QA remain separate and were not run; do not mark payloadReady until all 30 locales and payload files are final."
+}

@@ -1,0 +1,32 @@
+{
+  "locale": "he",
+  "cycle": 5,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 3,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Final_Push[35].Finale_Start[65]",
+    "ink:root[2].Final_Push[35].Finale_Start[67]",
+    "ink:root[2].LockdownDiningCar[1].Eggman_Appears[0][56].g-0[121]"
+  ],
+  "referentSearchTerms": [
+    "Barry",
+    "Chao",
+    "Flicky",
+    "Omochao",
+    "Conductor’s Wife",
+    "The Train",
+    "retirement"
+  ],
+  "previousClosure": "Documentation/Localization/HebrewAudit/cycle-4/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 5 corrects all three actionable text findings from independent cycle 4.",
+    "The proposed canonical metadata change was not applied: Flicky, Chao, and Omochao are non-speaking entities in this game, their game-text usage is already neutral, the speaking-character male/female rule does not apply, and the one-use source-glossary amendment exception is consumed.",
+    "Personified Train remains masculine; ordinary lexical agreement for the physical train remains grammatical Hebrew.",
+    "Runtime and visual QA were not run."
+  ]
+}

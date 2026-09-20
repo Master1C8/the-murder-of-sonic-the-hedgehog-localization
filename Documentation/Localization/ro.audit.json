@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "locale": "ro",
+  "game": "the-murder-of-sonic-the-hedgehog",
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "workflow": "Documentation/Localization/AUDIT_WORKFLOW.md",
+  "status": "editorially-accepted-cycle-3-clean",
+  "sourcePolicy": {
+    "semanticDecisionInputs": ["English source corpus", "canonical English/Romanian glossary", "scene and adjacent-line context", "10 source PNGs"],
+    "nonEnglishLocaleComparisonUsed": false,
+    "ownerConfirmedFacts": ["Barry is male"],
+    "canonicalMetadataDecision": "Chao, Flicky and Omochao remain grammatically neutral where canonical gender is unknown."
+  },
+  "fingerprints": {
+    "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+    "sourceUnitsSha256": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventoryFileSha256": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalizedSha256": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryRomanianNormalizedSha256": "7913c0f1636a8b36a3908e46e1543418b707fab00960593eb708abee08b0f264"
+  },
+  "artifactHashes": {
+    "manual": "d8b9fed331f2f2bfa248d5b52a376691114c88df7d865fca98d7f9c018836574",
+    "overlay": "529513feb83d251c52a50ae33ce2ece4720fd66cb65d443a4d07afacce8f40bd",
+    "images": "5e7a15e2003fd528eb6fc82067c50db723ad1bb01b7545a0b1bd5ef5cf22b178"
+  },
+  "semanticCoverage": {
+    "sourceUnitsRead": 3547, "sourceUnitTotal": 3547,
+    "glossaryEntriesRead": 117, "glossaryEntryTotal": 117,
+    "imagePlansRead": 10, "imagePlanTotal": 10, "complete": true
+  },
+  "independentDiffAudit": {
+    "status": "cycle-3-clean",
+    "cycleFindingCounts": [119, 17, 11],
+    "finalClosureCount": 1087,
+    "finalDeltaReviewCount": 21
+  },
+  "evidenceCycles": [
+    {"cycle": 1, "manifest": "Documentation/Localization/RomanianAudit/cycle-1/manifest.json", "result": "not-clean"},
+    {"cycle": 2, "manifest": "Documentation/Localization/RomanianAudit/cycle-2/manifest.json", "result": "not-clean"},
+    {"cycle": 3, "manifest": "Documentation/Localization/RomanianAudit/cycle-3/manifest.json", "closureCount": 1087, "deltaReviewCount": 21, "result": "clean"}
+  ],
+  "mandatoryRegression": {
+    "genderAndAgreement": "complete; Barry male and all known-gender references reviewed",
+    "unknownAndAmbiguous": "complete; Chao, Flicky and Omochao remain neutral where canonical gender is unknown",
+    "saveLoadAndEnvironment": "reviewed; protected tokens preserved",
+    "speakerLabels": "reviewed; runtime-exact controls preserved",
+    "dynamicJoins": "reviewed; second-person joins and paired fragments are clean",
+    "imagePlans": "10/10 reviewed"
+  },
+  "sourcePlaceholders": {
+    "classification": "reviewed source-authored Unity placeholders; not missing localization",
+    "count": 11,
+    "ids": [
+      "unity:level0:1485:m_text", "unity:level0:1490:m_text", "unity:level0:1511:m_text",
+      "unity:level0:1512:m_text", "unity:level0:1513:m_text", "unity:level0:1524:m_text",
+      "unity:level0:1526:m_text", "unity:level0:1528:m_text", "unity:level0:1530:m_text",
+      "unity:level0:1544:m_text", "unity:level0:1555:m_text"
+    ]
+  },
+  "validation": {
+    "overlay": "passed: 3547/3547, zero missing/extra/token/layout/runtimeExact errors",
+    "byteIdenticalOverlayRebuild": "passed",
+    "byteIdenticalEvidenceRebuild": "passed",
+    "localizationTests": "12/12 passed",
+    "swiftTests": "10/10 passed",
+    "glossaryTests": "39/39 passed"
+  },
+  "notRun": {
+    "gameLaunch": true, "installerLaunch": true, "installedGameMutation": true,
+    "runtimeQa": true, "visualQa": true
+  },
+  "nextAction": "Editorial audit is complete. Runtime and visual QA remain separate and were not run; do not mark payloadReady until all 30 locales and payload files are final."
+}

@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "locale": "pl",
+  "cycle": 8,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "2585e4870e7634d70b2c82232d7fd2488e800b3f5b405031a9fe974410318c8d",
+    "overlay": "2da3b07353a849881056ade54ccf6a00d958f4e5e7b1bd7cccb7b123cab54090",
+    "images": "b8021bd11c5b0a5658c2bc99f66264971a4c509dc9c6139a736fd4b73e174877"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "b62b8b573a3b63a601a4d2b359078b9ea4800aa617c227737710921bb8b20f33"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 213,
+      "sha256": "45bfab1030bbc6ece2990749a1e75b7fe5345e331eccdec37abdee486caa0f38"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 312,
+      "sha256": "39dede5f4ae1408663c0242abbd2f35adc16a2a2fb26f28615294b30e0f677ab"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 1,
+      "sha256": "c1f45088f81542b739bfcfea2cc3896ab7566921de045e6981364a8981f10960"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 184,
+      "sha256": "7e395b6c5188ab0ead18f4475595a9b6a5905a11a1ee4d66245bb1c2396f11c0"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1462,
+      "sha256": "f49da34696bd97ad137f40f03d0a81b0e500eae9c176ff074b395305856787cf"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 66,
+      "sha256": "6fad9f4aa62eaa0710e2a9f19a1f7eefbcb7a869fb72c28014228af9e2c9f5b4"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1462,
+    "sha256": "1539772e924dbe79a4b569e5c92a299c0b711c6a5a592e9e9335073c83f557c8"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "5a442a1f3fa12f95e6fc9972b70824ba0961eb827bcab170800bf6969c6de66b"
+  },
+  "correctedIds": [
+    "ink:root[2].Prologue[1].Murder_Mystery_Rules[0][53].g-0[34]",
+    "ink:root[2].Library[4].Interrogation_Part4[0][53]"
+  ],
+  "findingCount": 2,
+  "notes": [
+    "Cycle 8 corrects both text findings from independent cycle 7.",
+    "Flicky remains grammatically neutral and is the explicit subject of the decision to join Eggman.",
+    "Espio line now preserves the speaker's desire rather than changing it into permission.",
+    "Cycle 7 confirmed image plans, runtime-exact prefixes, timestamp, glossary, and mandatory regressions clean.",
+    "Runtime and visual QA were not run."
+  ]
+}

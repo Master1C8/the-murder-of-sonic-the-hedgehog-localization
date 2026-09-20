@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "locale": "sr",
+  "cycle": 2,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "a034a70fa23366ee50341b165d930d9333183fccdf2571d9be01536722b7b152",
+    "overlay": "b1a5cc3ed2bbbeac7b2045bd4820fce8bc6ff3b42204c94d36cb7d36e2d37f89",
+    "images": "428757eac179ba8dc0a3f6ad1be94c1c5c73956b9d241c8c31b2721423886709"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "bafdbf06a13c8681081cfb5220044a50a40b52e2cf87714cefbf0279f14e4d4d"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 46,
+      "sha256": "8f35dfa27dd546d6f5f8a00f6a41a2084448e0e3446002b0b6847bc85293db10"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 83,
+      "sha256": "411c254f02475cbf54a3d30a4bb056f3a507843fe17e45beb32a74fbe543754f"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 61,
+      "sha256": "f1ae2d9a659e7cfbcfb0f31a81541c61030b7c90edcc9ef51fc3347492a094e5"
+    },
+    "invalidated-dependency-ids": {
+      "file": "invalidated-dependency-ids.txt",
+      "count": 46,
+      "sha256": "8f35dfa27dd546d6f5f8a00f6a41a2084448e0e3446002b0b6847bc85293db10"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1144,
+      "sha256": "297479c2d26411e67c6d4bacff714b7c050e04de9b3ce520a32558aff9955a9b"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 87,
+      "sha256": "521eda3af8d300bfe99b3927f3e376b3ece8eaa7f98bd1ce0396ad4f0acace8e"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 183,
+      "sha256": "159e211e868b4e389f72970e8254ad64e4774a0112036f17c41133eb93796651"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1144,
+    "sha256": "890d02dde06340cdce0357e80f32fc994ed3ec22301e2b0f19e30514a4c79a4a"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "506dfa1be5fa7b187c7e64fa789bb2c76d1ccbbcb95315d6da1823169c115503"
+  },
+  "correctedIds": [
+    "ink:root[2].Environment_Tails2[18]",
+    "ink:root[2].Environment_Tails2[23]",
+    "ink:root[2].Saloon[4].FirstVisit[0][36].g-0[14]",
+    "ink:root[2].Saloon[4].Minigame_Midpoint3[2][1].b[1]",
+    "ink:root[2].Saloon[4].Wanted_Poster[0][0]",
+    "ink:root[2].Prologue[1].FirstVisit[0][28]",
+    "ink:root[2].Prologue[1].Conductor_Info_Dump[0][35].c-0[1]",
+    "ink:root[2].Prologue[1].Gang_Shows_Up[0][110].g-0[23]",
+    "ink:root[2].Prologue[1].Robotic_Arm[23]",
+    "ink:root[2].Prologue[1].Robotic_Arm[28]",
+    "ink:root[2].Prologue[1].Environment_Shadow_Interaction_1[34]",
+    "ink:root[2].Prologue[1].Story_Continues[32]",
+    "ink:root[2].Library[4].Talk_To_Espio[0][18].c-0[8]",
+    "ink:root[2].Library[4].Give_Espio_Item[10]",
+    "ink:root[2].Library[4].Enter_Interrogation_Mode[47]",
+    "ink:root[2].Library[4].Interrogation_Part2[0][0]",
+    "ink:root[2].Library[4].Interrogation_Part4[0][0]",
+    "ink:root[2].Library[4].Interrogation_Part7_End[45]",
+    "ink:root[2].Casino[5].FirstVisit[0][44]",
+    "ink:root[2].Casino[5].FirstVisit[0][163].c-0[1]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt5[0][31].c-2[1]",
+    "ink:root[2].Lounge[108].Talk_To_Amy[0][25]",
+    "ink:root[2].Lounge[108].Robotic_Arm[0][24].c-1[5]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part4[8]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part4[50]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part4[64]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part6[23]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part6[79]",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation1[39]",
+    "ink:root[2].Conductor_Car[74].Sonic_Explanation2[0]",
+    "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][94]",
+    "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][121]",
+    "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][137]",
+    "ink:root[2].Conductor_Car[74].Gang_Reacts_To_Reveal[0][175]",
+    "ink:root[2].Conductor_Car[74].Trash_Bin1[8]",
+    "ink:root[2].Conductor_Car[74].Blowdart[4]",
+    "ink:root[2].Final_Push[35].Finale_Start[75]",
+    "ink:root[2].Final_Push[35].Finale_Start[101]",
+    "ink:root[2].Final_Push[35].Ending1_For_Non_Completionists[35]",
+    "ink:root[2].SafeRoom[4].Opt13_Chaos_Control[0]",
+    "ink:root[2].SafeRoom[4].Opt13_Chaos_Control[3]",
+    "ink:root[2].SafeRoom[4].Opt16_Just_Wait[2]",
+    "ink:root[2].SafeRoom[4].Return_To_Egg_Options[0][75]",
+    "ink:root[2].SafeRoom[4].Return_To_Egg_Options[0][87]",
+    "ink:root[2].DiningCloset[1].Wet_Floor_Sign[0]",
+    "unity:defaultgroup:-2297970105022902009:m_text"
+  ],
+  "findingCount": 48,
+  "notes": [
+    "Cycle 2 applies the complete independent-audit residual package: 46 manual IDs and two Serbian glossary dependencies.",
+    "All 13 blowdart occurrences, dynamic joins, three poems, known-male agreement, neutral Chao/Flicky, Cyrillic policy, SafeRoom choices, Chaos terms, and remaining semantic defects are included.",
+    "All corrected manual IDs are explicitly invalidated into closure and exact delta; image plans are unchanged from Cycle 1.",
+    "Runtime and visual QA were not run."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "locale": "ru",
+  "cycle": 3,
+  "reviewType": "independent-delta-audit",
+  "status": "clean",
+  "reviewedDeltaIds": 12,
+  "reviewedImagePlans": 10,
+  "saveLoadAndEnvironmentDisplayIds": 11,
+  "findingCount": 0,
+  "artifactHashes": {
+    "manual": "81ad91349914d75d988f24598e1cb204cf6d02edc9bda23eb922999f14771935",
+    "overlay": "2a10120b5412fd627045a5bf137774287dba4048c5a2b713fe102f70df038be2",
+    "images": "efdd119e60caf530a1235dc86ea94278fa6b042b819bcdd8068b3292427c855e"
+  },
+  "machineGates": {
+    "sourceUnits": "3547/3547",
+    "missing": 0,
+    "extra": 0,
+    "tokenErrors": 0,
+    "layoutErrors": 0,
+    "runtimeExactErrors": 0,
+    "byteIdenticalOverlayRebuild": true,
+    "pythonTests": "12/12 passed",
+    "strictValidator": "expected failure only for 11 classified source placeholders"
+  },
+  "notRun": [
+    "runtime QA",
+    "visual QA",
+    "game launch",
+    "installer launch"
+  ]
+}

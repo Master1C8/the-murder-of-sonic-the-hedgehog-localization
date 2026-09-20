@@ -1,0 +1,44 @@
+{
+  "locale": "sw",
+  "cycle": 4,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 1,
+  "changedIds": [
+    "ink:root[2].Casino[5].Heist_Planning_Pt5[0][31].c-1[4]"
+  ],
+  "correctedIds": [
+    "ink:root[2].Casino[5].Heist_Planning_Pt5[0][31].c-1[4]"
+  ],
+  "invalidatedIds": [
+    "ink:root[2].Casino[5].Heist_Planning_Pt5[0][21]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt5[0][31].c-1[1]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt5[0][31].c-1[7]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt5[0][31].c-1[10]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt5[0][31].c-1[12]"
+  ],
+  "nonTranslatableDynamicDependencies": [
+    "ink:root[2].Saloon[4].Used_Cups[0][23]",
+    "ink:root[2].Prologue[1].FirstVisit[0][23]",
+    "ink:root[2].Library[4].FirstVisit[0][74].g-1[95]",
+    "ink:root[2].Library[4].Enter_Interrogation_Mode[16]",
+    "ink:root[2].Lounge[108].Minigame_Midpoint1[10][8].b[3]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part2[0][50].g-0[106]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part4[139]",
+    "ink:root[2].SafeRoom[4].Opt16_Just_Wait[20]"
+  ],
+  "previousClosure": "Documentation/Localization/SwahiliAudit/cycle-3/closure-ids.txt",
+  "referentSearchTerms": [
+    "Barry", "Chao", "Flicky", "Omochao", "msukumo", "dynamic name"
+  ],
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 4 applies the single objective residual correction for class-3 subject agreement with msukumo while preserving the animate Chao object marker.",
+    "Five unchanged direct dependencies from the same choice branch are explicitly invalidated into closure; the eight empty non-translatable Ink dependencies remain separately recorded.",
+    "Image plans and glossary are unchanged from Cycle 3.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral.",
+    "Runtime and visual QA were not run."
+  ]
+}

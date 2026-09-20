@@ -1,0 +1,27 @@
+{
+  "locale": "es-419",
+  "cycle": 8,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 1,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].Library[4].FirstVisit[0][74].g-0[0]"
+  ],
+  "referentSearchTerms": [
+    "tip",
+    "hot tip",
+    "clue",
+    "scoop"
+  ],
+  "previousClosure": "Documentation/Localization/LatinAmericanSpanishAudit/cycle-7/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 8 separates the remaining journalistic tip usage from clue terminology.",
+    "The hyphenated sunk-cost dependency remains explicitly covered.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}

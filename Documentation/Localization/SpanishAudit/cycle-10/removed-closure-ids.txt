@@ -1,0 +1,3 @@
+ink:root[2].Prologue[1].Found_Vector_Ticket[32]
+ink:root[2].Library[4].Minigame_Midpoint1[1][8].b[27]
+ink:root[2].Casino[5].Play_The_Slots[2][6].b[1]

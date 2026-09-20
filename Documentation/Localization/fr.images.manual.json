@@ -10,7 +10,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/0-Prologue/Menu with chilidog.png",
       "sourceText": "Menu\nChili Dog\nRamen\nChicken\nCordon Bleu",
-      "translation": "Menu\nHot-dog au chili\nRamen\nPoulet\nCordon bleu de poulet",
+      "translation": "Menu\nHot-dog au chili\nRamen\nPoulet\nfaçon cordon-bleu",
       "context": "Prologue / menu close-up",
       "glossaryIds": ["menu", "chili-dog", "chicken-cordon-bleu"],
       "status": "translated",
@@ -64,7 +64,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/4-Lounge/HotHoneyPrintout.png",
       "sourceText": "ticket town\nHOT HONEY\nFRI MAY 8\n9:00 PM\nSTAGE\nSEC 53 ROW P\nSEC 53 ROW P\nSEC 53 ROW R\nSEC 54 ROW R",
-      "translation": "ticket town\nHOT HONEY\nVEN. 8 MAI\n21:00\nSCÈNE\nSECT. 53 RANG P\nSECT. 53 RANG P\nSECT. 53 RANG R\nSECT. 54 RANG R",
+      "translation": "ticket town\nHOT HONEY\nVEN. 8 MAI\n21:00\nSCÈNE\nSEC. 53 R. P\nSEC. 53 R. P\nSEC. 53 R. R\nSEC. 54 R. R",
       "context": "Lounge / Hot Honey ticket printout",
       "glossaryIds": ["hot-honey", "concert-tickets"],
       "status": "translated",
@@ -73,7 +73,7 @@
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/CloseUps/5-conductorcar/TypedNoteFromTrainToEspio.png",
       "sourceText": "Use this blowdart on Sonic,\nstationed in the conductor\ncar. It is laced with a\nnonlethal sleeping agent.\nThank you again for\nchoosing the Mirage Express.\n-Staff",
-      "translation": "Utilisez cette fléchette de sarbacane sur Sonic,\nposté dans la voiture du chef de train.\nElle est enduite d’un somnifère non létal.\nMerci encore d’avoir\nchoisi The Mirage Express.\n—Le personnel",
+      "translation": "Utilisez cette fléchette\nde sarbacane sur Sonic,\nposté dans la voiture du\nchef de train. Elle contient\nun somnifère non létal.\nMerci encore d’avoir choisi\nThe Mirage Express.\n— Le personnel",
       "context": "Conductor Car / typed note from train staff to Espio",
       "glossaryIds": ["blowdart", "the-conductor", "conductor-car", "nonlethal-sleeping-agent", "the-mirage-express", "train-note"],
       "status": "translated",
@@ -86,7 +86,7 @@
       "context": "Final Push / Eggman ending comic panel",
       "glossaryIds": [],
       "status": "translated",
-      "note": "Les deux légendes visibles sont traduites ; les petits éléments graphiques illisibles du PNG ne sont pas complétés."
+      "note": "La traduction de OFFLINE s’applique aux deux occurrences, sur l’écran central supérieur et sur l’écran de droite ; celle de LET'S GO DAD s’applique aux deux tee-shirts, celui de Sage et celui de Metal Sonic. Les petites étiquettes pseudo-textuelles des trois zones de diagrammes — écran de gauche, écran central gauche avec silhouette et écran central droit avec schéma — sont conservées exactement comme dans la source. Le PNG n’a pas été modifié."
     },
     {
       "sourcePath": "Assets/ChooChooBooBoo/ArtAssets/Comics/titlecard.png",

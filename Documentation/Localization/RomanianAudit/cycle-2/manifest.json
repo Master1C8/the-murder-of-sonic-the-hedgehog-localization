@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "locale": "ro",
+  "cycle": 2,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "80f37a1c2818a772d4637d5b00045cfc6ef405edc6f3d0ace07cd1e7db857e25",
+    "overlay": "3da5d0fd248cd511353f0d2868ea0409d2be87486e57d3a7b16d322a248861d7",
+    "images": "5e7a15e2003fd528eb6fc82067c50db723ad1bb01b7545a0b1bd5ef5cf22b178"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "7913c0f1636a8b36a3908e46e1543418b707fab00960593eb708abee08b0f264"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 42,
+      "sha256": "47c7bd4b8c4d4c8b8b56e3e688fd318b1a9c63a16c6b46695ab40c19ade7b849"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 71,
+      "sha256": "10533031a47facaf0f1b5df6222c70fbb7fb2521e8e7c36f96bcb8c2b2de302b"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 71,
+      "sha256": "09b19d86cf8fba26e58c1fe1ba63ee9923d3da05fab874331b4c4ac90568e61a"
+    },
+    "invalidated-dependency-ids": {
+      "file": "invalidated-dependency-ids.txt",
+      "count": 44,
+      "sha256": "71252254bbea1535f85ed05aba1f790da1ce9ab7d9b2384d4f84fcb94a31d08e"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1125,
+      "sha256": "0a98961c96b17ef0e97efb2128870d0cffeabcb00ca5018157ca4f78f5070dee"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 80,
+      "sha256": "3665b6cd67427687c3109d8d1443ee725c68766d6adf7d56d091f678e0a7cb16"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 214,
+      "sha256": "24063ae37e4f87877e6590fc7e57cb47a38385471c79dd04a2f1ff9d4977e829"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1125,
+    "sha256": "ab52978aaaf0ef8ffe264aecc8e28ca310089436871d193e1b6e4784a1779953"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "2007cfd531cb61c565f67d1620ee60600b5200b53399fd8237f1f1beaf8d5846"
+  },
+  "correctedIds": [
+    "ink:root[2].TestCar[6].WeBack[0]",
+    "ink:root[2].Prologue[1].FirstVisit[0][15]",
+    "ink:root[2].Prologue[1].Gang_Shows_Up[0][62]",
+    "ink:root[2].Prologue[1].Gang_Shows_Up[0][77]",
+    "ink:root[2].Prologue[1].Environment_Rouge_Interaction_1[0]",
+    "ink:root[2].Prologue[1].Environment_Rouge_Interaction_2[0][0]",
+    "ink:root[2].Prologue[1].Environment_Shadow_Interaction_1[34]",
+    "ink:root[2].Prologue[1].Story_Continues[43]",
+    "ink:root[2].Prologue[1].Story_Continues[48]",
+    "ink:root[2].Library[4].Vector_Espio_Train_Map_Explanation[26]",
+    "ink:root[2].Library[4].Vector_Espio_Train_Map_Explanation[32]",
+    "ink:root[2].Library[4].Vector_Espio_Train_Map_Explanation[44]",
+    "ink:root[2].Library[4].Vector_Espio_Train_Map_Explanation[89]",
+    "ink:root[2].Library[4].Vector_Espio_Train_Map_Explanation[93]",
+    "ink:root[2].Library[4].Interrogation_Part4[0][0]",
+    "ink:root[2].Library[4].Interrogation_Part4[0][17]",
+    "ink:root[2].Library[4].Interrogation_Part4[0][23]",
+    "ink:root[2].Library[4].Trash_Bin[35]",
+    "ink:root[2].Casino[5].FirstVisit[0][41]",
+    "ink:root[2].Casino[5].FirstVisit[0][114]",
+    "ink:root[2].Casino[5].Heist_Planning_Pt3[0][19]",
+    "ink:root[2].Casino[5].Environment_Rouge[0][18].c-1[15]",
+    "ink:root[2].Lounge[5]",
+    "ink:root[2].Lounge[108].Enter_Interrogation_Mode[61]",
+    "ink:root[2].Conductor_Car[74].Start_Interrogation[14]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part2[0][6]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part2[0][8]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part3[0][84].c-1[14]",
+    "ink:root[2].Final_Push[35].Finale_Start[75]",
+    "ink:root[2].Final_Push[35].Finale_Start[87]",
+    "ink:root[2].SafeRoom[4].Opt9_Tails_Cool[11]",
+    "ink:root[2].SafeRoom[4].Opt13_Chaos_Control[0]",
+    "ink:root[2].SafeRoom[4].Opt13_Chaos_Control[3]",
+    "ink:root[2].SafeRoom[4].Opt16_Just_Wait[2]",
+    "ink:root[2].SafeRoom[4].Return_To_Egg_Options[0][81]",
+    "ink:root[2].DiningCloset[0][51].g-0[55]",
+    "ink:root[2].DiningCloset[1].Closet_Conductor_Flashback[21]",
+    "inventory:hiddenpassage:Description",
+    "unity:defaultgroup:-2297970105022902009:m_text",
+    "unity:level0:1483:m_text",
+    "unity:level0:1486:m_text",
+    "unity:level0:1496:m_text"
+  ],
+  "findingCount": 17,
+  "notes": [
+    "Cycle 2 applies the complete 17-group residual package: 42 manual IDs, including all 18 lounge/saloon occurrences, four dynamic-join groups, Barry agreement, neutral Flicky phrasing, and the remaining semantic/terminology defects.",
+    "All changed join fragments plus the unchanged paired FirstVisit[10] and Gang_Shows_Up[82] fragments are explicitly invalidated into closure and delta review.",
+    "Glossary and image plans are unchanged from Cycle 1.",
+    "Runtime and visual QA were not run."
+  ]
+}

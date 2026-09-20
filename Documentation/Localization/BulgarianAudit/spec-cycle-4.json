@@ -1,0 +1,23 @@
+{
+  "locale": "bg",
+  "cycle": 4,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "findingCount": 1,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "ink:root[2].SafeRoom[4].Opt8_Blaze_Fire[5]"
+  ],
+  "referentSearchTerms": [
+    "Barry"
+  ],
+  "previousClosure": "Documentation/Localization/BulgarianAudit/cycle-3/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "Cycle 4 applies the one remaining dynamic-join punctuation correction from the independent cycle 3 audit.",
+    "Barry remains male.",
+    "Runtime and visual QA were not run."
+  ]
+}

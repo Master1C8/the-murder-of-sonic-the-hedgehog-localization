@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "locale": "es-419",
+  "cycle": 10,
+  "status": "pending-independent-delta-audit",
+  "result": null,
+  "reviewer": null,
+  "steamBuildId": "20535215",
+  "gameVersion": "1.01",
+  "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
+  "artifactHashes": {
+    "manual": "f4cd25e35d27478ff38aae9e949f621ab3f4cc59a30567196f6a7f6e28f7c774",
+    "overlay": "2bdec59dd5e9012877d579e7be64b1e5c0300d1b00353556f23397c6fd1b3247",
+    "images": "68b92691e4fbb91507923789b454c1c9108e577fc04a71bbd5e926c5e7de761d"
+  },
+  "inputHashes": {
+    "source": "16465099e8654bba74fb404379b84793baed4f42b8eabeedc3edbbc01a42b693",
+    "inventory": "bdba5350911226efb18cb6daf79e41342811dd37199db654a9b3799cb346a6f9",
+    "glossarySourceNormalized": "bf858d5323b293da182100752db802ccf143f29dc3e3d4119287a81bac7f9a67",
+    "glossaryLocaleNormalized": "3f089206e9fb27bd609fc80f7fc425ebc7b962048188bb4001c6761b3ae3d097"
+  },
+  "newlineConvention": "UTF-8; ID lists use LF after every ID including the final ID; JSONL uses one compact JSON object plus LF per row.",
+  "components": {
+    "changed-ids": {
+      "file": "changed-ids.txt",
+      "count": 6,
+      "sha256": "a4c918c73f9de76ff2e289c2101c59fd7f0b530cc3df0ef934a22b0be21c97bf"
+    },
+    "context-ids": {
+      "file": "context-ids.txt",
+      "count": 12,
+      "sha256": "fceb9fb7981fca728d3976277fd0ccbc13bde4fccf7c857e43f2490af6bbb05e"
+    },
+    "repetition-ids": {
+      "file": "repetition-ids.txt",
+      "count": 1,
+      "sha256": "551f43f10607ef1cc9f42039f8b9b9f1b38a7c40608da8418a4a052df5686178"
+    },
+    "glossary-referent-ids": {
+      "file": "glossary-referent-ids.txt",
+      "count": 47,
+      "sha256": "02e05e5bcd2d9b47dc121340ddd9925908104b57190e5e8fa5c384e49980c545"
+    },
+    "invalidated-dependency-ids": {
+      "file": "invalidated-dependency-ids.txt",
+      "count": 7,
+      "sha256": "54060c55aa1581814c36b187e0795f73048ebc2456d4b05eacaf08d6d6b6e0a4"
+    },
+    "runtime-binding-ids": {
+      "file": "runtime-binding-ids.txt",
+      "count": 34,
+      "sha256": "9b8ad2e44884613ab4a88ea7143a448667469f5faac9e22ac4541ca229899568"
+    },
+    "mandatory-regression-ids": {
+      "file": "mandatory-regression-ids.txt",
+      "count": 1034,
+      "sha256": "25ea4819ea9654d1c0abf8b42ba5d94e344f27b850eb03d4abce8ae18926630f"
+    },
+    "closure-ids": {
+      "file": "closure-ids.txt",
+      "count": 1077,
+      "sha256": "fadd5ce1a77068b8469de6d2f0a794a0c20f119ae4f71389a2fa048cfb45c29c"
+    },
+    "delta-review-ids": {
+      "file": "delta-review-ids.txt",
+      "count": 8,
+      "sha256": "6ffbec80df3ede0df050e38e727da2ed9b235e2380a4696dbc59670011cdb1dc"
+    },
+    "removed-closure-ids": {
+      "file": "removed-closure-ids.txt",
+      "count": 309,
+      "sha256": "b1a5a30c1e9c9b2e9697693529e314708ee5d47722a8e7d10c15f2bebabc60b0"
+    }
+  },
+  "reviewRows": {
+    "file": "review-rows.jsonl",
+    "count": 1077,
+    "sha256": "495fbd69059dac90eaecb6a6a0a9c709a6d959fa5cfd8352797e64ac9ada35cc"
+  },
+  "imageReviewRows": {
+    "file": "image-review-rows.json",
+    "count": 10,
+    "sha256": "9a53b9dd182266686b7e7eee938fc262e4fa0d704f43a1774658aa0f5bf8b4ce"
+  },
+  "correctedIds": [
+    "ink:root[2].Prologue[1].FirstVisit[0][28]",
+    "ink:root[2].Prologue[1].Environment_Shadow_Interaction_1[34]",
+    "ink:root[2].Library[4].Trash_Bin[35]",
+    "ink:root[2].Casino[5].Poker_Table[0][18].g-1[5]",
+    "ink:root[2].Conductor_Car[74].Interrogation_Part2[0][50].g-0[114]",
+    "ink:root[2].Conductor_Car[74].Vent[36]"
+  ],
+  "findingCount": 6,
+  "notes": [
+    "Cycle 10 fixes all six split-name reinsertion defects found by the Cycle 9 independent exact-delta audit.",
+    "Every corrected dynamic fragment and the paired Vent[41] fragment are explicitly invalidated into closure and delta review.",
+    "Barry remains male; Chao, Flicky and Omochao remain neutral where canonical gender is unknown.",
+    "Runtime and visual QA were not run."
+  ]
+}
