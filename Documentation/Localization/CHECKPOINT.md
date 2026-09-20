@@ -387,3 +387,20 @@
   tests, and static integrity checks for 30 locales and 185 payload artifacts.
   The signed arm64/x86_64 application was rebuilt; installed game files were
   not changed.
+
+## English installer interface — 2026-09-20
+
+- The installer shell now uses English for every title, status, prompt,
+  button, file-picker instruction, installation error, and package-validation
+  error, independently of the selected game locale.
+- Language choices intentionally retain their native names so users can
+  identify the target game language. The game localization payload and
+  texture scope are unchanged.
+- The payload builder's regenerated copy is also English, preventing a future
+  30-locale payload rebuild from restoring Russian installer messages.
+- Automated coverage compares packaged copy with the canonical English
+  fallback and rejects Cyrillic in all installer and configuration errors.
+- Final release audit passed 18 Python tests, 14 Swift fake-folder installer
+  tests, and integrity checks for 30 locales and 185 payload artifacts. The
+  signed universal arm64/x86_64 application was rebuilt without changing the
+  installed game or the localization payload.

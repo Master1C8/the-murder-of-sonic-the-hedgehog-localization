@@ -242,12 +242,14 @@ def main() -> int:
 
         config["payloadReady"] = True
         config["files"] = []
-        config["copy"]["installingTitle"] = "Установка локализации"
+        config["copy"]["installingTitle"] = "Installing Localization"
         config["copy"]["selectLanguageMessage"] = (
-            "В сборку входят 30 локализаций. Выберите язык, который нужно применить к игре."
+            "This build includes 30 localizations. Choose the language to apply to the game."
         )
-        config["copy"]["installingMessage"] = "Проверка и установка выбранной локализации VN Revival…"
-        config["copy"]["installedMessage"] = "Локализация установлена"
+        config["copy"]["installingMessage"] = (
+            "Verifying and installing the selected VN Revival localization…"
+        )
+        config["copy"]["installedMessage"] = "Localization installed"
 
         build_manifest = {
             "schemaVersion": 1,

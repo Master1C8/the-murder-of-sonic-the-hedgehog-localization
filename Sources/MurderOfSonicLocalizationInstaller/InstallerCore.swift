@@ -76,37 +76,37 @@ enum InstallerError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .invalidGameFolder:
-            "Steam-версия The Murder of Sonic the Hedgehog не найдена в выбранной папке."
+            "The Steam version of The Murder of Sonic the Hedgehog was not found in the selected folder."
         case .steamManifestMissing:
-            "Не найден Steam-манифест игры appmanifest_2324650.acf."
+            "The Steam game manifest appmanifest_2324650.acf was not found."
         case .wrongSteamApp(let value):
-            "Выбрана другая Steam-игра (App ID \(value))."
+            "The selected folder belongs to a different Steam game (App ID \(value))."
         case .unsupportedSteamBuild(let expected, let actual):
-            "Сборка Steam \(actual) не поддерживается. Ожидается сборка \(expected)."
+            "Steam build \(actual) is not supported. Expected build \(expected)."
         case .payloadNotReady:
-            "Полный пакет из 30 языков ещё не добавлен в эту сборку установщика."
+            "The complete 30-language package is not included in this installer build."
         case .invalidLanguageSelection(let value):
-            "Выбранный язык не входит в готовый пакет локализаций: \(value)."
+            "The selected language is not included in the completed localization package: \(value)."
         case .missingPayloadFile(let path):
-            "В приложении отсутствует файл языкового мультипатча: \(path)."
+            "A localization payload file is missing from the application: \(path)."
         case .payloadChecksumMismatch(let path):
-            "Контрольная сумма языкового мультипатча не совпала: \(path)."
+            "The localization payload checksum does not match: \(path)."
         case .unsupportedGameFile(let path):
-            "Версия игрового файла не поддерживается: \(path). Обновите игру в Steam."
+            "The game file version is not supported: \(path). Update the game in Steam."
         case .missingOriginalFile(let path):
-            "В установленной игре отсутствует обязательный файл: \(path)."
+            "A required file is missing from the installed game: \(path)."
         case .foreignModification(let path):
-            "Файл \(path) уже изменён другим патчем. Установщик не будет его перезаписывать."
+            "The file \(path) was modified by another patch. The installer will not overwrite it."
         case .damagedBackup(let path):
-            "Резервная копия оригинального файла повреждена: \(path)."
+            "The original-file backup is damaged: \(path)."
         case .unsafePath(let path):
-            "Небезопасный путь в пакете: \(path)."
+            "Unsafe path in the package: \(path)."
         case .malformedReceipt:
-            "Не удалось проверить данные предыдущей установки VN Revival."
+            "The previous VN Revival installation data could not be verified."
         case .deltaToolMissing:
-            "В приложении отсутствует инструмент применения языковых дельт."
+            "The localization delta tool is missing from the application."
         case .deltaApplicationFailed(let path):
-            "Не удалось восстановить локализованный файл из проверенной дельты: \(path)."
+            "The localized file could not be reconstructed from the verified delta: \(path)."
         }
     }
 }

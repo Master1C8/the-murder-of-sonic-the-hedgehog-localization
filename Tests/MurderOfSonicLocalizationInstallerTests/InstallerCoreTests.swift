@@ -26,6 +26,59 @@ struct InstallerCoreTests {
         #expect(config.files.isEmpty)
     }
 
+    @Test func installerInterfaceAndErrorsAreEnglish() throws {
+        let url = projectRoot().appendingPathComponent(
+            "Sources/MurderOfSonicLocalizationInstaller/Resources/PackageConfig.json"
+        )
+        let config = try PackageConfig.load(from: url)
+        #expect(config.copy == InstallerCopy.fallback)
+        let copyStrings = Mirror(reflecting: config.copy).children.compactMap {
+            $0.value as? String
+        }
+        #expect(copyStrings.count == 26)
+        #expect(copyStrings.allSatisfy { !containsCyrillic($0) })
+
+        let installerErrors: [InstallerError] = [
+            .invalidGameFolder,
+            .steamManifestMissing,
+            .wrongSteamApp("0"),
+            .unsupportedSteamBuild(expected: "20535215", actual: "0"),
+            .payloadNotReady,
+            .invalidLanguageSelection("xx"),
+            .missingPayloadFile("file"),
+            .payloadChecksumMismatch("file"),
+            .unsupportedGameFile("file"),
+            .missingOriginalFile("file"),
+            .foreignModification("file"),
+            .damagedBackup("file"),
+            .unsafePath("file"),
+            .malformedReceipt,
+            .deltaToolMissing,
+            .deltaApplicationFailed("file"),
+        ]
+        let configErrors: [PackageConfigError] = [
+            .unsupportedSchema(0),
+            .unsupportedSourceLocale("xx"),
+            .missingValue,
+            .invalidPackageID,
+            .duplicatePath,
+            .invalidLanguageSet,
+            .invalidLanguageMetadata,
+            .incompleteLanguages,
+            .emptyReadyPayload,
+            .unsafePath("file"),
+            .invalidHash("file"),
+            .invalidArtifactHash("file"),
+            .emptyArtifactChain("file"),
+            .deltaWithoutOriginal("file"),
+            .ambiguousArtifact("file"),
+        ]
+        let errorStrings = installerErrors.compactMap(\.errorDescription)
+            + configErrors.compactMap(\.errorDescription)
+        #expect(errorStrings.count == installerErrors.count + configErrors.count)
+        #expect(errorStrings.allSatisfy { !containsCyrillic($0) })
+    }
+
     @Test func rejectsTraversalAndMalformedReadyPayload() throws {
         var config = makeConfig(files: [PayloadFile(
             path: "../outside",
@@ -592,6 +645,12 @@ struct InstallerCoreTests {
 
     private func sha256(_ value: String) -> String {
         SHA256.hash(data: Data(value.utf8)).map { String(format: "%02x", $0) }.joined()
+    }
+
+    private func containsCyrillic(_ value: String) -> Bool {
+        value.unicodeScalars.contains { scalar in
+            (0x0400 ... 0x052F).contains(Int(scalar.value))
+        }
     }
 }
 

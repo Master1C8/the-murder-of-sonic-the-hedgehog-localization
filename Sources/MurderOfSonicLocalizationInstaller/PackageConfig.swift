@@ -228,21 +228,21 @@ enum PackageConfigError: LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .unsupportedSchema(let value): "Неподдерживаемая версия конфигурации: \(value)."
-        case .unsupportedSourceLocale(let value): "Неподдерживаемый язык оригинала: \(value)."
-        case .missingValue: "В конфигурации пакета отсутствует обязательное значение."
-        case .invalidPackageID: "Идентификатор пакета содержит недопустимые символы."
-        case .duplicatePath: "В конфигурации пакета повторяется путь файла."
-        case .invalidLanguageSet: "Мультипатч должен содержать все 30 локалей VN Revival."
-        case .invalidLanguageMetadata: "Коды или названия языков мультипатча некорректны."
-        case .incompleteLanguages: "Не все 30 языков мультипатча готовы к выпуску."
-        case .emptyReadyPayload: "Готовый пакет не может быть пустым."
-        case .unsafePath(let path): "Небезопасный путь в пакете: \(path)."
-        case .invalidHash(let path): "Некорректная контрольная сумма файла: \(path)."
-        case .invalidArtifactHash(let path): "Некорректная контрольная сумма дельты для файла: \(path)."
-        case .emptyArtifactChain(let path): "Пустая цепочка дельт для файла: \(path)."
-        case .deltaWithoutOriginal(let path): "Дельта требует проверенный оригинал файла: \(path)."
-        case .ambiguousArtifact(let path): "Для файла одновременно заданы полная копия и цепочка дельт: \(path)."
+        case .unsupportedSchema(let value): "Unsupported configuration version: \(value)."
+        case .unsupportedSourceLocale(let value): "Unsupported source language: \(value)."
+        case .missingValue: "A required value is missing from the package configuration."
+        case .invalidPackageID: "The package identifier contains invalid characters."
+        case .duplicatePath: "The package configuration contains a duplicate file path."
+        case .invalidLanguageSet: "The package must contain all 30 VN Revival locales."
+        case .invalidLanguageMetadata: "The package contains invalid language codes or names."
+        case .incompleteLanguages: "Not all 30 package languages are ready for release."
+        case .emptyReadyPayload: "A ready package cannot be empty."
+        case .unsafePath(let path): "Unsafe path in the package: \(path)."
+        case .invalidHash(let path): "Invalid file checksum: \(path)."
+        case .invalidArtifactHash(let path): "Invalid delta checksum for file: \(path)."
+        case .emptyArtifactChain(let path): "Empty delta chain for file: \(path)."
+        case .deltaWithoutOriginal(let path): "A delta requires a verified original file: \(path)."
+        case .ambiguousArtifact(let path): "The file defines both a full payload and a delta chain: \(path)."
         }
     }
 }
