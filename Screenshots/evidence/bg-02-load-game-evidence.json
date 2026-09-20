@@ -1,24 +1,22 @@
 {
   "schemaVersion": 1,
-  "date": "2026-09-20",
+  "date": "2026-09-21",
   "runtimeLocale": "bg",
   "publishingLocale": "bg",
   "screen": "load-game",
   "gameVersion": "1.01",
   "steamBuildID": "20535215",
-  "captureMethod": "Oculix 4.0.0 guarded main-menu-to-load-game recognition with native macOS screencapture",
+  "captureMethod": "Native macOS fallback after deterministic locale install, AppKit activation, and CoreGraphics navigation; Oculix 4.0.0 unavailable because Java Mouse.init reported input blocked",
   "resolution": {
     "width": 2880,
     "height": 1800
   },
   "automatedResult": "pass",
   "visualReview": {
-    "status": "fail",
-    "findings": [
-      "Slot 3 location Вагонът на Кондуктора wraps to two lines and overlaps the player name zel."
-    ]
+    "status": "pass",
+    "findings": []
   },
-  "result": "visual-review-failed",
+  "result": "pass",
   "activeLocaleVerified": true,
   "restoration": {
     "priorLocale": "ru",
@@ -27,6 +25,6 @@
   },
   "screenshot": {
     "file": "../upload/bg-02-load-game.png",
-    "sha256": "97c7543e639be0c34f55a79cb79bec9481142c9be4ca237313990c16e8018fcf"
+    "sha256": "93a33a7cef5d9e612b897f542cddd950cee02abe57a47b1170c1958ab7ced466"
   }
 }

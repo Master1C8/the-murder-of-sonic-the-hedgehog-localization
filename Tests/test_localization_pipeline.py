@@ -2,6 +2,9 @@ import hashlib
 import importlib.util
 import json
 import re
+import shutil
+import subprocess
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -15,6 +18,68 @@ SPEC.loader.exec_module(localization_assets)
 
 
 class RuntimeIdentifierSafetyTests(unittest.TestCase):
+    def test_text_shaper_keeps_ltr_only_dynamic_values_ltr(self) -> None:
+        compiler = shutil.which("mcs")
+        runtime = shutil.which("mono")
+        if compiler is None or runtime is None:
+            self.skipTest("Mono mcs/mono is unavailable")
+        harness = r"""
+using System;
+
+namespace TMPro
+{
+    public class TMP_Text
+    {
+        public bool isRightToLeftText;
+        public string text;
+    }
+}
+
+internal static class TextShaperHarness
+{
+    public static int Main()
+    {
+        var target = new TMPro.TMP_Text();
+        VNRevival.TextShaper.SetText(target, "zel");
+        if (target.isRightToLeftText || target.text != "zel")
+            return 1;
+        VNRevival.TextShaper.SetText(target, "September 18, 2026 3:50 AM");
+        if (target.isRightToLeftText || target.text != "September 18, 2026 3:50 AM")
+            return 2;
+        VNRevival.TextShaper.SetText(target, "تحميل");
+        if (!target.isRightToLeftText || target.text != "تحميل")
+            return 3;
+        return 0;
+    }
+}
+"""
+        with tempfile.TemporaryDirectory(prefix="text-shaper-test-") as temporary:
+            root = Path(temporary)
+            harness_path = root / "Harness.cs"
+            map_path = root / "ShapingMap.tsv"
+            executable = root / "TextShaperTest.exe"
+            harness_path.write_text(harness, encoding="utf-8")
+            map_path.write_text("VNREVIVAL1\t1\t1\n", encoding="utf-8")
+            subprocess.run(
+                [
+                    compiler,
+                    "-nologo",
+                    f"-out:{executable}",
+                    f"-resource:{map_path},VNRevival.ShapingMap",
+                    str(PROJECT_ROOT / "Scripts" / "VNRevivalTextShaper.cs"),
+                    str(harness_path),
+                ],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            subprocess.run(
+                [runtime, str(executable)],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+
     def test_checked_in_runtime_exact_manifest_matches_compiled_ink(self) -> None:
         localization_root = PROJECT_ROOT / "Documentation" / "Localization"
         inventory = json.loads((localization_root / "inventory.json").read_text(encoding="utf-8"))
@@ -86,6 +151,28 @@ class RuntimeIdentifierSafetyTests(unittest.TestCase):
         self.assertEqual(
             russian["layoutOverrides"][rings],
             {"m_fontSize": 46.0, "m_fontSizeBase": 46.0},
+        )
+        bulgarian = json.loads((localization_root / "bg.overlay.json").read_text(encoding="utf-8"))
+        self.assertEqual(
+            bulgarian["layoutOverrides"]["unity:level0:1553:m_text"],
+            {"m_fontSize": 26.0, "m_fontSizeBase": 26.0},
+        )
+        ukrainian = json.loads((localization_root / "uk.overlay.json").read_text(encoding="utf-8"))
+        self.assertEqual(
+            ukrainian["units"]["unity:level0:1562:m_text"],
+            "ПАРАМЕТРИ",
+        )
+        self.assertEqual(
+            ukrainian["units"]["unity:level0:1547:m_text"],
+            "Параметри",
+        )
+        self.assertEqual(
+            ukrainian["layoutOverrides"]["unity:level0:1522:m_text"],
+            {"m_fontSize": 32.0, "m_fontSizeBase": 32.0},
+        )
+        self.assertEqual(
+            ukrainian["layoutOverrides"]["unity:level0:1562:m_text"],
+            {"m_fontSize": 36.0, "m_fontSizeBase": 36.0},
         )
 
     def test_save_slot_collision_guard_rejects_larger_locale_override(self) -> None:

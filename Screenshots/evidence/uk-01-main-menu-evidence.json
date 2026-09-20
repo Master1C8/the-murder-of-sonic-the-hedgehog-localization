@@ -1,23 +1,22 @@
 {
   "schemaVersion": 1,
-  "date": "2026-09-20",
+  "date": "2026-09-21",
   "runtimeLocale": "uk",
   "publishingLocale": "uk",
+  "screen": "main-menu",
   "gameVersion": "1.01",
   "steamBuildID": "20535215",
-  "captureMethod": "Oculix 4.0.0 guarded main-menu recognition with native macOS screencapture",
+  "captureMethod": "Native macOS fallback after deterministic locale install and AppKit activation; Oculix 4.0.0 unavailable because Java Mouse.init reported input blocked",
   "resolution": {
     "width": 2880,
     "height": 1800
   },
   "automatedResult": "pass",
   "visualReview": {
-    "status": "fail",
-    "findings": [
-      "The Settings label НАЛАШТУВАННЯ wraps inside the word between НАЛАШТУВАН and НЯ."
-    ]
+    "status": "pass",
+    "findings": []
   },
-  "result": "visual-review-failed",
+  "result": "pass",
   "activeLocaleVerified": true,
   "restoration": {
     "priorLocale": "ru",
@@ -26,6 +25,6 @@
   },
   "screenshot": {
     "file": "../upload/uk-01-main-menu.png",
-    "sha256": "803e7409fb49527d9e217618e4cef58b9e2bd1369fcad4d6bbf0d1300fa2b9c8"
+    "sha256": "3421f85cfe53b99d6c4a03f891ce7a1833cc06f58641ec971d28422a8d018387"
   }
 }

@@ -1,0 +1,25 @@
+{
+  "locale": "bg",
+  "cycle": 10,
+  "status": "complete-clean",
+  "result": "pass",
+  "reviewer": "Codex GPT-5",
+  "findingCount": 0,
+  "changedIds": [
+    "unity:level0:1553:m_text"
+  ],
+  "correctedIds": [
+    "unity:level0:1553:m_text"
+  ],
+  "referentSearchTerms": [],
+  "previousClosure": "Documentation/Localization/BulgarianAudit/cycle-9/closure-ids.txt",
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "The prior bg.audit.json preserves the complete 3547/3547 semantic pass and 10/10 image-plan review.",
+    "Cycle 10 freezes the isolated allowlisted layout correction for the save-slot location label.",
+    "The localized wording is unchanged; only its TMP font size was reduced to prevent collision with the player name.",
+    "The corrected load-screen surface passed runtime visual review at 2880x1800.",
+    "The source inventory and canonical glossary are unchanged; no full semantic restart was required."
+  ]
+}

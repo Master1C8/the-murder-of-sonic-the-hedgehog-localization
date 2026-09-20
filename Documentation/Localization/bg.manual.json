@@ -5,6 +5,12 @@
   "targetLocale": "bg",
   "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
   "translationFormat": "story-body-or-static-field",
+  "layoutOverrides": {
+    "unity:level0:1553:m_text": {
+      "m_fontSize": 26.0,
+      "m_fontSizeBase": 26.0
+    }
+  },
   "units": {
     "ink:root[2].PlaytestEnd[7]": "<color=red>Това е краят на плейтеста.<br>Много ви благодарим за помощта!!</color>",
     "ink:root[2].PlaytestEnd[9]": "<color=red>Споделете мнението си или попълнете въпросника ни и ще ви уведомим, когато част 2 е готова!</color>",

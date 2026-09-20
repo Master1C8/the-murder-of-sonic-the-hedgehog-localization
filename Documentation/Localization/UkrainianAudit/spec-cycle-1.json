@@ -1,0 +1,24 @@
+{
+  "locale": "uk",
+  "cycle": 1,
+  "status": "complete-clean",
+  "result": "pass",
+  "reviewer": "Codex GPT-5",
+  "findingCount": 0,
+  "changedIdsFromGitHead": true,
+  "correctedIds": [
+    "unity:level0:1517:m_text",
+    "unity:level0:1547:m_text",
+    "unity:level0:1562:m_text"
+  ],
+  "referentSearchTerms": [],
+  "glossarySource": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary.json",
+  "glossaryTranslations": "/Users/antonkrutov/Desktop/SiteForMods/data/games/the-murder-of-sonic-the-hedgehog/glossary-translations.json",
+  "notes": [
+    "The prior uk.audit.json preserves the complete 3547/3547 semantic pass and 10/10 image-plan review.",
+    "Cycle 1 freezes the isolated Options-label correction exposed by runtime visual QA.",
+    "All three scene copies now use the standard Ukrainian UI term Параметри; the uppercase header uses ПАРАМЕТРИ.",
+    "The main-menu button and load-screen regression surfaces passed runtime visual review at 2880x1800.",
+    "The source inventory and canonical glossary are unchanged; no full semantic restart was required."
+  ]
+}

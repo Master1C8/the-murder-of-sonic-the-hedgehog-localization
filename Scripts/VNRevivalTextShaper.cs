@@ -144,9 +144,26 @@ namespace VNRevival
             return ShapeFallback(value);
         }
 
+        private static bool RequiresRightToLeft(string value)
+        {
+            if (!RightToLeft || String.IsNullOrEmpty(value))
+                return false;
+            foreach (char character in value)
+            {
+                if (IsBaseCharacter(character))
+                    return true;
+            }
+            return false;
+        }
+
         public static void SetText(TMP_Text target, string value)
         {
-            target.isRightToLeftText = RightToLeft;
+            // Dynamic save metadata can stay Latin even in an RTL locale
+            // (player names and Unity's English DateTime formatting). TMP's
+            // RTL switch reverses those LTR-only values character-by-character,
+            // so enable it only when this particular value contains script
+            // characters that actually require RTL layout.
+            target.isRightToLeftText = RequiresRightToLeft(value);
             target.text = Shape(value);
         }
     }

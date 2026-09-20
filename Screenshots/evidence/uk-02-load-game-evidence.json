@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "date": "2026-09-20",
+  "date": "2026-09-21",
   "runtimeLocale": "uk",
   "publishingLocale": "uk",
   "screen": "load-game",
@@ -13,12 +13,10 @@
   },
   "automatedResult": "pass",
   "visualReview": {
-    "status": "fail",
-    "findings": [
-      "The LOAD title ЗАВАНТАЖИТИ wraps inside the word and overflows above and below its title badge."
-    ]
+    "status": "pass",
+    "findings": []
   },
-  "result": "visual-review-failed",
+  "result": "pass",
   "activeLocaleVerified": true,
   "restoration": {
     "priorLocale": "ru",
@@ -27,6 +25,6 @@
   },
   "screenshot": {
     "file": "../upload/uk-02-load-game.png",
-    "sha256": "219d33feedd4ca1725a12e5602a96fbd79b1d9295d5b02d310d217875d70b088"
+    "sha256": "2deb4b5872da4ce217e94875f86f8eaa5dae6264892983b0c0d39f4aad81564b"
   }
 }

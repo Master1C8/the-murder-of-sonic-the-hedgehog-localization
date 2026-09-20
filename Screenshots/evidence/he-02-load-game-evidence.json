@@ -1,24 +1,22 @@
 {
   "schemaVersion": 1,
-  "date": "2026-09-20",
+  "date": "2026-09-21",
   "runtimeLocale": "he",
   "publishingLocale": "he",
   "screen": "load-game",
   "gameVersion": "1.01",
   "steamBuildID": "20535215",
-  "captureMethod": "Oculix 4.0.0 guarded main-menu-to-load-game recognition with native macOS screencapture",
+  "captureMethod": "Native macOS fallback after deterministic locale install, AppKit activation, and CoreGraphics navigation; Oculix 4.0.0 unavailable because Java Mouse.init reported input blocked",
   "resolution": {
     "width": 2880,
     "height": 1800
   },
   "automatedResult": "pass",
   "visualReview": {
-    "status": "fail",
-    "findings": [
-      "The RTL layout reverses the embedded Latin player name zel to lez and reverses the English date/time string in every slot."
-    ]
+    "status": "pass",
+    "findings": []
   },
-  "result": "visual-review-failed",
+  "result": "pass",
   "activeLocaleVerified": true,
   "restoration": {
     "priorLocale": "ru",
@@ -27,6 +25,6 @@
   },
   "screenshot": {
     "file": "../upload/he-02-load-game.png",
-    "sha256": "49ade411e22a8396fedf51b62f98d03ded8f41a5281b0daf5bdd54597de545d7"
+    "sha256": "dea3f0b32d94b1307983160583a08046b1b74473f5b8eed96d1252883d2ed1ab"
   }
 }

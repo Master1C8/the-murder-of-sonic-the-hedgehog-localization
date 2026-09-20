@@ -6,6 +6,16 @@
   "translationFormat": "story-body-or-static-field",
   "sourceFingerprint": "c85a1b00191894e5d42665322b8716c042536659ce939893bf7a59310dde2086",
   "sourceUnitsSha256": "7c3cbc60eec5570d4b07c2f3b44da2abec3173158df4a4c181c7014aaa8dd2af",
+  "layoutOverrides": {
+    "unity:level0:1522:m_text": {
+      "m_fontSize": 32.0,
+      "m_fontSizeBase": 32.0
+    },
+    "unity:level0:1562:m_text": {
+      "m_fontSize": 36.0,
+      "m_fontSizeBase": 36.0
+    }
+  },
   "units": {
     "ink:root[2].PlaytestEnd[7]": "<color=red>Це кінець плейтесту.<br>Щиро дякуємо за вашу допомогу!!</color>",
     "ink:root[2].PlaytestEnd[9]": "<color=red>Розкажіть нам про свої враження або заповніть нашу анкету — і ми повідомимо, коли буде готова частина 2!</color>",
@@ -3401,7 +3411,7 @@
     "unity:level0:1512:m_text": "Новий текст",
     "unity:level0:1513:m_text": "Новий текст",
     "unity:level0:1514:m_text": "Зберегти",
-    "unity:level0:1517:m_text": "Налаштування",
+    "unity:level0:1517:m_text": "Параметри",
     "unity:level0:1518:m_text": "Оце!",
     "unity:level0:1519:m_text": "Вийти",
     "unity:level0:1522:m_text": "ЗБЕРЕГТИ / ЗАВАНТАЖИТИ",
@@ -3423,7 +3433,7 @@
     "unity:level0:1544:m_text": "Новий текст",
     "unity:level0:1545:m_text": "Увімк.",
     "unity:level0:1546:m_text": "Вимк.",
-    "unity:level0:1547:m_text": "Налаштування",
+    "unity:level0:1547:m_text": "Параметри",
     "unity:level0:1548:m_text": "Загальні",
     "unity:level0:1549:m_text": "Завантажити",
     "unity:level0:1550:m_text": "Баррі",
@@ -3436,7 +3446,7 @@
     "unity:level0:1558:m_text": "Кільця для перемоги",
     "unity:level0:1559:m_text": "ПОРОЖНЬО",
     "unity:level0:1561:m_text": "Титри",
-    "unity:level0:1562:m_text": "НАЛАШТУВАННЯ",
+    "unity:level0:1562:m_text": "ПАРАМЕТРИ",
     "unity:level0:1563:m_text": "ID рівня налагодження: ---",
     "unity:level0:1564:m_text": "Параметри",
     "unity:level0:1565:m_text": "Кілець для перемоги",

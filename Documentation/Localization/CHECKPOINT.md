@@ -404,3 +404,28 @@
   tests, and integrity checks for 30 locales and 185 payload artifacts. The
   signed universal arm64/x86_64 application was rebuilt without changing the
   installed game or the localization payload.
+
+## Main-menu and load-screen visual regressions — 2026-09-21
+
+- Ukrainian `ЗАВАНТАЖИТИ` now fits the load-screen title badge at
+  32 pt. The three scene copies of the Options label use the standard shorter
+  term `Параметри` / `ПАРАМЕТРИ`; the main-menu button is confirmed on
+  one line at 2880x1800.
+- Bulgarian keeps `Вагонът на Кондуктора` and reduces only that save-slot
+  label's TMP size to 26 pt. Runtime evidence confirms it no longer wraps or
+  collides with the player name.
+- The shared complex-script runtime now enables TMP right-to-left layout only
+  when the current dynamic value contains an RTL-script character. Arabic,
+  Persian and Hebrew runtime captures confirm that localized labels retain RTL
+  layout while the Latin player name `zel` and English timestamp remain LTR.
+- Oculix 4.0.0 became unavailable because Java `Mouse.init` reported blocked
+  input. The permitted fallback used deterministic locale installation,
+  AppKit activation, CoreGraphics navigation and native macOS screenshots; the
+  fallback reason is recorded in each affected evidence JSON.
+- All 60 main-menu/load-game evidence records now have completed passing visual
+  reviews. The save file's SHA-256 remained
+  `5a6e440a8749aa11a18c404cc3136577e214237ea191e866543ae408154b3629`,
+  the game was stopped, and the prior Russian package was restored afterward.
+- Final release audit passed 19 Python tests, 14 Swift fake-folder installer
+  tests, 30-locale/185-artifact payload verification, and the production app
+  rebuild. Texture translation remains deferred and `imagesModified=false`.
