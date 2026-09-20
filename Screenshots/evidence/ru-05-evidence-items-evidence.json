@@ -3,7 +3,7 @@
   "date": "2026-09-21",
   "runtimeLocale": "ru",
   "publishingLocale": "ru",
-  "screen": "main-menu",
+  "screen": "evidence-items",
   "gameVersion": "1.01",
   "steamBuildID": "20535215",
   "captureMethod": "Project one-pass native showcase automation with deterministic locale install, AppKit activation, CoreGraphics input, and native macOS screencapture; Oculix 4.0.0 fallback used because Java Mouse.init reported input blocked",
@@ -24,7 +24,7 @@
     "saveWritten": false
   },
   "screenshot": {
-    "file": "../upload/ru-01-main-menu.png",
-    "sha256": "6e9cf424378df6570b6de43df0636ea02c55034de1d7cc38d7d26c346613986d"
+    "file": "../upload/ru-05-evidence-items.png",
+    "sha256": "163a12f8f2236f9e2b61c0353f3515e046f3f3ba717b357a0b42d1435e406836"
   }
 }

@@ -41,7 +41,20 @@ REVIEW = PROJECT_ROOT / "Screenshots/evidence"
 SCREENS = {
     "main-menu": {"order": "01", "slug": "main-menu"},
     "load-game": {"order": "02", "slug": "load-game"},
+    "interrogation-actions": {"order": "03", "slug": "interrogation-actions"},
+    "character-dialogue": {"order": "04", "slug": "character-dialogue"},
+    "evidence-items": {"order": "05", "slug": "evidence-items"},
+    "rings-minigame": {"order": "06", "slug": "rings-minigame"},
 }
+
+SHOWCASE_SCREENS = (
+    "main-menu",
+    "load-game",
+    "interrogation-actions",
+    "character-dialogue",
+    "evidence-items",
+    "rings-minigame",
+)
 
 
 def sha256(path: Path) -> str:
@@ -144,18 +157,23 @@ def prepare_runtime(runtime: Path) -> None:
         (SCRIPT_DIR / "activate_app.swift", runtime / "activate-app"),
         (SCRIPT_DIR / "cg_input.swift", runtime / "cg-input"),
     ):
-        run(["/usr/bin/xcrun", "swiftc", str(source), "-o", str(output)])
+        run([
+            "/usr/bin/xcrun", "swiftc", "-module-cache-path", str(runtime / "module-cache"),
+            str(source), "-o", str(output),
+        ])
 
 
 def write_evidence(
-    locale: dict[str, str], screenshot: Path, prior: str, save_hash: str, screen: str
+    locale: dict[str, str], screenshot: Path, prior: str, save_hash: str, screen: str,
+    capture_method: str | None = None,
 ) -> None:
     width, height = image_size(screenshot)
-    capture_method = (
-        "Oculix 4.0.0 guarded main-menu recognition with native macOS screencapture"
-        if screen == "main-menu"
-        else "Oculix 4.0.0 guarded main-menu-to-load-game recognition with native macOS screencapture"
-    )
+    if capture_method is None:
+        capture_method = (
+            "Oculix 4.0.0 guarded main-menu recognition with native macOS screencapture"
+            if screen == "main-menu"
+            else "Oculix 4.0.0 guarded main-menu-to-load-game recognition with native macOS screencapture"
+        )
     evidence = {
         "schemaVersion": 1,
         "date": dt.date.today().isoformat(),
@@ -225,7 +243,118 @@ def capture(locale: dict[str, str], screen: str, replace: bool) -> None:
         if sha256(SAVE) != save_hash:
             raise RuntimeError("SaveData.data changed during capture")
         write_evidence(locale, destination, prior, save_hash, screen)
-        print(f"visual-qa-complete {locale['runtimeCode']} {destination}")
+    print(f"visual-qa-complete {locale['runtimeCode']} {destination}")
+
+
+def native_input(runtime: Path, action: str, *arguments: object) -> None:
+    run([str(runtime / "cg-input"), action, *(str(argument) for argument in arguments)])
+
+
+def native_capture(runtime: Path, path: Path) -> None:
+    if not game_pids():
+        raise RuntimeError("the game stopped before native screenshot capture")
+    run([str(runtime / "activate-app"), GAME_BUNDLE_ID])
+    time.sleep(0.35)
+    run(["/usr/sbin/screencapture", "-x", str(path)])
+    if not path.is_file():
+        raise RuntimeError(f"native screenshot is missing: {path}")
+
+
+def run_native_showcase(runtime: Path, locale: str) -> dict[str, Path]:
+    """Capture the six Russian catalog screens in one uninterrupted game process."""
+    run([str(runtime / "activate-app"), GAME_BUNDLE_ID])
+    time.sleep(2)
+    outputs = {
+        screen: runtime / "raw" / (
+            f"{locale}-{SCREENS[screen]['order']}-{SCREENS[screen]['slug']}-raw.png"
+        )
+        for screen in SHOWCASE_SCREENS
+    }
+
+    native_capture(runtime, outputs["main-menu"])
+
+    # Retina input uses logical 1440x900 coordinates; screenshots are 2880x1800.
+    native_input(runtime, "click", 1200, 550)  # Continue
+    time.sleep(2)
+    native_capture(runtime, outputs["load-game"])
+
+    native_input(runtime, "click", 720, 470)  # Slot 2: Lounge Car
+    time.sleep(3)
+    native_capture(runtime, outputs["interrogation-actions"])
+
+    native_input(runtime, "double-click", 900, 420)  # Start interrogation
+    time.sleep(1.5)
+    native_capture(runtime, outputs["character-dialogue"])
+
+    # The localized Ink route contains 34 displayed lines before the clue
+    # prompt. A typewriter line can consume one double-click to finish drawing
+    # and another to advance, so use 68 plus eight buffered double-clicks. The
+    # clue prompt is inert at this coordinate, making the requested margin safe.
+    native_input(runtime, "repeat-double-click", 1405, 835, 76, 220)
+    time.sleep(1)
+    native_capture(runtime, outputs["evidence-items"])
+
+    native_input(runtime, "click", 850, 305)  # Hidden Passage evidence
+    time.sleep(0.8)
+    native_input(runtime, "click", 600, 535)  # THAT'S IT / confirm evidence
+    time.sleep(1)
+    native_input(runtime, "repeat-double-click", 1405, 835, 2, 260)
+    time.sleep(3.2)
+    native_capture(runtime, outputs["rings-minigame"])
+    return outputs
+
+
+def capture_showcase(locale: dict[str, str], replace: bool) -> None:
+    if game_pids():
+        raise RuntimeError("the game is already running")
+    destinations = {
+        screen: UPLOAD / (
+            f"{locale['siteLocale']}-{SCREENS[screen]['order']}-{SCREENS[screen]['slug']}.png"
+        )
+        for screen in SHOWCASE_SCREENS
+    }
+    existing = [path for path in destinations.values() if path.exists()]
+    if existing and not replace:
+        raise RuntimeError("outputs exist; pass --replace: " + ", ".join(map(str, existing)))
+
+    save_hash = sha256(SAVE)
+    prior = active_locale()
+    with tempfile.TemporaryDirectory(prefix="sonic-visual-qa-showcase-") as temporary:
+        runtime = Path(temporary)
+        save_backup = runtime / "SaveData.data"
+        shutil.copy2(SAVE, save_backup)
+        prepare_runtime(runtime)
+        installer = compile_installer(runtime)
+        captures: dict[str, Path] = {}
+        try:
+            install_locale(installer, locale["runtimeCode"])
+            launch_game()
+            captures = run_native_showcase(runtime, locale["runtimeCode"])
+            UPLOAD.mkdir(parents=True, exist_ok=True)
+            for screen, source in captures.items():
+                shutil.copy2(source, destinations[screen])
+        finally:
+            stop_game()
+            if active_locale() != prior:
+                install_locale(installer, prior)
+            if sha256(SAVE) != save_hash:
+                shutil.copy2(save_backup, SAVE)
+                if sha256(SAVE) != save_hash:
+                    raise RuntimeError("SaveData.data changed and could not be restored")
+
+        if sha256(SAVE) != save_hash:
+            raise RuntimeError("SaveData.data changed during showcase capture")
+        method = (
+            "Project one-pass native showcase automation with deterministic locale install, "
+            "AppKit activation, CoreGraphics input, and native macOS screencapture; "
+            "Oculix 4.0.0 fallback used because Java Mouse.init reported input blocked"
+        )
+        for screen in SHOWCASE_SCREENS:
+            write_evidence(
+                locale, destinations[screen], prior, save_hash, screen,
+                capture_method=method,
+            )
+            print(f"visual-qa-showcase-complete {locale['runtimeCode']} {destinations[screen]}")
 
 
 def parse_args() -> argparse.Namespace:
@@ -234,7 +363,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--all", action="store_true")
     parser.add_argument("--list", action="store_true")
     parser.add_argument("--replace", action="store_true")
-    parser.add_argument("--screen", choices=sorted(SCREENS), default="main-menu")
+    parser.add_argument(
+        "--showcase", action="store_true",
+        help="capture the six-screen Russian catalog showcase in one launch",
+    )
+    parser.add_argument("--screen", choices=("main-menu", "load-game"), default="main-menu")
     return parser.parse_args()
 
 
@@ -256,6 +389,8 @@ def main() -> int:
             print(f"{locale['runtimeCode']} -> {locale['siteLocale']}")
         return 0
     if args.all:
+        if args.showcase:
+            raise RuntimeError("--showcase cannot be combined with --all")
         if args.locale:
             raise RuntimeError("locale cannot be combined with --all")
         for locale in locales:
@@ -274,6 +409,9 @@ def main() -> int:
     selected = next((item for item in locales if item["runtimeCode"] == args.locale), None)
     if selected is None:
         raise RuntimeError("choose a locale or use --all")
+    if args.showcase:
+        capture_showcase(selected, args.replace)
+        return 0
     capture(selected, args.screen, args.replace)
     return 0
 

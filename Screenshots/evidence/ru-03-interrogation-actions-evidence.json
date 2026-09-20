@@ -3,7 +3,7 @@
   "date": "2026-09-21",
   "runtimeLocale": "ru",
   "publishingLocale": "ru",
-  "screen": "main-menu",
+  "screen": "interrogation-actions",
   "gameVersion": "1.01",
   "steamBuildID": "20535215",
   "captureMethod": "Project one-pass native showcase automation with deterministic locale install, AppKit activation, CoreGraphics input, and native macOS screencapture; Oculix 4.0.0 fallback used because Java Mouse.init reported input blocked",
@@ -24,7 +24,7 @@
     "saveWritten": false
   },
   "screenshot": {
-    "file": "../upload/ru-01-main-menu.png",
-    "sha256": "6e9cf424378df6570b6de43df0636ea02c55034de1d7cc38d7d26c346613986d"
+    "file": "../upload/ru-03-interrogation-actions.png",
+    "sha256": "246e39facfffc1c259eb03ffafcbaf6fe7d4b3aa2ec5521a464da0f4fd9fef6f"
   }
 }
