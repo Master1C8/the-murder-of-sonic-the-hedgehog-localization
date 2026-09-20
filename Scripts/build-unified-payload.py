@@ -60,6 +60,15 @@ def run(command: list[str], *, env: dict[str, str] | None = None) -> None:
         raise RuntimeError(f"Command failed ({result.returncode}): {' '.join(command)}\n{details}")
 
 
+def verify_universal_xdelta(path: Path) -> None:
+    result = subprocess.run(["file", str(path)], text=True, capture_output=True, check=True)
+    report = result.stdout
+    if "universal binary" not in report or "x86_64" not in report or "arm64" not in report:
+        raise RuntimeError(
+            "xdelta3 must be a universal macOS arm64/x86_64 binary: " + report.strip()
+        )
+
+
 def build_locale(locale: str, data_root: Path, output: Path, unitypy_root: Path) -> None:
     command = [
         "python3", str(PATCH_BUILDER), "build-locale-patch",
@@ -117,6 +126,10 @@ def main() -> int:
     for required in (args.data_root, args.unitypy_root, args.xdelta, args.xdelta_license):
         if not required.exists():
             raise RuntimeError(f"Required input is missing: {required}")
+    verify_universal_xdelta(args.xdelta)
+    payload_readme = PAYLOAD / "README.md"
+    if not payload_readme.is_file():
+        raise RuntimeError(f"Payload documentation is missing: {payload_readme}")
 
     work = Path(tempfile.mkdtemp(prefix="sonic-unified-payload.", dir="/private/tmp"))
     builds = work / "builds"
@@ -148,7 +161,9 @@ def main() -> int:
         tool_output.parent.mkdir(parents=True)
         shutil.copy2(args.xdelta, tool_output)
         tool_output.chmod(0o755)
+        verify_universal_xdelta(tool_output)
         shutil.copy2(args.xdelta_license, staged_payload / "Tools/XDELTA-LICENSE")
+        shutil.copy2(payload_readme, staged_payload / "README.md")
 
         base_manifest = manifests[BASE_LOCALE]
         original_by_path = {

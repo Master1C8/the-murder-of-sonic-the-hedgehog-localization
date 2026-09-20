@@ -55,25 +55,50 @@ class RuntimeIdentifierSafetyTests(unittest.TestCase):
             ["runtime control value changed", "runtime inline prefix changed"],
         )
 
-    def test_russian_fit_fixes_use_locale_layout_overrides(self) -> None:
+    def test_save_slot_collision_guards_cover_every_locale(self) -> None:
         localization_root = PROJECT_ROOT / "Documentation" / "Localization"
         inventory = json.loads((localization_root / "inventory.json").read_text(encoding="utf-8"))
-        overlay = json.loads((localization_root / "ru.overlay.json").read_text(encoding="utf-8"))
-        identifier = "unity:defaultgroup:-4932669119767755847:m_text"
-        self.assertEqual(overlay["units"][identifier], "КОЛЬЦА")
+        locales = sorted(localization_assets.LOCALE_FALLBACK_FONTS)
+        self.assertEqual(len(locales), 30)
+        for locale in locales:
+            with self.subTest(locale=locale):
+                overlay = json.loads(
+                    (localization_root / f"{locale}.overlay.json").read_text(encoding="utf-8")
+                )
+                effective = localization_assets.effective_level0_layout_overrides(overlay)
+                self.assertEqual(
+                    effective["unity:level0:1538:m_text"],
+                    {"m_fontSize": 18.0, "m_fontSizeBase": 18.0},
+                )
+                self.assertLessEqual(
+                    effective["unity:level0:1553:m_text"]["m_fontSize"], 28.0
+                )
+                self.assertLessEqual(
+                    effective["unity:level0:1553:m_text"]["m_fontSizeBase"], 28.0
+                )
+                self.assertEqual(
+                    localization_assets.validate_layout_overrides(inventory, overlay), []
+                )
+
+        russian = json.loads((localization_root / "ru.overlay.json").read_text(encoding="utf-8"))
+        rings = "unity:defaultgroup:-4932669119767755847:m_text"
+        self.assertEqual(russian["units"][rings], "КОЛЬЦА")
         self.assertEqual(
-            overlay["layoutOverrides"][identifier],
+            russian["layoutOverrides"][rings],
             {"m_fontSize": 46.0, "m_fontSizeBase": 46.0},
         )
-        self.assertEqual(
-            overlay["layoutOverrides"]["unity:level0:1538:m_text"],
-            {"m_fontSize": 18.0, "m_fontSizeBase": 18.0},
-        )
-        self.assertEqual(
-            overlay["layoutOverrides"]["unity:level0:1553:m_text"],
-            {"m_fontSize": 28.0, "m_fontSizeBase": 28.0},
-        )
-        self.assertEqual(localization_assets.validate_layout_overrides(inventory, overlay), [])
+
+    def test_save_slot_collision_guard_rejects_larger_locale_override(self) -> None:
+        overlay = {
+            "layoutOverrides": {
+                "unity:level0:1538:m_text": {
+                    "m_fontSize": 24.0,
+                    "m_fontSizeBase": 24.0,
+                }
+            }
+        }
+        with self.assertRaises(SystemExit):
+            localization_assets.effective_level0_layout_overrides(overlay)
 
     def test_layout_overrides_reject_runtime_or_unknown_fields(self) -> None:
         inventory = {
@@ -118,6 +143,14 @@ class RuntimeIdentifierSafetyTests(unittest.TestCase):
         self.assertEqual(struct.unpack_from("<f", patched, text_end + 196)[0], 28.0)
         self.assertEqual(patched[: text_end + 192], bytes(raw[: text_end + 192]))
         self.assertEqual(patched[text_end + 200 :], bytes(raw[text_end + 200 :]))
+        self.assertEqual(
+            localization_assets.read_level0_layout(
+                patched,
+                ("m_fontSize", "m_fontSizeBase"),
+                "unity:level0:1553:m_text",
+            ),
+            {"m_fontSize": 28.0, "m_fontSizeBase": 28.0},
+        )
 
     def test_level0_layout_override_is_allowed(self) -> None:
         inventory = {

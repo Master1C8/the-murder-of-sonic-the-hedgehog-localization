@@ -27,7 +27,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "c35777d10bed1d50c3844e9f5ec301b10c5199d70ac24424ea413068c03bea21",
+          "payloadSHA256": "62952584a4573cde7053528968545d182ab047998797bfe3a02d0b6bba6e9b57",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -35,7 +35,7 @@
             },
             {
               "path": "Locales/zh/level0.xdelta",
-              "sha256": "2ac5bb70091dadd424b63d3246ce4e78f949a37a55d44bee555d80a2131db326"
+              "sha256": "1c088667755f4a1454f14280f6e8f4f33f3489f9843506ac62ce3e2d550c4f8a"
             }
           ]
         },
@@ -199,7 +199,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "faf6fb5624cd39ceed04934ffa04346f6d48a837015f5ab99ab05c992d743ec7",
+          "payloadSHA256": "8eac4a678c3a070135111441309c4e4769458d323e240f4415218d91bf09e462",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -207,7 +207,7 @@
             },
             {
               "path": "Locales/es/level0.xdelta",
-              "sha256": "afa6b12dfefe04cc3d4d90860b2e98dcc27a7a28af5a9d4c963ca7260f4dc9d1"
+              "sha256": "b71aff17e9bc9624f69a812edaafafdaa60f7c1e56a5b5d5386b091c81cf4a75"
             }
           ]
         },
@@ -493,7 +493,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "7be7a8bab618642a78935fdc90fc770a407fed21b4748110737665f6ff712f25",
+          "payloadSHA256": "a5355df62f382b08d6e3b08633070cee50f419242420199af7615e5550713c03",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -501,7 +501,7 @@
             },
             {
               "path": "Locales/ja/level0.xdelta",
-              "sha256": "e79f0e672d1a4001a3bf1dc94188e404811b1b38b98cb33357a386b7f2db4f2c"
+              "sha256": "94975f5628eebd844c97fe93364c39ab07f7d43d11f369ac4d033176d3459f5e"
             }
           ]
         },
@@ -689,7 +689,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "a7f316a4bbd5c1a7ccbaf0afc75d8450fa5b6161aea9a705254e3e95306b0b87",
+          "payloadSHA256": "02a04af21a96e37c6f0f0331b5198ec6f4b64dd2beb2ec7c6530157113c0b7bb",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -697,7 +697,7 @@
             },
             {
               "path": "Locales/ko/level0.xdelta",
-              "sha256": "55212c91b785adf6e6a221fb1cbd88af0f5240998866cd626559cba14dde2a00"
+              "sha256": "ecd9180e3665f2f26120ff608485133ca9638268f0151c1a9f9c35d20f8d0216"
             }
           ]
         },
@@ -787,7 +787,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "87a1b286af124cea64d99d1475dffb2f4308687d9c98e30e96d2e191f05bc3ce",
+          "payloadSHA256": "978a794592eac67ccff670cb514004739ce3fba01578060bd2dd7710a9051095",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -795,7 +795,7 @@
             },
             {
               "path": "Locales/fr/level0.xdelta",
-              "sha256": "22bf75cb3e2dcc077f0c9f0f643137d88ca606c3b30eb46129b520ce79327612"
+              "sha256": "6818bce505ae6f16c8c039dd12787dbf941f4ee1cae748826b8da365c56f3ca3"
             }
           ]
         },
@@ -885,7 +885,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "c12cd74e60cbbbd8f15a0e4a998c2fedac74bc594a3e5ff70c771d02deb5c902",
+          "payloadSHA256": "a2deb400cf3bfc0600773800aff2c736e860d60df3faa66cdc3e49a849d85d2c",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -893,7 +893,7 @@
             },
             {
               "path": "Locales/tr/level0.xdelta",
-              "sha256": "8902d7614676c5bd61315d048c64784e9c9238fedd542c3ebbbcfc6593586757"
+              "sha256": "488d7e901e1e755a799afeda0b840c330163c036df4efb7511c24a7329f2bebe"
             }
           ]
         },
@@ -983,7 +983,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "2783c290a39e511f89e470a636b7fedf37da226e7fb79a7ce9b36238008c69e2",
+          "payloadSHA256": "79a220763acc1cb10ab04618396c92953e711890ca7b4512068aa8195b9fb267",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -991,7 +991,7 @@
             },
             {
               "path": "Locales/pl/level0.xdelta",
-              "sha256": "39ff61029e36492426ca9a81dbd3094d6af5bb63a68fccaa6b3f438a61fbb448"
+              "sha256": "75550f242461b6e3619d2ab37714fa950c023e618ad9c63edde00821680fb323"
             }
           ]
         },
@@ -1081,7 +1081,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "8a600cf70044aad4406f9fbf369066b06df5d00e25fb5164e4471a8dd5944b42",
+          "payloadSHA256": "f525ea244900587469d851814b23515e0782f1eea8b8e52ff4d925e9a6a14b54",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -1089,7 +1089,7 @@
             },
             {
               "path": "Locales/zh-TW/level0.xdelta",
-              "sha256": "d04c9620fcc798294fdd180ebd1631dbb3ce6658018b308312518897b0e4f89c"
+              "sha256": "1b7eaacd4f1004cf5245d91bd32488bfbd73e5f59115cc5c4ca334b69853684b"
             }
           ]
         },
@@ -1179,7 +1179,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "05d905a32206732ac8ea1450d53ddc405a842c9567cf45948c388d4fa18a5b5d",
+          "payloadSHA256": "1d8154ab0c54a100de15d62d6f80e55e47eb93b6f7500a76b75e5d21a880e970",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -1187,7 +1187,7 @@
             },
             {
               "path": "Locales/it/level0.xdelta",
-              "sha256": "121169394321107a6d520e5391902fde1ac75155ee1185605ae7ce6626435421"
+              "sha256": "7359decf6f717f1b801d07b2cf2cba9bcff2d493d425a62903b0d9a8f5984139"
             }
           ]
         },
@@ -1277,7 +1277,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "9b28f51b5501aa67d8b89852e4b21e8d3001b764429108eff6de2f53a602a506",
+          "payloadSHA256": "641df5aa2bca757dd3d5e779d0614324b1bbdfaad1ac5210af56c5b91e9d35ae",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -1285,7 +1285,7 @@
             },
             {
               "path": "Locales/th/level0.xdelta",
-              "sha256": "66b62d677f2529ebf9d49b30b2deb341154db78ed1d5b4695ea55b15bf5e3673"
+              "sha256": "18268999289779d6a39d545a0fedc421568208cdbc9ddd08f6bf2d5391d21316"
             }
           ]
         },
@@ -1382,7 +1382,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "5abee5386fbd0df71eb496fd28d96c9369a299cdb7b2b226d47b41b89164e51c",
+          "payloadSHA256": "291263ca88a37e479b4a37444e3cc2a8bbe507a429842b1ec7660679d309ff35",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -1390,7 +1390,7 @@
             },
             {
               "path": "Locales/vi/level0.xdelta",
-              "sha256": "6ada24cfdd89ae3a2c1bedabf3725a1c48dc6fdde26b13dbc778d2a525fc6626"
+              "sha256": "9bfb31c2fcd3764ea5d2d476a951709ba351c2fd897b3a2ae7c853e222324637"
             }
           ]
         },
@@ -1480,7 +1480,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "1f2e5bb58b8a57aa10bb8687f01904cc7c8737b1c3c1ac9a74de7fe72371a7f1",
+          "payloadSHA256": "4ea64bc05100de7df0c7118d9dbb42af547715a4710b0a2cb18a2e2fd5413927",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -1488,7 +1488,7 @@
             },
             {
               "path": "Locales/id/level0.xdelta",
-              "sha256": "062a290abdd2f439e7291df77ac940202e3a480fecb0880147b6ecd5ee526823"
+              "sha256": "daaea3b80872dd80aa5f6969cf5a278b76acd77a860fc1e0efd4e3ad150196b5"
             }
           ]
         },
@@ -1578,7 +1578,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "f692590cb8dd92eff6e84485a796db84aa5c826446285ad359107f9620bab6d4",
+          "payloadSHA256": "e4d4f606f8672c74e81418477d0dea99ebf340362403960451fcb2e7301ef944",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -1586,7 +1586,7 @@
             },
             {
               "path": "Locales/uk/level0.xdelta",
-              "sha256": "9af2ca0af78a6308f4e22336cc68643687d95b59b5762e73735ba001eeb2466b"
+              "sha256": "eb0b90ab51c4beaadc40dd22f9f4b5b5a9bf99b0db589606517039a22dfc281a"
             }
           ]
         },
@@ -1676,7 +1676,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "274cbddc3b4277497272a59e73d5aa93edd0e8209aee346aa94d383a673f1a3a",
+          "payloadSHA256": "4bf16754ac8585c3577dee0e67bf529000f9608d6a3637f529ad5354f26a2363",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -1684,7 +1684,7 @@
             },
             {
               "path": "Locales/ar/level0.xdelta",
-              "sha256": "f172604a9a0feb2a309e94da288254c31b60f535b5babc361e6462595e9fabed"
+              "sha256": "3ccad3da1a53807731a419269469af2b88c5b546ede00a184dd2ecc7f51bd8fe"
             }
           ]
         },
@@ -1781,7 +1781,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "a7e7e0288dbbbe66a2f7ef2af2988f082997940ce9de7d337cd9d1d53c0dac03",
+          "payloadSHA256": "2b357650d57f3d59a9b47ae964e19846318ce83774b54d45a73a86064b643e0b",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -1789,7 +1789,7 @@
             },
             {
               "path": "Locales/cs/level0.xdelta",
-              "sha256": "c7bf27f7273aceed993514549a2b837adf94efabb2aabb243ad14b4aa4027e04"
+              "sha256": "7d3eab32337b665b78dda89f42f332cf0f9278c340db4e3036ed0361c1aa7317"
             }
           ]
         },
@@ -1879,7 +1879,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "934203b982d8523c6489ee699ee7ffd1943cae1875323bd8bb91f1912c2c599f",
+          "payloadSHA256": "895021d23c1a1cc298b07ee9452162e2a73c5c2a9a0dc9fcea99a9851a94d935",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -1887,7 +1887,7 @@
             },
             {
               "path": "Locales/hu/level0.xdelta",
-              "sha256": "bca52ad5a64281273c2df42821a01904e12de285d3f2e8d5d06f85e6b517c8cd"
+              "sha256": "c9055acb9a877da9d419507ddc4654070027ba1f0d92abe0146f631561776c23"
             }
           ]
         },
@@ -1977,7 +1977,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "04bc566d7e6e0c5309bef1300c710132496eb0d516be348b19189d7fa36171db",
+          "payloadSHA256": "ea5aebe389cea141d79f6a66769cd1227daec4e11dd52df7b29605ce634b5208",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -1985,7 +1985,7 @@
             },
             {
               "path": "Locales/nl/level0.xdelta",
-              "sha256": "219d47c79f29ccb275bc7aafc7bc4a31bbd2aed96acd05d562c1eaec02973935"
+              "sha256": "2e074d50746b194da118ed410acd953ca464653ba04f79361f75e35db5d18489"
             }
           ]
         },
@@ -2075,7 +2075,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "241ca48247b23914f95f1e354dee8e1077857ec4b4b002b2a86eb01a85c8d36d",
+          "payloadSHA256": "bac525b26220abb11537cf2509dadd46a5078e6054053b50b9d03024b733a827",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -2083,7 +2083,7 @@
             },
             {
               "path": "Locales/fa/level0.xdelta",
-              "sha256": "db3b965cb0bc8961e472722f90123d0ae905651fa2cb86f2bbeab4aaca27d26f"
+              "sha256": "2b42815a6331748515aa566df3756765f9eeb559817384a871438c09ad2af29a"
             }
           ]
         },
@@ -2180,7 +2180,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "e633903085bd180982e8bc01c8868b4b145e1de33196e2532b2d0d9538ff88c3",
+          "payloadSHA256": "c6e564fdca792bc04fd8c6d1d913d26352c91abd5f56bb3bbe7ee6048b640e89",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -2188,7 +2188,7 @@
             },
             {
               "path": "Locales/ro/level0.xdelta",
-              "sha256": "6e4c50beccc3be20d0c93541c6a186687387a17ac828d0abccb882f230c0a9fd"
+              "sha256": "3c7b71f83f51d1949662b428813307b1a102be1ad5453657c03e3128b0cf4f2c"
             }
           ]
         },
@@ -2278,7 +2278,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "b791b5ae0569b5c5fe698480ba42740ab699e2d8f963882aca1a7b4796e62339",
+          "payloadSHA256": "8ee6e3e3059d660978467e97d82514b9a18e1ccab21c2e0553a512448925c357",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -2286,7 +2286,7 @@
             },
             {
               "path": "Locales/hi/level0.xdelta",
-              "sha256": "37ba962d6312b5f107f37d4dbd5d2ab9623acd5f9d78bf0b77d3825d97608cb7"
+              "sha256": "4d7706b66734785f0db2978feea583478b9429a497375fb2892909c2141b7d74"
             }
           ]
         },
@@ -2383,7 +2383,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "a3c6b41476a37daa524fa34061999e7c5f6c614c58c8e8da5952ff9bac88bc6c",
+          "payloadSHA256": "8a2cacef3a49532cc1292bed457484f300da06be4bdfe00e18d0c742cf8e7988",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -2391,7 +2391,7 @@
             },
             {
               "path": "Locales/fil/level0.xdelta",
-              "sha256": "b2efdc49b74ddc504d3fe0927f9c740413c67dfbe8592472724f35b11e0f2b6d"
+              "sha256": "f30d1acd4cb795dd854e620cc9e7b2bd9b3b6259ba7cae17bd44537c7bb26e33"
             }
           ]
         },
@@ -2481,7 +2481,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "ccdbb62764f06d473e2a65e121b948e55d3fe69c320c21567bd8bbece6bc95cf",
+          "payloadSHA256": "efb21911e9b7996e829ccfc1e878e77e00676c8b7fec5a72e146cb397a832ba6",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -2489,7 +2489,7 @@
             },
             {
               "path": "Locales/el/level0.xdelta",
-              "sha256": "70b5f19ed7a7bb83ae717b4faf23054f1d55c50e84fd0eda58792106e17def6a"
+              "sha256": "99b69dacfa90fa71352613c4ca7722a9fcc31eeab2691a2707486e5bb90a59ef"
             }
           ]
         },
@@ -2579,7 +2579,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "cb5fd2aa2030fdb22256332ae6c4a54684be9c93de2833b49d1be2a51e8de974",
+          "payloadSHA256": "9ef42d3ab0c78c64973498e407d101726cd546815c4470237eeda54c2d898908",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -2587,7 +2587,7 @@
             },
             {
               "path": "Locales/bg/level0.xdelta",
-              "sha256": "0a619469b9ca5aebbbc176c39d1745cb78f2f5580a0ac0871c7d95ec03440f12"
+              "sha256": "3d801dcb33a815d194288adce0184bcdac6bf5c601a940cd06b6b9819ea2c179"
             }
           ]
         },
@@ -2677,7 +2677,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "69404b56a6bc58bb51d859af37c5b21e7d2ed19c23ae43d8e6f0e2a8189e2fef",
+          "payloadSHA256": "4ccf236fe0d7d7a637f291f6d70c27f484418bd5a858c8755b4bb9f8067598cb",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -2685,7 +2685,7 @@
             },
             {
               "path": "Locales/sr/level0.xdelta",
-              "sha256": "bc758c5ee4d5d19e9a288d4179e2a40577429a3ca9e79f5091bf777fbbac750f"
+              "sha256": "5a2f94b566cd9659da2ba1b15658a719182c4550af850531f6b0340b7b1597d1"
             }
           ]
         },
@@ -2775,7 +2775,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "a6d6edfc74bed3fd8cdc6fce0fe642c67dadced1cf64d0d0268ead415893ccfc",
+          "payloadSHA256": "bc52e808b08079f2f43998c375f8f43786fc316b6e89e5495aa34c3124d8e7d0",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -2783,7 +2783,7 @@
             },
             {
               "path": "Locales/sw/level0.xdelta",
-              "sha256": "df23675a2bb2899a964e5e6f4d483009a7aefa85fd4307a01cce2656180f030a"
+              "sha256": "89e84fa6764e917a7fd0024477092773bf6bf305704082b02e7bd15b1aa66b88"
             }
           ]
         },
@@ -2873,7 +2873,7 @@
         {
           "path": "level0",
           "originalSHA256": "1e1ecff0c6762585c7633da91ad07bf7c168f1d6118c0c483de6501f33ad802d",
-          "payloadSHA256": "ddfa84096d766c066a40f2dd041b242529f47501d2a9d1cc71ca532351eb4ec5",
+          "payloadSHA256": "cecab19572b2e30d06f4076ede7fdad7e1ff9c630a8adb8a1a0060018fcd6177",
           "artifacts": [
             {
               "path": "Base/ru/level0.xdelta",
@@ -2881,7 +2881,7 @@
             },
             {
               "path": "Locales/he/level0.xdelta",
-              "sha256": "13ea944994fe01be1b8d505485e3aa1946b02d55f8c22948de5af7ec4f45acba"
+              "sha256": "bc2863f7565dd5d77996d6559c5cd064b7b0c2d854d0016413b41151f734573a"
             }
           ]
         },

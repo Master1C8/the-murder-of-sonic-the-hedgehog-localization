@@ -43,6 +43,10 @@ is control data.
   `Conductor_Car` and `Final_Push`. The three dining-car variants intentionally
   share one display label. This mapping is mandatory for every locale and must
   fall back to the original display string for unknown environments.
+- Save-slot layout uses one runtime-build baseline for every locale: timestamp
+  size `18`, location size no greater than `28`. Locale-authored overrides may
+  reduce either value but may not raise it. This prevents the runtime English
+  timestamp from wrapping into the location line.
 
 ## Required gates for every locale
 
@@ -63,6 +67,8 @@ is control data.
 6. Managed-patch verification must prove that environment keys and save
    files are unchanged and that only the final save-slot location display path
    calls the locale mapping.
+7. Every locale build must contain the shared save-slot timestamp and location
+   collision guards; testing only the Russian or current locale is insufficient.
 
 These rules are enforced by `Tests/test_localization_pipeline.py` and are part
 of `Scripts/release-audit.sh`.

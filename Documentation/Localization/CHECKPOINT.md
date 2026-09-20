@@ -334,3 +334,27 @@
   without editing the installed game.
 - Fake-folder coverage includes both successful migration and refusal of a
   tampered legacy installation.
+
+## All-locale save-slot collision guard — 2026-09-20
+
+- Runtime evidence from the Chinese locale showed the same defect previously
+  found in Russian: the English save timestamp wrapped into a second line and
+  collided with the localized location label. The scene gives both labels
+  overlapping vertical regions, so this is a shared layout defect rather than
+  a Chinese translation defect.
+- The runtime builder now applies one bounded profile to all 30 locales:
+  `unity:level0:1538:m_text` uses font size/base size `18`, and
+  `unity:level0:1553:m_text` uses at most `28`. Existing smaller locale
+  overrides remain authoritative; larger overrides are rejected.
+- Every one of the 30 complete locale builds was reopened after serialization
+  and the actual two `level0` layout fields were verified. The unified payload
+  was then rebuilt and all 180 xdelta chains were decoded and SHA-256 verified.
+- The source strings, glossary, manual/overlay translation units, runtime
+  identifiers, fonts, and image plans were not changed. Texture translation
+  remains deferred and `imagesModified=false`.
+- The supplied Chinese screenshot is the runtime failure evidence. The other
+  29 locales received the same verified asset-level guard, but live in-game
+  visual QA was not claimed or performed in this correction cycle.
+- The payload builder now refuses a non-universal `xdelta3` input and preserves
+  its payload README, preventing an arm64-only helper from entering a release
+  rebuild.

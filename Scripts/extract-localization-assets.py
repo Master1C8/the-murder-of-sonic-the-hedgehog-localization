@@ -163,6 +163,22 @@ LEVEL0_LAYOUT_FIELD_OFFSETS = {
     "m_fontSizeBase": 196,
 }
 
+# SaveFileView gives its DateTime and Location labels overlapping vertical
+# regions. At the original 24 pt timestamp size, the longest runtime English
+# timestamp is wider than the 316-unit field and wraps onto a second line,
+# colliding with the localized location above it. Keep one shared safe baseline
+# for every locale; authored locale overrides may make either label smaller.
+SAVE_SLOT_LAYOUT_OVERRIDES = {
+    "unity:level0:1538:m_text": {
+        "m_fontSize": 18.0,
+        "m_fontSizeBase": 18.0,
+    },
+    "unity:level0:1553:m_text": {
+        "m_fontSize": 28.0,
+        "m_fontSizeBase": 28.0,
+    },
+}
+
 COMPLEX_SCRIPT_MODES = {
     "ar": 1,
     "fa": 1,
@@ -1269,6 +1285,26 @@ def validate_layout_overrides(
     return errors
 
 
+def effective_level0_layout_overrides(overlay: dict[str, Any]) -> dict[str, dict[str, float]]:
+    overrides = {
+        identifier: dict(fields)
+        for identifier, fields in SAVE_SLOT_LAYOUT_OVERRIDES.items()
+    }
+    for identifier, fields in overlay.get("layoutOverrides", {}).items():
+        if not identifier.startswith("unity:level0:"):
+            continue
+        target = overrides.setdefault(identifier, {})
+        target.update({field: float(value) for field, value in fields.items()})
+    for identifier, maximums in SAVE_SLOT_LAYOUT_OVERRIDES.items():
+        for field, maximum in maximums.items():
+            if overrides[identifier].get(field, maximum) > maximum:
+                raise SystemExit(
+                    f"Save-slot collision guard exceeded for {identifier} {field}: "
+                    f"{overrides[identifier][field]} > {maximum}"
+                )
+    return overrides
+
+
 def validate(args: argparse.Namespace) -> int:
     inventory = json.loads(args.inventory.read_text(encoding="utf-8"))
     overlay = json.loads(args.overlay.read_text(encoding="utf-8"))
@@ -1838,6 +1874,48 @@ def replace_level0_layout(
     return bytes(patched)
 
 
+def read_level0_layout(
+    raw: bytes,
+    fields: Iterable[str],
+    identifier: str,
+) -> dict[str, float]:
+    if len(raw) < 92:
+        raise SystemExit(f"Serialized component is too short for {identifier}")
+    text_length = struct.unpack_from("<I", raw, 88)[0]
+    text_padded_end = (92 + text_length + 3) & ~3
+    values: dict[str, float] = {}
+    for field in fields:
+        relative_offset = LEVEL0_LAYOUT_FIELD_OFFSETS.get(field)
+        if relative_offset is None:
+            raise SystemExit(f"Unsupported level0 layout field {field} for {identifier}")
+        offset = text_padded_end + relative_offset
+        if offset + 4 > len(raw):
+            raise SystemExit(f"Serialized layout field {field} is truncated for {identifier}")
+        values[field] = struct.unpack_from("<f", raw, offset)[0]
+    return values
+
+
+def verify_level0_layout(
+    UnityPy: Any,
+    path: Path,
+    expected: dict[str, dict[str, float]],
+) -> None:
+    environment = UnityPy.load(str(path))
+    objects = {getattr(obj, "path_id", 0): obj for obj in environment.objects}
+    for identifier, fields in expected.items():
+        path_id = int(identifier.split(":", 3)[2])
+        obj = objects.get(path_id)
+        if obj is None:
+            raise SystemExit(f"Built level0 object was not found for {identifier}")
+        actual = read_level0_layout(obj.get_raw_data(), fields, identifier)
+        normalized = {field: float(value) for field, value in fields.items()}
+        if actual != normalized:
+            raise SystemExit(
+                f"Built level0 layout verification failed for {identifier}: "
+                f"{actual!r} != {normalized!r}"
+            )
+
+
 def replace_level0_rtl(raw: bytes, enabled: bool, identifier: str) -> bytes:
     if not enabled:
         return raw
@@ -1880,6 +1958,7 @@ def patch_level0(
     if missing:
         raise SystemExit("level0 layout override has no translated row: " + ", ".join(missing))
     save_unity_environment(environment, output)
+    verify_level0_layout(UnityPy, output, layout_overrides)
     return len(rows)
 
 
@@ -2344,16 +2423,13 @@ def build_runtime_patch(
         font_file,
         font_name,
     )
+    level0_layout_overrides = effective_level0_layout_overrides(overlay)
     counts["level0"] = patch_level0(
         UnityPy,
         sources["level0"],
         outputs["level0"],
         level0_rows,
-        {
-            identifier: fields
-            for identifier, fields in overlay.get("layoutOverrides", {}).items()
-            if identifier.startswith("unity:level0:")
-        },
+        level0_layout_overrides,
         right_to_left=bool(shaping and shaping["rightToLeft"]),
     )
     (
@@ -2374,7 +2450,10 @@ def build_runtime_patch(
         font_name,
         right_to_left=bool(shaping and shaping["rightToLeft"]),
     )
-    counts["layoutOverrides"] = len(overlay.get("layoutOverrides", {}))
+    counts["layoutOverrides"] = len(level0_layout_overrides) + sum(
+        identifier.startswith("unity:defaultgroup:")
+        for identifier in overlay.get("layoutOverrides", {})
+    )
     counts["inventory"] = patch_inventory_bundle(
         UnityPy,
         sources["inventory"],

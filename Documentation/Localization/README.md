@@ -46,11 +46,14 @@ Locale-specific text fitting belongs in the optional `layoutOverrides` object,
 keyed by the same stable unit ID. Only allowlisted visual metrics may be set;
 text, IDs, control syntax, asset keys, and images must never be changed to solve
 a fit problem. The current schema supports `m_fontSize` and `m_fontSizeBase`
-for Addressables and `level0` TMP labels. The Russian runner HUD uses this
-mechanism to keep `КОЛЬЦА` on one line without abbreviating the translation;
-the same mechanism keeps the save-slot location and timestamp on separate
-lines. Scene overrides use verified offsets relative to the padded end of
-`m_text` and reject unexpected serialized values before patching.
+for Addressables and `level0` TMP labels. The runtime builder applies a shared
+save-slot baseline to all 30 locales: the timestamp is 18 pt and the location
+is at most 28 pt, with smaller authored overrides preserved. This keeps the
+longest runtime English timestamp on one line instead of colliding with the
+localized location. The Russian runner HUD separately uses the same mechanism
+to keep `КОЛЬЦА` on one line without abbreviating the translation. Scene
+overrides use verified offsets relative to the padded end of `m_text` and
+reject unexpected serialized values before patching.
 
 ## Re-extract
 
