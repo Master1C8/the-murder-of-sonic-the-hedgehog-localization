@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-20",
+  "runtimeLocale": "it",
+  "publishingLocale": "it",
+  "gameVersion": "1.01",
+  "steamBuildID": "20535215",
+  "captureMethod": "Oculix 4.0.0 guarded main-menu recognition with native macOS screencapture",
+  "resolution": {
+    "width": 2880,
+    "height": 1800
+  },
+  "automatedResult": "pass",
+  "visualReview": {
+    "status": "pass",
+    "findings": []
+  },
+  "result": "pass",
+  "activeLocaleVerified": true,
+  "restoration": {
+    "priorLocale": "ru",
+    "localeRestored": true,
+    "saveWritten": false
+  },
+  "screenshot": {
+    "file": "../upload/it-01-main-menu.png",
+    "sha256": "f773973bfc208d3f89d1a8cae96d6558d4c802609f2cedb2a47c5ddc8ab8fa2e"
+  }
+}
