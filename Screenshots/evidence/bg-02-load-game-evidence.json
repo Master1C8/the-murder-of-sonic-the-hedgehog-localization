@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-20",
+  "runtimeLocale": "bg",
+  "publishingLocale": "bg",
+  "screen": "load-game",
+  "gameVersion": "1.01",
+  "steamBuildID": "20535215",
+  "captureMethod": "Oculix 4.0.0 guarded main-menu-to-load-game recognition with native macOS screencapture",
+  "resolution": {
+    "width": 2880,
+    "height": 1800
+  },
+  "automatedResult": "pass",
+  "visualReview": {
+    "status": "fail",
+    "findings": [
+      "Slot 3 location Вагонът на Кондуктора wraps to two lines and overlaps the player name zel."
+    ]
+  },
+  "result": "visual-review-failed",
+  "activeLocaleVerified": true,
+  "restoration": {
+    "priorLocale": "ru",
+    "localeRestored": true,
+    "saveWritten": false
+  },
+  "screenshot": {
+    "file": "../upload/bg-02-load-game.png",
+    "sha256": "97c7543e639be0c34f55a79cb79bec9481142c9be4ca237313990c16e8018fcf"
+  }
+}

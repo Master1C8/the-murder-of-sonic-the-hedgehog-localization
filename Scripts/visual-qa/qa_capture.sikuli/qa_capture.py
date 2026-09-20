@@ -24,9 +24,18 @@ def fail(message, screen, runtime_dir):
     sys.exit(2)
 
 
-def find_marker(runtime_dir, timeout):
-    pattern_path = os.path.join(runtime_dir, "templates", "2x", "main-menu.png")
-    pattern = Pattern(pattern_path).similar(0.62)
+def native_input(runtime_dir, action, *arguments):
+    helper = os.path.join(runtime_dir, "cg-input")
+    command = [helper, action] + [str(argument) for argument in arguments]
+    status = subprocess.call(command)
+    if status != 0:
+        raise RuntimeError("CoreGraphics input failed: " + " ".join(command))
+    wait(0.8)
+
+
+def find_marker(runtime_dir, name, timeout, similarity=0.62):
+    pattern_path = os.path.join(runtime_dir, "templates", "2x", name + ".png")
+    pattern = Pattern(pattern_path).similar(similarity)
     native_path = os.path.join(runtime_dir, "native-state.png")
     normalized_path = os.path.join(runtime_dir, "native-state-rgb.png")
     deadline = time.time() + timeout
@@ -49,7 +58,22 @@ def find_marker(runtime_dir, timeout):
     return None
 
 
-def run_capture(screen, runtime_dir, code):
+def require_marker(screen, runtime_dir, name, timeout, similarity=0.62):
+    match = find_marker(runtime_dir, name, timeout, similarity)
+    if not match:
+        fail("state marker '%s' did not appear within %ss" % (name, timeout), screen, runtime_dir)
+    return match
+
+
+def capture(runtime_dir, filename):
+    output = os.path.join(runtime_dir, "raw", filename)
+    status = subprocess.call(["/usr/sbin/screencapture", "-x", output])
+    if status != 0 or not os.path.exists(output):
+        raise RuntimeError("native screenshot failed")
+    print("VN_VISUAL_QA_CAPTURED: " + output)
+
+
+def run_capture(screen, runtime_dir, code, scenario):
     status = subprocess.call([
         os.path.join(runtime_dir, "activate-app"),
         "com.Sonic-Social.The-Murder-of-Sonic-The-Hedgehog",
@@ -57,22 +81,27 @@ def run_capture(screen, runtime_dir, code):
     if status != 0:
         fail("could not activate the game bundle", screen, runtime_dir)
     wait(2.0)
-    if not find_marker(runtime_dir, 60):
-        fail("main-menu marker did not appear", screen, runtime_dir)
+    require_marker(screen, runtime_dir, "main-menu", 60, 0.62)
     wait(1.0)
-    output = os.path.join(runtime_dir, "raw", code + "-01-main-menu-raw.png")
-    status = subprocess.call(["/usr/sbin/screencapture", "-x", output])
-    if status != 0 or not os.path.exists(output):
-        raise RuntimeError("native screenshot failed")
-    print("VN_VISUAL_QA_CAPTURED: " + output)
+    if scenario == "main-menu":
+        capture(runtime_dir, code + "-01-main-menu-raw.png")
+    elif scenario == "load-game":
+        # CoreGraphics consumes the logical 1440x900 display coordinates,
+        # while native screencapture returns the 2880x1800 backing pixels.
+        native_input(runtime_dir, "click", 1200, 550)
+        require_marker(screen, runtime_dir, "load-game", 15, 0.72)
+        wait(1.0)
+        capture(runtime_dir, code + "-02-load-game-raw.png")
+    else:
+        raise RuntimeError("unknown capture scenario: " + scenario)
     print("VN_VISUAL_QA_AUTOMATION_OK: " + code)
 
 
 screen = Screen(0)
 try:
-    if len(sys.argv) != 4 or sys.argv[1] != "capture":
-        raise RuntimeError("expected capture mode, runtime directory, and locale")
-    run_capture(screen, sys.argv[2], sys.argv[3])
+    if len(sys.argv) != 5 or sys.argv[1] != "capture":
+        raise RuntimeError("expected capture mode, runtime directory, locale, and scenario")
+    run_capture(screen, sys.argv[2], sys.argv[3], sys.argv[4])
 except SystemExit:
     raise
 except BaseException as error:

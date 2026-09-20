@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-20",
+  "runtimeLocale": "uk",
+  "publishingLocale": "uk",
+  "screen": "load-game",
+  "gameVersion": "1.01",
+  "steamBuildID": "20535215",
+  "captureMethod": "Oculix 4.0.0 guarded main-menu-to-load-game recognition with native macOS screencapture",
+  "resolution": {
+    "width": 2880,
+    "height": 1800
+  },
+  "automatedResult": "pass",
+  "visualReview": {
+    "status": "fail",
+    "findings": [
+      "The LOAD title ЗАВАНТАЖИТИ wraps inside the word and overflows above and below its title badge."
+    ]
+  },
+  "result": "visual-review-failed",
+  "activeLocaleVerified": true,
+  "restoration": {
+    "priorLocale": "ru",
+    "localeRestored": true,
+    "saveWritten": false
+  },
+  "screenshot": {
+    "file": "../upload/uk-02-load-game.png",
+    "sha256": "219d33feedd4ca1725a12e5602a96fbd79b1d9295d5b02d310d217875d70b088"
+  }
+}

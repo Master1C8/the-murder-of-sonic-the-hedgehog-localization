@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-20",
+  "runtimeLocale": "he",
+  "publishingLocale": "he",
+  "screen": "load-game",
+  "gameVersion": "1.01",
+  "steamBuildID": "20535215",
+  "captureMethod": "Oculix 4.0.0 guarded main-menu-to-load-game recognition with native macOS screencapture",
+  "resolution": {
+    "width": 2880,
+    "height": 1800
+  },
+  "automatedResult": "pass",
+  "visualReview": {
+    "status": "fail",
+    "findings": [
+      "The RTL layout reverses the embedded Latin player name zel to lez and reverses the English date/time string in every slot."
+    ]
+  },
+  "result": "visual-review-failed",
+  "activeLocaleVerified": true,
+  "restoration": {
+    "priorLocale": "ru",
+    "localeRestored": true,
+    "saveWritten": false
+  },
+  "screenshot": {
+    "file": "../upload/he-02-load-game.png",
+    "sha256": "49ade411e22a8396fedf51b62f98d03ded8f41a5281b0daf5bdd54597de545d7"
+  }
+}

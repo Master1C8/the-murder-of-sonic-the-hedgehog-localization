@@ -1,16 +1,23 @@
 # Main-menu visual QA
 
 This runner adapts the checked-in Stardew Valley Oculix workflow to capture the
-same localized main menu for every Sonic locale. It uses the package's guarded
+same localized UI screens for every Sonic locale. It uses the package's guarded
 installer core as the locale adapter, verifies the receipt, launches through
-Steam, waits for the main-menu image marker, captures a native unannotated PNG,
-stops the game, restores the prior locale, and confirms that `SaveData.data`
-did not change.
+Steam, waits for image markers before and after transitions, captures native
+unannotated PNGs, stops the game, restores the prior locale, and confirms that
+`SaveData.data` did not change.
+
+The default `main-menu` scenario produces screenshot `01`. The `load-game`
+scenario guards the main menu, clicks Continue in calibrated logical Retina
+coordinates, guards the save-slot dialog, and produces screenshot `02` without
+opening or writing a save.
 
 ```sh
 python3 Scripts/visual-qa/run_visual_qa.py --list
 python3 Scripts/visual-qa/run_visual_qa.py ru
+python3 Scripts/visual-qa/run_visual_qa.py ru --screen load-game
 python3 Scripts/visual-qa/run_visual_qa.py --all
+python3 Scripts/visual-qa/run_visual_qa.py --all --screen load-game
 ```
 
 An all-locale run resumes missing captures and preserves every existing capture
