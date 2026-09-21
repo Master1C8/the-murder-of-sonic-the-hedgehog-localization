@@ -1,0 +1,4 @@
+#include <windows.h>
+
+101 ICON "Game.ico"
+1 RT_MANIFEST "Installer.manifest"

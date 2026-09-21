@@ -10,3 +10,4 @@
 - Provenance: the French fan patch remains research-only and none of its files or wording are shipped.
 - Release gate: `Scripts/release-audit.sh` validates all 30 locale manifests and payload artifacts, runs Python and Swift fake-folder tests, builds a universal arm64/x86_64 app, and verifies its signature.
 - Runtime/visual status: static payload reconstruction is verified for every file. Full multilingual in-game visual QA remains a separate future stage and is not claimed here.
+- Windows UI status: the native Win32 language-selection shell is stored under `Windows/`, reuses the game icon from `App/App.icns`, and has been compiled and visually checked on the Windows 11 Parallels target. It is currently an explicit development preview: the Windows 30-language payload and transactional installation path are not yet wired to its Install button, so it must not be presented as a release installer.
