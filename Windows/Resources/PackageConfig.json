@@ -1,0 +1,2992 @@
+{
+  "schemaVersion": 2,
+  "packageID": "fun.vnrevival.murder-of-sonic.languages",
+  "sourceLocale": "en",
+  "steamAppID": "2324650",
+  "steamBuildID": "20535215",
+  "gameVersion": "1.01",
+  "unityVersion": "2021.3.9f1",
+  "payloadReady": true,
+  "copy": {
+    "windowTitle": "VN Revival Languages for The Murder of Sonic the Hedgehog",
+    "selectLanguageTitle": "Choose a Language",
+    "preparingTitle": "VN Revival",
+    "installingTitle": "Installing Localization",
+    "readyTitle": "Ready",
+    "failedTitle": "Installation Failed",
+    "selectLanguageMessage": "This build includes 30 localizations. Choose the language to apply to the game.",
+    "languagePickerLabel": "Game Language",
+    "preparingMessage": "Preparing…",
+    "findingGameMessage": "Looking for the Steam version of the game…",
+    "gameNotFoundMessage": "The Steam version of the game was not found. Select its folder manually.",
+    "chooseGameTitle": "Choose the Game",
+    "chooseGameMessage": "Select the game folder in steamapps/common or The Murder of Sonic The Hedgehog.app.",
+    "chooseGamePrompt": "Choose",
+    "installingMessage": "Verifying and installing the selected VN Revival localization…",
+    "installedMessage": "Localization installed",
+    "launchingMessage": "Launching the game through Steam…",
+    "steamFailedMessage": "Could not open Steam. Launch the game from your Steam library.",
+    "installationErrorMessage": "Installation did not complete.",
+    "payloadNotReadyMessage": "The Steam version of the game was found, but the complete 30-language package is not ready to install.",
+    "installButton": "Install",
+    "changeLanguageButton": "Change Language",
+    "launchButton": "Launch Game",
+    "chooseGameButton": "Choose Game…",
+    "retryButton": "Retry",
+    "waitHint": "This may take a few minutes"
+  },
+  "languages": [
+    {
+      "siteLocale": "zh",
+      "runtimeCode": "zh",
+      "nativeLanguageName": "中文（简体）",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "b66cbe3c025658dfcda05b079b5d663c6aae8325e969f54ed0240a867c855a38",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/zh/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "78414f66a671c18be3da73b22ab1fb7ac15a3e8cb5b79166cea94442f131096c"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "40d765be4ab023a73648b9810f44a5d399dc9631d708afcafc4d6dec5123bd3a",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/zh/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "f1eb57b1fc7548f1af905a33f2201ee19f68feac00a824e29a908eb669439339"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "6a6c6330cd8aab6ffd984a6305f3d061fb9f327c87a87d460f1b9d018214373f",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/zh/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "776b54e6ee2fd45a16163d63e37c57956ad4559f4f7dcecd499570808b82072d"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "d73c9a97b9a8e94a0436545cee594182eb7a8354227dee2b38ae40d6494523d8",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/zh/778114755d294bcc99761211.xdelta",
+              "sha256": "b243f5fa1c65fd90214d5e15877145da96f6a4f3fe98e9d864622bbc43aab8d3"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "989a105d99964f18f74fbda94bbabaace905dcfc4f33f37b5f85e3315030ea0c",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/zh/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "094b6b4f624c6625de25cb74dfc752f45b790528934a605062f49c257cd30a97"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "fb9de576b5fec9d2cd58c9e4f99e6ff7c68f13e5a8b7fcff2a82da57594c5125",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/zh/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "cee6edc1e9dc104eac60c483a602dde9a67194a29cf8884e9dda6d69d00f3aae"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "ru",
+      "runtimeCode": "ru",
+      "nativeLanguageName": "русский",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "8cb22db4a3a70211ce7a916cad3e847f7fc5634cd639ce1e9bf37ac6b206f687",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "d78a77e19a35a4cb4e803c27a876d36e7d7dda29651ba4b320f432b81027b604",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "a4f3f6ced8b8fc81695cc4789680c2fabf8fe3633dccc24ea4cc70ba5fa929ec",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "e41f44f042d59bad049e2118708a0f2c4221eaf3cb6878b42eb9d0091967e026",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "8e99241325487afcb3b941860d8c2616831e8ec3d8f93a984bd3409ed168c948",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "86bada89d8bed98df0e374faee4b5285aa140a377b65f4c0296911abad2b9504",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "es",
+      "runtimeCode": "es",
+      "nativeLanguageName": "español",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "d63bb27166c45de9655420ef5459908d9915ae7eb04073b9165114b978cf6329",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/es/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "1f4c8877d63b2f7ace6dba448a328b0622246244310c77e6d02d177c8bc25f94"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "679a4ea911a690026d143f0f83f2cc5cd7557662ddec5066ed148607a46bca6f",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/es/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "896d921c9cc1ef7aa6f617dba98dbaae93f4f5ac614c70425710d4b668f19ad1"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "57eecf4c45a18cbc9a73bd8e13cbdd18fee65133ba7c602098b102aa4753460f",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/es/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "b3b38682d13ee874d27d9c59bbe5611be213780e39ebf6650aa0f2ad9ee6a2a7"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "fce1c200cfd4460b7ac849355df8f7ddf1e667d272dfec12a009ab3bd7f98dd0",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/es/778114755d294bcc99761211.xdelta",
+              "sha256": "6b18e6b712e455ce2e40586e62269a871a486f94d02a0b53b6e41330f0d1e73f"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "77d7e18c752447c7ac31b60d676afd189aee9edd97da420b2f7133124283020c",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/es/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "0cd3eecc2dcc125444d6e96069571d614bce2d6be7ee66ddcb947b0fd52dfb80"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "6b54097bcd88206184023749c9cf3808e137eedeba54ca9069d36265f5ba0dd7",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/es/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "3f2f6cb8e26e1f9475e6e956cafd04df5c3b97132f963cdb6929078be950b9cb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "es-419",
+      "runtimeCode": "es-419",
+      "nativeLanguageName": "español latinoamericano",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "6ca8bd77ae6a27f6f10f194efa3a869c0273db046de79e18159eaf9570d67926",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/es-419/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "02f022a58a2007673bff176b5a195f4f9fecf5d9031fb2a511c26e223fff46c1"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "849b09bcc34f8383e52c5bfc617da89399af6950027c5295341a0fd39f3eadd9",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/es-419/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "d7eb07cd6c4f070c9cfbb235900fc83d671351851267b682ee87c769a0ea7b3c"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "7b34d6425380f6cbde04d46b861aa1a47871bc8ce3c775b245f6ed5b81c30cd6",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/es-419/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "4db0953ed42f0f8af3b04abad6409f3801447ce737e5d3643cd9c0bdea248e93"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "5e93d9e23fd67fed61e067f673d739efaf7604aa694b920d869ef36c777da9e7",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/es-419/778114755d294bcc99761211.xdelta",
+              "sha256": "e3dd284ae4c6c942b51da26c4402fff7938e2ea428b5fd84d1a155409883d587"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "1e3d9d6e1f869ffac6c7ff13884533d1363b88e0d9973b263a2ef0b09ce9ad2e",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/es-419/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "bf59ae607bbe18ccc54e0ba157a7124c358bb148166aa79bb0b38b76baa09e3f"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "32369236b3e885b8f9ca8463d461fc9d5acf7aad6beb46700f4b7a9dae226434",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/es-419/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "a894e0b38557805db765527e28f081384b3c103ab593f87d870e8635e23289ed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "pt-BR",
+      "runtimeCode": "pt-BR",
+      "nativeLanguageName": "português (Brasil)",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "7875f0ed71bdf332e371ed2d2ae954386eb46f92df5cfc9a3d3a9408ad906421",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/pt-BR/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "cb2dde33b5a6225c8c714b0da9600992f2d55798384070726b875620976eecc8"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "eee877c2939636ac68528973383f9b8e1ff4d4b21252916e07fa7a2044ef168a",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/pt-BR/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "b316f8153f746c81f799846ef3066cdf0b414ba0a61efc0885ab4d92f22e8e3c"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "c0fcfde65a69e10aa73a1a11c2f7a354a7549f6aa6b4e1a990ee42c555087c95",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/pt-BR/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f2d7099f3d1501a6a1601726ae93bf54350b3a68e0c34cca4792cc3d3ed6557e"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "0e49095e87c9ea8d2641d3ca8a962597288c6a501675177c4260fc3d5731a952",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/pt-BR/778114755d294bcc99761211.xdelta",
+              "sha256": "d5610704dd18333dfe779c1baba40db3b0f426fe3416f56458c75008b7447ebf"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "cd2d7f51895456dafe4931c68687af7edbcc7f8daca1f04c45687bef844eb8ed",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/pt-BR/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "c797160163f1d66f92608b27f63d86801dc05eb2e88ca0aa68f1f891f8311190"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "2fa23008acb00afb77abb8a572e88fb112ae3d47eb498497041b31de6b88c751",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/pt-BR/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "7248ea7ee4f285035728a32b79e8097244f4d8cd3048c5eebf93c4231cfe3891"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "ja",
+      "runtimeCode": "ja",
+      "nativeLanguageName": "日本語",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "3cbf54a6f2c8dfa86add04348c7dad8a00888b526b51b4417d6338a65a9d4adc",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/ja/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e633ad6c50bb2ed88854c8c414ad853d8ba204f07867ed8730163597fa918857"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "028dcef4d5eecea7946a31e6aa9c9690cea8346285690a818c1f8d566b131a1b",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/ja/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "a158ec535db6cd9c0914de6f49e9151e1bcf038eae3f63ec4f1bb699f8b02974"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "1258a13440630c76b63d1eb623d5bb1b7c6be0a1316ecb3c3a0703e2eb2e0549",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/ja/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "dbfeeb0577f266036be28e24972fa48c85b615d43638055c40fcaa4e7d93b22a"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "946a46d799b368e7b09f058330bfa11e9eb9704c587dc54a2f336995ca226415",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/ja/778114755d294bcc99761211.xdelta",
+              "sha256": "821fd389e4c00c74946c410fa1f957d5d87479d8f369d61c45c1297011e8d447"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "9cb5c5eafb6e5ebde1a434e5809f350da385adc2e34b718e3a8b9e934ac978b5",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/ja/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "9c5389535dcc6d811ab9176bca1b2086db64f4057d31229a0730acff78d41ed7"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "da105658c09f88cfe99365c87b199a4962ef9fcc86d36fe8ff16c95a776137f6",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/ja/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "f781cb0d341c22da5c0fdc739c8c8f8ead713d73cbbe6300f75f4ac2c99a12d5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "de",
+      "runtimeCode": "de",
+      "nativeLanguageName": "Deutsch",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "b24c909fbe30d163c934efb887f92404da04cf3136130632156e3901f6e4db5d",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/de/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "3d8bcff2c8e332d8609414f650e2d553242560500f879285783d1d44e0e49b5a"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "4930ae5c716f137f808fe420cc36b25947a7f22a7fd351276c603edec233c12b",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/de/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "2f48d9e856b7cd41468198456c03efc409791c8b24a6cfbab069591c4db95788"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "c4196644f40e129156ceafefc3d3980d7079c04771c24924764a295742df2e13",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/de/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "a652213f041ba3a19563472c29f050a55db865c726c46b55c5dfd09a8e9a6875"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "b31b6020b45faac453dc33d893e20a7d02ba3b13a165579dcfe585f145d4c901",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/de/778114755d294bcc99761211.xdelta",
+              "sha256": "98c5975c8732d48a4839b9f062279a70f83950eb935dc46ce83336d0374065e1"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "bedcb636104d52b2eace8c55c12a216c555d23ca34828f9815e28c5e043e964a",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/de/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "7151a75d94e4743c533952d7f4a66dfd0e60b17de7223cb58acf88874393428a"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "bce152be065efb53d3d8554525ab08f0d5686501b31ae500af074f0f6caa9a4d",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/de/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "1e3e9ad4b5a0e57f630a2bdbdeaaf033d12f5a783e7eb5dcfd16d4daedfa2a03"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "ko",
+      "runtimeCode": "ko",
+      "nativeLanguageName": "한국어",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "ac3dcb7d99437d8420b069253ab1745efef848304b6ffcfc009436d2a3c51376",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/ko/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "efff539c742f95a4eaac2e11a34f276d5f00e820936e2395bce9821dde51e833"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "e24e7ebc09691d86346da783a0b5466665090f579f0c45f5326d36c00c9099ef",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/ko/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "9464d3272c773ebd9070397fbdfe6ad0bc088e9c9a426f2c301775d75812058c"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "49390b6d5a9648c8cfa6c6c09578449552b002a2f79531033100709a132a958b",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/ko/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "3c7c294d51838e23e12850b49171381c10f51cdc0a28b5e4becb6e777913f696"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "99423d1181b89effd9957bf8d3f2fcb8174b1e6a946f17290e6c479e8f74db8b",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/ko/778114755d294bcc99761211.xdelta",
+              "sha256": "f8e1575b0aea4f78074ca0280a264c85f992d261f824a0d5b49a6e219ea2bd49"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "d851bdb569055d10ec6f543df730417d39a44235fd4de6f4f34f38513a9a1d23",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/ko/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "53d7ec09322f5fe7e0c28ee0707f6e643e2170722fe52b53f07a7c41818d290a"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "509ad447647ff06a984be852bc95482549890fdf0d9d22f31499cb3005da1a65",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/ko/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "880094b3126d25fa59eeb1122b986b445efdf1a21a34b1c67bd721fda2e7c37c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "fr",
+      "runtimeCode": "fr",
+      "nativeLanguageName": "français",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "94e25d22600050839f8d53ea549d552c9dca4ec5aeb33fbcee5f3b353e01e888",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/fr/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "15d67e80c96531b8331199b356e197e68e0699a7f9023bd3bd4232ddbfb5fcde"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "5a2bf9132f13ea03cbe12a0c4d6a427310697d2cb29184d31a6b6b059ef32fbc",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/fr/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "4f4cdde03a63e33101d704ef435431d8afb4cfad74201dfec1629223c052f8f6"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "4dd96b9d87e6194787befb264658ac006b28faa349848ab05d429abf255e1e6d",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/fr/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "1bb4c23f99a40400e26824000a385502590f504ae87550db03f1e88b95203f59"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "75d05e5df5de16955fd6d4d047b8c93f91b53e9b574365c0693e324adf08951e",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/fr/778114755d294bcc99761211.xdelta",
+              "sha256": "8df06ebaff72378e3e2428f285d5d94e046ffc73e58ca7ea7b4d27b7e3f1732f"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "f657931a924212bbd881d69e19286ccf2fe3e4c673be8705e16b6b3f9e13c3b0",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/fr/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "f68dadf2224e7ce042003ef3fa4f913830bd941fc336336a2599bcd147cf6520"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "906ae555ba99ad12919271bdbe56548fdc32680da8f16f942c46abec59ef236d",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/fr/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "7ff4e7f4cb3c66bae8650e426c4e8f6f862a5201cff31731955d7ca3f5ae467b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "tr",
+      "runtimeCode": "tr",
+      "nativeLanguageName": "Türkçe",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "cae2b9ebda54f2d517fa6d46b69d0c87d42a021ab848da516715f6f0e3121d56",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/tr/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "2922d4e3a49cfaf81d966a66c28607ab914d55b54eb832083a6930900e135df1"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "77a60514deee84cd44af47b39a60a3500b9996b92e0952c72dd44707e3779c10",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/tr/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "92fbbdaa6153a35fc9c9a98ddc5d04942bb4a3e5a694489443cc8634afdb961f"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "ab9fa69f971912f63d697abe5c49a69a752191064e847209aeab97299e1f3189",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/tr/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "df806769e65a921458cbcb63591e2618796389a9484d7d6cb62f750e439cc5eb"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "c7deee1d648271297eb385ce117f903fdb2a64985cb48c5a45e991802866057e",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/tr/778114755d294bcc99761211.xdelta",
+              "sha256": "901a0ceaae251004d07181d2fcd3e6e7ce2f898a0879647e318b69afb9cd814c"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "e9422d827675b77a4432a7d9db63f8a7e33f6616e4fb1e17a89e7a1186b0af16",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/tr/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "c1d1099766b2334d0e63e03c7a4466aa8de09408f64fdf9838ee6018e4265908"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "7fd9a54d0a9150e07001ddfb9b83d9cc409411e566932f27c8fdf64073324f70",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/tr/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "53b91155550ace76d13537c22a377fe0571a1996d785fffd2c5ae79cd42f03cf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "pl",
+      "runtimeCode": "pl",
+      "nativeLanguageName": "polski",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "ded91a459869e516beca4da561c135584fb675ac7e4b6939b8c0eb54318e26f6",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/pl/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "42a2b73440a26218933f92a49286961f6f94442fae5fe3c2d031b1663d20286f"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "aa13284844e84578732d8cfaf8c8f5c166d475edecde8e1505b8a1465e26fc7d",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/pl/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "93523fddff7195f2c2880593415b86dc819eb0a917db7906232e41ee1e626a6b"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "2e4a03bf65248536309073f4a47cfdbb710e487d88c7eb5bfddfc1eb57d8b850",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/pl/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "1fbcb376361937e95eb6b505b7950832edf3d61d426046566476a213d5464e92"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "0a6ed1e5dbecc0779760a4c6ee222cfa8a78a72744a09abc0e542d584c7946e4",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/pl/778114755d294bcc99761211.xdelta",
+              "sha256": "82c934519d5ec8c7ab4ccb26ac04d94b9be95e1bc89921f0dee6947feedd2c19"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "7a6f39748fa3655a7a3208d907c2309b340f35cef11b7ff7638cd6fedb8976bd",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/pl/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "7cce19f2415682d52952460e31cafedab67abf36f07fd1be8b3132bf6a668dde"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "e8886a3da978a518563072a4cea7c47fa30f662ac0db88ef3bbf5baeec393158",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/pl/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "58d3f5074a297a550d2562678ddddff00617b402f5809b268cba5e1fce083cc9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "zh-TW",
+      "runtimeCode": "zh-TW",
+      "nativeLanguageName": "中文（繁體）",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "1189c61f097474f8e1e0c5a30ba48d672def5025cf5f6aa63d1120fca21ebc9e",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/zh-TW/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "94a70df118343bd74ecb113db26b93aa9cbb12581cb362bbfccc3344f1600d5a"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "7255c6ea050b24948901e02bdcd4d8ee15d131206f431e3ea22b7a18f1dbf1c9",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/zh-TW/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "481238d559e2de6fcdae1d7de0142e9b5cda65d2b61288dc378b336c52f538e2"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "971b323ed7dac177fd304b698cc894a236802d1d289080133a42896c2c5041dd",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/zh-TW/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "2c2ab4b97b0062b79859ba9c0e71d2397466abe26ebf3e693578fab484974822"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "010b3615b0ea2e07e5525bf1860a13ad9eaf5acc1f708dc3ff04ea9c7ec43da2",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/zh-TW/778114755d294bcc99761211.xdelta",
+              "sha256": "13caac1d454fbe81d2f8c5e2730cfa2a98ed2eb2ad7114ba43c9279e10dbfd53"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "4ff0bb2ff72973fd585461f15d4f701c977b94bcc2fbb386b770b5f602a67a24",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/zh-TW/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "788ab5420b6d7175888aa088d6540b0feefc3a0eed318a2b951003cdfc2533ac"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "89ba4239decf6250179be90b374e0ff620166db573b885a6745a35b27169d0d7",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/zh-TW/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "768036260a666b3c6b7624e024aebbcf58d0a90a2fcf2ef64ae19d3adb61aaa0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "it",
+      "runtimeCode": "it",
+      "nativeLanguageName": "italiano",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "baff8065851fb9f33ca6780def62cb8b6b9390c74b0746e1543226db3f6eb3d0",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/it/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "2b6ce51dd85a8d609c239f93585c505571e6f005b369f98d210bf883e938b7cc"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "5d4568266bb529e8ffbe5fdd6e31dcf284cd47e95bf2548614043097187d6574",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/it/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "b1e4c2a847c6e61c8bf809cfc835dd100b75a40b6ff33b57bdf0b783fc02e00b"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "ae97362994886cf11cbf91b98b11f95b82da400f1bbc10a8e1e644440b432225",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/it/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "914d969abc55eccc30bd0a07a15d6c7985d023dfd87d5b8024a54ccdaad19207"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "e692a6d463f1b9d7777dad54bb86d34eefa6251026e83c84803006bbff65c5ee",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/it/778114755d294bcc99761211.xdelta",
+              "sha256": "c2ef666d00e2cf0754fc7c8dc9cdf678fffd6cb3bb94e2b7a5b4fef132ff35d5"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "fc4781dd2afb8b531bf6687d140eaa6786baa33b6243de0da2c7baea992bf144",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/it/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "07bb3bf41aa95720f790817cf688b84675d2278e85686056a1cdb6691aab8f4a"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "66da4ca762c66bdf631fd40318e687d23cb845814fd601aba2cdd5dab33248cd",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/it/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "e2f3a39c080257f645ef3f39165705bbbfcccba0f477e4d9f7b8d3f901d266cb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "th",
+      "runtimeCode": "th",
+      "nativeLanguageName": "ไทย",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "b0e946e2a570564e8bd81d2b0758e21a8d3e861bb9117889b16711036eeb9ada",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/th/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "fa9927215674a8e284422f8aa6e9b04c7878e1e2e630de075163897b6c5f1715"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "dfea5c319ec8558e82393dc01ab79ca561686f542d66fa54e54cbd60da8c4cb1",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/th/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "6e80990163a53ed4c3f5224eb3bae832b64bd904694fffa5e3cbf27936b4f578"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "531502d1c4f1265f7ed2e50e76cef3ef4484a418133209e37d3907b4078b246a",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/th/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "cc235c8b6c17f748310721585a620181f6bf5965a48e97fd7183b66868141f6b"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "6c9092e3edc4d41ba7f4506959b585bc53e098ad7befe935a44c41a2f8f8b90f",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/th/778114755d294bcc99761211.xdelta",
+              "sha256": "427dff561470eaf611821b94f46a39da83eb53f29ecf042d5d1eea9586239908"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "d2b0431e186124475b6b6729be56d7fbac9b81f8d5f418086c7c3025e6c0e189",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/th/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "77d3c059ac079900af4c0a441896e87723db03aad1bf855441e9cd9c8985d892"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "6f87d120fe0bea057254545ec67dbeb2dbc14884462e773e6751a172932c5fce",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/th/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "efa87eab8c708d5b7675efe8dbd05dcb7e7684febade9bc830caa052fea37f02"
+            }
+          ]
+        },
+        {
+          "path": "Managed/VNRevival.TextShaper.dll",
+          "originalSHA256": null,
+          "payloadSHA256": "b73fbb6cf734cb039783e1c5044eb9efcae334beb1f7939d66fcf8cc33d80372",
+          "payloadPath": "F/th/6d4e6a88989e129bd9773e37-VNRevival.TextShaper.dll",
+          "artifactSHA256": "b73fbb6cf734cb039783e1c5044eb9efcae334beb1f7939d66fcf8cc33d80372"
+        }
+      ]
+    },
+    {
+      "siteLocale": "vi",
+      "runtimeCode": "vi",
+      "nativeLanguageName": "Tiếng Việt",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "a21c7e610adaf8324995149882c7f423ff4faca2df780a173f2363bfdac93110",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/vi/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "09d106df877ab16dabd0d61ce39ea1ea378be03048f2aecefbaebb271bad43da"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "de0580eb40e4df793337973c73d12e799592021c3bfee3937283557d005ac54f",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/vi/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "522aaa39c47da1c77f3f957f9b560074ac7cf2ba278d8a8d44ba6b18d49c900e"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "8eea6b1231c5052f98929f12e603ece3753f9098e7000171ed7e3a7435401773",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/vi/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "fc3394c01289068fd943943391842e1bc34042a33ab3ffac668280fcd03446cf"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "7e9a493f5a0457e7e8c6fe5b3426163991691e998a61490d23061ae7dffefd0d",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/vi/778114755d294bcc99761211.xdelta",
+              "sha256": "0ebbdcac0322ce129cc07dc25078242c6cb057722a86c6e98b734b13e94372ef"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "a08365f4ffe5452bbe1f9ab1eacf3fb46e59242dbafa354bf2b5ff819a05867f",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/vi/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "56e010d40ad75f21d24d18849b669173c332e43cb0344de3f5647f81f65d6b8c"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "938af24155f6b4e5d5905d009400da0050a6a10718593a0c52dcfdea4d2281c3",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/vi/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "7144378faa32ab03666a0760f864abfb3f888911cd0e0b61e367348fc1f82eca"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "id",
+      "runtimeCode": "id",
+      "nativeLanguageName": "Bahasa Indonesia",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "03801e785960635c6a2c529ef27aed702cf0ae3b1a1e44105e872d118d917022",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/id/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "bd99b0ecc98173412660a1c8569e183611cbcab8e48edda0af26493ab4426f28"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "b2721123d47c05166209c5976874988019959c23480145e448dd017181c5d79c",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/id/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "3d94028a5dc852c36cc51de35bd4693581252a3e8e915526e9cd48b739ffb143"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "b23307f2de4196fa516581dc9b6996b08be72a552b37e55fce3265572d452cc1",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/id/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "d1b97fe49e52de74a06f8a3ad045787249a262030e045c6ee4b6e710a6d3b184"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "a202ec17b348cff2a833b2a43639fa9ad8c625b6517e7b4b500250a970e67405",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/id/778114755d294bcc99761211.xdelta",
+              "sha256": "d70f51a7e9c10718da2a5e40482cfcbfc4b5e64f54296799a4019d485d9f852e"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "d038b88b1116c9ec524c18be20683f98cb1a7374d47d0a9370ab2cef4628c63e",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/id/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "4b88f519093301a12f9a88658036984e1688990750dcb6d0a53c593dd1bffd28"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "5c5d0933dfd75c29e51c6defb7071b3d586380b968186549e48bc7e6bee6cf0f",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/id/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "4aa5fab816cc517af30636438d2608f4cf59d2c9624d2bdc967c57e025c72b8a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "uk",
+      "runtimeCode": "uk",
+      "nativeLanguageName": "українська",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "8e074b642100a14e00f855f53852010fa01605bd19f38d00fa6b3f97cf457c08",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/uk/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "fa2dadf6f9674375004856f3ad55834b40477787e8a7b0b6c32ba200de2b5c58"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "c0d9de4e78dda21c2471e7a06411a28e4a6127ac7d701e69ccb5a64ca021543b",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/uk/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "f4f2d075e5b7e2e0682dd234c3a76f6e5791190ff1087e591c3b82a805398960"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "9847306a5f50f3472230e44efc53fc1c72007239bb124baffa84d368eea1ae98",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/uk/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "a42b5f8f967b1019bee57f6f26b7767a7f0ecaebc39f4b1aef46bd0ac1dc377f"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "d0aa72249f157d0ed8af1f330d53aa79dba3d080f8e958fe036a4ae66ed246bc",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/uk/778114755d294bcc99761211.xdelta",
+              "sha256": "dd1c88916ce2a42596c5db2714f90d10c2d6a3af0915e9375cdff077606c093f"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "0de01d2876d32f8b81b6f1902320d9368ceaaa10eac61685c6c7f561d8da4d1c",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/uk/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "f1345978cc44c3223c21f3d7d22264f37fc9c3b78e935047a4a6303cd1c46e17"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "064f1c9c640ba9741967de6d52207575841dd759543b09e205761b1b6dfcfd35",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/uk/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "f9bd7aa5f4cc5b2edb53aa2655c87c27c271bd5186ad1739f7f3aa252a94ab56"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "ar",
+      "runtimeCode": "ar",
+      "nativeLanguageName": "العربية",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "6647a2cbd8c43c839c3b55f8c9a936c6e1d84b736fa7d097fab6920e291220f5",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/ar/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "cd771d91d3a200b773f3c5fcf69303f4f0325c9a8b53f720d2e7af1445b257ab"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "688588c41ab274d10eb7313a45ada17326ab398c4ab4e62f3e6f753cc9b1b2bf",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/ar/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "5a9245968b1a25de466c03df2180cd6a556b1106dd5fae772d67a884217f8a4c"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "f219fa4082e1d38ff1186596150622e9a57bd15b52f7cb461bef027826e57de4",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/ar/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "2d1d7a75fdfae098ac312a12169b909a0d01a87994cccd8edfba6bee4ce25676"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "55cd840643cdf9ccc3764b8608037005c5376f189cbbb794b0e04e8c2acbe517",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/ar/778114755d294bcc99761211.xdelta",
+              "sha256": "669275d592e2742626f05f5fcd48ca06ac26c547acf81670dd80025f0f5c42ae"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "50eeb7e3f2d9d4a24ae2edd56cdf390d21b8ca0f291e93708fea28c64eacf6c2",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/ar/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "076042f7dbe82292821ac0c949bdf0ef7eed793ce1d7ae89b0864c5f35b53fb5"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "f1f29c4cefaf4e36179edfdf1145067a78567d42a6dbdeed874f1012c9ca2321",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/ar/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "655d305e2069d18dda6bb3fc564085c3b9b0a45c0174694d836c0989f26b1dee"
+            }
+          ]
+        },
+        {
+          "path": "Managed/VNRevival.TextShaper.dll",
+          "originalSHA256": null,
+          "payloadSHA256": "ef5f64161683d38c31805fee69c39982123b1d4617436341b2e0906f7b20e058",
+          "payloadPath": "F/ar/6d4e6a88989e129bd9773e37-VNRevival.TextShaper.dll",
+          "artifactSHA256": "ef5f64161683d38c31805fee69c39982123b1d4617436341b2e0906f7b20e058"
+        }
+      ]
+    },
+    {
+      "siteLocale": "cs",
+      "runtimeCode": "cs",
+      "nativeLanguageName": "čeština",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "f7ecc0cc78410c398035a85b1e0e9efad789220af375c645756158acc5ad5ac8",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/cs/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "2640a59cd966fdedc548b5e5be2efeb04ef9e46434725064fc49a100618d2313"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "8877d756e4d2ca1dc099d7dd388ea4a3571b84769bba285664d5500fade9595d",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/cs/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "7f125c27bfe45e8900d882b691bae8210e07c61a49fa31c131eabe9568d39cc0"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "e75ed2ed41be4bf146e66439008cde11e74db2823a24a908abdd2bb59e0e9db2",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/cs/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "194a73de268ae7ecb9c0775428a8f563c74b8645d97e0780420db73dd76101ef"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "dd6c600ecb41a514dd74988dff1c5156526df43637fe8eeb35992814750c8009",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/cs/778114755d294bcc99761211.xdelta",
+              "sha256": "f275348f62a43a410da7f1dce6b266fe25673a0f295f06a38e4c45ea021e08c6"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "3e069200265c29bc4b6e7ef7bd232898df28877147e33e4e218070a2889555e8",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/cs/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "1ffefdd53ec3f5d15232678f1eb7d9ee6519d53fd3b9e94f3201927ddeb8b9df"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "35f755ed6b51a9e74069104dbb68c5768126e0c8cf0425671a2b6c255697c785",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/cs/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "ea6c78a12b642ee04b9372066d553d1809110f3b79fb41456188710655ad7adb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "hu",
+      "runtimeCode": "hu",
+      "nativeLanguageName": "magyar",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "c06829e6841e5d2da40f9697aec1fa64bf8e860c8fc8dd4af4350565c5d6ee2a",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/hu/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "71acd7167d68e9a97c0299d8067151088e4444aa2bfce7fa2bb4dd793a608256"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "b576942781797a776dfb39ee2ae5e9b7544c260aa899053aecac1175f0cf2b6e",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/hu/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "bdefe6887287dd0ee89f46faeff7fe59b9113e94c973212192712f2eba89b1b8"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "5f688e6a60372378305eae1aca94d3b1fe3f69afaff9151f91b47ea7e4e8da54",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/hu/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "1d9a3986af730097e6219342ab7780cbdd60e551dc3c93edf020fb25e3e90bda"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "aa8723daac4f88d4252847aa098047a40f41c50ff587e6f407f89d55bf62e8c5",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/hu/778114755d294bcc99761211.xdelta",
+              "sha256": "5cc30f5ad23adc5df26e88c3687cb991eccc8f43adeaa22f0ece5794be0205d5"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "22e4eff15cd44e0e6d9bcb4868b7b2955168d6a44a1355c517745ba90360bca5",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/hu/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "6579ab8ac8796d900eb604a5e77199d0ac552b94ac061c004bed6ed116aa2d50"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "271af1b6fd1d929d2e85dc0b50cb8b506f74ff3dbef10be3898fc70972619439",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/hu/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "60fba4a7f5ee0f46482734e8793b131a2bf67d344f24f09051676aba692b9f09"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "nl",
+      "runtimeCode": "nl",
+      "nativeLanguageName": "Nederlands",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "116d90a4f309419b629890352974d85d7c1c6315509d6099cddeaba481eef4d9",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/nl/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "008f041e4aab0ffc08b43aba4dbc9fa881e5e9dea4694beb4b3a9bd509dae430"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "524a3f8f3b2d41380f0587fd2773165fcd68c9e7117902a3595be2935966bdbd",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/nl/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "4c5d2ec5e637a8fc9f8e2b58678baabb87e47e83e915f7bebe2be8eea996b3c5"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "b5dd38fd70673216f6e22d6b945b9d24486d6fd0b9a71924f2945db41a766633",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/nl/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "c0d82ffebfb8b7f17b806be1673f1f10b359c54d74780ac17a5a5978cb429d48"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "1ef3c9d1d86f9d2f4f075a9e971b7cf0e29889c34ba690d2b604f47c4a858ebd",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/nl/778114755d294bcc99761211.xdelta",
+              "sha256": "7384369e82ecaef89757b4bbec50a2c8f056034c16ee2ecbbdca51b0a95e69c5"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "c2822b17ad95b7cb76f090cfd4b6d7e54a2d0f9373522fc61de52ef5eeec743d",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/nl/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "ff85439b2b3e160c7beed0aa955f3d207ac6d0b27724cc09084a5b5e891820b0"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "f02370f6cf0027467336558ebfd8dd5dfd085f49a833bcf7634cc271e291c876",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/nl/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "6a64f010f71537d51c9f3c1689093c3a25ba1c746316fa05c373fcaa9a919447"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "fa",
+      "runtimeCode": "fa",
+      "nativeLanguageName": "فارسی",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "863e02f09470edc046dbb4725dc77e20c5c7c8b321e060f28e4e89056951a804",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/fa/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e0b628ca059f02996059586e5e83775ed2a17abaa87040f47d67d02f8a66c773"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "b32fdac2fcc484f22557089934dd7d0ba7dba8fc81d64cfd66982010d41eaca0",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/fa/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "681f23c43ba6900b1ae2f665c68363195c5daa546a41e5f512814e98663b618c"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "22b4bc27c38249cce2d8e88366a59f9cca604a2751020fcbcfe04aadd0924d3c",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/fa/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "47c96b568e3378fbecfee5ffa1c13ed45f9db327ea767ca8dd919085703ac8d0"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "c45a2666013223fcfac4eedd83661621fe7441a6404fb994e98c1581675a05d7",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/fa/778114755d294bcc99761211.xdelta",
+              "sha256": "55944225134bf8c2003c97e0f7a54f15ef6613ad88bd6e650ca72f2a0170c966"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "862ea471a53fbec94af4288e2a454ef1d37652cee5911bbd21e946e65eba01ab",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/fa/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "93229033331b87b6dd569e00b8cc6932ee09d6eafc4ab5b62ea258e750043995"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "57cab43778d0979d39a3c0f59a861ef9859ea6af869a9de0a50a1dae5598405e",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/fa/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "6c8c61335726c5e39d2a41220e06d9c22c7232e77b453cba983e82347ae97cc6"
+            }
+          ]
+        },
+        {
+          "path": "Managed/VNRevival.TextShaper.dll",
+          "originalSHA256": null,
+          "payloadSHA256": "4a7f0544677bd8ffe15e949f901b071619ce7fa05dc8ccdd62d1ed8ea7d7acca",
+          "payloadPath": "F/fa/6d4e6a88989e129bd9773e37-VNRevival.TextShaper.dll",
+          "artifactSHA256": "4a7f0544677bd8ffe15e949f901b071619ce7fa05dc8ccdd62d1ed8ea7d7acca"
+        }
+      ]
+    },
+    {
+      "siteLocale": "ro",
+      "runtimeCode": "ro",
+      "nativeLanguageName": "română",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "5764073f5fb2326864ad76e6848519648cf1dce01bd63deacd9fb66a5fc6e645",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/ro/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "9e3233250ebf9cb99a378bf2a442464a28b40e025d6046b539cf3b2882b6d46e"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "ae743cf44e11c2c0e880a19217b5d73ef716d98d64fc0fd00a8c45ed4d018276",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/ro/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "20d3e09c69083163081f8fad8b9789f034f099f0930b4d9b1f4bc784910baeb1"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "fbe12b695309f1b8785ba63ac47c162b172aa631cedfac0bc65ab5ed8aa6e692",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/ro/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "900b3e9f689a3f901685cd3144704c2a6e2292f2019872bd783d1d072fdd12eb"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "0879490c2acc02a68f0c303b0c2eb094ce63729194792fdc8ccb106c756dfce8",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/ro/778114755d294bcc99761211.xdelta",
+              "sha256": "253a2b032ee28f9f73026cd539e8d9fffddbb8d76452a57715ff77687121acde"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "847a6e3277bc273a43975bf5c13767acaeb4c8c16dfd35d3a1581ba7e92203cf",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/ro/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b635739036943f20b1bd164129c7730b6e627f86b5b1278a8e8ab55f3e31444c"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "66e4c6accdfe86667d73663eee4f72321716ed3a644a9d2993d5c2c70633334f",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/ro/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "a578f7d6018fb8e78850217356114d6d1393614a59d1286d422c0271bb5c2297"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "hi",
+      "runtimeCode": "hi",
+      "nativeLanguageName": "हिन्दी",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "91328d418ce61c944093f5c009d6cca7fa49bf420354fa97bac76a49e3e994fa",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/hi/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "c014562859b8a4186b2501f52eb89694395c48de922cb9474f17d83169c9be4c"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "eaec50e9b30c3f8fbc6c16cb43a96f01b122fd671adf92b064c3a2e9eb3ecc2c",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/hi/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "2c4b30351cc2d54a59b6596f9d76509a27b653454dc8adc9d4a1e39ad5c6e755"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "c3bc043255c8d2544280251e47631c4400662817ac83825e9a0ab1539c5c24a1",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/hi/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "b9e8fdf6835a8c19aa818b5e87e8effe7a278a42b65c8c993a379eac942d745a"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "08e7aa21e33aadf0fbdbbf6cd83bc38026e31e7690b9c47abaa9aa82f2a2b96a",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/hi/778114755d294bcc99761211.xdelta",
+              "sha256": "efb7cd6bd408b5a87f663400ee4cefdcdd6c2ec84f82de424ce750d9ff327727"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "70f4bb102161d542646e6f3f9c4841b28b54477f884a0f96aaee5d516777e9f8",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/hi/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "8edfe020a49ae1bb7394389c4678a14b35da53dfae31593f88dde675f29b9b79"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "20f9e6a968d79e7c57583b4bc7160e9d15230895cd21658f3f31f8c4a43d95c9",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/hi/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "2c941c2b8b95a540ab47effb6f5198ad270646d004bf6cb4e6c872e849dec2eb"
+            }
+          ]
+        },
+        {
+          "path": "Managed/VNRevival.TextShaper.dll",
+          "originalSHA256": null,
+          "payloadSHA256": "f6af9436e8c861df661ffe3e3fd74eca587bcb1d89ac52aee8bb64741c4ec005",
+          "payloadPath": "F/hi/6d4e6a88989e129bd9773e37-VNRevival.TextShaper.dll",
+          "artifactSHA256": "f6af9436e8c861df661ffe3e3fd74eca587bcb1d89ac52aee8bb64741c4ec005"
+        }
+      ]
+    },
+    {
+      "siteLocale": "fil",
+      "runtimeCode": "fil",
+      "nativeLanguageName": "Filipino",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "0568f029b0e29c9611f09505724fcbbd168c8b962d8a020f81375db8506fa75a",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/fil/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "98f73063e320125a6d7d48ce00216737abda6719936409e7f885a5310e56b8f8"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "1da732598b8139663bd3feb828c40b56de75edf602f894b4099e8fd4755756b3",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/fil/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "50d513f85379b98dd45547190cc42ec88ed84c12a0c122646e27fac1dda5c63e"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "32251cb95013c3303b79ffd880e4a12d98da7d76edccb028e567aba7e1a9e324",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/fil/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f0c251ebb980cb3cd45f11e3536ac612bd4bf0fc5fb9cdf9d5ef78fba29f4139"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "7049af423cf84636fb5911770d58ff8df2351bc92625b55f7c9740edc22861e2",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/fil/778114755d294bcc99761211.xdelta",
+              "sha256": "6c5de472583f14ca0918f0c133129ffbf4df3fbc341a8a5dce7a8c9fdc93151c"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "49705ff803975083de8a29aaa6da205b5977012f83719ca250e784fab63448fa",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/fil/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "37b37fe9081fac0fc73f40c635576b12a91eb0cbc8f886f85106a57d97ffbf69"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "391b551def21679ba54f269460f85b09c7106da950d779258fc963fd4b85a7b0",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/fil/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "5eed6bafe63914f83bdebb9667981cd422890826fdfd0446622735ec8ee56eec"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "el",
+      "runtimeCode": "el",
+      "nativeLanguageName": "ελληνικά",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "85096a1438a5db795e383609a59677e59dd4126f15d11ccda787c28ab83aca3a",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/el/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "1c3616001eb4bf291d6eb54a20b98f7342f2e18d71985c8fb7b00d6aefef0e83"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "28618794efeaa48404fb951fe09eaef99958d3ae9c04ab3eb50948409e07cb50",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/el/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "2cfd92505e0acdb0ae39233e32252d1070b0b208a8123a0f3d3067b65f5757c7"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "48c8c457e2f66a7a4f6e6b8221937ee46d857bcf8bb83000f6dfee58c127ec6b",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/el/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "44938ecb145ea4c3e1bfcc9e3ac776b953d4ae0b5992dcad4e6801df06eb83be"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "a4b01f83bc6885f97a11e807121ba2c14b86815e33a630b6c0ab1e25ded84eae",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/el/778114755d294bcc99761211.xdelta",
+              "sha256": "0f8ef79fdff2b8da7ef3551a5a471a53ddab38e7c43bef1d3261f82c191167e5"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "6329acd12f3f387f009d365b0b6c3299b8fee44762f04fd6d2a0b0f6240ab2bb",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/el/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "a31959d6f28b6e75ece98f2153eace00883269ff08b0292305b083da62218595"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "fe40fb5104b9f8d5f67f433d06376f493b9569d6acd163156a55158cad02b763",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/el/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "417a03dd044bddae228859ec799876ef5f686e9d39dc37fd4a48a082d154f76b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "bg",
+      "runtimeCode": "bg",
+      "nativeLanguageName": "български",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "b1706c5da19569d8f028f44c6eca036796076bb0a4cb143e85b7c83d054e0bc8",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/bg/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "201ba6aee5dd394f6bc64fbe8d78aee250af99a5174b9093b8b62efdc3f12e79"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "b1ed39756b41803a632d466d817aa19905e2bdc995cf1175939eb5d37aaa3d7d",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/bg/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "4c5868f1e108942d78f59815c0504d4c0a8e5cf4b56b589923ab83a6d69c1feb"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "9c84236485f82ffeb81510c5404a93c39a600e7f9b51b428a95b91eb65a1887b",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/bg/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "291e1610dd39178fc86e0154d7df3cfe35f7f37fa106b08a8676c2d4dc042cb0"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "3a9413fae519e5964136fc09e73f227b921f5edab52dfeaefb349ecd354ad419",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/bg/778114755d294bcc99761211.xdelta",
+              "sha256": "8f6cffcb3308403b008f27e19c00eae9ad458b0e860240e8cfeed3c1e210c809"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "be8e0f155fd6a0a19703055188d3073fca66efd7327c8c2ccddfc78917906acf",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/bg/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "38a11494aa23c42e6e326e5141a6883f76c960bb9e893e945a397617f76efb86"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "7e7098107d6e80dd13095402f606a977c05fbf2d9e68b527c0df78e9b48e79c1",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/bg/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "334200e75ce7d32faaa12453a2449e2c9e9b3ea1d69a006c402ae2e176404541"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "sr",
+      "runtimeCode": "sr",
+      "nativeLanguageName": "српски",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "7d0ea38673575ba2f925ca3ae49c52f08d58a75bb9d3580bee13be7547d8c312",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/sr/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "aab6da0db72fe48c69acc060ef16bc6b96abbf5cc27e97567ea29d80ab425119"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "54bb10d2a40389208adeff135fe9ed3c8cdca9b3f7168b432332af784eb659fa",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/sr/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "01b09cecffdac8b9294c161ee24b24498416e384da3dfa348bc5ac5435109b70"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "df0108520cbd144dcbdad6325c3a8a1e8edf8b606da1c3396cf6fffc72bb96a7",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/sr/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "ff6e4494fdd94b5094d4bdedcdcd90dea011898bc805f8afc317015ec2599f6d"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "8bb5e4e12c1610ec41335b625395ec2773377a1f801e6db1016d3c59b6989a4a",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/sr/778114755d294bcc99761211.xdelta",
+              "sha256": "4d4e73f281dc341f3fea89be329fca02d1e4626a9b1d8b6c31e4e87ab5af1267"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "7b55c5c8d5dcaff78076c58c57b34291e8d6cf5c38ece58a087ce87a49a35857",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/sr/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "bd5a607e141da28836d11cdef952758ee16008281b276bc7982a5beb444815e7"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "bf5220897ffbd954ac21eb102e99a51af7ee4bb0758bace44e7fc88248b3cba3",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/sr/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "eea6175e4decfed4d19f5b297634b1ba06213630b76f1488e583ce90d2697afa"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "sw",
+      "runtimeCode": "sw",
+      "nativeLanguageName": "Kiswahili",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "2ae72198c5602e0195126c00e46ecbdd7f95ae5a7be8ba1ad2bde87aeb425cee",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/sw/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e0fe47487813702461c37a2a016b8330a8728a86d3ce72344ee744dbd524f484"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "bd839e88afc1b5ab287850ef1f0cde9952782a567b452388e7b6dec9ff49f63f",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/sw/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "f8613b0a6fd92b665e5c34959caa174e9d6858080558be1c031212324284dcd4"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "d7c19c8f4652d2957461797a00b6b1303bca737c521d6a553335856090aef343",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/sw/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "c3fbe2fddf30bebc464b179d24d33e9313d4ada5b6b3d797025a0f997ade3b4c"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "96984fe85d631c78a4e81d277e2fac15e38ecf397cf599b0d929e5b2b17ba9e6",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/sw/778114755d294bcc99761211.xdelta",
+              "sha256": "2f3ee705c159845e34b7314b040efd9d1ebe9562b16a49a4b4745ce1314e6d0a"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "bcb97438430fc9829848269602f2a0291583ac2f8d191fce9928ebbbb690f6fc",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/sw/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "73fc806c5ad93da8944cc7554a7ba53d5296129d4b4a1e18bbc6fe4db3c71914"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "2a54867ec2e521b8165036b1d2503170ea98a78e33ceddab2abce0af7635941b",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/sw/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "a3124ab9b08cf57bdda03464f6dbc154d490fd3ee841134acd94a4e68389cbea"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "siteLocale": "he",
+      "runtimeCode": "he",
+      "nativeLanguageName": "עברית",
+      "ready": true,
+      "files": [
+        {
+          "path": "sharedassets0.assets",
+          "originalSHA256": "0b0ae0bf295390e283afb82d382c4dbd75cec816af8b28ea095aef02186ac454",
+          "payloadSHA256": "d3b9ebbc5b681ffdcbfc2b3e167fbf67708bf28d6f64e24880a33d46a949ec85",
+          "artifacts": [
+            {
+              "path": "D/base/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "e25446db3633bbae4b4edc5a9f88c1a0115145dead5987375a3f09b9e40413bc"
+            },
+            {
+              "path": "D/he/57009919ee89ccac383ac4f8.xdelta",
+              "sha256": "aaa471780fd10902d184be6fb10c82ff8d11388d966ce88e6b867c1acaa3ff09"
+            }
+          ]
+        },
+        {
+          "path": "level0",
+          "originalSHA256": "82b72fd1163eb9d50d7a4f76e3f483965279e589fcd0dbf53ac300d537c92a27",
+          "payloadSHA256": "f90460731927d1f1fabc04c8743aecdb5d2a1d8e31e38607afe5d77b29afabf6",
+          "artifacts": [
+            {
+              "path": "D/base/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "026ef31f737e7a9f95a60276d7b5e186e50c36239a288839a7008a86565b6eb1"
+            },
+            {
+              "path": "D/he/1ef128f5e74f227d60fd632d.xdelta",
+              "sha256": "b424861342feb2354f92d9b65270d25fe9d1606d683c68a74c80031ed3489f8a"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/defaultgroup_assets_all_3a3b6c1fd8dd35a5213740db9e4c849e.bundle",
+          "originalSHA256": "5799e0af5be61142b05c0157b03cf90b1d6b414ee748f4066ab83d606563aaa7",
+          "payloadSHA256": "ee9d05d169d9771ae46a0ae1e1a79332414f023dec2a2402f9c9c347d1232948",
+          "artifacts": [
+            {
+              "path": "D/base/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "f7d3de6de9f465e12861f3ca49d3ed85e7bd3c85df58bbb60684f307639e61a2"
+            },
+            {
+              "path": "D/he/f297570b5221cc38e2d4c440.xdelta",
+              "sha256": "4d058c2a7ed7a428bb150202134de405116be0cf441196556f0f4d8a1470551d"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/StandaloneWindows64/inventoryitems_assets_all_98593d5b25d5883f9039e62e508fb742.bundle",
+          "originalSHA256": "4f971cc46c17e4a5ca3d73e8a78e3ca9fa94b128ed447a42535baa19b2805fc7",
+          "payloadSHA256": "ac92ebd22f87154b63983c0c30c29bd0cbeee8b41c5c6b3a14366dc748153053",
+          "artifacts": [
+            {
+              "path": "D/base/778114755d294bcc99761211.xdelta",
+              "sha256": "b04da3e6a3c4c06156184d9063a4646c8903f1099e1c9421841fbdd1f21a023d"
+            },
+            {
+              "path": "D/he/778114755d294bcc99761211.xdelta",
+              "sha256": "9b35a3e1c09b289fec422e8b52a2f9e5b79ce4786a55bb53fd675ad311714e0b"
+            }
+          ]
+        },
+        {
+          "path": "Managed/Assembly-CSharp.dll",
+          "originalSHA256": "fa96af450662c6485553f8dfc587f3b30ef0e4c775058623b6578734f1d4f448",
+          "payloadSHA256": "f4b70e1b46908e00158e0dfe6f9c4170c2ec494de23a7705c6b73ba77b97d6cb",
+          "artifacts": [
+            {
+              "path": "D/base/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "b8e04fa47d574cd9264a74c9e50dd70d2e6a97dbad7e314858894c7b668795cb"
+            },
+            {
+              "path": "D/he/f4c27a39eb1188dda1b549b9.xdelta",
+              "sha256": "948920e6586c07ce1efe28b345832f5de82d75e9abfc8bb186590151ba716821"
+            }
+          ]
+        },
+        {
+          "path": "StreamingAssets/aa/catalog.json",
+          "originalSHA256": "85507c857bb0e36ad904b6c4e8cc66ffcfcf0dde7339a4cc72160ae43cc4ac73",
+          "payloadSHA256": "e396e90f5d340ded8e77fd367340cc81bae6edd5320cd77eef3db0793bd8d400",
+          "artifacts": [
+            {
+              "path": "D/base/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "bb82a2cbfdb489e4d53bd0a13f94d2c0f56f88eebb1d4fbf8ab10e158629234f"
+            },
+            {
+              "path": "D/he/c454d71ab861ec049f7c1104.xdelta",
+              "sha256": "656d57a74b525ce56a6cc7f6a9d78d621c482c3a9661d7e23969b1f9cc9d2a82"
+            }
+          ]
+        },
+        {
+          "path": "Managed/VNRevival.TextShaper.dll",
+          "originalSHA256": null,
+          "payloadSHA256": "f48db0a2ceb00fe0d545283905975a1defacef83327eeaefba796bb7bc0ef9f1",
+          "payloadPath": "F/he/6d4e6a88989e129bd9773e37-VNRevival.TextShaper.dll",
+          "artifactSHA256": "f48db0a2ceb00fe0d545283905975a1defacef83327eeaefba796bb7bc0ef9f1"
+        }
+      ]
+    }
+  ],
+  "files": []
+}

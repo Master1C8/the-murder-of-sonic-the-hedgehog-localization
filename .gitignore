@@ -4,3 +4,5 @@
 dist/
 *.zip
 *.dmg
+Windows/Resources/LocalizationPayload/
+Windows/VN Revival Sonic Installer.exe
