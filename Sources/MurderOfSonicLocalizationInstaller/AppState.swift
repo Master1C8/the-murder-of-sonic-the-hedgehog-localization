@@ -67,12 +67,6 @@ final class AppState: ObservableObject {
             installation = core.detectSteamInstallation(appID: config.steamAppID)
         }
         guard let installation else { return fail(copy.gameNotFoundMessage) }
-        guard installation.steamBuildID == config.steamBuildID else {
-            return fail(InstallerError.unsupportedSteamBuild(
-                expected: config.steamBuildID,
-                actual: installation.steamBuildID
-            ).localizedDescription)
-        }
         guard config.payloadReady else { return fail(copy.payloadNotReadyMessage) }
 
         phase = .installing

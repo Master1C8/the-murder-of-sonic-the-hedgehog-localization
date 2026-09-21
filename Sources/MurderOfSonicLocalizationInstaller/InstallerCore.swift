@@ -59,7 +59,7 @@ enum InstallerError: LocalizedError {
     case invalidGameFolder
     case steamManifestMissing
     case wrongSteamApp(String)
-    case unsupportedSteamBuild(expected: String, actual: String)
+    case incompatibleSteamUpdate(build: String, path: String)
     case payloadNotReady
     case invalidLanguageSelection(String)
     case missingPayloadFile(String)
@@ -81,8 +81,8 @@ enum InstallerError: LocalizedError {
             "The Steam game manifest appmanifest_2324650.acf was not found."
         case .wrongSteamApp(let value):
             "The selected folder belongs to a different Steam game (App ID \(value))."
-        case .unsupportedSteamBuild(let expected, let actual):
-            "Steam build \(actual) is not supported. Expected build \(expected)."
+        case .incompatibleSteamUpdate(let build, let path):
+            "Steam build \(build) changed a required game file that this localization package cannot safely patch yet: \(path). No game files were changed."
         case .payloadNotReady:
             "The complete 30-language package is not included in this installer build."
         case .invalidLanguageSelection(let value):
@@ -92,7 +92,7 @@ enum InstallerError: LocalizedError {
         case .payloadChecksumMismatch(let path):
             "The localization payload checksum does not match: \(path)."
         case .unsupportedGameFile(let path):
-            "The game file version is not supported: \(path). Update the game in Steam."
+            "The game file version is not compatible with this localization package: \(path)."
         case .missingOriginalFile(let path):
             "A required file is missing from the installed game: \(path)."
         case .foreignModification(let path):
@@ -269,15 +269,14 @@ struct InstallerCore {
         guard installation.steamAppID == config.steamAppID else {
             throw InstallerError.wrongSteamApp(installation.steamAppID)
         }
-        guard installation.steamBuildID == config.steamBuildID else {
-            throw InstallerError.unsupportedSteamBuild(
-                expected: config.steamBuildID,
-                actual: installation.steamBuildID
-            )
-        }
-        guard resolveSteamInstallation(installation.appBundle, appID: config.steamAppID) != nil else {
+        guard let currentInstallation = resolveSteamInstallation(
+            installation.appBundle,
+            appID: config.steamAppID
+        ), currentInstallation.root == installation.root,
+           currentInstallation.dataDirectory == installation.dataDirectory else {
             throw InstallerError.invalidGameFolder
         }
+        let actualBuildID = currentInstallation.steamBuildID
 
         let stateRoot = installation.root.appendingPathComponent(".vn-revival", isDirectory: true)
             .appendingPathComponent(config.packageID, isDirectory: true)
@@ -293,6 +292,9 @@ struct InstallerCore {
         let receiptURL = stateRoot.appendingPathComponent("receipt.json")
         let previousReceipt = try loadReceiptIfPresent(receiptURL, packageID: config.packageID)
         try validatePayload(payload, files: selectedFiles)
+        let steamBuildChanged = previousReceipt.map {
+            $0.steamBuildID != actualBuildID
+        } ?? (actualBuildID != config.steamBuildID)
 
         let backupRoot = stateRoot.appendingPathComponent("original-backup", isDirectory: true)
         try fileManager.createDirectory(at: backupRoot, withIntermediateDirectories: true)
@@ -306,12 +308,33 @@ struct InstallerCore {
             let prior = previousReceipt?.files.first { $0.path == item.path }
 
             if let prior {
-                guard currentHash == prior.installedSHA256 || currentHash == item.payloadSHA256 else {
+                let restoredOriginal = item.originalSHA256.map { currentHash == $0 } == true
+                let missingOwnedAddition = !currentExists
+                    && !prior.originalExisted
+                    && item.originalSHA256 == nil
+                guard currentHash == prior.installedSHA256
+                        || currentHash == item.payloadSHA256
+                        || restoredOriginal
+                        || missingOwnedAddition else {
+                    if steamBuildChanged {
+                        throw InstallerError.incompatibleSteamUpdate(
+                            build: actualBuildID,
+                            path: item.path
+                        )
+                    }
                     throw InstallerError.foreignModification(item.path)
                 }
             } else if let originalHash = item.originalSHA256 {
                 guard currentExists else { throw InstallerError.missingOriginalFile(item.path) }
-                guard currentHash == originalHash else { throw InstallerError.unsupportedGameFile(item.path) }
+                guard currentHash == originalHash else {
+                    if steamBuildChanged {
+                        throw InstallerError.incompatibleSteamUpdate(
+                            build: actualBuildID,
+                            path: item.path
+                        )
+                    }
+                    throw InstallerError.unsupportedGameFile(item.path)
+                }
             } else if currentExists {
                 throw InstallerError.foreignModification(item.path)
             }
@@ -436,7 +459,7 @@ struct InstallerCore {
             let receipt = InstallationReceipt(
                 schemaVersion: 1,
                 packageID: config.packageID,
-                steamBuildID: config.steamBuildID,
+                steamBuildID: actualBuildID,
                 installedAt: Date(),
                 activeLanguage: ActiveLanguageSelection(
                     siteLocale: selectedLanguage.siteLocale,
@@ -575,7 +598,7 @@ struct InstallerCore {
         let migratedReceipt = InstallationReceipt(
             schemaVersion: 1,
             packageID: config.packageID,
-            steamBuildID: config.steamBuildID,
+            steamBuildID: installation.steamBuildID,
             installedAt: Date(),
             activeLanguage: ActiveLanguageSelection(siteLocale: "ru", runtimeCode: "ru"),
             files: migratedFiles

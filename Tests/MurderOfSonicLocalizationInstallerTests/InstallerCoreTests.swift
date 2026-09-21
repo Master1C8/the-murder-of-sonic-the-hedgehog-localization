@@ -42,7 +42,7 @@ struct InstallerCoreTests {
             .invalidGameFolder,
             .steamManifestMissing,
             .wrongSteamApp("0"),
-            .unsupportedSteamBuild(expected: "20535215", actual: "0"),
+            .incompatibleSteamUpdate(build: "0", path: "file"),
             .payloadNotReady,
             .invalidLanguageSelection("xx"),
             .missingPayloadFile("file"),
@@ -264,6 +264,125 @@ struct InstallerCoreTests {
                 siteLocale: "de",
                 runtimeCode: "de"
             ))
+        }
+    }
+
+    @Test func installsOnHashCompatibleNewerSteamBuild() throws {
+        try withTemporaryDirectory { root in
+            let setup = try makeSteamInstallation(
+                libraryRoot: root.appendingPathComponent("Steam", isDirectory: true),
+                original: "original",
+                buildID: "99999999"
+            )
+            let payload = root.appendingPathComponent("payload", isDirectory: true)
+            let relative = "Managed/Assembly-CSharp.dll"
+            let payloadFile = payload.appendingPathComponent(relative)
+            try write(Data("localized".utf8), to: payloadFile)
+            let config = makeConfig(files: [PayloadFile(
+                path: relative,
+                originalSHA256: sha256("original"),
+                payloadSHA256: try InstallerCore.sha256(of: payloadFile)
+            )])
+
+            try InstallerCore().install(
+                payload: payload,
+                config: config,
+                selectedRuntimeCode: "ru",
+                into: setup.installation
+            )
+
+            #expect(try String(contentsOf: setup.file, encoding: .utf8) == "localized")
+            let receiptURL = setup.installation.root.appendingPathComponent(
+                ".vn-revival/\(config.packageID)/receipt.json"
+            )
+            let receipt = try JSONDecoder.iso8601.decode(
+                InstallationReceipt.self,
+                from: Data(contentsOf: receiptURL)
+            )
+            #expect(receipt.steamBuildID == "99999999")
+        }
+    }
+
+    @Test func reinstallsAfterSteamUpdateRestoresOriginalFiles() throws {
+        try withTemporaryDirectory { root in
+            let setup = try makeFakeInstallation(root: root, original: "original")
+            let payload = root.appendingPathComponent("payload", isDirectory: true)
+            let relative = "Managed/Assembly-CSharp.dll"
+            let payloadFile = payload.appendingPathComponent(relative)
+            try write(Data("localized".utf8), to: payloadFile)
+            let config = makeConfig(files: [PayloadFile(
+                path: relative,
+                originalSHA256: sha256("original"),
+                payloadSHA256: try InstallerCore.sha256(of: payloadFile)
+            )])
+            let core = InstallerCore()
+            try core.install(
+                payload: payload,
+                config: config,
+                selectedRuntimeCode: "ru",
+                into: setup.installation
+            )
+
+            try write(Data("original".utf8), to: setup.file)
+            try writeSteamManifest(
+                appID: "2324650",
+                installDirectory: "Themurderofsonicthehedgehog",
+                buildID: "99999999",
+                to: setup.installation.steamManifest
+            )
+            let updatedInstallation = try #require(core.resolveSteamInstallation(
+                setup.installation.appBundle,
+                appID: "2324650"
+            ))
+            try core.install(
+                payload: payload,
+                config: config,
+                selectedRuntimeCode: "ru",
+                into: updatedInstallation
+            )
+
+            #expect(try String(contentsOf: setup.file, encoding: .utf8) == "localized")
+            let receiptURL = updatedInstallation.root.appendingPathComponent(
+                ".vn-revival/\(config.packageID)/receipt.json"
+            )
+            let receipt = try JSONDecoder.iso8601.decode(
+                InstallationReceipt.self,
+                from: Data(contentsOf: receiptURL)
+            )
+            #expect(receipt.steamBuildID == "99999999")
+        }
+    }
+
+    @Test func rejectsIncompatibleNewerSteamBuildBeforeChangingGame() throws {
+        try withTemporaryDirectory { root in
+            let setup = try makeSteamInstallation(
+                libraryRoot: root.appendingPathComponent("Steam", isDirectory: true),
+                original: "updated-original",
+                buildID: "99999999"
+            )
+            let payload = root.appendingPathComponent("payload", isDirectory: true)
+            let relative = "Managed/Assembly-CSharp.dll"
+            let payloadFile = payload.appendingPathComponent(relative)
+            try write(Data("localized".utf8), to: payloadFile)
+            let config = makeConfig(files: [PayloadFile(
+                path: relative,
+                originalSHA256: sha256("original"),
+                payloadSHA256: try InstallerCore.sha256(of: payloadFile)
+            )])
+
+            do {
+                try InstallerCore().install(
+                    payload: payload,
+                    config: config,
+                    selectedRuntimeCode: "ru",
+                    into: setup.installation
+                )
+                Issue.record("An incompatible updated game file was accepted")
+            } catch let InstallerError.incompatibleSteamUpdate(build, path) {
+                #expect(build == "99999999")
+                #expect(path == relative)
+            }
+            #expect(try String(contentsOf: setup.file, encoding: .utf8) == "updated-original")
         }
     }
 
@@ -591,18 +710,15 @@ struct InstallerCoreTests {
         let appInfo = data.appendingPathComponent("app.info")
         let file = data.appendingPathComponent("Managed/Assembly-CSharp.dll")
         let manifest = steamApps.appendingPathComponent("appmanifest_2324650.acf")
-        let manifestText = """
-        "AppState"
-        {
-            "appid" "\(manifestAppID)"
-            "installdir" "\(installDirectory)"
-            "buildid" "\(buildID)"
-        }
-        """
+        try writeSteamManifest(
+            appID: manifestAppID,
+            installDirectory: installDirectory,
+            buildID: buildID,
+            to: manifest
+        )
         try write(Data("binary".utf8), to: executable)
         try write(Data("Sonic Social".utf8), to: appInfo)
         try write(Data(original.utf8), to: file)
-        try write(Data(manifestText.utf8), to: manifest)
         let installation = GameInstallation(
             root: gameRoot.standardizedFileURL,
             appBundle: app.standardizedFileURL,
@@ -612,6 +728,23 @@ struct InstallerCoreTests {
             steamManifest: manifest.standardizedFileURL
         )
         return (installation, file)
+    }
+
+    private func writeSteamManifest(
+        appID: String,
+        installDirectory: String,
+        buildID: String,
+        to manifest: URL
+    ) throws {
+        let manifestText = """
+        "AppState"
+        {
+            "appid" "\(appID)"
+            "installdir" "\(installDirectory)"
+            "buildid" "\(buildID)"
+        }
+        """
+        try write(Data(manifestText.utf8), to: manifest)
     }
 
     private func write(_ data: Data, to url: URL) throws {

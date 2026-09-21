@@ -459,3 +459,28 @@
   installer tests, full payload verification, and the signed universal
   arm64/x86_64 application rebuild. Texture translation remains deferred by
   owner scope and `imagesModified=false`.
+
+## Hash-compatible Steam update installation — 2026-09-21
+
+- Steam Build ID `20535215` remains the exact payload baseline, but the
+  installer no longer rejects a later manifest Build ID before inspecting the
+  game. Compatibility is now decided by the files the localization actually
+  touches.
+- A fresh install on a later Steam build is allowed only when every required
+  original SHA-256 still matches. After a prior VN Revival installation, a
+  Steam-restored baseline original and a missing VN Revival-owned added file
+  are also accepted and reinstalled. The new receipt records the actual Steam
+  Build ID.
+- If Steam changes a required source file, the old xdelta chain is never
+  applied to it and no localized game file is replaced. The installer reports
+  the actual Build ID and incompatible path so a refreshed payload can be
+  prepared. Unknown same-build modifications remain classified as foreign
+  modifications and are likewise preserved.
+- Fake-Steam coverage verifies a compatible newer build, reinstallation after
+  Steam restores an original file, and refusal of an incompatible newer file
+  without changing it. Original-hash checks, payload/artifact/output SHA-256,
+  ownership, backups, staging, transaction recovery, and rollback remain
+  mandatory.
+- The final release audit passed 22 Python tests, 17 Swift fake-folder
+  installer tests, verification of 30 locales and 185 payload artifacts, and
+  rebuilt the signed universal arm64/x86_64 application.
