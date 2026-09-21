@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-21",
+  "runtimeLocale": "cs",
+  "publishingLocale": "cs",
+  "screen": "character-dialogue",
+  "gameVersion": "1.01",
+  "steamBuildID": "20535215",
+  "captureMethod": "Project one-pass native showcase automation with deterministic locale install, AppKit activation, CoreGraphics input, and native macOS screencapture; Oculix 4.0.0 fallback used because Java Mouse.init reported input blocked",
+  "resolution": {
+    "width": 2880,
+    "height": 1800
+  },
+  "automatedResult": "pass",
+  "visualReview": {
+    "status": "pending",
+    "findings": []
+  },
+  "result": "capture-pass-review-pending",
+  "activeLocaleVerified": true,
+  "restoration": {
+    "priorLocale": "ru",
+    "localeRestored": true,
+    "saveWritten": false
+  },
+  "screenshot": {
+    "file": "../upload/cs-04-character-dialogue.png",
+    "sha256": "f79886b2d9a3ae0ddf3ebdd6a2d2dea6ebec9c064af2a489eb565ceb6e0951b5"
+  }
+}

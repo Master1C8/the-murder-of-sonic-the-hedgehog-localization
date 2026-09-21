@@ -6,17 +6,17 @@
   "screen": "load-game",
   "gameVersion": "1.01",
   "steamBuildID": "20535215",
-  "captureMethod": "Native macOS fallback after deterministic locale install, AppKit activation, and CoreGraphics navigation; Oculix 4.0.0 unavailable because Java Mouse.init reported input blocked",
+  "captureMethod": "Project one-pass native showcase automation with deterministic locale install, AppKit activation, CoreGraphics input, and native macOS screencapture; Oculix 4.0.0 fallback used because Java Mouse.init reported input blocked",
   "resolution": {
     "width": 2880,
     "height": 1800
   },
   "automatedResult": "pass",
   "visualReview": {
-    "status": "pass",
+    "status": "pending",
     "findings": []
   },
-  "result": "pass",
+  "result": "capture-pass-review-pending",
   "activeLocaleVerified": true,
   "restoration": {
     "priorLocale": "ru",
@@ -25,6 +25,6 @@
   },
   "screenshot": {
     "file": "../upload/bg-02-load-game.png",
-    "sha256": "93a33a7cef5d9e612b897f542cddd950cee02abe57a47b1170c1958ab7ced466"
+    "sha256": "f720c74343c92349588ce2e766b8e8c1d7386161fca0ed9d62dcc5a1f891b291"
   }
 }

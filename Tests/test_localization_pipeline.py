@@ -46,9 +46,39 @@ internal static class TextShaperHarness
         VNRevival.TextShaper.SetText(target, "September 18, 2026 3:50 AM");
         if (target.isRightToLeftText || target.text != "September 18, 2026 3:50 AM")
             return 2;
-        VNRevival.TextShaper.SetText(target, "تحميل");
-        if (!target.isRightToLeftText || target.text != "تحميل")
+        VNRevival.TextShaper.SetText(target, "Shadow, שלום.");
+        if (!target.isRightToLeftText || target.text != ",wodahS שלום.")
             return 3;
+        VNRevival.TextShaper.SetText(target, "zel...? שלום");
+        if (!target.isRightToLeftText || target.text != "?...lez שלום")
+            return 4;
+        string[] taggedInputs = {
+            "Sonic שלום <style=CarName>zel</style>.",
+            "Sonic שלום <size=90%>zel</size>.",
+            "Sonic שלום <color=red>zel</color>.",
+            "Sonic שלום <i>zel</i>.",
+            "Sonic שלום <br>zel."
+        };
+        string[] taggedExpected = {
+            "cinoS שלום <style=CarName>lez</style>.",
+            "cinoS שלום <size=90%>lez</size>.",
+            "cinoS שלום <color=red>lez</color>.",
+            "cinoS שלום <i>lez</i>.",
+            "cinoS שלום <br>.lez"
+        };
+        for (int index = 0; index < taggedInputs.Length; index++)
+        {
+            VNRevival.TextShaper.SetText(target, taggedInputs[index]);
+            if (!target.isRightToLeftText || target.text != taggedExpected[index])
+                return 5 + index;
+        }
+        VNRevival.TextShaper.SetText(target, "Sonic <Amy breaks> שלום");
+        if (!target.isRightToLeftText || target.text != ">skaerb ymA< cinoS שלום")
+            return 10;
+        string prepared = "\uE000\uE001 sserpxE";
+        VNRevival.TextShaper.SetText(target, prepared);
+        if (!target.isRightToLeftText || target.text != prepared)
+            return 11;
         return 0;
     }
 }
@@ -59,7 +89,7 @@ internal static class TextShaperHarness
             map_path = root / "ShapingMap.tsv"
             executable = root / "TextShaperTest.exe"
             harness_path.write_text(harness, encoding="utf-8")
-            map_path.write_text("VNREVIVAL1\t1\t1\n", encoding="utf-8")
+            map_path.write_text("VNREVIVAL1\t2\t1\n", encoding="utf-8")
             subprocess.run(
                 [
                     compiler,
@@ -234,6 +264,51 @@ internal static class TextShaperHarness
         }
         with self.assertRaises(SystemExit):
             localization_assets.effective_defaultgroup_layout_overrides(overlay)
+
+    def test_think_splash_collision_guards_cover_every_locale(self) -> None:
+        localization_root = PROJECT_ROOT / "Documentation" / "Localization"
+        locales = sorted(localization_assets.LOCALE_FALLBACK_FONTS)
+        self.assertEqual(set(locales), set(localization_assets.THINK_LAYOUT_PROFILES))
+        for locale in locales:
+            with self.subTest(locale=locale):
+                overlay = json.loads(
+                    (localization_root / f"{locale}.overlay.json").read_text(encoding="utf-8")
+                )
+                maximum = localization_assets.THINK_LAYOUT_PROFILES[locale]["maximum"]
+                self.assertEqual(
+                    localization_assets.effective_level0_layout_overrides(overlay)[
+                        localization_assets.THINK_LEVEL0_LABEL_ID
+                    ],
+                    {"m_fontSize": maximum, "m_fontSizeBase": maximum},
+                )
+                self.assertEqual(
+                    localization_assets.effective_defaultgroup_layout_overrides(overlay)[
+                        localization_assets.THINK_ADDRESSABLE_LABEL_ID
+                    ],
+                    {"m_fontSize": maximum, "m_fontSizeBase": maximum},
+                )
+
+    def test_think_splash_collision_guard_rejects_stale_text_or_larger_override(self) -> None:
+        overlay = {
+            "targetLocale": "ru",
+            "units": {
+                localization_assets.THINK_ADDRESSABLE_LABEL_ID: "ДУМАЙ!",
+                localization_assets.THINK_LEVEL0_LABEL_ID: "ДУМАЙ!",
+            },
+            "layoutOverrides": {},
+        }
+        overlay["units"][localization_assets.THINK_LEVEL0_LABEL_ID] = "ПОДУМАЙ!"
+        with self.assertRaises(SystemExit):
+            localization_assets.effective_level0_layout_overrides(overlay)
+        overlay["units"][localization_assets.THINK_LEVEL0_LABEL_ID] = "ДУМАЙ!"
+        overlay["layoutOverrides"] = {
+            localization_assets.THINK_ADDRESSABLE_LABEL_ID: {
+                "m_fontSize": 221.0,
+                "m_fontSizeBase": 221.0,
+            }
+        }
+        with self.assertRaises(SystemExit):
+            localization_assets.effective_defaultgroup_layout_overrides(overlay)
         overlay["units"][localization_assets.RUNNER_HUD_LABEL_ID] = "КОЛЬЦА"
         overlay["layoutOverrides"] = {
             localization_assets.RUNNER_HUD_LABEL_ID: {
@@ -276,24 +351,24 @@ internal static class TextShaperHarness
         raw = bytearray(text_end + 240)
         raw[88:92] = len(encoded).to_bytes(4, "little")
         raw[92 : 92 + len(encoded)] = encoded
-        struct.pack_into("<f", raw, text_end + 192, 36.0)
-        struct.pack_into("<f", raw, text_end + 196, 36.0)
+        struct.pack_into("<f", raw, text_end + 192, 221.8)
+        struct.pack_into("<f", raw, text_end + 196, 221.8)
         patched = localization_assets.replace_level0_layout(
             bytes(raw),
-            {"m_fontSize": 28.0, "m_fontSizeBase": 28.0},
-            "unity:level0:1553:m_text",
+            {"m_fontSize": 190.0, "m_fontSizeBase": 190.0},
+            "unity:level0:1507:m_text",
         )
-        self.assertEqual(struct.unpack_from("<f", patched, text_end + 192)[0], 28.0)
-        self.assertEqual(struct.unpack_from("<f", patched, text_end + 196)[0], 28.0)
+        self.assertEqual(struct.unpack_from("<f", patched, text_end + 192)[0], 190.0)
+        self.assertEqual(struct.unpack_from("<f", patched, text_end + 196)[0], 190.0)
         self.assertEqual(patched[: text_end + 192], bytes(raw[: text_end + 192]))
         self.assertEqual(patched[text_end + 200 :], bytes(raw[text_end + 200 :]))
         self.assertEqual(
             localization_assets.read_level0_layout(
                 patched,
                 ("m_fontSize", "m_fontSizeBase"),
-                "unity:level0:1553:m_text",
+                "unity:level0:1507:m_text",
             ),
-            {"m_fontSize": 28.0, "m_fontSizeBase": 28.0},
+            {"m_fontSize": 190.0, "m_fontSizeBase": 190.0},
         )
 
     def test_level0_layout_override_is_allowed(self) -> None:
@@ -491,6 +566,41 @@ class LocalizationFontTests(unittest.TestCase):
         shaped = localization_assets.shape_text(logical, shaping)
         self.assertNotEqual(shaped, logical)
         self.assertTrue(any(0xE000 <= ord(character) <= 0xF8FF for character in shaped))
+
+    def test_all_rtl_mixed_entries_compensate_latin_runs_and_preserve_tags(self) -> None:
+        font_root = PROJECT_ROOT / "LocalizationAssets" / "Fonts" / "Complex"
+        font_names = {
+            "ar": "NotoSansArabicLatin-ar-Shaped.ttf",
+            "fa": "NotoSansArabicLatin-fa-Shaped.ttf",
+            "he": "NotoSansHebrewLatin-he-Shaped.ttf",
+        }
+        tag_pattern = re.compile(r"<br>|</?(?:style|size|color|i)(?:=[^<>]*)?>", re.I)
+        token_pattern = re.compile(r"[A-Za-z0-9]+")
+        for locale, font_name in font_names.items():
+            with self.subTest(locale=locale):
+                shaping = localization_assets.load_shaping_map(
+                    font_root / f"{locale}.shaping.json",
+                    locale,
+                    PROJECT_ROOT / "Documentation" / "Localization" / f"{locale}.overlay.json",
+                    font_root / font_name,
+                )
+                mixed_count = 0
+                for logical, shaped in shaping["exact"].items():
+                    if not localization_assets.contains_complex_script(logical, shaping["mode"]):
+                        continue
+                    logical_visible = tag_pattern.sub("", logical)
+                    shaped_visible = tag_pattern.sub("", shaped)
+                    tokens = token_pattern.findall(logical_visible)
+                    if tokens:
+                        mixed_count += 1
+                    for token in tokens:
+                        self.assertIn(token[::-1], shaped_visible, (locale, logical, token))
+                    self.assertEqual(
+                        tag_pattern.findall(logical),
+                        tag_pattern.findall(shaped),
+                        (locale, logical),
+                    )
+                self.assertGreater(mixed_count, 0)
 
 
 if __name__ == "__main__":

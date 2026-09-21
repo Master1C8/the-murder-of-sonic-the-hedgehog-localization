@@ -10,7 +10,7 @@
       "locale": "ar",
       "logicalCorpusSha256": "cd5387b0c3e05677bdb93de03a96eae847a1831c50462fb17a8b7ca181bdef63",
       "map": "ar.shaping.json",
-      "mapSha256": "b5cf6dc2c2a337d23dfa4d323cd15bd2bc3a4f94f17900bc03ec9a7073334269",
+      "mapSha256": "d13936707d382c5a9575fba2d8686ebda28a4d1b8572f20cc3ba96dafa4f55f3",
       "runtimeEntries": 3050
     },
     {
@@ -22,7 +22,7 @@
       "locale": "fa",
       "logicalCorpusSha256": "85f2bef9ecdae1aa344d27ba1bde51ccde6346ef9dcbafeb664a2e96f09daecf",
       "map": "fa.shaping.json",
-      "mapSha256": "931784bbffb9442412ab149e5de51a94799d084b02cf7d8888696a87e39a5df9",
+      "mapSha256": "ad2e42be51fc41390e557db3c43839db3e567e8cbe07c1226c918ef23cc4cfb0",
       "runtimeEntries": 3056
     },
     {
@@ -34,7 +34,7 @@
       "locale": "he",
       "logicalCorpusSha256": "389fb5391b7798cd78be4d3e3c05309c2cc307e0c9623ac1b3e7fd6941384181",
       "map": "he.shaping.json",
-      "mapSha256": "e387c0d76633957da61a85bd4232e9f3fd57b9a6c1d2dc3fab63df986becb11a",
+      "mapSha256": "29e768686e3f7022742d8154dfa5696c2366b06122fc52e2fb96306cb36ba644",
       "runtimeEntries": 3011
     },
     {

@@ -85,16 +85,102 @@ namespace VNRevival
                 || category == UnicodeCategory.EnclosingMark;
         }
 
+        private static bool IsPreparedScriptCharacter(char value)
+        {
+            // Build-time HarfBuzz shaping stores contextual glyph instances in
+            // the BMP private-use area. Those values no longer carry Arabic or
+            // Hebrew Unicode bidi classes, so recognize them explicitly.
+            return value >= '\uE000' && value <= '\uF8FF';
+        }
+
+        private static bool ContainsPreparedScript(string value)
+        {
+            foreach (char character in value)
+            {
+                if (IsPreparedScriptCharacter(character))
+                    return true;
+            }
+            return false;
+        }
+
+        private static bool ContainsLtrContent(string value)
+        {
+            foreach (char character in value)
+            {
+                if ((character >= 'A' && character <= 'Z')
+                    || (character >= 'a' && character <= 'z')
+                    || (character >= '0' && character <= '9'))
+                    return true;
+            }
+            return false;
+        }
+
+        private static string CompensateLtrRun(string value)
+        {
+            if (!RightToLeft || !ContainsLtrContent(value))
+                return value;
+            int start = 0;
+            while (start < value.Length && Char.IsWhiteSpace(value[start]))
+                start++;
+            int end = value.Length;
+            while (end > start && Char.IsWhiteSpace(value[end - 1]))
+                end--;
+            char[] characters = value.Substring(start, end - start).ToCharArray();
+            Array.Reverse(characters);
+            return value.Substring(0, start)
+                + new string(characters)
+                + value.Substring(end);
+        }
+
+        private static bool TryReadKnownTmpTag(string value, int position, out int tagEnd)
+        {
+            tagEnd = -1;
+            if (position >= value.Length || value[position] != '<')
+                return false;
+            int end = value.IndexOf('>', position + 1);
+            if (end < 0)
+                return false;
+            string body = value.Substring(position + 1, end - position - 1);
+            if (body.StartsWith("/", StringComparison.Ordinal))
+                body = body.Substring(1);
+            int equals = body.IndexOf('=');
+            string name = equals >= 0 ? body.Substring(0, equals) : body;
+            if (!name.Equals("style", StringComparison.OrdinalIgnoreCase)
+                && !name.Equals("size", StringComparison.OrdinalIgnoreCase)
+                && !name.Equals("color", StringComparison.OrdinalIgnoreCase)
+                && !name.Equals("i", StringComparison.OrdinalIgnoreCase)
+                && !name.Equals("br", StringComparison.OrdinalIgnoreCase))
+                return false;
+            tagEnd = end;
+            return true;
+        }
+
         private static string ShapeFallback(string value)
         {
             var output = new StringBuilder(value.Length);
             int position = 0;
             while (position < value.Length)
             {
+                // TMP must receive rich-text tags byte-for-byte. Reversing the
+                // Latin characters inside a tag makes the parser render the
+                // markup literally (for example, <style=CarName>).
+                int tagEnd;
+                if (TryReadKnownTmpTag(value, position, out tagEnd))
+                {
+                    output.Append(value.Substring(position, tagEnd - position + 1));
+                    position = tagEnd + 1;
+                    continue;
+                }
                 if (!IsBaseCharacter(value[position]))
                 {
-                    output.Append(value[position]);
-                    position++;
+                    int runEnd = position + 1;
+                    while (runEnd < value.Length
+                        && (value[runEnd] != '<'
+                            || !TryReadKnownTmpTag(value, runEnd, out tagEnd))
+                        && !IsBaseCharacter(value[runEnd]))
+                        runEnd++;
+                    output.Append(CompensateLtrRun(value.Substring(position, runEnd - position)));
+                    position = runEnd;
                     continue;
                 }
                 int end = position + 1;
@@ -138,6 +224,18 @@ namespace VNRevival
         {
             if (String.IsNullOrEmpty(value))
                 return value;
+            // Serialized UI and inventory fields may already contain shaped
+            // PUA glyphs. Never shape or compensate those strings a second
+            // time; SetText still enables RTL so TMP performs its one intended
+            // visual reversal and restores pre-compensated Latin runs.
+            if (RightToLeft && ContainsPreparedScript(value))
+                return value;
+            // Pure-LTR dynamic values (player names, dates, timestamps) must
+            // not be pre-reversed when the locale itself is RTL. Compensation
+            // is required only for a mixed value that will actually enable
+            // TMP's RTL mode.
+            if (RightToLeft && !RequiresRightToLeft(value))
+                return value;
             string shaped;
             if (Exact.TryGetValue(value, out shaped))
                 return shaped;
@@ -150,7 +248,7 @@ namespace VNRevival
                 return false;
             foreach (char character in value)
             {
-                if (IsBaseCharacter(character))
+                if (IsBaseCharacter(character) || IsPreparedScriptCharacter(character))
                     return true;
             }
             return false;

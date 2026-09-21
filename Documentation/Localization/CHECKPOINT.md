@@ -429,3 +429,33 @@
 - Final release audit passed 19 Python tests, 14 Swift fake-folder installer
   tests, 30-locale/185-artifact payload verification, and the production app
   rebuild. Texture translation remains deferred and `imagesModified=false`.
+
+## Systemic dialogue-animation and RTL mixed-text guard — 2026-09-21
+
+- The Hebrew freeze was traced to the shared `AnimateTMProVertex` coroutine,
+  not to a particular translation or to screenshot automation. The original
+  coroutine completed only when its final raw TMP character was visible;
+  trailing spaces, line breaks, combining marks, or rich-text boundaries could
+  therefore leave `animating=true` indefinitely.
+- Every locale's managed assembly now contains one verified completion guard.
+  After a complete mesh pass it completes the animation independently of the
+  final character's visibility, while retaining deterministic timing for the
+  final raw character and immediate completion after `Skip`. The payload build
+  refuses an assembly with a missing or duplicated guard, so this protection
+  applies to every dialogue value using the shared animator across all 30
+  locales rather than to a list of known bad strings.
+- The same correction cycle fixed mixed RTL/LTR run compensation centrally in
+  both static shaping and the dynamic fallback: edge whitespace remains at the
+  edge of an LTR run while only its visible core is reversed. This preserves
+  boundaries such as `Shadow, ` before Hebrew and keeps embedded English item
+  names correctly ordered in Arabic and Persian.
+- Fresh one-pass runtime runs for `ar`, `fa`, and `he` reached all six showcase
+  states without a stalled dialogue transition: main menu, load menu, action
+  menu, character dialogue, evidence inventory, and rings minigame. The three
+  diagnostic THINK splashes remain on one line. All 18 evidence records passed
+  visual review and their PNG SHA-256 values were reverified.
+- The final unified payload contains 30 ready locales and 185 verified xdelta
+  artifacts. The release audit passed 22 Python tests, 14 Swift fake-folder
+  installer tests, full payload verification, and the signed universal
+  arm64/x86_64 application rebuild. Texture translation remains deferred by
+  owner scope and `imagesModified=false`.

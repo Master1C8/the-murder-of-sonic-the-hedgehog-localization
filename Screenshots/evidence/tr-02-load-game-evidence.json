@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
-  "date": "2026-09-20",
+  "date": "2026-09-21",
   "runtimeLocale": "tr",
   "publishingLocale": "tr",
   "screen": "load-game",
   "gameVersion": "1.01",
   "steamBuildID": "20535215",
-  "captureMethod": "Oculix 4.0.0 guarded main-menu-to-load-game recognition with native macOS screencapture",
+  "captureMethod": "Project one-pass native showcase automation with deterministic locale install, AppKit activation, CoreGraphics input, and native macOS screencapture; Oculix 4.0.0 fallback used because Java Mouse.init reported input blocked",
   "resolution": {
     "width": 2880,
     "height": 1800
   },
   "automatedResult": "pass",
   "visualReview": {
-    "status": "pass",
+    "status": "pending",
     "findings": []
   },
-  "result": "pass",
+  "result": "capture-pass-review-pending",
   "activeLocaleVerified": true,
   "restoration": {
     "priorLocale": "ru",
@@ -25,6 +25,6 @@
   },
   "screenshot": {
     "file": "../upload/tr-02-load-game.png",
-    "sha256": "15ed60c3f2bec03d675e7d2a03dcb03d9755de2c78ee2eb3b4d00a9709ad4709"
+    "sha256": "3f0c50d4684e4e59174fc04facd929b3955573c2f431934f4cabdbfa51ed477a"
   }
 }

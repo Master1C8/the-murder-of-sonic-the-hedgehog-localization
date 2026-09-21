@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-21",
+  "runtimeLocale": "zh",
+  "publishingLocale": "zh",
+  "screen": "evidence-items",
+  "gameVersion": "1.01",
+  "steamBuildID": "20535215",
+  "captureMethod": "Project one-pass native showcase automation with deterministic locale install, AppKit activation, CoreGraphics input, and native macOS screencapture; Oculix 4.0.0 fallback used because Java Mouse.init reported input blocked",
+  "resolution": {
+    "width": 2880,
+    "height": 1800
+  },
+  "automatedResult": "pass",
+  "visualReview": {
+    "status": "pending",
+    "findings": []
+  },
+  "result": "capture-pass-review-pending",
+  "activeLocaleVerified": true,
+  "restoration": {
+    "priorLocale": "ru",
+    "localeRestored": true,
+    "saveWritten": false
+  },
+  "screenshot": {
+    "file": "../upload/zh-05-evidence-items.png",
+    "sha256": "662284a500df2bd668e0981c7066aa26be83c3df5b04c81009a1fa33be69fc80"
+  }
+}

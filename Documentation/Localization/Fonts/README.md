@@ -109,11 +109,18 @@ Complex locales additionally require, for example:
   --shaping-map LocalizationAssets/Fonts/Complex/ar.shaping.json
 ```
 
-## Gates still open
+## Current gate status
 
-Static complex-script preparation now passes for all five affected locales,
-and static RTL state is prepared for all three RTL locales. This proves the
-derived payload structure, not on-screen behavior. `runtimeReadability` and
-visual QA remain `not-run`; no locale is marked `ready`, and `payloadReady`
-remains `false` until in-game validation and the later texture, packaging, and
-unified-payload gates pass.
+Static complex-script preparation passes for all five affected locales, and
+the three RTL locales (`ar`, `fa`, and `he`) have completed fresh six-screen
+runtime visual QA. Their dialogue route reaches the evidence inventory and
+rings minigame without animation stalls; mixed Latin runs, punctuation, and
+edge whitespace remain correctly separated, and the diagnostic THINK splash
+fits on one line in each locale.
+
+Every managed locale assembly also contains one structurally verified shared
+text-animation completion guard, so invisible final TMP characters cannot
+leave dialogue animation active indefinitely. The complete unified payload is
+ready for all 30 locales and `payloadReady=true`. Texture translation is
+intentionally deferred by owner scope; the release records
+`imagesModified=false`.

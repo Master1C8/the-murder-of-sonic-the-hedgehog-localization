@@ -10,6 +10,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import re
 import shutil
 import signal
 import subprocess
@@ -37,6 +38,7 @@ RECEIPT = GAME_ROOT / ".vn-revival/fun.vnrevival.murder-of-sonic.languages/recei
 SAVE = Path("/Users/antonkrutov/Library/Application Support/com.Sonic-Social.The-Murder-of-Sonic-The-Hedgehog/SaveData.data")
 UPLOAD = PROJECT_ROOT / "Screenshots/upload"
 REVIEW = PROJECT_ROOT / "Screenshots/evidence"
+DIAGNOSTICS = PROJECT_ROOT / "Screenshots/diagnostics"
 
 SCREENS = {
     "main-menu": {"order": "01", "slug": "main-menu"},
@@ -250,20 +252,53 @@ def native_input(runtime: Path, action: str, *arguments: object) -> None:
     run([str(runtime / "cg-input"), action, *(str(argument) for argument in arguments)])
 
 
-def native_capture(runtime: Path, path: Path) -> None:
+def native_capture(runtime: Path, path: Path, *, settle: float = 0.35) -> None:
     if not game_pids():
         raise RuntimeError("the game stopped before native screenshot capture")
     run([str(runtime / "activate-app"), GAME_BUNDLE_ID])
-    time.sleep(0.35)
+    time.sleep(settle)
     run(["/usr/sbin/screencapture", "-x", str(path)])
     if not path.is_file():
         raise RuntimeError(f"native screenshot is missing: {path}")
 
 
+def evidence_menu_visible(path: Path) -> bool:
+    """Recognize the locale-independent beige evidence panel at native size."""
+    points = ((1440, 400), (1440, 700), (1600, 500), (1900, 900))
+    pixel_format = "|".join(f"%[pixel:p{{{x},{y}}}]" for x, y in points)
+    result = run(
+        [str(MAGICK), str(path), "-format", pixel_format, "info:"],
+        capture_output=True,
+    )
+    samples = [
+        tuple(map(int, match))
+        for match in re.findall(r"srgba?\((\d+),(\d+),(\d+)", result.stdout)
+    ]
+    panel = (226, 218, 186)
+    return len(samples) == len(points) and all(
+        max(abs(actual - expected) for actual, expected in zip(sample, panel)) <= 20
+        for sample in samples
+    )
+
+
+def advance_to_evidence_menu(runtime: Path) -> Path:
+    """Advance dialogue in guarded batches until the evidence panel appears."""
+    probe = runtime / "evidence-menu-probe.png"
+    for _ in range(12):
+        native_input(runtime, "repeat-double-click", 1405, 835, 12, 320)
+        time.sleep(0.4)
+        native_capture(runtime, probe, settle=0.05)
+        if evidence_menu_visible(probe):
+            return probe
+    raise RuntimeError("evidence-items menu did not appear after 144 guarded double-clicks")
+
+
 def run_native_showcase(runtime: Path, locale: str) -> dict[str, Path]:
-    """Capture the six Russian catalog screens in one uninterrupted game process."""
+    """Capture the six catalog screens in one uninterrupted game process."""
     run([str(runtime / "activate-app"), GAME_BUNDLE_ID])
-    time.sleep(2)
+    # Complex-script fallback fonts can finish loading after the background
+    # marker appears. Wait for the complete title/menu fade before evidence.
+    time.sleep(5)
     outputs = {
         screen: runtime / "raw" / (
             f"{locale}-{SCREENS[screen]['order']}-{SCREENS[screen]['slug']}-raw.png"
@@ -284,55 +319,144 @@ def run_native_showcase(runtime: Path, locale: str) -> dict[str, Path]:
 
     native_input(runtime, "double-click", 900, 420)  # Start interrogation
     time.sleep(1.5)
-    native_capture(runtime, outputs["character-dialogue"])
+    # App activation itself can trigger the delayed macOS Game Mode banner.
+    # Wait after native_capture activates the app, not before that activation.
+    native_capture(runtime, outputs["character-dialogue"], settle=7)
 
-    # The localized Ink route contains 34 displayed lines before the clue
-    # prompt. A typewriter line can consume one double-click to finish drawing
-    # and another to advance, so use 68 plus eight buffered double-clicks. The
-    # clue prompt is inert at this coordinate, making the requested margin safe.
-    native_input(runtime, "repeat-double-click", 1405, 835, 76, 220)
-    time.sleep(1)
-    native_capture(runtime, outputs["evidence-items"])
+    # Complex-script rendering changes how quickly the typewriter accepts
+    # input. Advance in bounded batches and prove the locale-independent clue
+    # panel is actually open instead of treating a click count as UI state.
+    evidence_probe = advance_to_evidence_menu(runtime)
+    shutil.copy2(evidence_probe, outputs["evidence-items"])
 
     native_input(runtime, "click", 850, 305)  # Hidden Passage evidence
     time.sleep(0.8)
     native_input(runtime, "click", 600, 535)  # THAT'S IT / confirm evidence
     time.sleep(1)
     native_input(runtime, "repeat-double-click", 1405, 835, 2, 260)
-    time.sleep(3.2)
+    # THINK is a short animated splash before the runner console opens. Keep a
+    # non-upload diagnostic frame so line wrapping cannot slip past the later
+    # gameplay screenshot. The six catalog outputs remain unchanged.
+    time.sleep(0.05)
+    DIAGNOSTICS.mkdir(parents=True, exist_ok=True)
+    native_capture(
+        runtime,
+        DIAGNOSTICS / f"{locale}-think-splash.png",
+        settle=0.05,
+    )
+    time.sleep(2.8)
     native_capture(runtime, outputs["rings-minigame"])
     return outputs
 
 
-def capture_showcase(locale: dict[str, str], replace: bool) -> None:
-    if game_pids():
-        raise RuntimeError("the game is already running")
-    destinations = {
+def showcase_destinations(locale: dict[str, str]) -> dict[str, Path]:
+    return {
         screen: UPLOAD / (
             f"{locale['siteLocale']}-{SCREENS[screen]['order']}-{SCREENS[screen]['slug']}.png"
         )
         for screen in SHOWCASE_SCREENS
     }
+
+
+def showcase_is_complete(locale: dict[str, str]) -> bool:
+    """Return true only for a complete, internally consistent six-screen set."""
+    for screen, screenshot in showcase_destinations(locale).items():
+        metadata = SCREENS[screen]
+        evidence_path = REVIEW / (
+            f"{locale['siteLocale']}-{metadata['order']}-{metadata['slug']}-evidence.json"
+        )
+        if not screenshot.is_file() or not evidence_path.is_file():
+            return False
+        try:
+            evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            return False
+        if (
+            evidence.get("runtimeLocale") != locale["runtimeCode"]
+            or evidence.get("publishingLocale") != locale["siteLocale"]
+            or evidence.get("screen") != screen
+            or evidence.get("automatedResult") != "pass"
+            or evidence.get("screenshot", {}).get("sha256") != sha256(screenshot)
+        ):
+            return False
+    return True
+
+
+def capture_showcase_prepared(
+    locale: dict[str, str], replace: bool, runtime: Path, installer: Path
+) -> None:
+    if game_pids():
+        raise RuntimeError("the game is already running")
+    destinations = showcase_destinations(locale)
     existing = [path for path in destinations.values() if path.exists()]
     if existing and not replace:
         raise RuntimeError("outputs exist; pass --replace: " + ", ".join(map(str, existing)))
 
     save_hash = sha256(SAVE)
     prior = active_locale()
+    save_backup = runtime / f"SaveData-{locale['runtimeCode']}.data"
+    shutil.copy2(SAVE, save_backup)
+    try:
+        install_locale(installer, locale["runtimeCode"])
+        launch_game()
+        captures = run_native_showcase(runtime, locale["runtimeCode"])
+        UPLOAD.mkdir(parents=True, exist_ok=True)
+        for screen, source in captures.items():
+            shutil.copy2(source, destinations[screen])
+    finally:
+        stop_game()
+        if active_locale() != prior:
+            install_locale(installer, prior)
+        if sha256(SAVE) != save_hash:
+            shutil.copy2(save_backup, SAVE)
+            if sha256(SAVE) != save_hash:
+                raise RuntimeError("SaveData.data changed and could not be restored")
+
+    if sha256(SAVE) != save_hash:
+        raise RuntimeError("SaveData.data changed during showcase capture")
+    method = (
+        "Project one-pass native showcase automation with deterministic locale install, "
+        "AppKit activation, CoreGraphics input, and native macOS screencapture; "
+        "Oculix 4.0.0 fallback used because Java Mouse.init reported input blocked"
+    )
+    for screen in SHOWCASE_SCREENS:
+        write_evidence(
+            locale, destinations[screen], prior, save_hash, screen,
+            capture_method=method,
+        )
+        print(
+            f"visual-qa-showcase-complete {locale['runtimeCode']} {destinations[screen]}",
+            flush=True,
+        )
+
+
+def capture_showcase(locale: dict[str, str], replace: bool) -> None:
+    if game_pids():
+        raise RuntimeError("the game is already running")
     with tempfile.TemporaryDirectory(prefix="sonic-visual-qa-showcase-") as temporary:
         runtime = Path(temporary)
-        save_backup = runtime / "SaveData.data"
-        shutil.copy2(SAVE, save_backup)
         prepare_runtime(runtime)
         installer = compile_installer(runtime)
-        captures: dict[str, Path] = {}
+        capture_showcase_prepared(locale, replace, runtime, installer)
+
+
+def capture_think_diagnostic(locale: dict[str, str]) -> None:
+    """Run the showcase route but preserve only the short THINK splash frame."""
+    if game_pids():
+        raise RuntimeError("the game is already running")
+    with tempfile.TemporaryDirectory(prefix="sonic-visual-qa-think-") as temporary:
+        runtime = Path(temporary)
+        prepare_runtime(runtime)
+        installer = compile_installer(runtime)
+        save_hash = sha256(SAVE)
+        prior = active_locale()
+        save_backup = runtime / f"SaveData-{locale['runtimeCode']}.data"
+        shutil.copy2(SAVE, save_backup)
+        diagnostic = DIAGNOSTICS / f"{locale['runtimeCode']}-think-splash.png"
         try:
             install_locale(installer, locale["runtimeCode"])
             launch_game()
-            captures = run_native_showcase(runtime, locale["runtimeCode"])
-            UPLOAD.mkdir(parents=True, exist_ok=True)
-            for screen, source in captures.items():
-                shutil.copy2(source, destinations[screen])
+            run_native_showcase(runtime, locale["runtimeCode"])
         finally:
             stop_game()
             if active_locale() != prior:
@@ -341,20 +465,35 @@ def capture_showcase(locale: dict[str, str], replace: bool) -> None:
                 shutil.copy2(save_backup, SAVE)
                 if sha256(SAVE) != save_hash:
                     raise RuntimeError("SaveData.data changed and could not be restored")
-
+        if not diagnostic.is_file():
+            raise RuntimeError(f"THINK diagnostic frame is missing: {diagnostic}")
         if sha256(SAVE) != save_hash:
-            raise RuntimeError("SaveData.data changed during showcase capture")
-        method = (
-            "Project one-pass native showcase automation with deterministic locale install, "
-            "AppKit activation, CoreGraphics input, and native macOS screencapture; "
-            "Oculix 4.0.0 fallback used because Java Mouse.init reported input blocked"
-        )
-        for screen in SHOWCASE_SCREENS:
-            write_evidence(
-                locale, destinations[screen], prior, save_hash, screen,
-                capture_method=method,
+            raise RuntimeError("SaveData.data changed during THINK diagnostic capture")
+        print(f"visual-qa-think-complete {locale['runtimeCode']} {diagnostic}", flush=True)
+
+
+def capture_showcase_batch(
+    locales: list[dict[str, str]], replace: bool, resume: bool
+) -> None:
+    if game_pids():
+        raise RuntimeError("the game is already running")
+    with tempfile.TemporaryDirectory(prefix="sonic-visual-qa-showcase-batch-") as temporary:
+        runtime = Path(temporary)
+        prepare_runtime(runtime)
+        installer = compile_installer(runtime)
+        total = len(locales)
+        for index, locale in enumerate(locales, start=1):
+            if resume and showcase_is_complete(locale):
+                print(
+                    f"skip-complete-showcase {index}/{total} {locale['runtimeCode']}",
+                    flush=True,
+                )
+                continue
+            print(
+                f"visual-qa-showcase-start {index}/{total} {locale['runtimeCode']}",
+                flush=True,
             )
-            print(f"visual-qa-showcase-complete {locale['runtimeCode']} {destinations[screen]}")
+            capture_showcase_prepared(locale, replace, runtime, installer)
 
 
 def parse_args() -> argparse.Namespace:
@@ -364,8 +503,16 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--list", action="store_true")
     parser.add_argument("--replace", action="store_true")
     parser.add_argument(
+        "--resume", action="store_true",
+        help="skip complete six-screen locale sets and replace only incomplete sets",
+    )
+    parser.add_argument(
         "--showcase", action="store_true",
-        help="capture the six-screen Russian catalog showcase in one launch",
+        help="capture the six-screen catalog showcase in one launch per locale",
+    )
+    parser.add_argument(
+        "--think-diagnostic", action="store_true",
+        help="run the showcase route but preserve only the non-upload THINK splash frame",
     )
     parser.add_argument("--screen", choices=("main-menu", "load-game"), default="main-menu")
     return parser.parse_args()
@@ -389,10 +536,13 @@ def main() -> int:
             print(f"{locale['runtimeCode']} -> {locale['siteLocale']}")
         return 0
     if args.all:
-        if args.showcase:
-            raise RuntimeError("--showcase cannot be combined with --all")
+        if args.think_diagnostic:
+            raise RuntimeError("--think-diagnostic requires one explicit locale")
         if args.locale:
             raise RuntimeError("locale cannot be combined with --all")
+        if args.showcase:
+            capture_showcase_batch(locales, args.replace, args.resume)
+            return 0
         for locale in locales:
             metadata = SCREENS[args.screen]
             stem = f"{locale['siteLocale']}-{metadata['order']}-{metadata['slug']}"
@@ -409,6 +559,11 @@ def main() -> int:
     selected = next((item for item in locales if item["runtimeCode"] == args.locale), None)
     if selected is None:
         raise RuntimeError("choose a locale or use --all")
+    if args.showcase and args.think_diagnostic:
+        raise RuntimeError("--showcase and --think-diagnostic are mutually exclusive")
+    if args.think_diagnostic:
+        capture_think_diagnostic(selected)
+        return 0
     if args.showcase:
         capture_showcase(selected, args.replace)
         return 0

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-21",
+  "runtimeLocale": "th",
+  "publishingLocale": "th",
+  "screen": "rings-minigame",
+  "gameVersion": "1.01",
+  "steamBuildID": "20535215",
+  "captureMethod": "Project one-pass native showcase automation with deterministic locale install, AppKit activation, CoreGraphics input, and native macOS screencapture; Oculix 4.0.0 fallback used because Java Mouse.init reported input blocked",
+  "resolution": {
+    "width": 2880,
+    "height": 1800
+  },
+  "automatedResult": "pass",
+  "visualReview": {
+    "status": "pending",
+    "findings": []
+  },
+  "result": "capture-pass-review-pending",
+  "activeLocaleVerified": true,
+  "restoration": {
+    "priorLocale": "ru",
+    "localeRestored": true,
+    "saveWritten": false
+  },
+  "screenshot": {
+    "file": "../upload/th-06-rings-minigame.png",
+    "sha256": "d597ee3edc9836f2bb442b57507e02b87cdc02b1a6c16cab7d7bc7ace0101330"
+  }
+}

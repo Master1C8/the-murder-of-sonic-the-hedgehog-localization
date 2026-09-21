@@ -221,6 +221,48 @@ RUNNER_HUD_LAYOUT_PROFILES = {
     "zh-TW": {"text": "金環", "maximum": 56.0},
 }
 
+THINK_ADDRESSABLE_LABEL_ID = "unity:defaultgroup:1132863480269152641:m_text"
+THINK_LEVEL0_LABEL_ID = "unity:level0:1507:m_text"
+
+# RunnerGameScreen/THINK is an 857.3-unit-wide field at 221.8 pt with wrapping
+# enabled. These maxima keep both serialized copies of every pinned translation
+# within 814 units (95% of the field). Widths use the bundled Gilroy ExtraBold
+# TMP advances plus the prepared fallback-font advances after exact shaping.
+# The expected text makes any later wording change fail closed until its fit is
+# recalculated instead of silently reintroducing a two-line splash.
+THINK_LAYOUT_PROFILES = {
+    "ar": {"text": "فكّر!", "maximum": 221.0},
+    "bg": {"text": "МИСЛИ!", "maximum": 184.0},
+    "cs": {"text": "PŘEMÝŠLEJ!", "maximum": 131.0},
+    "de": {"text": "DENK!", "maximum": 221.0},
+    "el": {"text": "ΣΚΕΨΟΥ!", "maximum": 176.0},
+    "es": {"text": "¡PIENSA!", "maximum": 186.0},
+    "es-419": {"text": "¡PIENSA!", "maximum": 186.0},
+    "fa": {"text": "فکر کن!", "maximum": 221.0},
+    "fil": {"text": "MAG-ISIP!", "maximum": 152.0},
+    "fr": {"text": "RÉFLÉCHIS !", "maximum": 133.0},
+    "he": {"text": "חִשְׁבוּ!", "maximum": 221.0},
+    "hi": {"text": "सोचो!", "maximum": 221.0},
+    "hu": {"text": "GONDOLKODJ!", "maximum": 103.0},
+    "id": {"text": "PIKIR!", "maximum": 221.0},
+    "it": {"text": "PENSA!", "maximum": 220.0},
+    "ja": {"text": "考える！", "maximum": 192.0},
+    "ko": {"text": "생각해!", "maximum": 221.0},
+    "nl": {"text": "DENK NA!", "maximum": 166.0},
+    "pl": {"text": "POMYŚL!", "maximum": 178.0},
+    "pt-BR": {"text": "PENSE!", "maximum": 221.0},
+    "ro": {"text": "GÂNDEȘTE!", "maximum": 140.0},
+    "ru": {"text": "ДУМАЙ!", "maximum": 190.0},
+    "sr": {"text": "РАЗМИСЛИ!", "maximum": 126.0},
+    "sw": {"text": "FIKIRI!", "maximum": 221.0},
+    "th": {"text": "คิด!", "maximum": 221.0},
+    "tr": {"text": "DÜŞÜN!", "maximum": 210.0},
+    "uk": {"text": "ДУМАЙ!", "maximum": 190.0},
+    "vi": {"text": "SUY NGHĨ!", "maximum": 151.0},
+    "zh": {"text": "思考！", "maximum": 221.0},
+    "zh-TW": {"text": "思考！", "maximum": 221.0},
+}
+
 COMPLEX_SCRIPT_MODES = {
     "ar": 1,
     "fa": 1,
@@ -1328,9 +1370,14 @@ def validate_layout_overrides(
 
 
 def effective_level0_layout_overrides(overlay: dict[str, Any]) -> dict[str, dict[str, float]]:
+    think_maximum = effective_think_layout_maximum(overlay)
     overrides = {
         identifier: dict(fields)
         for identifier, fields in SAVE_SLOT_LAYOUT_OVERRIDES.items()
+    }
+    overrides[THINK_LEVEL0_LABEL_ID] = {
+        "m_fontSize": think_maximum,
+        "m_fontSizeBase": think_maximum,
     }
     for identifier, fields in overlay.get("layoutOverrides", {}).items():
         if not identifier.startswith("unity:level0:"):
@@ -1344,7 +1391,29 @@ def effective_level0_layout_overrides(overlay: dict[str, Any]) -> dict[str, dict
                     f"Save-slot collision guard exceeded for {identifier} {field}: "
                     f"{overrides[identifier][field]} > {maximum}"
                 )
+    for field in ("m_fontSize", "m_fontSizeBase"):
+        value = overrides[THINK_LEVEL0_LABEL_ID].get(field, think_maximum)
+        if value > think_maximum:
+            raise SystemExit(
+                f"THINK splash collision guard exceeded for {overlay.get('targetLocale')} "
+                f"{THINK_LEVEL0_LABEL_ID} {field}: {value} > {think_maximum}"
+            )
     return overrides
+
+
+def effective_think_layout_maximum(overlay: dict[str, Any]) -> float:
+    locale = overlay.get("targetLocale")
+    profile = THINK_LAYOUT_PROFILES.get(locale)
+    if profile is None:
+        raise SystemExit(f"THINK splash layout profile is missing for locale {locale!r}")
+    for identifier in (THINK_ADDRESSABLE_LABEL_ID, THINK_LEVEL0_LABEL_ID):
+        actual_text = overlay.get("units", {}).get(identifier)
+        if actual_text != profile["text"]:
+            raise SystemExit(
+                f"THINK splash layout profile is stale for {locale} {identifier}: "
+                f"{actual_text!r} != {profile['text']!r}"
+            )
+    return float(profile["maximum"])
 
 
 def effective_defaultgroup_layout_overrides(
@@ -1361,11 +1430,16 @@ def effective_defaultgroup_layout_overrides(
             f"{actual_text!r} != {profile['text']!r}"
         )
     maximum = float(profile["maximum"])
+    think_maximum = effective_think_layout_maximum(overlay)
     overrides = {
         RUNNER_HUD_LABEL_ID: {
             "m_fontSize": maximum,
             "m_fontSizeBase": maximum,
-        }
+        },
+        THINK_ADDRESSABLE_LABEL_ID: {
+            "m_fontSize": think_maximum,
+            "m_fontSizeBase": think_maximum,
+        },
     }
     for identifier, fields in overlay.get("layoutOverrides", {}).items():
         if not identifier.startswith("unity:defaultgroup:"):
@@ -1378,6 +1452,13 @@ def effective_defaultgroup_layout_overrides(
             raise SystemExit(
                 f"Runner HUD collision guard exceeded for {locale} {field}: "
                 f"{value} > {maximum}"
+            )
+        think_value = overrides[THINK_ADDRESSABLE_LABEL_ID].get(field, think_maximum)
+        if think_value > think_maximum:
+            raise SystemExit(
+                f"THINK splash collision guard exceeded for {locale} "
+                f"{THINK_ADDRESSABLE_LABEL_ID} {field}: "
+                f"{think_value} > {think_maximum}"
             )
     return overrides
 
@@ -1943,7 +2024,10 @@ def replace_level0_layout(
         if offset + 4 > len(patched):
             raise SystemExit(f"Serialized layout field {field} is truncated for {identifier}")
         current = struct.unpack_from("<f", patched, offset)[0]
-        if not 1 <= current <= 200:
+        # Some deliberate splash labels use oversized source typography
+        # (RunnerGameScreen/THINK is 221.8 pt). Accept a bounded serialized
+        # source range while authored overrides remain limited separately.
+        if not 1 <= current <= 512:
             raise SystemExit(
                 f"Unexpected serialized {field} value for {identifier}: {current!r}"
             )
@@ -2178,7 +2262,7 @@ def patch_managed_assembly(
     save_location_labels: list[tuple[str, str]],
     shaping: dict[str, Any] | None = None,
     managed_reference_root: Path | None = None,
-) -> tuple[int, int, int, int]:
+) -> tuple[int, int, int, int, int]:
     compiler = shutil.which("mcs")
     runtime = shutil.which("mono")
     if compiler is None or runtime is None:
@@ -2316,12 +2400,22 @@ def patch_managed_assembly(
     text_shaper_redirects = int(redirect_match.group(1)) if redirect_match else 0
     if shaping is not None and text_shaper_redirects == 0:
         raise SystemExit("Managed string patch reported no text-shaper redirects")
+    guard_match = re.search(r"(\d+) text-animation completion guard", patch_result.stdout)
+    animation_completion_guards = int(guard_match.group(1)) if guard_match else 0
+    if animation_completion_guards != 1:
+        raise SystemExit("Managed string patch reported no text-animation completion guard")
     helper.unlink(missing_ok=True)
     patch_file.unlink(missing_ok=True)
     labels_file.unlink(missing_ok=True)
     save_locations_file.unlink(missing_ok=True)
     shaping_resource.unlink(missing_ok=True)
-    return len(rows), len(speaker_labels), len(save_location_labels), text_shaper_redirects
+    return (
+        len(rows),
+        len(speaker_labels),
+        len(save_location_labels),
+        text_shaper_redirects,
+        animation_completion_guards,
+    )
 
 
 def decode_7bit_integer(data: bytes, position: int) -> tuple[int, int]:
@@ -2561,6 +2655,7 @@ def build_runtime_patch(
         counts["speakerDisplayLabels"],
         counts["saveLocationDisplayLabels"],
         counts["textShaperRedirects"],
+        counts["textAnimationCompletionGuards"],
     ) = patch_managed_assembly(
         sources["managed"],
         outputs["managed"],

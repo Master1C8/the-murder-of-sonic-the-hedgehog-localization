@@ -87,6 +87,129 @@ internal static class PatchManagedStrings
         return helperType;
     }
 
+    private static MethodDefinition AddTextAnimationCompletionCheck(
+        ModuleDefinition module,
+        TypeDefinition helperType
+    )
+    {
+        var method = new MethodDefinition(
+            "ShouldCompleteTextAnimation",
+            MethodAttributes.Static | MethodAttributes.Assembly | MethodAttributes.HideBySig,
+            module.TypeSystem.Boolean
+        );
+        method.Parameters.Add(new ParameterDefinition("now", ParameterAttributes.None, module.TypeSystem.Single));
+        method.Parameters.Add(new ParameterDefinition("startedAt", ParameterAttributes.None, module.TypeSystem.Single));
+        method.Parameters.Add(new ParameterDefinition("characterCount", ParameterAttributes.None, module.TypeSystem.Int32));
+        method.Parameters.Add(new ParameterDefinition("letterDelay", ParameterAttributes.None, module.TypeSystem.Single));
+        method.Parameters.Add(new ParameterDefinition("duration", ParameterAttributes.None, module.TypeSystem.Single));
+        method.Parameters.Add(new ParameterDefinition("skipCalled", ParameterAttributes.None, module.TypeSystem.Boolean));
+
+        ILProcessor il = method.Body.GetILProcessor();
+        Instruction complete = il.Create(OpCodes.Ldc_I4_1);
+        il.Append(il.Create(OpCodes.Ldarg, method.Parameters[5]));
+        il.Append(il.Create(OpCodes.Brtrue, complete));
+        il.Append(il.Create(OpCodes.Ldarg, method.Parameters[2]));
+        il.Append(il.Create(OpCodes.Ldc_I4_0));
+        il.Append(il.Create(OpCodes.Ble, complete));
+        il.Append(il.Create(OpCodes.Ldarg, method.Parameters[0]));
+        il.Append(il.Create(OpCodes.Ldarg, method.Parameters[1]));
+        il.Append(il.Create(OpCodes.Ldarg, method.Parameters[2]));
+        il.Append(il.Create(OpCodes.Ldc_I4_1));
+        il.Append(il.Create(OpCodes.Sub));
+        il.Append(il.Create(OpCodes.Conv_R4));
+        il.Append(il.Create(OpCodes.Ldarg, method.Parameters[3]));
+        il.Append(il.Create(OpCodes.Mul));
+        il.Append(il.Create(OpCodes.Add));
+        il.Append(il.Create(OpCodes.Ldarg, method.Parameters[4]));
+        il.Append(il.Create(OpCodes.Add));
+        il.Append(il.Create(OpCodes.Bge, complete));
+        il.Append(il.Create(OpCodes.Ldc_I4_0));
+        il.Append(il.Create(OpCodes.Ret));
+        il.Append(complete);
+        il.Append(il.Create(OpCodes.Ret));
+        helperType.Methods.Add(method);
+        return method;
+    }
+
+    private static void PatchTextAnimationCompletion(
+        AssemblyDefinition assembly,
+        MethodDefinition shouldComplete
+    )
+    {
+        TypeDefinition animator = assembly.MainModule.Types.Single(
+            item => item.FullName == "AnimateTMProVertex"
+        );
+        TypeDefinition iterator = animator.NestedTypes.Single(
+            item => item.Name == "<AnimateVertices>d__16"
+        );
+        MethodDefinition moveNext = iterator.Methods.Single(
+            item => item.Name == "MoveNext" && item.HasBody
+        );
+        if (moveNext.Body.Variables.Count < 5
+            || moveNext.Body.Variables[1].VariableType.FullName != animator.FullName
+            || moveNext.Body.Variables[4].VariableType.MetadataType != MetadataType.Int32)
+            throw new InvalidDataException("Unexpected AnimateVertices local-variable layout");
+
+        VariableDefinition animatorLocal = moveNext.Body.Variables[1];
+        VariableDefinition characterCountLocal = moveNext.Body.Variables[4];
+        FieldDefinition animating = animator.Fields.Single(item => item.Name == "animating");
+        FieldDefinition skipCalled = animator.Fields.Single(item => item.Name == "skipCalled");
+        FieldDefinition letterDelay = animator.Fields.Single(item => item.Name == "letterDelay");
+        FieldDefinition duration = animator.Fields.Single(item => item.Name == "duration");
+        FieldDefinition animStart = iterator.Fields.Single(
+            item => item.Name == "<animStartTime>5__4"
+        );
+        MethodDefinition onAnimationComplete = animator.Methods.Single(
+            item => item.Name == "OnAnimationComplete" && item.Parameters.Count == 0
+        );
+        MethodReference getTime = moveNext.Body.Instructions
+            .Select(item => item.Operand as MethodReference)
+            .First(item => item != null
+                && item.DeclaringType.FullName == "UnityEngine.Time"
+                && item.Name == "get_time");
+        List<Instruction> waits = moveNext.Body.Instructions.Where(item => {
+            MethodReference called = item.Operand as MethodReference;
+            return item.OpCode == OpCodes.Newobj
+                && called != null
+                && called.DeclaringType.FullName == "UnityEngine.WaitForEndOfFrame";
+        }).ToList();
+        if (waits.Count != 2)
+            throw new InvalidDataException("Unexpected AnimateVertices frame-yield layout");
+        Instruction waitForNextFrame = waits[1];
+        ILProcessor il = moveNext.Body.GetILProcessor();
+        Action<Instruction> insert = instruction => il.InsertBefore(waitForNextFrame, instruction);
+
+        // The original coroutine completes only inside the visible-character
+        // branch and only when that character's raw index is characterCount-1.
+        // A trailing space, line break, combining mark, or other invisible TMP
+        // character therefore leaves it running forever. After every full
+        // mesh pass, independently complete at the deterministic time for the
+        // final raw character (or immediately when Skip was requested).
+        insert(il.Create(OpCodes.Ldloc, animatorLocal));
+        insert(il.Create(OpCodes.Ldfld, animating));
+        insert(il.Create(OpCodes.Brfalse, waitForNextFrame));
+        insert(il.Create(OpCodes.Call, getTime));
+        insert(il.Create(OpCodes.Ldarg_0));
+        insert(il.Create(OpCodes.Ldfld, animStart));
+        insert(il.Create(OpCodes.Ldloc, characterCountLocal));
+        insert(il.Create(OpCodes.Ldloc, animatorLocal));
+        insert(il.Create(OpCodes.Ldfld, letterDelay));
+        insert(il.Create(OpCodes.Ldloc, animatorLocal));
+        insert(il.Create(OpCodes.Ldfld, duration));
+        insert(il.Create(OpCodes.Ldloc, animatorLocal));
+        insert(il.Create(OpCodes.Ldfld, skipCalled));
+        insert(il.Create(OpCodes.Call, shouldComplete));
+        insert(il.Create(OpCodes.Brfalse, waitForNextFrame));
+        insert(il.Create(OpCodes.Ldloc, animatorLocal));
+        insert(il.Create(OpCodes.Ldc_I4_0));
+        insert(il.Create(OpCodes.Stfld, animating));
+        insert(il.Create(OpCodes.Ldloc, animatorLocal));
+        insert(il.Create(OpCodes.Ldc_I4_0));
+        insert(il.Create(OpCodes.Stfld, skipCalled));
+        insert(il.Create(OpCodes.Ldloc, animatorLocal));
+        insert(il.Create(OpCodes.Callvirt, onAnimationComplete));
+    }
+
     private static void RedirectSpeakerDisplay(
         AssemblyDefinition assembly,
         MethodDefinition translateSpeaker
@@ -256,6 +379,11 @@ internal static class PatchManagedStrings
             new ReaderParameters { ReadSymbols = false, InMemory = true }
         );
         TypeDefinition helperType = AddDisplayLabelsType(assembly.MainModule);
+        MethodDefinition shouldCompleteTextAnimation = AddTextAnimationCompletionCheck(
+            assembly.MainModule,
+            helperType
+        );
+        PatchTextAnimationCompletion(assembly, shouldCompleteTextAnimation);
         MethodDefinition translateSpeaker = AddDisplayLabelMethod(
             assembly.MainModule,
             helperType,
@@ -417,6 +545,23 @@ internal static class PatchManagedStrings
             if (saveLocationRedirects != 2)
                 throw new InvalidDataException("Save-location display redirect verification failed");
         }
+        MethodDefinition verifiedAnimationCheck = verification.MainModule.Types
+            .Single(item => item.FullName == "VNRevival.DisplayLabels")
+            .Methods.Single(item => item.Name == "ShouldCompleteTextAnimation");
+        TypeDefinition verifiedAnimator = verification.MainModule.Types.Single(
+            item => item.FullName == "AnimateTMProVertex"
+        );
+        MethodDefinition verifiedAnimationMoveNext = verifiedAnimator.NestedTypes
+            .Single(item => item.Name == "<AnimateVertices>d__16")
+            .Methods.Single(item => item.Name == "MoveNext" && item.HasBody);
+        int animationCompletionGuards = verifiedAnimationMoveNext.Body.Instructions.Count(item => {
+            MethodReference called = item.Operand as MethodReference;
+            return item.OpCode == OpCodes.Call
+                && called != null
+                && called.FullName == verifiedAnimationCheck.FullName;
+        });
+        if (animationCompletionGuards != 1)
+            throw new InvalidDataException("Text-animation completion guard verification failed");
         if (args.Length == 6)
         {
             int verifiedShaperRedirects = WalkTypes(verification.MainModule.Types)
@@ -449,11 +594,12 @@ internal static class PatchManagedStrings
         Console.WriteLine(
             String.Format(
                 CultureInfo.InvariantCulture,
-                "{0} strings; {1} speaker labels; {2} save-location labels; {3} text-shaper redirects",
+                "{0} strings; {1} speaker labels; {2} save-location labels; {3} text-shaper redirects; {4} text-animation completion guard",
                 patches.Count,
                 labels.Count,
                 saveLocationLabels.Count,
-                textShaperRedirects
+                textShaperRedirects,
+                animationCompletionGuards
             )
         );
         return 0;

@@ -1,21 +1,22 @@
 {
   "schemaVersion": 1,
-  "date": "2026-09-20",
+  "date": "2026-09-21",
   "runtimeLocale": "es-419",
   "publishingLocale": "es-419",
+  "screen": "main-menu",
   "gameVersion": "1.01",
   "steamBuildID": "20535215",
-  "captureMethod": "Oculix 4.0.0 guarded main-menu recognition with native macOS screencapture",
+  "captureMethod": "Project one-pass native showcase automation with deterministic locale install, AppKit activation, CoreGraphics input, and native macOS screencapture; Oculix 4.0.0 fallback used because Java Mouse.init reported input blocked",
   "resolution": {
     "width": 2880,
     "height": 1800
   },
   "automatedResult": "pass",
   "visualReview": {
-    "status": "pass",
+    "status": "pending",
     "findings": []
   },
-  "result": "pass",
+  "result": "capture-pass-review-pending",
   "activeLocaleVerified": true,
   "restoration": {
     "priorLocale": "ru",
@@ -24,6 +25,6 @@
   },
   "screenshot": {
     "file": "../upload/es-419-01-main-menu.png",
-    "sha256": "b920751df7cf66834fc572bd5db100b36274a02d79fe8811e49aa37538f47417"
+    "sha256": "0c9663888c2d078ed8a2fabb2f0411d30ae442b3abb85ebdd401cc9e513baff4"
   }
 }

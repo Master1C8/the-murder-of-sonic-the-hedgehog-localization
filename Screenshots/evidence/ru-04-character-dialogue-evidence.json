@@ -13,10 +13,10 @@
   },
   "automatedResult": "pass",
   "visualReview": {
-    "status": "pass",
+    "status": "pending",
     "findings": []
   },
-  "result": "pass",
+  "result": "capture-pass-review-pending",
   "activeLocaleVerified": true,
   "restoration": {
     "priorLocale": "ru",
@@ -25,6 +25,6 @@
   },
   "screenshot": {
     "file": "../upload/ru-04-character-dialogue.png",
-    "sha256": "509abcbb37a2e270b16f3d314304dec89d9e0c9c7992227399c21b6696886719"
+    "sha256": "db7eca12e29390b53edce7a45c7a6fdc6621af24bbf73c9fc590810001824c0a"
   }
 }

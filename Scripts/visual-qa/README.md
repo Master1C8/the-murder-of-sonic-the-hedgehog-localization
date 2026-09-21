@@ -12,26 +12,37 @@ scenario guards the main menu, clicks Continue in calibrated logical Retina
 coordinates, guards the save-slot dialog, and produces screenshot `02` without
 opening or writing a save.
 
-The Russian catalog showcase captures all six requested screens in one game
-process: main menu, load menu, Shadow's action list, a character dialogue, the
-evidence-items menu, and the DreamGear runner screen with the localized Rings
-HUD. It follows the owner-provided reference route, starts Shadow's
+The catalog showcase captures all six requested screens for each locale in one
+game process: main menu, load menu, Shadow's action list, a character dialogue,
+the evidence-items menu, and the DreamGear runner screen with the localized
+Rings HUD. It follows the owner-provided reference route, starts Shadow's
 interrogation, advances the dialogue with buffered double clicks, captures and
 selects Hidden Passage, then stops the game and verifies that the save file did
 not change. This native path is the recorded fallback for the current Oculix
 `Mouse.init` incompatibility.
+
+The same route records `Screenshots/diagnostics/<locale>-think-splash.png`
+outside the upload directory. This short-lived frame is required to review the
+localized `THINK!` splash for wrapping; it is diagnostic evidence, not a
+seventh catalog screenshot.
 
 ```sh
 python3 Scripts/visual-qa/run_visual_qa.py --list
 python3 Scripts/visual-qa/run_visual_qa.py ru
 python3 Scripts/visual-qa/run_visual_qa.py ru --screen load-game
 python3 Scripts/visual-qa/run_visual_qa.py ru --showcase --replace
+python3 Scripts/visual-qa/run_visual_qa.py ru --think-diagnostic
 python3 Scripts/visual-qa/run_visual_qa.py --all
+python3 Scripts/visual-qa/run_visual_qa.py --all --showcase --replace
+python3 Scripts/visual-qa/run_visual_qa.py --all --showcase --replace --resume
 python3 Scripts/visual-qa/run_visual_qa.py --all --screen load-game
 ```
 
-An all-locale run resumes missing captures and preserves every existing capture
-that already has evidence, including a visual-review failure. Use `--replace`
-only after fixing the reported issue and reviewing the existing output.
+For a six-screen batch, `--resume` skips a locale only when all six screenshots
+and all six evidence files exist, their locale/screen fields match, and every
+recorded SHA-256 matches its screenshot. Combine it with `--replace` so an
+incomplete locale is regenerated while complete locale sets are preserved.
+For a single-screen all-locale run, existing captures with accepted evidence
+states are skipped unless `--replace` is passed.
 Upload-ready files are flat under `Screenshots/upload/`; evidence and failure
 frames are under `Screenshots/evidence/`.

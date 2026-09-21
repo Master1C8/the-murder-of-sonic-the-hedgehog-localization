@@ -1,7 +1,7 @@
 {
   "complexScriptManifest": {
     "path": "LocalizationAssets/Fonts/Complex/manifest.json",
-    "sha256": "166276ada14020ef32c06c6b175e30e2a8be79acb43199869d13ee16e02668eb"
+    "sha256": "18c6c2d55bf5af0c493b2a5fdb3afc0b5d0456813ec143e78c4c14724fdade42"
   },
   "errors": [],
   "fonts": {
@@ -780,7 +780,7 @@
         "generatedPuaCodepoints": 264,
         "malformedEntries": 0,
         "map": "ar.shaping.json",
-        "mapSha256": "b5cf6dc2c2a337d23dfa4d323cd15bd2bc3a4f94f17900bc03ec9a7073334269",
+        "mapSha256": "d13936707d382c5a9575fba2d8686ebda28a4d1b8572f20cc3ba96dafa4f55f3",
         "missingPuaCodepoints": [],
         "spanEntries": 6319,
         "staticPreparation": "pass",
@@ -947,7 +947,7 @@
       "missingCodepoints": [],
       "overlay": {
         "path": "bg.overlay.json",
-        "sha256": "f2dca0d9c98cc58a8bcd3a4c4363f6b37e8b469ca6eda4b3047a80625d9fd081"
+        "sha256": "db03794e1cd895a092f78029097183fd429797cf3b48c8ce7134556bfd4670be"
       },
       "renderedCodepointCount": 143,
       "renderedCodepoints": [
@@ -1781,7 +1781,7 @@
         "generatedPuaCodepoints": 175,
         "malformedEntries": 0,
         "map": "fa.shaping.json",
-        "mapSha256": "931784bbffb9442412ab149e5de51a94799d084b02cf7d8888696a87e39a5df9",
+        "mapSha256": "ad2e42be51fc41390e557db3c43839db3e567e8cbe07c1226c918ef23cc4cfb0",
         "missingPuaCodepoints": [],
         "spanEntries": 4671,
         "staticPreparation": "pass",
@@ -2187,7 +2187,7 @@
         "generatedPuaCodepoints": 129,
         "malformedEntries": 0,
         "map": "he.shaping.json",
-        "mapSha256": "e387c0d76633957da61a85bd4232e9f3fd57b9a6c1d2dc3fab63df986becb11a",
+        "mapSha256": "29e768686e3f7022742d8154dfa5696c2366b06122fc52e2fb96306cb36ba644",
         "missingPuaCodepoints": [],
         "spanEntries": 5040,
         "staticPreparation": "pass",
@@ -6496,7 +6496,7 @@
       "missingCodepoints": [],
       "overlay": {
         "path": "uk.overlay.json",
-        "sha256": "66b548f5d1c7b1eb7445fce9327b789329909abd1c547b30a92175f834f9d949"
+        "sha256": "d79b40f7996b1c3a7866f2826f4cf8155544131401a6f38b608c34f10878626a"
       },
       "renderedCodepointCount": 150,
       "renderedCodepoints": [

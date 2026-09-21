@@ -2644,11 +2644,11 @@
   "imageEntries": [
     {
       "logical": "ticket town\nهوت هاني\nالجمعة 8 مايو\n9:00 مساءً\nالمسرح\nالقسم 53 الصف P\nالقسم 53 الصف P\nالقسم 53 الصف R\nالقسم 54 الصف R",
-      "shaped": "ticket town\n \n 8 \n9:00 \n\n 53  P\n 53  P\n 53  R\n 54  R"
+      "shaped": "nwot tekcit\n \n 8 \n00:9 \n\n 35  P\n 35  P\n 35  R\n 45  R"
     },
     {
       "logical": "أعلى النتائج\nVECTR 7501\nKNUCK 7500\nTOAST 7331\nAPPLE 7250\nBREAD 7200\nULTIM 7150\nBAGEL 7003\nCANDY 6990",
-      "shaped": " \nVECTR 7501\nKNUCK 7500\nTOAST 7331\nAPPLE 7250\nBREAD 7200\nULTIM 7150\nBAGEL 7003\nCANDY 6990"
+      "shaped": " \n0996 YDNAC\n3007 LEGAB\n0517 MITLU\n0027 DAERB\n0527 ELPPA\n1337 TSAOT\n0057 KCUNK\n1057 RTCEV"
     },
     {
       "logical": "استخدم سهم النفخ هذا ضد سونيك\nفي عربة القيادة.\nإنه مشبع بمادة منوّمة غير قاتلة.\nشكراً لك مجدداً على\nاختيار قطار ميراج إكسبريس.\n—طاقم العمل",
@@ -2772,15 +2772,15 @@
     },
     {
       "logical": "(ابدأ الاستجواب)  >>>>InterrogateChoice",
-      "shaped": "( )  >>>>InterrogateChoice"
+      "shaped": "( eciohCetagorretnI>>>>  )"
     },
     {
       "logical": "(ابدأ الاستجواب) >>>>InterrogateChoice",
-      "shaped": "( ) >>>>InterrogateChoice"
+      "shaped": "( eciohCetagorretnI>>>> )"
     },
     {
       "logical": "(بدء الاستجواب) >>>>InterrogateChoice",
-      "shaped": "( ) >>>>InterrogateChoice"
+      "shaped": "( eciohCetagorretnI>>>> )"
     },
     {
       "logical": "(تحدث)",
@@ -2860,7 +2860,7 @@
     },
     {
       "logical": "27 فبراير 3003، 05:44م",
-      "shaped": "27  3003 05:44"
+      "shaped": "72  3003 44:50"
     },
     {
       "logical": "<color=red>أخبرنا برأيك، أو أجب عن استبياننا، وسنخبرك عندما يصبح الجزء 2 جاهزاً!</color>",
@@ -2952,7 +2952,7 @@
     },
     {
       "logical": "<style=CreditsPositionName><size=115%>الإنتاج</size></style>\n\n<style=CreditsPositionName>رئيس ضمان الجودة</style>\nLucas Amutan",
-      "shaped": "<style=CreditsPositionName><size=115%></size></style>\n\n<style=CreditsPositionName>  </style>\nLucas Amutan"
+      "shaped": "<style=CreditsPositionName><size=115%></size></style>\n\n<style=CreditsPositionName>  </style>\nnatumA sacuL"
     },
     {
       "logical": "<style=CreditsPositionName><size=115%>حيوانات الإنتاج الأليفة والدعم المعنوي</size></style>",
@@ -2960,19 +2960,19 @@
     },
     {
       "logical": "<style=CreditsPositionName><size=115%>شكر خاص من SEGA</size></style>",
-      "shaped": "<style=CreditsPositionName><size=115%>   SEGA</size></style>"
+      "shaped": "<style=CreditsPositionName><size=115%>   AGES</size></style>"
     },
     {
       "logical": "<style=CreditsPositionName><size=150%>SEGA</size></style>\n\n<style=CreditsPositionName>تشاو الحارس ومدير العلامة التجارية</style>\nJohn Choon\n\n<style=CreditsPositionName>المنتجون التنفيذيون المشاركون</style>\nIvo Gerscovich\nHitoshi Okuno\nHaruki Satomi\nShuji Utsumi\nYukio Sugino\n\n<style=CreditsPositionName>مشرفو شخصيات سونيك</style>\nKazuyuki Hoshino\nYuji Uekawa\nYui Karasuno\n\n<style=CreditsPositionName>شكر خاص</style>\nEitaro Toyoda\n\n<style=CreditsPositionName>مدير المعلومات القصصية</style>\nRyan Hamlyn\n\n<style=CreditsPositionName>المدير المساعد للمعلومات القصصية</style>\nChris Hernandez\n\n<style=CreditsPositionName>شكر خاص</style>\nDan Rossati\nEvan Stanley\nIan Flynn\nJasmin Hernandez\nMichael Cisneros\nTyson Hesse\n\n\n<style=CreditsPositionName><size=115%>إنتاج سونيك</size></style>\n\n<style=CreditsPositionName>المسؤول الإبداعي لركيزة سونيك</style>\nTakashi Iizuka\n\n<style=CreditsPositionName>مدير الإنتاج</style>\nAustin Keys",
-      "shaped": "<style=CreditsPositionName><size=150%>SEGA</size></style>\n\n<style=CreditsPositionName>    </style>\nJohn Choon\n\n<style=CreditsPositionName>  </style>\nIvo Gerscovich\nHitoshi Okuno\nHaruki Satomi\nShuji Utsumi\nYukio Sugino\n\n<style=CreditsPositionName>  </style>\nKazuyuki Hoshino\nYuji Uekawa\nYui Karasuno\n\n<style=CreditsPositionName> </style>\nEitaro Toyoda\n\n<style=CreditsPositionName>  </style>\nRyan Hamlyn\n\n<style=CreditsPositionName>   </style>\nChris Hernandez\n\n<style=CreditsPositionName> </style>\nDan Rossati\nEvan Stanley\nIan Flynn\nJasmin Hernandez\nMichael Cisneros\nTyson Hesse\n\n\n<style=CreditsPositionName><size=115%> </size></style>\n\n<style=CreditsPositionName>   </style>\nTakashi Iizuka\n\n<style=CreditsPositionName> </style>\nAustin Keys"
+      "shaped": "<style=CreditsPositionName><size=150%>AGES</size></style>\n\n<style=CreditsPositionName>    </style>\nnoohC nhoJ\n\n<style=CreditsPositionName>  </style>\noniguS oikuY\nimustU ijuhS\nimotaS ikuraH\nonukO ihsotiH\nhcivocsreG ovI\n\n<style=CreditsPositionName>  </style>\nonusaraK iuY\nawakeU ijuY\nonihsoH ikuyuzaK\n\n<style=CreditsPositionName> </style>\nadoyoT oratiE\n\n<style=CreditsPositionName>  </style>\nnylmaH nayR\n\n<style=CreditsPositionName>   </style>\nzednanreH sirhC\n\n<style=CreditsPositionName> </style>\nesseH nosyT\nsorensiC leahciM\nzednanreH nimsaJ\nnnylF naI\nyelnatS navE\nitassoR naD\n\n\n<style=CreditsPositionName><size=115%> </size></style>\n\n<style=CreditsPositionName>   </style>\nakuziI ihsakaT\n\n<style=CreditsPositionName> </style>\nsyeK nitsuA"
     },
     {
       "logical": "<style=CreditsPositionName>القصة من تأليف</style>\nKatie Chrzanowski\nIan Mutchler\nMichal Miexriir Shafrir\nEllen Alsop\nGreg Batha\nJustin Thormann\n\n<style=CreditsPositionName>الفنان الرئيسي للشخصيات</style>\nMin Ho Kim\n\n<style=CreditsPositionName>فنانو الخلفيات</style>\nEric Omega\nMatthew Thiebes\n\n<style=CreditsPositionName>تصميم العناصر</style>\nEric Omega\nMatthew Thiebes\n\n<style=CreditsPositionName>فنانو التصوّر</style>\nIan Mutchler\nEllen Alsop\n\n<style=CreditsPositionName>فنان البكسل</style>\nZachary Hutter\n\n<style=CreditsPositionName>تصميم واجهة المستخدم</style>\nGreg Batha\n\n<style=CreditsPositionName>المبرمجون</style>\nMichal Miexriir Shafrir\nKatie Chrzanowski\n\n<style=CreditsPositionName>منسق العمليات والتسويق</style> \nJustin Thormann\n\n<style=CreditsPositionName>الموسيقى التصويرية الأصلية من تأليف</style>\nTroupe Gammage\nJoel Corelitz\n\n<style=CreditsPositionName>موسيقى إضافية من تأليف</style>\nSEGA\n\n<style=CreditsPositionName>شكر خاص للموسيقى</style>\nJun Senoe\nTony Harnell\nJohnny Gioeli\n\n<style=CreditsPositionName>تصميم الصوت</style>\nTroupe Gammage\nJoel Corelitz\nGreg Batha\n\n<style=CreditsPositionName>ضمان جودة إضافي</style>\nLiz Hamer\nMoira Dewey",
-      "shaped": "<style=CreditsPositionName>  </style>\nKatie Chrzanowski\nIan Mutchler\nMichal Miexriir Shafrir\nEllen Alsop\nGreg Batha\nJustin Thormann\n\n<style=CreditsPositionName>  </style>\nMin Ho Kim\n\n<style=CreditsPositionName> </style>\nEric Omega\nMatthew Thiebes\n\n<style=CreditsPositionName> </style>\nEric Omega\nMatthew Thiebes\n\n<style=CreditsPositionName> </style>\nIan Mutchler\nEllen Alsop\n\n<style=CreditsPositionName> </style>\nZachary Hutter\n\n<style=CreditsPositionName>  </style>\nGreg Batha\n\n<style=CreditsPositionName></style>\nMichal Miexriir Shafrir\nKatie Chrzanowski\n\n<style=CreditsPositionName>  </style> \nJustin Thormann\n\n<style=CreditsPositionName>    </style>\nTroupe Gammage\nJoel Corelitz\n\n<style=CreditsPositionName>   </style>\nSEGA\n\n<style=CreditsPositionName>  </style>\nJun Senoe\nTony Harnell\nJohnny Gioeli\n\n<style=CreditsPositionName> </style>\nTroupe Gammage\nJoel Corelitz\nGreg Batha\n\n<style=CreditsPositionName>  </style>\nLiz Hamer\nMoira Dewey"
+      "shaped": "<style=CreditsPositionName>  </style>\nnnamrohT nitsuJ\nahtaB gerG\nposlA nellE\nrirfahS riirxeiM lahciM\nrelhctuM naI\nikswonazrhC eitaK\n\n<style=CreditsPositionName>  </style>\nmiK oH niM\n\n<style=CreditsPositionName> </style>\nsebeihT wehttaM\nagemO cirE\n\n<style=CreditsPositionName> </style>\nsebeihT wehttaM\nagemO cirE\n\n<style=CreditsPositionName> </style>\nposlA nellE\nrelhctuM naI\n\n<style=CreditsPositionName> </style>\nrettuH yrahcaZ\n\n<style=CreditsPositionName>  </style>\nahtaB gerG\n\n<style=CreditsPositionName></style>\nikswonazrhC eitaK\nrirfahS riirxeiM lahciM\n\n<style=CreditsPositionName>  </style> \nnnamrohT nitsuJ\n\n<style=CreditsPositionName>    </style>\nztileroC leoJ\negammaG epuorT\n\n<style=CreditsPositionName>   </style>\nAGES\n\n<style=CreditsPositionName>  </style>\nileoiG ynnhoJ\nllenraH ynoT\neoneS nuJ\n\n<style=CreditsPositionName> </style>\nahtaB gerG\nztileroC leoJ\negammaG epuorT\n\n<style=CreditsPositionName>  </style>\nyeweD arioM\nremaH ziL"
     },
     {
       "logical": "<style=CreditsPositionName>المنتج التنفيذي</style>\nKatie Chrzanowski\n\n\n<style=CreditsPositionName>المنتج ومدير المشروع</style>\nMichal Miexriir Shafrir\n\n\n<style=CreditsPositionName>مصمم اللعبة الرئيسي والمبرمج الرئيسي</style>\nGreg Batha\n\n\n<style=CreditsPositionName>الكتابة</style>\nIan Mutchler\n\n\n<style=CreditsPositionName>المدير الفني</style>\nEllen Alsop",
-      "shaped": "<style=CreditsPositionName> </style>\nKatie Chrzanowski\n\n\n<style=CreditsPositionName>  </style>\nMichal Miexriir Shafrir\n\n\n<style=CreditsPositionName>    </style>\nGreg Batha\n\n\n<style=CreditsPositionName></style>\nIan Mutchler\n\n\n<style=CreditsPositionName> </style>\nEllen Alsop"
+      "shaped": "<style=CreditsPositionName> </style>\nikswonazrhC eitaK\n\n\n<style=CreditsPositionName>  </style>\nrirfahS riirxeiM lahciM\n\n\n<style=CreditsPositionName>    </style>\nahtaB gerG\n\n\n<style=CreditsPositionName></style>\nrelhctuM naI\n\n\n<style=CreditsPositionName> </style>\nposlA nellE"
     },
     {
       "logical": "<style=CreditsPositionName>امتثال ضمان الجودة</style>",
@@ -2992,7 +2992,7 @@
     },
     {
       "logical": "<style=CreditsPositionName>مدير ضمان الجودة</style>\nDan Fehskens\n\n<style=CreditsPositionName>المدير المساعد لضمان الجودة</style>\nScott Williams\nScott Borakove\n\n<style=CreditsPositionName>دعم العملاء</style>\nMitchell Ranklin\n\n<style=CreditsPositionName>عمليات وتقديمات تطوير المنتجات</style>\nSteven Kawafuchi\nShelley Chen\nAlvin Lo\n\n<style=CreditsPositionName>مدير عمليات تطوير المنتجات</style>\nStuart Massie\n\n<style=CreditsPositionName>المدير الأول لضمان الجودة ودعم التطوير</style>\nCarl Chen\n\n\n<style=CreditsPositionName><size=115%>وسائل التواصل الاجتماعي</size></style>\n\n<style=CreditsPositionName>مدير وسائل التواصل الاجتماعي</style>\nKatie Chrzanowski\n\n<style=CreditsPositionName>المدير المساعد لوسائل التواصل الاجتماعي</style>\nJustin Thormann\n\n<style=CreditsPositionName>المدير المساعد لوسائل التواصل الاجتماعي</style>\nKenneth Washington\n\n\n<style=CreditsPositionName><size=115%>العلاقات العامة</size></style>\n\n<style=CreditsPositionName>مدير أول للعلاقات العامة</style>\nEvan Bader\n\n<style=CreditsPositionName>المدير المساعد للعلاقات العامة</style>\nThalia Piedra\n\n<style=CreditsPositionName>مدير العلاقات العامة</style>\nAlexa Bowers\n\n\n<style=CreditsPositionName><size=115%>المبيعات</size></style>\n\n<style=CreditsPositionName>مدير المبيعات الرقمية</style>\nRhys Cash\n\n<style=CreditsPositionName>مدير تجاري أول، رقمي</style>\nSimon Cowley\n\n<style=CreditsPositionName>مدير تجاري، رقمي</style>\nJames McNerney\n\n\n<style=CreditsPositionName><size=115%>العمليات</size></style>\n\n<style=CreditsPositionName>مسؤول العمليات التنفيذي</style>\nDaniel Clarke\n\n<style=CreditsPositionName>مدير العمليات</style>\nClinton Allman\n\n<style=CreditsPositionName>مدير العمليات</style>\nNatalie Cooke\n\n\n<style=CreditsPositionName><size=115%>خدمات تطوير الحاسب والنشر</size></style>\n\n<style=CreditsPositionName>نائب الرئيس الأول لتطوير المنتجات</style>\nHiroshi Kadowaki\n\n<style=CreditsPositionName>منتج أول</style>\nBryant Green\n\n<style=CreditsPositionName>منتج مساعد</style>\nJohnny Huynh\n\n<style=CreditsPositionName>منتج مساعد</style>\nLance Nguyen\n\n\n<style=CreditsPositionName><size=115%>المالية والموارد البشرية</size></style>\n\n<style=CreditsPositionName>مدير الشؤون المالية</style>\nDaisuke Miyawaki\n\n<style=CreditsPositionName>المحاسبة</style>\nNaoko Kogawa\nNoriko Watanabe\n\n<style=CreditsPositionName>نائب الرئيس</style>\nMisaki Gertz\n\n<style=CreditsPositionName>نائب الرئيس لتطوير الأعمال</style>\nDai Kudo\n\n<style=CreditsPositionName>مدير الموارد البشرية</style>\nWill Meek\n\n<style=CreditsPositionName>مدير أول للموارد البشرية</style>\nNicole Hall\n\n<style=CreditsPositionName>مسؤول الموارد البشرية والمكتب</style>\nJessica Frausto\n\n\n<style=CreditsPositionName><size=115%>الشؤون القانونية والتجارية</size></style>\n\n<style=CreditsPositionName>مستشار أول</style>\nKatherine Zhang\n\n<style=CreditsPositionName>مستشار مساعد</style>\nAttiya Riasat\n\n<style=CreditsPositionName>مستشار أول</style>\nJason Wong\n\n<style=CreditsPositionName>مساعد قانوني ومدير العمليات القانونية</style>\nSamantha Munoz\n\n<style=CreditsPositionName>مستشار قانوني مساعد</style>\nMaria Eleni Pasia\n\n<style=CreditsPositionName>نائب الرئيس التنفيذي ورئيس الشؤون القانونية والتجارية</style>\nJeff Shieh\n\n\n<style=CreditsPositionName><size=115%>المدير المالي ونائب الرئيس الأول للإنتاج</size></style>\nMitsuhiro Tanaka\n\n\n<style=CreditsPositionName><size=115%>الرئيس والمدير التنفيذي للعمليات</size></style>\nIan Curran",
-      "shaped": "<style=CreditsPositionName>  </style>\nDan Fehskens\n\n<style=CreditsPositionName>   </style>\nScott Williams\nScott Borakove\n\n<style=CreditsPositionName> </style>\nMitchell Ranklin\n\n<style=CreditsPositionName>   </style>\nSteven Kawafuchi\nShelley Chen\nAlvin Lo\n\n<style=CreditsPositionName>   </style>\nStuart Massie\n\n<style=CreditsPositionName>     </style>\nCarl Chen\n\n\n<style=CreditsPositionName><size=115%>  </size></style>\n\n<style=CreditsPositionName>   </style>\nKatie Chrzanowski\n\n<style=CreditsPositionName>    </style>\nJustin Thormann\n\n<style=CreditsPositionName>    </style>\nKenneth Washington\n\n\n<style=CreditsPositionName><size=115%> </size></style>\n\n<style=CreditsPositionName>   </style>\nEvan Bader\n\n<style=CreditsPositionName>   </style>\nThalia Piedra\n\n<style=CreditsPositionName>  </style>\nAlexa Bowers\n\n\n<style=CreditsPositionName><size=115%></size></style>\n\n<style=CreditsPositionName>  </style>\nRhys Cash\n\n<style=CreditsPositionName>   </style>\nSimon Cowley\n\n<style=CreditsPositionName>  </style>\nJames McNerney\n\n\n<style=CreditsPositionName><size=115%></size></style>\n\n<style=CreditsPositionName>  </style>\nDaniel Clarke\n\n<style=CreditsPositionName> </style>\nClinton Allman\n\n<style=CreditsPositionName> </style>\nNatalie Cooke\n\n\n<style=CreditsPositionName><size=115%>   </size></style>\n\n<style=CreditsPositionName>    </style>\nHiroshi Kadowaki\n\n<style=CreditsPositionName> </style>\nBryant Green\n\n<style=CreditsPositionName> </style>\nJohnny Huynh\n\n<style=CreditsPositionName> </style>\nLance Nguyen\n\n\n<style=CreditsPositionName><size=115%>  </size></style>\n\n<style=CreditsPositionName>  </style>\nDaisuke Miyawaki\n\n<style=CreditsPositionName></style>\nNaoko Kogawa\nNoriko Watanabe\n\n<style=CreditsPositionName> </style>\nMisaki Gertz\n\n<style=CreditsPositionName>   </style>\nDai Kudo\n\n<style=CreditsPositionName>  </style>\nWill Meek\n\n<style=CreditsPositionName>   </style>\nNicole Hall\n\n<style=CreditsPositionName>   </style>\nJessica Frausto\n\n\n<style=CreditsPositionName><size=115%>  </size></style>\n\n<style=CreditsPositionName> </style>\nKatherine Zhang\n\n<style=CreditsPositionName> </style>\nAttiya Riasat\n\n<style=CreditsPositionName> </style>\nJason Wong\n\n<style=CreditsPositionName>    </style>\nSamantha Munoz\n\n<style=CreditsPositionName>  </style>\nMaria Eleni Pasia\n\n<style=CreditsPositionName>      </style>\nJeff Shieh\n\n\n<style=CreditsPositionName><size=115%>     </size></style>\nMitsuhiro Tanaka\n\n\n<style=CreditsPositionName><size=115%>   </size></style>\nIan Curran"
+      "shaped": "<style=CreditsPositionName>  </style>\nsneksheF naD\n\n<style=CreditsPositionName>   </style>\nevokaroB ttocS\nsmailliW ttocS\n\n<style=CreditsPositionName> </style>\nnilknaR llehctiM\n\n<style=CreditsPositionName>   </style>\noL nivlA\nnehC yellehS\nihcufawaK nevetS\n\n<style=CreditsPositionName>   </style>\neissaM trautS\n\n<style=CreditsPositionName>     </style>\nnehC lraC\n\n\n<style=CreditsPositionName><size=115%>  </size></style>\n\n<style=CreditsPositionName>   </style>\nikswonazrhC eitaK\n\n<style=CreditsPositionName>    </style>\nnnamrohT nitsuJ\n\n<style=CreditsPositionName>    </style>\nnotgnihsaW htenneK\n\n\n<style=CreditsPositionName><size=115%> </size></style>\n\n<style=CreditsPositionName>   </style>\nredaB navE\n\n<style=CreditsPositionName>   </style>\nardeiP ailahT\n\n<style=CreditsPositionName>  </style>\nsrewoB axelA\n\n\n<style=CreditsPositionName><size=115%></size></style>\n\n<style=CreditsPositionName>  </style>\nhsaC syhR\n\n<style=CreditsPositionName>   </style>\nyelwoC nomiS\n\n<style=CreditsPositionName>  </style>\nyenreNcM semaJ\n\n\n<style=CreditsPositionName><size=115%></size></style>\n\n<style=CreditsPositionName>  </style>\nekralC leinaD\n\n<style=CreditsPositionName> </style>\nnamllA notnilC\n\n<style=CreditsPositionName> </style>\nekooC eilataN\n\n\n<style=CreditsPositionName><size=115%>   </size></style>\n\n<style=CreditsPositionName>    </style>\nikawodaK ihsoriH\n\n<style=CreditsPositionName> </style>\nneerG tnayrB\n\n<style=CreditsPositionName> </style>\nhnyuH ynnhoJ\n\n<style=CreditsPositionName> </style>\nneyugN ecnaL\n\n\n<style=CreditsPositionName><size=115%>  </size></style>\n\n<style=CreditsPositionName>  </style>\nikawayiM ekusiaD\n\n<style=CreditsPositionName></style>\nebanataW okiroN\nawagoK okoaN\n\n<style=CreditsPositionName> </style>\nztreG ikasiM\n\n<style=CreditsPositionName>   </style>\noduK iaD\n\n<style=CreditsPositionName>  </style>\nkeeM lliW\n\n<style=CreditsPositionName>   </style>\nllaH elociN\n\n<style=CreditsPositionName>   </style>\notsuarF acisseJ\n\n\n<style=CreditsPositionName><size=115%>  </size></style>\n\n<style=CreditsPositionName> </style>\ngnahZ enirehtaK\n\n<style=CreditsPositionName> </style>\ntasaiR ayittA\n\n<style=CreditsPositionName> </style>\ngnoW nosaJ\n\n<style=CreditsPositionName>    </style>\nzonuM ahtnamaS\n\n<style=CreditsPositionName>  </style>\naisaP inelE airaM\n\n<style=CreditsPositionName>      </style>\nheihS ffeJ\n\n\n<style=CreditsPositionName><size=115%>     </size></style>\nakanaT orihustiM\n\n\n<style=CreditsPositionName><size=115%>   </size></style>\nnarruC naI"
     },
     {
       "logical": "<style=Flashback>\"إنه سم غير قاتل. ستشعر بالنعاس لبعض الوقت فحسب.\"</style>",
@@ -4244,7 +4244,7 @@
     },
     {
       "logical": "<style=Thought>(يا للعجب، لا بد أن من وضع هذه القاعدة كان عمره يزيد على 65 عاماً.)</style>",
-      "shaped": "<style=Thought>(             65 .)</style>"
+      "shaped": "<style=Thought>(             56 .)</style>"
     },
     {
       "logical": "<style=Thought>(يا للهول، لدى هذه المجموعة من الأصدقاء مشكلات كثيرة مع الكبرياء.)</style>",
@@ -4424,27 +4424,27 @@
     },
     {
       "logical": "Conductor’s Wife:: أنا سعيدة بوجودك هنا، بسرعة، سنغادر إلى سباغونيا صباحاً وعليك توضيب أمتعتك!",
-      "shaped": "Conductor’s Wife::            !"
+      "shaped": "::efiW s’rotcudnoC            !"
     },
     {
       "logical": "Conductor’s Wife:: أوه! من هذا؟",
-      "shaped": "Conductor’s Wife:: !  "
+      "shaped": "::efiW s’rotcudnoC !  "
     },
     {
       "logical": "Conductor’s Wife:: حسناً، إنه لطيف، هذا مؤكد!",
-      "shaped": "Conductor’s Wife::     !"
+      "shaped": "::efiW s’rotcudnoC     !"
     },
     {
       "logical": "Conductor’s Wife:: عزيزي! لقد تأخرت! كنت أنتظرك هنا لساعات!",
-      "shaped": "Conductor’s Wife:: !  !    !"
+      "shaped": "::efiW s’rotcudnoC !  !    !"
     },
     {
       "logical": "Conductor’s Wife:: وأحتاجك في المنزل! يوم تقاعد أول سعيد يا عزيزي.",
-      "shaped": "Conductor’s Wife::   !      ."
+      "shaped": "::efiW s’rotcudnoC   !      ."
     },
     {
       "logical": "Sunshine\nToodles\n<size=90%>القطط الضالة خارج منزل جاستن</size>",
-      "shaped": "Sunshine\nToodles\n<size=90%>    </size>"
+      "shaped": "seldooT\nenihsnuS\n<size=90%>    </size>"
     },
     {
       "logical": "«شكراً مجدداً لاختيارك قطار ميراج إكسبريس...-الموظفون.»",
@@ -5800,7 +5800,7 @@
     },
     {
       "logical": "أنا في الخدمة يا عزيزتي. لنرَ… 23…04…01…",
-      "shaped": "    . … 23…04…01…"
+      "shaped": "    . …10…40…32 …"
     },
     {
       "logical": "أنا في الخدمة.",
@@ -6484,7 +6484,7 @@
     },
     {
       "logical": "إسبايو نينجا. إنه يتقن 17 لغة مختلفة ومنضبط بشكل لافت.",
-      "shaped": " .   17     ."
+      "shaped": " .   71     ."
     },
     {
       "logical": "إسبايو. أنت من قتل سونيك…",
@@ -7076,39 +7076,39 @@
     },
     {
       "logical": "الصفحة 14",
-      "shaped": " 14"
+      "shaped": " 41"
     },
     {
       "logical": "الصفحة 15",
-      "shaped": " 15"
+      "shaped": " 51"
     },
     {
       "logical": "الصفحة 16",
-      "shaped": " 16"
+      "shaped": " 61"
     },
     {
       "logical": "الصفحة 231",
-      "shaped": " 231"
+      "shaped": " 132"
     },
     {
       "logical": "الصفحة 362",
-      "shaped": " 362"
+      "shaped": " 263"
     },
     {
       "logical": "الصفحة 402",
-      "shaped": " 402"
+      "shaped": " 204"
     },
     {
       "logical": "الصفحة 56",
-      "shaped": " 56"
+      "shaped": " 65"
     },
     {
       "logical": "الصفحة 89",
-      "shaped": " 89"
+      "shaped": " 98"
     },
     {
       "logical": "الصفحة 97",
-      "shaped": " 97"
+      "shaped": " 79"
     },
     {
       "logical": "العربة",
@@ -9048,7 +9048,7 @@
     },
     {
       "logical": "شكراً لـSEGA على السماح لنا بصنع هذه اللعبة. :)\n\nوشكراً لك أنت على اللعب!\n\nعيد كذبة أبريل سعيداً (حسب الاحتفال)!\n\n©SEGA",
-      "shaped": " SEGA      . :)\n\n    !\n\n    ( )!\n\n©SEGA"
+      "shaped": " AGES      . :)\n\n    !\n\n    ( AGES©\n\n!)"
     },
     {
       "logical": "شكراً لك، هل يمكنني أن أقدم لك أياً من الوجبات الخفيفة الموجودة على متن القطار؟",
@@ -10664,7 +10664,7 @@
     },
     {
       "logical": "لا تُرد الأموال، وستُفرض عليك رسوم عدم الحضور. لا ينطبق هذا إذا كان عمرك يزيد على 65 عاماً.",
-      "shaped": "       .         65 ."
+      "shaped": "       .         56 ."
     },
     {
       "logical": "لا حجة لديك هنا. أنت ضعيف.",
@@ -10712,7 +10712,7 @@
     },
     {
       "logical": "لا عليك >>>>GoodbyeChoice",
-      "shaped": "  >>>>GoodbyeChoice"
+      "shaped": "  eciohCeybdooG>>>>"
     },
     {
       "logical": "لا فرق بينهما.",
@@ -10792,7 +10792,7 @@
     },
     {
       "logical": "لا يهم >>>>GoodbyeChoice",
-      "shaped": "  >>>>GoodbyeChoice"
+      "shaped": "  eciohCeybdooG>>>>"
     },
     {
       "logical": "لا يهم! نحتاج إلى زمردة فوضى كي نتمكن من فعل ذلك!",
@@ -12988,7 +12988,7 @@
     },
     {
       "logical": "هل هذه هي؟ >>>>InventoryChoice",
-      "shaped": "   >>>>InventoryChoice"
+      "shaped": "   eciohCyrotnevnI>>>>"
     },
     {
       "logical": "هل هناك خطب ما يا سيدي؟",

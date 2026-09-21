@@ -6,7 +6,7 @@
   "screen": "load-game",
   "gameVersion": "1.01",
   "steamBuildID": "20535215",
-  "captureMethod": "Native macOS fallback after deterministic locale install, AppKit activation, and CoreGraphics navigation; Oculix 4.0.0 unavailable because Java Mouse.init reported input blocked",
+  "captureMethod": "Project one-pass native showcase automation with deterministic locale install, AppKit activation, CoreGraphics input, and native macOS screencapture; Oculix 4.0.0 fallback used because Java Mouse.init reported input blocked",
   "resolution": {
     "width": 2880,
     "height": 1800
@@ -25,6 +25,6 @@
   },
   "screenshot": {
     "file": "../upload/ar-02-load-game.png",
-    "sha256": "4b948e6268621fdf9be7910047f957bde2ccf104a648e2f30ea6a4110a5c5f0b"
+    "sha256": "b2705465d621712eb4c88b8a2283f9c8a9f55a2ecddbb6ee73e668a2733383af"
   }
 }

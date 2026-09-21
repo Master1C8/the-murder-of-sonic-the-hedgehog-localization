@@ -140,6 +140,27 @@ class FontAugmenter:
     def has_script(self, value: str) -> bool:
         return any(self.is_script_character(character) for character in value)
 
+    def compensate_ltr_run(self, value: str) -> str:
+        """Pre-reverse LTR runs that TMP will reverse in an RTL text object."""
+        if self.spec["baseDirection"] != "R":
+            return value
+        if not any(
+            unicodedata.bidirectional(character) in {"L", "EN"}
+            for character in value
+        ):
+            return value
+        # Keep boundary whitespace on its logical side of the run. Reversing
+        # it together with the Latin core makes TMP place the separator on the
+        # outside edge (for example rendering Hebrew + `Shadow` as one glued
+        # token while leaving a useless space after the name).
+        start = 0
+        while start < len(value) and value[start].isspace():
+            start += 1
+        end = len(value)
+        while end > start and value[end - 1].isspace():
+            end -= 1
+        return value[:start] + value[start:end][::-1] + value[end:]
+
     def map_glyph(
         self,
         glyph_id: int,
@@ -221,8 +242,8 @@ class FontAugmenter:
         self.span_mappings[characters] = shaped
         return shaped
 
-    def shape_plain_text(self, value: str) -> str:
-        if not self.has_script(value):
+    def shape_plain_text(self, value: str, *, rtl_context: bool = False) -> str:
+        if not self.has_script(value) and not rtl_context:
             return value
         output: list[str] = []
         index = 0
@@ -234,20 +255,29 @@ class FontAugmenter:
                 output.append(self.shape_span(value[index:end]))
                 index = end
             else:
-                output.append(value[index])
-                index += 1
+                end = index + 1
+                while end < len(value) and not self.is_span_character(value[end]):
+                    end += 1
+                output.append(self.compensate_ltr_run(value[index:end]))
+                index = end
         return "".join(output)
 
     def shape_rich_text(self, value: str) -> str:
+        rtl_context = self.spec["baseDirection"] == "R" and self.has_script(value)
         if not self.has_script(value):
             return value
         output: list[str] = []
         position = 0
         for match in KNOWN_TMP_TAG.finditer(value):
-            output.append(self.shape_plain_text(value[position : match.start()]))
+            output.append(
+                self.shape_plain_text(
+                    value[position : match.start()],
+                    rtl_context=rtl_context,
+                )
+            )
             output.append(match.group(0))
             position = match.end()
-        output.append(self.shape_plain_text(value[position:]))
+        output.append(self.shape_plain_text(value[position:], rtl_context=rtl_context))
         return "".join(output)
 
     def save(self, output: Path) -> None:

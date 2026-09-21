@@ -1754,7 +1754,7 @@
   "imageEntries": [
     {
       "logical": "ticket town\nHot Honey\nجمعه 8 مه\n9:00 شب\nصحنه\nبخش 53 ردیف P\nبخش 53 ردیف P\nبخش 53 ردیف R\nبخش 54 ردیف R",
-      "shaped": "ticket town\nHot Honey\n 8 \n9:00 \n\n 53  P\n 53  P\n 53  R\n 54  R"
+      "shaped": "yenoH toH\nnwot tekcit\n 8 \n00:9 \n\n 35  P\n 35  P\n 35  R\n 45  R"
     },
     {
       "logical": "آفلاین...\nبزن بریم بابا",
@@ -1762,19 +1762,19 @@
     },
     {
       "logical": "این دارتِ دمیدنی را روی سونیک،\nمستقر در واگن مدیر قطار،\nبه کار ببر. به مادهٔ خواب‌آور\nغیرکشنده آغشته شده است.\nباز هم از انتخاب\nThe Mirage Express سپاسگزاریم.\n—پرسنل",
-      "shaped": "     \n    \n  .   \n   .\n   \nThe Mirage Express .\n—"
+      "shaped": "     \n    \n  .   \n   .\n   \nsserpxE egariM ehT .\n—"
     },
     {
       "logical": "بالاترین امتیاز\nVECTR 7501\nKNUCK 7500\nTOAST 7331\nAPPLE 7250\nBREAD 7200\nULTIM 7150\nBAGEL 7003\nCANDY 6990",
-      "shaped": " \nVECTR 7501\nKNUCK 7500\nTOAST 7331\nAPPLE 7250\nBREAD 7200\nULTIM 7150\nBAGEL 7003\nCANDY 6990"
+      "shaped": " \n0996 YDNAC\n3007 LEGAB\n0517 MITLU\n0027 DAERB\n0527 ELPPA\n1337 TSAOT\n0057 KCUNK\n1057 RTCEV"
     },
     {
       "logical": "راهنمای\nThe Mirage Express",
-      "shaped": "\nThe Mirage Express"
+      "shaped": "\nsserpxE egariM ehT"
     },
     {
       "logical": "منو\nهات‌داگ چیلی\nرامن\nChicken\nCordon Bleu",
-      "shaped": "\n \n\nChicken\nCordon Bleu"
+      "shaped": "\n \n\nuelB nodroC\nnekcihC"
     },
     {
       "logical": "کارآگاه",
@@ -1886,11 +1886,11 @@
     },
     {
       "logical": "(شروع بازجویی)  >>>>InterrogateChoice",
-      "shaped": "( )  >>>>InterrogateChoice"
+      "shaped": "( eciohCetagorretnI>>>>  )"
     },
     {
       "logical": "(شروع بازجویی) >>>>InterrogateChoice",
-      "shaped": "( ) >>>>InterrogateChoice"
+      "shaped": "( eciohCetagorretnI>>>> )"
     },
     {
       "logical": "(صحبت)",
@@ -1946,7 +1946,7 @@
     },
     {
       "logical": "27 فوریهٔ 3003، 05:44عصر",
-      "shaped": "27  3003 05:44"
+      "shaped": "72  3003 44:50"
     },
     {
       "logical": "<color=red>این پایان نسخه آزمایشی است.<br>خیلی ممنون از کمکتان!!</color>",
@@ -2038,11 +2038,11 @@
     },
     {
       "logical": "<style=CreditsPositionName><size=115%>تشکر ویژهٔ SEGA</size></style>",
-      "shaped": "<style=CreditsPositionName><size=115%>  SEGA</size></style>"
+      "shaped": "<style=CreditsPositionName><size=115%>  AGES</size></style>"
     },
     {
       "logical": "<style=CreditsPositionName><size=115%>تولید</size></style>\n\n<style=CreditsPositionName>سرپرست تضمین کیفیت</style>\nLucas Amutan",
-      "shaped": "<style=CreditsPositionName><size=115%></size></style>\n\n<style=CreditsPositionName>  </style>\nLucas Amutan"
+      "shaped": "<style=CreditsPositionName><size=115%></size></style>\n\n<style=CreditsPositionName>  </style>\nnatumA sacuL"
     },
     {
       "logical": "<style=CreditsPositionName><size=115%>حیوانات خانگی و پشتیبانی روحیِ تولید</size></style>",
@@ -2050,7 +2050,7 @@
     },
     {
       "logical": "<style=CreditsPositionName><size=150%>SEGA</size></style>\n\n<style=CreditsPositionName>چائوی نگهبان و مدیر برند</style>\nJohn Choon\n\n<style=CreditsPositionName>تهیه‌کنندگان همکار اجرایی</style>\nIvo Gerscovich\nHitoshi Okuno\nHaruki Satomi\nShuji Utsumi\nYukio Sugino\n\n<style=CreditsPositionName>سرپرستان شخصیت‌های سونیک</style>\nKazuyuki Hoshino\nYuji Uekawa\nYui Karasuno\n\n<style=CreditsPositionName>تشکر ویژه</style>\nEitaro Toyoda\n\n<style=CreditsPositionName>مدیر داستان</style>\nRyan Hamlyn\n\n<style=CreditsPositionName>مدیر همکار داستان</style>\nChris Hernandez\n\n<style=CreditsPositionName>تشکر ویژه</style>\nDan Rossati\nEvan Stanley\nIan Flynn\nJasmin Hernandez\nMichael Cisneros\nTyson Hesse\n\n\n<style=CreditsPositionName><size=115%>تولید سونیک</size></style>\n\n<style=CreditsPositionName>مدیر خلاقیت بخش سونیک</style>\nTakashi Iizuka\n\n<style=CreditsPositionName>مدیر تولید</style>\nAustin Keys",
-      "shaped": "<style=CreditsPositionName><size=150%>SEGA</size></style>\n\n<style=CreditsPositionName>    </style>\nJohn Choon\n\n<style=CreditsPositionName>  </style>\nIvo Gerscovich\nHitoshi Okuno\nHaruki Satomi\nShuji Utsumi\nYukio Sugino\n\n<style=CreditsPositionName>  </style>\nKazuyuki Hoshino\nYuji Uekawa\nYui Karasuno\n\n<style=CreditsPositionName> </style>\nEitaro Toyoda\n\n<style=CreditsPositionName> </style>\nRyan Hamlyn\n\n<style=CreditsPositionName>  </style>\nChris Hernandez\n\n<style=CreditsPositionName> </style>\nDan Rossati\nEvan Stanley\nIan Flynn\nJasmin Hernandez\nMichael Cisneros\nTyson Hesse\n\n\n<style=CreditsPositionName><size=115%> </size></style>\n\n<style=CreditsPositionName>   </style>\nTakashi Iizuka\n\n<style=CreditsPositionName> </style>\nAustin Keys"
+      "shaped": "<style=CreditsPositionName><size=150%>AGES</size></style>\n\n<style=CreditsPositionName>    </style>\nnoohC nhoJ\n\n<style=CreditsPositionName>  </style>\noniguS oikuY\nimustU ijuhS\nimotaS ikuraH\nonukO ihsotiH\nhcivocsreG ovI\n\n<style=CreditsPositionName>  </style>\nonusaraK iuY\nawakeU ijuY\nonihsoH ikuyuzaK\n\n<style=CreditsPositionName> </style>\nadoyoT oratiE\n\n<style=CreditsPositionName> </style>\nnylmaH nayR\n\n<style=CreditsPositionName>  </style>\nzednanreH sirhC\n\n<style=CreditsPositionName> </style>\nesseH nosyT\nsorensiC leahciM\nzednanreH nimsaJ\nnnylF naI\nyelnatS navE\nitassoR naD\n\n\n<style=CreditsPositionName><size=115%> </size></style>\n\n<style=CreditsPositionName>   </style>\nakuziI ihsakaT\n\n<style=CreditsPositionName> </style>\nsyeK nitsuA"
     },
     {
       "logical": "<style=CreditsPositionName>انطباق با تضمین کیفیت</style>",
@@ -2070,15 +2070,15 @@
     },
     {
       "logical": "<style=CreditsPositionName>تهیه‌کنندهٔ اجرایی</style>\nKatie Chrzanowski\n\n\n<style=CreditsPositionName>تهیه‌کننده و\nمدیر پروژه</style>\nMichal Miexriir Shafrir\n\n\n<style=CreditsPositionName>طراح ارشد بازی و\nبرنامه‌نویس ارشد</style>\nGreg Batha\n\n\n<style=CreditsPositionName>نوشتهٔ</style>\nIan Mutchler\n\n\n<style=CreditsPositionName>مدیر هنری</style>\nEllen Alsop",
-      "shaped": "<style=CreditsPositionName> </style>\nKatie Chrzanowski\n\n\n<style=CreditsPositionName> \n </style>\nMichal Miexriir Shafrir\n\n\n<style=CreditsPositionName>   \n </style>\nGreg Batha\n\n\n<style=CreditsPositionName></style>\nIan Mutchler\n\n\n<style=CreditsPositionName> </style>\nEllen Alsop"
+      "shaped": "<style=CreditsPositionName> </style>\nikswonazrhC eitaK\n\n\n<style=CreditsPositionName> \n </style>\nrirfahS riirxeiM lahciM\n\n\n<style=CreditsPositionName>   \n </style>\nahtaB gerG\n\n\n<style=CreditsPositionName></style>\nrelhctuM naI\n\n\n<style=CreditsPositionName> </style>\nposlA nellE"
     },
     {
       "logical": "<style=CreditsPositionName>داستان از</style>\nKatie Chrzanowski\nIan Mutchler\nMichal Miexriir Shafrir\nEllen Alsop\nGreg Batha\nJustin Thormann\n\n<style=CreditsPositionName>طراح ارشد شخصیت</style>\nMin Ho Kim\n\n<style=CreditsPositionName>طراحان پس‌زمینه</style>\nEric Omega\nMatthew Thiebes\n\n<style=CreditsPositionName>طراحی اشیا</style>\nEric Omega\nMatthew Thiebes\n\n<style=CreditsPositionName>طراحان مفهومی</style>\nIan Mutchler\nEllen Alsop\n\n<style=CreditsPositionName>طراح پیکسل</style>\nZachary Hutter\n\n<style=CreditsPositionName>طراحی رابط کاربری</style>\nGreg Batha\n\n<style=CreditsPositionName>برنامه‌نویسان</style>\nMichal Miexriir Shafrir\nKatie Chrzanowski\n\n<style=CreditsPositionName>هماهنگ‌کنندهٔ عملیات و\nبازاریابی</style> \nJustin Thormann\n\n<style=CreditsPositionName>موسیقی متن اصلی از</style>\nTroupe Gammage\nJoel Corelitz\n\n<style=CreditsPositionName>موسیقی اضافی از</style>\nSEGA\n\n<style=CreditsPositionName>تشکر ویژهٔ موسیقی</style>\nJun Senoe\nTony Harnell\nJohnny Gioeli\n\n<style=CreditsPositionName>طراحی صدا</style>\nTroupe Gammage\nJoel Corelitz\nGreg Batha\n\n<style=CreditsPositionName>تضمین کیفیت اضافی</style>\nLiz Hamer\nMoira Dewey",
-      "shaped": "<style=CreditsPositionName> </style>\nKatie Chrzanowski\nIan Mutchler\nMichal Miexriir Shafrir\nEllen Alsop\nGreg Batha\nJustin Thormann\n\n<style=CreditsPositionName>  </style>\nMin Ho Kim\n\n<style=CreditsPositionName> </style>\nEric Omega\nMatthew Thiebes\n\n<style=CreditsPositionName> </style>\nEric Omega\nMatthew Thiebes\n\n<style=CreditsPositionName> </style>\nIan Mutchler\nEllen Alsop\n\n<style=CreditsPositionName> </style>\nZachary Hutter\n\n<style=CreditsPositionName>  </style>\nGreg Batha\n\n<style=CreditsPositionName></style>\nMichal Miexriir Shafrir\nKatie Chrzanowski\n\n<style=CreditsPositionName>  \n</style> \nJustin Thormann\n\n<style=CreditsPositionName>   </style>\nTroupe Gammage\nJoel Corelitz\n\n<style=CreditsPositionName>  </style>\nSEGA\n\n<style=CreditsPositionName>  </style>\nJun Senoe\nTony Harnell\nJohnny Gioeli\n\n<style=CreditsPositionName> </style>\nTroupe Gammage\nJoel Corelitz\nGreg Batha\n\n<style=CreditsPositionName>  </style>\nLiz Hamer\nMoira Dewey"
+      "shaped": "<style=CreditsPositionName> </style>\nnnamrohT nitsuJ\nahtaB gerG\nposlA nellE\nrirfahS riirxeiM lahciM\nrelhctuM naI\nikswonazrhC eitaK\n\n<style=CreditsPositionName>  </style>\nmiK oH niM\n\n<style=CreditsPositionName> </style>\nsebeihT wehttaM\nagemO cirE\n\n<style=CreditsPositionName> </style>\nsebeihT wehttaM\nagemO cirE\n\n<style=CreditsPositionName> </style>\nposlA nellE\nrelhctuM naI\n\n<style=CreditsPositionName> </style>\nrettuH yrahcaZ\n\n<style=CreditsPositionName>  </style>\nahtaB gerG\n\n<style=CreditsPositionName></style>\nikswonazrhC eitaK\nrirfahS riirxeiM lahciM\n\n<style=CreditsPositionName>  \n</style> \nnnamrohT nitsuJ\n\n<style=CreditsPositionName>   </style>\nztileroC leoJ\negammaG epuorT\n\n<style=CreditsPositionName>  </style>\nAGES\n\n<style=CreditsPositionName>  </style>\nileoiG ynnhoJ\nllenraH ynoT\neoneS nuJ\n\n<style=CreditsPositionName> </style>\nahtaB gerG\nztileroC leoJ\negammaG epuorT\n\n<style=CreditsPositionName>  </style>\nyeweD arioM\nremaH ziL"
     },
     {
       "logical": "<style=CreditsPositionName>مدیر تضمین کیفیت</style>\nDan Fehskens\n\n<style=CreditsPositionName>دستیار مدیر تضمین کیفیت</style>\nScott Williams\nScott Borakove\n\n<style=CreditsPositionName>پشتیبانی مشتری</style>\nMitchell Ranklin\n\n<style=CreditsPositionName>عملیات و ارسال‌های تولید</style>\nSteven Kawafuchi\nShelley Chen\nAlvin Lo\n\n<style=CreditsPositionName>مدیر عملیات تولید</style>\nStuart Massie\n\n<style=CreditsPositionName>مدیر ارشد تضمین کیفیت و پشتیبانی توسعه</style>\nCarl Chen\n\n\n<style=CreditsPositionName><size=115%>رسانه‌های اجتماعی</size></style>\n\n<style=CreditsPositionName>مدیر رسانه‌های اجتماعی</style>\nKatie Chrzanowski\n\n<style=CreditsPositionName>دستیار مدیر رسانه‌های اجتماعی</style>\nJustin Thormann\n\n<style=CreditsPositionName>دستیار مدیر رسانه‌های اجتماعی</style>\nKenneth Washington\n\n\n<style=CreditsPositionName><size=115%>روابط عمومی</size></style>\n\n<style=CreditsPositionName>مدیر ارشد روابط عمومی</style>\nEvan Bader\n\n<style=CreditsPositionName>دستیار مدیر روابط عمومی</style>\nThalia Piedra\n\n<style=CreditsPositionName>مدیر روابط عمومی</style>\nAlexa Bowers\n\n\n<style=CreditsPositionName><size=115%>فروش</size></style>\n\n<style=CreditsPositionName>مدیر فروش دیجیتال</style>\nRhys Cash\n\n<style=CreditsPositionName>مدیر ارشد بازرگانی دیجیتال</style>\nSimon Cowley\n\n<style=CreditsPositionName>مدیر بازرگانی دیجیتال</style>\nJames McNerney\n\n\n<style=CreditsPositionName><size=115%>عملیات</size></style>\n\n<style=CreditsPositionName>مدیر اجرایی عملیات</style>\nDaniel Clarke\n\n<style=CreditsPositionName>مدیر عملیات</style>\nClinton Allman\n\n<style=CreditsPositionName>مدیر عملیات</style>\nNatalie Cooke\n\n\n<style=CreditsPositionName><size=115%>خدمات توسعهٔ رایانه و انتشار</size></style>\n\n<style=CreditsPositionName>معاون ارشد توسعهٔ محصول</style>\nHiroshi Kadowaki\n\n<style=CreditsPositionName>تهیه‌کنندهٔ ارشد</style>\nBryant Green\n\n<style=CreditsPositionName>تهیه‌کنندهٔ همکار</style>\nJohnny Huynh\n\n<style=CreditsPositionName>تهیه‌کنندهٔ همکار</style>\nLance Nguyen\n\n\n<style=CreditsPositionName><size=115%>مالی و منابع انسانی</size></style>\n\n<style=CreditsPositionName>مدیر مالی</style>\nDaisuke Miyawaki\n\n<style=CreditsPositionName>حسابداری</style>\nNaoko Kogawa\nNoriko Watanabe\n\n<style=CreditsPositionName>معاون رئیس</style>\nMisaki Gertz\n\n<style=CreditsPositionName>معاون رئیس، توسعهٔ کسب‌وکار</style>\nDai Kudo\n\n<style=CreditsPositionName>مدیر منابع انسانی</style>\nWill Meek\n\n<style=CreditsPositionName>مدیر ارشد منابع انسانی</style>\nNicole Hall\n\n<style=CreditsPositionName>مدیر منابع انسانی و دفتر</style>\nJessica Frausto\n\n\n<style=CreditsPositionName><size=115%>امور حقوقی و کسب‌وکار</size></style>\n\n<style=CreditsPositionName>مشاور ارشد حقوقی</style>\nKatherine Zhang\n\n<style=CreditsPositionName>مشاور حقوقی همکار</style>\nAttiya Riasat\n\n<style=CreditsPositionName>مشاور ارشد حقوقی</style>\nJason Wong\n\n<style=CreditsPositionName>دستیار حقوقی و مدیر عملیات حقوقی</style>\nSamantha Munoz\n\n<style=CreditsPositionName>مشاور حقوقی همکار</style>\nMaria Eleni Pasia\n\n<style=CreditsPositionName>معاون اجرایی، رئیس امور حقوقی و کسب‌وکار</style>\nJeff Shieh\n\n\n<style=CreditsPositionName><size=115%>مدیر ارشد مالی و معاون ارشد تولید</size></style>\nMitsuhiro Tanaka\n\n\n<style=CreditsPositionName><size=115%>رئیس و مدیر ارشد عملیات</size></style>\nIan Curran",
-      "shaped": "<style=CreditsPositionName>  </style>\nDan Fehskens\n\n<style=CreditsPositionName>   </style>\nScott Williams\nScott Borakove\n\n<style=CreditsPositionName> </style>\nMitchell Ranklin\n\n<style=CreditsPositionName>   </style>\nSteven Kawafuchi\nShelley Chen\nAlvin Lo\n\n<style=CreditsPositionName>  </style>\nStuart Massie\n\n<style=CreditsPositionName>      </style>\nCarl Chen\n\n\n<style=CreditsPositionName><size=115%> </size></style>\n\n<style=CreditsPositionName>  </style>\nKatie Chrzanowski\n\n<style=CreditsPositionName>   </style>\nJustin Thormann\n\n<style=CreditsPositionName>   </style>\nKenneth Washington\n\n\n<style=CreditsPositionName><size=115%> </size></style>\n\n<style=CreditsPositionName>   </style>\nEvan Bader\n\n<style=CreditsPositionName>   </style>\nThalia Piedra\n\n<style=CreditsPositionName>  </style>\nAlexa Bowers\n\n\n<style=CreditsPositionName><size=115%></size></style>\n\n<style=CreditsPositionName>  </style>\nRhys Cash\n\n<style=CreditsPositionName>   </style>\nSimon Cowley\n\n<style=CreditsPositionName>  </style>\nJames McNerney\n\n\n<style=CreditsPositionName><size=115%></size></style>\n\n<style=CreditsPositionName>  </style>\nDaniel Clarke\n\n<style=CreditsPositionName> </style>\nClinton Allman\n\n<style=CreditsPositionName> </style>\nNatalie Cooke\n\n\n<style=CreditsPositionName><size=115%>    </size></style>\n\n<style=CreditsPositionName>   </style>\nHiroshi Kadowaki\n\n<style=CreditsPositionName> </style>\nBryant Green\n\n<style=CreditsPositionName> </style>\nJohnny Huynh\n\n<style=CreditsPositionName> </style>\nLance Nguyen\n\n\n<style=CreditsPositionName><size=115%>   </size></style>\n\n<style=CreditsPositionName> </style>\nDaisuke Miyawaki\n\n<style=CreditsPositionName></style>\nNaoko Kogawa\nNoriko Watanabe\n\n<style=CreditsPositionName> </style>\nMisaki Gertz\n\n<style=CreditsPositionName>   </style>\nDai Kudo\n\n<style=CreditsPositionName>  </style>\nWill Meek\n\n<style=CreditsPositionName>   </style>\nNicole Hall\n\n<style=CreditsPositionName>    </style>\nJessica Frausto\n\n\n<style=CreditsPositionName><size=115%>   </size></style>\n\n<style=CreditsPositionName>  </style>\nKatherine Zhang\n\n<style=CreditsPositionName>  </style>\nAttiya Riasat\n\n<style=CreditsPositionName>  </style>\nJason Wong\n\n<style=CreditsPositionName>     </style>\nSamantha Munoz\n\n<style=CreditsPositionName>  </style>\nMaria Eleni Pasia\n\n<style=CreditsPositionName>      </style>\nJeff Shieh\n\n\n<style=CreditsPositionName><size=115%>      </size></style>\nMitsuhiro Tanaka\n\n\n<style=CreditsPositionName><size=115%>    </size></style>\nIan Curran"
+      "shaped": "<style=CreditsPositionName>  </style>\nsneksheF naD\n\n<style=CreditsPositionName>   </style>\nevokaroB ttocS\nsmailliW ttocS\n\n<style=CreditsPositionName> </style>\nnilknaR llehctiM\n\n<style=CreditsPositionName>   </style>\noL nivlA\nnehC yellehS\nihcufawaK nevetS\n\n<style=CreditsPositionName>  </style>\neissaM trautS\n\n<style=CreditsPositionName>      </style>\nnehC lraC\n\n\n<style=CreditsPositionName><size=115%> </size></style>\n\n<style=CreditsPositionName>  </style>\nikswonazrhC eitaK\n\n<style=CreditsPositionName>   </style>\nnnamrohT nitsuJ\n\n<style=CreditsPositionName>   </style>\nnotgnihsaW htenneK\n\n\n<style=CreditsPositionName><size=115%> </size></style>\n\n<style=CreditsPositionName>   </style>\nredaB navE\n\n<style=CreditsPositionName>   </style>\nardeiP ailahT\n\n<style=CreditsPositionName>  </style>\nsrewoB axelA\n\n\n<style=CreditsPositionName><size=115%></size></style>\n\n<style=CreditsPositionName>  </style>\nhsaC syhR\n\n<style=CreditsPositionName>   </style>\nyelwoC nomiS\n\n<style=CreditsPositionName>  </style>\nyenreNcM semaJ\n\n\n<style=CreditsPositionName><size=115%></size></style>\n\n<style=CreditsPositionName>  </style>\nekralC leinaD\n\n<style=CreditsPositionName> </style>\nnamllA notnilC\n\n<style=CreditsPositionName> </style>\nekooC eilataN\n\n\n<style=CreditsPositionName><size=115%>    </size></style>\n\n<style=CreditsPositionName>   </style>\nikawodaK ihsoriH\n\n<style=CreditsPositionName> </style>\nneerG tnayrB\n\n<style=CreditsPositionName> </style>\nhnyuH ynnhoJ\n\n<style=CreditsPositionName> </style>\nneyugN ecnaL\n\n\n<style=CreditsPositionName><size=115%>   </size></style>\n\n<style=CreditsPositionName> </style>\nikawayiM ekusiaD\n\n<style=CreditsPositionName></style>\nebanataW okiroN\nawagoK okoaN\n\n<style=CreditsPositionName> </style>\nztreG ikasiM\n\n<style=CreditsPositionName>   </style>\noduK iaD\n\n<style=CreditsPositionName>  </style>\nkeeM lliW\n\n<style=CreditsPositionName>   </style>\nllaH elociN\n\n<style=CreditsPositionName>    </style>\notsuarF acisseJ\n\n\n<style=CreditsPositionName><size=115%>   </size></style>\n\n<style=CreditsPositionName>  </style>\ngnahZ enirehtaK\n\n<style=CreditsPositionName>  </style>\ntasaiR ayittA\n\n<style=CreditsPositionName>  </style>\ngnoW nosaJ\n\n<style=CreditsPositionName>     </style>\nzonuM ahtnamaS\n\n<style=CreditsPositionName>  </style>\naisaP inelE airaM\n\n<style=CreditsPositionName>      </style>\nheihS ffeJ\n\n\n<style=CreditsPositionName><size=115%>      </size></style>\nakanaT orihustiM\n\n\n<style=CreditsPositionName><size=115%>    </size></style>\nnarruC naI"
     },
     {
       "logical": "<style=Flashback>«اما دارتِ دمیدنی؟ واقعاً؟»</style>",
@@ -2182,7 +2182,7 @@
     },
     {
       "logical": "<style=InventoryItem>راهنمای The Mirage Express</style> به موجودی شما اضافه شد",
-      "shaped": "<style=InventoryItem> The Mirage Express</style>     "
+      "shaped": "<style=InventoryItem> sserpxE egariM ehT</style>     "
     },
     {
       "logical": "<style=InventoryItem>قفل شدّو</style> به موجودی شما اضافه شد",
@@ -2682,7 +2682,7 @@
     },
     {
       "logical": "<style=Thought>(به‌گمانم کسی که این قانون را نوشته، بالای 65 سال داشته است.)</style>",
-      "shaped": "<style=Thought>(        65   .)</style>"
+      "shaped": "<style=Thought>(        56   .)</style>"
     },
     {
       "logical": "<style=Thought>(بگذارید دوباره امتحان کنم.)</style>",
@@ -3542,31 +3542,31 @@
     },
     {
       "logical": "Conductor’s Wife:: اوه! این کیست؟",
-      "shaped": "Conductor’s Wife:: !  "
+      "shaped": "::efiW s’rotcudnoC !  "
     },
     {
       "logical": "Conductor’s Wife:: خب، بامزه است، این که حتماً!",
-      "shaped": "Conductor’s Wife::      !"
+      "shaped": "::efiW s’rotcudnoC      !"
     },
     {
       "logical": "Conductor’s Wife:: عزیزم! دیر کردی! ساعت‌هاست اینجا منتظرم!",
-      "shaped": "Conductor’s Wife:: !  !   !"
+      "shaped": "::efiW s’rotcudnoC !  !   !"
     },
     {
       "logical": "Conductor’s Wife:: فقط خوشحالم اینجایی؛ سریع، صبح به اسپاگونیا می‌رویم و باید وسایلت را جمع کنی!",
-      "shaped": "Conductor’s Wife::              !"
+      "shaped": "::efiW s’rotcudnoC              !"
     },
     {
       "logical": "Conductor’s Wife:: و من به خانه‌بودنت نیاز دارم! اولین روز بازنشستگی‌ات مبارک، عزیزم.",
-      "shaped": "Conductor’s Wife::      !     ."
+      "shaped": "::efiW s’rotcudnoC      !     ."
     },
     {
       "logical": "Sunshine\nToodles\n<size=90%>گربه‌های ولگرد بیرون خانهٔ Justin</size>",
-      "shaped": "Sunshine\nToodles\n<size=90%>    Justin</size>"
+      "shaped": "seldooT\nenihsnuS\n<size=90%>    nitsuJ</size>"
     },
     {
       "logical": "«باز هم از این‌که قطار The Mirage Express را انتخاب کردید سپاسگزاریم…—کارکنان.»",
-      "shaped": "«     The Mirage Express    …—.»"
+      "shaped": "«     sserpxE egariM ehT    …—.»"
     },
     {
       "logical": "«فنجانی قهوه در دست، همسر در کنارت، بهشت.»",
@@ -3670,7 +3670,7 @@
     },
     {
       "logical": "، حواس ناکلز را پرت کن تا Super Monkey Ball را تعمیر کنم!",
-      "shaped": "       Super Monkey Ball   !"
+      "shaped": "       llaB yeknoM repuS   !"
     },
     {
       "logical": "، خوب به این نگاه کن…",
@@ -3682,7 +3682,7 @@
     },
     {
       "logical": "، دوباره امتحان کن! باید Super Monkey Ball را تعمیر کنم!",
-      "shaped": "   !  Super Monkey Ball   !"
+      "shaped": "   !  llaB yeknoM repuS   !"
     },
     {
       "logical": "، دوباره امتحان کنیم!",
@@ -4146,7 +4146,7 @@
     },
     {
       "logical": "آه! آآه، این وب‌سایت Hot Honey است! محال است، عاشقشانم!!",
-      "shaped": "!    Hot Honey !   !!"
+      "shaped": "!    yenoH toH !   !!"
     },
     {
       "logical": "آه! ن-نه، خوبم، ممنون تیلز!",
@@ -4334,7 +4334,7 @@
     },
     {
       "logical": "از SEGA ممنونیم که اجازه داد این بازی را بسازیم. :)\n\nو از شما هم ممنونیم که بازی کردید!\n\nروز دروغ آوریل مبارک (با تأخیر)!\n\n©SEGA",
-      "shaped": " SEGA        . :)\n\n       !\n\n    ( )!\n\n©SEGA"
+      "shaped": " AGES        . :)\n\n       !\n\n    ( AGES©\n\n!)"
     },
     {
       "logical": "از آن مرد خوشم آمد.",
@@ -4494,7 +4494,7 @@
     },
     {
       "logical": "اسپیو نینجواست. به 17 زبان مختلف مسلط است و انضباطی شگفت‌انگیز دارد.",
-      "shaped": " .  17        ."
+      "shaped": " .  71        ."
     },
     {
       "logical": "اسپیو هر وقت می‌توانست کتابخانه را ترک کند، چون من و تیلز یک <style=Important>گذرگاه مخفی</style> از <style=CarName>واگن کتابخانه</style> پیدا کردیم…",
@@ -4542,7 +4542,7 @@
     },
     {
       "logical": "اصرار داشت در بازی Super Monkey Ball ما را شکست دهد.",
-      "shaped": "    Super Monkey Ball    ."
+      "shaped": "    llaB yeknoM repuS    ."
     },
     {
       "logical": "اصلاً برای این وقت نداریم، باید انتقام سونیک را بگیریم!",
@@ -4598,7 +4598,7 @@
     },
     {
       "logical": "البته Chicken Cordon Bleu خوشمزه به نظر می‌رسد.",
-      "shaped": " Chicken Cordon Bleu    ."
+      "shaped": " uelB nodroC nekcihC    ."
     },
     {
       "logical": "البته اگر دیدی قیافه‌ام گرفته، بدان که، اِ… کارت پیشینه‌ام کجاست…",
@@ -5202,7 +5202,7 @@
     },
     {
       "logical": "اِم، «Hot Honey»؟",
-      "shaped": " «Hot Honey»"
+      "shaped": " »yenoH toH«"
     },
     {
       "logical": "اِم، آره! فقط باید امیدوار بمانیم!",
@@ -5518,7 +5518,7 @@
     },
     {
       "logical": "این است؟ >>>>InventoryChoice",
-      "shaped": "  >>>>InventoryChoice"
+      "shaped": "  eciohCyrotnevnI>>>>"
     },
     {
       "logical": "این اسم من است!",
@@ -5614,7 +5614,7 @@
     },
     {
       "logical": "این راهنمای کاربر <style=Important>The Mirage Express</style> است؛ قطاری که الآن در آن هستیم.",
-      "shaped": "   <style=Important>The Mirage Express</style>       ."
+      "shaped": "   <style=Important>sserpxE egariM ehT</style>       ."
     },
     {
       "logical": "این رمز اطلاعات محرمانه است. ممکن است این <style=InventoryItem>نقشه‌های مهندسی</style> متعلق… به مدیر قطار بوده باشند؟",
@@ -5942,7 +5942,7 @@
     },
     {
       "logical": "بازی محبوبت Super Monkey Ball است.",
-      "shaped": "  Super Monkey Ball ."
+      "shaped": "  llaB yeknoM repuS ."
     },
     {
       "logical": "باشد که دوستی‌مان با هر جشن محکم‌تر شود.",
@@ -6402,7 +6402,7 @@
     },
     {
       "logical": "بله، همان کتابی است که می‌خواندم. <style=InventoryItem>راهنمای The Mirage Express</style>. قطارها باحال‌اند.",
-      "shaped": "     . <style=InventoryItem> The Mirage Express</style>.  ."
+      "shaped": "     . <style=InventoryItem> sserpxE egariM ehT</style>.  ."
     },
     {
       "logical": "بله، هی‌هی، بامزه نیست؟ البته هنوز برای دیدنشان به هیچ کنسرتی نرفته‌ام.",
@@ -6778,7 +6778,7 @@
     },
     {
       "logical": "بی‌خیال >>>>GoodbyeChoice",
-      "shaped": " >>>>GoodbyeChoice"
+      "shaped": " eciohCeybdooG>>>>"
     },
     {
       "logical": "بی‌خیالش شو!)</style>",
@@ -6902,7 +6902,7 @@
     },
     {
       "logical": "تمام تلاشتان را می‌کنید تا مطمئن شوید مهمان‌هایمان در <style=important>The Mirage Express</style> اوقاتی امن و لذت‌بخش داشته باشند؟",
-      "shaped": "         <style=important>The Mirage Express</style>      "
+      "shaped": "         <style=important>sserpxE egariM ehT</style>      "
     },
     {
       "logical": "تمام روز، من و تیلز از خودمان می‌پرسیدیم سونیک چه کار می‌کرد…",
@@ -7082,7 +7082,7 @@
     },
     {
       "logical": "جالب… Hot Honey یکی از گروه‌های محبوب ایمی است.",
-      "shaped": "… Hot Honey      ."
+      "shaped": "yenoH toH …      ."
     },
     {
       "logical": "جایی که می‌پوسید!",
@@ -7974,7 +7974,7 @@
     },
     {
       "logical": "درست است که Super Monkey Ball پر از هیجانِ پرتاب توپ میمون است…",
-      "shaped": "   Super Monkey Ball       …"
+      "shaped": "   llaB yeknoM repuS       …"
     },
     {
       "logical": "درست است که کتاب‌هایی روی زمین پخش شده‌اند، اما کتاب‌های باقی‌مانده در قفسه‌ها همه به <style=Important>ترتیب الفبایی</style> بودند.",
@@ -8042,7 +8042,7 @@
     },
     {
       "logical": "درهای <style=Important>The Mirage Express</style> باز می‌شوند؛ همه سوار شوند!",
-      "shaped": " <style=Important>The Mirage Express</style>     !"
+      "shaped": " <style=Important>sserpxE egariM ehT</style>     !"
     },
     {
       "logical": "دزدی کار آدم‌های بی‌کلاس است.",
@@ -8266,11 +8266,11 @@
     },
     {
       "logical": "راهنمای The Mirage Express",
-      "shaped": " The Mirage Express"
+      "shaped": " sserpxE egariM ehT"
     },
     {
       "logical": "راهنمایی جامع دربارهٔ ویژگی‌ها و قابلیت‌های فراوان The Mirage Express. ظاهراً دربارهٔ نحوهٔ راندن قطار چیزی نگفته؛ حیف شد.",
-      "shaped": "       The Mirage Express.         ."
+      "shaped": "       .sserpxE egariM ehT         ."
     },
     {
       "logical": "رد کن؛ تیلز باید بازش کند",
@@ -8562,7 +8562,7 @@
     },
     {
       "logical": "سیاست لغو <style=Important>The Mirage Express</style> چیست؟",
-      "shaped": "  <style=Important>The Mirage Express</style> "
+      "shaped": "  <style=Important>sserpxE egariM ehT</style> "
     },
     {
       "logical": "سیمِ بازوی رباتیک کاملاً بریده شده است. به ذهنم رسید شاید کار تبر باشد، اما حمل سلاح در قطار ممنوع است.",
@@ -8694,7 +8694,7 @@
     },
     {
       "logical": "شدّو طرفدار بزرگ Hot Honey است",
-      "shaped": "   Hot Honey "
+      "shaped": "   yenoH toH "
     },
     {
       "logical": "شدّو می‌خواست ما را دور نگه دارد",
@@ -8858,39 +8858,39 @@
     },
     {
       "logical": "صفحهٔ 14",
-      "shaped": " 14"
+      "shaped": " 41"
     },
     {
       "logical": "صفحهٔ 15",
-      "shaped": " 15"
+      "shaped": " 51"
     },
     {
       "logical": "صفحهٔ 16",
-      "shaped": " 16"
+      "shaped": " 61"
     },
     {
       "logical": "صفحهٔ 231",
-      "shaped": " 231"
+      "shaped": " 132"
     },
     {
       "logical": "صفحهٔ 362",
-      "shaped": " 362"
+      "shaped": " 263"
     },
     {
       "logical": "صفحهٔ 402",
-      "shaped": " 402"
+      "shaped": " 204"
     },
     {
       "logical": "صفحهٔ 56",
-      "shaped": " 56"
+      "shaped": " 65"
     },
     {
       "logical": "صفحهٔ 89",
-      "shaped": " 89"
+      "shaped": " 98"
     },
     {
       "logical": "صفحهٔ 97",
-      "shaped": " 97"
+      "shaped": " 79"
     },
     {
       "logical": "ضربه خورده است. اگر نبض داشته باشد، ضعیف است.",
@@ -10210,7 +10210,7 @@
     },
     {
       "logical": "منوی غذای واگن غذاخوری The Mirage Express. در آن «هات‌داگ چیلی»، «رامن فوری» و «Chicken Cordon Bleu» دیده می‌شود.",
-      "shaped": "    The Mirage Express.   « » « »  «Chicken Cordon Bleu»  ."
+      "shaped": "    .sserpxE egariM ehT   « » « »  »uelB nodroC nekcihC«  ."
     },
     {
       "logical": "من…",
@@ -10606,7 +10606,7 @@
     },
     {
       "logical": "نسخهٔ چاپی وب‌سایت بلیت Hot Honey وجود دارد چون…",
-      "shaped": "    Hot Honey   …"
+      "shaped": "    yenoH toH   …"
     },
     {
       "logical": "نظرت چیست، تیلز؛ می‌خواهی چیزی از این‌ها برایت بپزم؟",
@@ -11566,7 +11566,7 @@
     },
     {
       "logical": "هیچ بازپرداختی انجام نمی‌شود و هزینهٔ حاضرنشدن از شما گرفته خواهد شد. اگر بیش از 65 سال داشته باشید، این قانون شامل حالتان نمی‌شود.",
-      "shaped": "           .    65        ."
+      "shaped": "           .    56        ."
     },
     {
       "logical": "هیچ دلیلی آن‌قدر قانع‌کننده نیست! کاری که کردی باورنکردنی است!",
@@ -11786,7 +11786,7 @@
     },
     {
       "logical": "واضح است که نمی‌توانیم بازی «Super Monkey Ball» را امتحان کنیم.",
-      "shaped": "     «Super Monkey Ball»   ."
+      "shaped": "     »llaB yeknoM repuS«   ."
     },
     {
       "logical": "واقعاً از آن یکی خوشم آمد.",
@@ -11958,7 +11958,7 @@
     },
     {
       "logical": "وقت آن است که من و <style=Important>The Mirage Express</style> از هم خداحافظی کنیم.",
-      "shaped": "      <style=Important>The Mirage Express</style>    ."
+      "shaped": "      <style=Important>sserpxE egariM ehT</style>    ."
     },
     {
       "logical": "وقت آن رسیده بگویی چرا!",
@@ -12390,7 +12390,7 @@
     },
     {
       "logical": "چشم، عزیزم. بگذار ببینم… 23…04…01…",
-      "shaped": " .  … 23…04…01…"
+      "shaped": " .  …10…40…32 …"
     },
     {
       "logical": "چشم، قربان.",
@@ -12798,7 +12798,7 @@
     },
     {
       "logical": "کسی صفحهٔ اول یک وب‌سایت بلیت را چاپ کرده؟ برای گروه «Hot Honey» است.",
-      "shaped": "           «Hot Honey» ."
+      "shaped": "           »yenoH toH« ."
     },
     {
       "logical": "کسی چیزی دارد که بتوانیم برای رشوه استفاده کنیم؟",
@@ -13014,7 +13014,7 @@
     },
     {
       "logical": "یادم آمد ایمی هیچ‌وقت اجرای زندهٔ Hot Honey را ندیده و دنبالش گشتم. همان‌وقت صفحهٔ اصلی را اشتباهی چاپ کردم.",
-      "shaped": "      Hot Honey     .       ."
+      "shaped": "      yenoH toH     .       ."
     },
     {
       "logical": "یادم می‌ماند، ممنون!",
@@ -13074,7 +13074,7 @@
     },
     {
       "logical": "یک دستگاه آرکید Super Monkey Ball که کاملاً خرد شده است. دیدن Super Monkey Ball در این وضعیت واقعاً مایهٔ تأسف است.",
-      "shaped": "   Super Monkey Ball     .  Super Monkey Ball       ."
+      "shaped": "   llaB yeknoM repuS     .  llaB yeknoM repuS       ."
     },
     {
       "logical": "یک دفترچهٔ راهنما؟؟ فکر می‌کنی اسپیو داشت دستورالعمل می‌خواند؟",
