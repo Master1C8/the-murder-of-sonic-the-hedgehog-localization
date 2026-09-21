@@ -35,12 +35,11 @@ def main() -> int:
     if config.get("payloadReady") is not True or len(languages) != 30:
         raise RuntimeError("Unified payload is not marked ready for all 30 locales")
     artifacts: dict[str, str] = {}
-    for language in languages:
-        files = language.get("files") or []
-        if language.get("ready") is not True or not files:
-            raise RuntimeError(f"Locale payload is incomplete: {language.get('runtimeCode')}")
-        for item in files:
-            if not item.get("payloadSHA256") or len(item["payloadSHA256"]) != 64:
+
+    def collect(items: list[dict[str, object]]) -> None:
+        for item in items:
+            payload_hash = item.get("payloadSHA256")
+            if not isinstance(payload_hash, str) or len(payload_hash) != 64:
                 raise RuntimeError(f"Missing output SHA-256: {item.get('path')}")
             chain = item.get("artifacts")
             if chain:
@@ -48,12 +47,19 @@ def main() -> int:
             else:
                 rows = [{
                     "path": item.get("payloadPath", item["path"]),
-                    "sha256": item.get("artifactSHA256", item["payloadSHA256"]),
+                    "sha256": item.get("artifactSHA256", payload_hash),
                 }]
             for row in rows:
                 prior = artifacts.setdefault(row["path"], row["sha256"])
                 if prior != row["sha256"]:
                     raise RuntimeError(f"Conflicting artifact hash: {row['path']}")
+
+    collect(config.get("files") or [])
+    for language in languages:
+        files = language.get("files") or []
+        if language.get("ready") is not True or not files:
+            raise RuntimeError(f"Locale payload is incomplete: {language.get('runtimeCode')}")
+        collect(files)
     for relative, expected in artifacts.items():
         path = safe_path(relative)
         if not path.is_file() or path.is_symlink() or sha256(path) != expected:

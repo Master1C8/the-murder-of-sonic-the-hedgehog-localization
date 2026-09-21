@@ -1,7 +1,6 @@
 {
-  "schemaVersion": 1,
-  "kind": "vn-revival-unified-text-payload",
-  "baseLocale": "ru",
+  "schemaVersion": 2,
+  "kind": "vn-revival-shared-runtime-macos-text-payload",
   "locales": [
     "zh",
     "ru",
@@ -36,6 +35,12 @@
   ],
   "localeCount": 30,
   "imagesModified": false,
+  "architecture": "shared-runtime-external-locale-data",
+  "runtime": {
+    "assembly": "Managed/VNRevival.Runtime.dll",
+    "sha256": "70b8ae58b97db48c8150aa7d83a3d16c29e8c163ccc43e7b215be4d572b710cc",
+    "managedPatchReport": "1 initializer; 1 story loader; 28 text redirects; 1 animation guard"
+  },
   "deltaTool": {
     "name": "xdelta3",
     "sha256": "7f34ae7d6e6db7f82f643d8c8fe8847f36e35955de04bbd98e1ba6c780239885",

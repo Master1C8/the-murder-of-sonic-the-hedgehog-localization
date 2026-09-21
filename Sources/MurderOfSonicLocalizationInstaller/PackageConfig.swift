@@ -205,7 +205,7 @@ struct PackageConfig: Codable, Equatable, Sendable {
     }
 
     func payloadFiles(for language: LanguagePackage) -> [PayloadFile] {
-        language.files ?? files
+        files + (language.files ?? [])
     }
 }
 

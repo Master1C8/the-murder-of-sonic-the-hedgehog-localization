@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Verify the compact Windows runtime payload against all canonical overlays."""
+"""Verify a compact shared-runtime payload against all canonical overlays."""
 
 from __future__ import annotations
 
+import argparse
 import base64
 import gzip
 import hashlib
@@ -15,8 +16,7 @@ from typing import Any
 
 PROJECT = Path(__file__).resolve().parent.parent
 LOCALIZATION = PROJECT / "Documentation/Localization"
-PAYLOAD = PROJECT / "Windows/Resources/LocalizationPayload"
-CONFIG = PROJECT / "Windows/Resources/PackageConfig.json"
+DEFAULT_RESOURCES = PROJECT / "Windows/Resources"
 EXTRACTION_SCRIPT = PROJECT / "Scripts/extract-localization-assets.py"
 COMPLEX = {"ar": (1, True), "fa": (1, True), "he": (2, True), "hi": (3, False), "th": (4, False)}
 
@@ -47,10 +47,16 @@ def fail(message: str) -> None:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--resources", type=Path, default=DEFAULT_RESOURCES)
+    args = parser.parse_args()
+    resources = args.resources.resolve()
+    payload = resources / "LocalizationPayload"
+    config_path = resources / "PackageConfig.json"
     module = load_extraction_module()
     inventory = json.loads((LOCALIZATION / "inventory.json").read_text(encoding="utf-8"))
-    config = json.loads(CONFIG.read_text(encoding="utf-8"))
-    manifest = json.loads((PAYLOAD / "BuildManifest.json").read_text(encoding="utf-8"))
+    config = json.loads(config_path.read_text(encoding="utf-8"))
+    manifest = json.loads((payload / "BuildManifest.json").read_text(encoding="utf-8"))
     languages = config.get("languages", [])
     if not config.get("payloadReady") or len(languages) != 30:
         fail("PackageConfig is not a ready 30-locale package")
@@ -63,11 +69,12 @@ def main() -> int:
     ):
         fail("The managed runtime hook report is incomplete")
 
-    runtime_payload = PAYLOAD / "F/shared/Managed/VNRevival.Runtime.dll"
+    runtime_payload = payload / "F/shared/Managed/VNRevival.Runtime.dll"
     if sha256(runtime_payload) != manifest["runtime"]["sha256"]:
         fail("The runtime DLL checksum does not match BuildManifest")
-    if sha256(PAYLOAD / "Tools/xdelta3.exe") != manifest["deltaTool"]["sha256"]:
-        fail("The Windows xdelta checksum does not match BuildManifest")
+    delta_tool = payload / "Tools" / manifest["deltaTool"]["name"]
+    if sha256(delta_tool) != manifest["deltaTool"]["sha256"]:
+        fail("The xdelta checksum does not match BuildManifest")
 
     locales = [row["runtimeCode"] for row in languages]
     if locales != manifest.get("locales") or len(set(locales)) != 30:
@@ -85,11 +92,11 @@ def main() -> int:
         artifacts = row.get("artifacts") or []
         if artifacts:
             for artifact in artifacts:
-                path = PAYLOAD / artifact["path"]
+                path = payload / artifact["path"]
                 if not path.is_file() or sha256(path) != artifact["sha256"]:
                     fail(f"Payload artifact mismatch: {artifact['path']}")
         else:
-            path = PAYLOAD / row["payloadPath"]
+            path = payload / row["payloadPath"]
             if not path.is_file() or sha256(path) != row["artifactSHA256"]:
                 fail(f"Payload file mismatch: {row['payloadPath']}")
             if row["payloadSHA256"] != row["artifactSHA256"]:
@@ -100,7 +107,7 @@ def main() -> int:
         if len(active) != 1 or len(files) != 1:
             fail(f"Active-locale file is missing or duplicated: {language['runtimeCode']}")
         for row in files:
-            path = PAYLOAD / row["payloadPath"]
+            path = payload / row["payloadPath"]
             if not path.is_file() or sha256(path) != row["artifactSHA256"]:
                 fail(f"Active-locale payload mismatch: {language['runtimeCode']}")
     if sum(path.startswith("StreamingAssets/VNRevival/Locales/") for path in expected_shared_paths) != 60:
@@ -123,8 +130,8 @@ def main() -> int:
 
     for locale in locales:
         overlay = json.loads((LOCALIZATION / f"{locale}.overlay.json").read_text(encoding="utf-8"))
-        story_path = PAYLOAD / f"F/shared/StreamingAssets/VNRevival/Locales/{locale}.story.json.gz"
-        runtime_path = PAYLOAD / f"F/shared/StreamingAssets/VNRevival/Locales/{locale}.runtime.tsv.gz"
+        story_path = payload / f"F/shared/StreamingAssets/VNRevival/Locales/{locale}.story.json.gz"
+        runtime_path = payload / f"F/shared/StreamingAssets/VNRevival/Locales/{locale}.runtime.tsv.gz"
         with gzip.open(story_path, "rt", encoding="utf-8") as stream:
             story = json.load(stream)
         for row in story_rows:
@@ -167,13 +174,14 @@ def main() -> int:
         if locale not in COMPLEX and (exact_shapes != 0 or span_shapes != 0):
             fail(f"Unexpected shaping data for simple-script locale: {locale}")
 
-    payload_bytes = sum(path.stat().st_size for path in PAYLOAD.rglob("*") if path.is_file())
+    payload_bytes = sum(path.stat().st_size for path in payload.rglob("*") if path.is_file())
     if payload_bytes >= 100 * 1024 * 1024:
         fail(f"Compact payload exceeds 100 MiB: {payload_bytes}")
     print(
         json.dumps(
             {
-                "status": "WINDOWS_RUNTIME_PAYLOAD_TEST_PASS",
+                "status": "SHARED_RUNTIME_PAYLOAD_TEST_PASS",
+                "kind": manifest.get("kind"),
                 "locales": len(locales),
                 "storyUnitsPerLocale": len(story_rows),
                 "runtimeUnitsPerLocale": len(runtime_rows),

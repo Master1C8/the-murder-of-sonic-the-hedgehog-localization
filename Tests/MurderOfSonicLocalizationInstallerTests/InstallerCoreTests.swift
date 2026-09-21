@@ -3,7 +3,7 @@ import Foundation
 import Testing
 @testable import MurderOfSonicLocalizationInstaller
 
-@Suite
+@Suite(.serialized)
 struct InstallerCoreTests {
     private let fileManager = FileManager.default
 
@@ -23,7 +23,10 @@ struct InstallerCoreTests {
         #expect(config.languages.allSatisfy { $0.ready })
         #expect(config.languages.allSatisfy { !(config.payloadFiles(for: $0)).isEmpty })
         #expect(config.payloadReady == true)
-        #expect(config.files.isEmpty)
+        #expect(config.files.count >= 60)
+        #expect(config.languages.allSatisfy {
+            config.payloadFiles(for: $0).count == config.files.count + 1
+        })
     }
 
     @Test func installerInterfaceAndErrorsAreEnglish() throws {
@@ -448,6 +451,67 @@ struct InstallerCoreTests {
                 into: setup.installation
             )
             #expect(try String(contentsOf: setup.file, encoding: .utf8) == "localized")
+        }
+    }
+
+    @Test func installsSharedRuntimeAndSelectedLocaleMarkerTogether() throws {
+        try withTemporaryDirectory { root in
+            let setup = try makeFakeInstallation(root: root, original: "original")
+            let payload = root.appendingPathComponent("payload", isDirectory: true)
+            let sharedPath = "Managed/Assembly-CSharp.dll"
+            let markerPath = "StreamingAssets/VNRevival/active-locale.txt"
+            let sharedPayload = payload.appendingPathComponent("F/shared/runtime.dll")
+            let markerPayload = payload.appendingPathComponent("F/active/ru.txt")
+            try write(Data("shared-runtime".utf8), to: sharedPayload)
+            try write(Data("ru\n".utf8), to: markerPayload)
+
+            let sharedFile = PayloadFile(
+                path: sharedPath,
+                originalSHA256: try InstallerCore.sha256(of: setup.file),
+                payloadSHA256: try InstallerCore.sha256(of: sharedPayload),
+                payloadPath: "F/shared/runtime.dll",
+                artifactSHA256: try InstallerCore.sha256(of: sharedPayload)
+            )
+            let markerFile = PayloadFile(
+                path: markerPath,
+                originalSHA256: nil,
+                payloadSHA256: try InstallerCore.sha256(of: markerPayload),
+                payloadPath: "F/active/ru.txt",
+                artifactSHA256: try InstallerCore.sha256(of: markerPayload)
+            )
+            let languages = completeLanguages().map { language in
+                LanguagePackage(
+                    siteLocale: language.siteLocale,
+                    runtimeCode: language.runtimeCode,
+                    nativeLanguageName: language.nativeLanguageName,
+                    ready: true,
+                    files: language.runtimeCode == "ru" ? [markerFile] : nil
+                )
+            }
+            let config = PackageConfig(
+                schemaVersion: 2,
+                packageID: "fun.vnrevival.test",
+                sourceLocale: "en",
+                languages: languages,
+                steamAppID: "2324650",
+                steamBuildID: "20535215",
+                gameVersion: "1.01",
+                unityVersion: "2021.3.9f1",
+                payloadReady: true,
+                files: [sharedFile],
+                copy: .testCopy
+            )
+
+            try InstallerCore().install(
+                payload: payload,
+                config: config,
+                selectedRuntimeCode: "ru",
+                into: setup.installation
+            )
+
+            #expect(try String(contentsOf: setup.file, encoding: .utf8) == "shared-runtime")
+            let installedMarker = setup.installation.dataDirectory.appendingPathComponent(markerPath)
+            #expect(try String(contentsOf: installedMarker, encoding: .utf8) == "ru\n")
         }
     }
 

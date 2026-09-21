@@ -48,18 +48,30 @@ SMAPI и Content Patcher работает с точным списком Unity-�
 
 ## Пересборка payload
 
-`Scripts/build-unified-payload.py` пересобирает все 30 полных локальных
-вариантов из проверенного оригинала, упаковывает русский базовый слой и 29
-дельт, затем разворачивает каждую дельту обратно и сверяет итоговый SHA-256.
-Только после успешной проверки скрипт атомарно заменяет
-`Resources/LocalizationPayload` и выставляет readiness в `PackageConfig.json`.
-Финальный gate и сборка приложения выполняются командой
-`./Scripts/release-audit.sh`.
+macOS and Windows use one shared managed runtime instead of rebuilding Unity
+asset bundles for every locale. The payload stores 30 compressed story packs,
+30 compact UI packs, ten shared fonts, one platform-specific managed assembly
+delta, and one locale marker per language. Text-bearing textures remain out of
+scope. The payload builder atomically replaces `LocalizationPayload`; the final
+gate and application build run through `./Scripts/release-audit.sh`.
+
+The macOS payload is generated from a clean copy of the macOS `Managed`
+directory with:
+
+```sh
+PYTHONPYCACHEPREFIX=/private/tmp/sonic-pyc \
+python3 Scripts/build-windows-runtime-payload.py \
+  --target macos \
+  --managed-root .build/macos-baseline/Managed \
+  --xdelta /opt/homebrew/bin/xdelta3 \
+  --target-xdelta Sources/MurderOfSonicLocalizationInstaller/Resources/LocalizationPayload/Tools/xdelta3 \
+  --xdelta-license Sources/MurderOfSonicLocalizationInstaller/Resources/LocalizationPayload/Tools/XDELTA-LICENSE
+```
 
 ## Windows release build
 
-The Windows release uses one shared managed runtime instead of rebuilding the
-same compressed Unity bundles 30 times. It loads stable-path Ink stories,
+The Windows release uses the same shared managed runtime instead of rebuilding
+the same compressed Unity bundles 30 times. It loads stable-path Ink stories,
 context-aware UI translations, complex-script shaping data, and privately
 registered locale fonts from external files. All 30 locales are installed in
 one 71.77 MiB payload; textures remain unchanged. Build and verify it with:
@@ -69,7 +81,8 @@ PYTHONPYCACHEPREFIX=/private/tmp/sonic-pyc \
 python3 Scripts/build-windows-runtime-payload.py \
   --managed-root .build/windows-baseline/Managed \
   --xdelta /opt/homebrew/bin/xdelta3 \
-  --windows-xdelta .build/tooling/xdelta-windows-build/xdelta3.exe \
+  --target windows \
+  --target-xdelta .build/tooling/xdelta-windows-build/xdelta3.exe \
   --xdelta-license .build/tooling/xdelta-src/xdelta3/LICENSE
 
 PYTHONPYCACHEPREFIX=/private/tmp/sonic-pyc \

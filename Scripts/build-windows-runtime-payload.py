@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the compact shared-runtime Windows payload for all 30 locales."""
+"""Build the compact shared-runtime payload for all 30 locales."""
 
 from __future__ import annotations
 
@@ -25,6 +25,7 @@ FONTS = PROJECT / "LocalizationAssets/Fonts"
 FONT_AUDIT = LOCALIZATION / "Fonts/font-audit.json"
 SOURCE_CONFIG = PROJECT / "Sources/MurderOfSonicLocalizationInstaller/Resources/PackageConfig.json"
 WINDOWS_RESOURCES = PROJECT / "Windows/Resources"
+MACOS_RESOURCES = PROJECT / "Sources/MurderOfSonicLocalizationInstaller/Resources"
 EXTRACTION_SCRIPT = PROJECT / "Scripts/extract-localization-assets.py"
 RUNTIME_SOURCE = PROJECT / "Scripts/VNRevivalRuntime.cs"
 PATCHER_SOURCE = PROJECT / "Scripts/PatchRuntimeLoader.cs"
@@ -224,11 +225,24 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--managed-root", type=Path, required=True)
     parser.add_argument("--xdelta", type=Path, required=True)
-    parser.add_argument("--windows-xdelta", type=Path, required=True)
+    parser.add_argument("--target", choices=("windows", "macos"), default="windows")
+    parser.add_argument("--target-xdelta", type=Path)
+    parser.add_argument("--windows-xdelta", type=Path)
+    parser.add_argument("--output-resources", type=Path)
     parser.add_argument("--xdelta-license", type=Path, required=True)
     args = parser.parse_args()
 
     managed_root = args.managed_root.resolve()
+    target_xdelta = (args.target_xdelta or args.windows_xdelta)
+    if target_xdelta is None:
+        parser.error("one of --target-xdelta or --windows-xdelta is required")
+    target_xdelta = target_xdelta.resolve()
+    output_resources = (
+        args.output_resources.resolve()
+        if args.output_resources
+        else (WINDOWS_RESOURCES if args.target == "windows" else MACOS_RESOURCES)
+    )
+    tool_name = "xdelta3.exe" if args.target == "windows" else "xdelta3"
     source_assembly = managed_root / "Assembly-CSharp.dll"
     dependencies = (
         source_assembly,
@@ -239,15 +253,18 @@ def main() -> int:
         managed_root / "UnityEngine.UI.dll",
         managed_root / "netstandard.dll",
         args.xdelta.resolve(),
-        args.windows_xdelta.resolve(),
+        target_xdelta,
         args.xdelta_license.resolve(),
     )
     for required in dependencies:
         if not required.is_file():
             raise RuntimeError(f"Required input is missing: {required}")
-    file_report = run(["file", str(args.windows_xdelta.resolve())])
-    if "PE32+ executable" not in file_report or "x86-64" not in file_report:
-        raise RuntimeError("The bundled xdelta decoder is not Windows x64: " + file_report)
+    file_report = run(["file", str(target_xdelta)])
+    if args.target == "windows":
+        if "PE32+ executable" not in file_report or "x86-64" not in file_report:
+            raise RuntimeError("The bundled xdelta decoder is not Windows x64: " + file_report)
+    elif "universal binary" not in file_report or "x86_64" not in file_report or "arm64" not in file_report:
+        raise RuntimeError("The bundled xdelta decoder is not universal macOS arm64/x86_64: " + file_report)
 
     config_source = json.loads(SOURCE_CONFIG.read_text(encoding="utf-8"))
     language_sources = config_source["languages"]
@@ -270,7 +287,8 @@ def main() -> int:
     try:
         tools = staged / "Tools"
         tools.mkdir(parents=True)
-        shutil.copy2(args.windows_xdelta.resolve(), tools / "xdelta3.exe")
+        shutil.copy2(target_xdelta, tools / tool_name)
+        (tools / tool_name).chmod(0o755)
         shutil.copy2(args.xdelta_license.resolve(), tools / "XDELTA-LICENSE")
 
         runtime_dir = work / "runtime"
@@ -387,7 +405,7 @@ def main() -> int:
         config_path.write_text(json.dumps(config, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         build_manifest = {
             "schemaVersion": 2,
-            "kind": "vn-revival-shared-runtime-windows-text-payload",
+            "kind": f"vn-revival-shared-runtime-{args.target}-text-payload",
             "locales": locales,
             "localeCount": len(locales),
             "imagesModified": False,
@@ -398,8 +416,8 @@ def main() -> int:
                 "managedPatchReport": patch_report,
             },
             "deltaTool": {
-                "name": "xdelta3.exe",
-                "sha256": sha256(tools / "xdelta3.exe"),
+                "name": tool_name,
+                "sha256": sha256(tools / tool_name),
                 "license": "XDELTA-LICENSE",
             },
         }
@@ -408,21 +426,21 @@ def main() -> int:
             encoding="utf-8",
         )
         (staged / "README.md").write_text(
-            "# Windows localization payload\n\n"
+            f"# {args.target.capitalize()} localization payload\n\n"
             "One shared managed runtime loads all 30 compressed locale packs and privately registered fonts. "
             "Only Assembly-CSharp.dll is patched; original Unity asset bundles remain untouched.\n",
             encoding="utf-8",
         )
 
-        WINDOWS_RESOURCES.mkdir(parents=True, exist_ok=True)
-        payload = WINDOWS_RESOURCES / "LocalizationPayload"
-        previous = WINDOWS_RESOURCES / "LocalizationPayload.previous"
+        output_resources.mkdir(parents=True, exist_ok=True)
+        payload = output_resources / "LocalizationPayload"
+        previous = output_resources / "LocalizationPayload.previous"
         if previous.exists():
             shutil.rmtree(previous)
         if payload.exists():
             payload.rename(previous)
         staged.rename(payload)
-        shutil.copy2(config_path, WINDOWS_RESOURCES / "PackageConfig.json")
+        shutil.copy2(config_path, output_resources / "PackageConfig.json")
         if previous.exists():
             shutil.rmtree(previous)
         payload_bytes = sum(path.stat().st_size for path in payload.rglob("*") if path.is_file())
@@ -434,6 +452,7 @@ def main() -> int:
                     "payloadMiB": round(payload_bytes / 1024 / 1024, 2),
                     "imagesModified": False,
                     "architecture": build_manifest["architecture"],
+                    "target": args.target,
                 },
                 indent=2,
             )

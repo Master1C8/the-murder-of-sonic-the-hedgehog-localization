@@ -14,7 +14,7 @@ export DEVELOPER_DIR="${DEVELOPER_DIR:-/Applications/Xcode.app/Contents/Develope
 export CLANG_MODULE_CACHE_PATH="${CLANG_MODULE_CACHE_PATH:-/private/tmp/murder-sonic-installer-swift-cache}"
 export SWIFT_MODULECACHE_PATH="${SWIFT_MODULECACHE_PATH:-$CLANG_MODULE_CACHE_PATH}"
 export SWIFTPM_MODULECACHE_OVERRIDE="${SWIFTPM_MODULECACHE_OVERRIDE:-$CLANG_MODULE_CACHE_PATH}"
-swift test --disable-sandbox
+swift test --disable-sandbox --no-parallel
 
 if [[ "${ALLOW_INCOMPLETE_PAYLOAD:-0}" != "1" ]]; then
   jq -e '.payloadReady == true and all(.languages[]; .ready == true and ((.files // []) | length > 0))' "$config" >/dev/null || {
@@ -23,6 +23,9 @@ if [[ "${ALLOW_INCOMPLETE_PAYLOAD:-0}" != "1" ]]; then
   }
   PYTHONPYCACHEPREFIX="${PYTHONPYCACHEPREFIX:-/private/tmp/murder-sonic-localization-pycache}" \
     python3 "$project_dir/Scripts/audit-installer-payload.py"
+  PYTHONPYCACHEPREFIX="${PYTHONPYCACHEPREFIX:-/private/tmp/murder-sonic-localization-pycache}" \
+    python3 "$project_dir/Scripts/test-windows-runtime-payload.py" \
+      --resources "$project_dir/Sources/MurderOfSonicLocalizationInstaller/Resources"
 fi
 
 "$project_dir/Scripts/build-app.sh"
