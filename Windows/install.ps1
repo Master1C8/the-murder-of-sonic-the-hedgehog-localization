@@ -185,61 +185,86 @@ function Recover-Transaction([string]$StateRoot, [string]$DataRoot, [string]$Rec
     Remove-Item -LiteralPath $transaction -Recurse -Force
 }
 
-function Migrate-SmokeTest($Installation, [string]$StateRoot, [string]$ReceiptPath, $SelectedFiles, [string]$PackageId) {
+function Migrate-SmokeTest($Installation, [string]$StateRoot, [string]$ReceiptPath, [string]$PackageId) {
     if (Test-Path -LiteralPath $ReceiptPath -PathType Leaf) { return }
     $legacyRoot = Join-Path $Installation.GameRoot '.vn-revival\windows-smoke-test'
     $legacyReceiptPath = Join-Path $legacyRoot 'receipt.json'
     if (-not (Test-Path -LiteralPath $legacyReceiptPath -PathType Leaf)) { return }
     $legacy = [System.IO.File]::ReadAllText($legacyReceiptPath) | ConvertFrom-Json
-    $expected = @($SelectedFiles | Where-Object { -not [string]::IsNullOrWhiteSpace([string]$_.originalSHA256) })
     if ([string]$legacy.kind -ne 'windows-russian-runtime-smoke-test' -or
         [string]$legacy.steamAppId -ne $ExpectedAppId -or
         [string]$legacy.steamBuildId -ne '20535215' -or
-        @($legacy.files).Count -ne $expected.Count) {
+        @($legacy.files).Count -eq 0) {
         throw 'The previous Windows test installation data could not be verified.'
     }
-    $backupRoot = Join-Path $StateRoot 'original-backup'
     $legacyBackupRoot = Join-Path $legacyRoot 'original-backup'
-    $migrated = @()
-    foreach ($item in $expected) {
-        $relative = [string]$item.path
-        $legacyFile = @($legacy.files | Where-Object { [string]$_.path -eq $relative })
-        if ($legacyFile.Count -ne 1 -or
-            ([string]$legacyFile[0].originalSha256).ToLowerInvariant() -ne ([string]$item.originalSHA256).ToLowerInvariant()) {
-            throw "The previous Windows test receipt does not match: $relative"
-        }
+    $restorePlan = @()
+    foreach ($legacyFile in @($legacy.files)) {
+        $relative = [string]$legacyFile.path
+        if ([string]::IsNullOrWhiteSpace($relative)) { throw 'The previous Windows test receipt contains an empty path.' }
         $destination = Get-SafePath $Installation.DataRoot $relative
-        $legacyBackup = Get-SafePath $legacyBackupRoot $relative
-        $installedHash = ([string]$legacyFile[0].patchedSha256).ToLowerInvariant()
-        if ((Get-Sha256 $destination) -ne $installedHash -or
-            (Get-Sha256 $legacyBackup) -ne ([string]$item.originalSHA256).ToLowerInvariant()) {
+        $installedHash = ([string]$legacyFile.patchedSha256).ToLowerInvariant()
+        if ((Get-Sha256 $destination) -ne $installedHash) {
             throw "The previous Windows test installation was modified: $relative"
         }
-        $backup = Get-SafePath $backupRoot $relative
-        New-Item -ItemType Directory -Path (Split-Path -Parent $backup) -Force | Out-Null
-        if (Test-Path -LiteralPath $backup -PathType Leaf) {
-            if ((Get-Sha256 $backup) -ne ([string]$item.originalSHA256).ToLowerInvariant()) {
-                throw "The original-file backup is damaged: $relative"
-            }
+        $originalHash = if ([string]::IsNullOrWhiteSpace([string]$legacyFile.originalSha256)) {
+            $null
         } else {
-            Copy-Item -LiteralPath $legacyBackup -Destination $backup
+            ([string]$legacyFile.originalSha256).ToLowerInvariant()
         }
-        $migrated += [pscustomobject]@{
+        $legacyBackup = $null
+        if ($null -ne $originalHash) {
+            $legacyBackup = Get-SafePath $legacyBackupRoot $relative
+            if ((Get-Sha256 $legacyBackup) -ne $originalHash) {
+                throw "The previous Windows test backup is damaged: $relative"
+            }
+        }
+        $restorePlan += [pscustomobject]@{
             path = $relative
-            originalExisted = $true
-            originalSHA256 = ([string]$item.originalSHA256).ToLowerInvariant()
-            installedSHA256 = $installedHash
+            destination = $destination
+            backup = $legacyBackup
+            originalHash = $originalHash
         }
     }
-    $receipt = [pscustomobject]@{
+    $transaction = Join-Path $StateRoot 'transaction'
+    $rollbackRoot = Join-Path $transaction 'rollback'
+    New-Item -ItemType Directory -Path $rollbackRoot -Force | Out-Null
+    $transactionFiles = @()
+    foreach ($item in $restorePlan) {
+        $rollback = Get-SafePath $rollbackRoot ([string]$item.path)
+        New-Item -ItemType Directory -Path (Split-Path -Parent $rollback) -Force | Out-Null
+        Copy-Item -LiteralPath $item.destination -Destination $rollback
+        $transactionFiles += [pscustomobject]@{
+            path = [string]$item.path
+            originalExisted = $true
+        }
+    }
+    $state = [pscustomobject]@{
         schemaVersion = 1
         packageID = $PackageId
-        steamBuildID = $Installation.BuildId
-        installedAt = [DateTime]::UtcNow.ToString('o')
-        activeLanguage = [pscustomobject]@{ siteLocale = 'ru'; runtimeCode = 'ru' }
-        files = $migrated
+        committed = $false
+        previousReceiptExisted = $false
+        files = $transactionFiles
     }
-    Write-JsonFile $receipt $ReceiptPath
+    Write-JsonFile $state (Join-Path $transaction 'state.json')
+    try {
+        foreach ($item in $restorePlan) {
+            if ($null -eq $item.originalHash) {
+                Remove-Item -LiteralPath $item.destination -Force
+                continue
+            }
+            Copy-Item -LiteralPath $item.backup -Destination $item.destination -Force
+            if ((Get-Sha256 $item.destination) -ne $item.originalHash) {
+                throw "The previous Windows test file could not be restored: $($item.path)"
+            }
+        }
+        $state.committed = $true
+        Write-JsonFile $state (Join-Path $transaction 'state.json')
+        Remove-Item -LiteralPath $transaction -Recurse -Force
+    } catch {
+        Recover-Transaction $StateRoot $Installation.DataRoot $ReceiptPath
+        throw
+    }
 }
 
 function Validate-Artifact([string]$PayloadRoot, $Artifact, [string]$Owner) {
@@ -295,13 +320,17 @@ try {
     if (-not [bool]$config.payloadReady -or @($config.languages).Count -ne 30) {
         throw 'The complete 30-language package is not included in this installer.'
     }
+    $sharedFiles = @($config.files)
+    if ($sharedFiles.Count -eq 0) { throw 'The shared localization payload is empty.' }
     $selected = @($config.languages | Where-Object { [string]$_.runtimeCode -eq $RuntimeCode })
     if ($selected.Count -ne 1 -or -not [bool]$selected[0].ready) {
         throw "The selected language is not ready: $RuntimeCode"
     }
     $selected = $selected[0]
-    $selectedFiles = @($selected.files)
+    $selectedFiles = @($sharedFiles + @($selected.files))
     if ($selectedFiles.Count -eq 0) { throw 'The selected language payload is empty.' }
+    $duplicatePaths = @($selectedFiles | Group-Object path | Where-Object { $_.Count -ne 1 })
+    if ($duplicatePaths.Count -ne 0) { throw 'The localization package contains duplicate destination paths.' }
 
     $installation = Find-GameInstallation $GamePath
     $running = Get-Process -ErrorAction SilentlyContinue | Where-Object {
@@ -333,7 +362,7 @@ try {
     $receiptPath = Join-Path $stateRoot 'receipt.json'
     New-Item -ItemType Directory -Path $stateRoot -Force | Out-Null
     Recover-Transaction $stateRoot $installation.DataRoot $receiptPath
-    Migrate-SmokeTest $installation $stateRoot $receiptPath $selectedFiles ([string]$config.packageID)
+    Migrate-SmokeTest $installation $stateRoot $receiptPath ([string]$config.packageID)
     $previousReceipt = Read-Receipt $receiptPath ([string]$config.packageID)
     $steamBuildChanged = if ($null -ne $previousReceipt) {
         [string]$previousReceipt.steamBuildID -ne [string]$installation.BuildId

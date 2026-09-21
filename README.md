@@ -58,29 +58,32 @@ SMAPI и Content Patcher работает с точным списком Unity-�
 
 ## Windows release build
 
-The Windows release uses the same 30 accepted locale overlays and produces a
-native English Win32 installer with the game icon. Build the verified compact
-payload first, then assemble the release folder:
+The Windows release uses one shared managed runtime instead of rebuilding the
+same compressed Unity bundles 30 times. It loads stable-path Ink stories,
+context-aware UI translations, complex-script shaping data, and privately
+registered locale fonts from external files. All 30 locales are installed in
+one 71.77 MiB payload; textures remain unchanged. Build and verify it with:
 
 ```sh
-PYTHONDONTWRITEBYTECODE=1 python3 Scripts/build-windows-unified-payload.py \
-  --data-root .build/windows-baseline/Data \
-  --inventory .build/windows-baseline/build-input/inventory.json \
-  --unitypy-root .build/tooling/unitypy-1.25.3 \
+PYTHONPYCACHEPREFIX=/private/tmp/sonic-pyc \
+python3 Scripts/build-windows-runtime-payload.py \
+  --managed-root .build/windows-baseline/Managed \
   --xdelta /opt/homebrew/bin/xdelta3 \
   --windows-xdelta .build/tooling/xdelta-windows-build/xdelta3.exe \
-  --xdelta-license .build/tooling/xdelta-src/xdelta3/LICENSE \
-  --workers 2 \
-  --work-root .build/windows-payload-work
+  --xdelta-license .build/tooling/xdelta-src/xdelta3/LICENSE
 
+PYTHONPYCACHEPREFIX=/private/tmp/sonic-pyc \
+python3 Scripts/test-windows-runtime-payload.py
 ./Scripts/build-windows-installer.sh
 ```
 
 The result is written to `Windows/VN Revival Sonic Installer.exe` and uses the
 single payload copy in `Windows/Resources`. Run
 `Scripts/test-windows-installer.ps1` inside Windows against the `Windows`
-folder and `.build/windows-baseline/Data`; the harness creates and removes its
-own temporary fake Steam library and never targets the installed game.
+folder and `.build/windows-baseline`; the harness creates and removes its own
+temporary fake Steam library and never targets the installed game. It covers
+legacy-layout migration, three locale selections, a compatible Steam-update
+reapply, transactional ownership, and foreign-modification refusal.
 
 Канонический набор: `zh`, `ru`, `es`, `es-419`, `pt-BR`, `ja`, `de`, `ko`,
 `fr`, `tr`, `pl`, `zh-TW`, `it`, `th`, `vi`, `id`, `uk`, `ar`, `cs`, `hu`,
