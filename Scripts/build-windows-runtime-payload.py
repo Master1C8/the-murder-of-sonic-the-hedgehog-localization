@@ -427,7 +427,7 @@ def main() -> int:
         )
         (staged / "README.md").write_text(
             f"# {args.target.capitalize()} localization payload\n\n"
-            "One shared managed runtime loads all 30 compressed locale packs and privately registered fonts. "
+            "One shared managed runtime loads all 30 compressed locale packs and fonts from bundled files. "
             "Only Assembly-CSharp.dll is patched; original Unity asset bundles remain untouched.\n",
             encoding="utf-8",
         )

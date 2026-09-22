@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.IO.Compression;
-using System.Runtime.InteropServices;
 using System.Text;
 using TMPro;
 using UnityEngine;
@@ -19,7 +18,6 @@ namespace VNRevival
             public float FontSize;
         }
 
-        private const uint FR_PRIVATE = 0x10;
         private const string PackageDirectory = "VNRevival";
         private static readonly Dictionary<string, List<Translation>> Translations =
             new Dictionary<string, List<Translation>>(StringComparer.Ordinal);
@@ -39,9 +37,7 @@ namespace VNRevival
         private static string fontFile;
         private static string fontFamily;
         private static TMP_FontAsset runtimeFont;
-
-        [DllImport("gdi32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
-        private static extern int AddFontResourceEx(string filename, uint flags, IntPtr reserved);
+        private static bool fontAttempted;
 
         private static string Decode(string value)
         {
@@ -169,31 +165,33 @@ namespace VNRevival
             return best ?? rows[0];
         }
 
-        private static void EnsureRuntimeFont()
+        private static bool EnsureRuntimeFont()
         {
-            if (runtimeFont != null || !EnsureLoaded())
-                return;
+            if (runtimeFont != null)
+                return true;
+            if (fontAttempted || !EnsureLoaded())
+                return false;
+            fontAttempted = true;
             try
             {
                 string path = Path.Combine(Path.Combine(packageRoot, "Fonts"), fontFile);
                 if (!File.Exists(path))
                     throw new FileNotFoundException("The VN Revival locale font is missing", path);
-                if (Application.platform == RuntimePlatform.WindowsPlayer)
-                {
-                    if (AddFontResourceEx(path, FR_PRIVATE, IntPtr.Zero) == 0)
-                        throw new InvalidOperationException("Windows rejected the private VN Revival font");
-                }
-                Font source = Font.CreateDynamicFontFromOSFont(fontFamily, 90);
+                // TMP needs source font data, not a reference to an installed OS font.
+                Font source = new Font(path);
                 if (source == null)
-                    throw new InvalidOperationException("Unity could not create the VN Revival dynamic font");
+                    throw new InvalidOperationException("Unity could not load the VN Revival font file");
                 runtimeFont = TMP_FontAsset.CreateFontAsset(source);
                 if (runtimeFont == null)
                     throw new InvalidOperationException("TextMesh Pro could not create the VN Revival font asset");
                 runtimeFont.name = "VN Revival " + locale;
+                return true;
             }
             catch (Exception exception)
             {
-                Debug.LogError("VN Revival font could not be loaded: " + exception);
+                Debug.LogError("VN Revival font could not be loaded (" + fontFamily + "): " + exception);
+                loaded = false;
+                return false;
             }
         }
 
@@ -202,9 +200,8 @@ namespace VNRevival
             if (initialized)
                 return;
             initialized = true;
-            if (!EnsureLoaded())
+            if (!EnsureLoaded() || !EnsureRuntimeFont())
                 return;
-            EnsureRuntimeFont();
             var root = new GameObject("VN Revival Localization Runtime");
             UnityEngine.Object.DontDestroyOnLoad(root);
             root.AddComponent<RuntimeDriver>();
@@ -213,7 +210,7 @@ namespace VNRevival
 
         public static string LoadStory(string source)
         {
-            if (!EnsureLoaded())
+            if (!EnsureLoaded() || !EnsureRuntimeFont())
                 return source;
             try
             {
@@ -230,9 +227,8 @@ namespace VNRevival
 
         public static void LocalizeAll()
         {
-            if (!EnsureLoaded())
+            if (!EnsureLoaded() || !EnsureRuntimeFont())
                 return;
-            EnsureRuntimeFont();
             TMP_Text[] labels = Resources.FindObjectsOfTypeAll<TMP_Text>();
             foreach (TMP_Text label in labels)
             {
@@ -245,7 +241,7 @@ namespace VNRevival
         {
             if (target == null)
                 return;
-            if (!EnsureLoaded())
+            if (!EnsureLoaded() || !EnsureRuntimeFont())
             {
                 target.text = value;
                 return;
@@ -258,7 +254,6 @@ namespace VNRevival
             string logical = row == null ? value : row.Value;
             if (row != null && row.FontSize > 0f)
                 target.fontSize = row.FontSize;
-            EnsureRuntimeFont();
             if (runtimeFont != null)
             {
                 TMP_FontAsset primary = target.font;

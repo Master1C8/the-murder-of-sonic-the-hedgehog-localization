@@ -502,9 +502,9 @@
     {
       "path": "Managed/VNRevival.Runtime.dll",
       "originalSHA256": null,
-      "payloadSHA256": "70b8ae58b97db48c8150aa7d83a3d16c29e8c163ccc43e7b215be4d572b710cc",
+      "payloadSHA256": "8a8449ec3a40145ce724a7524ef33d52700d12551771d816ee83e7ab945b6e7e",
       "payloadPath": "F/shared/Managed/VNRevival.Runtime.dll",
-      "artifactSHA256": "70b8ae58b97db48c8150aa7d83a3d16c29e8c163ccc43e7b215be4d572b710cc"
+      "artifactSHA256": "8a8449ec3a40145ce724a7524ef33d52700d12551771d816ee83e7ab945b6e7e"
     },
     {
       "path": "StreamingAssets/VNRevival/Fonts/NotoSans-Regular.ttf",

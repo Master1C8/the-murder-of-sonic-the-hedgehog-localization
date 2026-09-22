@@ -38,7 +38,7 @@
   "architecture": "shared-runtime-external-locale-data",
   "runtime": {
     "assembly": "Managed/VNRevival.Runtime.dll",
-    "sha256": "70b8ae58b97db48c8150aa7d83a3d16c29e8c163ccc43e7b215be4d572b710cc",
+    "sha256": "8a8449ec3a40145ce724a7524ef33d52700d12551771d816ee83e7ab945b6e7e",
     "managedPatchReport": "1 initializer; 1 story loader; 28 text redirects; 1 animation guard"
   },
   "deltaTool": {
