@@ -13,10 +13,10 @@
   },
   "automatedResult": "pass",
   "visualReview": {
-    "status": "pending",
+    "status": "pass",
     "findings": []
   },
-  "result": "capture-pass-review-pending",
+  "result": "pass",
   "activeLocaleVerified": true,
   "restoration": {
     "priorLocale": "ru",
