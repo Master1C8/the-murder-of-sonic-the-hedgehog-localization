@@ -2,7 +2,20 @@
 
 This repository contains the unified 30-language VN Revival installer for The
 Murder of Sonic the Hedgehog. Before localization or packaging work, read
-the workstation localization instructions and the `vn-game-app` workflow.
+the applicable workstation localization instructions. Select the workflow for the
+authorized stage:
+
+- Game-text translation or editorial review: `vn-game-localize`.
+- Standalone source/translated glossary work: `vn-glossary-source` or
+  `vn-glossary-localize`, respectively.
+- Font, texture or screenshot work: `vn-game-fonts`, `vn-game-textures` or
+  `game-localization-visual-qa`, respectively.
+- Installer development, building or packaging: `vn-game-app`.
+- End-to-end localization or an uncertain current stage: `vn-localization`.
+
+Do not load installer/packaging references for a text-only review unless that task
+actually depends on an installer boundary. Mandatory shared, source, glossary and
+editorial checks below still apply; this routing changes no acceptance gate.
 
 - The supported macOS baseline is Steam build `20535215`, game version `1.01`.
 - Detect the game through Steam `libraryfolders.vdf` and
