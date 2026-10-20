@@ -1,5 +1,8 @@
 # The Murder of Sonic the Hedgehog — мультипатч VN Revival
 
+[Published Windows and macOS packages with build evidence](https://github.com/Master1C8/the-murder-of-sonic-the-hedgehog-localization/releases/tag/release-0.2.1-e8eba473d34a).
+See [release verification](Documentation/release-verification.md) for hashes and the exact build commit.
+
 Нативный macOS-установщик единого пакета всех 30 неанглийских локалей VN
 Revival. Он адаптирован из проверенного установщика Stardew Valley, но вместо
 SMAPI и Content Patcher работает с точным списком Unity-файлов игры.
