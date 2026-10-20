@@ -14,7 +14,8 @@ for required in "$resources/PackageConfig.json" "$resources/LocalizationPayload/
   [[ -f "$required" ]] || { echo "Required release input is missing: $required" >&2; exit 1; }
 done
 
-output_dir="$project_dir/Windows"
+output_dir="${VNREVIVAL_WINDOWS_BUILD_DIR:-$project_dir/Windows}"
+mkdir -p "$output_dir"
 output="$output_dir/VN Revival Sonic Installer.exe"
 work="$(mktemp -d "${TMPDIR:-/tmp}/sonic-windows-installer.XXXXXX")"
 trap 'rm -rf "$work"' EXIT

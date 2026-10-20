@@ -143,3 +143,19 @@ ALLOW_INCOMPLETE_PAYLOAD=1 ./Scripts/release-audit.sh
   SHA-256 `285d1b9f42a65d2c77d919d10c04794c3a6ca72439ed7dd2b08f4f2861d060b8`.
 - Технический образец Unity-патча: ChaosTrad, Le Meurtre de Sonic, версия 1.0
   (октябрь 2023). Файлы образца не распространяются этим проектом.
+
+## Local provenance builds
+
+`python3 Scripts/build-provenance.py --release dist/NEW_RELEASE_DIRECTORY` builds
+both platforms from clean, pushed canonical main. It verifies all retained payload
+bytes before and after compilation, runs native fixtures and complete payload checks,
+and compares every archive entry with its final stage. Completion metadata is written
+only after both ZIPs pass. The retained Windows payload requires its verified public
+archive origin record in `dist/retained-public-inputs/windows-payload-origin.json`.
+No cloud build, paid signing or notarization service is used.
+
+The existing build scripts accept the active Apple developer directory, explicit
+SwiftPM native backend and a fresh release output directory. `Scripts/test-swift.sh`
+adds the installed CLT Testing framework search/runtime path when needed. Regression:
+a CLT installation with Testing.framework must run every native test, rather than
+failing module discovery or skipping tests. Real-game launch remains separate QA.

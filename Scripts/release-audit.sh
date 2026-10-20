@@ -10,11 +10,11 @@ find Sources -name '*.json' -type f -print0 | xargs -0 -n1 jq empty
 PYTHONPYCACHEPREFIX="${PYTHONPYCACHEPREFIX:-/private/tmp/murder-sonic-localization-pycache}" \
   python3 -m unittest discover -s Tests -p 'test_*.py'
 
-export DEVELOPER_DIR="${DEVELOPER_DIR:-/Applications/Xcode.app/Contents/Developer}"
+export DEVELOPER_DIR="${DEVELOPER_DIR:-$(xcode-select -p)}"
 export CLANG_MODULE_CACHE_PATH="${CLANG_MODULE_CACHE_PATH:-/private/tmp/murder-sonic-installer-swift-cache}"
 export SWIFT_MODULECACHE_PATH="${SWIFT_MODULECACHE_PATH:-$CLANG_MODULE_CACHE_PATH}"
 export SWIFTPM_MODULECACHE_OVERRIDE="${SWIFTPM_MODULECACHE_OVERRIDE:-$CLANG_MODULE_CACHE_PATH}"
-swift test --disable-sandbox --no-parallel
+"$project_dir/Scripts/test-swift.sh"
 
 if [[ "${ALLOW_INCOMPLETE_PAYLOAD:-0}" != "1" ]]; then
   jq -e '.payloadReady == true and all(.languages[]; .ready == true and ((.files // []) | length > 0))' "$config" >/dev/null || {
