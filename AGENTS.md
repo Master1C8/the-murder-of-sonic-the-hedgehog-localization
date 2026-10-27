@@ -67,6 +67,8 @@ editorial checks below still apply; this routing changes no acceptance gate.
 
 Use `python3 Scripts/visual-qa/review_screenshots.py` and read `SCREENSHOT_REVIEW.md` before new
 native or delivered screenshot review. Keep the coordinator text-only.
+New input is prepared as WebP quality 80, longest edge at most 1280 pixels;
+originals stay unchanged. Unreadable detail requires a source-bound crop.
 Each packet uses one fresh, explicitly pinned non-Astra review process;
 never resume/fork an image-bearing chat or load the next packet into it.
 Do not start new review jobs through historical per-language CLI queues.

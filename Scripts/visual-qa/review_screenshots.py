@@ -4,7 +4,7 @@ import importlib.util
 from pathlib import Path
 
 PROJECT = Path(__file__).resolve().parents[2]
-SCRIPT = PROJECT.parent / 'SiteForMods/tools/codex-skills/screenshot-common/scripts/review_queue.py'
+SCRIPT = PROJECT.parent / 'SiteForMods/tools/codex-skills/screenshot-common/scripts/review_entry.py'
 spec = importlib.util.spec_from_file_location('shared_screenshot_queue', SCRIPT)
 queue = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(queue)
