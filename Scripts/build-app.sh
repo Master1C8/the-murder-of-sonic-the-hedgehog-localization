@@ -3,6 +3,7 @@ set -euo pipefail
 
 project_dir="${0:A:h:h}"
 cd "$project_dir"
+python3 -B "$project_dir/Scripts/restore_archival_inputs.py" --input macos-payload
 
 export DEVELOPER_DIR="${DEVELOPER_DIR:-$(xcode-select -p)}"
 export CLANG_MODULE_CACHE_PATH="${CLANG_MODULE_CACHE_PATH:-/private/tmp/murder-sonic-installer-swift-cache}"

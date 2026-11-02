@@ -1,3 +1,0 @@
-unity:level0:1517:m_text
-unity:level0:1547:m_text
-unity:level0:1562:m_text

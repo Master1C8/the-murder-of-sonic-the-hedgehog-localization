@@ -1,2 +1,0 @@
-ink:root[2].Prologue[1].Story_Continues[43]
-ink:root[2].Prologue[1].Story_Continues[48]

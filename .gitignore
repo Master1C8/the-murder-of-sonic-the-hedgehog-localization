@@ -8,3 +8,11 @@ Windows/Resources/LocalizationPayload/
 Windows/VN Revival Sonic Installer.exe
 artifacts/release-checks/
 Screenshots/
+
+# Source-only archive; exact payloads are restored before normal builds.
+/.build/
+/.build-app/
+/Sources/MurderOfSonicLocalizationInstaller/Resources/LocalizationPayload/
+/Windows/Resources/LocalizationPayload/
+/Documentation/Localization/*Audit/
+/Documentation/Localization/Source/en/images/

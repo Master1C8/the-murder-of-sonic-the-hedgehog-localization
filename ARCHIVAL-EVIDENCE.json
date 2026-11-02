@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "historicalSourceRevision": "82cf5dd277cea0e25a0a1cf7ebb3e91cd420a9a7",
+  "historicalPaths": [
+    "Documentation/Localization/FilipinoAudit",
+    "Documentation/Localization/SpanishAudit",
+    "Documentation/Localization/JapaneseAudit",
+    "Documentation/Localization/KoreanAudit",
+    "Documentation/Localization/RomanianAudit",
+    "Documentation/Localization/TurkishAudit",
+    "Documentation/Localization/GermanAudit",
+    "Documentation/Localization/BulgarianAudit",
+    "Documentation/Localization/LatinAmericanSpanishAudit",
+    "Documentation/Localization/SerbianAudit",
+    "Documentation/Localization/ChineseAudit",
+    "Documentation/Localization/FrenchAudit",
+    "Documentation/Localization/PolishAudit",
+    "Documentation/Localization/RuntimeExactAudit",
+    "Documentation/Localization/GreekAudit",
+    "Documentation/Localization/BrazilianPortugueseAudit",
+    "Documentation/Localization/HindiAudit",
+    "Documentation/Localization/HebrewAudit",
+    "Documentation/Localization/SwahiliAudit",
+    "Documentation/Localization/RussianAudit",
+    "Documentation/Localization/UkrainianAudit",
+    "Documentation/Localization/TraditionalChineseAudit",
+    "Documentation/Localization/Source/en/images"
+  ],
+  "binaryInputManifest": "archival-inputs.json",
+  "acceptance": "Published release release-0.2.1-e8eba473d34a retains the exact final installers, publication checksums and compact evidence. Detailed historical review records and original extracted images remain recoverable from this Git revision."
+}

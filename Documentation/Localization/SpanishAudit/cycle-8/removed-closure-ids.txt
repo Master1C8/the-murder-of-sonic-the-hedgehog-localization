@@ -1,2 +1,0 @@
-ink:root[2].DiningCloset[1].Suspicious_Stick[4]
-inventory:shadowslock:Description

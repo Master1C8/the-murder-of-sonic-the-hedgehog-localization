@@ -2,6 +2,7 @@
 set -euo pipefail
 
 project_dir="${0:A:h:h}"
+python3 -B "$project_dir/Scripts/restore_archival_inputs.py" --input windows-payload
 compiler="${WINDOWS_CC:-/opt/homebrew/bin/x86_64-w64-mingw32-gcc}"
 resource_compiler="${WINDOWS_WINDRES:-/opt/homebrew/bin/x86_64-w64-mingw32-windres}"
 image_converter="${MAGICK:-/opt/homebrew/bin/magick}"
